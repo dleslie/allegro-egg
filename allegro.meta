@@ -1,0 +1,6 @@
+((license "BSD")
+ (category io)
+ (author "Daniel J. Leslie")
+ (needs foreign)
+ (synopsis "Allegro")
+ (doc-from-wiki))
