@@ -13,8 +13,60 @@
 (define config-merge (foreign-lambda (c-pointer (struct ALLEGRO_CONFIG)) "al_merge_config" (c-pointer (struct ALLEGRO_CONFIG)) (c-pointer (struct ALLEGRO_CONFIG))))
 (define config-destroy! (foreign-lambda void "al_destroy_config" (c-pointer (struct ALLEGRO_CONFIG))))
 
-;; AL_FUNC(char const *, al_get_first_config_section, (ALLEGRO_CONFIG const *config, ALLEGRO_CONFIG_SECTION **iterator));
-;; AL_FUNC(char const *, al_get_next_config_section, (ALLEGRO_CONFIG_SECTION **iterator));
-;; AL_FUNC(char const *, al_get_first_config_entry, (ALLEGRO_CONFIG const *config, char const *section,
-;; 	ALLEGRO_CONFIG_ENTRY **iterator));
-;; AL_FUNC(char const *, al_get_next_config_entry, (ALLEGRO_CONFIG_ENTRY **iterator));
+(foreign-declare #<<ENDC
+typedef struct ConfigIterContainer
+{
+  const char *current;
+  ALLEGRO_CONFIG_SECTION *next;
+} ConfigIterContainer;
+ENDC
+)
+
+(define (config-sections config)
+  (define iter-current (foreign-lambda* c-string (((c-pointer (struct ConfigIterContainer)) container)) "C_return(container->current);"))
+  (define iter-next (foreign-lambda* (c-pointer (struct ALLEGRO_CONFIG_SECTION)) (((c-pointer (struct ConfigIterContainer)) container)) "C_return(container->next);"))
+  (define get-first (foreign-lambda* (c-pointer (struct ConfigIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config)) "
+struct ConfigIterContainer container;
+container.current = al_get_first_config_section(allegro_config, &container.next);
+C_return(&container);
+"))
+  (define get-next (foreign-lambda* (c-pointer (struct ConfigIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG_SECTION)) iter)) "
+struct ConfigIterContainer container;
+container.current = al_get_next_config_section(&iter);
+C_return(&container);
+"))
+  (define first-iter (get-first config))
+  (define (do-next iter)
+    (cond 
+     ((not iter) #f)
+     (else (cons (iter-current iter) (delay (do-next (get-next iter)))))))
+  (cons (iter-current first-iter) (delay (do-next first-iter))))
+
+(foreign-declare #<<ENDC
+typedef struct EntryIterContainer
+{
+  const char *current;
+  ALLEGRO_CONFIG_ENTRY *next;
+} EntryIterContainer;
+ENDC
+)
+
+(define (config-entries config section)
+  (define iter-current (foreign-lambda* c-string (((c-pointer (struct EntryIterContainer)) container)) "C_return(container->current);"))
+  (define iter-next (foreign-lambda* (c-pointer (struct ALLEGRO_CONFIG_ENTRY)) (((c-pointer (struct EntryIterContainer)) container)) "C_return(container->next);"))
+  (define get-first (foreign-lambda* (c-pointer (struct EntryIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config) (c-string section)) "
+struct EntryIterContainer container;
+container.current = al_get_first_config_entry(allegro_config, section, &container.next);
+C_return(&container);
+"))
+  (define get-next (foreign-lambda* (c-pointer (struct EntryIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG_ENTRY)) iter)) "
+struct EntryIterContainer container;
+container.current = al_get_next_config_entry(&iter);
+C_return(&container);
+"))
+  (define first-iter (get-first config section))
+  (define (do-next iter)
+    (cond 
+     ((not iter) #f)
+     (else (cons (iter-current iter) (delay (do-next (get-next iter)))))))
+  (cons (iter-current first-iter) (delay (do-next first-iter))))
