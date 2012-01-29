@@ -29,4 +29,5 @@ typedef struct _AL_DRIVER_INFO      /* info about a hardware driver */
 ENDC
 )
 
-(define run-main (foreign-safe-lambda int "al_run_main" integer (c-pointer c-string) c-pointer))
+(define run-main (foreign-safe-lambda int "al_run_main" integer (c-pointer c-string) (function integer (integer (c-pointer c-string)))))
+
