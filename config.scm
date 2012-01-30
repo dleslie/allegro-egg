@@ -13,60 +13,25 @@
 (define config-merge (foreign-lambda (c-pointer (struct ALLEGRO_CONFIG)) "al_merge_config" (c-pointer (struct ALLEGRO_CONFIG)) (c-pointer (struct ALLEGRO_CONFIG))))
 (define config-destroy! (foreign-lambda void "al_destroy_config" (c-pointer (struct ALLEGRO_CONFIG))))
 
-(foreign-declare #<<ENDC
-typedef struct ConfigIterContainer
-{
-  const char *current;
-  ALLEGRO_CONFIG_SECTION *next;
-} ConfigIterContainer;
-ENDC
-)
-
+(define-external config_section_iterator (c-pointer (struct ALLEGRO_CONFIG_SECTION)))
 (define (config-sections config)
-  (define iter-current (foreign-lambda* c-string (((c-pointer (struct ConfigIterContainer)) container)) "C_return(container->current);"))
-  (define iter-next (foreign-lambda* (c-pointer (struct ALLEGRO_CONFIG_SECTION)) (((c-pointer (struct ConfigIterContainer)) container)) "C_return(container->next);"))
-  (define get-first (foreign-lambda* (c-pointer (struct ConfigIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config)) "
-struct ConfigIterContainer container;
-container.current = al_get_first_config_section(allegro_config, &container.next);
-C_return(&container);
-"))
-  (define get-next (foreign-lambda* (c-pointer (struct ConfigIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG_SECTION)) iter)) "
-struct ConfigIterContainer container;
-container.current = al_get_next_config_section(&iter);
-C_return(&container);
-"))
-  (define first-iter (get-first config))
-  (define (do-next iter)
+  (define get-first (foreign-lambda* c-string (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config)) "C_return(al_get_first_config_section(allegro_config, &config_section_iterator));"))
+  (define get-next (foreign-lambda* (c-pointer (struct ConfigIterContainer)) () "C_return(al_get_next_config_section(&config_section_iterator));"))
+  (define (do-next)
     (cond 
-     ((not iter) #f)
-     (else (cons (iter-current iter) (delay (do-next (get-next iter)))))))
-  (cons (iter-current first-iter) (delay (do-next first-iter))))
+     ((not config_section_iterator) #f)
+     (else (cons (get-next) (delay (do-next))))))
+  (cons (get-first config) (delay (do-next))))
 
-(foreign-declare #<<ENDC
-typedef struct EntryIterContainer
-{
-  const char *current;
-  ALLEGRO_CONFIG_ENTRY *next;
-} EntryIterContainer;
-ENDC
-)
-
+(define-external config_entry_iterator (c-pointer (struct ALLEGRO_CONFIG_ENTRY)))
 (define (config-entries config section)
-  (define iter-current (foreign-lambda* c-string (((c-pointer (struct EntryIterContainer)) container)) "C_return(container->current);"))
-  (define iter-next (foreign-lambda* (c-pointer (struct ALLEGRO_CONFIG_ENTRY)) (((c-pointer (struct EntryIterContainer)) container)) "C_return(container->next);"))
-  (define get-first (foreign-lambda* (c-pointer (struct EntryIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config) (c-string section)) "
-struct EntryIterContainer container;
-container.current = al_get_first_config_entry(allegro_config, section, &container.next);
-C_return(&container);
-"))
-  (define get-next (foreign-lambda* (c-pointer (struct EntryIterContainer)) (((c-pointer (struct ALLEGRO_CONFIG_ENTRY)) iter)) "
-struct EntryIterContainer container;
-container.current = al_get_next_config_entry(&iter);
-C_return(&container);
-"))
-  (define first-iter (get-first config section))
-  (define (do-next iter)
+  (define get-first (foreign-lambda* c-string (((c-pointer (struct ALLEGRO_CONFIG)) allegro_config) (c-string section)) "C_return(al_get_first_config_entry(allegro_config, section, &config_entry_iterator));"))
+  (define get-next (foreign-lambda* (c-pointer (struct ConfigIterContainer)) ((c-string section)) "C_return(al_get_next_config_entry(&config_entry_iterator));"))
+  (define (do-next)
     (cond 
-     ((not iter) #f)
-     (else (cons (iter-current iter) (delay (do-next (get-next iter)))))))
-  (cons (iter-current first-iter) (delay (do-next first-iter))))
+     ((not config_entry_iterator) #f)
+     (else (cons (get-next section) (delay (do-next))))))
+  (cons (get-first config section) (delay (do-next))))
+
+
+

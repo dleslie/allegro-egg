@@ -8,7 +8,7 @@
 
         (include "system")
         (include "config")
-        ;(include "path")
+        (include "path")
         ;(include "file")
         ;(include "utf8")
         ;(include "memory")
