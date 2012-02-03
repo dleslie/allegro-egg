@@ -9,7 +9,7 @@
         (include "system")
         (include "config")
         (include "path")
-        ;(include "file")
+        (include "file")
         ;(include "utf8")
         ;(include "memory")
         ;(include "debug")

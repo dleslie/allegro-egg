@@ -1,3 +1,7 @@
+(bind-opaque-type system (c-pointer (struct ALLEGRO_SYSTEM)))
+(bind-opaque-type config (c-pointer (struct ALLEGRO_CONFIG)))
+(bind-opaque-type path (c-pointer (struct ALLEGRO_PATH)))
+
 (define init (foreign-lambda bool "al_init"))
 (define install-system (foreign-lambda bool "al_install_system" integer (function integer ((function void (void))))))
 (define system-installed? (foreign-lambda bool "al_is_system_installed"))
@@ -16,7 +20,7 @@
 (define path/exe (foreign-value "ALLEGRO_EXENAME_PATH" integer))
 (define path/last (foreign-value "ALLEGRO_LAST_PATH" integer))
 
-(define system-driver (foreign-lambda (c-pointer (struct ALLEGRO_SYSTEM)) "al_get_system_driver"))
-(define system-config (foreign-lambda (c-pointer (struct ALLEGRO_CONFIG)) "al_get_system_config"))
-(define standard-path (foreign-lambda (c-pointer (struct ALLEGRO_PATH)) "al_get_standard_path" integer))
+(define system-driver (foreign-lambda system "al_get_system_driver"))
+(define system-config (foreign-lambda config "al_get_system_config"))
+(define standard-path (foreign-lambda path "al_get_standard_path" integer))
 
