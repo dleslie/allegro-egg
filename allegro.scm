@@ -5,12 +5,11 @@
         (import scheme chicken bind foreign)
 
         (include "base")
-
         (include "system")
         (include "config")
         (include "path")
         (include "file")
-        ;(include "utf8")
+        (include "utf8")
         ;(include "memory")
         ;(include "debug")
         ;(include "error")
