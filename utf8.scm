@@ -38,34 +38,28 @@
 (define utf-insert-string! (foreign-lambda bool "al_ustr_insert_cstr" utf_string integer c-string))
 (define utf-insert-char! (foreign-lambda integer "al_ustr_insert_chr" utf_string integer integer32))
 
-;; /* Append */
-;; AL_FUNC(bool, al_ustr_append, (ALLEGRO_USTR *us1, const ALLEGRO_USTR *us2));
-;; AL_FUNC(bool, al_ustr_append_cstr, (ALLEGRO_USTR *us, const char *s));
-;; AL_FUNC(size_t, al_ustr_append_chr, (ALLEGRO_USTR *us, int32_t c));
+(define utf-append! (foreign-lambda bool "al_ustr_append" utf_string utf_string))
+(define utf-append-string! (foreign-lambda bool "al_ustr_append_cstr" utf_string c-string))
+(define utf-append-char! (foreign-lambda integer "al_ustr_append_chr" utf_string integer))
+
 ;; AL_PRINTFUNC(bool, al_ustr_appendf, (ALLEGRO_USTR *us, const char *fmt, ...),
 ;;       2, 3);
 ;; AL_FUNC(bool, al_ustr_vappendf, (ALLEGRO_USTR *us, const char *fmt,
 ;;       va_list ap));
 
-;; /* Remove */
-;; AL_FUNC(bool, al_ustr_remove_chr, (ALLEGRO_USTR *us, int pos));
-;; AL_FUNC(bool, al_ustr_remove_range, (ALLEGRO_USTR *us, int start_pos,
-;;       int end_pos));
-;; AL_FUNC(bool, al_ustr_truncate, (ALLEGRO_USTR *us, int start_pos));
-;; AL_FUNC(bool, al_ustr_ltrim_ws, (ALLEGRO_USTR *us));
-;; AL_FUNC(bool, al_ustr_rtrim_ws, (ALLEGRO_USTR *us));
-;; AL_FUNC(bool, al_ustr_trim_ws, (ALLEGRO_USTR *us));
+(define utf-remove-char! (foreign-lambda bool "al_ustr_remove_chr" utf_string integer))
+(define utf-remove-range! (foreign-lambda bool "al_ustr_remove_range" utf_string integer integer))
+(define utf-truncate! (foreign-lambda bool "al_ustr_truncate" utf_string integer))
+(define utf-ltrim! (foreign-lambda bool "al_ltrim_ws" utf_string))
+(define utf-rtrim! (foreign-lambda bool "al_rtrim_ws" utf_string))
+(define utf-trim! (foreign-lambda bool "al_ustr_trim_ws" utf_string))
 
-;; /* Assign */
-;; AL_FUNC(bool, al_ustr_assign, (ALLEGRO_USTR *us1, const ALLEGRO_USTR *us2));
-;; AL_FUNC(bool, al_ustr_assign_substr, (ALLEGRO_USTR *us1, const ALLEGRO_USTR *us2,
-;;       int start_pos, int end_pos));
-;; AL_FUNC(bool, al_ustr_assign_cstr, (ALLEGRO_USTR *us1, const char *s));
+(define utf-assign! (foreign-lambda bool "al_ustr_assign" utf_string utf_string))
+(define utf-assign_substring! (foreign-lambda bool "al_ustr_assign_substr" utf_string utf_string integer integer))
+(define utf-assign-string! (foreign-lambda bool "al_ustr_assign_cstr" utf_string c-string))
 
-;; /* Replace */
-;; AL_FUNC(size_t, al_ustr_set_chr, (ALLEGRO_USTR *us, int pos, int32_t c));
-;; AL_FUNC(bool, al_ustr_replace_range, (ALLEGRO_USTR *us1, int start_pos1,
-;;       int end_pos1, const ALLEGRO_USTR *us2));
+(define utf-set-char! (foreign-lambda integer "al_ustr_set_chr" utf_string integer integer32))
+(define utf-replace-range! (foreign-lambda bool "al_ustr_replace_range" utf_string integer integer utf_string))
 
 ;; /* Searching */
 ;; AL_FUNC(int, al_ustr_find_chr, (const ALLEGRO_USTR *us, int start_pos,
