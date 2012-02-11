@@ -2,7 +2,7 @@
 #include <allegro5/allegro.h>
 <#
 (module allegro *
-        (import scheme chicken bind foreign)
+        (import scheme chicken bind foreign foreigners)
 
         (include "base")
         (include "system")
@@ -12,9 +12,9 @@
         (include "utf8")
         ;(include "memory")
         ;(include "debug")
-        ;(include "error")
-        ;(include "altime")
-        ;(include "events")
+        (include "error")
+        (include "altime")
+        (include "events")
         ;(include "mouse")
         ;(include "timer")
         ;(include "keyboard")

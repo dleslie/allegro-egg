@@ -50,59 +50,45 @@
 (define utf-remove-char! (foreign-lambda bool "al_ustr_remove_chr" utf_string integer))
 (define utf-remove-range! (foreign-lambda bool "al_ustr_remove_range" utf_string integer integer))
 (define utf-truncate! (foreign-lambda bool "al_ustr_truncate" utf_string integer))
-(define utf-ltrim! (foreign-lambda bool "al_ltrim_ws" utf_string))
-(define utf-rtrim! (foreign-lambda bool "al_rtrim_ws" utf_string))
+(define utf-ltrim! (foreign-lambda bool "al_ustr_ltrim_ws" utf_string))
+(define utf-rtrim! (foreign-lambda bool "al_ustr_rtrim_ws" utf_string))
 (define utf-trim! (foreign-lambda bool "al_ustr_trim_ws" utf_string))
 
 (define utf-assign! (foreign-lambda bool "al_ustr_assign" utf_string utf_string))
-(define utf-assign_substring! (foreign-lambda bool "al_ustr_assign_substr" utf_string utf_string integer integer))
+(define utf-assign-substring! (foreign-lambda bool "al_ustr_assign_substr" utf_string utf_string integer integer))
 (define utf-assign-string! (foreign-lambda bool "al_ustr_assign_cstr" utf_string c-string))
 
 (define utf-set-char! (foreign-lambda integer "al_ustr_set_chr" utf_string integer integer32))
 (define utf-replace-range! (foreign-lambda bool "al_ustr_replace_range" utf_string integer integer utf_string))
 
-;; /* Searching */
-;; AL_FUNC(int, al_ustr_find_chr, (const ALLEGRO_USTR *us, int start_pos,
-;;       int32_t c));
-;; AL_FUNC(int, al_ustr_rfind_chr, (const ALLEGRO_USTR *us, int start_pos,
-;;       int32_t c));
-;; AL_FUNC(int, al_ustr_find_set, (const ALLEGRO_USTR *us, int start_pos,
-;;       const ALLEGRO_USTR *accept));
-;; AL_FUNC(int, al_ustr_find_set_cstr, (const ALLEGRO_USTR *us, int start_pos,
-;;       const char *accept));
-;; AL_FUNC(int, al_ustr_find_cset, (const ALLEGRO_USTR *us, int start_pos,
-;;       const ALLEGRO_USTR *reject));
-;; AL_FUNC(int, al_ustr_find_cset_cstr, (const ALLEGRO_USTR *us, int start_pos,
-;;       const char *reject));
-;; AL_FUNC(int, al_ustr_find_str, (const ALLEGRO_USTR *haystack, int start_pos,
-;;       const ALLEGRO_USTR *needle));
-;; AL_FUNC(int, al_ustr_find_cstr, (const ALLEGRO_USTR *haystack, int start_pos,
-;;       const char *needle));
-;; AL_FUNC(int, al_ustr_rfind_str, (const ALLEGRO_USTR *haystack, int start_pos,
-;;       const ALLEGRO_USTR *needle));
-;; AL_FUNC(int, al_ustr_rfind_cstr, (const ALLEGRO_USTR *haystack, int start_pos,
-;;       const char *needle));
-;; AL_FUNC(bool, al_ustr_find_replace, (ALLEGRO_USTR *us, int start_pos,
-;;       const ALLEGRO_USTR *find, const ALLEGRO_USTR *replace));
-;; AL_FUNC(bool, al_ustr_find_replace_cstr, (ALLEGRO_USTR *us, int start_pos,
-;;       const char *find, const char *replace));
+(define utf-find (foreign-lambda integer "al_ustr_find_str" utf_string integer utf_string))
+(define utf-find-string (foreign-lambda integer "al_ustr_find_cstr" utf_string integer c-string))
+(define utf-find-char (foreign-lambda integer "al_ustr_find_chr" utf_string integer integer32))
+(define utf-find-set (foreign-lambda integer "al_ustr_find_set" utf_string integer utf_string))
+(define utf-find-set-string (foreign-lambda integer "al_ustr_find_set_cstr" utf_string integer c-string))
+(define utf-find-cset (foreign-lambda integer "al_ustr_find_cset" utf_string integer utf_string))
+(define utf-find-cset-string (foreign-lambda integer "al_ustr_find_cset_cstr" utf_string integer c-string))
 
-;; /* Compare */
-;; AL_FUNC(bool, al_ustr_equal, (const ALLEGRO_USTR *us1, const ALLEGRO_USTR *us2));
-;; AL_FUNC(int, al_ustr_compare, (const ALLEGRO_USTR *u, const ALLEGRO_USTR *v));
-;; AL_FUNC(int, al_ustr_ncompare, (const ALLEGRO_USTR *us1, const ALLEGRO_USTR *us2,
-;;       int n));
-;; AL_FUNC(bool, al_ustr_has_prefix,(const ALLEGRO_USTR *u, const ALLEGRO_USTR *v));
-;; AL_FUNC(bool, al_ustr_has_prefix_cstr, (const ALLEGRO_USTR *u, const char *s));
-;; AL_FUNC(bool, al_ustr_has_suffix,(const ALLEGRO_USTR *u, const ALLEGRO_USTR *v));
-;; AL_FUNC(bool, al_ustr_has_suffix_cstr,(const ALLEGRO_USTR *us1, const char *s));
+(define utf-rfind (foreign-lambda integer "al_ustr_rfind_str" utf_string integer utf_string))
+(define utf-rfind-char (foreign-lambda integer "al_ustr_rfind_chr" utf_string integer integer32))
+(define utf-rfind-string (foreign-lambda integer "al_ustr_rfind_cstr" utf_string integer c-string))
 
-;; /* Low level UTF-8 functions */
-;; AL_FUNC(size_t, al_utf8_width, (int32_t c));
-;; AL_FUNC(size_t, al_utf8_encode, (char s[], int32_t c));
+(define utf-find&replace! (foreign-lambda bool "al_ustr_find_replace" utf_string integer utf_string utf_string))
+(define utf-find&replace-string! (foreign-lambda bool "al_ustr_find_replace_cstr" utf_string integer c-string c-string))
 
-;; /* UTF-16 */
-;; AL_FUNC(ALLEGRO_USTR *, al_ustr_new_from_utf16, (uint16_t const *s));
+(define utf-equal? (foreign-lambda bool "al_ustr_equal" utf_string utf_string))
+(define utf-compare (foreign-lambda integer "al_ustr_compare" utf_string utf_string))
+(define utf-ncompare (foreign-lambda integer "al_ustr_ncompare" utf_string utf_string integer))
+
+(define utf-prefix? (foreign-lambda bool "al_ustr_has_prefix" utf_string utf_string))
+(define utf-prefix-string? (foreign-lambda bool "al_ustr_has_prefix_cstr" utf_string c-string))
+
+(define utf-suffix? (foreign-lambda bool "al_ustr_has_suffix" utf_string utf_string))
+(define utf-suffix-string? (foreign-lambda bool "al_ustr_has_suffix_cstr" utf_string c-string))
+
+(define utf8-width? (foreign-lambda integer "al_utf8_width" integer32))
+(define utf8-encode! (foreign-lambda integer "al_utf8_encode" blob integer32))
+
 ;; AL_FUNC(size_t, al_ustr_size_utf16, (const ALLEGRO_USTR *us));
 ;; AL_FUNC(size_t, al_ustr_encode_utf16, (const ALLEGRO_USTR *us, uint16_t *s, size_t n));
 ;; AL_FUNC(size_t, al_utf16_width, (int c));
