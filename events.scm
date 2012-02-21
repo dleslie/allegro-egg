@@ -31,7 +31,6 @@
 
 (bind-opaque-type event_source (struct ALLEGRO_EVENT_SOURCE))
 
-;(bind-rename ALLEGRO_EVENT_SOURCE event-source)
 (bind-opaque-type event_source (struct ALLEGRO_EVENT_SOURCE))
 
 (bind-rename ALLEGRO_EVENT_TYPE event-type)
@@ -117,7 +116,7 @@ struct ALLEGRO_USER_EVENT
 ENDC
 )
 
-(define-foreign-record-type (event-container "union ALLEGRO_EVENT")
+(define-foreign-record-type (event-container "ALLEGRO_EVENT")
   (constructor: make-event-container)
   (destructor: free-event-container))
 
@@ -158,24 +157,24 @@ ENDC
 
 (define empty-event-queue? (foreign-lambda void "al_is_event_queue_empty" event_queue))
 
-(define next-event (foreign-lambda* (c-pointer (struct ALLEGRO_EVENT)) ((event_queue q)) "
+(define next-event (foreign-lambda* event-container ((event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_get_next_event(q, ret))
   C_return(ret);
 else
 {
-  free (ret);
+  free(ret);
   C_return (C_SCHEME_FALSE);
 }
 "))
 
-(define peek-event (foreign-lambda* (c-pointer (struct ALLEGRO_EVENT)) ((event_queue q)) "
+(define peek-event (foreign-lambda* event-container ((event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_peek_next_event(q, ret))
   C_return(ret);
 else
 {
-  free (ret);
+  free(ret);
   C_return (C_SCHEME_FALSE);
 }
 "))
@@ -183,30 +182,30 @@ else
 (define drop-event (foreign-lambda bool "al_drop_next_event" event_queue))
 (define flush-event-queue (foreign-lambda void "al_flush_event_queue" event_queue))
 
-(define wait-for-event (foreign-lambda* (c-pointer (struct ALLEGRO_EVENT)) ((event_queue q)) "
+(define wait-for-event (foreign-lambda* event-container ((event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 al_wait_for_event(q, ret);
 C_return(ret);
 "))
 
-(define wait-for-event-timed (foreign-lambda* (c-pointer (struct ALLEGRO_EVENT)) ((event_queue q) (float s)) "
+(define wait-for-event-timed (foreign-lambda* event-container ((event_queue q) (float s)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_wait_for_event_timed(q, ret, s))
   C_return(ret);
 else
 {
-  free (ret);
+  free(ret);
   C_return (C_SCHEME_FALSE);
 }
 "))
 
-(define wait-for-event-until (foreign-lambda* (c-pointer (struct ALLEGRO_EVENT)) ((event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
+(define wait-for-event-until (foreign-lambda* event-container ((event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_wait_for_event_until(q, ret, t))
   C_return(ret);
 else
 {
   free(ret);
-  C_return(ret);
+  C_return(C_SCHEME_FALSE);
 }
 "))

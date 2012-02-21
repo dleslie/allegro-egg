@@ -15,7 +15,7 @@
         (include "error")
         (include "altime")
         (include "events")
-        ;(include "mouse")
+        (include "mouse")
         ;(include "timer")
         ;(include "keyboard")
         ;(include "joystick")
