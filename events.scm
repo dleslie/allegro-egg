@@ -29,110 +29,13 @@
 
 (define make-event-type (foreign-lambda* integer ((integer a) (integer b) (integer c) (integer d)) "C_return(ALLEGRO_GET_EVENT_TYPE(a, b, c, d));"))
 
-(bind-opaque-type event_source (struct ALLEGRO_EVENT_SOURCE))
-
-(bind-opaque-type event_source (struct ALLEGRO_EVENT_SOURCE))
-
-(bind-rename ALLEGRO_EVENT_TYPE event-type)
-(bind-rename ALLEGRO_ANY_EVENT any-event)
-(bind-rename ALLEGRO_EVENT_SOURCE event-source)
-(bind-rename ALLEGRO_JOYSTICK_EVENT joystick-event)
-(bind-rename ALLEGRO_MOUSE_EVENT mouse-event)
-(bind-rename ALLEGRO_TIMER_EVENT timer-event)
-(bind-rename ALLEGRO_USER_EVENT user-event)
-
-(bind* #<<ENDC
-#ifdef CHICKEN
-typedef unsigned int ALLEGRO_EVENT_TYPE;
-
-typedef struct ALLEGRO_ANY_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        ALLEGRO_EVENT_SOURCE *source;
-        double timestamp;
-} ALLEGRO_ANY_EVENT;
-
-typedef struct ALLEGRO_JOYSTICK_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        struct ALLEGRO_JOYSTICK *source;
-        double timestamp;
-        struct ALLEGRO_JOYSTICK *id;
-        int stick;
-        int axis;
-        float pos;
-        int button;
-} ALLEGRO_JOYSTICK_EVENT;
-
-typedef struct ALLEGRO_KEYBOARD_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        struct ALLEGRO_KEYBOARD *source;
-        double timestamp;
-        struct ALLEGRO_DISPLAY *display;
-        int keycode;
-        int unichar;
-        unsigned int modifiers;
-        bool repeat;
-} ALLEGRO_KEYBOARD_EVENT;
-
-typedef struct ALLEGRO_MOUSE_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        struct ALLEGRO_MOUSE *source;
-        double timestamp;
-        struct ALLEGRO_DISPLAY *display;
-        int x,  y,  z, w;
-        int dx, dy, dz, dw;
-        unsigned int button;
-        float pressure;
-} ALLEGRO_MOUSE_EVENT;
-
-typedef struct ALLEGRO_TIMER_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        struct ALLEGRO_TIMER *source;
-        double timestamp;
-        int64_t count;
-        double error;
-} ALLEGRO_TIMER_EVENT;
-
-typedef struct ALLEGRO_USER_EVENT ALLEGRO_USER_EVENT;
-typedef int32_t intptr_t;
-
-struct ALLEGRO_USER_EVENT
-{
-        ALLEGRO_EVENT_TYPE type;
-        struct ALLEGRO_EVENT_SOURCE *source;
-        double timestamp;
-        struct ALLEGRO_USER_EVENT_DESCRIPTOR *__internal__descr;
-        intptr_t data1;
-        intptr_t data2;
-        intptr_t data3;
-        intptr_t data4;
-};
-
-#endif
-ENDC
-)
-
-(define-foreign-record-type (event-container "ALLEGRO_EVENT")
-  (constructor: make-event-container)
-  (destructor: free-event-container))
-
 (define event-container-type (foreign-lambda* integer ((event-container cont)) "C_return(cont->type);"))
 (define event-container-any (foreign-lambda* (c-pointer (struct ALLEGRO_ANY_EVENT)) ((event-container cont)) "C_return(&cont->any);"))
-
 (define event-container-display (foreign-lambda* (c-pointer (struct ALLEGRO_DISPLAY_EVENT)) ((event-container cont)) "C_return(&cont->display);"))
-
 (define event-container-joystick (foreign-lambda* (c-pointer (struct ALLEGRO_JOYSTICK_EVENT)) ((event-container cont)) "C_return(&cont->joystick);"))
-
 (define event-container-keyboard (foreign-lambda* (c-pointer (struct ALLEGRO_KEYBOARD_EVENT)) ((event-container cont)) "C_return(&cont->keyboard);"))
-
 (define event-container-mouse (foreign-lambda* (c-pointer (struct ALLEGRO_MOUSE_EVENT)) ((event-container cont)) "C_return(&cont->mouse);"))
-
 (define event-container-timer (foreign-lambda* (c-pointer (struct ALLEGRO_TIMER_EVENT)) ((event-container cont)) "C_return(&cont->timer);"))
-
 (define event-container-user (foreign-lambda* (c-pointer (struct ALLEGRO_USER_EVENT)) ((event-container cont)) "C_return(&cont->user);"))
 
 (define init-user-event-source (foreign-lambda void "al_init_user_event_source" (c-pointer event_source)))
@@ -146,8 +49,6 @@ ENDC
 (define event-source-data-set! (foreign-lambda void "al_set_event_source_data" (c-pointer event_source) integer))
 
 (define event-source-data (foreign-lambda integer "al_get_event_source_data" (c-pointer event_source)))
-
-(bind-opaque-type event_queue (c-pointer (struct ALLEGRO_EVENT_QUEUE)))
 
 (define create-event-queue (foreign-lambda event_queue "al_create_event_queue"))
 (define destroy-event-queue (foreign-lambda void "al_destroy_event_queue" event_queue))

@@ -4,6 +4,7 @@
 (module allegro *
         (import scheme chicken bind foreign foreigners)
 
+        (include "types")
         (include "base")
         (include "system")
         (include "config")

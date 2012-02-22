@@ -1,27 +1,3 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Types
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(define-record version
-  major sub wip release-number string date-string date int)
-
-(bind-rename _AL_DRIVER_INFO driver-info)
-(bind* #<<ENDC
-#ifdef CHICKEN
-typedef struct _AL_DRIVER_INFO      /* info about a hardware driver */
-{
-   int id;                          /* integer ID */
-   void *driver;                    /* the driver structure */
-   int autodetect;                  /* set to allow autodetection */
-} _AL_DRIVER_INFO;
-#endif
-ENDC
-)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Methods
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (define base/version 
   (make-version 
    (foreign-value "ALLEGRO_VERSION" integer)
