@@ -38,27 +38,27 @@
 (define event-container-timer (foreign-lambda* (c-pointer (struct ALLEGRO_TIMER_EVENT)) ((event-container cont)) "C_return(&cont->timer);"))
 (define event-container-user (foreign-lambda* (c-pointer (struct ALLEGRO_USER_EVENT)) ((event-container cont)) "C_return(&cont->user);"))
 
-(define init-user-event-source (foreign-lambda void "al_init_user_event_source" (c-pointer event_source)))
+(define init-user-event-source (foreign-lambda void "al_init_user_event_source" opaque_event_source))
 
-(define destroy-user-event-source (foreign-lambda void "al_destroy_user_event_source" (c-pointer event_source)))
+(define destroy-user-event-source (foreign-lambda void "al_destroy_user_event_source" opaque_event_source))
 
-(define emit-user-event (foreign-lambda bool "al_emit_user_event" (c-pointer event_source) event-container (function void ((c-pointer (struct ALLEGRO_USER_EVENT))))) )
+(define emit-user-event (foreign-lambda bool "al_emit_user_event" opaque_event_source event-container (function void ((c-pointer (struct ALLEGRO_USER_EVENT))))) )
 
 (define unref-user-event (foreign-lambda void "al_unref_user_event" (c-pointer (struct ALLEGRO_USER_EVENT))))
 
-(define event-source-data-set! (foreign-lambda void "al_set_event_source_data" (c-pointer event_source) integer))
+(define event-source-data-set! (foreign-lambda void "al_set_event_source_data" opaque_event_source integer))
 
-(define event-source-data (foreign-lambda integer "al_get_event_source_data" (c-pointer event_source)))
+(define event-source-data (foreign-lambda integer "al_get_event_source_data" opaque_event_source))
 
-(define create-event-queue (foreign-lambda event_queue "al_create_event_queue"))
-(define destroy-event-queue (foreign-lambda void "al_destroy_event_queue" event_queue))
+(define create-event-queue (foreign-lambda opaque_event_queue "al_create_event_queue"))
+(define destroy-event-queue (foreign-lambda void "al_destroy_event_queue" opaque_event_queue))
 
-(define register-event-source (foreign-lambda void "al_register_event_source" event_queue (c-pointer event_source)))
-(define unregister-event-source (foreign-lambda void "al_unregister_event_source" event_queue (c-pointer event_source)))
+(define register-event-source (foreign-lambda void "al_register_event_source" opaque_event_queue opaque_event_source))
+(define unregister-event-source (foreign-lambda void "al_unregister_event_source" opaque_event_queue opaque_event_source))
 
-(define empty-event-queue? (foreign-lambda void "al_is_event_queue_empty" event_queue))
+(define empty-event-queue? (foreign-lambda void "al_is_event_queue_empty" opaque_event_queue))
 
-(define next-event (foreign-lambda* event-container ((event_queue q)) "
+(define next-event (foreign-lambda* event-container ((opaque_event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_get_next_event(q, ret))
   C_return(ret);
@@ -69,7 +69,7 @@ else
 }
 "))
 
-(define peek-event (foreign-lambda* event-container ((event_queue q)) "
+(define peek-event (foreign-lambda* event-container ((opaque_event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_peek_next_event(q, ret))
   C_return(ret);
@@ -80,16 +80,16 @@ else
 }
 "))
 
-(define drop-event (foreign-lambda bool "al_drop_next_event" event_queue))
-(define flush-event-queue (foreign-lambda void "al_flush_event_queue" event_queue))
+(define drop-event (foreign-lambda bool "al_drop_next_event" opaque_event_queue))
+(define flush-event-queue (foreign-lambda void "al_flush_event_queue" opaque_event_queue))
 
-(define wait-for-event (foreign-lambda* event-container ((event_queue q)) "
+(define wait-for-event (foreign-lambda* event-container ((opaque_event_queue q)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 al_wait_for_event(q, ret);
 C_return(ret);
 "))
 
-(define wait-for-event-timed (foreign-lambda* event-container ((event_queue q) (float s)) "
+(define wait-for-event-timed (foreign-lambda* event-container ((opaque_event_queue q) (float s)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_wait_for_event_timed(q, ret, s))
   C_return(ret);
@@ -100,7 +100,7 @@ else
 }
 "))
 
-(define wait-for-event-until (foreign-lambda* event-container ((event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
+(define wait-for-event-until (foreign-lambda* event-container ((opaque_event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
 ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
 if (al_wait_for_event_until(q, ret, t))
   C_return(ret);

@@ -17,7 +17,7 @@
         (include "altime")
         (include "events")
         (include "mouse")
-        ;(include "timer")
+        (include "timer")
         ;(include "keyboard")
         ;(include "joystick")
         ;(include "threads")

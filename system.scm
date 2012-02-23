@@ -6,8 +6,8 @@
 (define system/org-name (foreign-lambda c-string "al_get_org_name"))
 (define system/app-name (foreign-lambda c-string "al_get_app_name"))
 (define system/inhibit-screensaver (foreign-lambda bool "al_inhibit_screensaver" bool))
-(define system/driver (foreign-lambda system "al_get_system_driver"))
-(define system/config (foreign-lambda config "al_get_system_config"))
+(define system/driver (foreign-lambda opaque_system "al_get_system_driver"))
+(define system/config (foreign-lambda opaque_config "al_get_system_config"))
 
 (define path/resources (foreign-value "ALLEGRO_RESOURCES_PATH" integer))
 (define path/temp (foreign-value "ALLEGRO_TEMP_PATH" integer))
@@ -18,5 +18,5 @@
 (define path/exe (foreign-value "ALLEGRO_EXENAME_PATH" integer))
 (define path/last (foreign-value "ALLEGRO_LAST_PATH" integer))
 
-(define path/standard (foreign-lambda path "al_get_standard_path" integer))
+(define path/standard (foreign-lambda opaque_path "al_get_standard_path" integer))
 
