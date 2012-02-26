@@ -1,6 +1,12 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (keyboard "ALLEGRO_KEYBOARD"))
+(define-foreign-record-type (keyboard-state "ALLEGRO_KEYBOARD_STATE")
+  (constructor: make-keyboard-state)
+  (destructor: free-keyboard-state)
+  (opaque_display_info display keyboard-state/display))
+
 (define-foreign-record-type (timeout "ALLEGRO_TIMEOUT")
   (constructor: make-timeout)
   (destructor: free-timeout))
@@ -21,23 +27,18 @@
   (float pressure mouse-state-pressure)
   (opaque_display_info display mouse-state-display))
 
-(bind-rename _AL_DRIVER_INFO driver-info)
-(bind* #<<ENDC
-#ifdef CHICKEN
-typedef struct _AL_DRIVER_INFO      /* info about a hardware driver */
-{
-   int id;                          /* integer ID */
-   void *driver;                    /* the driver structure */
-   int autodetect;                  /* set to allow autodetection */
-} _AL_DRIVER_INFO;
-#endif
-ENDC
-)
+(define-foreign-record-type (driver-info "_AL_DRIVER_INFO")
+  (constructor: make-driver-info)
+  (destructor: free-driver-info)
+  (int id driver-info-id)
+  (c-pointer driver driver-info-driver)
+  (int autodetect driver-info-autodetect))
 
 (bind-rename/pattern "ALLEGRO_EVENT_TYPE" "event-type")
 (bind-rename/pattern "ALLEGRO_ANY_EVENT" "any-event")
 (bind-rename/pattern "ALLEGRO_EVENT_SOURCE" "event-source")
 (bind-rename/pattern "ALLEGRO_JOYSTICK_EVENT" "joystick-event")
+(bind-rename/pattern "ALLEGRO_KEYBOARD_EVENT" "keyboard-event")
 (bind-rename/pattern "ALLEGRO_MOUSE_EVENT" "mouse-event")
 (bind-rename/pattern "ALLEGRO_TIMER_EVENT" "timer-event")
 (bind-rename/pattern "ALLEGRO_USER_EVENT" "user-event")
@@ -132,3 +133,9 @@ ENDC
 (bind-opaque-type opaque_timer (c-pointer (struct ALLEGRO_TIMER)))
 (bind-opaque-type opaque_bitmap (c-pointer (struct ALLEGRO_BITMAP)))
 (bind-opaque-type opaque_cursor (c-pointer (struct ALLEGRO_CURSOR)))
+
+
+
+
+
+

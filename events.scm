@@ -1,35 +1,8 @@
-(define event/joystick-axis (foreign-value "ALLEGRO_EVENT_JOYSTICK_AXIS" integer))
-(define event/joystick-button-down (foreign-value "ALLEGRO_EVENT_JOYSTICK_BUTTON_DOWN" integer))
-(define event/joystick-button-up (foreign-value "ALLEGRO_EVENT_JOYSTICK_BUTTON_UP" integer))
-(define event/joystick-configuration (foreign-value "ALLEGRO_EVENT_JOYSTICK_CONFIGURATION" integer))
-
-(define event/key-down (foreign-value "ALLEGRO_EVENT_KEY_DOWN" integer))
-(define event/key-up (foreign-value "ALLEGRO_EVENT_KEY_UP" integer))
-(define event/key-char (foreign-value "ALLEGRO_EVENT_KEY_CHAR" integer))
-
-(define event/mouse-axis (foreign-value "ALLEGRO_EVENT_MOUSE_AXES" integer))
-(define event/mouse-button-down (foreign-value "ALLEGRO_EVENT_MOUSE_BUTTON_DOWN" integer))
-(define event/mouse-button-up (foreign-value "ALLEGRO_EVENT_MOUSE_BUTTON_UP" integer))
-(define event/mouse-enter (foreign-value "ALLEGRO_EVENT_MOUSE_ENTER_DISPLAY" integer))
-(define event/mouse-leave (foreign-value "ALLEGRO_EVENT_MOUSE_LEAVE_DISPLAY" integer))
-(define event/mouse-warped (foreign-value "ALLEGRO_EVENT_MOUSE_WARPED" integer))
-
-(define event/timer (foreign-value "ALLEGRO_EVENT_TIMER" integer))
-
-(define event/display-expose (foreign-value "ALLEGRO_EVENT_DISPLAY_EXPOSE" integer))
-(define event/display-resize (foreign-value "ALLEGRO_EVENT_DISPLAY_RESIZE" integer))
-(define event/display-close (foreign-value "ALLEGRO_EVENT_DISPLAY_CLOSE" integer))
-(define event/display-lost (foreign-value "ALLEGRO_EVENT_DISPLAY_LOST" integer))
-(define event/display-found (foreign-value "ALLEGRO_EVENT_DISPLAY_FOUND" integer))
-(define event/display-switch-in (foreign-value "ALLEGRO_EVENT_DISPLAY_SWITCH_IN" integer))
-(define event/display-switch-out (foreign-value "ALLEGRO_EVENT_DISPLAY_SWITCH_OUT" integer))
-(define event/display-orientation (foreign-value "ALLEGRO_EVENT_DISPLAY_ORIENTATION" integer))
-
 (define user-event-type? (foreign-lambda* bool ((integer event)) "C_return(ALLEGRO_EVENT_TYPE_IS_USER(event));"))
 
 (define make-event-type (foreign-lambda* integer ((integer a) (integer b) (integer c) (integer d)) "C_return(ALLEGRO_GET_EVENT_TYPE(a, b, c, d));"))
 
-(define event-container-type (foreign-lambda* integer ((event-container cont)) "C_return(cont->type);"))
+(define event-container-type (foreign-lambda* event-type ((event-container cont)) "C_return(cont->type);"))
 (define event-container-any (foreign-lambda* (c-pointer (struct ALLEGRO_ANY_EVENT)) ((event-container cont)) "C_return(&cont->any);"))
 (define event-container-display (foreign-lambda* (c-pointer (struct ALLEGRO_DISPLAY_EVENT)) ((event-container cont)) "C_return(&cont->display);"))
 (define event-container-joystick (foreign-lambda* (c-pointer (struct ALLEGRO_JOYSTICK_EVENT)) ((event-container cont)) "C_return(&cont->joystick);"))
