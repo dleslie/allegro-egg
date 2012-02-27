@@ -1,11 +1,42 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (display-mode "ALLEGRO_DISPLAY_MODE")
+  (constructor: make-display-mode)
+  (destructor: free-display-mode)
+  (int width display-mode-width)
+  (int height display-mode-height)
+  (int format display-mode-format)
+  (int refresh_rate display-mode-refresh-rate))
+
+(define-foreign-record-type (monitor-info "ALLEGRO_MONITOR_INFO")
+  (constructor: make-monitor-info)
+  (destructor: free-monitor-info)
+  (int x1 monitor-info-x1)
+  (int y1 monitor-info-y1)
+  (int x2 monitor-info-x2)
+  (int y2 monitor-info-y2))
+
+(define-foreign-record-type (display "ALLEGRO_DISPLAY"))
+
+(define-foreign-record-type (joystick "ALLEGRO_JOYSTICK"))
+(define-foreign-record-type (joystick-state "ALLEGRO_JOYSTICK_STATE")
+  (constructor: make-joystick-state)
+  (destructor: free-joystick-state)
+  ;((float joystick/max-axes) (axis joystick/max-sticks) joystick-state-axis)
+  (int (button joystick/max-buttons) jostick-state-button))
+(define joystick-state-axis (foreign-lambda* float ((joystick-state jstate) (int which_stick) (int which_axis)) "
+if (which_stick < 0 || which_stick >= _AL_MAX_JOYSTICK_STICKS || which_axis < 0 || which_axis >= _AL_MAX_JOYSTICK_AXES)
+  C_return(C_SCHEME_FALSE);
+else
+  C_return(jstate->stick[which_stick].axis[which_axis]);
+")) 
+
 (define-foreign-record-type (keyboard "ALLEGRO_KEYBOARD"))
 (define-foreign-record-type (keyboard-state "ALLEGRO_KEYBOARD_STATE")
   (constructor: make-keyboard-state)
   (destructor: free-keyboard-state)
-  (opaque_display_info display keyboard-state/display))
+  (opaque_display_info display keyboard-state-display))
 
 (define-foreign-record-type (timeout "ALLEGRO_TIMEOUT")
   (constructor: make-timeout)

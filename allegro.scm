@@ -6,6 +6,7 @@
 
         (include "types")
         (include "enums")
+        (include "constants")
 
         (include "base")
         (include "system")
@@ -19,9 +20,8 @@
         (include "mouse")
         (include "timer")
         (include "keyboard")
-        ;(include "joystick")
-        ;(include "threads")
-        ;(include "display")
+        (include "joystick")
+        (include "display")
         ;(include "transformations")
         ;(include "bitmap_io")
         ;(include "bitmap")
@@ -33,4 +33,5 @@
         ;(include "config")
         ;(include "memory")
         ;(include "debug")
+        ;(include "threads")
 )
