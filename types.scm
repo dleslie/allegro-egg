@@ -1,6 +1,14 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (color "ALLEGRO_COLOR")
+  (constructor: make-color)
+  (destructor: free-color)
+  (float r color-red)
+  (float g color-green)
+  (float b color-blue)
+  (float a color-alpha))
+
 (define-foreign-record-type (display-mode "ALLEGRO_DISPLAY_MODE")
   (constructor: make-display-mode)
   (destructor: free-display-mode)

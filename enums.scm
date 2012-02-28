@@ -46,7 +46,7 @@
   ((can-draw-into-bitmap) ALLEGRO_CAN_DRAW_INTO_BITMAP)
   ((support-separate-alpha) ALLEGRO_SUPPORT_SEPARATE_ALPHA))
 
-(define-foreign-enum-type (display-default int)
+(define-foreign-enum-type (display-option-importance int)
   (display-default->int int->display-default)
   ((dont-care) ALLEGRO_DONTCARE)
   ((require) ALLEGRO_REQUIRE)
