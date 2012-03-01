@@ -14,10 +14,6 @@
 (define joystick/button-count (foreign-lambda int "al_get_joystick_num_buttons" joystick))
 (define joystick/button-name (foreign-lambda int "al_get_joystick_button_name" joystick int))
 
-(define joystick/state (foreign-lambda* joystick-state ((joystick j)) "
-ALLEGRO_JOYSTICK_STATE *ret = malloc(sizeof(ALLEGRO_JOYSTICK_STATE));
-al_get_joystick_state(j, ret);
-C_return(ret);
-"))
+(define joystick/state! (foreign-lambda* void ((joystick-state state) (joystick j)) "al_get_joystick_state(j, state);"))
 
 (define joystick/event-source (foreign-lambda (c-pointer event-source) "al_get_joystick_event_source"))

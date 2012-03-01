@@ -1,6 +1,14 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (locked-region "ALLEGRO_LOCKED_REGION")
+  (constructor: make-locked-region)
+  (destructor: free-locked-region)
+  (c-pointer data locked-region-data)
+  (pixel-format format locked-region-format)
+  (int pitch locked-region-pitch)
+  (int pixel_size locked-region-pixel-size))
+
 (define-foreign-record-type (color "ALLEGRO_COLOR")
   (constructor: make-color)
   (destructor: free-color)

@@ -31,55 +31,35 @@
 
 (define empty-event-queue? (foreign-lambda void "al_is_event_queue_empty" opaque_event_queue))
 
-(define next-event (foreign-lambda* event-container ((opaque_event_queue q)) "
-ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
-if (al_get_next_event(q, ret))
-  C_return(ret);
+(define next-event! (foreign-lambda* bool ((event-container container) (opaque_event_queue q)) "
+if (al_get_next_event(q, container))
+  C_return(C_SCHEME_TRUE);
 else
-{
-  free(ret);
   C_return (C_SCHEME_FALSE);
-}
 "))
 
-(define peek-event (foreign-lambda* event-container ((opaque_event_queue q)) "
-ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
-if (al_peek_next_event(q, ret))
-  C_return(ret);
+(define peek-event! (foreign-lambda* bool ((event-container container) (opaque_event_queue q)) "
+if (al_peek_next_event(q, container))
+  C_return(C_SCHEME_TRUE);
 else
-{
-  free(ret);
   C_return (C_SCHEME_FALSE);
-}
 "))
 
 (define drop-event (foreign-lambda bool "al_drop_next_event" opaque_event_queue))
 (define flush-event-queue (foreign-lambda void "al_flush_event_queue" opaque_event_queue))
 
-(define wait-for-event (foreign-lambda* event-container ((opaque_event_queue q)) "
-ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
-al_wait_for_event(q, ret);
-C_return(ret);
-"))
+(define wait-for-event! (foreign-lambda* void ((event-container container) (opaque_event_queue q)) "al_wait_for_event(q, container);"))
 
-(define wait-for-event-timed (foreign-lambda* event-container ((opaque_event_queue q) (float s)) "
-ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
-if (al_wait_for_event_timed(q, ret, s))
-  C_return(ret);
+(define wait-for-event-timed! (foreign-lambda* bool ((event-container container)(opaque_event_queue q) (float s)) "
+if (al_wait_for_event_timed(q, container, s))
+  C_return(C_SCHEME_TRUE);
 else
-{
-  free(ret);
   C_return (C_SCHEME_FALSE);
-}
 "))
 
-(define wait-for-event-until (foreign-lambda* event-container ((opaque_event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
-ALLEGRO_EVENT *ret = malloc(sizeof(ALLEGRO_EVENT));
-if (al_wait_for_event_until(q, ret, t))
-  C_return(ret);
+(define wait-for-event-until! (foreign-lambda* bool ((event-container container) (opaque_event_queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
+if (al_wait_for_event_until(q, container, t))
+  C_return(C_SCHEME_TRUE);
 else
-{
-  free(ret);
   C_return(C_SCHEME_FALSE);
-}
 "))

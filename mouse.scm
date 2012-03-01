@@ -31,11 +31,7 @@
 (define mouse/z-set! (foreign-lambda bool "al_set_mouse_z" integer))
 (define mouse/w-set! (foreign-lambda bool "al_set_mouse_w" integer))
 (define mouse/axis-set! (foreign-lambda bool "al_set_mouse_axis" integer integer))
-(define mouse/state (foreign-lambda* mouse-state () "
-ALLEGRO_MOUSE_STATE *ret = malloc(sizeof(ALLEGRO_MOUSE_STATE));
-al_get_mouse_state(ret);
-C_return(ret);
-"))
+(define mouse/state! (foreign-lambda* void ((mouse-state state)) "al_get_mouse_state(state);"))
 (define mouse/button-down (foreign-lambda bool "al_mouse_button_down" mouse-state integer))
 (define mouse/axis (foreign-lambda integer "al_get_mouse_state_axis" mouse-state integer))
 

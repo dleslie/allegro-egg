@@ -37,17 +37,11 @@
 (define display/icon-set! (foreign-lambda void "al_set_display_icon" display opaque_bitmap))
 
 (define display/video-adapter-count (foreign-lambda int "al_get_num_video_adapters"))
-(define display/monitor-info (foreign-lambda* monitor-info ((int adapter)) #<<ENDC
-ALLEGRO_MONITOR_INFO *info = malloc(sizeof(ALLEGRO_MONITOR_INFO));
+(define display/monitor-info! (foreign-lambda* bool ((monitor-info info) (int adapter)) #<<ENDC
 if (al_get_monitor_info(adapter, info))
-{
-  C_return(info);
-}
+  C_return(C_SCHEME_TRUE);
 else
-{
-  free(info);
   C_return(C_SCHEME_FALSE);
-}
 ENDC
 ))
 
@@ -71,12 +65,12 @@ ENDC
 
 (define display/new-display-option-set! (foreign-lambda void "al_set_new_display_option" display-option int display-option-importance))
 
-(define display-new-display-option-value (foreign-lambda* int ((display-option opt)) #<<ENDC
+(define display/new-display-option-value (foreign-lambda* int ((display-option opt)) #<<ENDC
 int importance;
 C_return(al_get_new_display_option(opt, &importance));
 ENDC
 ))
-(define display-new-display-option-importance (foreign-lambda* display-option-importance ((display-option opt)) #<<ENDC
+(define display/new-display-option-importance (foreign-lambda* display-option-importance ((display-option opt)) #<<ENDC
 int importance = 0;
 al_get_new_display_option(opt, &importance);
 C_return(importance);
