@@ -25,10 +25,21 @@
         (include "bitmap")
         (include "bitmap_io")
         (include "transformations")
-        ;(include "tls")
-        ;(include "fshook")
-        ;(include "fmaths")
-        ;(include "memory")
-        ;(include "debug")
-        ;(include "threads")
+        (include "fixed")
+        (include "fmaths")
+        (include "debug")
+        (include "threads")
+        (include "tls")
+        (include "fshook") ; TODO
+        (include "memory") ;  TODO
+        (include "audio") ; TODO
+        (include "color") ; TODO
+        (include "direct3d") ; TODO
+        (include "font") ; TODO
+        (include "image") ; TODO
+        (include "memfile") ; TODO
+        (include "opengl") ; TODO
+        (include "physfs") ; TODO
+        (include "primitives") ; TODO
+        (include "ttf") ; TODO
 )

@@ -1,6 +1,19 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (state "ALLEGRO_STATE")
+  (constructor: make-state)
+  (destructor: free-state))
+
+(define-foreign-record-type (thread "ALLEGRO_THREAD"))
+(define-foreign-record-type (mutex "ALLEGRO_MUTEX"))
+(define-foreign-record-type (condition "ALLEGRO_COND"))
+
+(define-foreign-record-type (transform "ALLEGRO_TRANSFORM")
+  (constructor: make-transform)
+  (destructor: free-transform))
+(define transform-value (foreign-lambda* float ((transform t) (int i) (int j)) "C_return(t->m[i][j]);"))
+
 (define-foreign-record-type (locked-region "ALLEGRO_LOCKED_REGION")
   (constructor: make-locked-region)
   (destructor: free-locked-region)

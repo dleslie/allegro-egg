@@ -1,19 +1,22 @@
-;; typedef struct ALLEGRO_TRANSFORM ALLEGRO_TRANSFORM;
+(define transform/use (foreign-lambda void "al_use_transform" transform))
 
-;; struct ALLEGRO_TRANSFORM {
-;;    float m[4][4];
-;; };
+(define transform/copy! (foreign-lambda void "al_copy_transform" transform transform))
+(define transform/identity! (foreign-lambda void "al_identity_transform" transform))
+(define transform/build! (foreign-lambda void "al_build_transform" transform float float float float float))
+(define transform/translate! (foreign-lambda void "al_translate_transform" transform float float))
+(define transform/scale! (foreign-lambda void "al_scale_transform" transform float float))
 
-;; /* Transformations*/
-;; AL_FUNC(void, al_use_transform, (const ALLEGRO_TRANSFORM* trans));
-;; AL_FUNC(void, al_copy_transform, (ALLEGRO_TRANSFORM* dest, const ALLEGRO_TRANSFORM* src));
-;; AL_FUNC(void, al_identity_transform, (ALLEGRO_TRANSFORM* trans));
-;; AL_FUNC(void, al_build_transform, (ALLEGRO_TRANSFORM* trans, float x, float y, float sx, float sy, float theta));
-;; AL_FUNC(void, al_translate_transform, (ALLEGRO_TRANSFORM* trans, float x, float y));
-;; AL_FUNC(void, al_rotate_transform, (ALLEGRO_TRANSFORM* trans, float theta));
-;; AL_FUNC(void, al_scale_transform, (ALLEGRO_TRANSFORM* trans, float sx, float sy));
-;; AL_FUNC(void, al_transform_coordinates, (const ALLEGRO_TRANSFORM* trans, float* x, float* y));
-;; AL_FUNC(void, al_compose_transform, (ALLEGRO_TRANSFORM* trans, const ALLEGRO_TRANSFORM* other));
-;; AL_FUNC(const ALLEGRO_TRANSFORM*, al_get_current_transform, (void));
-;; AL_FUNC(void, al_invert_transform, (ALLEGRO_TRANSFORM *trans));
-;; AL_FUNC(int, al_check_inverse, (const ALLEGRO_TRANSFORM *trans, float tol));
+(define transform/coordinates (foreign-lambda* scheme-object ((transform t) (float x) (float y)) "
+float sx = x;
+float sy = y;
+al_transform_coordinates(t, &sx, &sy);
+C_return(C_pair(&C_a, C_flonum(&C_a, sx), C_flonum(&C_a, sy)));
+"))
+
+(define transform/compose! (foreign-lambda void "al_compose_transform" transform transform))
+
+(define transform/current (foreign-lambda transform "al_get_current_transform"))
+
+(define transform/invert! (foreign-lambda void "al_invert_transform" transform))
+
+(define transform/check-inverse (foreign-lambda int "al_check_inverse" transform float))
