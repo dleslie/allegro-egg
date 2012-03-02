@@ -10,6 +10,15 @@
   ((bitmap) ALLEGRO_STATE_BITMAP)
   ((all) ALLEGRO_STATE_ALL))
 
+(define-foreign-enum-type (file-mode int)
+  (file-mode->int int->file-mode)
+  ((read) ALLEGRO_FILEMODE_READ)
+  ((write) ALLEGRO_FILEMODE_WRITE)
+  ((execute) ALLEGRO_FILEMODE_EXECUTE)
+  ((hidden) ALLEGRO_FILEMODE_HIDDEN)
+  ((file) ALLEGRO_FILEMODE_ISFILE)
+  ((directory) ALLEGRO_FILEMODE_ISDIR))
+
 (define-foreign-enum-type (pixel-format int)
   (pixel-format->int int->pixel-format)
   ((any) ALLEGRO_PIXEL_FORMAT_ANY)

@@ -1,6 +1,11 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (filesystem-entry "ALLEGRO_FS_ENTRY")
+  (constructor: make-filesystem-entry)
+  (destructor: free-filesystem-entry)
+  ((const c-pointer) vtable filesystem-entry-vtable))
+
 (define-foreign-record-type (state "ALLEGRO_STATE")
   (constructor: make-state)
   (destructor: free-state))

@@ -1,30 +1,3 @@
-;; /* Type: ALLEGRO_FS_ENTRY
-;;  */
-;; typedef struct ALLEGRO_FS_ENTRY ALLEGRO_FS_ENTRY;
-
-;; struct ALLEGRO_FS_ENTRY {
-;;    struct ALLEGRO_FS_INTERFACE const *vtable;
-;; };
-
-
-;; /* Enum: ALLEGRO_FILE_MODE
-;;  */
-;; typedef enum ALLEGRO_FILE_MODE
-;; {
-;;    ALLEGRO_FILEMODE_READ    = 1,
-;;    ALLEGRO_FILEMODE_WRITE   = 1 << 1,
-;;    ALLEGRO_FILEMODE_EXECUTE = 1 << 2,
-;;    ALLEGRO_FILEMODE_HIDDEN  = 1 << 3,
-;;    ALLEGRO_FILEMODE_ISFILE  = 1 << 4,
-;;    ALLEGRO_FILEMODE_ISDIR   = 1 << 5,
-;; } ALLEGRO_FILE_MODE;
-
-
-;; #ifndef EOF
-;;    #define EOF    (-1)
-;; #endif
-
-
 ;; /* Type: ALLEGRO_FS_INTERFACE
 ;;  */
 ;; typedef struct ALLEGRO_FS_INTERFACE ALLEGRO_FS_INTERFACE;
