@@ -38,8 +38,8 @@
 ;; #endif
 
 
-;; /* Type: ALLEGRO_FONT
-;; */
+;; -* Type: ALLEGRO_FONT
+;; *-
 ;; typedef struct ALLEGRO_FONT ALLEGRO_FONT;
 ;; typedef struct ALLEGRO_FONT_VTABLE ALLEGRO_FONT_VTABLE;
 
@@ -50,7 +50,7 @@
 ;;    ALLEGRO_FONT_VTABLE *vtable;
 ;; };
 
-;; /* text- and font-related stuff */
+;; -* text- and font-related stuff *-
 ;; struct ALLEGRO_FONT_VTABLE
 ;; {
 ;;    ALLEGRO_FONT_METHOD(int, font_height, (const ALLEGRO_FONT *f));

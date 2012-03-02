@@ -57,8 +57,8 @@
 (define-foreign-record-type (joystick-state "ALLEGRO_JOYSTICK_STATE")
   (constructor: make-joystick-state)
   (destructor: free-joystick-state)
-  ;((float joystick/max-axes) (axis joystick/max-sticks) joystick-state-axis)
-  (int (button joystick/max-buttons) jostick-state-button))
+  ;((float joystick-max-axes) (axis joystick-max-sticks) joystick-state-axis)
+  (int (button joystick-max-buttons) jostick-state-button))
 (define joystick-state-axis (foreign-lambda* float ((joystick-state jstate) (int which_stick) (int which_axis)) "
 if (which_stick < 0 || which_stick >= _AL_MAX_JOYSTICK_STICKS || which_axis < 0 || which_axis >= _AL_MAX_JOYSTICK_AXES)
   C_return(C_SCHEME_FALSE);
@@ -87,7 +87,7 @@ else
   (int y mouse-state-y)
   (int z mouse-state-z)
   (int w mouse-state-w)
-  (int (more_axes mouse/max-extra-axis) mouse-state-axis)
+  (int (more_axes mouse-max-extra-axis) mouse-state-axis)
   (int buttons mouse-state-buttons)
   (float pressure mouse-state-pressure)
   (opaque_display_info display mouse-state-display))

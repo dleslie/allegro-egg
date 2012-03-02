@@ -27,8 +27,8 @@
 ;; #endif
 
 
-;; /* Enum: ALLEGRO_PRIM_TYPE
-;;  */
+;; -* Enum: ALLEGRO_PRIM_TYPE
+;;  *-
 ;; typedef enum ALLEGRO_PRIM_TYPE
 ;; {
 ;;   ALLEGRO_PRIM_LINE_LIST,
@@ -41,8 +41,8 @@
 ;;   ALLEGRO_PRIM_NUM_TYPES
 ;; } ALLEGRO_PRIM_TYPE;
 
-;; /* Enum: ALLEGRO_PRIM_ATTR
-;;  */
+;; -* Enum: ALLEGRO_PRIM_ATTR
+;;  *-
 ;; typedef enum ALLEGRO_PRIM_ATTR
 ;; {
 ;;    ALLEGRO_PRIM_POSITION = 1,
@@ -52,8 +52,8 @@
 ;;    ALLEGRO_PRIM_ATTR_NUM
 ;; } ALLEGRO_PRIM_ATTR;
 
-;; /* Enum: ALLEGRO_PRIM_STORAGE
-;;  */
+;; -* Enum: ALLEGRO_PRIM_STORAGE
+;;  *-
 ;; typedef enum ALLEGRO_PRIM_STORAGE
 ;; {
 ;;    ALLEGRO_PRIM_FLOAT_2,
@@ -61,16 +61,16 @@
 ;;    ALLEGRO_PRIM_SHORT_2,
 ;; } ALLEGRO_PRIM_STORAGE;
 
-;; /* Enum: ALLEGRO_VERTEX_CACHE_SIZE
-;;  */
+;; -* Enum: ALLEGRO_VERTEX_CACHE_SIZE
+;;  *-
 ;; #define ALLEGRO_VERTEX_CACHE_SIZE 256
 
-;; /* Enum: ALLEGRO_PRIM_QUALITY
-;;  */
+;; -* Enum: ALLEGRO_PRIM_QUALITY
+;;  *-
 ;; #define ALLEGRO_PRIM_QUALITY 10
 
-;; /* Type: ALLEGRO_VERTEX_ELEMENT
-;;  */
+;; -* Type: ALLEGRO_VERTEX_ELEMENT
+;;  *-
 ;; typedef struct ALLEGRO_VERTEX_ELEMENT ALLEGRO_VERTEX_ELEMENT;
 
 ;; struct ALLEGRO_VERTEX_ELEMENT {
@@ -79,16 +79,16 @@
 ;;    int offset;
 ;; };
 
-;; /* Type: ALLEGRO_VERTEX_DECL
-;;  */
+;; -* Type: ALLEGRO_VERTEX_DECL
+;;  *-
 ;; typedef struct ALLEGRO_VERTEX_DECL ALLEGRO_VERTEX_DECL;
 
-;; /* Duplicated in allegro5/internal/aintern_tri_soft.h */
+;; -* Duplicated in allegro5-internal-aintern_tri_soft.h *-
 ;; #ifndef _ALLEGRO_VERTEX_DEFINED
 ;; #define _ALLEGRO_VERTEX_DEFINED
 
-;; /* Type: ALLEGRO_VERTEX
-;;  */
+;; -* Type: ALLEGRO_VERTEX
+;;  *-
 ;; typedef struct ALLEGRO_VERTEX ALLEGRO_VERTEX;
 
 ;; struct ALLEGRO_VERTEX {
@@ -100,9 +100,9 @@
 
 ;; ALLEGRO_PRIM_FUNC(uint32_t, al_get_allegro_primitives_version, (void));
 
-;; /*
+;; -*
 ;; * Primary Functions
-;; */
+;; *-
 ;; ALLEGRO_PRIM_FUNC(bool, al_init_primitives_addon, (void));
 ;; ALLEGRO_PRIM_FUNC(void, al_shutdown_primitives_addon, (void));
 ;; ALLEGRO_PRIM_FUNC(int, al_draw_prim, (const void* vtxs, const ALLEGRO_VERTEX_DECL* decl, ALLEGRO_BITMAP* texture, int start, int end, int type));
@@ -111,9 +111,9 @@
 ;; ALLEGRO_PRIM_FUNC(ALLEGRO_VERTEX_DECL*, al_create_vertex_decl, (const ALLEGRO_VERTEX_ELEMENT* elements, int stride));
 ;; ALLEGRO_PRIM_FUNC(void, al_destroy_vertex_decl, (ALLEGRO_VERTEX_DECL* decl));
 
-;; /*
+;; -*
 ;; * Custom primitives
-;; */
+;; *-
 ;; ALLEGRO_PRIM_FUNC(void, al_draw_soft_triangle, (ALLEGRO_VERTEX* v1, ALLEGRO_VERTEX* v2, ALLEGRO_VERTEX* v3, uintptr_t state,
 ;;                                            void (*init)(uintptr_t, ALLEGRO_VERTEX*, ALLEGRO_VERTEX*, ALLEGRO_VERTEX*),
 ;;                                            void (*first)(uintptr_t, int, int, int, int),
@@ -124,9 +124,9 @@
 ;;                                        void (*step)(uintptr_t, int), 
 ;;                                        void (*draw)(uintptr_t, int, int)));
 
-;; /*
+;; -*
 ;; *High level primitives
-;; */
+;; *-
 ;; ALLEGRO_PRIM_FUNC(void, al_draw_line, (float x1, float y1, float x2, float y2, ALLEGRO_COLOR color, float thickness));
 ;; ALLEGRO_PRIM_FUNC(void, al_draw_triangle, (float x1, float y1, float x2, float y2, float x3, float y3, ALLEGRO_COLOR color, float thickness));
 ;; ALLEGRO_PRIM_FUNC(void, al_draw_rectangle, (float x1, float y1, float x2, float y2, ALLEGRO_COLOR color, float thickness));

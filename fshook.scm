@@ -1,5 +1,5 @@
-;; /* Type: ALLEGRO_FS_INTERFACE
-;;  */
+;; -* Type: ALLEGRO_FS_INTERFACE
+;;  *-
 ;; typedef struct ALLEGRO_FS_INTERFACE ALLEGRO_FS_INTERFACE;
 
 ;; struct ALLEGRO_FS_INTERFACE {
@@ -55,7 +55,7 @@
 ;;                                                     const char *mode));
 
 
-;; /* Thread-local state. */
+;; -* Thread-local state. *-
 ;; AL_FUNC(const ALLEGRO_FS_INTERFACE *, al_get_fs_interface, (void));
 ;; AL_FUNC(void, al_set_fs_interface, (const ALLEGRO_FS_INTERFACE *vtable));
 ;; AL_FUNC(void, al_set_standard_fs_interface, (void));

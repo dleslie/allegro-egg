@@ -4,14 +4,14 @@
 
 ;; #if defined ALLEGRO_IPHONE
 
-;; #include <OpenGLES/ES1/gl.h>
-;; #include <OpenGLES/ES1/glext.h>
-;; #include <OpenGLES/ES2/gl.h>
-;; #include <OpenGLES/ES2/glext.h>
+;; #include <OpenGLES-ES1-gl.h>
+;; #include <OpenGLES-ES1-glext.h>
+;; #include <OpenGLES-ES2-gl.h>
+;; #include <OpenGLES-ES2-glext.h>
 
-;; /* Apple defines OES versions for these - however the separated alpha ones
+;; -* Apple defines OES versions for these - however the separated alpha ones
 ;;  * don't seem to work on the device and just crash.
-;;  */
+;;  *-
 ;; #define glBlendEquation glBlendEquationOES
 ;; #define glBlendFuncSeparate glBlendFuncSeparateOES
 ;; #define glBlendEquationSeparate glBlendEquationSeparateOES
@@ -26,9 +26,9 @@
 
 ;; #elif defined ALLEGRO_MACOSX
 
-;; #include <OpenGL/OpenGL.h>
-;; #include <OpenGL/gl.h>
-;; #include <OpenGL/glext.h>
+;; #include <OpenGL-OpenGL.h>
+;; #include <OpenGL-gl.h>
+;; #include <OpenGL-glext.h>
 
 ;; #ifndef GL_GLEXT_PROTOTYPES
 ;; #define GL_GLEXT_PROTOTYPES
@@ -36,27 +36,27 @@
 
 ;; #elif defined ALLEGRO_GP2XWIZ
 
-;; #include <wiz/GL/gl.h>
-;; #include <wiz/GL/nanogl.h>
-;; #include <wiz/GL/wizGLES.h>
-;; #include <wiz/GL/egl.h>
+;; #include <wiz-GL-gl.h>
+;; #include <wiz-GL-nanogl.h>
+;; #include <wiz-GL-wizGLES.h>
+;; #include <wiz-GL-egl.h>
 
-;; #else /* ALLEGRO_MACOSX */
+;; #else -* ALLEGRO_MACOSX *-
 
-;; /* HACK: Prevent both Mesa and SGI's broken headers from screwing us */
+;; -* HACK: Prevent both Mesa and SGI's broken headers from screwing us *-
 ;; #define __glext_h_
 ;; #define __glxext_h_
-;; #include <GL/gl.h>
+;; #include <GL-gl.h>
 ;; #undef  __glext_h_
 ;; #undef  __glxext_h_
 
-;; #endif /* ALLEGRO_MACOSX */
+;; #endif -* ALLEGRO_MACOSX *-
 
-;; #include "allegro5/opengl/gl_ext.h"
+;; #include "allegro5-opengl-gl_ext.h"
 
 ;; #ifdef ALLEGRO_WINDOWS
 
-;; /* Missing #defines from Mingw */
+;; -* Missing #defines from Mingw *-
 ;; #ifndef PFD_SWAP_LAYER_BUFFERS
 ;; #define PFD_SWAP_LAYER_BUFFERS  0x00000800
 ;; #endif
@@ -77,7 +77,7 @@
 ;; #define ENUM_CURRENT_SETTINGS       ((DWORD)-1)
 ;; #endif
 
-;; #endif /* ALLEGRO_WINDOWS */
+;; #endif -* ALLEGRO_WINDOWS *-
 
 ;; #if defined ALLEGRO_WINDOWS
 ;; 	#define ALLEGRO_DEFINE_PROC_TYPE(type, name, args) \
@@ -88,12 +88,12 @@
 ;; #endif
 
 
-;; /*
+;; -*
 ;;  *  Public OpenGL-related API
-;;  */
+;;  *-
 
-;; /* Enum: ALLEGRO_OPENGL_VARIANT
-;;  */
+;; -* Enum: ALLEGRO_OPENGL_VARIANT
+;;  *-
 ;; typedef enum ALLEGRO_OPENGL_VARIANT {
 ;;    ALLEGRO_DESKTOP_OPENGL = 0,
 ;;    ALLEGRO_OPENGL_ES

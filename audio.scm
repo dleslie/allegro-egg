@@ -21,14 +21,14 @@
 ;; #endif
 
 
-;; /* Internal, used to communicate with acodec. */
-;; /* Must be in 512 <= n < 1024 */
+;; -* Internal, used to communicate with acodec. *-
+;; -* Must be in 512 <= n < 1024 *-
 ;; #define _KCM_STREAM_FEEDER_QUIT_EVENT_TYPE   (512)
 
-;; /* User event type emitted when a stream fragment is ready to be
+;; -* User event type emitted when a stream fragment is ready to be
 ;;  * refilled with more audio data.
 ;;  * Must be in 512 <= n < 1024
-;;  */
+;;  *-
 ;; #define ALLEGRO_EVENT_AUDIO_STREAM_FRAGMENT  (513)
 ;; #define ALLEGRO_EVENT_AUDIO_STREAM_FINISHED  (514)
 
@@ -43,14 +43,14 @@
 ;; #endif
 
 
-;; /* Enum: ALLEGRO_AUDIO_DEPTH
-;;  */
+;; -* Enum: ALLEGRO_AUDIO_DEPTH
+;;  *-
 ;; enum ALLEGRO_AUDIO_DEPTH
 ;; {
-;;    /* Sample depth and type, and signedness. Mixers only use 32-bit signed
+;;    -* Sample depth and type, and signedness. Mixers only use 32-bit signed
 ;;     * float (-1..+1). The unsigned value is a bit-flag applied to the depth
 ;;     * value.
-;;     */
+;;     *-
 ;;    ALLEGRO_AUDIO_DEPTH_INT8      = 0x00,
 ;;    ALLEGRO_AUDIO_DEPTH_INT16     = 0x01,
 ;;    ALLEGRO_AUDIO_DEPTH_INT24     = 0x02,
@@ -58,7 +58,7 @@
 
 ;;    ALLEGRO_AUDIO_DEPTH_UNSIGNED  = 0x08,
 
-;;    /* For convenience */
+;;    -* For convenience *-
 ;;    ALLEGRO_AUDIO_DEPTH_UINT8  = ALLEGRO_AUDIO_DEPTH_INT8 |
 ;;                                  ALLEGRO_AUDIO_DEPTH_UNSIGNED,
 ;;    ALLEGRO_AUDIO_DEPTH_UINT16 = ALLEGRO_AUDIO_DEPTH_INT16 |
@@ -68,17 +68,17 @@
 ;; };
 
 
-;; /* Enum: ALLEGRO_CHANNEL_CONF
-;;  */
+;; -* Enum: ALLEGRO_CHANNEL_CONF
+;;  *-
 ;; enum ALLEGRO_CHANNEL_CONF
 ;; {
-;;    /* Speaker configuration (mono, stereo, 2.1, 3, etc). With regards to
+;;    -* Speaker configuration (mono, stereo, 2.1, 3, etc). With regards to
 ;;     * behavior, most of this code makes no distinction between, say, 4.1 and
 ;;     * 5 speaker setups.. they both have 5 "channels". However, users would
 ;;     * like the distinction, and later when the higher-level stuff is added,
 ;;     * the differences will become more important. (v>>4)+(v&0xF) should yield
 ;;     * the total channel count.
-;;     */
+;;     *-
 ;;    ALLEGRO_CHANNEL_CONF_1   = 0x10,
 ;;    ALLEGRO_CHANNEL_CONF_2   = 0x20,
 ;;    ALLEGRO_CHANNEL_CONF_3   = 0x30,
@@ -90,20 +90,20 @@
 ;; };
 
 
-;; /* Enum: ALLEGRO_PLAYMODE
-;;  */
+;; -* Enum: ALLEGRO_PLAYMODE
+;;  *-
 ;; enum ALLEGRO_PLAYMODE
 ;; {
 ;;    ALLEGRO_PLAYMODE_ONCE   = 0x100,
 ;;    ALLEGRO_PLAYMODE_LOOP   = 0x101,
 ;;    ALLEGRO_PLAYMODE_BIDIR  = 0x102,
-;;    _ALLEGRO_PLAYMODE_STREAM_ONCE   = 0x103,   /* internal */
-;;    _ALLEGRO_PLAYMODE_STREAM_ONEDIR = 0x104    /* internal */
+;;    _ALLEGRO_PLAYMODE_STREAM_ONCE   = 0x103,   -* internal *-
+;;    _ALLEGRO_PLAYMODE_STREAM_ONEDIR = 0x104    -* internal *-
 ;; };
 
 
-;; /* Enum: ALLEGRO_MIXER_QUALITY
-;;  */
+;; -* Enum: ALLEGRO_MIXER_QUALITY
+;;  *-
 ;; enum ALLEGRO_MIXER_QUALITY
 ;; {
 ;;    ALLEGRO_MIXER_QUALITY_POINT   = 0x110,
@@ -111,18 +111,18 @@
 ;; };
 
 
-;; /* Enum: ALLEGRO_AUDIO_PAN_NONE
-;;  */
+;; -* Enum: ALLEGRO_AUDIO_PAN_NONE
+;;  *-
 ;; #define ALLEGRO_AUDIO_PAN_NONE      (-1000.0f)
 
 
-;; /* Type: ALLEGRO_SAMPLE
-;;  */
+;; -* Type: ALLEGRO_SAMPLE
+;;  *-
 ;; typedef struct ALLEGRO_SAMPLE ALLEGRO_SAMPLE;
 
 
-;; /* Type: ALLEGRO_SAMPLE_ID
-;;  */
+;; -* Type: ALLEGRO_SAMPLE_ID
+;;  *-
 ;; typedef struct ALLEGRO_SAMPLE_ID ALLEGRO_SAMPLE_ID;
 
 ;; struct ALLEGRO_SAMPLE_ID {
@@ -131,27 +131,27 @@
 ;; };
 
 
-;; /* Type: ALLEGRO_SAMPLE_INSTANCE
-;;  */
+;; -* Type: ALLEGRO_SAMPLE_INSTANCE
+;;  *-
 ;; typedef struct ALLEGRO_SAMPLE_INSTANCE ALLEGRO_SAMPLE_INSTANCE;
 
 
-;; /* Type: ALLEGRO_AUDIO_STREAM
-;;  */
+;; -* Type: ALLEGRO_AUDIO_STREAM
+;;  *-
 ;; typedef struct ALLEGRO_AUDIO_STREAM ALLEGRO_AUDIO_STREAM;
 
 
-;; /* Type: ALLEGRO_MIXER
-;;  */
+;; -* Type: ALLEGRO_MIXER
+;;  *-
 ;; typedef struct ALLEGRO_MIXER ALLEGRO_MIXER;
 
 
-;; /* Type: ALLEGRO_VOICE
-;;  */
+;; -* Type: ALLEGRO_VOICE
+;;  *-
 ;; typedef struct ALLEGRO_VOICE ALLEGRO_VOICE;
 
 
-;; /* Sample functions */
+;; -* Sample functions *-
 
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE *, al_create_sample, (void *buf,
 ;;       unsigned int samples, unsigned int freq, ALLEGRO_AUDIO_DEPTH depth,
@@ -159,7 +159,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_sample, (ALLEGRO_SAMPLE *spl));
 
 
-;; /* Sample instance functions */
+;; -* Sample instance functions *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE_INSTANCE*, al_create_sample_instance, (
 ;;       ALLEGRO_SAMPLE *data));
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_sample_instance, (
@@ -205,7 +205,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_stop_sample_instance, (ALLEGRO_SAMPLE_INSTANCE *spl));
 
 
-;; /* Stream functions */
+;; -* Stream functions *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_STREAM*, al_create_audio_stream, (size_t buffer_count,
 ;;       unsigned int samples, unsigned int freq,
 ;;       ALLEGRO_AUDIO_DEPTH depth, ALLEGRO_CHANNEL_CONF chan_conf));
@@ -248,7 +248,7 @@
 
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_EVENT_SOURCE *, al_get_audio_stream_event_source, (ALLEGRO_AUDIO_STREAM *stream));
 
-;; /* Mixer functions */
+;; -* Mixer functions *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_MIXER*, al_create_mixer, (unsigned int freq,
 ;;       ALLEGRO_AUDIO_DEPTH depth, ALLEGRO_CHANNEL_CONF chan_conf));
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_mixer, (ALLEGRO_MIXER *mixer));
@@ -274,7 +274,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_mixer_playing, (ALLEGRO_MIXER *mixer, bool val));
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_detach_mixer, (ALLEGRO_MIXER *mixer));
 
-;; /* Voice functions */
+;; -* Voice functions *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_VOICE*, al_create_voice, (unsigned int freq,
 ;;       ALLEGRO_AUDIO_DEPTH depth,
 ;;       ALLEGRO_CHANNEL_CONF chan_conf));
@@ -295,7 +295,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_voice_position, (ALLEGRO_VOICE *voice, unsigned int val));
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_voice_playing, (ALLEGRO_VOICE *voice, bool val));
 
-;; /* Misc. audio functions */
+;; -* Misc. audio functions *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_install_audio, (void));
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_uninstall_audio, (void));
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_is_audio_installed, (void));
@@ -304,7 +304,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(size_t, al_get_channel_count, (ALLEGRO_CHANNEL_CONF conf));
 ;; ALLEGRO_KCM_AUDIO_FUNC(size_t, al_get_audio_depth_size, (ALLEGRO_AUDIO_DEPTH conf));
 
-;; /* Simple audio layer */
+;; -* Simple audio layer *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_reserve_samples, (int reserve_samples));
 ;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_MIXER *, al_get_default_mixer, (void));
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_default_mixer, (ALLEGRO_MIXER *mixer));
@@ -314,7 +314,7 @@
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_stop_sample, (ALLEGRO_SAMPLE_ID *spl_id));
 ;; ALLEGRO_KCM_AUDIO_FUNC(void, al_stop_samples, (void));
 
-;; /* File type handlers */
+;; -* File type handlers *-
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_loader, (const char *ext,
 ;; 	ALLEGRO_SAMPLE *(*loader)(const char *filename)));
 ;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_saver, (const char *ext,
