@@ -1,3 +1,8 @@
+(define-foreign-enum-type (gl-variant int)
+  (gl-variant->int int->gl-variant)
+  ((opengl) ALLEGRO_DESKTOP_OPENGL)
+  ((opengl-es) ALLEGRO_OPENGL_ES))
+
 (define-foreign-enum-type (font-align int)
   (font-align->int int->font-align)
   ((left) ALLEGRO_ALIGN_LEFT)

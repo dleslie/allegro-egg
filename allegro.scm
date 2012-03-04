@@ -1,6 +1,8 @@
 #>
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_font.h>
+#include <allegro5/allegro_opengl.h>
+#include <allegro5/allegro_audio.h>
 <#
 (module allegro *
         (import scheme chicken bind foreign foreigners)
@@ -38,9 +40,9 @@
         (include "display")
         (include "events")
         (include "bitmap")
-        (include "font") ; TODO
+        (include "font")
         (include "utf8")
-        (include "opengl") ; TODO
+        (include "opengl")
         (include "primitives") ; TODO
         (include "audio") ; TODO
 )

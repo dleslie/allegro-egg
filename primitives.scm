@@ -1,32 +1,3 @@
-
-;; #if (defined ALLEGRO_MINGW32) || (defined ALLEGRO_MSVC) || (defined ALLEGRO_BCC32)
-;; #ifndef ALLEGRO_STATICLINK
-;; #ifdef ALLEGRO_PRIMITIVES_SRC
-;; #define _ALLEGRO_PRIM_DLL __declspec(dllexport)
-;; #else
-;; #define _ALLEGRO_PRIM_DLL __declspec(dllimport)
-;; #endif
-;; #else
-;; #define _ALLEGRO_PRIM_DLL
-;; #endif
-;; #endif
-
-;; #if defined ALLEGRO_MSVC
-;; #define ALLEGRO_PRIM_FUNC(type, name, args)      _ALLEGRO_PRIM_DLL type __cdecl name args
-;; #elif defined ALLEGRO_MINGW32
-;; #define ALLEGRO_PRIM_FUNC(type, name, args)      extern type name args
-;; #elif defined ALLEGRO_BCC32
-;; #define ALLEGRO_PRIM_FUNC(type, name, args)      extern _ALLEGRO_PRIM_DLL type name args
-;; #else
-;; #define ALLEGRO_PRIM_FUNC      AL_FUNC
-;; #endif
-
-;; #ifdef __cplusplus
-;; extern "C"
-;; {
-;; #endif
-
-
 ;; -* Enum: ALLEGRO_PRIM_TYPE
 ;;  *-
 ;; typedef enum ALLEGRO_PRIM_TYPE
