@@ -6,25 +6,35 @@
 (define utf->string (foreign-lambda c-string "al_cstr" opaque_utf_string))
 (define utf->buffer (foreign-lambda void "al_ustr_to_buffer" opaque_utf_string blob integer))
 (define utf->string-copy (foreign-lambda c-string "al_cstr_dup" opaque_utf_string))
+
 (define utf-copy (foreign-lambda opaque_utf_string "al_ustr_dup" opaque_utf_string))
 (define utf-substring (foreign-lambda opaque_utf_string "al_ustr_dup_substr" opaque_utf_string integer integer))
 
 (define utf-empty-string (foreign-lambda opaque_utf_string "al_ustr_empty_string"))
 
-;; -* Reference strings *-
-;; AL_FUNC(ALLEGRO_USTR *, al_ref_cstr, (ALLEGRO_USTR_INFO *info, const char *s));
-;; AL_FUNC(ALLEGRO_USTR *, al_ref_buffer, (ALLEGRO_USTR_INFO *info, const char *s,
-;;       size_t size));
-;; AL_FUNC(ALLEGRO_USTR *, al_ref_ustr, (ALLEGRO_USTR_INFO *info,
-;;       const ALLEGRO_USTR *us, int start_pos, int end_pos));
+(define utf-reference-cstr (foreign-lambda opaque_utf_string "al_ref_cstr" opaque_utf_string (const c-string)))
+(define utf-reference-buffer (foreign-lambda opaque_utf_string "al_ref_buffer" opaque_utf_string (const c-string) unsigned-integer32))
+(define utf-reference-utf-string (foreign-lambda opaque_utf_string "al_ref_ustr" opaque_utf_string (const opaque_utf_string) integer integer))
 
 (define utf-size? (foreign-lambda integer "al_ustr_size" opaque_utf_string))
 (define utf-length? (foreign-lambda integer "al_ustr_length" opaque_utf_string))
 
 (define utf-offset (foreign-lambda integer "al_ustr_offset" opaque_utf_string integer))
 
-;; AL_FUNC(bool, al_ustr_next, (const ALLEGRO_USTR *us, int *pos));
-;; AL_FUNC(bool, al_ustr_prev, (const ALLEGRO_USTR *us, int *pos));
+(define utf-next (foreign-lambda* integer (((const opaque_utf_string) us)) "
+int pos = 0;
+if (al_ustr_next(us, &pos))
+  C_return(pos);
+else
+  C_return(C_SCHEME_FALSE);
+"))
+(define utf-previous (foreign-lambda* integer (((const opaque_utf_string) us)) "
+int pos = 0;
+if (al_ustr_prev(us, &pos))
+  C_return(pos);
+else
+  C_return(C_SCHEME_FALSE);
+"))
 
 (define utf-get (foreign-lambda integer32 "al_ustr_get" opaque_utf_string integer))
 

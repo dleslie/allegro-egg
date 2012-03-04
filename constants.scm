@@ -5,3 +5,5 @@
 (define display-default-adapter (foreign-value "ALLEGRO_DEFAULT_DISPLAY_ADAPTER" integer))
 
 (define eof (foreign-value "EOF" integer))
+
+(define mouse-max-extra-axis (foreign-value ALLEGRO_MOUSE_MAX_EXTRA_AXES integer))

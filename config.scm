@@ -1,4 +1,5 @@
 (define make-config (foreign-lambda opaque_config "al_create_config"))
+(define free-config (foreign-lambda void "al_destroy_config" opaque_config))
 
 (define config-section-add! (foreign-lambda void "al_add_config_section" opaque_config c-string))
 (define config-value-set! (foreign-lambda void "al_set_config_value" opaque_config c-string c-string c-string))
@@ -11,7 +12,6 @@
 (define config-save-file (foreign-lambda bool "al_save_config_file_f" opaque_file opaque_config))
 (define config-merge! (foreign-lambda void "al_merge_config_into" opaque_config opaque_config))
 (define config-merge (foreign-lambda opaque_config "al_merge_config" opaque_config opaque_config))
-(define config-destroy! (foreign-lambda void "al_destroy_config" opaque_config))
 
 ;; TODO: internalize the iterator
 (define-external config_section_iterator opaque_config_section)

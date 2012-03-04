@@ -5,6 +5,8 @@
 (define make-path-for-directory (foreign-lambda opaque_path "al_create_path_for_directory" c-string))
 (define free-path (foreign-lambda void "al_destroy_path" opaque_path))
 
+(define path->string (foreign-lambda c-string "al_path_cstr" opaque_path char))
+
 (define path-component-count (foreign-lambda integer "al_get_path_num_components" opaque_path))
 (define path-component (foreign-lambda c-string "al_get_path_component" opaque_path integer))
 (define path-component-set! (foreign-lambda void "al_replace_path_component" opaque_path integer c-string))
@@ -13,7 +15,6 @@
 
 (define path-clone (foreign-lambda opaque_path "al_clone_path" opaque_path))
 (define path-tail (foreign-lambda c-string "al_get_path_tail" opaque_path))
-(define path->string (foreign-lambda c-string "al_path_cstr" opaque_path char))
 
 (define path-drop-tail! (foreign-lambda void "al_drop_path_tail" opaque_path))
 (define path-append! (foreign-lambda void "al_append_path_component" opaque_path c-string))

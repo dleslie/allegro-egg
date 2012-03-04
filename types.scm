@@ -1,10 +1,44 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
-(define-foreign-record-type (filesystem-entry "ALLEGRO_FS_ENTRY")
-  (constructor: make-filesystem-entry)
-  (destructor: free-filesystem-entry)
-  ((const c-pointer) vtable filesystem-entry-vtable))
+(define-foreign-record-type (font "ALLEGRO_FONT"))
+
+(define-foreign-record-type (memory-interface "ALLEGRO_MEMORY_INTERFACE")
+  (constructor: make-memory-interface)
+  (destructor: free-memory-interface)
+  ((function c-pointer (integer32 integer (const c-string) (const c-string))) mi_malloc memory-interface-malloc)
+  ((function void (c-pointer integer (const c-string) (const c-string))) mi_free memory-interface-free)
+  ((function c-pointer (c-pointer integer32 integer (const c-string) (const c-string))) mi_realloc memory-interface-realloc)
+  ((function c-pointer (integer32 integer32 integer (const c-string) (const c-string))) mi_calloc memory-interface-calloc))
+
+(define-foreign-record-type (fs-interface "ALLEGRO_FS_INTERFACE")
+;  (constructor: make-fs-interface)
+  (destructor: free-fs-interface)
+  ((function fs-entry ((const c-string))) fs_create_entry fs-interface-create-entry)
+  ((function void (fs-entry)) fs_destroy_entry fs-interface-destroy-entry)
+  ((function (const c-string) (fs-entry)) fs_entry_name fs-interface-entry-name)
+  ((function bool (fs-entry)) fs_update_entry fs-interface-update-entry)
+  ((function unsigned-integer32 (fs-entry)) fs_entry_mode fs-interface-entry-mode)
+  ((function time_t (fs-entry)) fs_entry_atime fs-interface-entry-atime)
+  ((function time_t (fs-entry)) fs_entry_mtime fs-interface-entry-mtime)
+  ((function time_t (fs-entry)) fs_entry_ctime fs-interface-entry-ctime)
+  ((function off_t (fs-entry)) fs_entry_size fs-interface-entry-size)
+  ((function bool (fs-entry)) fs_entry_exists fs-interface-entry-exists?)
+  ((function bool (fs-entry)) fs_remove_entry fs-interface-remove-entry)
+  ((function bool (fs-entry)) fs_open_directory fs-interface-open-directory)
+  ((function fs-entry (fs-entry)) fs_read_directory fs-interface-read-directory)
+  ((function bool (fs-entry)) fs_close_directory fs-interface-close-directory)
+  ((function bool ((const c-string))) fs_filename_exists fs-interface-filename-exists?)
+  ((function bool ((const c-string))) fs_remove_filename fs-interface-remove-filename)
+  ((function c-string ()) fs_get_current_directory fs-interface-current-directory)
+  ((function bool ((const c-string))) fs_change_directory fs-interface-change-directory)
+  ((function bool ((const c-string))) fs_make_directory fs-interface-make-directory)
+  ((function file (fs-entry (const c-string))) fs_open_file fs-interface-open-file))
+
+(define-foreign-record-type (fs-entry "ALLEGRO_FS_ENTRY")
+;  (constructor: make-fs-entry)
+;  (destructor: free-fs-entry)
+  ((const c-pointer) vtable fs-entry-vtable))
 
 (define-foreign-record-type (state "ALLEGRO_STATE")
   (constructor: make-state)
@@ -198,9 +232,4 @@ ENDC
 (bind-opaque-type opaque_timer (c-pointer (struct ALLEGRO_TIMER)))
 (bind-opaque-type opaque_bitmap (c-pointer (struct ALLEGRO_BITMAP)))
 (bind-opaque-type opaque_cursor (c-pointer (struct ALLEGRO_CURSOR)))
-
-
-
-
-
-
+(bind-opaque-type opaque_file_interface (c-pointer (struct ALLEGRO_FILE_INTERFACE)))

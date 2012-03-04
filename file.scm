@@ -1,18 +1,12 @@
-; Skipped ALLEGRO_FILE_INTERFACE - used for low-level virtual files
-;; (bind-rename ALLEGRO_FILE_INTERFACE file-interface)
-;; (bind-rename-pattern "fi_" "")
-;; AL_FUNC(ALLEGRO_FILE*, al_create_file_handle, (const ALLEGRO_FILE_INTERFACE *vt, void *userdata));
-;; AL_FUNC(ALLEGRO_FILE*, al_fopen_interface, (const ALLEGRO_FILE_INTERFACE *vt, const char *path, const char *mode));
-;; AL_FUNC(const ALLEGRO_FILE_INTERFACE *, al_get_new_file_interface, (void));
-;; AL_FUNC(void, al_set_new_file_interface, (const ALLEGRO_FILE_INTERFACE *
-;;       file_interface));
-;; AL_FUNC(void, al_set_standard_file_interface, (void));
+(define make-temp-file (foreign-lambda opaque_file "al_make_temp_file" (const c-string) (c-pointer opaque_path)))
 
 (define seek-set (foreign-value "ALLEGRO_SEEK_SET" integer))
 (define seek-current (foreign-value "ALLEGRO_SEEK_CUR" integer))
 (define seek-end (foreign-value "ALLEGRO_SEEK_END" integer))
 
 (define file-open (foreign-lambda opaque_file "al_fopen" c-string c-string))
+(define file-open-fd (foreign-lambda opaque_file "al_fopen_fd" integer c-string))
+
 (define file-close (foreign-lambda void "al_fclose" opaque_file))
 (define file-read (foreign-lambda integer "al_fread" opaque_file blob integer))
 (define file-write! (foreign-lambda integer "al_fwrite" opaque_file blob integer))
@@ -40,12 +34,8 @@
 (define file-get-utf-string (foreign-lambda opaque_utf_string "al_fget_ustr" opaque_file))
 (define file-put-string! (foreign-lambda integer "al_fputs" opaque_file c-string))
 
-(define file-open-fd (foreign-lambda opaque_file "al_fopen_fd" integer c-string))
-
 (define file-userdata (foreign-lambda c-pointer "al_get_file_userdata" opaque_file))
 
-;; AL_FUNC(ALLEGRO_FILE*, al_make_temp_file, (const char *tmpl,
-;;       ALLEGRO_PATH **ret_path));
-
-
-
+(define new-file-interface-set! (foreign-lambda void "al_set_new_file_interface" (const opaque_file_interface)))
+(define file-interface-open (foreign-lambda opaque_file "al_fopen_interface" (const opaque_file_interface) (const c-string) (const c-string)))
+(define make-file-handle (foreign-lambda opaque_file "al_create_file_handle" (const opaque_file_interface) c-pointer))

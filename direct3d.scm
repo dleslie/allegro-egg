@@ -1,7 +1,14 @@
-;; AL_FUNC(LPDIRECT3DDEVICE9,  al_get_d3d_device,         (ALLEGRO_DISPLAY *));
-;; AL_FUNC(LPDIRECT3DTEXTURE9, al_get_d3d_system_texture, (ALLEGRO_BITMAP *));
-;; AL_FUNC(LPDIRECT3DTEXTURE9, al_get_d3d_video_texture,  (ALLEGRO_BITMAP *));
-;; AL_FUNC(bool,               al_have_d3d_non_pow2_texture_support,   (void));
-;; AL_FUNC(bool,               al_have_d3d_non_square_texture_support, (void));
-;; AL_FUNC(void,               al_get_d3d_texture_position, (ALLEGRO_BITMAP *bitmap, int *u, int *v));
-;; AL_FUNC(bool,               al_is_d3d_device_lost, (ALLEGRO_DISPLAY *display));
+(define direct3d-device (foreign-lambda integer64 "al_get_d3d_device" display))
+(define direct3d-system-texture (foreign-lambda integer64 "al_get_d3d_system_texture" opaque_bitmap))
+(define direct3d-video-texture (foreign-lambda integer64 "al_get_d3d_video_texture" opaque_bitmap))
+
+(define direct3d-non-pow2-texture-support? (foreign-lambda bool "al_have_d3d_non_pow2_texture_support"))
+(define direct3d-non-square-texture-support? (foreign-lambda bool "al_have_d3d_non_square_texture_support"))
+
+(define direct3d-texture-position (foreign-lambda* scheme-object ((opaque_bitmap bmp)) "
+int u, v;
+al_get_d3d_texture_position(bmp, &u, &v);
+C_return(C_pair(&C_a, C_int_to_num(&C_a, u), C_int_to_num(&C_a, v)));
+"))
+
+(define direct3d-device-lost? (foreign-lambda bool "al_is_d3d_device_lost" display))
