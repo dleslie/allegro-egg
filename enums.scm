@@ -1,3 +1,9 @@
+(define-foreign-enum-type (font-align int)
+  (font-align->int int->font-align)
+  ((left) ALLEGRO_ALIGN_LEFT)
+  ((centre) ALLEGRO_ALIGN_CENTRE)
+  ((right) ALLEGRO_ALIGN_RIGHT))
+
 (define-foreign-enum-type (mouse-cursor int)
   (mouse-cursor->int int->mouse-cursor)
   ((none) ALLEGRO_SYSTEM_MOUSE_CURSOR_NONE)

@@ -43,7 +43,7 @@ al_color_rgb_to_yuv(red, green, blue, &y, &u, &v);
 C_return(C_list(&C_a, 3, C_flonum(&C_a, y), C_flonum(&C_a, u), C_flonum(&C_a, v)));
 "))
 (define rgb->html (foreign-lambda* c-string* ((float red) (float green) (float blue)) "
-char *html = (char *)malloc(sizeof(char) * 8);
+char *html = (char *)C_alloc(sizeof(char) * 8);
 al_color_rgb_to_html(red, green, blue, html);
 C_return(html);
 "))

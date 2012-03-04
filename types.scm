@@ -1,7 +1,10 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
-(define-foreign-record-type (font "ALLEGRO_FONT"))
+(define-foreign-record-type (font "ALLEGRO_FONT")
+  (destructor: free-font)
+  (c-pointer data font-data)
+  (int height font-height))
 
 (define-foreign-record-type (memory-interface "ALLEGRO_MEMORY_INTERFACE")
   (constructor: make-memory-interface)

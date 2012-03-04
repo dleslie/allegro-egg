@@ -1,5 +1,6 @@
 #>
 #include <allegro5/allegro.h>
+#include <allegro5/allegro_font.h>
 <#
 (module allegro *
         (import scheme chicken bind foreign foreigners)
@@ -33,7 +34,7 @@
         (include "config")
         (include "mouse")
         (include "file")
-        (include "color") ; TODO
+        (include "color")
         (include "display")
         (include "events")
         (include "bitmap")
