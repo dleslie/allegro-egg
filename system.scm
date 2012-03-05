@@ -9,7 +9,7 @@
 
 (define system-install (foreign-lambda bool "al_install_system" integer (function integer ((function void (void))))))
 (define system-installed? (foreign-lambda bool "al_is_system_installed"))
-(define system-driver (foreign-lambda opaque_system "al_get_system_driver"))
-(define system-config (foreign-lambda opaque_config "al_get_system_config"))
+(define system-driver (foreign-lambda system "al_get_system_driver"))
+(define system-config (foreign-lambda config "al_get_system_config"))
 
-(define standard-path (foreign-lambda opaque_path "al_get_standard_path" integer))
+(define standard-path (foreign-lambda path "al_get_standard_path" integer))

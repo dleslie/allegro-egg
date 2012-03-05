@@ -10,7 +10,7 @@
 (define fs-entry-size (foreign-lambda unsigned-integer32 "al_get_fs_entry_size" fs-entry))
 (define fs-entry-exist? (foreign-lambda bool "al_fs_entry_exists" fs-entry))
 (define fs-entry-remove! (foreign-lambda bool "al_remove_fs_entry" fs-entry))
-(define fs-entry-open (foreign-lambda opaque_file "al_open_fs_entry" fs-entry (const c-string)))
+(define fs-entry-open (foreign-lambda file "al_open_fs_entry" fs-entry (const c-string)))
 
 (define directory-open (foreign-lambda bool "al_open_directory" fs-entry))
 (define directory-read (foreign-lambda fs-entry "al_read_directory" fs-entry))
@@ -23,7 +23,7 @@
 (define filename-exists? (foreign-lambda bool "al_filename_exists" (const c-string)))
 (define filename-remove! (foreign-lambda bool "al_remove_filename" (const c-string)))
 
-(define new-file-interface (foreign-lambda (const opaque_file_interface) "al_get_new_file_interface"))
+(define new-file-interface (foreign-lambda (const file-interface) "al_get_new_file_interface"))
 
 (define fs-interface-current (foreign-lambda (const fs-interface) "al_get_fs_interface"))
 (define fs-interface-current-set! (foreign-lambda void "al_set_fs_interface" (const fs-interface)))

@@ -39,23 +39,23 @@ ENDC
 (define display-display-flags (foreign-lambda integer "al_get_display_flags" display))
 (define display-toggle-flag! (foreign-lambda bool "al_toggle_display_flag" display display-flag bool))
 (define display-current (foreign-lambda display "al_get_current_display"))
-(define display-target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" opaque_bitmap))
+(define display-target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" bitmap))
 (define display-target-backbuffer-set! (foreign-lambda void "al_set_target_backbuffer" display))
-(define display-backbuffer (foreign-lambda opaque_bitmap "al_get_backbuffer" display))
-(define display-target-bitmap (foreign-lambda opaque_bitmap "al_get_target_bitmap"))
+(define display-backbuffer (foreign-lambda bitmap "al_get_backbuffer" display))
+(define display-target-bitmap (foreign-lambda bitmap "al_get_target_bitmap"))
 (define display-acknowledge-resize (foreign-lambda bool "al_acknowledge_resize" display))
 (define display-resize (foreign-lambda bool "al_resize_display" display int int))
 (define display-update-region (foreign-lambda void "al_update_display_region" int int int int))
-(define display-compatible-bitmap? (foreign-lambda bool "al_is_compatible_bitmap" opaque_bitmap))
+(define display-compatible-bitmap? (foreign-lambda bool "al_is_compatible_bitmap" bitmap))
 (define display-display-mode-count (foreign-lambda int "al_get_num_display_modes"))
 (define display-mode (foreign-lambda display-mode "al_get_display_mode" int display-mode))
 (define display-wait-for-vsync (foreign-lambda bool "al_wait_for_vsync"))
-(define display-event-source (foreign-lambda opaque_event_source "al_get_display_event_source" display))(define display-clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
+(define display-event-source (foreign-lambda event-source "al_get_display_event_source" display))(define display-clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
 
 (define display-draw-pixel (foreign-lambda* void ((float x) (float y) (color c)) "al_draw_pixel(x, y, *c);"))
-(define display-icon-set! (foreign-lambda void "al_set_display_icon" display opaque_bitmap))
+(define display-icon-set! (foreign-lambda void "al_set_display_icon" display bitmap))
 (define display-video-adapter-count (foreign-lambda int "al_get_num_video_adapters"))
-(define display-monitor-info! (foreign-lambda* bool ((monitor-info info) (int adapter)) #<<ENDC
+(define display-monitor-info! (foreign-lambda* bool ((monitor info) (int adapter)) #<<ENDC
 if (al_get_monitor_info(adapter, info))
   C_return(C_SCHEME_TRUE);
 else

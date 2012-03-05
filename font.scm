@@ -2,20 +2,20 @@
 
 (define font-load-bitmap (foreign-lambda font "al_load_bitmap_font" (const c-string)))
 (define font-load (foreign-lambda font "al_load_font" (const c-string) integer font-align))
-(define make-font-from-bitmap (foreign-lambda font "al_grab_font_from_bitmap" opaque_bitmap integer s32vector))
+(define make-font-from-bitmap (foreign-lambda font "al_grab_font_from_bitmap" bitmap integer s32vector))
 (define free-font (foreign-lambda void "al_destroy_font" font))
 
-(define font-draw-utf (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) ((const opaque_utf_string) ustr)) "al_draw_ustr(f, *c, x, y, flags, ustr);"))
+(define font-draw-utf (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) ((const utf-string) ustr)) "al_draw_ustr(f, *c, x, y, flags, ustr);"))
 (define font-draw-string (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (c-string text)) "al_draw_text(f, *c, x, y, flags, text);"))
 (define font-draw-justified-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (c-string text)) "al_draw_justified_text(f, *c, x1, x2, y, diff, flags, text);"))
-(define font-draw-justified-utf-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) ((const opaque_utf_string) text)) "al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, text);"))
+(define font-draw-justified-utf-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) ((const utf-string) text)) "al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, text);"))
 
 (define font-width (foreign-lambda integer "al_get_text_width" (const font) (const c-string)))
-(define font-utf-width (foreign-lambda integer "al_get_ustr_width" (const font) (const opaque_utf_string)))
+(define font-utf-width (foreign-lambda integer "al_get_ustr_width" (const font) (const utf-string)))
 (define font-line-height (foreign-lambda integer "al_get_font_line_height" (const font)))
 (define font-ascent (foreign-lambda integer "al_get_font_ascent" (const font)))
 (define font-descent (foreign-lambda integer "al_get_font_descent" (const font)))
-(define font-utf-dimensions (foreign-lambda* scheme-object (((const font) f) ((const opaque_utf_string) text)) "
+(define font-utf-dimensions (foreign-lambda* scheme-object (((const font) f) ((const utf-string) text)) "
 int bbx, bby, bbw, bbh;
 al_get_ustr_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
 C_return(C_list(&C_a, 4, C_int_to_num(&C_a, bbx), C_int_to_num(&C_a, bby), C_int_to_num(&C_a, bbw), C_int_to_num(&C_a, bbh)));

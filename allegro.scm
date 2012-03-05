@@ -4,14 +4,18 @@
 #include <allegro5/allegro_opengl.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_primitives.h>
+//#include <allegro5/allegro_windows.h>
+#include <allegro5/allegro_acodec.h>
 <#
 (module allegro *
-        (import scheme chicken bind foreign foreigners)
+        (import scheme chicken foreign foreigners)
 
         (include "types")
         (include "enums")
         (include "constants")
 
+;        (include "windows")
+        (include "acodec")
         (include "fixed")
         (include "tls")
         (include "altime")
@@ -44,6 +48,6 @@
         (include "font")
         (include "utf8")
         (include "opengl")
-        (include "primitives") ; TODO
+        (include "primitives")
         (include "audio") ; TODO
 )

@@ -31,8 +31,8 @@
   ((centre) ALLEGRO_ALIGN_CENTRE)
   ((right) ALLEGRO_ALIGN_RIGHT))
 
-(define-foreign-enum-type (mouse-cursor int)
-  (mouse-cursor->int int->mouse-cursor)
+(define-foreign-enum-type (cursor-type int)
+  (cursor-type->int int->cursor-type)
   ((none) ALLEGRO_SYSTEM_MOUSE_CURSOR_NONE)
   ((default) ALLEGRO_SYSTEM_MOUSE_CURSOR_DEFAULT)
   ((arrow) ALLEGRO_SYSTEM_MOUSE_CURSOR_ARROW)
