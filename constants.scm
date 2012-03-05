@@ -7,3 +7,6 @@
 (define eof (foreign-value "EOF" integer))
 
 (define mouse-max-extra-axis (foreign-value ALLEGRO_MOUSE_MAX_EXTRA_AXES integer))
+
+(define vertex-cache-size (foreign-value ALLEGRO_VERTEX_CACHE_SIZE integer))
+(define primitive-quality (foreign-value ALLEGRO_PRIM_QUALITY integer))

@@ -1,46 +1,9 @@
-;; #if (defined ALLEGRO_MINGW32) || (defined ALLEGRO_MSVC) || (defined ALLEGRO_BCC32)
-;;    #ifndef ALLEGRO_STATICLINK
-;;       #ifdef ALLEGRO_KCM_AUDIO_SRC
-;;          #define _ALLEGRO_KCM_AUDIO_DLL __declspec(dllexport)
-;;       #else
-;;          #define _ALLEGRO_KCM_AUDIO_DLL __declspec(dllimport)
-;;       #endif
-;;    #else
-;;       #define _ALLEGRO_KCM_AUDIO_DLL
-;;    #endif
-;; #endif
-
-;; #if defined ALLEGRO_MSVC
-;;    #define ALLEGRO_KCM_AUDIO_FUNC(type, name, args)      _ALLEGRO_KCM_AUDIO_DLL type __cdecl name args
-;; #elif defined ALLEGRO_MINGW32
-;;    #define ALLEGRO_KCM_AUDIO_FUNC(type, name, args)            extern type name args
-;; #elif defined ALLEGRO_BCC32
-;;    #define ALLEGRO_KCM_AUDIO_FUNC(type, name, args)      extern _ALLEGRO_KCM_AUDIO_DLL type name args
-;; #else
-;;    #define ALLEGRO_KCM_AUDIO_FUNC      AL_FUNC
-;; #endif
-
-
-;; -* Internal, used to communicate with acodec. *-
-;; -* Must be in 512 <= n < 1024 *-
-;; #define _KCM_STREAM_FEEDER_QUIT_EVENT_TYPE   (512)
-
 ;; -* User event type emitted when a stream fragment is ready to be
 ;;  * refilled with more audio data.
 ;;  * Must be in 512 <= n < 1024
 ;;  *-
 ;; #define ALLEGRO_EVENT_AUDIO_STREAM_FRAGMENT  (513)
 ;; #define ALLEGRO_EVENT_AUDIO_STREAM_FINISHED  (514)
-
-
-;; #ifndef __cplusplus
-;; typedef enum ALLEGRO_AUDIO_DEPTH ALLEGRO_AUDIO_DEPTH;
-;; typedef enum ALLEGRO_CHANNEL_CONF ALLEGRO_CHANNEL_CONF;
-;; typedef enum ALLEGRO_PLAYMODE ALLEGRO_PLAYMODE;
-;; typedef enum ALLEGRO_MIXER_QUALITY ALLEGRO_MIXER_QUALITY;
-;; typedef enum ALLEGRO_AUDIO_PROPERTY ALLEGRO_AUDIO_PROPERTY;
-;; typedef enum ALLEGRO_AUDIO_DRIVER_ENUM ALLEGRO_AUDIO_DRIVER_ENUM;
-;; #endif
 
 
 ;; -* Enum: ALLEGRO_AUDIO_DEPTH

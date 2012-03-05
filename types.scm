@@ -1,6 +1,24 @@
 (define-record version
   major sub wip release-number string date-string date int)
 
+(define-foreign-record-type (vertex "ALLEGRO_VERTEX")
+  (constructor: make-vertex)
+  (destructor: free-vertex)
+  (float x vertex-x)
+  (float y vertex-y)
+  (float z vertex-z)
+  (float u vertex-u)
+  (float v vertex-v))
+
+(define-foreign-record-type (vertex-declaration "ALLEGRO_VERTEX_DECL"))
+
+(define-foreign-record-type (vertex-element "ALLEGRO_VERTEX_ELEMENT")
+  (constructor: make-vertex-element)
+  (destructor: free-vertex-element)
+  (integer attribute vertex-element-attribute)
+  (integer storage vertex-element-storage)
+  (integer offset vertex-element-offset))
+
 (define-foreign-record-type (font "ALLEGRO_FONT")
   (destructor: free-font)
   (c-pointer data font-data)

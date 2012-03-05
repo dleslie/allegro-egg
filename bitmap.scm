@@ -39,8 +39,8 @@ _al_put_pixel(bmp, x, y, *c);
 (define sub-bitmap? (foreign-lambda bool "al_is_sub_bitmap" opaque_bitmap))
 
 
-(define put-pixel! (foreign-lambda* void ((int x) (int y) (color c)) "al_put_pixel(x, y, *c);"))
-(define put-blended-pixel! (foreign-lambda* void ((int x) (int y) (color c)) "al_put_blended_pixel(x, y, *c);"))
+(define put-pixel (foreign-lambda* void ((int x) (int y) (color c)) "al_put_pixel(x, y, *c);"))
+(define put-blended-pixel (foreign-lambda* void ((int x) (int y) (color c)) "al_put_blended_pixel(x, y, *c);"))
 (define pixel-size (foreign-lambda int "al_get_pixel_size" pixel-format))
 
 (define map-rgb! (foreign-lambda* void ((color c) (unsigned-byte r) (unsigned-byte g) (unsigned-byte b)) "*c = al_map_rgb(r, g, b);"))

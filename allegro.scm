@@ -3,6 +3,7 @@
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_opengl.h>
 #include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_primitives.h>
 <#
 (module allegro *
         (import scheme chicken bind foreign foreigners)
