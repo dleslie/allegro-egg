@@ -48,7 +48,6 @@
   (integer offset vertex-element-offset))
 
 (define-foreign-record-type (font "ALLEGRO_FONT")
-  (destructor: free-font)
   (c-pointer data font-data)
   (int height font-height))
 
@@ -85,8 +84,6 @@
   ((function file (fs-entry (const c-string))) fs_open_file fs-interface-open-file))
 
 (define-foreign-record-type (fs-entry "ALLEGRO_FS_ENTRY")
-;  (constructor: make-fs-entry)
-;  (destructor: free-fs-entry)
   ((const c-pointer) vtable fs-entry-vtable))
 
 (define-foreign-record-type (state "ALLEGRO_STATE")
@@ -107,7 +104,6 @@
   (int pixel_size locked-region-pixel-size))
 
 (define-foreign-record-type (color "ALLEGRO_COLOR")
-  (constructor: make-color)
   (destructor: free-color)
   (float r color-red)
   (float g color-green)
@@ -133,14 +129,7 @@
 (define-foreign-record-type (joystick-state "ALLEGRO_JOYSTICK_STATE")
   (constructor: make-joystick-state)
   (destructor: free-joystick-state)
-  ;((float joystick-max-axes) (axis joystick-max-sticks) joystick-state-axis)
   (int (button joystick-max-buttons) jostick-state-button))
-(define joystick-state-axis (foreign-lambda* float ((joystick-state jstate) (int which_stick) (int which_axis)) "
-if (which_stick < 0 || which_stick >= _AL_MAX_JOYSTICK_STICKS || which_axis < 0 || which_axis >= _AL_MAX_JOYSTICK_AXES)
-  C_return(C_SCHEME_FALSE);
-else
-  C_return(jstate->stick[which_stick].axis[which_axis]);
-")) 
 
 (define-foreign-record-type (keyboard-state "ALLEGRO_KEYBOARD_STATE")
   (constructor: make-keyboard-state)

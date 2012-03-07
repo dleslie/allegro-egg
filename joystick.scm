@@ -17,3 +17,10 @@
 (define joystick-state! (foreign-lambda* void ((joystick-state state) (joystick j)) "al_get_joystick_state(j, state);"))
 
 (define joystick-event-source (foreign-lambda (c-pointer event-source) "al_get_joystick_event_source"))
+
+(define joystick-state-axis (foreign-lambda* float ((joystick-state jstate) (int which_stick) (int which_axis)) "
+if (which_stick < 0 || which_stick >= _AL_MAX_JOYSTICK_STICKS || which_axis < 0 || which_axis >= _AL_MAX_JOYSTICK_AXES)
+  C_return(C_SCHEME_FALSE);
+else
+  C_return(jstate->stick[which_stick].axis[which_axis]);
+")) 

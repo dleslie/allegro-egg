@@ -17,6 +17,23 @@ https://github.com/dleslie/allegro-egg
 
 Dan Leslie (dan@ironoxide.ca)
 
+== Naming Key
+
+In general, the naming is fairly indicative of the function's behaviour.
+
+The gist is something like this:
+
+; make-type : Constructs a type (Not always available)
+; free-type : Destructs a type (Not available for internally managed types)
+; type-noun : Accessor for value "noun" on a specific type
+; type-noun-set! : Mutator for value "noun" on a specific type
+; type-verb : Method which requires a specific type to operate
+; type-verb! : Method which modifies an object of a specific type
+; verbage : Function which operates on the global state
+; verbage* : Function which operates on the global state, but also returns a value which must be manually destructed
+
+If a function begins with a type name then you can be assured that the first parameter will be an object of that specific type.
+
 == License
 
 Copyright 2012 Daniel J. Leslie. All rights reserved.
