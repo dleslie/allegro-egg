@@ -1,308 +1,159 @@
-;; -* User event type emitted when a stream fragment is ready to be
-;;  * refilled with more audio data.
-;;  * Must be in 512 <= n < 1024
-;;  *-
-;; #define ALLEGRO_EVENT_AUDIO_STREAM_FRAGMENT  (513)
-;; #define ALLEGRO_EVENT_AUDIO_STREAM_FINISHED  (514)
+(define make-sample (foreign-lambda sample "al_create_sample" blob unsigned-integer unsigned-integer audio-depth channel-configuration bool))
+(define free-sample (foreign-lambda void "al_destroy_sample" sample))
 
+(define make-sample-instance (foreign-lambda sample-instance "al_create_sample_instance" sample))
+(define free-sample-instance (foreign-lambda void "al_destroy_sample_instance" sample-instance))
 
-;; -* Enum: ALLEGRO_AUDIO_DEPTH
-;;  *-
-;; enum ALLEGRO_AUDIO_DEPTH
-;; {
-;;    -* Sample depth and type, and signedness. Mixers only use 32-bit signed
-;;     * float (-1..+1). The unsigned value is a bit-flag applied to the depth
-;;     * value.
-;;     *-
-;;    ALLEGRO_AUDIO_DEPTH_INT8      = 0x00,
-;;    ALLEGRO_AUDIO_DEPTH_INT16     = 0x01,
-;;    ALLEGRO_AUDIO_DEPTH_INT24     = 0x02,
-;;    ALLEGRO_AUDIO_DEPTH_FLOAT32   = 0x03,
+(define sample-frequency (foreign-lambda unsigned-integer "al_get_sample_frequency" (const sample)))
+(define sample-length (foreign-lambda unsigned-integer "al_get_sample_length" (const sample)))
+(define sample-depth (foreign-lambda audio-depth "al_get_sample_depth" (const sample)))
+(define sample-channels (foreign-lambda channel-configuration "al_get_sample_channels" (const sample)))
 
-;;    ALLEGRO_AUDIO_DEPTH_UNSIGNED  = 0x08,
+(define sample-instance-frequency (foreign-lambda unsigned-integer "al_get_sample_instance_frequency" (const sample-instance)))
+(define sample-instance-length (foreign-lambda unsigned-integer "al_get_sample_instance_length" (const sample-instance)))
+(define sample-instance-position (foreign-lambda unsigned-integer "al_get_sample_instance_position" (const sample-instance)))
 
-;;    -* For convenience *-
-;;    ALLEGRO_AUDIO_DEPTH_UINT8  = ALLEGRO_AUDIO_DEPTH_INT8 |
-;;                                  ALLEGRO_AUDIO_DEPTH_UNSIGNED,
-;;    ALLEGRO_AUDIO_DEPTH_UINT16 = ALLEGRO_AUDIO_DEPTH_INT16 |
-;;                                  ALLEGRO_AUDIO_DEPTH_UNSIGNED,
-;;    ALLEGRO_AUDIO_DEPTH_UINT24 = ALLEGRO_AUDIO_DEPTH_INT24 |
-;;                                  ALLEGRO_AUDIO_DEPTH_UNSIGNED
-;; };
+(define sample-instance-speed (foreign-lambda float "al_get_sample_instance_speed" (const sample-instance)))
+(define sample-instance-gain (foreign-lambda float "al_get_sample_instance_gain" (const sample-instance)))
+(define sample-instance-pan (foreign-lambda float "al_get_sample_instance_pan" (const sample-instance)))
+(define sample-instance-time (foreign-lambda float "al_get_sample_instance_time" (const sample-instance)))
 
+(define sample-instance-depth (foreign-lambda audio-depth "al_get_sample_instance_depth" (const sample-instance)))
+(define sample-instance-channels (foreign-lambda channel-configuration "al_get_sample_instance_channels" (const sample-instance)))
+(define sample-instance-playmode (foreign-lambda playmode "al_get_sample_instance_playmode" (const sample-instance)))
 
-;; -* Enum: ALLEGRO_CHANNEL_CONF
-;;  *-
-;; enum ALLEGRO_CHANNEL_CONF
-;; {
-;;    -* Speaker configuration (mono, stereo, 2.1, 3, etc). With regards to
-;;     * behavior, most of this code makes no distinction between, say, 4.1 and
-;;     * 5 speaker setups.. they both have 5 "channels". However, users would
-;;     * like the distinction, and later when the higher-level stuff is added,
-;;     * the differences will become more important. (v>>4)+(v&0xF) should yield
-;;     * the total channel count.
-;;     *-
-;;    ALLEGRO_CHANNEL_CONF_1   = 0x10,
-;;    ALLEGRO_CHANNEL_CONF_2   = 0x20,
-;;    ALLEGRO_CHANNEL_CONF_3   = 0x30,
-;;    ALLEGRO_CHANNEL_CONF_4   = 0x40,
-;;    ALLEGRO_CHANNEL_CONF_5_1 = 0x51,
-;;    ALLEGRO_CHANNEL_CONF_6_1 = 0x61,
-;;    ALLEGRO_CHANNEL_CONF_7_1 = 0x71
-;; #define ALLEGRO_MAX_CHANNELS 8
-;; };
+(define sample-instance-playing? (foreign-lambda bool "al_get_sample_instance_playing" (const sample-instance)))
+(define sample-instance-attached? (foreign-lambda bool "al_get_sample_instance_attached" (const sample-instance)))
 
+(define sample-instance-position-set! (foreign-lambda bool "al_set_sample_instance_position" sample-instance unsigned-integer32))
+(define sample-instance-length-set! (foreign-lambda bool "al_set_sample_instance_length" sample-instance unsigned-integer32))
 
-;; -* Enum: ALLEGRO_PLAYMODE
-;;  *-
-;; enum ALLEGRO_PLAYMODE
-;; {
-;;    ALLEGRO_PLAYMODE_ONCE   = 0x100,
-;;    ALLEGRO_PLAYMODE_LOOP   = 0x101,
-;;    ALLEGRO_PLAYMODE_BIDIR  = 0x102,
-;;    _ALLEGRO_PLAYMODE_STREAM_ONCE   = 0x103,   -* internal *-
-;;    _ALLEGRO_PLAYMODE_STREAM_ONEDIR = 0x104    -* internal *-
-;; };
+(define sample-instance-speed-set! (foreign-lambda bool "al_set_sample_instance_speed" sample-instance float))
+(define sample-instance-gain-set! (foreign-lambda bool "al_set_sample_instance_gain" sample-instance float))
+(define sample-instance-pan-set! (foreign-lambda bool "al_set_sample_instance_pan" sample-instance float))
 
+(define sample-instance-playmode-set! (foreign-lambda bool "al_set_sample_instance_playmode" sample-instance playmode))
+(define sample-instance-playing-set! (foreign-lambda bool "al_set_sample_instance_playing" sample-instance bool))
+(define sample-instance-detach! (foreign-lambda bool "al_detach_sample_instance" sample-instance))
 
-;; -* Enum: ALLEGRO_MIXER_QUALITY
-;;  *-
-;; enum ALLEGRO_MIXER_QUALITY
-;; {
-;;    ALLEGRO_MIXER_QUALITY_POINT   = 0x110,
-;;    ALLEGRO_MIXER_QUALITY_LINEAR  = 0x111,
-;; };
+(define sample-instance-sample-set! (foreign-lambda bool "al_set_sample" sample-instance sample))
+(define sample-instance-sample (foreign-lambda sample "al_get_sample" sample-instance))
 
+(define sample-instance-play (foreign-lambda bool "al_play_sample_instance" sample-instance))
+(define sample-instance-stop (foreign-lambda bool "al_stop_sample_instance" sample-instance))
 
-;; -* Enum: ALLEGRO_AUDIO_PAN_NONE
-;;  *-
-;; #define ALLEGRO_AUDIO_PAN_NONE      (-1000.0f)
+(define make-audio-stream (foreign-lambda audio-stream "al_create_audio_stream" size_t unsigned-integer32 unsigned-integer32 audio-depth channel-configuration))
+(define free-audio-stream (foreign-lambda void "al_destroy_audio_stream" audio-stream))
 
+(define audio-stream-drain (foreign-lambda void "al_drain_audio_stream" audio-stream))
 
-;; -* Type: ALLEGRO_SAMPLE
-;;  *-
-;; typedef struct ALLEGRO_SAMPLE ALLEGRO_SAMPLE;
+(define audio-stream-frequency (foreign-lambda unsigned-integer32 "al_get_audio_stream_frequency" (const audio-stream)))
+(define audio-stream-length (foreign-lambda unsigned-integer32 "al_get_audio_stream_length" (const audio-stream)))
+(define audio-stream-fragments (foreign-lambda unsigned-integer32 "al_get_audio_stream_fragments" (const audio-stream)))
+(define audio-stream-available-fragments (foreign-lambda unsigned-integer32 "al_get_available_audio_stream_fragments" (const audio-stream)))
 
+(define audio-stream-speed (foreign-lambda float "al_get_audio_stream_speed" (const audio-stream)))
+(define audio-stream-gain (foreign-lambda float "al_get_audio_stream_gain" (const audio-stream)))
 
-;; -* Type: ALLEGRO_SAMPLE_ID
-;;  *-
-;; typedef struct ALLEGRO_SAMPLE_ID ALLEGRO_SAMPLE_ID;
+(define audio-stream-channels (foreign-lambda channel-configuration "al_get_audio_stream_channels" (const audio-stream)))
+(define audio-stream-depth (foreign-lambda audio-depth "al_get_audio_stream_depth" (const audio-stream)))
+(define audio-stream-playmode (foreign-lambda playmode "al_get_audio_stream_playmode" (const audio-stream)))
 
-;; struct ALLEGRO_SAMPLE_ID {
-;;    int _index;
-;;    int _id;
-;; };
+(define audio-stream-playing? (foreign-lambda bool "al_get_audio_stream_playing" (const audio-stream)))
+(define audio-stream-attached? (foreign-lambda bool "al_get_audio_stream_attached" (const audio-stream)))
 
+(define audio-stream-fragment (foreign-lambda c-pointer "al_get_audio_stream_fragment" (const audio-stream)))
 
-;; -* Type: ALLEGRO_SAMPLE_INSTANCE
-;;  *-
-;; typedef struct ALLEGRO_SAMPLE_INSTANCE ALLEGRO_SAMPLE_INSTANCE;
+(define audio-stream-speed-set! (foreign-lambda bool "al_set_audio_stream_speed" audio-stream float))
+(define audio-stream-gain-set! (foreign-lambda bool "al_set_audio_stream_gain" audio-stream float))
+(define audio-stream-pan-set! (foreign-lambda bool "al_set_audio_stream_pan" audio-stream float))
 
+(define audio-stream-playmode-set! (foreign-lambda bool "al_set_audio_stream_playmode" audio-stream playmode))
 
-;; -* Type: ALLEGRO_AUDIO_STREAM
-;;  *-
-;; typedef struct ALLEGRO_AUDIO_STREAM ALLEGRO_AUDIO_STREAM;
+(define audio-stream-playing-set! (foreign-lambda bool "al_set_audio_stream_playing" audio-stream bool))
+(define audio-stream-detach! (foreign-lambda bool "al_detach_audio_stream" audio-stream))
+(define audio-stream-fragment-set! (foreign-lambda bool "al_set_audio_stream_fragment" audio-stream c-pointer))
 
+(define audio-stream-rewind! (foreign-lambda bool "al_rewind_audio_stream" audio-stream))
+(define audio-stream-seek-seconds! (foreign-lambda bool "al_seek_audio_stream_secs" audio-stream double))
+(define audio-stream-position-seconds! (foreign-lambda double "al_get_audio_stream_position_secs" audio-stream))
+(define audio-stream-length-seconds! (foreign-lambda double "al_get_audio_stream_length_secs" audio-stream))
+(define audio-stream-loop-seconds! (foreign-lambda bool "al_set_audio_stream_loop_secs" audio-stream double double))
 
-;; -* Type: ALLEGRO_MIXER
-;;  *-
-;; typedef struct ALLEGRO_MIXER ALLEGRO_MIXER;
+(define audio-stream-event-source (foreign-lambda event-source "al_get_audio_stream_event_source" audio-stream))
 
+(define make-mixer (foreign-lambda mixer "al_create_mixer" unsigned-integer32 audio-depth channel-configuration))
+(define free-mixer (foreign-lambda void "al_destroy_mixer" mixer))
 
-;; -* Type: ALLEGRO_VOICE
-;;  *-
-;; typedef struct ALLEGRO_VOICE ALLEGRO_VOICE;
+(define sample-interface-attach-to-mixer! (foreign-lambda bool "al_attach_sample_instance_to_mixer" sample-instance mixer))
+(define audio-stream-attach-to-mixer! (foreign-lambda bool "al_attach_audio_stream_to_mixer" audio-stream mixer))
 
+(define mixer-attach-to-mixer! (foreign-lambda bool "al_attach_mixer_to_mixer" mixer mixer))
+(define mixer-postprocess-callback-set! (foreign-lambda bool "al_set_mixer_postprocess_callback" mixer (function void (c-pointer unsigned-integer32 c-pointer)) c-pointer))
 
-;; -* Sample functions *-
+(define mixer-frequency (foreign-lambda unsigned-integer32 "al_get_mixer_frequency" (const mixer)))
+(define mixer-channels (foreign-lambda channel-configuration "al_get_mixer_channels" (const mixer)))
+(define mixer-depth (foreign-lambda audio-depth "al_get_mixer_depth" (const mixer)))
+(define mixer-quality (foreign-lambda mixer-quality "al_get_mixer_quality" (const mixer)))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE *, al_create_sample, (void *buf,
-;;       unsigned int samples, unsigned int freq, ALLEGRO_AUDIO_DEPTH depth,
-;;       ALLEGRO_CHANNEL_CONF chan_conf, bool free_buf));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_sample, (ALLEGRO_SAMPLE *spl));
+(define mixer-playing? (foreign-lambda bool "al_get_mixer_playing" (const mixer)))
+(define mixer-attached? (foreign-lambda bool "al_get_mixer_attached" (const mixer)))
+(define mixer-frequency-set! (foreign-lambda bool "al_set_mixer_frequency" mixer unsigned-integer32))
+(define mixer-quality-set! (foreign-lambda bool "al_set_mixer_quality" mixer mixer-quality))
+(define mixer-playing-set! (foreign-lambda bool "al_set_mixer_playing" mixer bool))
+(define mixer-detach! (foreign-lambda bool "al_detach_mixer" mixer))
 
+(define make-voice (foreign-lambda voice "al_create_voice" unsigned-integer32 audio-depth channel-configuration))
+(define free-voice (foreign-lambda void "al_destroy_voice" voice))
 
-;; -* Sample instance functions *-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE_INSTANCE*, al_create_sample_instance, (
-;;       ALLEGRO_SAMPLE *data));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_sample_instance, (
-;;       ALLEGRO_SAMPLE_INSTANCE *spl));
+(define sample-instance-attach-to-voice! (foreign-lambda bool "al_attach_sample_instance_to_voice" sample-instance voice))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_sample_frequency, (const ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_sample_length, (const ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_DEPTH, al_get_sample_depth, (const ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_CHANNEL_CONF, al_get_sample_channels, (const ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(void *, al_get_sample_data, (const ALLEGRO_SAMPLE *spl));
+(define audio-stream-attach-to-voice! (foreign-lambda bool "al_attach_audio_stream_to_voice" audio-stream voice))
+(define mixer-attach-to-voice! (foreign-lambda bool "al_attach_mixer_to_voice" mixer voice))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_sample_instance_frequency, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_sample_instance_length, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_sample_instance_position, (const ALLEGRO_SAMPLE_INSTANCE *spl));
+(define voice-detach! (foreign-lambda void "al_detach_voice" voice))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_sample_instance_speed, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_sample_instance_gain, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_sample_instance_pan, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_sample_instance_time, (const ALLEGRO_SAMPLE_INSTANCE *spl));
+(define voice-frequency (foreign-lambda unsigned-integer32 "al_get_voice_frequency" (const voice)))
+(define voice-position (foreign-lambda unsigned-integer32 "al_get_voice_position" (const voice)))
+(define voice-channels (foreign-lambda channel-configuration "al_get_voice_channels" (const voice)))
+(define voice-depth (foreign-lambda audio-depth "al_get_voice_depth" (const voice)))
+(define voice-playing? (foreign-lambda bool "al_get_voice_playing" (const voice)))
+(define voice-position-set! (foreign-lambda bool "al_set_voice_position" voice unsigned-integer32))
+(define voice-playing-set! (foreign-lambda bool "al_set_voice_playing" voice bool))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_DEPTH, al_get_sample_instance_depth, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_CHANNEL_CONF, al_get_sample_instance_channels, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_PLAYMODE, al_get_sample_instance_playmode, (const ALLEGRO_SAMPLE_INSTANCE *spl));
+(define audio-addon-install (foreign-lambda bool "al_install_audio"))
+(define audio-addon-uninstall (foreign-lambda void "al_uninstall_audio"))
+(define audio-addon-installed? (foreign-lambda bool "al_is_audio_installed"))
+(define audio-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_audio_version"))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_sample_instance_playing, (const ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_sample_instance_attached, (const ALLEGRO_SAMPLE_INSTANCE *spl));
+(define channel-configuration-count (foreign-lambda size_t "al_get_channel_count" channel-configuration))
+(define audio-depth-size (foreign-lambda size_t "al_get_audio_depth_size" audio-depth))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_position, (ALLEGRO_SAMPLE_INSTANCE *spl, unsigned int val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_length, (ALLEGRO_SAMPLE_INSTANCE *spl, unsigned int val));
+(define default-mixer (foreign-lambda mixer "al_get_default_mixer"))
+(define default-mixer-set! (foreign-lambda bool "al_set_default_mixer" mixer))
+(define default-mixer-restore! (foreign-lambda bool "al_restore_default_mixer"))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_speed, (ALLEGRO_SAMPLE_INSTANCE *spl, float val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_gain, (ALLEGRO_SAMPLE_INSTANCE *spl, float val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_pan, (ALLEGRO_SAMPLE_INSTANCE *spl, float val));
+(define sample-play (foreign-lambda bool "al_play_sample" sample float float float playmode sample-id))
+(define sample-stop (foreign-lambda void "al_stop_sample" sample-id))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_playmode, (ALLEGRO_SAMPLE_INSTANCE *spl, ALLEGRO_PLAYMODE val));
+(define reserve-samples (foreign-lambda bool "al_reserve_samples" integer32))
+(define stop-all-samples (foreign-lambda void "al_stop_samples"))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample_instance_playing, (ALLEGRO_SAMPLE_INSTANCE *spl, bool val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_detach_sample_instance, (ALLEGRO_SAMPLE_INSTANCE *spl));
+(define register-sample-loader (foreign-lambda bool "al_register_sample_loader" (const c-string) (function sample ((const c-string)))))
+(define register-sample-saver (foreign-lambda bool "al_register_sample_saver" (const c-string) (function bool ((const c-string) sample))))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_sample, (ALLEGRO_SAMPLE_INSTANCE *spl, ALLEGRO_SAMPLE *data));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE *, al_get_sample, (ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_play_sample_instance, (ALLEGRO_SAMPLE_INSTANCE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_stop_sample_instance, (ALLEGRO_SAMPLE_INSTANCE *spl));
+(define register-audio-stream-loader (foreign-lambda bool "al_register_audio_stream_loader" (const c-string) (function audio-stream ((const c-string) size_t unsigned-integer32))))
 
+(define register-sample-file-loader (foreign-lambda bool "al_register_sample_loader_f" (const c-string) (function sample (file))))
+(define register-sample-file-saver (foreign-lambda bool "al_register_sample_saver_f" (const c-string) (function bool (file sample))))
 
-;; -* Stream functions *-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_STREAM*, al_create_audio_stream, (size_t buffer_count,
-;;       unsigned int samples, unsigned int freq,
-;;       ALLEGRO_AUDIO_DEPTH depth, ALLEGRO_CHANNEL_CONF chan_conf));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_audio_stream, (ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_drain_audio_stream, (ALLEGRO_AUDIO_STREAM *stream));
+(define register-audio-stream-file-loader (foreign-lambda bool "al_register_audio_stream_loader_f" (const c-string) (function audio-stream (file size_t unsigned-integer32))))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_audio_stream_frequency, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_audio_stream_length, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_audio_stream_fragments, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_available_audio_stream_fragments, (const ALLEGRO_AUDIO_STREAM *stream));
+(define make-sample (foreign-lambda sample "al_load_sample" (const c-string)))
+(define (sample-save s f) ((foreign-lambda bool "al_save_sample" (const c-string) sample) f s))
+(define make-audio-stream (foreign-lambda audio-stream "al_load_audio_stream" (const c-string) size_t unsigned-integer32))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_audio_stream_speed, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_audio_stream_gain, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(float, al_get_audio_stream_pan, (const ALLEGRO_AUDIO_STREAM *stream));
+(define make-sample-from-file (foreign-lambda sample "al_load_sample_f" file (const c-string)))
+(define (sample-save-to-file s f i) ((foreign-lambda bool "al_save_sample_f" file (const c-string) sample) f i s))
 
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_CHANNEL_CONF, al_get_audio_stream_channels, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_DEPTH, al_get_audio_stream_depth, (const ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_PLAYMODE, al_get_audio_stream_playmode, (const ALLEGRO_AUDIO_STREAM *stream));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_audio_stream_playing, (const ALLEGRO_AUDIO_STREAM *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_audio_stream_attached, (const ALLEGRO_AUDIO_STREAM *spl));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(void *, al_get_audio_stream_fragment, (const ALLEGRO_AUDIO_STREAM *stream));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_speed, (ALLEGRO_AUDIO_STREAM *stream, float val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_gain, (ALLEGRO_AUDIO_STREAM *stream, float val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_pan, (ALLEGRO_AUDIO_STREAM *stream, float val));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_playmode, (ALLEGRO_AUDIO_STREAM *stream, ALLEGRO_PLAYMODE val));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_playing, (ALLEGRO_AUDIO_STREAM *stream, bool val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_detach_audio_stream, (ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_fragment, (ALLEGRO_AUDIO_STREAM *stream, void *val));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_rewind_audio_stream, (ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_seek_audio_stream_secs, (ALLEGRO_AUDIO_STREAM *stream, double time));
-;; ALLEGRO_KCM_AUDIO_FUNC(double, al_get_audio_stream_position_secs, (ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(double, al_get_audio_stream_length_secs, (ALLEGRO_AUDIO_STREAM *stream));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_audio_stream_loop_secs, (ALLEGRO_AUDIO_STREAM *stream, double start, double end));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_EVENT_SOURCE *, al_get_audio_stream_event_source, (ALLEGRO_AUDIO_STREAM *stream));
-
-;; -* Mixer functions *-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_MIXER*, al_create_mixer, (unsigned int freq,
-;;       ALLEGRO_AUDIO_DEPTH depth, ALLEGRO_CHANNEL_CONF chan_conf));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_mixer, (ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_sample_instance_to_mixer, (
-;;    ALLEGRO_SAMPLE_INSTANCE *stream, ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_audio_stream_to_mixer, (ALLEGRO_AUDIO_STREAM *stream,
-;;    ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_mixer_to_mixer, (ALLEGRO_MIXER *stream,
-;;    ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_mixer_postprocess_callback, (
-;;       ALLEGRO_MIXER *mixer,
-;;       void (*cb)(void *buf, unsigned int samples, void *data),
-;;       void *data));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_mixer_frequency, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_CHANNEL_CONF, al_get_mixer_channels, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_DEPTH, al_get_mixer_depth, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_MIXER_QUALITY, al_get_mixer_quality, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_mixer_playing, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_mixer_attached, (const ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_mixer_frequency, (ALLEGRO_MIXER *mixer, unsigned int val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_mixer_quality, (ALLEGRO_MIXER *mixer, ALLEGRO_MIXER_QUALITY val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_mixer_playing, (ALLEGRO_MIXER *mixer, bool val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_detach_mixer, (ALLEGRO_MIXER *mixer));
-
-;; -* Voice functions *-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_VOICE*, al_create_voice, (unsigned int freq,
-;;       ALLEGRO_AUDIO_DEPTH depth,
-;;       ALLEGRO_CHANNEL_CONF chan_conf));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_destroy_voice, (ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_sample_instance_to_voice, (
-;;    ALLEGRO_SAMPLE_INSTANCE *stream, ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_audio_stream_to_voice, (
-;;    ALLEGRO_AUDIO_STREAM *stream, ALLEGRO_VOICE *voice ));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_attach_mixer_to_voice, (ALLEGRO_MIXER *mixer,
-;;    ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_detach_voice, (ALLEGRO_VOICE *voice));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_voice_frequency, (const ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(unsigned int, al_get_voice_position, (const ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_CHANNEL_CONF, al_get_voice_channels, (const ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_DEPTH, al_get_voice_depth, (const ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_get_voice_playing, (const ALLEGRO_VOICE *voice));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_voice_position, (ALLEGRO_VOICE *voice, unsigned int val));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_voice_playing, (ALLEGRO_VOICE *voice, bool val));
-
-;; -* Misc. audio functions *-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_install_audio, (void));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_uninstall_audio, (void));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_is_audio_installed, (void));
-;; ALLEGRO_KCM_AUDIO_FUNC(uint32_t, al_get_allegro_audio_version, (void));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(size_t, al_get_channel_count, (ALLEGRO_CHANNEL_CONF conf));
-;; ALLEGRO_KCM_AUDIO_FUNC(size_t, al_get_audio_depth_size, (ALLEGRO_AUDIO_DEPTH conf));
-
-;; -* Simple audio layer *-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_reserve_samples, (int reserve_samples));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_MIXER *, al_get_default_mixer, (void));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_set_default_mixer, (ALLEGRO_MIXER *mixer));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_restore_default_mixer, (void));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_play_sample, (ALLEGRO_SAMPLE *data,
-;;       float gain, float pan, float speed, ALLEGRO_PLAYMODE loop, ALLEGRO_SAMPLE_ID *ret_id));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_stop_sample, (ALLEGRO_SAMPLE_ID *spl_id));
-;; ALLEGRO_KCM_AUDIO_FUNC(void, al_stop_samples, (void));
-
-;; -* File type handlers *-
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_loader, (const char *ext,
-;; 	ALLEGRO_SAMPLE *(*loader)(const char *filename)));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_saver, (const char *ext,
-;; 	bool (*saver)(const char *filename, ALLEGRO_SAMPLE *spl)));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_audio_stream_loader, (const char *ext,
-;; 	ALLEGRO_AUDIO_STREAM *(*stream_loader)(const char *filename,
-;; 	    size_t buffer_count, unsigned int samples)));
-       
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_loader_f, (const char *ext,
-;; 	ALLEGRO_SAMPLE *(*loader)(ALLEGRO_FILE *fp)));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_sample_saver_f, (const char *ext,
-;; 	bool (*saver)(ALLEGRO_FILE *fp, ALLEGRO_SAMPLE *spl)));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_register_audio_stream_loader_f, (const char *ext,
-;; 	ALLEGRO_AUDIO_STREAM *(*stream_loader)(ALLEGRO_FILE *fp,
-;; 	    size_t buffer_count, unsigned int samples)));
-
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE *, al_load_sample, (const char *filename));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_save_sample, (const char *filename,
-;; 	ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_STREAM *, al_load_audio_stream, (const char *filename,
-;; 	size_t buffer_count, unsigned int samples));
-   
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_SAMPLE *, al_load_sample_f, (ALLEGRO_FILE* fp, const char *ident));
-;; ALLEGRO_KCM_AUDIO_FUNC(bool, al_save_sample_f, (ALLEGRO_FILE* fp, const char *ident,
-;; 	ALLEGRO_SAMPLE *spl));
-;; ALLEGRO_KCM_AUDIO_FUNC(ALLEGRO_AUDIO_STREAM *, al_load_audio_stream_f, (ALLEGRO_FILE* fp, const char *ident,
-;; 	size_t buffer_count, unsigned int samples));
-
+(define make-audio-stream-from-file (foreign-lambda audio-stream "al_load_audio_stream_f" file (const c-string) size_t unsigned-integer32))

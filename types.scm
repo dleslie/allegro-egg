@@ -24,6 +24,12 @@
 (define-foreign-record-type (display "ALLEGRO_DISPLAY"))
 (define-foreign-record-type (keyboard "ALLEGRO_KEYBOARD"))
 (define-foreign-record-type (event-source "ALLEGRO_EVENT_SOURCE"))
+(define-foreign-record-type (sample "ALLEGRO_SAMPLE"))
+(define-foreign-record-type (sample-id "ALLEGRO_SAMPLE_ID"))
+(define-foreign-record-type (sample-instance "ALLEGRO_SAMPLE_INSTANCE"))
+(define-foreign-record-type (audio-stream "ALLEGRO_AUDIO_STREAM"))
+(define-foreign-record-type (mixer "ALLEGRO_MIXER"))
+(define-foreign-record-type (voice "ALLEGRO_VOICE"))
 
 (define-foreign-record-type (vertex "ALLEGRO_VERTEX")
   (constructor: make-vertex)
