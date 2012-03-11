@@ -22,12 +22,12 @@
 
 (define free-cursor! (foreign-lambda void "al_destroy_mouse_cursor" mouse-cursor))
 
-(define mouse-cursor-position (foreign-lambda* integer () "
+(define mouse-cursor-position (foreign-safe-lambda* integer () "
 int x, y;
 if (al_get_mouse_cursor_position(&x, &y))
 {
-   C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-   C_return(C_pair(&ptr, C_fix(x), C_fix(y)));
+   C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
+   C_return(C_list(&ptr, 2, C_fix(x), C_fix(y)));
 }
 else
    C_return(C_SCHEME_FALSE);

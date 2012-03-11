@@ -6,17 +6,17 @@
 (define opengl-remove-fbo! (foreign-lambda void "al_remove_opengl_fbo" bitmap))
 (define opengl-fbo (foreign-lambda unsigned-integer32 "al_get_opengl_fbo" bitmap))
 
-(define opengl-texture-size (foreign-lambda* scheme-object ((bitmap bmp)) "
+(define opengl-texture-size (foreign-safe-lambda* scheme-object ((bitmap bmp)) "
 int w, h;
 al_get_opengl_texture_size(bmp, &w, &h);
-C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-C_return(C_pair(&ptr, C_fix(w), C_fix(h)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
+C_return(C_list(&ptr, 2, C_fix(w), C_fix(h)));
 "))
-(define opengl-texture-position (foreign-lambda* scheme-object ((bitmap bmp)) "
+(define opengl-texture-position (foreign-safe-lambda* scheme-object ((bitmap bmp)) "
 int u, v;
 al_get_opengl_texture_size(bmp, &u, &v);
-C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-C_return(C_pair(&ptr, C_fix(u), C_fix(v)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
+C_return(C_list(&ptr, 2, C_fix(u), C_fix(v)));
 "))
 
 (define opengl-context-set! (foreign-lambda void "al_set_current_opengl_context" display))

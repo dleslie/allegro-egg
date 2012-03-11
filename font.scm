@@ -29,13 +29,13 @@
 (define font-line-height (foreign-lambda integer "al_get_font_line_height" (const font)))
 (define font-ascent (foreign-lambda integer "al_get_font_ascent" (const font)))
 (define font-descent (foreign-lambda integer "al_get_font_descent" (const font)))
-(define font-utf-dimensions (foreign-lambda* scheme-object (((const font) f) ((const utf-string) text)) "
+(define font-utf-dimensions (foreign-safe-lambda* scheme-object (((const font) f) ((const utf-string) text)) "
 int bbx, bby, bbw, bbh;
 al_get_ustr_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
 C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix(bbx), C_fix(bby), C_fix(bbw), C_fix(bbh)));
 "))
-(define font-dimensions (foreign-lambda* scheme-object (((const font) f) ((const c-string) text)) "
+(define font-dimensions (foreign-safe-lambda* scheme-object (((const font) f) ((const c-string) text)) "
 int bbx, bby, bbw, bbh;
 al_get_text_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
 C_word *ptr = C_alloc(C_SIZEOF_LIST(4));

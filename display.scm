@@ -1,14 +1,16 @@
 (define new-display-refresh-rate-set! (foreign-lambda void "al_set_new_display_refresh_rate" integer))
-(define new-display-display-flags-set! (foreign-lambda void "al_set_new_display_flags" integer))
+(define new-display-flags-set! (foreign-lambda void "al_set_new_display_flags" integer))
 (define new-display-refresh-rate (foreign-lambda integer "al_get_new_display_refresh_rate"))
-(define new-display-display-flags (foreign-lambda integer "al_get_new_display_flags"))
-(define new-display-display-adapter (foreign-lambda int "al_get_new_display_adapter"))
-(define new-display-display-adapter-set! (foreign-lambda void "al_set_new_display_adapter" int))
-(define new-display-window-position (foreign-lambda* scheme-object () #<<ENDC
+(define new-display-flags (foreign-lambda int "al_get_new_display_flags"))
+(define new-display-adapter (foreign-lambda int "al_get_new_display_adapter"))
+(define new-display-adapter-set! (foreign-lambda void "al_set_new_display_adapter" int))
+(define new-display-window-position (foreign-safe-lambda* scheme-object () #<<ENDC
 int x, y;
+C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
+
 al_get_new_window_position(&x, &y);
-C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-C_return(C_pair (&ptr, C_fix (x), C_fix (y)));
+
+C_return (C_list(&ptr, 2, C_fix (x), C_fix (y)));
 ENDC
 ))
 (define new-display-window-position-set! (foreign-lambda void "al_set_new_window_position" int int))
@@ -60,12 +62,14 @@ ENDC
 (define display-refresh-rate (foreign-lambda integer "al_get_display_refresh_rate" display))
 (define display-display-flags (foreign-lambda integer "al_get_display_flags" display))
 (define display-toggle-flag! (foreign-lambda bool "al_toggle_display_flag" display display-flag bool))
-(define display-target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" bitmap))
-(define display-target-backbuffer-set! (foreign-lambda void "al_set_target_backbuffer" display))
 (define display-backbuffer (foreign-lambda bitmap "al_get_backbuffer" display))
 (define display-acknowledge-resize (foreign-lambda bool "al_acknowledge_resize" display))
 (define display-resize! (foreign-lambda bool "al_resize_display" display int int))
-(define display-event-source (foreign-lambda event-source "al_get_display_event_source" display))(define display-clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
+(define display-event-source (foreign-lambda event-source "al_get_display_event_source" display))
+
+(define clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
+(define target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" bitmap))
+(define target-backbuffer-set! (foreign-lambda void "al_set_target_backbuffer" display))
 
 (define display-icon-set! (foreign-lambda void "al_set_display_icon" display bitmap))
 

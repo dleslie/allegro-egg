@@ -31,7 +31,7 @@
 
 (define event-queue-empty? (foreign-lambda void "al_is_event_queue_empty" event-queue))
 
-(define event-queue-next*! (foreign-lambda* event ((event-queue q)) "
+(define event-queue-next*! (foreign-safe-lambda* event ((event-queue q)) "
 ALLEGRO_EVENT *evt = (ALLEGRO_EVENT *)C_alloc(sizeof(ALLEGRO_EVENT));
 if (al_get_next_event(q, evt))
   C_return(evt);
@@ -49,7 +49,7 @@ else
           (set-finalizer! evt free-event!)
           evt))))
 
-(define event-queue-peek* (foreign-lambda* event ((event-queue q)) "
+(define event-queue-peek* (foreign-safe-lambda* event ((event-queue q)) "
 ALLEGRO_EVENT *evt = (ALLEGRO_EVENT *)C_alloc(sizeof(ALLEGRO_EVENT));
 if (al_peek_next_event(q, evt))
   C_return(evt);

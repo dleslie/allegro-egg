@@ -31,7 +31,7 @@
 
 (define utf-empty-string (foreign-lambda utf-string "al_ustr_empty_string"))
 
-(define make-utf-null-string* (foreign-lambda* utf-string () "C_return((ALLEGRO_USTR *)C_alloc(sizeof(ALLEGRO_USTR)));"))
+(define make-utf-null-string* (foreign-safe-lambda* utf-string () "C_return((ALLEGRO_USTR *)C_alloc(sizeof(ALLEGRO_USTR)));"))
 (define (make-utf-null-string)
   (let ((str (make-utf-null-string*)))
     (set-finalizer! str free-utf-string!)
@@ -87,23 +87,23 @@ else
 
 (define utf-get (foreign-lambda integer32 "al_ustr_get" utf-string integer))
 
-(define utf-get-next (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
+(define utf-get-next (foreign-safe-lambda* integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_get_next(us, &pos);
 if (val >= 0)
 {
-  C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-  C_return(C_pair(&ptr, C_fix(val), C_fix(pos)));
+  C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
+  C_return(C_list(&ptr, 2,  C_fix(val), C_fix(pos)));
 }
 else
   C_return(C_SCHEME_FALSE);
 "))
 
-(define utf-get-prev (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
+(define utf-get-prev (foreign-safe-lambda* integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_prev_get(us, &pos);
 if (val >= 0)
 {
-  C_word *ptr = C_alloc(C_SIZEOF_PAIR);
-  C_return(C_pair(&ptr, C_fix(val), C_fix(pos)));
+  C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
+  C_return(C_list(&ptr, 2, C_fix(val), C_fix(pos)));
 }
 else
   C_return(C_SCHEME_FALSE);
