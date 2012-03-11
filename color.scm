@@ -1,4 +1,5 @@
 (define color-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_color_version"))
+
 (define hsv->rgb (foreign-lambda* scheme-object ((float hue) (float saturation) (float value)) "
 float r, g, b;
 al_color_hsv_to_rgb(hue, saturation, value, &r, &g, &b);
@@ -53,39 +54,63 @@ al_color_html_to_rgb(string, &r, &g, &b);
 C_return(C_list(&C_a, 3, C_flonum(&C_a, r), C_flonum(&C_a, g), C_flonum(&C_a, b)));
 "))
 
-(define (make-color-yuv y u v) (color-yuv! (make-color) y u v))
-(define color-yuv! (foreign-lambda* color ((color clr) (float y) (float u) (float v)) "
-int t = al_color_yuv(y, u, v);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
-(define (make-color-cmyk c m y k) (color-cmyk! (make-color) c m y k))
-(define color-cmyk! (foreign-lambda* color ((color clr) (float c) (float m) (float y) (float k)) "
-int t = al_color_cmyk(c, m, y, k);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
-(define (make-color-hsl h s l) (color-hsl! (make-color) h s l))
-(define color-hsl! (foreign-lambda* color ((color clr) (float h) (float s) (float l)) "
-int t = al_color_hsl(h, s, l);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
-(define (make-color-hsv h s v) (color-hsv! (make-color) h s v))
-(define color-hsv! (foreign-lambda* color ((color clr) (float h) (float s) (float v)) "
-int t = al_color_hsv(h, s, v);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
-(define (make-color-name n) (color-name! (make-color) n))
-(define color-name! (foreign-lambda* color ((color clr) ((const c-string) n)) "
-int t = al_color_name(n);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
-(define (make-color-html html) (color-html! (make-color) html))
-(define color-html! (foreign-lambda* color ((color clr) ((const c-string) html)) "
-int t = al_color_html(html);
-memcpy(clr, &t, sizeof(ALLEGRO_COLOR));
-C_return(clr);
-"))
+(define (make-color-yuv* y u v) 
+  (let ((clr (make-color*))) 
+    (color-yuv! clr y u v)
+    clr))
+(define (make-color-yuv y u v)
+  (let ((clr (make-color-yuv* y u v)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define (make-color-cmyk* c m y k) 
+  (let ((clr (make-color*))) 
+    (color-cmyk! clr c m y k)
+    clr))
+(define (make-color-cmyk c m y k)
+  (let ((clr (make-color-cmyk* c m y k)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define (make-color-hsl* h s l) 
+  (let ((clr (make-color*))) 
+    (color-hsl! clr h s l)
+    clr))
+(define (make-color-hsl h s l)
+  (let ((clr (make-color-hsl* h s l)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define (make-color-hsv* h s v) 
+  (let ((clr (make-color*))) 
+    (color-hsl! clr h s v)
+    clr))
+(define (make-color-hsv h s v)
+  (let ((clr (make-color-hsv* h s v)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define (make-color-name* n) 
+  (let ((clr (make-color*))) 
+    (color-name! clr n)
+    clr))
+(define (make-color-name n)
+  (let ((clr (make-color-name* n)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define (make-color-html* n) 
+  (let ((clr (make-color*))) 
+    (color-html! clr n)
+    clr))
+(define (make-color-html n)
+  (let ((clr (make-color-html* n)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define color-yuv! (foreign-lambda* void ((color clr) (float y) (float u) (float v)) "al_color_yuv_to_rgb(y, u, v, &clr->r, &clr->g, &clr->b);"))
+(define color-cmyk! (foreign-lambda* void ((color clr) (float c) (float m) (float y) (float k)) "al_color_cmyk_to_rgb(c, m, y, k, &clr->r, &clr->g, &clr->b);"))
+(define color-hsl! (foreign-lambda* void ((color clr) (float h) (float s) (float l)) "al_color_hsl_to_rgb(h, s, l, &clr->r, &clr->g, &clr->b);"))
+(define color-hsv! (foreign-lambda* color ((color clr) (float h) (float s) (float v)) "al_color_hsv_to_rgb(h, s, v, &clr->r, &clr->g, &clr->b);"))
+(define color-name! (foreign-lambda* color ((color clr) ((const c-string) n)) "al_color_name_to_rgb(n, &clr->r, &clr->g, &clr->b);"))
+(define color-html! (foreign-lambda* color ((color clr) ((const c-string) html)) "al_color_html_to_rgb(html, &clr->r, &clr->g, &clr->b);"))

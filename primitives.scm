@@ -1,9 +1,14 @@
 (define primitives-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_primitives_version"))
-(define primitives-addon-init (foreign-lambda bool "al_init_primitives_addon"))
-(define primitives-addon-shutdown (foreign-lambda void "al_shutdown_primitives_addon"))
+(define primitives-addon-install (foreign-lambda bool "al_init_primitives_addon"))
+(define primitives-addon-uninstall (foreign-lambda void "al_shutdown_primitives_addon"))
 
-(define make-vertex-declaration (foreign-lambda vertex-declaration "al_create_vertex_decl" (const vertex-element) integer))
-(define free-vertex-declaration (foreign-lambda void "al_destroy_vertex_decl" vertex-declaration))
+(define make-vertex-declaration* (foreign-lambda vertex-declaration "al_create_vertex_decl" (const vertex-element) integer))
+(define (make-vertex-declaration el i)
+  (let ((vd (make-vertex-declaration* el i)))
+    (set-finalizer! vd free-vertex-element!)
+    vd))
+
+(define free-vertex-declaration! (foreign-lambda void "al_destroy_vertex_decl" vertex-declaration))
 
 (define draw-primitive (foreign-lambda integer "al_draw_prim" (const c-pointer) (const vertex-declaration) bitmap integer integer primitive-type))
 (define draw-indexed-primitive (foreign-lambda integer "al_draw_indexed_prim" (const c-pointer) (const vertex-declaration) bitmap (const s32vector) integer32 primitive-type))

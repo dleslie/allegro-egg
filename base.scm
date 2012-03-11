@@ -1,4 +1,4 @@
-(define base-version 
+(define build-version 
   (make-version 
    (foreign-value "ALLEGRO_VERSION" integer)
    (foreign-value "ALLEGRO_SUB_VERSION" integer)

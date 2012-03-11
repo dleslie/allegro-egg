@@ -1,9 +1,16 @@
-;; (define native-path-separator (foreign-value "ALLEGRO_NATIVE_PATH_SEP" c-string))
-;; (define native-drive-separator (foreign-value "ALLEGRO_NATIVE_DRIVE_SEP" c-string))
+(define make-path* (foreign-lambda path "al_create_path" c-string))
+(define (make-path s)
+  (let ((p (make-path* s)))
+    (set-finalizer! p free-path!)
+    p))
 
-(define make-path (foreign-lambda path "al_create_path" c-string))
-(define make-path-for-directory (foreign-lambda path "al_create_path_for_directory" c-string))
-(define free-path (foreign-lambda void "al_destroy_path" path))
+(define make-path-for-directory* (foreign-lambda path "al_create_path_for_directory" c-string))
+(define (make-path-for-directory s)
+  (let ((d (make-path-for-directory* s)))
+    (set-finalizer! d free-path!)
+    d))
+
+(define free-path! (foreign-lambda void "al_destroy_path" path))
 
 (define path->string (foreign-lambda c-string "al_path_cstr" path char))
 

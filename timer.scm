@@ -1,13 +1,18 @@
-(define make-timer (foreign-lambda timer "al_create_timer" double))
-(define free-timer (foreign-lambda void "al_destroy_timer" timer))
+(define make-timer* (foreign-lambda timer "al_create_timer" double))
+(define (make-timer d)
+  (let ((t (make-timer* d)))
+    (set-finalizer! t free-timer!)
+    t))
+
+(define free-timer! (foreign-lambda void "al_destroy_timer" timer))
 
 (define timer-usec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_USECS_TO_SECS(x));"))
 (define timer-msec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_MSECS_TO_SECS(x));"))
 (define timer-bps->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPS_TO_SECS(x));"))
 (define timer-bpm->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPM_TO_SECS(x));"))
 
-(define timer-start (foreign-lambda void "al_start_timer" timer))
-(define timer-stop (foreign-lambda void "al_stop_timer" timer))
+(define timer-start! (foreign-lambda void "al_start_timer" timer))
+(define timer-stop! (foreign-lambda void "al_stop_timer" timer))
 (define timer-started? (foreign-lambda bool "al_get_timer_started" timer))
 (define timer-speed (foreign-lambda double "al_get_timer_speed" timer))
 (define timer-speed-set! (foreign-lambda void "al_set_timer_speed" timer double))

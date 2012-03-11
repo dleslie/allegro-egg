@@ -7,7 +7,8 @@
 (define app-name (foreign-lambda c-string "al_get_app_name"))
 (define app-name-set! (foreign-lambda void "al_set_app_name" c-string))
 
-(define system-install (foreign-lambda bool "al_install_system" integer (function integer ((function void (void))))))
+(define install-system (foreign-lambda bool "al_install_system" integer (function integer ((function void (void))))))
+
 (define system-installed? (foreign-lambda bool "al_is_system_installed"))
 (define system-driver (foreign-lambda system "al_get_system_driver"))
 (define system-config (foreign-lambda config "al_get_system_config"))

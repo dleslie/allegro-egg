@@ -1,3 +1,9 @@
+(define-foreign-enum-type (seek-flag int)
+  (seek-flag->int int->seek-flag)
+  ((set) ALLEGRO_SEEK_SET)
+  ((current) ALLEGRO_SEEK_CUR)
+  ((end) ALLEGRO_SEEK_END))
+
 (define-foreign-enum-type (mixer-quality int)
   (mixer-quality->int int->mixer-quality)
   ((point) ALLEGRO_MIXER_QUALITY_POINT)

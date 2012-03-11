@@ -1,8 +1,18 @@
-(define make-sample (foreign-lambda sample "al_create_sample" blob unsigned-integer unsigned-integer audio-depth channel-configuration bool))
-(define free-sample (foreign-lambda void "al_destroy_sample" sample))
+(define make-sample* (foreign-lambda sample "al_create_sample" blob unsigned-integer unsigned-integer audio-depth channel-configuration bool))
+(define (make-sample b ui1 ui2 d cc b)
+  (let ((snd (make-sample* b ui1 ui2 d cc b)))
+    (set-finalizer! snd free-sample!)
+    snd))
 
-(define make-sample-instance (foreign-lambda sample-instance "al_create_sample_instance" sample))
-(define free-sample-instance (foreign-lambda void "al_destroy_sample_instance" sample-instance))
+(define free-sample! (foreign-lambda void "al_destroy_sample" sample))
+
+(define make-sample-instance* (foreign-lambda sample-instance "al_create_sample_instance" sample))
+(define (make-sample-instance s)
+  (let ((snd (make-sample-instance s)))
+    (set-finalizer! snd free-sample-instance!)
+    snd))
+
+(define free-sample-instance! (foreign-lambda void "al_destroy_sample_instance" sample-instance))
 
 (define sample-frequency (foreign-lambda unsigned-integer "al_get_sample_frequency" (const sample)))
 (define sample-length (foreign-lambda unsigned-integer "al_get_sample_length" (const sample)))
@@ -42,8 +52,13 @@
 (define sample-instance-play (foreign-lambda bool "al_play_sample_instance" sample-instance))
 (define sample-instance-stop (foreign-lambda bool "al_stop_sample_instance" sample-instance))
 
-(define make-audio-stream (foreign-lambda audio-stream "al_create_audio_stream" size_t unsigned-integer32 unsigned-integer32 audio-depth channel-configuration))
-(define free-audio-stream (foreign-lambda void "al_destroy_audio_stream" audio-stream))
+(define make-audio-stream* (foreign-lambda audio-stream "al_create_audio_stream" size_t unsigned-integer32 unsigned-integer32 audio-depth channel-configuration))
+(define (make-audio-stream sz ui1 ui2 d cc)
+  (let ((strm (make-audio-stream* sz ui1 ui2 d cc)))
+    (set-finalizer! strm free-audio-stream!)
+    strm))
+
+(define free-audio-stream! (foreign-lambda void "al_destroy_audio_stream" audio-stream))
 
 (define audio-stream-drain (foreign-lambda void "al_drain_audio_stream" audio-stream))
 
@@ -82,8 +97,13 @@
 
 (define audio-stream-event-source (foreign-lambda event-source "al_get_audio_stream_event_source" audio-stream))
 
-(define make-mixer (foreign-lambda mixer "al_create_mixer" unsigned-integer32 audio-depth channel-configuration))
-(define free-mixer (foreign-lambda void "al_destroy_mixer" mixer))
+(define make-mixer* (foreign-lambda mixer "al_create_mixer" unsigned-integer32 audio-depth channel-configuration))
+(define (make-mixer ui d cc)
+  (let ((mx (make-mixer* ui d cc)))
+    (set-finalizer! mx free-mixer!)
+    mx))
+
+(define free-mixer! (foreign-lambda void "al_destroy_mixer" mixer))
 
 (define sample-interface-attach-to-mixer! (foreign-lambda bool "al_attach_sample_instance_to_mixer" sample-instance mixer))
 (define audio-stream-attach-to-mixer! (foreign-lambda bool "al_attach_audio_stream_to_mixer" audio-stream mixer))
@@ -103,8 +123,13 @@
 (define mixer-playing-set! (foreign-lambda bool "al_set_mixer_playing" mixer bool))
 (define mixer-detach! (foreign-lambda bool "al_detach_mixer" mixer))
 
-(define make-voice (foreign-lambda voice "al_create_voice" unsigned-integer32 audio-depth channel-configuration))
-(define free-voice (foreign-lambda void "al_destroy_voice" voice))
+(define make-voice* (foreign-lambda voice "al_create_voice" unsigned-integer32 audio-depth channel-configuration))
+(define (make-voice ui d cc)
+  (let ((v (make-voice* ui d cc)))
+    (set-finalizer! v free-voice!)
+    v))
+
+(define free-voice! (foreign-lambda void "al_destroy_voice" voice))
 
 (define sample-instance-attach-to-voice! (foreign-lambda bool "al_attach_sample_instance_to_voice" sample-instance voice))
 
@@ -149,11 +174,30 @@
 
 (define register-audio-stream-file-loader (foreign-lambda bool "al_register_audio_stream_loader_f" (const c-string) (function audio-stream (file size_t unsigned-integer32))))
 
-(define make-sample (foreign-lambda sample "al_load_sample" (const c-string)))
-(define (sample-save s f) ((foreign-lambda bool "al_save_sample" (const c-string) sample) f s))
-(define make-audio-stream (foreign-lambda audio-stream "al_load_audio_stream" (const c-string) size_t unsigned-integer32))
+(define load-sample* (foreign-lambda sample "al_load_sample" (const c-string)))
+(define (load-sample str)
+  (let ((s (load-sample* str)))
+    (set-finalizer! s free-sample!)
+    s))
 
-(define make-sample-from-file (foreign-lambda sample "al_load_sample_f" file (const c-string)))
+(define load-audio-stream* (foreign-lambda audio-stream "al_load_audio_stream" (const c-string) size_t unsigned-integer32))
+(define (load-audio-stream str s ui)
+  (let ((stm (load-audio-stream* str s ui)))
+    (set-finalizer! stm free-audio-stream!)
+    stm))
+
+(define load-audio-stream-from-file* (foreign-lambda audio-stream "al_load_audio_stream_f" file (const c-string) size_t unsigned-integer32))
+(define (load-audio-stream-from-file f str sz ui)
+  (let ((stm (load-audio-stream-from-file* f str sz ui)))
+    (set-finalizer! stm free-audio-stream!)
+    stm))
+
+(define load-sample-from-file* (foreign-lambda sample "al_load_sample_f" file (const c-string)))
+(define (load-sample-from-file f str)
+  (let ((smpl (load-sample-from-file* f str)))
+    (set-finalizer! smpl free-sample!)
+    smpl))
+
 (define (sample-save-to-file s f i) ((foreign-lambda bool "al_save_sample_f" file (const c-string) sample) f i s))
+(define (sample-save s f) ((foreign-lambda bool "al_save_sample" (const c-string) sample) f s))
 
-(define make-audio-stream-from-file (foreign-lambda audio-stream "al_load_audio_stream_f" file (const c-string) size_t unsigned-integer32))

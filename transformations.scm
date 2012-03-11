@@ -14,6 +14,7 @@ C_return(C_pair(&C_a, C_flonum(&C_a, sx), C_flonum(&C_a, sy)));
 "))
 
 (define transform-compose! (foreign-lambda void "al_compose_transform" transform transform))
-(define transform-current (foreign-lambda transform "al_get_current_transform"))
 (define transform-invert! (foreign-lambda void "al_invert_transform" transform))
 (define transform-check-inverse (foreign-lambda int "al_check_inverse" transform float))
+
+(define current-transform (foreign-lambda transform "al_get_current_transform"))

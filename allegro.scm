@@ -49,5 +49,4 @@
         (include "utf8")
         (include "opengl")
         (include "primitives")
-        (include "audio") ; TODO
-)
+        (include "audio"))

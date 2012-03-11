@@ -1,35 +1,84 @@
-(define make-utf-string (foreign-lambda utf-string "al_ustr_new" c-string))
-(define make-utf-string-from-buffer (foreign-lambda utf-string "al_ustr_new_from_buffer" blob integer))
+(define make-utf-string* (foreign-lambda utf-string "al_ustr_new" c-string))
+(define (make-utf-string-from-buffer* b) ((foreign-lambda utf-string "al_ustr_new_from_buffer" blob integer) b (blob-size b)))
 
-(define free-utf-string (foreign-lambda void "al_ustr_free" utf-string))
+(define (make-utf-string str)
+  (let ((s (make-utf-string* str)))
+    (set-finalizer! s free-utf-string!)
+    s))
+
+(define (make-utf-string-from-buffer b)
+  (let ((s (make-utf-string-from-buffer* b)))
+    (set-finalizer! b free-utf-string!)
+    s))
+
+(define free-utf-string! (foreign-lambda void "al_ustr_free" utf-string))
 
 (define utf->string (foreign-lambda c-string "al_cstr" utf-string))
-(define utf->buffer (foreign-lambda void "al_ustr_to_buffer" utf-string blob integer))
+(define (utf->buffer! s b) ((foreign-lambda void "al_ustr_to_buffer" utf-string blob integer) s b (blob-size b)))
 (define utf->string-copy (foreign-lambda c-string "al_cstr_dup" utf-string))
 
-(define utf-copy (foreign-lambda utf-string "al_ustr_dup" utf-string))
-(define utf-substring (foreign-lambda utf-string "al_ustr_dup_substr" utf-string integer integer))
+(define utf-copy* (foreign-lambda utf-string "al_ustr_dup" utf-string))
+(define (utf-copy str)
+  (let ((s (utf-copy* str)))
+    (set-finalizer! s free-utf-string!)
+    s))
+
+(define utf-substring* (foreign-lambda utf-string "al_ustr_dup_substr" utf-string integer integer))
+(define (utf-substring str i1 i2)
+  (let ((s (utf-substring str i1 i2)))
+    (set-finalizer! s free-utf-string!)
+    s))
 
 (define utf-empty-string (foreign-lambda utf-string "al_ustr_empty_string"))
 
-(define utf-reference-cstr (foreign-lambda utf-string "al_ref_cstr" utf-string (const c-string)))
-(define utf-reference-buffer (foreign-lambda utf-string "al_ref_buffer" utf-string (const c-string) unsigned-integer32))
-(define utf-reference-utf-string (foreign-lambda utf-string "al_ref_ustr" utf-string (const utf-string) integer integer))
+(define make-utf-null-string* (foreign-lambda* utf-string () "C_return((ALLEGRO_USTR *)C_alloc(sizeof(ALLEGRO_USTR)));"))
+(define (make-utf-null-string)
+  (let ((str (make-utf-null-string*)))
+    (set-finalizer! str free-utf-string!)
+    str))
 
-(define utf-size? (foreign-lambda integer "al_ustr_size" utf-string))
-(define utf-length? (foreign-lambda integer "al_ustr_length" utf-string))
+(define (utf-reference-cstr* cstr)
+  (let ((str (make-utf-null-string*)))
+    ((foreign-lambda utf-string "al_ref_cstr" utf-string (const c-string)) str cstr)
+    str))
+
+(define (utf-reference-cstr cstr)
+  (let ((str (make-utf-null-string)))
+    ((foreign-lambda utf-string "al_ref_cstr" utf-string (const c-string)) str cstr)
+    str))
+
+(define (utf-reference-buffer* b)
+  (let ((str (make-utf-null-string*)))
+    ((foreign-lambda utf-string "al_ref_buffer" utf-string (const c-string) unsigned-integer32) str b (blob-size b))
+    str))
+
+(define (utf-reference-buffer b)
+  (let ((str (make-utf-null-string)))
+    ((foreign-lambda utf-string "al_ref_buffer" utf-string (const c-string) unsigned-integer32) str b (blob-size b))
+    str))
+
+(define (utf-reference-utf-string* ustr start end)
+  (let ((str (make-utf-null-string*)))
+    ((foreign-lambda utf-string "al_ref_ustr" utf-string (const utf-string) integer integer) str ustr start end)
+    str))
+
+(define (utf-reference-utf-string ustr start end)
+  (let ((str (make-utf-null-string)))
+    ((foreign-lambda utf-string "al_ref_ustr" utf-string (const utf-string) integer integer) str ustr start end)
+    str))
+
+(define utf-size (foreign-lambda integer "al_ustr_size" utf-string))
+(define utf-length (foreign-lambda integer "al_ustr_length" utf-string))
 
 (define utf-offset (foreign-lambda integer "al_ustr_offset" utf-string integer))
 
-(define utf-next (foreign-lambda* integer (((const utf-string) us)) "
-int pos = 0;
+(define utf-next (foreign-lambda* integer ((utf-string us) (integer pos)) "
 if (al_ustr_next(us, &pos))
   C_return(pos);
 else
   C_return(C_SCHEME_FALSE);
 "))
-(define utf-previous (foreign-lambda* integer (((const utf-string) us)) "
-int pos = 0;
+(define utf-previous (foreign-lambda* integer ((utf-string us) (integer pos)) "
 if (al_ustr_prev(us, &pos))
   C_return(pos);
 else
@@ -38,8 +87,21 @@ else
 
 (define utf-get (foreign-lambda integer32 "al_ustr_get" utf-string integer))
 
-;; AL_FUNC(int32_t, al_ustr_get_next, (const ALLEGRO_USTR *us, int *pos));
-;; AL_FUNC(int32_t, al_ustr_prev_get, (const ALLEGRO_USTR *us, int *pos));
+(define utf-get-next (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
+int32_t val = al_ustr_get_next(us, &pos);
+if (val >= 0)
+  C_return(C_pair(&C_a, C_int_to_num(&C_a, val), C_int_to_num(&C_a, pos)));
+else
+  C_return(C_SCHEME_FALSE);
+"))
+
+(define utf-get-prev (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
+int32_t val = al_ustr_prev_get(us, &pos);
+if (val >= 0)
+  C_return(C_pair(&C_a, C_int_to_num(&C_a, val), C_int_to_num(&C_a, pos)));
+else
+  C_return(C_SCHEME_FALSE);
+"))
 
 (define utf-insert! (foreign-lambda bool "al_ustr_insert" utf-string integer utf-string))
 (define utf-insert-string! (foreign-lambda bool "al_ustr_insert_cstr" utf-string integer c-string))
@@ -93,7 +155,7 @@ else
 (define utf-suffix? (foreign-lambda bool "al_ustr_has_suffix" utf-string utf-string))
 (define utf-suffix-string? (foreign-lambda bool "al_ustr_has_suffix_cstr" utf-string c-string))
 
-(define utf8-width? (foreign-lambda integer "al_utf8_width" integer32))
+(define utf8-width (foreign-lambda integer "al_utf8_width" integer32))
 (define utf8-encode! (foreign-lambda integer "al_utf8_encode" blob integer32))
 
 ;; AL_FUNC(size_t, al_ustr_size_utf16, (const ALLEGRO_USTR *us));

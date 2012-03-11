@@ -11,3 +11,6 @@
 (define vertex-cache-size (foreign-value ALLEGRO_VERTEX_CACHE_SIZE integer))
 (define primitive-quality (foreign-value ALLEGRO_PRIM_QUALITY integer))
 (define audio-pan-none (foreign-value ALLEGRO_AUDIO_PAN_NONE integer))
+
+;; (define native-path-separator (foreign-value "ALLEGRO_NATIVE_PATH_SEP" c-string))
+;; (define native-drive-separator (foreign-value "ALLEGRO_NATIVE_DRIVE_SEP" c-string))

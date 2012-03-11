@@ -1,9 +1,23 @@
-(define font-register-loader (foreign-lambda bool "al_register_font_loader" (const c-string) (function font ((const c-string) integer integer))))
+(define register-font-loader (foreign-lambda bool "al_register_font_loader" (const c-string) (function font ((const c-string) integer integer))))
 
-(define font-load-bitmap (foreign-lambda font "al_load_bitmap_font" (const c-string)))
-(define font-load (foreign-lambda font "al_load_font" (const c-string) integer font-align))
-(define make-font-from-bitmap (foreign-lambda font "al_grab_font_from_bitmap" bitmap integer s32vector))
-(define free-font (foreign-lambda void "al_destroy_font" font))
+(define load-bitmap-font* (foreign-lambda font "al_load_bitmap_font" (const c-string)))
+(define load-font* (foreign-lambda font "al_load_font" (const c-string) integer font-align))
+(define make-font-from-bitmap* (foreign-lambda font "al_grab_font_from_bitmap" bitmap integer s32vector))
+
+(define (load-bitmap-font str)
+  (let ((f (load-bitmap-font* str)))
+    (set-finalizer! f free-font!)
+    f))
+(define (load-font str i a)
+  (let ((f (load-font* str i a)))
+    (set-finalizer! f free-font!)
+    f))
+(define (make-font-from-bitmap bmp i v)
+  (let ((f (make-font-from-bitmap* bmp i v)))
+    (set-finalizer! f free-font!)
+    f))
+
+(define free-font! (foreign-lambda void "al_destroy_font" font))
 
 (define font-draw-utf (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) ((const utf-string) ustr)) "al_draw_ustr(f, *c, x, y, flags, ustr);"))
 (define font-draw-string (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (c-string text)) "al_draw_text(f, *c, x, y, flags, text);"))
@@ -26,6 +40,6 @@ al_get_text_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
 C_return(C_list(&C_a, 4, C_int_to_num(&C_a, bbx), C_int_to_num(&C_a, bby), C_int_to_num(&C_a, bbw), C_int_to_num(&C_a, bbh)));
 "))
 
-(define font-addon-init (foreign-lambda void "al_init_font_addon"))
-(define font-addon-shutdown (foreign-lambda void "al_shutdown_font_addon"))
+(define font-addon-install (foreign-lambda void "al_init_font_addon"))
+(define font-addon-uninstall (foreign-lambda void "al_shutdown_font_addon"))
 (define font-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_font_version"))
