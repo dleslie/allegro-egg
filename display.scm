@@ -33,6 +33,19 @@ ENDC
   (let ((d (make-display* i1 i2)))
     (set-finalizer! d free-display!)
     d))
+
+(define make-display/mode* (foreign-lambda* display ((display-mode mode) (int adapter) (int flags) (int xpos) (int ypos)) "
+al_set_new_display_refresh_rate(mode->refresh_rate);
+al_set_new_window_position(xpos, ypos);
+al_set_new_display_adapter(adapter);
+al_set_new_display_flags(flags);
+C_return(al_create_display(mode->width, mode->height));
+"))
+(define (make-display/mode m a f x y)
+  (let ((d (make-display/mode* m a f x y)))
+    (set-finalizer! d free-display!)
+    d))
+
 (define free-display! (foreign-lambda void "al_destroy_display" display))
 
 (define current-display (foreign-lambda display "al_get_current_display"))
@@ -45,7 +58,7 @@ ENDC
 (define wait-for-vsync (foreign-lambda bool "al_wait_for_vsync"))
 (define draw-pixel (foreign-lambda* void ((float x) (float y) (color c)) "al_draw_pixel(x, y, *c);"))
 (define video-adapter-count (foreign-lambda int "al_get_num_video_adapters"))
-(define monitor-info-init! (foreign-lambda* bool ((monitor info) (int adapter)) #<<ENDC
+(define monitor-init! (foreign-lambda* bool ((monitor info) (int adapter)) #<<ENDC
 if (al_get_monitor_info(adapter, info))
   C_return(C_SCHEME_TRUE);
 else

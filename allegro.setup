@@ -8,7 +8,7 @@
   (cond-expand
     (macosx "-framework OpenGL -framework allegro")
     (windows "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -lopengl32")
-    (else "")))
+    (else "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -L/usr/X11R6/lib -L/usr/X11/lib -lGL -LX11")))
  
 (compile allegro.scm ,compile-options ,link-options -s -J -O3 -d0)
 (compile -s -O3 -d0 allegro.import.scm)

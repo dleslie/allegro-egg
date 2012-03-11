@@ -1,3 +1,8 @@
+; I wish Chicken supported uintptr_t...
+(cond-expand
+ (windows (define-foreign-type uintptr unsigned-integer32))
+ (else (define-foreign-type uintptr unsigned-integer32)))
+
 (define-record version
   major sub wip release-number string date-string date int)
 
@@ -139,7 +144,7 @@
   (destructor: free-display-mode!)
   (int width display-mode-width)
   (int height display-mode-height)
-  (int format display-mode-format)
+  (pixel-format format display-mode-format)
   (int refresh_rate display-mode-refresh-rate))
 (define (make-display-mode)
   (let ((d (make-display-mode*)))

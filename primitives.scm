@@ -13,16 +13,25 @@
 (define draw-primitive (foreign-lambda integer "al_draw_prim" (const c-pointer) (const vertex-declaration) bitmap integer integer primitive-type))
 (define draw-indexed-primitive (foreign-lambda integer "al_draw_indexed_prim" (const c-pointer) (const vertex-declaration) bitmap (const s32vector) integer32 primitive-type))
 
-(define draw-soft-triangle (foreign-lambda void "al_draw_soft_triangle" vertex vertex vertex unsigned-integer32 
-                                           (function void (unsigned-integer32 vertex vertex vertex))
-                                           (function void (unsigned-integer32 int int int int))
-                                           (function void (unsigned-integer32 int))
-                                           (function void (unsigned-integer32 int int int))))
+(define draw-soft-triangle (foreign-lambda* void ((vertex v1) (vertex v2) (vertex v3) (uintptr state)
+                                                 ((function void (uintptr vertex vertex vertex)) init)
+                                                 ((function void (uintptr int int int int)) first)
+                                                 ((function void (uintptr int)) step)
+                                                 ((function void (uintptr int int int)) draw)) "
+al_draw_soft_triangle(v1, v2, v3, (uintptr_t)state, 
+  (void (*)(uintptr_t, ALLEGRO_VERTEX*, ALLEGRO_VERTEX*, ALLEGRO_VERTEX*))init,
+  (void (*)(uintptr_t, int, int, int, int))first,
+  (void (*)(uintptr_t, int))step,
+  (void (*)(uintptr_t, int, int, int))draw);"))
 
-(define draw-soft-line (foreign-lambda void "al_draw_soft_line" vertex vertex unsigned-integer32
-                                       (function void (unsigned-integer32 int int vertex vertex))
-                                       (function void (unsigned-integer32 int))
-                                       (function void (unsigned-integer32 int int))))
+(define draw-soft-line (foreign-lambda* void ((vertex v1) (vertex v2) (uintptr state)
+                                              ((function void (uintptr int int vertex vertex)) first)
+                                              ((function void (uintptr int)) step)
+                                              ((function void (uintptr int int)) draw)) "
+al_draw_soft_line(v1, v2, (uintptr_t)state,
+  (void (*)(uintptr_t, int, int, ALLEGRO_VERTEX*, ALLEGRO_VERTEX*))first,
+  (void (*)(uintptr_t, int))step,
+  (void (*)(uintptr_t, int, int))draw);"))
 
 (define draw-line (foreign-lambda* void ((float x1) (float y1) (float x2) (float y2) (color c) (float thickness)) "al_draw_line(x1, y1, x2, y2, *c, thickness);"))
 (define draw-triangle (foreign-lambda* void ((float x1) (float y1) (float x2) (float y2) (float x3) (float y3) (color c) (float thickness)) "al_draw_triangle(x1, y1, x2, y2, x3, y3, *c, thickness);"))

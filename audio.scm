@@ -165,12 +165,14 @@
 (define stop-all-samples (foreign-lambda void "al_stop_samples"))
 
 (define register-sample-loader (foreign-lambda bool "al_register_sample_loader" (const c-string) (function sample ((const c-string)))))
-(define register-sample-saver (foreign-lambda bool "al_register_sample_saver" (const c-string) (function bool ((const c-string) sample))))
+(define register-sample-saver (foreign-lambda* bool (((const c-string) ext) ((function bool ((const c-string) sample)) saver)) "
+C_return(al_register_sample_saver(ext, (bool (*)(const char *filename, ALLEGRO_SAMPLE *spl))saver));"))
 
 (define register-audio-stream-loader (foreign-lambda bool "al_register_audio_stream_loader" (const c-string) (function audio-stream ((const c-string) size_t unsigned-integer32))))
 
 (define register-sample-file-loader (foreign-lambda bool "al_register_sample_loader_f" (const c-string) (function sample (file))))
-(define register-sample-file-saver (foreign-lambda bool "al_register_sample_saver_f" (const c-string) (function bool (file sample))))
+(define register-sample-file-saver (foreign-lambda* bool (((const c-string) ext) ((function bool (file sample)) saver)) "
+C_return(al_register_sample_saver_f(ext, (bool (*)(ALLEGRO_FILE *fp, ALLEGRO_SAMPLE *spl))saver));"))
 
 (define register-audio-stream-file-loader (foreign-lambda bool "al_register_audio_stream_loader_f" (const c-string) (function audio-stream (file size_t unsigned-integer32))))
 
