@@ -36,9 +36,10 @@ ENDC
 (define free-display! (foreign-lambda void "al_destroy_display" display))
 
 (define current-display (foreign-lambda display "al_get_current_display"))
-(define target-bitmap (foreign-lambda bitmap "al_get_target_bitmap"))
+
 (define display-mode-count (foreign-lambda int "al_get_num_display_modes"))
 (define display-mode-init! (foreign-lambda display-mode "al_get_display_mode" int display-mode))
+
 (define update-display-region! (foreign-lambda void "al_update_display_region" int int int int))
 (define compatible-bitmap? (foreign-lambda bool "al_is_compatible_bitmap" bitmap))
 (define wait-for-vsync (foreign-lambda bool "al_wait_for_vsync"))
@@ -68,8 +69,10 @@ ENDC
 (define display-event-source (foreign-lambda event-source "al_get_display_event_source" display))
 
 (define clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
+(define target-bitmap (foreign-lambda bitmap "al_get_target_bitmap"))
 (define target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" bitmap))
 (define target-backbuffer-set! (foreign-lambda void "al_set_target_backbuffer" display))
 
 (define display-icon-set! (foreign-lambda void "al_set_display_icon" display bitmap))
 
+(define flip-display (foreign-lambda void "al_flip_display"))

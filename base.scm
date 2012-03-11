@@ -16,12 +16,11 @@
 (define run-main (foreign-safe-lambda int "al_run_main" integer (c-pointer c-string) (function integer (integer (c-pointer c-string)))))
 
 (define (init-everything)
-  (init-this (list 'allegro 'system 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf)))
+  (init-this (list 'allegro 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf)))
 
 (define (init-symbol x)
   (cond
    ((eq? 'allegro x) (init))
-   ((eq? 'system x) (system-addon-install))
    ((eq? 'audio x) (audio-addon-install))
    ((eq? 'font x) (font-addon-install))
    ((eq? 'image x) (image-addon-install))
@@ -39,7 +38,7 @@
    (else #f)))
 
 (define (uninstall-everything)
-  (uninstall-this (list 'allegro 'system 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf)))
+  (uninstall-this (list 'system 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf)))
 
 (define (uninstall-this x)
   (cond
