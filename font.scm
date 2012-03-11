@@ -32,12 +32,14 @@
 (define font-utf-dimensions (foreign-lambda* scheme-object (((const font) f) ((const utf-string) text)) "
 int bbx, bby, bbw, bbh;
 al_get_ustr_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
-C_return(C_list(&C_a, 4, C_int_to_num(&C_a, bbx), C_int_to_num(&C_a, bby), C_int_to_num(&C_a, bbw), C_int_to_num(&C_a, bbh)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_return(C_list(&ptr, 4, C_fix(bbx), C_fix(bby), C_fix(bbw), C_fix(bbh)));
 "))
 (define font-dimensions (foreign-lambda* scheme-object (((const font) f) ((const c-string) text)) "
 int bbx, bby, bbw, bbh;
 al_get_text_dimensions(f, text, &bbx, &bby, &bbw, &bbh);
-C_return(C_list(&C_a, 4, C_int_to_num(&C_a, bbx), C_int_to_num(&C_a, bby), C_int_to_num(&C_a, bbw), C_int_to_num(&C_a, bbh)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_return(C_list(&ptr, 4, C_fix(bbx), C_fix(bby), C_fix(bbw), C_fix(bbh)));
 "))
 
 (define font-addon-install (foreign-lambda void "al_init_font_addon"))

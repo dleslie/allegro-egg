@@ -14,3 +14,15 @@
 (define make-id (foreign-lambda* unsigned-integer32 ((unsigned-integer32 a) (unsigned-integer32 b) (unsigned-integer32 c) (unsigned-integer32 d)) "C_return(AL_ID(a, b, c, d));"))
 
 (define run-main (foreign-safe-lambda int "al_run_main" integer (c-pointer c-string) (function integer (integer (c-pointer c-string)))))
+
+(define (init-everything)
+  (init)
+  (system-addon-install)
+  (audio-addon-install)
+  (font-addon-install)
+  (image-addon-install)
+  (joystick-addon-install)
+  (keyboard-addon-install)
+  (mouse-addon-install)
+  (primitives-addon-install)
+  (ttf-addon-install))

@@ -25,7 +25,10 @@
 (define mouse-cursor-position (foreign-lambda* integer () "
 int x, y;
 if (al_get_mouse_cursor_position(&x, &y))
-   C_return(C_pair(&C_a, C_int_to_num(&C_a, x), C_int_to_num(&C_a, y)));
+{
+   C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+   C_return(C_pair(&ptr, C_fix(x), C_fix(y)));
+}
 else
    C_return(C_SCHEME_FALSE);
 "))

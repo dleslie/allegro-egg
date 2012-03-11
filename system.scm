@@ -7,9 +7,12 @@
 (define app-name (foreign-lambda c-string "al_get_app_name"))
 (define app-name-set! (foreign-lambda void "al_set_app_name" c-string))
 
-(define install-system (foreign-lambda bool "al_install_system" integer (function integer ((function void (void))))))
+(define system-addon-install (foreign-lambda* bool () "
+C_return(al_install_system(ALLEGRO_VERSION_INT, NULL));
+"))
+(define system-addon-uninstall (foreign-lambda void "al_uninstall_system"))
+(define system-addon-installed? (foreign-lambda bool "al_is_system_installed"))
 
-(define system-installed? (foreign-lambda bool "al_is_system_installed"))
 (define system-driver (foreign-lambda system "al_get_system_driver"))
 (define system-config (foreign-lambda config "al_get_system_config"))
 

@@ -6,7 +6,8 @@
 (define bitmap-d3d-texture-position (foreign-lambda* scheme-object ((bitmap bmp)) "
 int u, v;
 al_get_d3d_texture_position(bmp, &u, &v);
-C_return(C_pair(&C_a, C_int_to_num(&C_a, u), C_int_to_num(&C_a, v)));
+C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+C_return(C_pair(&ptr, C_fix(u), C_fix(v)));
 "))
 
 (define display-d3d-device-lost? (foreign-lambda bool "al_is_d3d_device_lost" display))

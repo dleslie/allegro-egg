@@ -10,7 +10,10 @@
 float sx = x;
 float sy = y;
 al_transform_coordinates(t, &sx, &sy);
-C_return(C_pair(&C_a, C_flonum(&C_a, sx), C_flonum(&C_a, sy)));
+C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+C_word *psx = C_alloc(C_SIZEOF_FLONUM);
+C_word *psy = C_alloc(C_SIZEOF_FLONUM);
+C_return(C_pair(&ptr, C_flonum(&psx, sx), C_flonum(&psy, sy)));
 "))
 
 (define transform-compose! (foreign-lambda void "al_compose_transform" transform transform))

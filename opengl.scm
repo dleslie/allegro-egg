@@ -9,12 +9,14 @@
 (define opengl-texture-size (foreign-lambda* scheme-object ((bitmap bmp)) "
 int w, h;
 al_get_opengl_texture_size(bmp, &w, &h);
-C_return(C_pair(&C_a, C_int_to_num(&C_a, w), C_int_to_num(&C_a, h)));
+C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+C_return(C_pair(&ptr, C_fix(w), C_fix(h)));
 "))
 (define opengl-texture-position (foreign-lambda* scheme-object ((bitmap bmp)) "
 int u, v;
 al_get_opengl_texture_size(bmp, &u, &v);
-C_return(C_pair(&C_a, C_int_to_num(&C_a, u), C_int_to_num(&C_a, v)));
+C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+C_return(C_pair(&ptr, C_fix(u), C_fix(v)));
 "))
 
 (define opengl-context-set! (foreign-lambda void "al_set_current_opengl_context" display))

@@ -7,7 +7,8 @@
 (define new-display-window-position (foreign-lambda* scheme-object () #<<ENDC
 int x, y;
 al_get_new_window_position(&x, &y);
-C_return(C_pair (&C_a, C_int_to_num (&C_a, x), C_int_to_num (&C_a, y)));
+C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+C_return(C_pair (&ptr, C_fix (x), C_fix (y)));
 ENDC
 ))
 (define new-display-window-position-set! (foreign-lambda void "al_set_new_window_position" int int))

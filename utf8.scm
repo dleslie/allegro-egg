@@ -90,7 +90,10 @@ else
 (define utf-get-next (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_get_next(us, &pos);
 if (val >= 0)
-  C_return(C_pair(&C_a, C_int_to_num(&C_a, val), C_int_to_num(&C_a, pos)));
+{
+  C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+  C_return(C_pair(&ptr, C_fix(val), C_fix(pos)));
+}
 else
   C_return(C_SCHEME_FALSE);
 "))
@@ -98,7 +101,10 @@ else
 (define utf-get-prev (foreign-lambda* integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_prev_get(us, &pos);
 if (val >= 0)
-  C_return(C_pair(&C_a, C_int_to_num(&C_a, val), C_int_to_num(&C_a, pos)));
+{
+  C_word *ptr = C_alloc(C_SIZEOF_PAIR);
+  C_return(C_pair(&ptr, C_fix(val), C_fix(pos)));
+}
 else
   C_return(C_SCHEME_FALSE);
 "))

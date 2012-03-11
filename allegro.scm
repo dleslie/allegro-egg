@@ -6,6 +6,9 @@
 #include <allegro5/allegro_primitives.h>
 //#include <allegro5/allegro_windows.h>
 #include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro_color.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_color.h>
 <#
 (module allegro *
         (import scheme chicken foreign foreigners)

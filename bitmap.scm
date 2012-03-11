@@ -122,22 +122,26 @@ _al_put_pixel(bmp, x, y, *c);
 (define color-unmap-rgb (foreign-lambda* scheme-object ((color c)) "
 unsigned char r, g, b;
 al_unmap_rgb(*c, &r, &g, &b);
-C_return(C_list(&C_a, 3, C_int_to_num(&C_a, (int)r), C_int_to_num(&C_a, (int)g), C_int_to_num(&C_a, (int)b)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
+C_return(C_list(&ptr, 3, C_fix((int)r), C_fix((int)g), C_fix((int)b)));
 "))
 (define color-unmap-rgba (foreign-lambda* scheme-object ((color c)) "
 unsigned char r, g, b, a;
 al_unmap_rgba(*c, &r, &g, &b, &a);
-C_return(C_list(&C_a, 4, C_int_to_num(&C_a, (int)r), C_int_to_num(&C_a, (int)g), C_int_to_num(&C_a, (int)b), C_int_to_num(&C_a, (int)a)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_return(C_list(&ptr, 4, C_fix((int)r), C_fix((int)g), C_fix((int)b), C_fix((int)a)));
 "))
 (define color-unmap-rgb-float (foreign-lambda* scheme-object ((color c)) "
 float r, g, b;
 al_unmap_rgb_f(*c, &r, &g, &b);
-C_return(C_list(&C_a, 3, C_flonum(&C_a, (double)r), C_flonum(&C_a, (double)g), C_flonum(&C_a, (double)b)));
+C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
+C_return(C_list(&ptr, 3, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C_flonum(&ptr, (double)b)));
 "))
 (define color-unmap-rgba-float (foreign-lambda* scheme-object ((color c)) "
 float r, g, b, a;
 al_unmap_rgba_f(*c, &r, &g, &b, &a);
-C_return(C_list(&C_a, 4, C_flonum(&C_a, (double)r), C_flonum(&C_a, (double)g), C_flonum(&C_a, (double)b), C_flonum(&C_a, (double)a)));
+C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 4 + C_SIZEOF_LIST(4));
+C_return(C_list(&ptr, 4, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C_flonum(&ptr, (double)b), C_flonum(&ptr, (double)a)));
 "))
 
 (define pixel-format-bits (foreign-lambda int "al_get_pixel_format_bits" pixel-format))
@@ -146,20 +150,23 @@ C_return(C_list(&C_a, 4, C_flonum(&C_a, (double)r), C_flonum(&C_a, (double)g), C
 (define clipping-rectange (foreign-lambda* scheme-object () "
 int x,y,w,h;
 al_get_clipping_rectangle(&x, &y, &w, &h);
-C_return(C_list(&C_a, 4, C_int_to_num(&C_a, x), C_int_to_num(&C_a, y), C_int_to_num(&C_a, w), C_int_to_num(&C_a, h)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_return(C_list(&ptr, 4, C_fix(x), C_fix(y), C_fix(w), C_fix(h)));
 "))
 
 (define blender-set! (foreign-lambda void "al_set_blender" int int int))
 (define blender (foreign-lambda* scheme-object () "
 int op, src, dest;
 al_get_blender(&op, &src, &dest);
-C_return(C_list(&C_a, 3, C_int_to_num(&C_a, op), C_int_to_num(&C_a, src), C_int_to_num(&C_a, dest)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
+C_return(C_list(&ptr, 3, C_fix(op), C_fix(src), C_fix(dest)));
 "))
 
 (define separate-blender-set! (foreign-lambda void "al_set_separate_blender" int int int int int int))
 (define separate-blender (foreign-lambda* scheme-object () "
 int op, src, dest, alpha_op, alpha_src, alpha_dest;
 al_get_separate_blender(&op, &src, &dest, &alpha_op, &alpha_src, &alpha_dest);
-C_return(C_list(&C_a, 3, C_int_to_num(&C_a, op), C_int_to_num(&C_a, src), C_int_to_num(&C_a, dest), 3, C_int_to_num(&C_a, alpha_op), C_int_to_num(&C_a, alpha_src), C_int_to_num(&C_a, alpha_dest)));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(6));
+C_return(C_list(&ptr, 6, C_fix(op), C_fix(src), C_fix(dest), 3, C_fix(alpha_op), C_fix(alpha_src), C_fix(alpha_dest)));
 "))
 
