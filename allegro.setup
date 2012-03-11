@@ -12,7 +12,7 @@
  
 (compile allegro.scm ,compile-options ,link-options -s -J -O3 -d0)
 (compile -s -O3 -d0 allegro.import.scm)
-;(compile -c -O3 -d0 allegro.scm  -unit allegro -j allegro ,compile-options ,link-options)
+(compile -c -O3 -d0 allegro.scm  -unit allegro -j allegro ,compile-options ,link-options)
 
 (install-extension
  'allegro

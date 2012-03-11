@@ -54,6 +54,26 @@ al_color_html_to_rgb(string, &r, &g, &b);
 C_return(C_list(&C_a, 3, C_flonum(&C_a, r), C_flonum(&C_a, g), C_flonum(&C_a, b)));
 "))
 
+(define make-color-rgb* (foreign-lambda* color ((int r) (int g) (int b)) "
+ALLEGRO_COLOR *c = (ALLEGRO_COLOR *)C_alloc(sizeof(ALLEGRO_COLOR));
+*c = al_map_rgb(r, g, b);
+C_return(c);
+"))
+(define (make-color-rgb r g b)
+  (let ((clr (make-color-rgb* r g b)))
+    (set-finalizer! clr free-color!)
+    clr))
+
+(define make-color-rgba* (foreign-lambda* color ((int r) (int g) (int b) (int a)) "
+ALLEGRO_COLOR *c = (ALLEGRO_COLOR *)C_alloc(sizeof(ALLEGRO_COLOR));
+*c = al_map_rgba(r, g, b, a);
+C_return(c);
+"))
+(define (make-color-rgba r g b a)
+  (let ((clr (make-color-rgba* r g b a)))
+    (set-finalizer! clr free-color!)
+    clr))
+
 (define (make-color-yuv* y u v) 
   (let ((clr (make-color*))) 
     (color-yuv! clr y u v)
@@ -108,9 +128,27 @@ C_return(C_list(&C_a, 3, C_flonum(&C_a, r), C_flonum(&C_a, g), C_flonum(&C_a, b)
     (set-finalizer! clr free-color!)
     clr))
 
-(define color-yuv! (foreign-lambda* void ((color clr) (float y) (float u) (float v)) "al_color_yuv_to_rgb(y, u, v, &clr->r, &clr->g, &clr->b);"))
-(define color-cmyk! (foreign-lambda* void ((color clr) (float c) (float m) (float y) (float k)) "al_color_cmyk_to_rgb(c, m, y, k, &clr->r, &clr->g, &clr->b);"))
-(define color-hsl! (foreign-lambda* void ((color clr) (float h) (float s) (float l)) "al_color_hsl_to_rgb(h, s, l, &clr->r, &clr->g, &clr->b);"))
-(define color-hsv! (foreign-lambda* color ((color clr) (float h) (float s) (float v)) "al_color_hsv_to_rgb(h, s, v, &clr->r, &clr->g, &clr->b);"))
-(define color-name! (foreign-lambda* color ((color clr) ((const c-string) n)) "al_color_name_to_rgb(n, &clr->r, &clr->g, &clr->b);"))
-(define color-html! (foreign-lambda* color ((color clr) ((const c-string) html)) "al_color_html_to_rgb(html, &clr->r, &clr->g, &clr->b);"))
+(define color-yuv! (foreign-lambda* void ((color clr) (float y) (float u) (float v)) "
+float r, g, b;
+al_color_yuv_to_rgb(y, u, v, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
+(define color-cmyk! (foreign-lambda* void ((color clr) (float c) (float m) (float y) (float k)) "
+float r, g, b;
+al_color_cmyk_to_rgb(c, m, y, k, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
+(define color-hsl! (foreign-lambda* void ((color clr) (float h) (float s) (float l)) "
+float r, g, b;
+al_color_hsl_to_rgb(h, s, l, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
+(define color-hsv! (foreign-lambda* color ((color clr) (float h) (float s) (float v)) "
+float r, g, b;
+al_color_hsv_to_rgb(h, s, v, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
+(define color-name! (foreign-lambda* color ((color clr) ((const c-string) n)) "
+float r, g, b;
+al_color_name_to_rgb(n, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
+(define color-html! (foreign-lambda* color ((color clr) ((const c-string) html)) "
+float r, g, b;
+al_color_html_to_rgb(html, &r, &g, &b);
+*clr = al_map_rgb_f(r, g, b);"))
