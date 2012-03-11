@@ -40,8 +40,8 @@ al_set_new_display_adapter(adapter);
 al_set_new_display_flags(flags);
 C_return(al_create_display(mode->width, mode->height));
 "))
-(define (make-display/mode m a f x y)
-  (let ((d (make-display/mode* m a f x y)))
+(define (make-display/mode m a f)
+  (let ((d (make-display/mode* m a f)))
     (set-finalizer! d free-display!)
     d))
 
