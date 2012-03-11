@@ -34,9 +34,8 @@ ENDC
     (set-finalizer! d free-display!)
     d))
 
-(define make-display/mode* (foreign-lambda* display ((display-mode mode) (int adapter) (int flags) (int xpos) (int ypos)) "
+(define make-display/mode* (foreign-lambda* display ((display-mode mode) (int adapter) (int flags)) "
 al_set_new_display_refresh_rate(mode->refresh_rate);
-al_set_new_window_position(xpos, ypos);
 al_set_new_display_adapter(adapter);
 al_set_new_display_flags(flags);
 C_return(al_create_display(mode->width, mode->height));
