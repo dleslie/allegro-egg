@@ -51,7 +51,12 @@ C_return(al_create_display(mode->width, mode->height));
 (define current-display (foreign-lambda display "al_get_current_display"))
 
 (define display-mode-count (foreign-lambda int "al_get_num_display_modes"))
-(define display-mode-init! (foreign-lambda display-mode "al_get_display_mode" int display-mode))
+(define display-mode-init! (foreign-lambda* bool ((display-mode mode) (int idx)) "
+if (al_get_display_mode(idx, mode) == NULL)
+  C_return(C_SCHEME_FALSE);
+else
+  C_return(C_SCHEME_TRUE);
+"))
 
 (define update-display-region! (foreign-lambda void "al_update_display_region" int int int int))
 (define compatible-bitmap? (foreign-lambda bool "al_is_compatible_bitmap" bitmap))
