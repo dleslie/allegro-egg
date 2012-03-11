@@ -69,16 +69,16 @@ else
 
 (define event-queue-drop-next! (foreign-lambda bool "al_drop_next_event" event-queue))
 (define event-queue-flush! (foreign-lambda void "al_flush_event_queue" event-queue))
-(define event-queue-wait! (foreign-lambda* void ((event container) (event-queue q)) "al_wait_for_event(q, container);"))
+(define event-queue-wait! (foreign-lambda* void ((event-queue q) (event container)) "al_wait_for_event(q, container);"))
 
-(define event-queue-timed-wait! (foreign-lambda* bool ((event container)(event-queue q) (float s)) "
+(define event-queue-timed-wait! (foreign-lambda* bool ((event-queue q) (event container) (float s)) "
 if (al_wait_for_event_timed(q, container, s))
   C_return(C_SCHEME_TRUE);
 else
   C_return (C_SCHEME_FALSE);
 "))
 
-(define event-queue-wait-until! (foreign-lambda* bool ((event container) (event-queue q) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
+(define event-queue-wait-until! (foreign-lambda* bool ( (event-queue q) (event container) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
 if (al_wait_for_event_until(q, container, t))
   C_return(C_SCHEME_TRUE);
 else
