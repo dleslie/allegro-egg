@@ -26,8 +26,8 @@
     q))
 (define free-event-queue! (foreign-lambda void "al_destroy_event_queue" event-queue))
 
-(define event-queue-register-event-source! (foreign-lambda void "al_register_event_source" event-queue event-source))
-(define event-queue-unregister-event-source! (foreign-lambda void "al_unregister_event_source" event-queue event-source))
+(define event-queue-register-source! (foreign-lambda void "al_register_event_source" event-queue event-source))
+(define event-queue-unregister-source! (foreign-lambda void "al_unregister_event_source" event-queue event-source))
 
 (define event-queue-empty? (foreign-lambda void "al_is_event_queue_empty" event-queue))
 
