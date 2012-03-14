@@ -8,7 +8,7 @@
 (define keyboard-led-set! (foreign-lambda bool "al_set_keyboard_leds" integer))
 
 (define make-keyboard-state* (foreign-safe-lambda* keyboard-state () "
-ALLEGRO_KEYBOARD_STATE *ret_state = (ALLEGRO_KEYBOARD_STATE *)C_alloc(sizeof(ALLEGRO_KEYBOARD_STATE));
+ALLEGRO_KEYBOARD_STATE *ret_state = (ALLEGRO_KEYBOARD_STATE *)C_malloc(sizeof(ALLEGRO_KEYBOARD_STATE));
 al_get_keyboard_state(ret_state);
 C_return(ret_state);
 "))

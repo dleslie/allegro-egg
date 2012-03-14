@@ -122,25 +122,25 @@ _al_put_pixel(bmp, x, y, *c);
 (define color-unmap-rgb (foreign-safe-lambda* scheme-object ((color c)) "
 unsigned char r, g, b;
 al_unmap_rgb(*c, &r, &g, &b);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_fix((int)r), C_fix((int)g), C_fix((int)b)));
 "))
 (define color-unmap-rgba (foreign-safe-lambda* scheme-object ((color c)) "
 unsigned char r, g, b, a;
 al_unmap_rgba(*c, &r, &g, &b, &a);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix((int)r), C_fix((int)g), C_fix((int)b), C_fix((int)a)));
 "))
 (define color-unmap-rgb-float (foreign-safe-lambda* scheme-object ((color c)) "
 float r, g, b;
 al_unmap_rgb_f(*c, &r, &g, &b);
-C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
+C_word *ptr = C_malloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C_flonum(&ptr, (double)b)));
 "))
 (define color-unmap-rgba-float (foreign-safe-lambda* scheme-object ((color c)) "
 float r, g, b, a;
 al_unmap_rgba_f(*c, &r, &g, &b, &a);
-C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 4 + C_SIZEOF_LIST(4));
+C_word *ptr = C_malloc(C_SIZEOF_FLONUM * 4 + C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C_flonum(&ptr, (double)b), C_flonum(&ptr, (double)a)));
 "))
 
@@ -150,7 +150,7 @@ C_return(C_list(&ptr, 4, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C
 (define clipping-rectange (foreign-safe-lambda* scheme-object () "
 int x,y,w,h;
 al_get_clipping_rectangle(&x, &y, &w, &h);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix(x), C_fix(y), C_fix(w), C_fix(h)));
 "))
 
@@ -158,7 +158,7 @@ C_return(C_list(&ptr, 4, C_fix(x), C_fix(y), C_fix(w), C_fix(h)));
 (define blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest;
 al_get_blender(&op, &src, &dest);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_fix(op), C_fix(src), C_fix(dest)));
 "))
 
@@ -166,7 +166,7 @@ C_return(C_list(&ptr, 3, C_fix(op), C_fix(src), C_fix(dest)));
 (define separate-blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest, alpha_op, alpha_src, alpha_dest;
 al_get_separate_blender(&op, &src, &dest, &alpha_op, &alpha_src, &alpha_dest);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(6));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(6));
 C_return(C_list(&ptr, 6, C_fix(op), C_fix(src), C_fix(dest), 3, C_fix(alpha_op), C_fix(alpha_src), C_fix(alpha_dest)));
 "))
 

@@ -21,7 +21,7 @@
 (define config-merge (foreign-lambda config "al_merge_config" config config))
 
 (define (config-sections config)
-  (define config-section-iterator ((foreign-primitive config-section () "C_return(C_alloc(sizeof(void *)));")))
+  (define config-section-iterator ((foreign-primitive config-section () "C_return(C_malloc(sizeof(void *)));")))
   (define get-first (foreign-lambda* c-string ((config allegro_config) (config-section iterator)) "C_return(al_get_first_config_section(allegro_config, &iterator));"))
   (define get-next (foreign-lambda* c-string ((config-section iterator)) "C_return(al_get_next_config_section(&iterator));"))
   (define (do-next)
@@ -31,7 +31,7 @@
   (cons (get-first config config-section-iterator) (delay (do-next))))
 
 (define (config-entries config section)
-  (define config-entry-iterator ((foreign-primitive config-entry () "C_return(C_alloc(sizeof(void *)));")))
+  (define config-entry-iterator ((foreign-primitive config-entry () "C_return(C_malloc(sizeof(void *)));")))
   (define get-first (foreign-lambda* c-string ((config allegro_config) (c-string section) (config-entry iterator)) "C_return(al_get_first_config_entry(allegro_config, section, &iterator));"))
   (define get-next (foreign-lambda* c-string ((config-entry iterator)) "C_return(al_get_next_config_entry(&iterator));"))
   (define (do-next)

@@ -6,7 +6,7 @@
 (define bitmap-d3d-texture-position (foreign-safe-lambda* scheme-object ((bitmap bmp)) "
 int u, v;
 al_get_d3d_texture_position(bmp, &u, &v);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
+C_word *ptr = C_malloc(C_SIZEOF_LIST(2));
 C_return(C_list(&ptr, 2, C_fix(u), C_fix(v)));
 "))
 

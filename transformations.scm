@@ -10,9 +10,9 @@
 float sx = x;
 float sy = y;
 al_transform_coordinates(t, &sx, &sy);
-C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
-C_word *psx = C_alloc(C_SIZEOF_FLONUM);
-C_word *psy = C_alloc(C_SIZEOF_FLONUM);
+C_word *ptr = C_malloc(C_SIZEOF_LIST(2));
+C_word *psx = C_malloc(C_SIZEOF_FLONUM);
+C_word *psy = C_malloc(C_SIZEOF_FLONUM);
 C_return(C_list(&ptr, 2, C_flonum(&psx, sx), C_flonum(&psy, sy)));
 "))
 
