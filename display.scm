@@ -84,12 +84,11 @@ ENDC
 (define display-acknowledge-resize (foreign-lambda bool "al_acknowledge_resize" display))
 (define display-resize! (foreign-lambda bool "al_resize_display" display int int))
 (define display-event-source (foreign-lambda event-source "al_get_display_event_source" display))
+(define display-icon-set! (foreign-lambda void "al_set_display_icon" display bitmap))
 
 (define clear-to-color (foreign-lambda* void ((color c)) "al_clear_to_color(*c);"))
 (define target-bitmap (foreign-lambda bitmap "al_get_target_bitmap"))
 (define target-bitmap-set! (foreign-lambda void "al_set_target_bitmap" bitmap))
 (define target-backbuffer-set! (foreign-lambda void "al_set_target_backbuffer" display))
-
-(define display-icon-set! (foreign-lambda void "al_set_display_icon" display bitmap))
 
 (define flip-display (foreign-lambda void "al_flip_display"))

@@ -1,3 +1,6 @@
+(define (combine-flags converter flags)
+  (apply + (map converter flags)))
+
 (define-foreign-enum-type (seek-flag int)
   (seek-flag->int int->seek-flag)
   ((set) ALLEGRO_SEEK_SET)
