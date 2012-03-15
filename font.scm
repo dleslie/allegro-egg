@@ -42,6 +42,8 @@ C_word *ptr = C_malloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix(bbx), C_fix(bby), C_fix(bbw), C_fix(bbh)));
 "))
 
-(define font-addon-install (foreign-lambda void "al_init_font_addon"))
+(define (font-addon-install)
+  ((foreign-lambda void "al_init_font_addon"))
+  #t)
 (define font-addon-uninstall (foreign-lambda void "al_shutdown_font_addon"))
 (define font-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_font_version"))
