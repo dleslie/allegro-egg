@@ -31,56 +31,14 @@
 
 (define event-queue-empty? (foreign-lambda void "al_is_event_queue_empty" event-queue))
 
-(define event-queue-next*! (foreign-safe-lambda* event ((event-queue q)) "
-ALLEGRO_EVENT *evt = (ALLEGRO_EVENT *)C_malloc(sizeof(ALLEGRO_EVENT));
-if (al_get_next_event(q, evt))
-  C_return(evt);
-else
-{
-  C_free (evt);
-  C_return (C_SCHEME_FALSE);
-}
-"))
-(define (event-queue-next! q)
-  (let ((evt (event-queue-next*! q)))
-    (if (not evt)
-        #f
-        (begin
-          (set-finalizer! evt free-event!)
-          evt))))
+(define event-queue-next! (foreign-safe-lambda* bool ((event-queue q) (event evt)) "C_return(al_get_next_event(q, evt));"))
 
-(define event-queue-peek* (foreign-safe-lambda* event ((event-queue q)) "
-ALLEGRO_EVENT *evt = (ALLEGRO_EVENT *)C_malloc(sizeof(ALLEGRO_EVENT));
-if (al_peek_next_event(q, evt))
-  C_return(evt);
-else
-{
-  C_free (evt);
-  C_return (C_SCHEME_FALSE);
-}
-"))
-(define (event-queue-peek q)
-  (let ((evt (event-queue-peek* q)))
-    (if (not evt)
-        #f
-        (begin
-          (set-finalizer! evt free-event!)
-          evt))))
+(define event-queue-peek! (foreign-safe-lambda* event ((event-queue q) (event evt)) "C_return(al_peek_next_event(q, evt));"))
 
 (define event-queue-drop-next! (foreign-lambda bool "al_drop_next_event" event-queue))
 (define event-queue-flush! (foreign-lambda void "al_flush_event_queue" event-queue))
 (define event-queue-wait! (foreign-lambda* void ((event-queue q) (event container)) "al_wait_for_event(q, container);"))
 
-(define event-queue-timed-wait! (foreign-lambda* bool ((event-queue q) (event container) (float s)) "
-if (al_wait_for_event_timed(q, container, s))
-  C_return(C_SCHEME_TRUE);
-else
-  C_return (C_SCHEME_FALSE);
-"))
+(define event-queue-timed-wait! (foreign-lambda* bool ((event-queue q) (event container) (float s)) "C_return(al_wait_for_event_timed(q, container, s));"))
 
-(define event-queue-wait-until! (foreign-lambda* bool ( (event-queue q) (event container) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "
-if (al_wait_for_event_until(q, container, t))
-  C_return(C_SCHEME_TRUE);
-else
-  C_return(C_SCHEME_FALSE);
-"))
+(define event-queue-wait-until! (foreign-lambda* bool ( (event-queue q) (event container) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "C_return(al_wait_for_event_until(q, container, t));"))

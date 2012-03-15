@@ -6,7 +6,7 @@
 (define new-display-adapter-set! (foreign-lambda void "al_set_new_display_adapter" int))
 (define new-display-window-position (foreign-safe-lambda* scheme-object () #<<ENDC
 int x, y;
-C_word *ptr = C_malloc(C_SIZEOF_LIST(2));
+C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
 
 al_get_new_window_position(&x, &y);
 

@@ -31,7 +31,10 @@
 
 (define utf-empty-string (foreign-lambda utf-string "al_ustr_empty_string"))
 
-(define make-utf-null-string* (foreign-safe-lambda* utf-string () "C_return((ALLEGRO_USTR *)C_malloc(sizeof(ALLEGRO_USTR)));"))
+(define make-utf-null-string* (foreign-safe-lambda* utf-string () "
+ALLEGRO_USTR *str = (ALLEGRO_USTR *)C_malloc(sizeof(ALLEGRO_USTR));
+C_memset(str, 0, sizeof(ALLEGRO_USTR));
+C_return(str);"))
 (define (make-utf-null-string)
   (let ((str (make-utf-null-string*)))
     (set-finalizer! str free-utf-string!)
@@ -91,7 +94,7 @@ else
 int32_t val = al_ustr_get_next(us, &pos);
 if (val >= 0)
 {
-  C_word *ptr = C_malloc(C_SIZEOF_LIST (2));
+  C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
   C_return(C_list(&ptr, 2,  C_fix(val), C_fix(pos)));
 }
 else
@@ -102,7 +105,7 @@ else
 int32_t val = al_ustr_prev_get(us, &pos);
 if (val >= 0)
 {
-  C_word *ptr = C_malloc(C_SIZEOF_LIST (2));
+  C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
   C_return(C_list(&ptr, 2, C_fix(val), C_fix(pos)));
 }
 else

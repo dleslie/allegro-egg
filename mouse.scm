@@ -26,7 +26,7 @@
 int x, y;
 if (al_get_mouse_cursor_position(&x, &y))
 {
-   C_word *ptr = C_malloc(C_SIZEOF_LIST (2));
+   C_word *ptr = C_alloc(C_SIZEOF_LIST (2));
    C_return(C_list(&ptr, 2, C_fix(x), C_fix(y)));
 }
 else
