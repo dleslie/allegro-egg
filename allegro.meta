@@ -1,3 +1,5 @@
+;;;; opengl.setup -*- Scheme -*-
+
 ((license "BSD")
  (category io)
  (author "Daniel J. Leslie")

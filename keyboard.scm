@@ -7,15 +7,7 @@
 (define keyboard-event-source (foreign-lambda (c-pointer event-source) "al_get_keyboard_event_source"))
 (define keyboard-led-set! (foreign-lambda bool "al_set_keyboard_leds" integer))
 
-(define make-keyboard-state* (foreign-safe-lambda* keyboard-state () "
-ALLEGRO_KEYBOARD_STATE *ret_state = (ALLEGRO_KEYBOARD_STATE *)C_malloc(sizeof(ALLEGRO_KEYBOARD_STATE));
-al_get_keyboard_state(ret_state);
-C_return(ret_state);
-"))
-(define (make-keyboard-state)
-  (let ((state (make-keyboard-state*)))
-    (set-finalizer! state free-keyboard-state!)
-    state))
+(define keyboard-state-init! (foreign-lambda void "al_get_keyboard_state" keyboard-state))
 
 (define keyboard-state-key-down? (foreign-lambda bool "al_key_down" keyboard-state key))
 

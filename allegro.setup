@@ -1,24 +1,25 @@
+;;;; opengl.setup -*- Scheme -*-
+
 ;; Shamelessly taken from OpenGL egg's setup
 (define compile-options
   (cond-expand
-    (macosx "-FOpenGL -Fallegro")
-    (else "")))
+    (macosx "-FOpenGL -Fallegro -C -fPIC")
+    (else "-C -fPIC")))
 
 (define link-options
   (cond-expand
     (macosx "-framework OpenGL -framework allegro")
     (windows "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -lopengl32")
     (else "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -L/usr/X11R6/lib -L/usr/X11/lib -lGL -LX11")))
- 
-(compile allegro.scm ,compile-options ,link-options -s -J -O3 -d0)
-(compile -s -O3 -d0 allegro.import.scm)
-(compile -c -O3 -d0 allegro.scm  -unit allegro -j allegro ,compile-options ,link-options)
+
+;  "acodec.scm" "bitmap.scm" "direct3d.scm" "fixed.scm" "keyboard.scm" "physfs.scm" "transformations.scm" "bitmap_io.scm" "display.scm" "fmaths.scm" "memfile.scm" "primitives.scm" "ttf.scm" "color.scm" "enums.scm" "font.scm" "memory.scm" "system.scm" "types.scm" "altime.scm" "config.scm" "error.scm" "fshook.scm" "mouse.scm" "threads.scm" "utf8.scm" "audio.scm" "constants.scm" "events.scm" "image.scm" "opengl.scm" "timer.scm" "windows.scm" "base.scm" "debug.scm" "file.scm" "joystick.scm" "path.scm" "tls.scm"
+(make (("allegro.o" ("allegro.scm") (compile -c -O3 -d0 allegro.scm -unit allegro -j allegro ,compile-options ,link-options))
+       ("allegro.so" ("allegro.o") (compile -s allegro.o ,compile-options ,link-options))
+       ("allegro.import.so" ("allegro.so") (compile -s -O3 -d0 allegro.import.scm)))
+  '("allegro.so" "allegro.import.so" "allegro.o"))
 
 (install-extension
  'allegro
  '("allegro.so" "allegro.o" "allegro.import.so")
  '((version 1.0)
    (static "allegro.o")))
-
-
-

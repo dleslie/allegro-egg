@@ -50,25 +50,14 @@ C_return(al_create_display(mode->width, mode->height));
 (define current-display (foreign-lambda display "al_get_current_display"))
 
 (define display-mode-count (foreign-lambda int "al_get_num_display_modes"))
-(define display-mode-init! (foreign-lambda* bool ((display-mode mode) (int idx)) "
-if (al_get_display_mode(idx, mode) == NULL)
-  C_return(C_SCHEME_FALSE);
-else
-  C_return(C_SCHEME_TRUE);
-"))
+(define display-mode-init! (foreign-lambda* bool ((display-mode mode) (int idx)) "C_return((al_get_display_mode(idx, mode) != NULL));"))
 
 (define update-display-region! (foreign-lambda void "al_update_display_region" int int int int))
 (define compatible-bitmap? (foreign-lambda bool "al_is_compatible_bitmap" bitmap))
 (define wait-for-vsync (foreign-lambda bool "al_wait_for_vsync"))
 (define draw-pixel (foreign-lambda* void ((float x) (float y) (color c)) "al_draw_pixel(x, y, *c);"))
 (define video-adapter-count (foreign-lambda int "al_get_num_video_adapters"))
-(define monitor-init! (foreign-lambda* bool ((monitor info) (int adapter)) #<<ENDC
-if (al_get_monitor_info(adapter, info))
-  C_return(C_SCHEME_TRUE);
-else
-  C_return(C_SCHEME_FALSE);
-ENDC
-))
+(define monitor-init! (foreign-lambda* bool ((monitor info) (int adapter)) "C_return(al_get_monitor_info(adapter, info));"))
 
 (define display-option (foreign-lambda int "al_get_display_option" display display-option))
 (define display-hold-bitmap-drawing! (foreign-lambda void "al_hold_bitmap_drawing" bool))
