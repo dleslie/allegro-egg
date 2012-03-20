@@ -42,7 +42,7 @@ C_return(al_create_display(mode->width, mode->height));
 "))
 (define (make-display/mode m a f)
   (let ((d (make-display/mode* m a f)))
-    (set-finalizer! d free-display!)
+    (set-finalizer! d free-display-mode!)
     d))
 
 (define free-display! (foreign-lambda void "al_destroy_display" display))

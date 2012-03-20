@@ -143,11 +143,16 @@
     clr))
 
 (define-foreign-record-type (display-mode "ALLEGRO_DISPLAY_MODE")
+  (constructor: make-display-mode*)
   (destructor: free-display-mode!)
   (int width           display-mode-width)
   (int height          display-mode-height)
   (pixel-format format display-mode-format)
   (int refresh_rate    display-mode-refresh-rate))
+(define (make-display-mode)
+  (let ((d (make-display-mode*)))
+    (set-finalizer! d free-display-mode!)
+    d))
 
 (define-foreign-record-type (monitor "ALLEGRO_MONITOR_INFO")
   (constructor: make-monitor*)
