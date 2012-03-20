@@ -2,7 +2,8 @@
 (define joystick-addon-uninstall (foreign-lambda void "al_uninstall_joystick"))
 (define joystick-addon-installed? (foreign-lambda bool "al_is_joystick_installed"))
 (define joystick-addon-reconfigure (foreign-lambda bool "al_reconfigure_joysticks"))
-(define joystick-addon-event-source (foreign-lambda (c-pointer event-source) "al_get_joystick_event_source"))
+
+(define joystick-event-source (foreign-lambda (c-pointer event-source) "al_get_joystick_event_source"))
 
 (define joystick-count (foreign-lambda int "al_get_num_joysticks"))
 (define joystick-ref (foreign-lambda joystick "al_get_joystick" integer))
