@@ -2,16 +2,23 @@
 
 == allegro
 
-Allegro bindings for Chicken.
+Allegro 5 bindings for Chicken.
 
 [[toc:]]
 
 == Disclaimer
 
-STILL A WORK IN PROGRESS
+Due to personal time constraints I have not fully tested these bindings, yet. If you discover any bugs, or even if you believe that some bindings could have a better implementation then please contact me with details.
 
-For now, the egg is available at:
-https://github.com/dleslie/allegro-egg
+== Help!
+
+I have limited time these days. If you could undertake any of the following it would be greatly appreciated:
+
+1. Submit issues you discover to the GitHub issue tracker
+2. Submit feature requests to the GitHub issue tracker
+3. Correct any errors you discover in this documentation page
+4. Add documentation where it is lacking
+5. Send me an email if you find this egg useful!
 
 == Author
 
@@ -24,7 +31,8 @@ In general, the naming is fairly indicative of the function's behaviour.
 The gist is something like this:
 
 ; make-type : Constructs a type (Not always available)
-; free-type : Destructs a type (Not available for internally managed types)
+; make-type* : Constructs a type, returning a value which must be manually destructed
+; free-type! : Manually destructs a type (Not available for internally managed types)
 ; type-noun : Accessor for value "noun" on a specific type
 ; type-noun-set! : Mutator for value "noun" on a specific type
 ; type-verb : Method which requires a specific type to operate
@@ -33,6 +41,3867 @@ The gist is something like this:
 ; verbage* : Function which operates on the global state, but also returns a value which must be manually destructed
 
 If a function begins with a type name then you can be assured that the first parameter will be an object of that specific type.
+
+== Records and Related Procedures
+
+=== audio-stream
+
+<record>audio-stream</record>
+
+=== bitmap
+
+<record>bitmap</record>
+
+=== color
+
+<record>color</record>
+<procedure>(make-color*)</procedure>
+<procedure>(make-color)</procedure>
+<procedure>(free-color! color)</procedure>
+<procedure>(color-red color)</procedure>
+<procedure>(color-green color)</procedure>
+<procedure>(color-blue color)</procedure>
+<procedure>(color-alpha color)</procedure>
+
+=== condition
+
+<record>condition</record>
+
+=== config
+
+<record>config</record>
+
+=== config-entry
+
+<record>config-entry</config>
+
+=== config-section
+
+<record>config-section</record>
+
+=== cursor
+
+<record>cursor</record>
+
+=== display
+
+<record>display</record>
+
+=== display-mode
+
+<record>display-mode</record>
+<procedure>(make-display-mode*)</procedure>
+<procedure>(make-display-mode)</procedure>
+<procedure>(free-display-mode! display-mode)</procedure>
+<procedure>(display-mode-width display-mode)</procedure>
+<setter>(display-mode-width-set! display-mode integer)</setter>
+<procedure>(display-mode-height display-mode)</procedure>
+<setter>(display-mode-height-set! display-mode integer)</setter>
+<procedure>(display-mode-format display-mode)</procedure>
+<setter>(display-mode-format-set! display-mode pixel-format)</setter>
+<procedure>(display-mode-refresh-rate display-mode)</procedure>
+<setter>(display-mode-refresh-rate-set! display-mode integer)</setter>
+
+=== driver
+
+<record>driver</record>
+<procedure>(free-driver!)</procedure>
+<procedure>(driver-id driver)</procedure>
+<procedure>(driver-ptr driver)</procedure>
+<procedure>(driver-autodetect driver)</procedure>
+
+=== event-source
+
+<record>event-source</record>
+
+=== event-queue
+
+<record>event-queue</record>
+
+=== file
+
+<record>file</record>
+
+=== file-interface
+
+<record>file-interface</record>
+
+=== font
+
+<record>font</record>
+<procedure>(font-data font)</procedure>
+<procedure>(font-height font)</procedure>
+
+=== fs-entry
+
+<record>fs-entry</record>
+<procedure>(fs-entry-vtable fs-entry)</procedure>
+
+=== fs-interface
+
+<record>fs-interface</record>
+<procedure>(free-fs-interface! fs-interface)</procedure>
+<procedure>(fs-interface-create-entry fs-interface)</procedure>
+<procedure>(fs-interface-entry-name fs-interface)</procedure>
+<procedure>(fs-interface-update-entry fs-interface)</procedure>
+<procedure>(fs-interface-entry-mode fs-interface)</procedure>
+<procedure>(fs-interface-atime fs-interface)</procedure>
+<procedure>(fs-interface-mtime fs-interface)</procedure>
+<procedure>(fs-interface-ctime fs-interface)</procedure>
+<procedure>(fs-interface-entry-size fs-interface)</procedure>
+<procedure>(fs-interface-entry-exists? fs-interface)</procedure>
+<procedure>(fs-interface-remove-entry fs-interface)</procedure>
+<procedure>(fs-interface-open-directory fs-interface)</procedure>
+<procedure>(fs-interface-read-directory fs-interface)</procedure>
+<procedure>(fs-interface-close-directory fs-interface)</procedure>
+<procedure>(fs-interface-current-directory fs-interface)</procedure>
+<procedure>(fs-interface-make-directory fs-interface)</procedure>
+<procedure>(fs-interface-filename-exists? fs-interface)</procedure>
+<procedure>(fs-interface-remove-filename fs-interface)</procedure>
+<procedure>(fs-interface-open-file fs-interface)</procedure>
+
+=== joystick
+
+<record>joystick</record>
+
+=== joystick-state
+
+<record>joystick-state</record>
+<procedure>(make-joystick-state*)</procedure>
+<procedure>(make-joystick-state)</procedure>
+<procedure>(free-joystick-state! joystick-state)</procedure>
+<procedure>(joystick-state-button int)</procedure>
+
+=== keyboard
+
+<record>keyboard</record>
+
+=== keyboard-state
+
+<record>keyboard-state</record>
+<procedure>(make-keyboard-state*)</procedure>
+<procedure>(make-keyboard-state)</procedure>
+<procedure>(free-keyboard-state! keyboard-state)</procedure>
+<procedure>(keyboard-state-display)</procedure>
+
+=== locked-region
+
+<record>locked-region</record>
+<procedure>(free-locked-region! locked-region)</procedure>
+<procedure>(locked-region-data locked-region)</procedure>
+<procedure>(locked-region-format locked-region)</procedure>
+<procedure>(locked-region-pitch locked-region)</procedure>
+<procedure>(locked-region-pixel-size locked-region)</procedure>
+
+=== memory-interface
+
+<record>memory-interface</record>
+<procedure>(make-memory-interface*)</procedure>
+<procedure>(make-memory-interface)</procedure>
+<procedure>(free-memory-interface! memory-interface)</procedure>
+<procedure>(memory-interface-malloc memory-interface)</procedure>
+<setter>(memory-interface-malloc-set! memory-interface (function c-pointer (integer32 integer (const c-string) (const c-string))))</setter>
+<procedure>(memory-interface-realloc memory-interface)</procedure>
+<setter>(memory-interface-realloc-set! memory-interface (function void      (c-pointer integer (const c-string) (const c-string))))</setter>
+<procedure>(memory-interface-calloc memory-interface)</procedure>
+<setter>(memory-interface-calloc-set! memory-interface (function c-pointer (c-pointer integer32 integer (const c-string) (const c-string))))</setter>
+<procedure>(memory-interface-free memory-interface)</procedure>
+<setter>(memory-interface-free-set! memory-interface (function c-pointer (integer32 integer32 integer (const c-string) (const c-string))))</setter>
+
+=== mixer
+
+<record>mixer</record>
+
+=== monitor
+
+<record>monitor</record>
+<procedure>(make-monitor*)</procedure>
+<procedure>(make-monitor)</procedure>
+<procedure>(free-monitor! monitor)</procedure>
+<procedure>(monitor-x1 monitor)</procedure>
+<procedure>(monitor-y1 monitor)</procedure>
+<procedure>(monitor-x2 monitor)</procedure>
+<procedure>(monitor-y2 monitor)</procedure>
+
+=== mouse
+
+<record>mouse</record>
+
+=== mouse
+
+<record>mouse-cursor</record>
+
+=== mouse-state
+
+<record>mouse-state</record>
+<procedure>(make-mouse-state)</procedure>
+<procedure>(make-mouse-state*)</procedure>
+<procedure>(free-mouse-state! mouse-state)</procedure>
+<procedure>(mouse-state-x mouse-state)</procedure>
+<procedure>(mouse-state-y mouse-state)</procedure>
+<procedure>(mouse-state-z mouse-state)</procedure>
+<procedure>(mouse-state-w mouse-state)</procedure>
+<procedure>(mouse-state-buttons mouse-state)</procedure>
+<procedure>(mouse-state-pressure mouse-state)</procedure>
+<procedure>(mouse-state-axis mouse-state integer)</procedure>
+<procedure>(mouse-state-display mouse-state)</procedure>
+
+=== mutex
+
+<record>mutex</record>
+
+=== path
+
+<record>path</record>
+
+=== sample
+
+<record>sample</record>
+
+=== sample-id
+
+<record>sample-id</record>
+
+=== sample-instance
+
+<record>sample-instance</record>
+
+=== state
+
+<record>state</record>
+<procedure>(make-state*)</procedure>
+<procedure>(make-state)</procedure>
+<procedure>(free-state! state)</procedure>
+
+=== system
+
+<record>system</record>
+
+=== thread
+
+<record>thread</record>
+
+=== timer
+
+<record>timer</record>
+
+=== timeout
+
+<record>timeout</record>
+<procedure>(make-timeout*)</procedure>
+<procedure>(make-timeout)</procedure>
+<procedure>(free-timeout! timeout)</procedure>
+
+=== transform
+
+<record>transform</record>
+<procedure>(make-transform*)</procedure>
+<procedure>(make-transform)</procedure>
+<procedure>(free-transform! transform)</procedure>
+<procedure>(transform-value transform i j)</procedure>
+
+=== utf-string
+
+<record>utf-string</record>
+
+=== version
+
+<record>version</record>
+
+<procedure>(version-major version)</procedure>
+<procedure>(version-sub version)</procedure>
+<procedure>(version-wip version)</procedure>
+<procedure>(version-release-number version)</procedure>
+<procedure>(version-string version)</procedure>
+<procedure>(version-date-string version)</procedure>
+<procedure>(version-date version)</procedure>
+<procedure>(version-int version)</procedure>
+
+=== vertex
+
+<record>vertex</record>
+<procedure>(make-vertex*)</procedure>
+<procedure>(make-vertex)</procedure>
+<procedure>(free-vertex! vertex)</procedure>
+<procedure>(vertex-x vertex)</procedure>
+<setter>(vertex-x-set! vertex float)</setter>
+<procedure>(vertex-y vertex)</procedure>
+<setter>(vertex-y-set! vertex float)</setter>
+<procedure>(vertex-z vertex)</procedure>
+<setter>(vertex-z-set! vertex float)</setter>
+<procedure>(vertex-u vertex)</procedure>
+<setter>(vertex-u-set! vertex float)</setter>
+<procedure>(vertex-v vertex)</procedure>
+<setter>(vertex-v-set! vertex float)</setter>
+
+=== vertex-declaration
+
+<record>vertex-declaration</record>
+
+=== vertex-element
+
+<record>vertex-element</record>
+<procedure>(make-vertex-element*)</procedure>
+<procedure>(make-vertex-element)</procedure>
+<procedure>(free-vertex-element! vertex-element)</procedure>
+<procedure>(vertex-element-attribute vertex-element)</procedure>
+<setter>(vertex-element-attribute-set! vertex-element primitive-attribute)</setter>
+<procedure>(vertex-element-storage vertex-element)</procedure>
+<setter>(vertex-element-storage-set! vertex-element primitive-storage)</setter>
+<procedure>(vertex-element-offset vertex-element)</procedure>
+<setter>(vertex-element-offset-set! vertex-element integer)</setter>
+
+=== voice
+
+<record>voice</record>
+
+== Event Records
+
+=== any-event
+
+<record>any-event</record>
+<procedure>(any-event-type any-event)</procedure>
+<procedure>(any-event-source any-event)</procedure>
+<procedure>(any-event-timestamp any-event)</procedure>
+
+=== display-event
+
+<record>display-event</record>
+<procedure>(display-event-type display-event)</procedure>
+<procedure>(display-event-source display-event)</procedure>
+<procedure>(display-event-timestamp display-event)</procedure>
+<procedure>(display-event-x display-event)</procedure>
+<procedure>(display-event-y display-event)</procedure>
+<procedure>(display-event-width display-event)</procedure>
+<procedure>(display-event-height display-event)</procedure>
+<procedure>(display-event-orientation display-event)</procedure>
+
+=== event
+
+<record>event</record>
+<procedure>(make-event)</procedure>
+<procedure>(make-event*)</procedure>
+<procedure>(free-event! event)</procedure>
+
+=== joystick-event
+
+<record>joystick-event</record>
+<procedure>(joystick-event-type joystick-event)</procedure>
+<procedure>(joystick-event-source joystick-event)</procedure>
+<procedure>(joystick-event-timestamp joystick-event)</procedure>
+<procedure>(joystick-event-id joystick-event)</procedure>
+<procedure>(joystick-event-stick joystick-event)</procedure>
+<procedure>(joystick-event-axis joystick-event)</procedure>
+<procedure>(joystick-event-position joystick-event)</procedure>
+<procedure>(joystick-event-button joystick-event)</procedure>
+
+=== keyboard-event
+
+<record>keyboard-event</record>
+<procedure>(keyboard-event-type keyboard-event)</procedure>
+<procedure>(keyboard-event-source keyboard-event)</procedure>
+<procedure>(keyboard-event-timestamp keyboard-event)</procedure>
+<procedure>(keyboard-event-display keyboard-event)</procedure>
+<procedure>(keyboard-event-keycode keyboard-event)</procedure>
+<procedure>(keyboard-event-unichar keyboard-event)</procedure>
+<procedure>(keyboard-event-modifiers keyboard-event)</procedure>
+<procedure>(keyboard-event-repeat keyboard-event)</procedure>
+
+=== mouse-event
+
+<record>mouse-event</record>
+<procedure>(mouse-event-type mouse-event)</procedure>
+<procedure>(mouse-event-source mouse-event)</procedure>
+<procedure>(mouse-event-timestamp mouse-event)</procedure>
+<procedure>(mouse-event-display mouse-event)</procedure>
+<procedure>(mouse-event-x mouse-event)</procedure>
+<procedure>(mouse-event-y mouse-event)</procedure>
+<procedure>(mouse-event-z mouse-event)</procedure>
+<procedure>(mouse-event-w mouse-event)</procedure>
+<procedure>(mouse-event-dx mouse-event)</procedure>
+<procedure>(mouse-event-dy mouse-event)</procedure>
+<procedure>(mouse-event-dz mouse-event)</procedure>
+<procedure>(mouse-event-dw mouse-event)</procedure>
+<procedure>(mouse-event-button mouse-event)</procedure>
+<procedure>(mouse-event-pressure mouse-event)</procedure>
+
+=== timer-event
+
+<record>timer-event</record>
+<procedure>(timer-event-type timer-event)</procedure>
+<procedure>(timer-event-source timer-event)</procedure>
+<procedure>(timer-event-timestamp timer-event)</procedure>
+<procedure>(timer-event-count timer-event)</procedure>
+<procedure>(timer-event-error timer-event)</procedure>
+
+=== user-event
+
+<record>user-event</record>
+<procedure>(user-event-type user-event)</procedure>
+<procedure>(user-event-source user-event)</procedure>
+<procedure>(user-event-timestamp user-event)</procedure>
+<procedure>(user-event-data1 user-event)</procedure>
+<setter>(user-event-data1-set! user-event integer)</setter>
+<procedure>(user-event-data2 user-event)</procedure>
+<setter>(user-event-data2-set! user-event integer)</setter>
+<procedure>(user-event-data3 user-event)</procedure>
+<setter>(user-event-data3-set! user-event integer)</setter>
+<procedure>(user-event-data4 user-event)</procedure>
+<setter>(user-event-data4-set! user-event integer)</setter>
+
+== Enums
+
+=== audio-depth
+
+<procedure>(audio-depth->int audio-depth)</procedure>
+<procedure>(int->audio-depth integer)</procedure>
+<constant>int8</constant>
+<constant>int16</constant>
+<constant>int24</constant>
+<constant>float32</constant>
+<constant>unsigned</constant>
+<constant>uint8</constant>
+<constant>uint16</constant>
+<constant>uint24</constant>
+
+=== display-flag
+
+<procedure>(display-flag->int display-flag)</procedure>
+<procedure>(int->display-flag integer)</procedure>
+<constant>windowed</constant>
+<constant>fullscreen</constant>
+<constant>opengl</constant>
+<constant>direct3d-internal</constant>
+<constant>resizable</constant>
+<constant>noframe</constant>
+<constant>generate-expose-events</constant>
+<constant>opengl3</constant>
+<constant>opengl-forward-compatible</constant>
+<constant>fullscreen-window</constant>
+<constant>minimized</constant>
+
+=== display-option
+
+<procedure>(display-option->int display-option)</procedure>
+<procedure>(int->display-option integer)</procedure>
+<constant>red-size</constant>
+<constant>green-size</constant>
+<constant>blue-size</constant>
+<constant>alpha-size</constant>
+<constant>red-shift</constant>
+<constant>green-shift</constant>
+<constant>blue-shift</constant>
+<constant>alpha-shift</constant>
+<constant>acc-red-size</constant>
+<constant>acc-green-size</constant>
+<constant>acc-blue-size</constant>
+<constant>acc-alpha-size</constant>
+<constant>stereo</constant>
+<constant>aux-buffers</constant>
+<constant>color-size</constant>
+<constant>depth-size</constant>
+<constant>stencil-size</constant>
+<constant>sample-buffers</constant>
+<constant>samples</constant>
+<constant>render-method</constant>
+<constant>float-color</constant>
+<constant>float-depth</constant>
+<constant>single-buffer</constant>
+<constant>swap-method</constant>
+<constant>compatible-display</constant>
+<constant>update-display-region</constant>
+<constant>vsync</constant>
+<constant>max-bitmap-size</constant>
+<constant>support-npot-bitmap</constant>
+<constant>can-draw-into-bitmap</constant>
+<constant>support-separate-alpha</constant>
+
+=== display-option-importance
+
+<procedure>(display-option-importance->int display-option-importance)</procedure>
+<procedure>(int->display-option-importance integer)</procedure>
+<constant>dont-care</constant>
+<constant>require</constant>
+<constant>suggest</constant>
+
+=== display-orientation
+
+<procedure>(display-orientation->int display-orientation)</procedure>
+<procedure>(int->display-oprientation integer)</procedure>
+<constant>degrees-0</constant>
+<constant>degrees-90</constant>
+<constant>degrees-180</constant>
+<constant>degrees-270</constant>
+<constant>face-up</constant>
+<constant>face-down</constant>
+
+=== bitmap-flag
+
+<procedure>(bitmap-flag->int bitmap-flag)</procedure>
+<procedure>(int->bitmap-flag integer)</procedure>
+<constant>memory-bitmap</constant>
+<constant>keep-bitmap-format</constant>
+<constant>force-locking</constant>
+<constant>no-preserve-texture</constant>
+<constant>alpha-test</constant>
+<constant>min-linear</constant>
+<constant>mag-linear</constant>
+<constant>mipmap</constant>
+<constant>no-premultiplied-alpha</constant>
+<constant>video-bitmap</constant>
+
+=== blend-operation
+
+<procedure>(blend-operation->int blend-operation)</procedure>
+<procedure>(int->blend-operation integer)</procedure>
+<constant>add</constant>
+<constant>source-minus-destination</constant>
+<constant>destination-minus-source</constant>
+
+=== blending-mode
+
+<procedure>(blending-mode->int blending-mode)</procedure>
+<procedure>(int->blending-mode integer)</procedure>
+<constant>zero</constant>
+<constant>one</constant>
+<constant>alpha</constant>
+<constant>inverse-alpha</constant>
+
+=== blitting-flag
+
+<procedure>(blitting-flag->int blitting-flag)</procedure>
+<procedure>(int->blitting-flag integer)</procedure>
+<constant>flip-horizontal</constant>
+<constant>flip-vertical</constant>
+
+=== channel-configuration
+
+<procedure>(channel-configuration->int channel-configuration)</procedure>
+<procedure>(int->channel-configuration integer)</procedure>
+<constant>one</constant>
+<constant>two</constant>
+<constant>three</constant>
+<constant>four</constant>
+<constant>five-one</constant>
+<constant>six-one</constant>
+<constant>seven-one</constant>
+
+=== cursor-type
+
+<procedure>(cursor-type->int cursor-type)</procedure>
+<procedure>(int->cursor-type integer)</procedure>
+<constant>none</constant>
+<constant>default</constant>
+<constant>arrow</constant>
+<constant>busy</constant>
+<constant>question</constant>
+<constant>edit</constant>
+<constant>move</constant>
+<constant>resize-north</constant>
+<constant>resize-west</constant>
+<constant>resize-south</constant>
+<constant>resize-east</constant>
+<constant>resize-northwest</constant>
+<constant>resize-southwest</constant>
+<constant>resize-southeast</constant>
+<constant>resize-northeast</constant>
+<constant>progress</constant>
+<constant>precision</constant>
+<constant>link</constant>
+<constant>alt-select</constant>
+<constant>unavailable</constant>
+
+=== event-type
+
+<procedure>(event-type->int event-type)</procedure>
+<procedure>(int->event-type integer)</procedure>
+<constant>joystick-axis</constant>
+<constant>joystick-button-down</constant>
+<constant>joystick-button-up</constant>
+<constant>joystick-configuration</constant>
+<constant>key-down</constant>
+<constant>key-char</constant>
+<constant>key-up</constant>
+<constant>mouse-axes</constant>
+<constant>mouse-button-down</constant>
+<constant>mouse-button-up</constant>
+<constant>mouse-enter-display</constant>
+<constant>mouse-leave-display</constant>
+<constant>mouse-warped</constant>
+<constant>timer</constant>
+<constant>display-expose</constant>
+<constant>display-resize</constant>
+<constant>display-close</constant>
+<constant>display-lost</constant>
+<constant>display-found</constant>
+<constant>display-switch-in</constant>
+<constant>display-switch-out</constant>
+<constant>display-orientation</constant>
+<constant>audio-stream-fragment</constant>
+<constant>audio-stream-finished</constant>
+
+=== font-align
+
+<procedure>(font-align->int font-align)</procedure>
+<procedure>(int->font-align integer)</procedure>
+<constant>left</constant>
+<constant>center</constant>
+<constant>right</constant>
+
+=== file-mode
+
+<procedure>(file-mode->int file-mode)</procedure>
+<procedure>(int->file-mode integer)</procedure>
+<constant>read</constant>
+<constant>write</constant>
+<constant>execute</constant>
+<constant>hidden</constant>
+<constant>file</constant>
+<constant>directory</constant>
+
+=== gl-variant
+
+<procedure>(gl-variant->int gl-variant)</procedure>
+<procedure>(int->gl-variant integer)</procedure>
+<constant>opengl</constant>
+<constant>opengl-es</constant>
+
+=== joystick-flag
+
+<procedure>(joystick-flag->int joystick-flag)</procedure>
+<procedure>(int->joystick-flag integer)</procedure>
+<constant>digital</constant>
+<constant>analog</constant>
+
+=== key
+
+<procedure>(key->int key)</procedure>
+<procedure>(int->key integer)</procedure>
+<constant>a</constant>
+<constant>b</constant>
+<constant>c</constant>
+<constant>d</constant>
+<constant>e</constant>
+<constant>f</constant>
+<constant>g</constant>
+<constant>h</constant>
+<constant>i</constant>
+<constant>j</constant>
+<constant>k</constant>
+<constant>l</constant>
+<constant>m</constant>
+<constant>n</constant>
+<constant>o</constant>
+<constant>p</constant>
+<constant>q</constant>
+<constant>r</constant>
+<constant>s</constant>
+<constant>t</constant>
+<constant>u</constant>
+<constant>v</constant>
+<constant>w</constant>
+<constant>x</constant>
+<constant>y</constant>
+<constant>z</constant>
+<constant>one</constant>
+<constant>two</constant>
+<constant>three</constant>
+<constant>four</constant>
+<constant>five</constant>
+<constant>six</constant>
+<constant>seven</constant>
+<constant>eight</constant>
+<constant>nine</constant>
+<constant>zero</constant>
+<constant>pad-one</constant>
+<constant>pad-two</constant>
+<constant>pad-three</constant>
+<constant>pad-four</constant>
+<constant>pad-five</constant>
+<constant>pad-six</constant>
+<constant>pad-seven</constant>
+<constant>pad-eight</constant>
+<constant>pad-nine</constant>
+<constant>pad-zerp</constant>
+<constant>f1</constant>
+<constant>f2</constant>
+<constant>f3</constant>
+<constant>f4</constant>
+<constant>f5</constant>
+<constant>f6</constant>
+<constant>f7</constant>
+<constant>f9</constant>
+<constant>f9</constant>
+<constant>f10</constant>
+<constant>f11</constant>
+<constant>f12</constant>
+<constant>escape</constant>
+<constant>tilde</constant>
+<constant>minus</constant>
+<constant>equals</constant>
+<constant>backspace</constant>
+<constant>tab</constant>
+<constant>openbrace</constant>
+<constant>enter</constant>
+<constant>semicolon</constant>
+<constant>quote</constant>
+<constant>backslash</constant>
+<constant>backslash2</constant>
+<constant>comma</constant>
+<constant>fullstop</constant>
+<constant>slash</constant>
+<constant>space</constant>
+<constant>insert</constant>
+<constant>delete</constant>
+<constant>home</constant>
+<constant>end</constant>
+<constant>pgup</constant>
+<constant>pgdn</constant>
+<constant>left</constant>
+<constant>right</constant>
+<constant>up</constant>
+<constant>down</constant>
+<constant>pad-slash</constant>
+<constant>pad-asterisk</constant>
+<constant>pad-minus</constant>
+<constant>pad-plus</constant>
+<constant>pad-delete</constant>
+<constant>pad-enter</constant>
+<constant>printscreen</constant>
+<constant>pause</constant>
+<constant>abnt-c1</constant>
+<constant>yen</constant>
+<constant>kana</constant>
+<constant>convert</constant>
+<constant>noconvert</constant>
+<constant>at</constant>
+<constant>circumflex</constant>
+<constant>colon2</constant>
+<constant>kanji</constant>
+<constant>pad-equals</constant>
+<constant>backquote</constant>
+<constant>semicolon2</constant>
+<constant>command</constant>
+<constant>unknown</constant>
+<constant>lshift</constant>
+<constant>rshift</constant>
+<constant>lctrl</constant>
+<constant>rctrl</constant>
+<constant>alt</constant>
+<constant>altgr</constant>
+<constant>lwin</constant>
+<constant>rwin</constant>
+<constant>menu</constant>
+<constant>scrolllock</constant>
+<constant>numlock</constant>
+<constant>capslock</constant>
+
+=== keymod
+
+<procedure>(keymod->int keymod)</procedure>
+<procedure>(int->keymod integer)</procedure>
+<constant>shift</constant>
+<constant>ctrl</constant>
+<constant>alt</constant>
+<constant>lwin</constant>
+<constant>rwin</constant>
+<constant>menu</constant>
+<constant>altgr</constant>
+<constant>command</constant>
+<constant>scrolllock</constant>
+<constant>numlock</constant>
+<constant>capslock</constant>
+<constant>inaltseq</constant>
+<constant>accent1</constant>
+<constant>accent2</constant>
+<constant>accent3</constant>
+<constant>accent4</constant>
+
+=== locking-flag
+
+<procedure>(locking-flag->int locking-flag)</procedure>
+<procedure>(int->locking-flag integer)</procedure>
+<constant>read-write</constant>
+<constant>read-only</constant>
+<constant>write-only</constant>
+
+=== mixer-quality
+
+<procedure>(mixer-quality->int mixer-quality)</procedure>
+<procedure>(int->mixer-quality integer)</procedure>
+<constant>point</constant>
+<constant>linear</constant>
+
+=== pixel-format
+
+<procedure>(pixel-format->int pixel-format)</procedure>
+<procedure>(int->pixel-format integer)</procedure>
+<constant>any</constant>
+<constant>any-no-alpha</constant>
+<constant>any-with-alpha</constant>
+<constant>any-15-no-alpha</constant>
+<constant>any-16-no-alpha</constant>
+<constant>any-16-with-alpha</constant>
+<constant>any-24-no-alpha</constant>
+<constant>any-32-no-alpha</constant>
+<constant>any-32-with-alpha</constant>
+<constant>argb-8888</constant>
+<constant>rgba-8888</constant>
+<constant>argb-4444</constant>
+<constant>rgb-888</constant>
+<constant>rgb-565</constant>
+<constant>rgb555</constant>
+<constant>rgba-5551</constant>
+<constant>argb-1555</constant>
+<constant>abgr-8888</constant>
+<constant>xbgr-8888</constant>
+<constant>bgr-888</constant>
+<constant>bgr-565</constant>
+<constant>bgr-555</constant>
+<constant>rgbx-8888</constant>
+<constant>xrgb-8888</constant>
+<constant>abgr-f32</constant>
+<constant>abgr-8888-le</constant>
+<constant>rgba-4444</constant>
+
+=== playmode
+
+<procedure>(playmode->int playmode)</procedure>
+<procedure>(int->playmode integer)</procedure>
+<constant>once</constant>
+<constant>loop</constant>
+<constant>bidirectional</constant>
+
+=== primitive-attribute
+
+<procedure>(primitive-attribute->int primitive-attribute)</procedure>
+<procedure>(int->primitive-attribute integer)</procedure>
+<constant>position</constant>
+<constant>color</constant>
+<constant>texture-coordinate</constant>
+<constant>texture-pixel-coordinate</constant>
+
+=== primitive-type
+
+<procedure>(primitive-type->int primitive-type)</procedure>
+<procedure>(int->primitive-type integer)</procedure>
+<constant>line-list</constant>
+<constant>line-strip</constant>
+<constant>line-loop</constant>
+<constant>triangle-list</constant>
+<constant>triangle-strip</constant>
+<constant>point-list</constant>
+
+=== primitive-storage
+
+<procedure>(primitive-storage->int primitive-storage)</procedure>
+<procedure>(int->primitive-storage integer)</procedure>
+<constant>float-2</constant>
+<constant>float-3</constant>
+<constant>short-2</constant>
+
+=== seek-flag
+
+<procedure>(seek-flag->int seek-flag)</procedure>
+<procedure>(int->seek-flag integer)</procedure>
+<constant>set</constant>
+<constant>current</constant>
+<constant>end</constant>
+
+=== state-flag
+
+<procedure>(state-flag->int state-flag)</procedure>
+<procedure>(int->state-flag integer)</procedure>
+<constant>new-display-parameters</constant>
+<constant>new-bitmap-parameters</constant>
+<constant>display</constant>
+<constant>target-bitmap</constant>
+<constant>blender</constant>
+<constant>new-file-interface</constant>
+<constant>transform</constant>
+<constant>bitmap</constant>
+<constant>all</constant>
+
+=== system-path
+
+<procedure>(system-path->int system-path)</procedure>
+<procedure>(int->system-path integer)</procedure>
+<constant>resources-path</constant>
+<constant>temp-path</constant>
+<constant>user-data-path</constant>
+<constant>user-home-path</constant>
+<constant>user-settings-path</constant>
+<constant>user-documents-path</constant>
+<constant>exename-path</constant>
+<constant>last-path</constant>
+
+== Constants
+
+<constant>joystick-max-axes</constant>
+<constant>jostick-max-sticks</constant>
+<constant>joystick-max-buttons</constant>
+<constant>default-display-adapter</constant>
+<constant>eof</constant>
+<constant>mouse-max-extra-axis</constant>
+<constant>vertex-cache-size</constant>
+<constant>primitive-quality</constant>
+<constant>audio-pan-none</constant>
+<constant>build-version</constant>
+<constant>pi</constant>
+
+== Functions
+
+<procedure></procedure>
+
+=== Audio
+
+<procedure>(make-sample* (blob buffer) (unsigned-integer samples) (unsigned-integer frequency) audio-depth channel-configuration (bool free-buffer))</procedure>
+
+Implements al_create_sample.
+
+<procedure>(make-sample (blob buffer) (unsigned-integer samples) (unsigned-integer frequency) audio-depth channel-configuration (bool free-buffer))</procedure>
+
+Implements al_create_sample, with (free-sample!) declared as a finalizer.
+
+<procedure>(free-sample! sample)</procedure>
+
+Implements al_destroy_sample.
+
+<procedure>(make-sample-instance* sample)</procedure>
+
+Implements al_create_sample_instance.
+
+<procedure>(make-sample-instance sample)</procedure>
+
+Implements al_create_sample_instance, with (free-sample-instance!) declared as a finalizer.
+
+<procedure>(free-sample-instance! sample)</procedure>
+
+Implements al_destroy_sample_instance.
+
+<procedure>(sample-frequency sample)</procedure>
+
+Implements al_get_sample_frequenecy.
+
+<procedure>(sample-length sample)</procedure>
+
+Implements al_get_sample_length.
+
+<procedure>(sample-depth sample)</procedure>
+
+Implements al_get_sample_depth.
+
+<procedure>(sample-channels sample)</procedure>
+
+Implements al_get_sample_channels.
+
+<procedure>(sample-instance-frequency sample-instance)</procedure>
+
+Implements al_get_sample_instance_frequency.
+
+<procedure>(sample-instance-length sample-instance)</procedure>
+
+Implements al_get_sample_instance_length.
+
+<procedure>(sample-instance-position sample-instance)</procedure>
+
+Implements al_get_sample_instance-position.
+
+<procedure>(sample-instance-speed sample-instance)</procedure>
+
+Implements al_get_sample_instance_speed.
+
+<procedure>(sample-instance-gain sample-instance)</procedure>
+
+Implements al_get_sample_instance_gain.
+
+<procedure>(sample-instance-pan sample-instance)</procedure>
+
+Implements al_get_sample_instance_pan.
+
+<procedure>(sample-instance-time sample-instance)</procedure>
+
+Implements al_get_sample_instance_time.
+
+<procedure>(sample-instance-depth sample-instance)</procedure>
+
+Implements al_get_sample_instance_depth.
+
+<procedure>(sample-instance-channels sample-instance)</procedure>
+
+Implements al_get_sample_instance_channels.
+
+<procedure>(sample-instance-playmode sample-instance)</procedure>
+
+Implements al_get_sample_instance_playmode.
+
+<procedure>(sample-instance-playing? sample-instance)</procedure>
+
+Implements al_get_sample_instance_playing.
+
+<procedure>(sample-instance-attached? sample-instance)</procedure>
+
+Implements al_get_sample_instance_attached.
+
+<procedure>(sample-instance-position-set! sample-instance unsigned-integer)</procedure>
+
+Implements al_set_sample_instance_position.
+
+<procedure>(sample-instance-length-set! sample-instance unsigned-integer)</procedure>
+
+Implements al_set_sample_instance_length.
+
+<procedure>(sample-instance-speed-set! sample-instance float)</procedure>
+
+Implements al_set_sample_instance_speed.
+
+<procedure>(sample-instance-gain-set! sample-instance float)</procedure>
+
+Implements al_set_sample_instance_gain.
+
+<procedure>(sample-instance-pan-set! sample-instance float)</procedure>
+
+Implements al_set_sample_instance_pan.
+
+<procedure>(sample-instance-playmode-set! sample-instance playmode)</procedure>
+
+Implements al_set_sample_instance_playmode.
+
+<procedure>(sample-instance-playing-set! sample-instance bool)</procedure>
+
+Implements al_set_sample_instance_playing.
+
+<procedure>(sample-instance-detach! sample-instance)</procedure>
+
+Implements al_detach_sample_instance.
+
+<procedure>(sample-instance-sample sample-instance)</procedure>
+
+Implements al_get_sample.
+
+<procedure>(sample-instance-sample-set! sample-instance sample)</procedure>
+
+Implements al_set_sample
+
+<procedure>(sample-instance-play sample-instance)</procedure>
+
+Implements al_play_sample_instance.
+
+<procedure>(sample-instance-stop sample-instance)</procedure>
+
+Implements al_stop_sample_instance.
+
+<procedure>(make-audio-stream* (integer buffer-count) (unsigned-integer samples) (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_audio_stream.
+
+<procedure>(make-audio-stream (integer buffer-count) (unsigned-integer samples) (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_audio_stream, with (free-audio-stream!) declared as a finalizer.
+
+<procedure>(free-audio-stream! audio-stream)</procedure>
+
+Implements al_destroy_audio_stream.
+
+<procedure>(audio-stram-drain audio-stream)</procedure>
+
+Implements al_drain_audio_stream.
+
+<procedure>(audio-stream-frequency audio-stream)</procedure>
+
+Implements al_get_audio_stream_frequency.
+
+<procedure>(audio-stream-length audio-stream)</procedure>
+
+Implements al_get_audio_stream_length.
+
+<procedure>(audio-stream-fragments audio-stream)</procedure>
+
+Implements al_get_available_audio_stream_fragments.
+
+<procedure>(audio-stream-available-fragments audio-stream)</procedure>
+
+Implements al_get_available_audio_stream_fragments.
+
+<procedure>(audio-stream-speed audio-stream)</procedure>
+
+Implements al_get_audio_stream_speed.
+
+<procedure>(audio-stream-gain audio-stream)</procedure>
+
+Implements al_get_audio_stream_gain.
+
+<procedure>(audio-stream-channels audio-stream)</procedure>
+
+Implements al_get_audio_stream_channels.
+
+<procedure>(audio-stream-depth audio-stream)</procedure>
+
+Implements al_get_audio_stream_depth.
+
+<procedure>(audio-stream-playmode audio-stream)</procedure>
+
+Implements al_get_audio_stream_playmode.
+
+<procedure>(audio-stream-playing? audio-stream)</procedure>
+
+Implements al_get_audio_stream_playing.
+
+<procedure>(audio-stream-attached? audio-stream)</procedure>
+
+Implements al_get_audio_stream_attached.
+
+<procedure>(audio-stream-fragment audio-stream)</procedure>
+
+Implements al_get_audio_stream_fragment.
+
+<procedure>(audio-stream-speed-set! audio-stream float)</procedure>
+
+Implements al_set_audio_stream_speed.
+
+<procedure>(audio-stream-gain-set! audio-stream float)</procedure>
+
+Implements al_set_audio_stream_gain.
+
+<procedure>(audio-stream-pan-set! audio-stream float)</procedure>
+
+Implements al_set_audio_stream_pan.
+
+<procedure>(audio-stream-playmode-set! audio-stream playmode)</procedure>
+
+Implements al_set_audio_stream_playmode.
+
+<procedure>(audio-stream-playing-set! audio-stream bool)</procedure>
+
+Implements al_set_audio_stream_playing.
+
+<procedure>(audio-stream-detach! audio-stream)</procedure>
+
+Implements al_detach_audio_stream.
+
+<procedure>(audio-stream-fragment-set! audio-stream c-pointer)</procedure>
+
+Implements al_set_audio_stream_fragment.
+
+<procedure>(audio-stream-rewind! audio-stream)</procedure>
+
+Implements al_rewind_audio_stream.
+
+<procedure>(audio-stream-seek-seconds! audio-stream double)</procedure>
+
+Implements al_seek_audio_stream_secs.
+
+<procedure>(audio-stream-position-seconds audio-stream)</procedure>
+
+Impements al_get_audio_stream_position_secs.
+
+<procedure>(audio-stream-length-seconds audio-stream)</procedure>
+
+Implements al_get_audio_length_secs.
+
+<procedure>(audio-stream-loop-set! audio-stream (double start-seconds) (double end-seconds))</procedure>
+
+Implements al_set_audio_stream_loop_secs.
+
+<procedure>(audio-stream-event-source audio-stream)</procedure>
+
+Implements al_get_audio_stream_event_source.
+
+<procedure>(make-mixer* (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_mixer.
+
+<procedure>(make-mixer (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_mixer, with (free-mixer!) declared as a finalizer.
+
+<procedure>(free-mixer! mixer)</procedure>
+
+Implements al_destroy_mixer.
+
+<procedure>(sample-instance-attach-to-mixer! sample-instance mixer)</procedure>
+
+Implements al_attach_sample_instance_to_mixer.
+
+<procedure>(audio-stream-attach-to-mixer! audio-stream mixer)</procedure>
+
+Implements al_attach_audio_stram_to_mixer.
+
+<procedure>(mixer-attach-to-mixer! mixer mixer)</procedure>
+
+Implements al_attach_mixer_to_mixer.
+
+<procedure>(mixer-postprocess-callback-set! mixer (function void (c-pointer unsigned-integer32 c-pointer)) (c-pointer data))</procedure>
+
+Implements al_set_mixer_postprocess_callback.
+
+<procedure>(mixer-frequency mixer)</procedure>
+
+Implements al_get_mixer_frequency.
+
+<procedure>(mixer-channels mixer)</procedure>
+
+Implements al_get_mixer_channels.
+
+<procedure>(mixer-depth mixer)</procedure>
+
+Implements al_get_mixer_depth.
+
+<procedure>(mixer-quality mixer)</procedure>
+
+Implements al_get_mixer_quality.
+
+<procedure>(mixer-playing? mixer)</procedure>
+
+Implements al_get_mixer_playing.
+
+<procedure>(mixer-attached? mixer)</procedure>
+
+Implements al_get_mixer_attached.
+
+<procedure>(mixer-frequency-set! mixer unsigned-integer)</procedure>
+
+Implements al_set_mixer_frequency.
+
+<procedure>(mixer-quality-set! mixer mixer-quality)</procedure>
+
+Implements al_set_mixer_quality.
+
+<procedure>(mixer-playing-set! mixer bool)</procedure>
+
+Implements al_set_mixer_playing.
+
+<procedure>(mixer-detach! mixer)</procedure>
+
+Implements al_detach_mixer.
+
+<procedure>(make-voice* (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_voice.
+
+<procedure>(make-voice (unsigned-integer frequency) audio-depth channel-configuration)</procedure>
+
+Implements al_create_voice, with (free-voice!) declared as a finalizer.
+
+<procedure>(free-voice! voice)</procedure>
+
+Implements al_destroy_voice.
+
+<procedure>(sample-instance-attach-to-voice! sample-instance voice)</procedure>
+
+Implements al_attach_sample_instance_to_voice.
+
+<procedure>(audio-stream-attach-to-voice! audio-stram voice)</procedure>
+
+Implements al_attach_audio_stream_to_voice.
+
+<procedure>(mixer-attach-to-voice! mixer voice)</procedure>
+
+Implements al_attach_mixer_to_voice.
+
+<procedure>(voice-detach! voice)</procedure>
+
+Implements al_detach_voice.
+
+<procedure>(voice-frequency voice)</procedure>
+
+Implements al_get_voice_frequency.
+
+<procedure>(voice-position voice)</procedure>
+
+Implements al_get_voice_position voice)</procedure>
+
+<procedure>(voice-channels voice)</procedure>
+
+Implements al_get_voice_channels.
+
+<procedure>(voice-depth voice)</procedure>
+
+Implements al_get_voice_depth.
+
+<procedure>(voice-playing? voice)</procedure>
+
+Implements al_get_voice_playing.
+
+<procedure>(voice-position-set! voice unsigned-integer)</procedure>
+
+Implements al_set_voice_position.
+
+<procedure>(voice-playing-set! voice bool)</procedure>
+
+Implements al_set_voice_playing.
+
+<procedure>(audio-addon-install)</procedure>
+
+Implements al_install_audio.
+
+<procedure>(audio-addon-uninstall)</procedure>
+
+Implements al_uninstall_audio.
+
+<procedure>(audio-addon-installed?)</procedure>
+
+Implements al_is_audio_installed.
+
+<procedure>(audio-addon-version)</procedure>
+
+Implements al_get_allegro_audio_version.
+
+<procedure>(channel-configuration-count channel-configuration)</procedure>
+
+Implements al_get_channel_count.
+
+<procedure>(audio-depth-size audio-depth)</procedure>
+
+Implements al_get_audio_depth_size.
+
+<procedure>(default-mixer)</procedure>
+
+Implements al_get_default_mixer.
+
+<procedure>(default-mixer-set! mixer)</procedure>
+
+Implements al_set_default_mixer.
+
+<procedure>(default-mixer-restore!)</procedure>
+
+Implements al_restore_default_mixer.
+
+<procedure>(sample-play sample (float gain) (float pan) (float speed) playmode sample-id)</procedure>
+
+Implements al_play_sample.
+
+The Sample ID is written to the provided sample-id struct.
+
+<procedure>(sample-stop sample-id)</procedure>
+
+Implements al_stop_sample.
+
+<procedure>(reserve-samples integer)</procedure>
+
+Implements al_reserve_samples.
+
+<procedure>(stop-all-samples)</procedure>
+
+Implements al_stop_samples.
+
+<procedure>(register-sample-loader (string extension) (function sample ((const string))))</procedure>
+
+Implements al_register_sample_loader.
+
+<procedure>(register-sample-saver (string extension) (function bool ((const c-string) sample)))</procedure>
+
+Implements al_register_sample_saver.
+
+<procedure>(register-audio-stream-loader (string extension) (function audio-stream ((const string) size_t unsigned-integer32)))</procedure>
+
+Implements al_register_audio_stream_loader.
+
+<procedure>(register-sample-file-loader (string extension) (function sample (file)))</procedure>
+
+Implements al_register_sample_loader_f.
+
+<procedure>(register-sample-file-saver (string extension) (function bool (file sample)))</procedure>
+
+Implements al_register_sample_saver_f.
+
+<procedure>(register-audio-stream-file-loader (string extension) (function audio-stream (file size_t unsigned-integer)))</procedure>
+
+Implements al_register_audio_stream_loader_f.
+
+<procedure>(load-sample* string)</procedure>
+
+Implements al_load_sample.
+
+<procedure>(load-sample string)</procedure>
+
+Implements al_load_sample, with (free-sample!) declared as a finalizer.
+
+<procedure>(load-audio-stream* string (integer buffer-count) (unsigned-integer samples))</procedure>
+
+Implements al_load_audio_stream.
+
+<procedure>(load-audio-stream string (integer buffer-count) (unsigned-integer samples))</procedure>
+
+Implements al_load_audio_stream, with (free-audio-stream!) declared as a finalizer.
+
+<procedure>(load-audio-stream-from-file* file (string identity) (integer buffer-count) (unsigned-integer samples))</procedure>
+
+Implements al_load_audio_straem_from_file.
+
+<procedure>(load-audio-stream-from-file file (string identity) (integer buffer-count) (unsigned-integer samples))</procedure>
+
+Implements al_load_audio_straem_from_file, with (free-audio-stream!) declared as a finalizer.
+
+<procedure>(load-sample-from-file* file (string identity))</procedure>
+
+Implements al_load_sample_f.
+
+<procedure>(load-sample-from-file file (string identity))</procedure>
+
+Implements al_load_sample_f, with (free-sample!) declared as a finalizer.
+
+<procedure>(sample-save-to-file sample file (string identity))</procedure>
+
+Implements al_save_sample_f.
+
+<procedure>(sample-save sample (string filename))</procedure>
+
+Implements al_save_sample.
+
+
+=== Audio Codec Addon
+
+<procedure>(acodec-addon-init)</procedure>
+
+Implements al_init_acodec_addon.
+
+<procedure>(acodec-addon-version)</procedure>
+
+Implements al_get_allegro_acodec_version.
+
+=== Bitmap
+
+<procedure>(new-bitmap-format-set! pixel-format)</procedure>
+
+Implements al_set_new_bitmap_format.
+
+<procedure>(new-bitmap-format)</procedure>
+
+Implements al_get_new_bitmap_flags.
+
+<procedure>(new-bitmap-flags-set! bitmap-flag)</procedure>
+
+Implements al_set_new_bitmap_flags.
+
+<procedure>(new-bitmap-flags)</procedure>
+
+Implements al_get_new_bitmap_flags.
+
+<procedure>(new-bitmap-add-flag bitmap-flag)</procedure>
+
+Implements al_add_new_bitmap_flag.
+
+<procedure>(make-bitmap* (integer width) (integer height))</procedure>
+
+Implements al_create_bitmap.
+
+<procedure>(make-bitmap (integer width) (integer height))</procedure>
+
+Implements al_create_bitmap, with (free-bitmap!) declared as a finalizer.
+
+<procedure>(bitmap-draw bitmap (float dx) (float dy) bitmap-flag)</procedure>
+
+Implements al_draw_bitmap.
+
+<procedure>(bitmap-draw-region bitmap (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_bitmap_region.
+
+<procedure>(bitmap-draw-scaled bitmap (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer bitmap-flags))</procedure>
+
+Implements al_draw_scaled_bitmap.
+
+<procedure>(bitmap-draw-rotated bitmap (float cx) (float cy) (float dx) (float dy) (float angle) (integer bitmap-flags))</procedure>
+
+Implements al_draw_rotated_bitmap.
+
+<procedure>(bitmap-draw-scaled-rotated bitmap (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer bitmap-flags))</procedure>
+
+Implements al_draw_scaled_rotated_bitmap.
+
+<procedure>(bitmap-draw-tinted (bitmap bmp) (color tint) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_tinted_bitmap.
+
+<procedure>(bitmap-draw-tinted-region (bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_tinted_bitmap_region.
+
+<procedure>(bitmap-draw-tinted-scaled (bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer flags))</procedure>
+
+Implements al_draw_tinted_scale_bitmap.
+
+<procedure>(bitmap-draw-tinted-rotated (bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float angle) (integer flags))</procedure>
+
+Implements al_draw_tinted_rotated_bitmap.
+
+<procedure>(bitmap-draw-tinted-scaled-rotated (bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer flags))</procedure>
+
+Implements al_draw_tinted_scaled_rotated_bitmap.
+
+<procedure>(bitmap-lock*! bitmap pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap.
+
+<procedure>(bitmap-lock-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap_region.
+
+<procedure>(bitmap-unlock! bitmap)</procedure>
+
+Implements al_unlock_bitmap.
+
+<procedure>(bitmap-lock! bitmap pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
+
+<procedure>(bitmap-lock-region! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap_region, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
+
+<procedure>(bitmap-pixel! (bitmap bmp) (int x) (int y) (color c))</procedure>
+
+Sets the provided color struct to the color value at the given coordinates.
+
+<procedure>(bitmap-pixel* (bitmap bmp) (int x) (int y))</procedure>
+
+Returns a new color struct of the color value at the given coordinates.
+
+<procedure>(bitmap-pixel (bitmap bmp) (int x) (int y))</procedure>
+
+Returns a new color struct of the color value at the given coordinates, with (free-color!) declared as a finalizer.
+
+<procedure>(bitmap-width bitmap)</procedure>
+
+Implements al_get_bitmap_width.
+
+<procedure>(bitmap-height bitmap)</procedure>
+
+Implements al_get_bitmap_height.
+
+<procedure>(bitmap-format bitmap)</procedure>
+
+Implements al_get_bitmap_format.
+
+<procedure>(bitmap-flags bitmap)</procedure>
+
+Implements al_get_bitmap_flags.
+
+<procedure>(bitmap-mask->alpha! bitmap color)</procedure>
+
+Implements al_convert_mask_to_alpha.
+
+<procedure>(bitmap-clone* bitmap)</procedure>
+
+Implements al_clone_bitmap.
+
+<procedure>(bitmap-clone bitmap)</procedure>
+
+Implements al_clone_bitmap, with (free-bitmap!) declared as a finalizer.
+
+<procedure>(bitmap-locked? bitmap)</procedure>
+
+Implements al_is_bitmap_locked.
+
+<procedure>(bitmap-put-pixel! bitmap (integer x) (integer y) (color c))</procedure>
+
+Implements _al_put_pixel.
+
+<procedure>(make-sub-bitmap* bitmap (integer x) (integer y) (integer width) (integer height))</procedure>
+
+Implements al_create_sub_bitmap.
+
+<procedure>(make-sub-bitmap bitmap (integer x) (integer y) (integer width) (integer height))</procedure>
+
+Implements al_create_sub_bitmap, with (free-bitmap!) declared as a finalizer.
+
+<procedure>(sub-bitmap? bitmap)</procedure>
+
+Implements al_is_sub_bitmap.
+
+<procedure>(put-pixel (integer x) (integer y) (color c))</procedure>
+
+Implements al_put_pixel.
+
+<procedure>(put-blended-pixel (integer x) (integer y) (color c))</procedure>
+
+Implements al_put_blended_pixel.
+
+<procedure>(pixel-size pixel-format)</procedure>
+
+Implements al_get_pixel_size.
+
+<procedure>(color-map-rgb! (color c) (unsigned-byte r) (unsigned-byte g) (unsigned-byte b))</procedure>
+
+Maps rgb values onto the provided color struct, implementing al_map_rgb.
+
+<procedure>(color-map-rgba! (color c) (unsigned-byte r) (unsigned-byte g) (unsigned-byte b) (unsigned-byte a))</procedure>
+
+Maps rgba values onto the provided color struct, implementing al_map_rgba.
+
+<procedure>(color-map-rgb-float! (color c) (unsigned-byte r) (unsigned-byte g) (unsigned-byte b))</procedure>
+
+Maps rgb values onto the provided color struct, implementing al_map_rgb_f.
+
+<procedure>(color-map-rgba-float! (color c) (unsigned-byte r) (unsigned-byte g) (unsigned-byte b) (unsigned-byte a))</procedure>
+
+Maps rgba values onto the provided color struct, implementing al_map_rgba_f.
+
+<procedure>(map-rgb* r g b)</procedure>
+
+Returns a new color struct mapped to the given rgb values.
+
+<procedure>(map-rgb r g b)</procedure>
+
+Returns a new color struct mapped to the given rgb values, with (free-color!) declared as a finalizer.
+
+<procedure>(map-rgba* r g b a)</procedure>
+
+Prodcues a new color struct mapped to the given rgba values.
+
+<procedure>(map-rgba r g b a)</procedure>
+
+Returns a new color struct mapped to the given rgba values, with (free-color!) declared as a finalizer.
+
+<procedure>(map-rgb-float* r g b)</procedure>
+
+Returns a new color struct mapped to the given rgb values.
+
+<procedure>(map-rgb-float r g b)</procedure>
+
+Returns a new color struct mapped to the given rgb values, with (free-color!) declared as a finalizer.
+
+<procedure>(map-rgba-float* r g b a)</procedure>
+
+Returns a new color struct mapped to the given rgba values.
+
+<procedure>(map-rgba-float r g b a)</procedure>
+
+Returns a new color struct mapped to the given rgba values, with (free-color!) declared as a finalizer.
+
+<procedure>(color-unmap-rgb color)</procedure>
+
+Returns a 3-element list of the rgb values representing a given color struct.
+
+<procedure>(color-unmap-rgba color)</procedure>
+
+Returns a 4-element list of the rgba values representing a given color struct.
+
+<procedure>(color-unmap-rgb-float color)</procedure>
+
+Returns a 3-element list of the rgb values representing a given color struct.
+
+<procedure>(color-unmap-rgba-float color)</procedure>
+
+Returns a 4-element list of the rgb values representing a given color struct.
+
+<procedure>(pixel-format-bits pixel-format)</procedure>
+
+Implements al_get_pixel_format_bits.
+
+<procedure>(clipping-rectangle)</procedure>
+
+Returns a 4-element list of the x, y, width and height values of the current clipping rectangle.
+
+<procedure>(clippingle-rectangle-set! (integer x) (integer y) (integer width) (integer height))</procedure>
+
+Sets the current clipping rectangle.
+
+<procedure>(blender)</procedure>
+
+Returns a 3-element list of the op, source and destination of the current blender.
+
+<procedure>(blender-set! (blend-operation op) (integer source) (integer destination))</procedure>
+
+Implements al_set_blender.
+
+<procedure>(separate-blender)</procedure>
+
+Returns a 6-element list of the op, source, destination, alpha op, alpha source, and alpha destination.
+
+<procedure>(separate-blender-set! (blend-operation op) (integer src) (integer destination) (integer alpha-op) (integer alpha-source) (integer alpha-destination))</procedure>
+
+Implements al_set_separate_blender. 
+
+=== Bitmap I/O
+
+<procedure>(register-bitmap-loader (string extension) (function bitmap ((const c-string))))</procedure>
+
+Implements al_register_bitmap_loader.
+
+<procedure>(register-bitmap-file-loader (string extension) (function bitmap (file)))</procedure>
+
+Implements al_register_bitmap_loader_f.
+
+<procedure>(register-bitmap-saver (string extension) ((function bool ((const c-string) bitmap)) saver))</procedure>
+
+Implements al_register_bitmap_saver.
+
+<procedure>(register-bitmap-file-saver (string extension) ((function bool (file bitmap)) saver))</procedure>
+
+Implements al_register_bitmap_saver_f.
+
+<procedure>(load-bitmap* string)</procedure>
+
+Implements al_load_bitmap.
+
+<procedure>(load-bitmap string)</procedure>
+
+Implements al_load_bitmap, with (free-bitmap!) declared as a finalizer.
+
+<procedure>(load-bitmap-from-file* file string)</procedure>
+
+Implements al_load_bitmap_f.
+
+<procedure>(load-bitmap-from-file file string)</procedure>
+
+Implements al_load_bitmap_f, with (free-bitmap!) declared as a finalizer.
+
+<procedure>(bitmap-save bitmap string)</procedure>
+
+Implements al_save_bitmap.
+
+<procedure>(bitmap-save-to-file bitmap file string)</procedure>
+
+Implements al_save_bitmap_f.
+
+=== Color
+
+<procedure>(color-addon-version)</procedure>
+
+Implements al_get_allegro_color_version.
+
+<procedure>(hsv->rgb (float h) (float s) (float v))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->hsl (float red) (float green) (float blue))</procedure>
+
+Returns a 3-element list consisting of the hsl elements.
+
+<procedure>(hsl->rgb (float hue) (float saturation) (float lightness))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(name->rgb string)</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->name (float red) (float green) (float blue))</procedure>
+
+Returns a string representation of the rgb elements.
+
+<procedure>(cmyk->rgb (float cyan) (float magenta) (float yellow) (float key))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->cmyk (float red) (float green) (float blue))</procedure>
+
+Returns a 4-element list consisting of the cmyk elements.
+
+<procedure>(yuv->rgb (float y) (float u) (float v))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->yuv (float red) (float green) (float blue))</procedure>
+
+Returns a 3-element list consisting of the yuv elements.
+
+<procedure>(rgb->html (float red) (float green) (float blue))</procedure>
+
+Returns a string consisting of the html representation.
+
+<procedure>(html->rgb string)</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(make-color-rgb* (integer r) (integer g) (integer b))</procedure>
+
+Creates a color struct from rgb elements.
+
+<procedure>(make-color-rgb (integer r) (integer g) (integer b))</procedure>
+
+Creates a color struct from rgb elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-rgba*(integer r) (integer g) (integer b) (integer a))</procedure>
+
+Creates a color struct from rgba elements.
+
+<procedure>(make-color-rgba (integer r) (integer g) (integer b) (integer a))</procedure>
+
+Creates a color struct from rgba elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-yuv* (integer y) (integer u) (integer v))</procedure>
+
+Creates a color struct from yuv elements.
+
+<procedure>(make-color-yuv (integer y) (integer u) (integer v))</procedure>
+
+Creates a color struct from yuv elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-cmyk* (integer c) (integer m) (integer y) (integer k))</procedure>
+
+Creates a color struct from cmyk elements.
+
+<procedure>(make-color-cmyk  (integer c) (integer m) (integer y) (integer k))</procedure>
+
+Creates a color struct from cmyk elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-hsl*(integer h) (integer s) (integer l))</procedure>
+
+Creates a color struct from hsl elements.
+
+<procedure>(make-color-hsl  (integer h) (integer s) (integer l))</procedure>
+
+Creates a color struct from hsl elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-hsv*(integer h) (integer s) (integer v))</procedure>
+
+Creates a color struct from hsv elements.
+
+<procedure>(make-color-hsv  (integer h) (integer s) (integer v))</procedure>
+
+Creates a color struct from hsv elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-name* string)</procedure>
+
+Creates a color struct from a string name.
+
+<procedure>(make-color-name string)</procedure>
+
+Creates a color struct from a string name, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-html* string)</procedure>
+
+Creates a color struct from a html representation.
+
+<procedure>(make-color-html string)</procedure>
+
+Creates a color struct from a html representation, with (free-color!) declared as a finalizer.
+
+<procedure>(color-yuv! color (float y) (float u) (float v))</procedure>
+
+Maps yuv elements to a color struct.
+
+<procedure>(color-cmyk! color (float c) (float m) (float y) (float k))</procedure>
+
+Maps cmyk elements to a color struct.
+
+<procedure>(color-hsl! color (float h) (float s) (float l))</procedure>
+
+Maps hsl elements to a color struct.
+
+<procedure>(color-hsv! color (float h) (float s) (float v))</procedure>
+
+Maps hsv elements to a color struct.
+
+<procedure>(color-name! color string)</procedure>
+
+Maps a color name to a color struct.
+
+<procedure>(color-html! color string)</procedure>
+
+Maps a html representation to a color struct.
+
+=== Config Files
+
+<procedure>(make-config*)</procedure>
+
+Implements al_create_config.
+
+<procedure>(make-config)</procedure>
+
+Implements al_create_config, with (free-config!) declared as a finalizer.
+
+<procedure>(free-config! config)</procedure>
+
+Implements al_destroy_config.
+
+<procedure>(config-section-add! config string)</procedure>
+
+Implements al_add_config_section.
+
+<procedure>(config-value-set! config (string section) (string key) (string value))</procedure>
+
+Implements al_set_config_value.
+
+<procedure>(config-comment-add! config (string section) (string comment))</procedure>
+
+Implements al_add_config_comment.
+
+<procedure>(config-value config (string section) (string key))</procedure>
+
+Implements al_get_config_value.
+
+<procedure>(load-config* string)</procedure>
+
+Implements al_load_config_file.
+
+<procedure>(load-config string)</procedure>
+
+Implements al_load_config_file, with (free-config!) decalred as a finalizer.
+
+<procedure>(load-config-from-file* file)</procedure>
+
+Implements al_load_config_file_f.
+
+<procedure>(load-config-from-file file)</procedure>
+
+Implements al_load_config_file_f, with (free-config!) declared as a finalizer.
+
+<procedure>(config-save config string)</procedure>
+
+Implements al_save_config_file.
+
+<procedure>(config-save-to-file config file)</procedure>
+
+Implements al_save_config_file_f.
+
+<procedure>(config-merge! config config)</procedure>
+
+Implements al_merge_config_into.
+
+<procedure>(config-merge config config)</procedure>
+
+Implements al_merge_config.
+
+<procedure>(config-sections config)</procedure>
+
+Creates an iterator that covers the sections of the given config.
+
+Returns values of the form (list config-section promise).
+
+(force) the promise to get the next section.
+
+Needs testing!
+
+<procedure>(config-entries config config-section)</procedure>
+
+Creates an iterator that covers the entries of the given config and config-section.
+
+Returns values of the form (list config-entry promise).
+
+(force) the promise to get the next entry.
+
+Needs testing!
+
+=== Debugging
+
+<procedure>(trace-prefix (string channel) (int level) (string file) (int line) (string function))</procedure>
+
+Implements _al_trace_prefix.
+
+<procedure>(trace-level-debug)</procedure>
+
+Implements ALLEGRO_DEBUG.
+
+<procedure>(trace-level-info)</procedure>
+
+Implements ALLEGRO_INFO.
+
+<procedure>(trace-level-warn)</procedure>
+
+Implements ALLEGRO_WARN.
+
+<procedure>(trace-level-error)</procedure>
+
+Implements ALLEGRO_ERROR.
+
+<procedure>(debug-assert bool)</procedure>
+
+Implements ALLEGRO_ASSERT.
+
+=== Display
+
+<procedure>(new-display-refresh-rate)</procedure>
+
+Implements al_get_new_display_refresh_rate.
+
+<procedure>(new-display-refresh-rate-set! integer)</procedure>
+
+Implements al_set_new_display_refresh_rate.
+
+<procedure>(new-display-flags)</procedure>
+
+Implements al_get_new_display_flags.
+
+<procedure>(new-display-flags-set! integer)</procedure>
+
+Implements al_set_new_display_flags.
+
+<procedure>(new-display-adapter)</procedure>
+
+Implements al_get_new_display_adapter.
+
+<procedure>(new-display-adapter-set! integer)</procedure>
+
+Implements al_set_new_display_adpater.
+
+<procedure>(new-display-window-position)</procedure>
+
+Returns a 2-element list consisting of the new display coordinates.
+
+<procedure>(new-display-window-position-set! (integer x) (integer y))</procedure>
+
+Sets the a new display's window position.
+
+<procedure>(new-display-option-value display-option)</procedure>
+
+Retrieves the value for a particular display-option for newly created displays.
+
+<procedure>(new-display-option-importance display-option)</procedure>
+
+Retrieves the importance for a particular display-option for newly created dispalys.
+
+<procedure>(new-display-option-set! display-option (integer value) display-option-importance)</procedure>
+
+Implements al_set_new_display_option.
+
+<procedure>(new-display-reset-options)</procedure>
+
+Implements al_reset_new_display_options.
+
+<procedure>(make-display* (integer width) (integer height))</procedure>
+
+Implements al_create_display.
+
+<procedure>(make-display (integer width) (integer height))</procedure>
+
+Implements al_create_display, with (free-display!) declared as a finalizer.
+
+<procedure>(make-display/mode* display-mode (integer adapter) (integer flags))</procedure>
+
+Creates a new display, taking the refresh rate, width and height from a display-mode struct.
+
+<procedure>(make-display/mode display-mode (integer adapter) (integer flags))</procedure>
+
+Creates a new display, taking the refresh rate, width and height from a display-mode struct, with (free-display-mode!) declared as a finalizer.
+
+<procedure>(free-display! display)</procedure>
+
+Implements al_destroy_display.
+
+<procedure>(current-display)</procedure>
+
+Implements al_get_current_display.
+
+<procedure>(display-mode-count)</procedure>
+
+Implements al_get_num_display_modes.
+
+<procedure>(display-mode-init! display-mode (integer index))</procedure>
+
+Implements al_get_display_mode, returning #f if unsuccessful.
+
+<procedure>(update-display-region! (integer x) (integer y) (integer width) (integer height))</procedure>
+
+Implements al_update_display_region.
+
+<procedure>(compatible-bitmap? bitmap)</procedure>
+
+Implements al_is_compatible_bitmap.
+
+<procedure>(wait-for-vsync)</procedure>
+
+Implements al_wait_for_vsync.
+
+<procedure>(draw-pixel (float x) (floay y) color)</procedure>
+
+Implements al_draw_pixel.
+
+<procedure>(video-adapter-count)</procedure>
+
+Implements al_get_num_video_adapters.
+
+<procedure>(monitor-init! monitor (integer adapter))</procedure>
+
+Implements al_get_monitor_info.
+
+<procedure>(display-option display display-option)</procedure>
+
+Implements al_get_display_option.
+
+<setter>(display-hold-bitmap-drawing! bool)</setter>
+
+Implements al_hold_bitmap_drawing.
+
+<procedure>(display-bitmap-drawing-held?)</procedure>
+
+Implements al_is_bitmap_drawing_help.
+
+<procedure>(display-window-title-set! display string)</procedure>
+
+Implements al_set_window_title.
+
+<procedure>(display-width display)</procedure>
+
+Implements al_get_display_width.
+
+<procedure>(display-height display)</procedure>
+
+Implements al_get_display_height.
+
+<procedure>(display-format display)</procedure>
+
+Implements al_get_display_format.
+
+<procedure>(display-refresh-rate display)</procedure>
+
+Implements al_get_display_refresh_rate.
+
+<procedure>(display-flags display)</procedure>
+
+Implements al_get_display_flags.
+
+<procedure>(display-toggle-flag! display display-flag bool)</procedure>
+
+Implements al_toggle_display_flag.
+
+<procedure>(display-backbuffer display)</procedure>
+
+Implements al_get_backbuffer.
+
+<procedure>(display-acknowledge-resize display)</procedure>
+
+Implements al_acknowledge_resize.
+
+<procedure>(display-resize! display (integer width) (integer height))</procedure>
+
+Implements al_resize_display.
+
+<procedure>(display-event-source display)</procedure>
+
+Implements al_get_display_event_source.
+
+<procedure>(display-iconset! display bitmap)</procedure>
+
+Implements al_set_display_icon.
+
+<procedure>(clear-to-color color)</procedure>
+
+Implements al_clear_to_color.
+
+<procedure>(target-bitmap)</procedure>
+
+Implements al_get_target_bitmap.
+
+<procedure>(target-bitmap-set! bitmap)</procedure>
+
+Implements al_set_target_bitmap.
+
+<procedure>(target-backbuffer-set! display)</procedure>
+
+Implements al_set_target_backbuffer.
+
+<procedure>(flip-display)</procedure>
+
+Implements al_flip_display.
+
+=== Direct3D
+
+<procedure>(d3d-non-pow2-texture-support?)</procedure>
+
+Implements al_have_d3d_non_pow2_texture_support.
+
+<procedure>(d3d-non-square-texture-support?)</procedure>
+
+Implements al_have_d3d_non_square_texture_support.
+
+==== Bitmap Specific
+
+<procedure>(bitmap-d3d-system-texture bitmap)</procedure>
+
+Implements al_get_d3d_system_texture.
+
+<procedure>(bitmap-d3d-video-texture bitmap)</procedure>
+
+Implements al_get_d3d_video_texture.
+
+<procedure>(bitmap-d3d-texture-position bitmap)</procedure>
+
+Returns a 2-element list consisting of a u, v pair.
+
+==== Display Specific
+
+<procedure>(display-d3d-device-lost? display)</procedure>
+
+Implements al_is_d3d_device_lost.
+
+<procedure>(display-d3d-device display)</procedure>
+
+Implements al_get_d3d_device.
+
+=== Events
+
+<procedure>(user-event-type? integer)</procedure>
+
+Implements ALLEGRO_EVENT_TYPE_IS_USER.
+
+<procedure>(make-event-type (integer a) (integer b) (integer c) (integer d))</procedure>
+
+Implements ALLEGRO_GET_EVENT_TYPE.
+
+<procedure>(event-type event)</procedure>
+
+Returns the type of a given event struct.
+
+<procedure>(event->any-event event)</procedure>
+
+Converts an event to an any-event.
+
+<procedure>(event->display-event event)</procedure>
+
+Converts an event to a display-event.
+
+<procedure>(event->joystick-event event)</procedure>
+
+Converts an event to a joystick-event.
+
+<procedure>(event->keyboard-event event)</procedure>
+
+Converts an event to a keyboard-event.
+
+<procedure>(event->mouse-event event)</procedure>
+
+Converts an event to a mouse-event.
+
+<procedure>(event->timer-event event)</procedure>
+
+Converts an event to a timer-event.
+
+<procedure>(event->user-event event)</procedure>
+
+Converts an event to a user-event.
+
+<procedure>(user-event-source-init! event-source)</procedure>
+
+Implements al_init_user_event_source.
+
+<procedure>(free-user-event-source! event-source)</procedure>
+
+Implements al_destroy_user_event_source.
+
+<procedure>(emit-user-event! event-source event (function void (user-event)))</procedure>
+
+Implements al_emit_user_event.
+
+<procedure>(user-event-unref! user-event)</procedure>
+
+Implements al_unref_user_event.
+
+<procedure>(event-source-data event-source)</procedure>
+
+Implements al_get_event_source_data.
+
+<procedure>(event-source-data-set! event-source integer)</procedure>
+
+Implements al_set_event_source_data.
+
+<procedure>(make-event-queue*)</procedure>
+
+Implements al_create_event_queue.
+
+<procedure>(make-event-queue)</procedure>
+
+Implements al_create_event_queue, with (free-event-queue!) declared as a finalizer.
+
+<procedure>(free-event-queue! event-queue)</procedure>
+
+Implements al_destroy_event_queue.
+
+<procedure>(event-queue-register-source! event-queue event-source)</procedure>
+
+Implements al_register_event_source.
+
+<procedure>(event-queue-unregister-source! event-queue event-source)</procedure>
+
+Implements al_unregister_event_source.
+
+<procedure>(event-queue-empty? event-queue)</procedure>
+
+Implements al_is_event_queue_empty.
+
+<procedure>(event-queue-next! event-queue event)</procedure>
+
+Implements al_get_next_event.
+
+<procedure>(event-queue-peek! event-queue event)</procedure>
+
+Implements al_peek_next_event.
+
+<procedure>(event-queue-drop-next! event-queue)</procedure>
+
+Implements al_drop_next_event_queue.
+
+<procedure>(event-queue-flush! event-queue)</procedure>
+
+Implements al_drop_next_event.
+
+<procedure>(event-queue-wait! event-queue event)</procedure>
+
+Implements al_wait_for_event.
+
+<procedure>(event-queue-timed-wait! event-queue event float)</procedure>
+
+Implements al_wait_for_event_timed.
+
+<procedure>(event-queue-wait-until! event-queue event timeout)</procedure>
+
+Implements al_wait_for_event_until.
+
+=== Errors
+
+<procedure>(error-number)</procedure>
+
+Implements al_get_errno.
+
+<procedure>(error-number-set!)</procedure>
+
+Implements al_set_errno.
+
+=== File Operations
+
+<procedure>(make-temp-file* (string template) ((c-pointer path) out_path))</procedure>
+
+Implements al_make_temp_file.
+
+<procedure>(make-temp-file (string template) ((c-pointer path) out_path))</procedure>
+
+Implements al_make_temp_file, with (free&close-file!) declared as a finalizer.
+
+<procedure>(file-open* (string path) (string mode))</procedure>
+
+Implements al_fopen.
+
+<procedure>(file-open (string path) (string mode))</procedure>
+
+Implements al_fopen, with (free&close-file!) declared as a finalizer.
+
+<procedure>(file-open-fd* (integer file-descriptor) (string mode))</procedure>
+
+Implements al_fopen_fd.
+
+<procedure>(file-open-fd (integer file-descriptor) (string mode))</procedure>
+
+Implements al_fopen_fd, with (free&close-file!) declared as a finalizer.
+
+<procedure>(free&close-file! file)</procedure>
+
+Closes a file with (file-close!), then uses (free!) to clear the file struct from memory.
+
+<procedure>(file-close! file)</procedure>
+
+Implements al_fclose.
+
+<procedure>(file-read! file blob (integer size))</procedure>
+
+Implements al_fread.
+
+<procedure>(file-write! file blob (integer size))</procedure>
+
+Implements al_fwrite.
+
+<procedure>(file-tell file)</procedure.
+
+Implements al_ftell.
+
+<procedure>(file-seek! file (integer offset) (integer whence))</procedure>
+
+Implements al_fseek.
+
+<procedure>(file-eof? file)</procedure>
+
+Implements al_feof.
+
+<procedure>(file-error? file)</procedure>
+
+Implements al_ferror.
+
+<procedure>(file-clear-error! file)</procedure>
+
+Implements al_fclearerr.
+
+<procedure>(file-unget-chars! file (integer count))</procedure>
+
+Implements al_fungetc.
+
+<procedure>(file-size file)</procedure>
+
+Implements al_fsize.
+
+<procedure>(file-get-char! file)</procedure>
+
+Implements al_fgetc.
+
+<procedure>(file-put-char! file (integer character))</procedure>
+
+Implements al_fputc.
+
+<procedure>(file-read-16le! file)</procedure>
+
+Implements al_fread16le.
+
+<procedure>(file-read-16be! file)</procedure>
+
+Implements al_fread16be.
+
+<procedure>(file-write-16le! file integer)</procedure>
+
+Implements al_fwrite16le.
+
+<procedure>(file-read-32le! file)</procedure>
+
+Implements al_fread32le.
+
+<procedure>(file-read-32be! file)</procedure>
+
+Implements al_fread32be.
+
+<procedure>(file-write-32le! file integer)</procedure>
+
+Implements al_fwrite32le.
+
+<procedure>(file-write-32be! file integer)</procedure>
+
+Implements al_fwrite32be.
+
+<procedure>(file-get-string! file blob (integer max))</procedure>
+
+Implements al_fgets.
+
+<procedure>(file-get-utf-string*! file)</procedure>
+
+Implements al_get_ustr.
+
+<procedure>(file-get-utf-string! file)</procedure>
+
+Implements al_get_ustr, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(file-put-string! file string)</procedure>
+
+Implements al_fputs.
+
+<procedure>(file-userdata file)</procedure>
+
+Implements al_get_file_userdata.
+
+<procedure>(new-file-interface-set! file-interface)</procedure>
+
+Implements al_set_new_file_interface.
+
+<procedure>(file-interface-open* file-interface (string path) (string mode))</procedure>
+
+Implements al_fopen_interface.
+
+<procedure>(file-interface-open file-interface (string path) (string mode))</procedure>
+
+Implements al_fopen_interface, with (free&close-file!) declared as a finalizer.
+
+<procedure>(make-file-handle* file-interface (c-pointer userdata))</procedure>
+
+Implements al_create_file_handle.
+
+<procedure>(make-file-handle file-interface (c-pointer userdata))</procedure>
+
+Implements al_create_file_handle, with (free&close-file!) decalred as a finalizer.
+
+=== File System Hooks
+
+<procedure>(make-fs-entry* string)</procedure>
+
+Implements al_create_fs_entry.
+
+<procedure>(make-fs-entry string)</procedure>
+
+Implements al_create_fs_entry, with (free-fs-entry!) declared as a finalizer.
+
+<procedure>(free-fs-entry! fs-entry)</procedure>
+
+Implements al_destroy_fs_entry.
+
+<procedure>(fs-entry-name fs-entry)</procedure>
+
+Implements al_get_fs_entry_name.
+
+<procedure>(fs-entry-update! fs-entry)</procedure>
+
+Implements al_update_fs_entry.
+
+<procedure>(fs-entry-mode fs-entry)</procedure>
+
+Implements al_get_fs_entry_mode.
+
+<procedure>(fs-entry-atime fs-entry)</procedure>
+
+Implements al_get_fs_entry_atime.
+
+<procedure>(fs-entry-mtime fs-entry)</procedure>
+
+Implements al_get_fs_entry_mtime.
+
+<procedure>(fs-entry-ctime fs-entry)</procedure>
+
+Implements al_get_fs_entry_ctime.
+
+<procedure>(fs-entry-size fs-entry)</procedure>
+
+Implements al_get_fs_entry_size.
+
+<procedure>(fs-entry-exists? fs-entry)</procedure>
+
+Implements al_fs_entry_exists.
+
+<procedure>(fs-entry-remove! fs-entry)</procedure>
+
+Implements al_remove_fs_entry.
+
+<procedure>(fs-entry-open fs-enty string)</procedure>
+
+Implements al_open_fs_entry.
+
+<procedure>(fs-entry-directory-open! fs-entry)</procedure>
+
+Implements al_open_directory.
+
+<procedure>(fs-entry-directory-read fs-entry)<procedure>
+
+Implements al_read_directory.
+
+<procedure>(fs-entry-directory-close! fs-entry)</procedure>
+
+Implements al_close_directory.
+
+<procedure>(current-directory)</procedure>
+
+Implements al_get_current_directory.
+
+<procedure>(change-directory string)</procedure>
+
+Implements al_change_directory.
+
+<procedure>(make-directory string)</procedure>
+
+Implements al_make_directory.
+
+<procedure>(filename-exists? string)</procedure>
+
+Implements al_filename_exists.
+
+<procedure>(filename-remove! string)</procedure>
+
+Implements al_remove_filename.
+
+<procedure>(new-file-interface)</procedure>
+
+Implements al_get_new_file_interface.
+
+<procedure>(current-fs-interface)</procedure>
+
+Implements al_get_fs_interface.
+
+<setter>(current-fs-interface-set!)</setter>
+
+Implements al_set_fs_interface.
+
+<setter>(standard-fs-interface-set!)</setter>
+
+Implements al_set_standard_fs_interface.
+
+=== Fixed Math
+
+<procedure>(fix-to-rad integer)</procedure>
+
+Implements al_fixtorad_r.
+
+<procedure>(rad-to-fix integer)</procedure>
+
+Implements al_radtofix_r.
+
+<procedure>(fixed-sqrt integer)</procedure>
+
+Implements al_fixsqrt.
+
+<procedure>(fixed-hypot integer)</procedure>
+
+Implements al_fixhypot.
+
+<procedure>(fixed-atan integer)</procedure>
+
+Implements al_fixatan.
+
+<procedure>(fixed-atan2 integer)</procedure>
+
+Implements al_fixatan2.
+
+<procedure>(fixed-cos integer)</procedure>
+
+Wraps _al_fix_cos_tbl.
+
+<procedure>(fixed-tan integer)</procedure>
+
+Wraps _al_fix_tan_tbl.
+
+<procedure>(fixed-acos integer)</procedure>
+
+Wraps _al_fix_acos_tbl.
+
+=== Fonts
+
+<procedure>(register-font-loader (string extension) (function font (string integer integer)))</procedure>
+
+Implements al_register_font_loader.
+
+<procedure>(load-bitmap-font* string)</procedure>
+
+Implements al_load_bitmap_font.
+
+<procedure>(load-bitmap-font string)</procedure>
+
+Implements al_load_bitmap_font, with (free-font!) declared as a finalizer.
+
+<procedure>(load-font* string (integer size) (integer flags))</procedure>
+
+Implements al_load_font.
+
+<procedure>(load-font string (integer size) (integer flags))</procedure>
+
+Implements al_load_font, with (free-font!) declared as a finalizer.
+
+<procedure>(make-font-from-bitmap* bitmap (integer n) (s32vector ranges))</procedure>
+
+Implements al_grab_font_from_bitmap.
+
+<procedure>(make-font-from-bitmap bitmap (integer n) (s32vector ranges))</procedure>
+
+Implements al_grab_font_from_bitmap, with (free-font!) declared as a finalizer.
+
+<procedure>(free-font! font)</procedure>
+
+Implements al_destroy_font.
+
+<procedure>(font-draw-utf (font f) (color c) (float x) (float y) (font-align flags) (utf-string ustr))</procedure>
+
+Implements al_draw_ustr.
+
+<procedure>(font-draw-string (font f) (color c) (float x) (float y) (font-align flags) (string text))</procedure>
+
+Implements al_draw_text.
+
+<procedure>(font-draw-justified-string (font f) (color c) (float x1) (float x2) (float y) (float diff) (font-align flags) (c-string text))</procedure>
+
+Implements al_draw_justified_text.
+
+<procedure>(font-draw-justified-utf-string (font f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (utf-string text))</procedure>
+
+Implements al_draw_justified_ustr.
+
+<procedure>(font-width font string)</procedure>
+
+Implements al_get_text_width.
+
+<procedure>(font-utf-width font utf-string)</procedure>
+
+Implements al_get_ustr_width.
+
+<procedure>(font-line-height font)</procedure>
+
+Implements al_get_font_line_height.
+
+<procedure>(font-ascent font)</procedure>
+
+Implements al_get_font_ascent.
+
+<procedure>(font-descent font)</procedure>
+
+Implements al_get_font_descent.
+
+<procedure>(font-utf-dimensions (font f) (utf-string text))</procedure>
+
+Returns a 4-element list consisting of the bounding box elements: x, y, width and height.
+
+<procedure>(font-dimensions (font f) (string text))</procedure>
+
+Returns a 4-element list consisting of the bounding box elements: x, y, width and height.
+
+<procedure>(font-addon-install)</procedure>
+
+Implements al_init_font_addon.
+
+<procedure>(font-addon-uninstall)</procedure>
+
+Implements al_shutdown_font_addon.
+
+<procedure>(font-addon-version)</procedure>
+
+Implements al_get_allegro_font_version.
+
+=== Image Formats
+
+<procedure>(image-addon-install)</procedure>
+
+Implements al_init_image_addon.
+
+<procedure>(image-addon-uninstall)</procedure>
+
+Implements al_shutdown_image_addon.
+
+<procedure>(image-addon-version)</procedure>
+
+Implements al_get_allegro_image_version.
+
+=== Joystick
+
+<procedure>(joystick-addon-install)</procedure>
+
+Implements al_install_joystick.
+
+<procedure>(joystick-addon-uninstall)</procedure>
+
+Implements al_uninstall_joystick.
+
+<procedure>(joystick-addon-installed?)<procedure>
+
+Implements al_is_joystick_installed.
+
+<procedure>(joystick-addon-reconfigure)</procedure>
+
+Implements al_reconfigure_joysticks.
+
+<procedure>(joystick-event-source)<procedure>
+
+Implements al_get_joystick_event_source.
+
+<procedure>(joystick-count)</procedure>
+
+Implements al_get_num_joysticks.
+
+<procedure>(joystick-ref integer)</procedure>
+
+Implements al_get_joystick.
+
+<procedure>(joystick-release joystick)</procedure>
+
+Implements al_release_joystick.
+
+<procedure>(joystick-active? joystick)</procedure>
+
+Implements al_get_joystick_active.
+
+<procedure>(joystick-name joystick)</procedure>
+
+Implements al_get_joystick_name.
+
+<procedure>(joystick-axes-count joystick (integer stick))</procedure>
+
+Implements al_get_joystick_num_axes.
+
+<procedure>(joystick-button-count joystick)</procedure>
+
+Implements al_get_joystick_num_buttons.
+
+<procedure>(joystick-button-name joystick (integer button))<procedure>
+
+Implements al_get_joystick_button_name.
+
+<procedure>(joystick-state-init! joystick-state joystick)</procedure>
+
+Implements al_get_joystick_state.
+
+<procedure>(joystick-state-axis joystick-state (integer stick) (integer axis))</procedure>
+
+Retrieves desired axis value for a particular stick; #f if either stick or axis is out of available bounds.
+
+=== Keyboard
+
+<procedure>(keyboard-addon-installed?)</procedure>
+
+Implements al_is_keyboard_installed.
+
+<procedure>(keyboard-addon-install)</procedure>
+
+Implements al_install_keyboard.
+
+<procedure>(keyboard-addon-uninstall)</procedure>
+
+Implements al_uninstall_keyboard.
+
+<procedure>(keycode->string key)</procedure>
+
+Implements al_keycode_to_name. Not strictly necessary, since the enums are symbols which can easily be converted to strings.
+
+<procedure>(keyboard-event-source)</procedure>
+
+Implements al_get_keyboard_event_source.
+
+<procedure>(keyboard-led-set! integer)</procedure>
+
+Implements al_set_keyboard_leds.
+
+<procedure>(keyboard-state-init! keyboard-state)</procedure>
+
+Implements al_get_keyboard_state.
+
+<procedure>(keyboard-state-key-down? keyboard-state key)</procedure>
+
+Implements al_key_down.
+
+<constant>(keyboard-three-finger-flag?)</constant>
+
+Wraps _al_three_finger_flag.
+
+<constant>(keyboard-led-flag?)</constant>
+
+Wraps _al_key_led_flag.
+
+=== Memory
+
+<procedure>(memory-interface-set! memory-interface)</procedure>
+
+Implements al_set_memory_interface.
+
+<procedure>(malloc* integer)</procedure>
+
+Implements al_malloc.
+
+<procedure>(malloc integer)</procedure>
+
+Implements al_malloc, with (free!) declared as a finalizer.
+
+<procedure>(free! ptr)</procedure>
+
+Implements al_free.
+
+<procedure>(realloc* ptr integer)</procedure>
+
+Implements al_realloc.
+
+<procedure>(realloc ptr integer)</procedure>
+
+Implements al_realloc, with (free!) declared as a finalizer.
+
+<procedure>(calloc* integer integer)</procedure>
+
+Implements al_calloc.
+
+<procedure>(calloc integer integer)</procedure>
+
+Implements al_calloc, with (free!) declared as a finalizer.
+
+<procedure>(malloc/context* (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_malloc_with_context.
+
+<procedure>(malloc/context (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_malloc_with_context, with (free/context!) declared as a finalizer.
+
+<procedure>(free/context! ptr (int line) (string file) (string function))</procedure>
+
+Implements al_free_with_context.
+
+<procedure>(realloc/context* ptr (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_realloc_with_context.
+
+<procedure>(realloc/context ptr (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_realloc_with_context, with (free/context!) declared as a finalizer.
+
+<procedure>(calloc/context* (int count) (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_calloc_with_context.
+
+<procedure>(calloc/context (int count) (int size) (int line) (string file) (string function))</procedure>
+
+Implements al_calloc_with_context, with (free/context!) declared as a finalizer.
+
+=== Memory Files
+
+<procedure>(open-memfile* (c-pointer mem) (unsigned-integer size) (string mode))</procedure>
+
+Implements al_open_memfile.
+
+<procedure>(open-memfile (c-pointer mem) (unsigned-integer size) (string mode))</procedure>
+
+Implements al_open_memfile, with (free&close-file!) declared as a finalizer.
+
+<procedure>(memfile-version)</procedure>
+
+Implements al_get_allegro_memfile_version.
+
+=== Miscellaneous
+
+<procedure>(combine-flags converter flags)</procedure>
+
+For combining enum flags together, ie:
+
+<enscript highlight="scheme">
+(combine-flags display-flag->int '(windowed opengl resizable generate-expose-events))
+</enscript>
+
+<procedure>(make-id a b c d)</procedure>
+
+Implements AL_ID.
+
+<procedure>(run-main argc argv (function integer (integer (c-pointer c-string))))</procedure>
+
+Implements al_run_main.
+
+<procedure>(init-everything)</procedure>
+
+Initializes all sub-systems.
+
+<procedure>(init-symbol s)</procedure>
+
+Initializes sub-systems by symbol-name. Valid symbols are: allegro, audio, font, image, joystick, keyboard, mouse, primitives, and ttf.
+
+<procedure>(init-this arg)</procedure>
+
+Initializes sub-systems either by a single symbol or by a list of symbols. Ie:
+
+<enscript highlight="scheme">
+(init-this (list 'allegro 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf))
+</enscript>
+
+<procedure>(uninstall-everything)</procedure>
+
+Attempts to uninitialize all loaded sub-systems.
+
+<procedure>(uninstall-this arg)</procedure>
+
+Attempts to uninitialize sub-systems by either a single symbol or by a list of symbols. Ie:
+
+<enscript highlight="scheme">
+(uninstall-this (list 'system 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf))
+</enscript>
+
+=== Mouse
+
+<procedure>(mouse-addon-installed?)</procedure>
+
+Implements al_is_mouse_installed.
+
+<procedure>(mouse-addon-install)</procedure>
+
+Implements al_install_mouse.
+
+<procedure>(mouse-addon-uninstall)</procedure>
+
+Implements al_uninstall_mouse.
+
+<procedure>(mouse-button-count)</procedure>
+
+Implements al_get_mouse_num_buttons.
+
+<procedure>(mouse-axes-count)</procedure>
+
+Implements al_get_mouse_num_axes.
+
+<procedure>(mouse-xy-set! display (integer x) (integer y))</procedure>
+
+Implements al_set_mouse_xy.
+
+<procedure>(mouse-z-set! display integer)</procedure>
+
+Implements al_set_mouse_z.
+
+<procedure>(mouse-w-set! display integer)</procedure>
+
+Implements al_set_mouse_w.
+
+<procedure>(mouse-event-source)</procedure>
+
+Implements al_get_mouse_event_source.
+
+<procedure>(mouse-state-init! mouse-state)</procedure.
+
+Implements al_get_mouse_state.
+
+<procedure>(mouse-state-button-down mouse-state (integer button))</procedure>
+
+Implements al_mouse_button_down.
+
+<procedure>(mouse-state-axis mouse-state (integer axis))</procedure>
+
+Implements al_get_mouse_state_axis.
+
+<procedure>(mouse-axis-set! (integer axis) (integer value))</procedure>
+
+Implements al_set_mouse_axis.
+
+<procedure>(make-cursor* (bitmap sprite) (integer xfocus) (integer yfocus))</procedure>
+
+Implements al_create_mouse_cursor.
+
+<procedure>(make-cursor (bitmap sprite) (integer xfocus) (integer yfocus))</procedure>
+
+Implements al_create_mouse_cursor, with (free-cursor!) declared as a finalizer.
+
+<procedure>(free-cursor! cursor)</procedure>
+
+Implements al_destroy_mouse_cursor.
+
+<procedure>(mouse-cursor-position)</procedure>
+
+Returns a 2-element list consisting of the x and y position of the mouse cursor.
+
+<procedure>(mouse-ungrab)</procedure>
+
+Implements al_ungrab_mouse.
+
+<procedure>(display-grab-mouse! display)</procedure>
+
+Implements al_grab_mouse.
+
+<procedure>(display-cursor-set! display mouse-cursor)</procedure>
+
+Implements al_set_mouse_cursor.
+
+<procedure>(display-hide-cursor! display)</procedure>
+
+Implements al_hide_mouse_cursor.
+
+<procedure>(display-system-mouse-cursor-set! display cursor-type)</procedure>
+
+Implements al_set_system_mouse_cursor.
+
+=== OpenGL
+
+<procedure>(opengl-addon-version)</procedure>
+
+Implements al_get_opengl_version.
+
+<procedure>(opengl-extension-exists? string)</procedure>
+
+Implements al_have_opengl_extension.
+
+<procedure>(opengl-proc-address string)</procedure>
+
+Implements al_get_opengl_proc_address.
+
+<procedure>(opengl-texture bitmap)</procedure>
+
+Implements al_get_opengl_texture.
+
+<procedure>(opengl-remove-fbo! bitmap)</procedure>
+
+Implements al_remove_opengl_fbo.
+
+<procedure>(opengl-fbo bitmap)</procedure>
+
+Implements al_get_opengl_fbo.
+
+<procedure>(opengl-texture-size bitmap)</procedure>
+
+Returns a 2-element list of the width and height of the opengl texture for the given bitmap.
+
+<procedure>(opengl-texture-position bitmap)</procedure>
+
+Returns a 2-element list of the u,v position of the opengl texture for the given bitmap.
+
+<procedure>(opengl-context-set! display)</procedure>
+
+Implements al_set_current_opengl_context.
+
+<procedure>(opengl-variant)</procedure>
+
+Implements al_get_opengl_variant.
+
+=== Paths
+
+<procedure>(make-path* string)</procedure>
+
+Implements al_create_path.
+
+<procedure>(make-path string)<procedure>
+
+Implements al_create_path, with (free-path!) declared as a finalizer.
+
+<procedure>(make-path-for-directory* string)</procedure>
+
+Implements al_create_path_for_directory.
+
+<procedure>(make-path-for-directory string)</procedure>
+
+Implements al_create_path_for_directory, with (free-path!) declared as a finalizer.
+
+<procedure>(free-path! path)</procedure>
+
+Implements al_destroy_path.
+
+<procedure>(path->string path (char separator))</procedure>
+
+Implements al_path_cstr.
+
+<procedure>(path-component-count path)</procedure>
+
+Implements al_get_path_num_components.
+
+<procedure>(path-component path integer)</procedure>
+
+Implements al_get_path_compoenent.
+
+<setter>(path-component-set! path integer string)</setter>
+
+Implements al_replace_path_component.
+
+<procedure>(path-component-remove! path integer)</procedure>
+
+Implements al_remove_path_component.
+
+<procedure>(path-component-insert! path integer string)</procedure>
+
+Implements al_insert_path_component.
+
+<procedure>(path-clone path)</procedure>
+
+Implements al_clone_path.
+
+<procedure>(path-tail path)</procedure>
+
+Implements al_get_path_tail.
+
+<procedure>(path-drop-tail! path)</procedure>
+
+Implements al_drop_path_tail.
+
+<procedure>(path-append! path string)</procedure>
+
+Implements al_append_path_component.
+
+<procedure>(path-join! path path)</procedure>
+
+Implements al_join_paths.
+
+<procedure>(path-rebase! path path)</procedure>
+
+Implements al_rebase_path.
+
+<procedure>(path-drive path)</procedure>
+
+Implements al_get_path_drive.
+
+<setter>(path-drive-set! path string)</setter>
+
+Implements al_set_path_drive.
+
+<procedure>(path-filename path)</procedure>
+
+Implements al_get_path_filename.
+
+<setter>(path-filename-set! path string)</setter>
+
+Implements al_set_path_filename.
+
+<procedure>(path-extension path)</procedure>
+
+Implements al_get_path_extension.
+
+<setter>(path-extension-set! path string)</setter>
+
+Implements al_set_path_extension.
+
+<procedure>(path-basename path)</procedure>
+
+Implements al_get_path_basename.
+
+<procedure>(path-make-canonical! path)</procedure>
+
+Implements al_make_path_canonical.
+
+=== PhysicsFS
+
+See also: the [[physfs]] egg.
+
+<procedure>(enable-physfs-file-interface)</procedure>
+
+Implements al_set_physfs_file_interface.
+
+<procedure>(physfs-addon-version)</procedure>
+
+Implements al_get_allegro_physfs_version.
+
+=== Primitives
+
+<procedure>(primitives-addon-version)</primitives>
+
+Implements al_get_allegro_primitives_version.
+
+<procedure>(primitives-addon-install)</primitives>
+
+Implements al_init_primitives_addon.
+
+<procedure>(primitives-addon-uninstall)</primitives>
+
+Implements al_shutdown_primitives_addon.
+
+<procedure>(make-vertex-declaration* vertex-element integer)</procedure>
+
+Implements al_create_vertex_decl.
+
+<procedure>(make-vertex-declaration vertex-element integer)</procedure>
+
+Implements al_create_vertex_decl, with (free-vertex-declaration!) declared as a finalizer.
+
+<procedure>(free-vertex-declaration! vertex-declaration)</procedure>
+
+Implements al_destroy_vertex_decl.
+
+<procedure>(draw-primitive (c-pointer vertices) vertex-declaration bitmap (integer start) (integer end) primitive-type)</procedure>
+
+Implements al_draw_prim.
+
+<procedure>(draw-indexed-primitive (c-pointer vertices) vertex-declaration bitmap (s32-vector indices) (integer count) primitive-type)</procedure>
+
+Implements al_draw_indexed_prim.
+
+<procedure>(draw-soft-triangle (vertex v1) (vertex v2) (vertex v3) (uintptr state)
+                                                 ((function void (uintptr vertex vertex vertex)) init)
+                                                 ((function void (uintptr int int int int)) first)
+                                                 ((function void (uintptr int)) step)
+                                                 ((function void (uintptr int int int)) draw))</procedure>
+
+Implements al_draw_soft_triangle.
+
+<procedure>(draw-soft-line (vertex v1) (vertex v2) (uintptr state)
+                                              ((function void (uintptr int int vertex vertex)) first)
+                                              ((function void (uintptr int)) step)
+                                              ((function void (uintptr int int)) draw))</procedure>
+
+Implements al_draw_soft_line.
+
+<procedure>(draw-line (float x1) (float y1) (float x2) (float y2) (color c) (float thickness))</procedure>
+
+Implements al_draw_line.
+
+<procedure>(draw-triangle (float x1) (float y1) (float x2) (float y2) (float x3) (float y3) (color c) (float thickness))</procedure>
+
+Implements al_draw_triangle.
+
+<procedure>(draw-rectangle (float x1) (float y1) (float x2) (float y2) (color c) (float thickness))</procedure>
+
+Implements al_draw_rectangle.
+
+<procedure>(draw-rounded-rectangle (float x1) (float y1) (float x2) (float y2) (float rx) (float ry) (color c) (float thickness))</procedure>
+
+Implements al_draw_rounded_rectangle.
+
+<procedure>(draw-circle (float cx) (float cy) (float r) (color c) (float thickness))</procedure>
+
+Implements al_draw_circle.
+
+<procedure>(draw-ellipse (float cx) (float cy) (float rx) (float ry) (color c) (float thickness))</procedure>
+
+Implements al_draw_ellipse.
+
+<procedure>(draw-arc (float cx) (float cy) (float r) (float start_theta) (float delta_theta) (color c) (float thickness))</procedure>
+
+Implements al_draw_arc.
+
+<procedure>(draw-spline (f32vector points) (color c) (float thickness))</procedure>
+
+Implements al_draw_spline.
+
+<procedure>(draw-ribbon (f32vector points) (integer32 stride) (color c) (float thickness) (integer32 num_segments))</procedure>
+
+Implements al_draw_ribbon.
+
+<procedure>(draw-triangle/fill (float x1) (float y1) (float x2) (float y2) (float x3) (float y3) (color c))</procedure>
+
+Implements al_draw_filled_triangle.
+
+<procedure>(draw-rectangle/fill (float x1) (float y1) (float x2) (float y2) (color c))</procedure>
+
+Implements al_draw_filled_rectangle.
+
+<procedure>(draw-rounded-rectangle/fill (float x1) (float y1) (float x2) (float y2) (float rx) (float ry) (color c))</procedure>
+
+Implements al_draw_filled_rounded_rectangle.
+
+<procedure>(draw-circle/fill (float cx) (float cy) (float r) (color c))</procedure>
+
+Implements al_draw_filled_circle.
+
+<procedure>(draw-ellipse/fill (float cx) (float cy) (float rx) (float ry) (color c))</procedure>
+
+Implements al_draw_filled_ellipse.
+
+<procedure>(calculate-arc (integer32 stride) (float cx) (float cy) (float rx) (float ry) (float start_theta) (float delta_theta) (float thickness) (integer32 num_segments))</procedure>
+
+Implements al_calculate_arc.
+
+<procedure>(calculate-spline (integer32 stride) (f32vector points) (float thickness) (int num_segments))</procedure>
+
+Implements al_calculate_spline.
+
+<procedure>(calculate-ribbon (integer32 dest_stride) ((const f32vector) points) (integer32 points_stride) (float thickness) (integer32 num_segments))</procedure>
+
+Implements al_calculate_ribbon.
+
+=== System
+
+<procedure>(init)</procedure>
+
+Implements al_init.
+
+<procedure>(inhibit-screensaver bool)</procedure>
+
+Implements al_inhibit_screensaver.
+
+<procedure>(org-name)</procedure>
+
+Implements al_get_org_name.
+
+<setter>(org-name-set! string)</setter>
+
+Implements al_set_org_name.
+
+<procedure>(app-name)</procedure>
+
+Implements al_get_app_name.
+
+<setter>(app-name-set! string)</procedure>
+
+Implements al_set_app_name.
+
+<procedure>(system-addon-uninstall)</procedure>
+
+Implements al_uninstall_system.
+
+<procedure>(system-addon-installed?)</procedure>
+
+Implements al_is_system_installed.
+
+<procedure>(system-driver)</procedure>
+
+Implements al_get_system_driver.
+
+<procedure>(system-config)</procedure>
+
+Implements al_get_system_config.
+
+<procedure>(standard-path system-path)</procedure>
+
+Implements al_get_standard_path.
+
+=== Threads
+
+WARNING: Untested, may not interact well with Chicken.
+
+Please, please tell me about your successes and workarounds. I'll fix the egg as called for.
+
+<procedure>(make-thread* (function c-pointer (thread c-pointer)) c-pointer)</procedure>
+
+Implements al_create_thread.
+
+<procedure>(make-thread (function c-pointer (thread c-pointer)) c-pointer)</procedure>
+
+Implements al_create_thread, with (free-thread!) declared as a finalizer.
+
+<procedure>(free-thread! thread)</procedure>
+
+Implements al_destroy_thread.
+
+<proceudre>(run-detached-thread (function c-pointer (c-pointer)) c-pointer)</procedure>
+
+Implements al_run_detached_thread.
+
+<procedure>(thread-start! thread)</procedure>
+
+Implements al_start_thread.
+
+<procedure>(thread-join! thread ((c-pointer c-pointer) ret_value))</procedure>
+
+Implements al_join_thread.
+
+<procedure>(thread-should-stop? thread)</procedure>
+
+Implements al_get_thread_should_stop.
+
+<setter>(thread-should-stop-set! thread)</setter>
+
+Implements al_set_thread_should_stop.
+
+<procedure>(make-mutex*)</procedure>
+
+Implements al_create_mutex.
+
+<procedure>(make-mutex)</procedure>
+
+Implements al_create_mutex, with (free-mutex!) declared as a finalizer.
+
+<procedure>(free-mutex! mutex)</procedure>
+
+Implements al_destroy_mutex.
+
+<procedure>(make-mutex-recursive*)</procedure>
+
+Implements al_create_mutex_recursive.
+
+<procedure>(make-mutex-recursive)</procedure>
+
+Implements al_create_mutex_recursive, with (free-mutex!) declared as a finalizer.
+
+<procedure>(mutex-lock! mutex)</procedure>
+
+Implements al_lock_mutex.
+
+<procedure>(mutex-unlock! mutex)</procedure>
+
+Implements al_unlock_mutex.
+
+<procedure>(make-condition*)</procedure>
+
+Implements al_create_cond.
+
+<procedure>(make-condition)</procedure>
+
+Implements al_create_cond, with (free-condition!) declared as a finalizer.
+
+<procedure>(free-condition! condition)</procedure>
+
+Implements al_destroy_cond.
+
+<procedure>(condition-wait condition mutex)</procedure>
+
+Implements al_wait_cond.
+
+<procedure>(condition-wait-until condition mutex timeout)</procedure>
+
+Implements al_wait_cond_until.
+
+<procedure>(condition-broadcast condition)</procedure>
+
+Implements al_broadcast_cond.
+
+<procedure>(condition-signal condition)</procedure>
+
+Implements al_signal_cond.
+
+=== Thread Local Storage
+
+<procedure>(state-store! state state-flag)</procedure>
+
+Implements al_store_state.
+
+<procedure>(state-restore state)</procedure>
+
+Implements al_restore_state.
+
+=== Time
+
+<procedure>(current-time)</procedure>
+
+Implements al_get_time.
+
+<procedure>(rest double)</procedure>
+
+Implements al_rest.
+
+<procedure>(timeout-init! timeout double)</procedure>
+
+Implements al_init_timeout.
+
+=== Timer
+
+<procedure>(make-timer* double)</procedure>
+
+Implements al_create_timer.
+
+<procedure>(make-timer double)</procedure>
+
+Implements al_create_timer, with (free-timer!) declared as a finalizer.
+
+<procedure>(free-timer! timer)</procedure>
+
+Implements al_destroy_timer.
+
+<procedure>(usec->sec double)</procedure>
+
+Implements ALLEGRO_USECS_TO_SECS.
+
+<procedure>(msec->sec double)</procedure>
+
+Implements ALLEGRO_MSECS_TO_SECS.
+
+<procedure>(bps->sec double)</procedure>
+
+Implements ALLEGRO_BPS_TO_SECS.
+
+<procedure>(bpm->sec double)</procedure>
+
+Implements ALLEGRO_BPM_TO_SECS.
+
+<procedure>(timer-start! timer)</procedure>
+
+Implements al_start_timer.
+
+<procedure>(timer-stop! timer)</procedure>
+
+Implements al_stop_timer.
+
+<procedure>(timer-started? timer)</procedure>
+
+Implements al_get_timer_started.
+
+<procedure>(timer-speed timer)</procedure>
+
+Implements al_get_timer_speed.
+
+<setter>(timer-speed-set! timer double)</procedure>
+
+Implements al_set_timer_speed.
+
+<procedure>(timer-count timer)</procedure>
+
+Implements al_get_timer_count.
+
+<setter>(timer-count-set! timer integer)</procedure>
+
+Implements al_set_timer_count.
+
+<procedure>(timer-count-add! timer integer)</procedure>
+
+Implements al_add_timer_count.
+
+<procedure>(timer-source timer)</procedure>
+
+Implements al_get_timer_event_source.
+
+=== Transformations
+
+<procedure>(transform-use transform)</procedure>
+
+Implements al_use_transform.
+
+<procedure>(transform-copy! transform transform)</procedure>
+
+Implements al_copy_transform.
+
+<procedure>(transform-identity! transform)</procedure>
+
+Implements al_identity_transform.
+
+<procedure>(transform-build! transform (float x) (float y) (float sx) (float sy) (float theta))</procedure>
+
+Implements al_build_transform.
+
+<procedure>(transform-translate! transform (float x) (float y))</procedure>
+
+Implements al_translate_transform.
+
+<procedure>(transform-scale! transform (float sx) (float sy))</procedure>
+
+Implements al_scale_transform.
+
+<procedure>(transform-coordinates transform (float x) (float y))</procedure>
+
+Implements al_transform_coordinates; returns a 2-element list of the transformed coordinate pair.
+
+<procedure>(transform-compose! transform transform)</procedure>
+
+Implements al_compose_transform.
+
+<procedure>(transform-invert! transform)</procedure>
+
+Implements al_invert_transform.
+
+<procedure>(transform-check-inverse transform float)</procedure>
+
+Implements al_check_inverse.
+
+<procedure>(current-transform)</procedure>
+
+Implements al_get_current_transform.
+
+=== True Type Font Support
+
+<procedure>(load-ttf* (string filename) (integer size) (integer flags))</procedure>
+
+Implements al_load_ttf_font.
+
+<procedure>(load-ttf (string filename) (integer size) (integer flags))</procedure>
+
+Implements al_load_ttf_font, with (free-font!) declared as a finalizer.
+
+<procedure>(load-ttf-from-file* (file f) (string filename) (integer size) (integer flags))</procedure>
+
+Implements al_load_ttf_font_f.
+
+<procedure>(load-ttf-from-file (file f) (string filename) (integer size) (integer flags))</procedure>
+
+Implements al_load_ttf_font_f, with (free-font!) declared as a finalizer.
+
+<procedure>(ttf-addon-install)</procedure>
+
+Implements al_init_ttf_addon.
+
+<procedure>(ttf-addon-uninstall)</procedure>
+
+Implements al_shutdown_ttf_addon.
+
+<procedure>(ttf-addon-version)</procedure>
+
+Implements al_get_allegro_ttf_version.
+
+=== UTF Strings
+
+<procedure>(make-utf-string* string)</procedure>
+
+Implements al_ustr_new.
+
+<procedure>(make-utf-string string)</procedure>
+
+Implements al_ustr_new, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(make-utf-string-from-buffer* blob)</procedure>
+
+Given a blob, produces a new utf-string.
+
+<procedure>(make-utf-string-from-buffer blob)</procedure>
+
+Given a blob, produces a new utf-string, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(free-utf-string! utf-string)</procedure>
+
+Implements al_ustr_free.
+
+<procedure>(utf->string utf-string)</procedure>
+
+Implements al_cstr.
+
+<procedure>(utf->buffer! utf-string blob)</procedure>
+
+Implements al_ustr_to_buffer.
+
+<procedure>(utf->string-copy utf-string)</procedure>
+
+Implements al_cstr_dup.
+
+<procedure>(utf-copy* utf-string)</procedure>
+
+Implements al_ustr_dup.
+
+<procedure>(utf-copy utf-string)</procedure>
+
+Implements al_ustr_dup, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-substring* utf-string (integer start) (integer end))</procedure>
+
+Implements al_ustr_dup_substr.
+
+<procedure>(utf-substring utf-string (integer start) (integer end))</procedure>
+
+Implements al_ustr_dup_substr, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-empty-string)</procedure>
+
+Implements al_ustr_empty_string.
+
+<procedure>(make-utf-null-string*)</procedure>
+
+Makes an empty utf-string struct, where the string pointer is unset.
+
+<procedure>(make-utf-null-string)</procedure>
+
+Makes an empty utf-string struct, where the string pointer is unset, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-reference-cstr* string)</procedure>
+
+Implements al_ref_cstr.
+
+<procedure>(utf-reference-cstr string)</procedure>
+
+Implements al_ref_cstr, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-reference-buffer* blob)</procedure>
+
+Implements al_ref_buffer.
+
+<procedure>(utf-reference-buffer blob)</procedure>
+
+Implements al_ref_buffer, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-reference-utf-string* utf-string (integer start) (integer end))</procedure>
+
+Implements al_ref_ustr.
+
+<procedure>(utf-reference-utf-string utf-string (integer start) (integer end))</procedure>
+
+Implements al_ref_ustr, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(utf-size utf-string)</procedure>
+
+Implements al_ustr_size.
+
+<procedure>(utf-length utf-string)</procedure>
+
+Implements al_ustr_length.
+
+<procedure>(utf-offset utf-string integer)</procedure>
+
+Implements al_ustr_offset.
+
+<procedure>(utf-next utf-string integer)</procedure>
+
+Implements al_ustr_next, modified to return #f at the end of the string.
+
+<procedure>(utf-previous utf-string integer)</procedure>
+
+Implements al_ustr_prev, modified to return #f at the end of the string.
+
+<procedure>(utf-get utf-string integer)</procedure>
+
+Implements al_ustr_get.
+
+<procedure>(utf-get-next utf-string integer)</procedure>
+
+Returns a 2-element list consisting of the next code and its position, or #f if at the end of the string.
+
+<procedure>(utf-get-prev utf-string integer)</procedure>
+
+Returns a 2-element list consisting of the previous code and its position, or #f if at the start of the string.
+
+<procedure>(utf-remove-char! utf-string integer)</procedure>
+
+Implements al_ustr_remove_chr.
+
+<procedure>(utf-remove-range! utf-string (integer start) (integer end))</procedure>
+
+Implements al_ustr_remove_range.
+
+<procedure>(utf-truncate! utf-string integer)</procedure>
+
+Implements al_ustr_truncate.
+
+<procedure>(utf-ltrim! utf-string)</procedure>
+
+Implements al_ustr_ltrim_ws.
+
+<procedure>(utf-rtrim! utf-string)</procedure>
+
+Implements al_ustr_rtrim_ws.
+
+<procedure>(utf-trim! utf-string)</procedure>
+
+Implements al_ustr_trim_ws.
+
+<procedure>(utf-assign! utf-string utf-string)</procedure>
+
+Implements al_ustr_assign.
+
+<procedure>(utf-assign-substring! utf-string utf-string (integer start) (integer end))</procedure>
+
+Implements al_ustr_assign_substr.
+
+<procedure>(utf-assign-string! utf-string string)</procedure>
+
+Implements al_ustr_assign_cstr.
+
+<procedure>(utf-set-char! utf-string (integer pos) (integer char))</procedure>
+
+Implements al_ustr_set_chr.
+
+<procedure>(utf-replace-range! utf-string (integer start) (integer end) utf-string)</procedure>
+
+Implements al_ustr_replace_range.
+
+<procedure>(utf-find utf-string (integer start) utf-string)</procedure>
+
+Implements al_ustr_find_str.
+
+<procedure>(utf-find-string utf-string (integer start) string)</procedure>
+
+Implements al_ustr_find_cstr.
+
+<procedure>(utf-find-char utf-string (integer start) (integer char))</procedure>
+
+Implements al_ustr_find_chr.
+
+<procedure>(utf-find-set utf-string (integer start) utf-string)</procedure>
+
+Implements al_ustr_find_set.
+
+<procedure>(utf-find-set-string utf-string integer string)</procedure>
+
+Implements al_ustr_find_set_cstr.
+
+<procedure>(utf-find-cset utf-string integer utf-string)</procedure>
+
+Implements al_ustr_find_cset.
+
+<procedure>(utf-find-cset-string utf-string integer string)</procedure>
+
+Implements al_ustr_find_set_cstr.
+
+<procedure>(utf-rfind utf-string integer utf-string)</procedure>
+
+Implements al_ustr_rfind_str.
+
+<procedure>(utf-rfind-char utf-string integer (integer char))</procedure>
+
+Implements al_ustr_rfind_char.
+
+<procedure>(utf-rfind-string utf-string integer string)</procedure>
+
+Implements al_ustr_rfind_cstr.
+
+<procedure>(utf-find&replace! utf-string integer utf-string utf-string)</procedure>
+
+Implements al_ustr_find_replace.
+
+<procedure>(utf-find&replace-string! utf-string integer string string)</procedure>
+
+Implements al_ustr_find_replace_cstr.
+
+<procedure>(utf-equal? utf-string utf-string)</procedure>
+
+Implements al_ustr_equal.
+
+<procedure>(utf-compare utf-string utf-string)</procedure>
+
+Implements al_ustr_compare.
+
+<procedure>(utf-ncompare utf-string utf-string integer)</procedure>
+
+Implements al_ustr_ncompare.
+
+<procedure>(utf-prefix? utf-string utf-string)</procedure>
+
+Implements al_ustr_has_prefix.
+
+<procedure>(utf-prefix-string? utf-string string)</procedure>
+
+Implements al_ustr_has_prefix_cstr.
+
+<procedure>(utf-suffix? utf-string utf-string)</procedure>
+
+Implements al_ustr_has_prefix.
+
+<procedure>(utf-suffix-string? utf-string string)</procedure>
+
+Implements al_ustr_has_suffix_cstr.
+
+<procedure>(utf8-width integer32)</procedure>
+
+Implements al_utf8_width.
+
+<procedure>(utf8-encode! blob integer32)</procedure>
+
+Implements al_utf8_encode.
+
+<procedure>(utf-string-utf16-size utf-string)</procedure>
+
+Implements al_ustr_size_utf16.
+
+<procedure>(utf-string-utf16-encode utf-string blob integer)</procedure>
+
+Implements al_ustr_encode_utf16.
+
+<procedure>(utf16-width integer)</procedure>
+
+Implements al_utf16_width.
+
+<procedure>(utf16-encode u16vector integer32)</procedure>
+
+Implements al_utf16_encode.
+
+=== Windows
+
+<procedure>(windows-window-handle)</procedure>
+
+Implements al_get_win_window_handle.
 
 == License
 

@@ -5,7 +5,7 @@
 (define make-vertex-declaration* (foreign-lambda vertex-declaration "al_create_vertex_decl" (const vertex-element) integer))
 (define (make-vertex-declaration el i)
   (let ((vd (make-vertex-declaration* el i)))
-    (set-finalizer! vd free-vertex-element!)
+    (set-finalizer! vd free-vertex-declaration!)
     vd))
 
 (define free-vertex-declaration! (foreign-lambda void "al_destroy_vertex_decl" vertex-declaration))

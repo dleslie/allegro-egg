@@ -41,4 +41,4 @@
 
 (define event-queue-timed-wait! (foreign-lambda* bool ((event-queue q) (event container) (float s)) "C_return(al_wait_for_event_timed(q, container, s));"))
 
-(define event-queue-wait-until! (foreign-lambda* bool ( (event-queue q) (event container) ((c-pointer (struct ALLEGRO_TIMEOUT)) t)) "C_return(al_wait_for_event_until(q, container, t));"))
+(define event-queue-wait-until! (foreign-lambda* bool ( (event-queue q) (event container) (timeout t)) "C_return(al_wait_for_event_until(q, container, t));"))

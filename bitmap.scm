@@ -13,19 +13,19 @@
 (define free-bitmap! (foreign-lambda void "al_destroy_bitmap" bitmap))
 
 (define bitmap-draw (foreign-lambda void "al_draw_bitmap" bitmap float float bitmap-flag))
-(define bitmap-draw-region (foreign-lambda void "al_draw_bitmap_region" bitmap float float float float float float bitmap-flag))
-(define bitmap-draw-scaled (foreign-lambda void "al_draw_scaled_bitmap" bitmap float float float float float float float float bitmap-flag))
-(define bitmap-draw-rotated (foreign-lambda void "al_draw_rotated_bitmap" bitmap float float float float float bitmap-flag))
-(define bitmap-draw-scaled-rotated (foreign-lambda void "al_draw_scaled_rotated_bitmap" bitmap float float float float float float float bitmap-flag))
+(define bitmap-draw-region (foreign-lambda void "al_draw_bitmap_region" bitmap float float float float float float integer))
+(define bitmap-draw-scaled (foreign-lambda void "al_draw_scaled_bitmap" bitmap float float float float float float float float integer))
+(define bitmap-draw-rotated (foreign-lambda void "al_draw_rotated_bitmap" bitmap float float float float float integer))
+(define bitmap-draw-scaled-rotated (foreign-lambda void "al_draw_scaled_rotated_bitmap" bitmap float float float float float float float integer))
 
-(define bitmap-draw-tinted (foreign-lambda* void ((bitmap bmp) (color tint) (float dx) (float dy) (bitmap-flag flags)) "al_draw_tinted_bitmap(bmp, *tint, dx, dy, flags);"))
-(define bitmap-draw-tinted-region (foreign-lambda* void ((bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (bitmap-flag flags)) "al_draw_tinted_bitmap_region(bmp, *tint, sx, sy, sw, sh, dx, dy, flags);"))
-(define bitmap-draw-tinted-scaled (foreign-lambda* void ((bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (bitmap-flag flags)) "al_draw_tinted_scaled_bitmap(bmp, *tint, sx, sy, sw, sh, dx, dy, dw, dh, flags);"))
-(define bitmap-draw-tinted-rotated (foreign-lambda* void ((bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float angle) (bitmap-flag flags)) "al_draw_tinted_rotated_bitmap(bmp, *tint, cx, cy, dx, dy, angle, flags);"))
-(define bitmap-draw-tinted-scaled-rotated (foreign-lambda* void ((bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (bitmap-flag flags)) "al_draw_tinted_scaled_rotated_bitmap(bmp, *tint, cx, cy, dx, dy, xscale, yscale, angle, flags);"))
+(define bitmap-draw-tinted (foreign-lambda* void ((bitmap bmp) (color tint) (float dx) (float dy) (integer flags)) "al_draw_tinted_bitmap(bmp, *tint, dx, dy, flags);"))
+(define bitmap-draw-tinted-region (foreign-lambda* void ((bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer flags)) "al_draw_tinted_bitmap_region(bmp, *tint, sx, sy, sw, sh, dx, dy, flags);"))
+(define bitmap-draw-tinted-scaled (foreign-lambda* void ((bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer flags)) "al_draw_tinted_scaled_bitmap(bmp, *tint, sx, sy, sw, sh, dx, dy, dw, dh, flags);"))
+(define bitmap-draw-tinted-rotated (foreign-lambda* void ((bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float angle) (integer flags)) "al_draw_tinted_rotated_bitmap(bmp, *tint, cx, cy, dx, dy, angle, flags);"))
+(define bitmap-draw-tinted-scaled-rotated (foreign-lambda* void ((bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer flags)) "al_draw_tinted_scaled_rotated_bitmap(bmp, *tint, cx, cy, dx, dy, xscale, yscale, angle, flags);"))
 
-(define bitmap-lock*! (foreign-lambda locked-region "al_lock_bitmap" bitmap pixel-format bitmap-flag))
-(define bitmap-lock-region*! (foreign-lambda locked-region "al_lock_bitmap_region" bitmap int int int int pixel-format bitmap-flag))
+(define bitmap-lock*! (foreign-lambda locked-region "al_lock_bitmap" bitmap pixel-format integer))
+(define bitmap-lock-region*! (foreign-lambda locked-region "al_lock_bitmap_region" bitmap int int int int pixel-format integer))
 (define bitmap-unlock! (foreign-lambda void "al_unlock_bitmap" bitmap))
 
 (define (bitmap-lock! bmp frmt flg)
@@ -154,7 +154,7 @@ C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix(x), C_fix(y), C_fix(w), C_fix(h)));
 "))
 
-(define blender-set! (foreign-lambda void "al_set_blender" int int int))
+(define blender-set! (foreign-lambda void "al_set_blender" blend-operation int int))
 (define blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest;
 al_get_blender(&op, &src, &dest);
@@ -162,7 +162,7 @@ C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_fix(op), C_fix(src), C_fix(dest)));
 "))
 
-(define separate-blender-set! (foreign-lambda void "al_set_separate_blender" int int int int int int))
+(define separate-blender-set! (foreign-lambda void "al_set_separate_blender" blend-operation int int int int int))
 (define separate-blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest, alpha_op, alpha_src, alpha_dest;
 al_get_separate_blender(&op, &src, &dest, &alpha_op, &alpha_src, &alpha_dest);

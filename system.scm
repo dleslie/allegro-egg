@@ -13,4 +13,4 @@
 (define system-driver (foreign-lambda system "al_get_system_driver"))
 (define system-config (foreign-lambda config "al_get_system_config"))
 
-(define standard-path (foreign-lambda path "al_get_standard_path" integer))
+(define standard-path (foreign-lambda path "al_get_standard_path" system-path))

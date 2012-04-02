@@ -14,7 +14,6 @@ C_return (C_list(&ptr, 2, C_fix (x), C_fix (y)));
 ENDC
 ))
 (define new-display-window-position-set! (foreign-lambda void "al_set_new_window_position" int int))
-(define new-display-option-set! (foreign-lambda void "al_set_new_display_option" display-option int display-option-importance))
 (define new-display-option-value (foreign-lambda* int ((display-option opt)) #<<ENDC
 int importance;
 C_return(al_get_new_display_option(opt, &importance));
@@ -26,6 +25,7 @@ al_get_new_display_option(opt, &importance);
 C_return(importance);
 ENDC
 ))
+(define new-display-option-set! (foreign-lambda void "al_set_new_display_option" display-option int display-option-importance))
 (define new-display-reset-options (foreign-lambda void "al_reset_new_display_options"))
 
 (define make-display* (foreign-lambda display "al_create_display" integer integer))
@@ -60,14 +60,14 @@ C_return(al_create_display(mode->width, mode->height));
 (define monitor-init! (foreign-lambda* bool ((monitor info) (int adapter)) "C_return(al_get_monitor_info(adapter, info));"))
 
 (define display-option (foreign-lambda int "al_get_display_option" display display-option))
-(define display-hold-bitmap-drawing! (foreign-lambda void "al_hold_bitmap_drawing" bool))
+(define display-bitmap-drawing-hold-set! (foreign-lambda void "al_hold_bitmap_drawing" bool))
 (define display-bitmap-drawing-held? (foreign-lambda bool "al_is_bitmap_drawing_held"))
 (define display-window-title-set! (foreign-lambda void "al_set_window_title" display c-string))
 (define display-width (foreign-lambda integer "al_get_display_width" display))
 (define display-height (foreign-lambda integer "al_get_display_height" display))
 (define display-format (foreign-lambda integer "al_get_display_format" display))
 (define display-refresh-rate (foreign-lambda integer "al_get_display_refresh_rate" display))
-(define display-display-flags (foreign-lambda integer "al_get_display_flags" display))
+(define display-flags (foreign-lambda integer "al_get_display_flags" display))
 (define display-toggle-flag! (foreign-lambda bool "al_toggle_display_flag" display display-flag bool))
 (define display-backbuffer (foreign-lambda bitmap "al_get_backbuffer" display))
 (define display-acknowledge-resize (foreign-lambda bool "al_acknowledge_resize" display))

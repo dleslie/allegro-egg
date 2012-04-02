@@ -167,11 +167,7 @@ else
 (define utf8-width (foreign-lambda integer "al_utf8_width" integer32))
 (define utf8-encode! (foreign-lambda integer "al_utf8_encode" blob integer32))
 
-;; AL_FUNC(size_t, al_ustr_size_utf16, (const ALLEGRO_USTR *us));
-;; AL_FUNC(size_t, al_ustr_encode_utf16, (const ALLEGRO_USTR *us, uint16_t *s, size_t n));
-;; AL_FUNC(size_t, al_utf16_width, (int c));
-;; AL_FUNC(size_t, al_utf16_encode, (uint16_t s[], int32_t c));
-
-
-
-
+(define utf-string-utf16-size (foreign-lambda integer "al_ustr_size_utf16" (const utf-string)))
+(define utf-string-utf16-encode (foreign-lambda* integer (((const utf-string) str) (blob data) (integer count)) "C_return(al_ustr_encode_utf16(str, (uint16_t *)data, count));"))
+(define utf16-width (foreign-lambda integer "al_utf16_width" integer))
+(define utf16-encode (foreign-lambda integer "al_utf16_encode" u16vector integer32))

@@ -91,9 +91,9 @@
 
 (define audio-stream-rewind! (foreign-lambda bool "al_rewind_audio_stream" audio-stream))
 (define audio-stream-seek-seconds! (foreign-lambda bool "al_seek_audio_stream_secs" audio-stream double))
-(define audio-stream-position-seconds! (foreign-lambda double "al_get_audio_stream_position_secs" audio-stream))
-(define audio-stream-length-seconds! (foreign-lambda double "al_get_audio_stream_length_secs" audio-stream))
-(define audio-stream-loop-seconds! (foreign-lambda bool "al_set_audio_stream_loop_secs" audio-stream double double))
+(define audio-stream-position-seconds (foreign-lambda double "al_get_audio_stream_position_secs" audio-stream))
+(define audio-stream-length-seconds (foreign-lambda double "al_get_audio_stream_length_secs" audio-stream))
+(define audio-stream-loop-set! (foreign-lambda bool "al_set_audio_stream_loop_secs" audio-stream double double))
 
 (define audio-stream-event-source (foreign-lambda event-source "al_get_audio_stream_event_source" audio-stream))
 
@@ -105,7 +105,7 @@
 
 (define free-mixer! (foreign-lambda void "al_destroy_mixer" mixer))
 
-(define sample-interface-attach-to-mixer! (foreign-lambda bool "al_attach_sample_instance_to_mixer" sample-instance mixer))
+(define sample-instance-attach-to-mixer! (foreign-lambda bool "al_attach_sample_instance_to_mixer" sample-instance mixer))
 (define audio-stream-attach-to-mixer! (foreign-lambda bool "al_attach_audio_stream_to_mixer" audio-stream mixer))
 
 (define mixer-attach-to-mixer! (foreign-lambda bool "al_attach_mixer_to_mixer" mixer mixer))
@@ -158,7 +158,7 @@
 (define default-mixer-set! (foreign-lambda bool "al_set_default_mixer" mixer))
 (define default-mixer-restore! (foreign-lambda bool "al_restore_default_mixer"))
 
-(define sample-play (foreign-lambda bool "al_play_sample" sample float float float playmode sample-id))
+(define sample-play! (foreign-lambda bool "al_play_sample" sample float float float playmode sample-id))
 (define sample-stop (foreign-lambda void "al_stop_sample" sample-id))
 
 (define reserve-samples (foreign-lambda bool "al_reserve_samples" integer32))

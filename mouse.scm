@@ -22,7 +22,7 @@
 
 (define free-cursor! (foreign-lambda void "al_destroy_mouse_cursor" mouse-cursor))
 
-(define mouse-cursor-position (foreign-safe-lambda* integer () "
+(define mouse-cursor-position (foreign-safe-lambda* scheme-object () "
 int x, y;
 if (al_get_mouse_cursor_position(&x, &y))
 {

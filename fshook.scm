@@ -13,7 +13,7 @@
 (define fs-entry-mtime (foreign-lambda unsigned-integer32 "al_get_fs_entry_mtime" fs-entry))
 (define fs-entry-ctime (foreign-lambda unsigned-integer32 "al_get_fs_entry_ctime" fs-entry))
 (define fs-entry-size (foreign-lambda unsigned-integer32 "al_get_fs_entry_size" fs-entry))
-(define fs-entry-exist? (foreign-lambda bool "al_fs_entry_exists" fs-entry))
+(define fs-entry-exists? (foreign-lambda bool "al_fs_entry_exists" fs-entry))
 (define fs-entry-remove! (foreign-lambda bool "al_remove_fs_entry" fs-entry))
 (define fs-entry-open (foreign-lambda file "al_open_fs_entry" fs-entry (const c-string)))
 

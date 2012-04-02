@@ -6,10 +6,10 @@
 
 (define free-timer! (foreign-lambda void "al_destroy_timer" timer))
 
-(define timer-usec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_USECS_TO_SECS(x));"))
-(define timer-msec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_MSECS_TO_SECS(x));"))
-(define timer-bps->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPS_TO_SECS(x));"))
-(define timer-bpm->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPM_TO_SECS(x));"))
+(define usec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_USECS_TO_SECS(x));"))
+(define msec->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_MSECS_TO_SECS(x));"))
+(define bps->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPS_TO_SECS(x));"))
+(define bpm->sec (foreign-lambda* double ((double x)) "C_return(ALLEGRO_BPM_TO_SECS(x));"))
 
 (define timer-start! (foreign-lambda void "al_start_timer" timer))
 (define timer-stop! (foreign-lambda void "al_stop_timer" timer))

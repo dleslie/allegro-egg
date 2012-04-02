@@ -4,11 +4,13 @@
 #include <allegro5/allegro_opengl.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_primitives.h>
-//#include <allegro5/allegro_windows.h>
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_color.h>
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_color.h>
+#ifdef _WIN32
+  #include <allegro5/allegro_windows.h>
+#endif
 <#
 (module allegro *
         (import scheme chicken foreign foreigners)
@@ -17,6 +19,7 @@
         (include "enums")
         (include "constants")
 
+        (include "base")
         (include "windows")
         (include "acodec")
         (include "fixed")
@@ -29,7 +32,6 @@
         (include "error")
         (include "bitmap_io")
         (include "system")
-        (include "base")
         (include "timer")
         (include "joystick")
         (include "transformations")

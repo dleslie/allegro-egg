@@ -22,13 +22,13 @@
 (define file-read! (foreign-lambda integer "al_fread" file blob integer))
 (define file-write! (foreign-lambda integer "al_fwrite" file blob integer))
 (define file-flush! (foreign-lambda bool "al_fflush" file))
-(define file-tell? (foreign-lambda integer64 "al_ftell" file))
+(define file-tell (foreign-lambda integer64 "al_ftell" file))
 (define file-seek! (foreign-lambda bool "al_fseek" file integer64 integer))
 (define file-eof? (foreign-lambda bool "al_feof" file))
 (define file-error? (foreign-lambda bool "al_ferror" file))
 (define file-clear-error! (foreign-lambda void "al_fclearerr" file))
 (define file-unget-chars! (foreign-lambda integer "al_fungetc" file integer))
-(define file-size? (foreign-lambda integer64 "al_fsize" file))
+(define file-size (foreign-lambda integer64 "al_fsize" file))
 
 (define file-get-char! (foreign-lambda integer "al_fgetc" file))
 (define file-put-char! (foreign-lambda integer "al_fputc" file integer))
@@ -42,11 +42,16 @@
 (define file-write-32be! (foreign-lambda integer "al_fwrite32be" file integer32))
 
 (define (file-get-string! f b) ((foreign-lambda c-string "al_fgets" file blob integer) f b (blob-size b)))
-(define file-get-utf-string! (foreign-lambda utf-string "al_fget_ustr" file))
+(define file-get-utf-string*! (foreign-lambda utf-string "al_fget_ustr" file))
+(define (file-get-utf-string f)
+  (let ((ustr (file-get-utf-string*! f)))
+    (set-finalizer! f free-utf-string!)
+    ustr))
 (define file-put-string! (foreign-lambda integer "al_fputs" file c-string))
 
 (define file-userdata (foreign-lambda c-pointer "al_get_file_userdata" file))
 
+(define new-file-interface (foreign-lambda file-interface "al_get_new_file_interface"))
 (define new-file-interface-set! (foreign-lambda void "al_set_new_file_interface" (const file-interface)))
 
 (define file-interface-open* (foreign-lambda file "al_fopen_interface" (const file-interface) (const c-string) (const c-string)))

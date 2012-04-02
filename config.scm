@@ -11,8 +11,16 @@
 (define config-comment-add! (foreign-lambda void "al_add_config_comment" config c-string c-string))
 (define config-value (foreign-lambda c-string "al_get_config_value" config c-string c-string))
 
-(define load-config (foreign-lambda config "al_load_config_file" c-string))
-(define load-config-from-file (foreign-lambda config "al_load_config_file_f" file))
+(define load-config* (foreign-lambda config "al_load_config_file" c-string))
+(define (load-config str)
+  (let ((c (load-config* str)))
+    (set-finalizer! c free-config!)
+    c))
+(define load-config-from-file* (foreign-lambda config "al_load_config_file_f" file))
+(define (load-config-from-file f)
+  (let ((c (load-config-from-file* f)))
+    (set-finalizer! c free-config!)
+    c))
 
 (define (config-save c s) ((foreign-lambda bool "al_save_config_file" c-string config) s c))
 (define (config-save-to-file c f) ((foreign-lambda bool "al_save_config_file_f" file config) f c))
@@ -37,5 +45,5 @@
   (define (do-next)
     (cond 
      ((not config-entry-iterator) #f)
-     (else (cons (get-next section) (delay (do-next))))))
+     (else (cons (get-next config-entry-iterator) (delay (do-next))))))
   (cons (get-first config section config-entry-iterator) (delay (do-next))))
