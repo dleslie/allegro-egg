@@ -3,6 +3,6 @@
 ((license "BSD")
  (category io)
  (author "Daniel J. Leslie")
- (needs foreign foreigners)
+ (needs foreigners)
  (synopsis "Allegro")
  (doc-from-wiki))
