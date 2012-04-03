@@ -2790,7 +2790,7 @@ Implements al_get_joystick_num_axes.
 
 Implements al_get_joystick_num_buttons.
 
-<procedure>(joystick-button-name joystick (integer button))<procedure>
+<procedure>(joystick-button-name joystick (integer button))</procedure>
 
 Implements al_get_joystick_button_name.
 
