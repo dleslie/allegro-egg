@@ -147,14 +147,14 @@ C_return(C_list(&ptr, 4, C_flonum(&ptr, (double)r), C_flonum(&ptr, (double)g), C
 (define pixel-format-bits (foreign-lambda int "al_get_pixel_format_bits" pixel-format))
 
 (define clipping-rectangle-set! (foreign-lambda void "al_set_clipping_rectangle" int int int int))
-(define clipping-rectange (foreign-safe-lambda* scheme-object () "
+(define clipping-rectangle (foreign-safe-lambda* scheme-object () "
 int x,y,w,h;
 al_get_clipping_rectangle(&x, &y, &w, &h);
 C_word *ptr = C_alloc(C_SIZEOF_LIST(4));
 C_return(C_list(&ptr, 4, C_fix(x), C_fix(y), C_fix(w), C_fix(h)));
 "))
 
-(define blender-set! (foreign-lambda void "al_set_blender" blend-operation int int))
+(define blender-set! (foreign-lambda void "al_set_blender" blend-operation blending-mode blending-mode))
 (define blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest;
 al_get_blender(&op, &src, &dest);
@@ -162,7 +162,7 @@ C_word *ptr = C_alloc(C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_fix(op), C_fix(src), C_fix(dest)));
 "))
 
-(define separate-blender-set! (foreign-lambda void "al_set_separate_blender" blend-operation int int int int int))
+(define separate-blender-set! (foreign-lambda void "al_set_separate_blender" blend-operation blending-mode blending-mode blend-operation blending-mode blending-mode))
 (define separate-blender (foreign-safe-lambda* scheme-object () "
 int op, src, dest, alpha_op, alpha_src, alpha_dest;
 al_get_separate_blender(&op, &src, &dest, &alpha_op, &alpha_src, &alpha_dest);
