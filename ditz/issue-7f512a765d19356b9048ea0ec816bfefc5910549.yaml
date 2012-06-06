@@ -1,0 +1,21 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: All c-string are copies
+desc: |-
+  At the moment all c-string parameters are copies. That's just how Chicken works.
+  
+  Add /shared variants wherever appropriate that first use string->blob to convert the string parameter to a blob, passing it into native, then casting into a char*.
+type: :task
+component: allegro-egg
+release: 
+reporter: Dan Leslie <dan@ironoxide.ca>
+status: :unstarted
+disposition: 
+creation_time: 2012-06-06 16:47:34.658234 Z
+references: []
+
+id: 7f512a765d19356b9048ea0ec816bfefc5910549
+log_events: 
+- - 2012-06-06 16:47:36.867449 Z
+  - Dan Leslie <dan@ironoxide.ca>
+  - created
+  - ""

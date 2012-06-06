@@ -24,6 +24,13 @@
 (define font-draw-justified-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (c-string text)) "al_draw_justified_text(f, *c, x1, x2, y, diff, flags, text);"))
 (define font-draw-justified-utf-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) ((const utf-string) text)) "al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, text);"))
 
+(define font-draw-substring/shared (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (int start) (int end) (c-string text)) "
+char before = text[end];
+text[end] = (char)0;
+al_draw_text(f, *c, x, y, flags, &text[start]);
+text[end] = before;
+"))
+
 (define font-width (foreign-lambda integer "al_get_text_width" (const font) (const c-string)))
 (define font-utf-width (foreign-lambda integer "al_get_ustr_width" (const font) (const utf-string)))
 (define font-line-height (foreign-lambda integer "al_get_font_line_height" (const font)))
