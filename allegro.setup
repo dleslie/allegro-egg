@@ -3,8 +3,8 @@
 ;; Shamelessly taken from OpenGL egg's setup
 (define compile-options
   (cond-expand
-    (macosx "-FOpenGL -Fallegro -C -fPIC")
-    (else "")))
+    (macosx "-FOpenGL -Fallegro -O3 -C -O3 -C -fPIC")
+    (else "-O3 -C -O3")))
 
 (define link-options
   (cond-expand
@@ -12,17 +12,11 @@
     (windows "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -lopengl32")
     (else "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -L/usr/X11R6/lib -L/usr/X11/lib -lGL -LX11")))
 
-;  "acodec.scm" "bitmap.scm" "direct3d.scm" "fixed.scm" "keyboard.scm" "physfs.scm" "transformations.scm" "bitmap_io.scm" "display.scm" "fmaths.scm" "memfile.scm" "primitives.scm" "ttf.scm" "color.scm" "enums.scm" "font.scm" "memory.scm" "system.scm" "types.scm" "altime.scm" "config.scm" "error.scm" "fshook.scm" "mouse.scm" "threads.scm" "utf8.scm" "audio.scm" "constants.scm" "events.scm" "image.scm" "opengl.scm" "timer.scm" "windows.scm" "base.scm" "debug.scm" "file.scm" "joystick.scm" "path.scm" "tls.scm"
-;; (make (("allegro.o" ("allegro.scm") (compile -c -O2 -d0 allegro.scm -unit allegro -j allegro ,compile-options ,link-options))
-;;        ("allegro.so" ("allegro.o") (compile -s -O2 allegro.o ,compile-options ,link-options))
-;;        ("allegro.import.so" ("allegro.so") (compile -s -O2 -d0 allegro.import.scm)))
-;;   '("allegro.so" "allegro.import.so" "allegro.o"))
-
-(compile -s -O3 -d1 allegro.scm -j allegro ,link-options ,compile-options
+(compile -s -d1 allegro.scm -j allegro ,link-options ,compile-options
          ,@(if (version>=? (chicken-version) "4.7.0") '(-D improved-64-bit-support) '()))
-(compile -s allegro.import.scm -O3 -d0 -lallegro ,link-options ,compile-options
+(compile -s allegro.import.scm -d0 -lallegro ,link-options ,compile-options
          ,@(if (version>=? (chicken-version) "4.7.0") '(-D improved-64-bit-support) '()))
-(compile -c -O3 -d1 allegro.scm -unit allegro -j allegro -lallegro ,link-options ,compile-options
+(compile -c  -d1 allegro.scm -unit allegro -j allegro -lallegro ,link-options ,compile-options
          ,@(if (version>=? (chicken-version) "4.7.0") '(-D improved-64-bit-support) '()))
 
 

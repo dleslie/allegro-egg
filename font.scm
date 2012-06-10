@@ -19,17 +19,29 @@
 
 (define free-font! (foreign-lambda void "al_destroy_font" font))
 
-(define font-draw-utf (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) ((const utf-string) ustr)) "al_draw_ustr(f, *c, x, y, flags, ustr);"))
 (define font-draw-string (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (c-string text)) "al_draw_text(f, *c, x, y, flags, text);"))
 (define font-draw-justified-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (c-string text)) "al_draw_justified_text(f, *c, x1, x2, y, diff, flags, text);"))
-(define font-draw-justified-utf-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) ((const utf-string) text)) "al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, text);"))
 
-(define font-draw-substring/shared (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (int start) (int end) (c-string text)) "
-char before = text[end];
-text[end] = (char)0;
-al_draw_text(f, *c, x, y, flags, &text[start]);
-text[end] = before;
+(define font-draw-string/shared
+  (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (scheme-pointer text) (integer length)) "
+ALLEGRO_USTR_INFO info;
+ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
+al_draw_ustr(f, *c, x, y, flags, ustr);
 "))
+(define font-draw-justified-string/shared (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (scheme-pointer text) (integer length)) "
+ALLEGRO_USTR_INFO info;
+ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
+al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, ustr);
+"))
+(define font-draw-substring/shared (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (int start) (int end) (scheme-pointer text)) "
+ALLEGRO_USTR_INFO info;
+char * txtp = (char *)text;
+ALLEGRO_USTR *ustr = al_ref_buffer(&info, &txtp[start], end - start);
+al_draw_ustr(f, *c, x, y, flags, ustr);
+"))
+
+(define font-draw-utf (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) ((const utf-string) ustr)) "al_draw_ustr(f, *c, x, y, flags, ustr);"))
+(define font-draw-justified-utf-string (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) ((const utf-string) text)) "al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, text);"))
 
 (define font-width (foreign-lambda integer "al_get_text_width" (const font) (const c-string)))
 (define font-utf-width (foreign-lambda integer "al_get_ustr_width" (const font) (const utf-string)))
