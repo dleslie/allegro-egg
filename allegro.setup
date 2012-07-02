@@ -19,11 +19,10 @@
 (compile -c  -d1 allegro.scm -unit allegro -j allegro -lallegro ,link-options ,compile-options
          ,@(if (version>=? (chicken-version) "4.7.0") '(-D improved-64-bit-support) '()))
 
-
 (install-extension
  'allegro
  '("allegro.so" "allegro.o" "allegro.import.so")
- '((version 1.2)
+ '((version 1.3)
    (static "allegro.o")))
 
 

@@ -54,4 +54,5 @@
         (include "utf8")
         (include "opengl")
         (include "primitives")
-        (include "audio"))
+        (include "audio")
+        (include "glext"))
