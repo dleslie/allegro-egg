@@ -55,4 +55,5 @@
         (include "opengl")
         (include "primitives")
         (include "audio")
-        (include "glext"))
+        (include "glext")
+)
