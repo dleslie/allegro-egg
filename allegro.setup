@@ -9,7 +9,7 @@
 (define link-options
   (cond-expand
     (macosx "-framework OpenGL -framework allegro")
-    (windows "-lallegro -ldumb -lFLAC -lfreetype -logg -lopenal -lvorbis -lvorbisfile -lzlib -lopengl32")
+    (windows "-lallegro -ldumb -lFLAC -lfreetype -logg -lvorbis -lvorbisfile -lzlib -lopengl32")
     (else "-lallegro -lallegro_color -lallegro_image -lallegro_physfs -lallegro_acodec -lallegro_dialog -lallegro_main -lallegro_primitives -lallegro_audio -lallegro_font -lallegro_memfile -lallegro_ttf -L/usr/X11R6/lib -L/usr/X11/lib -lGL -LX11")))
 
 (compile -s -d1 allegro.scm -j allegro ,link-options ,compile-options
@@ -22,7 +22,7 @@
 (install-extension
  'allegro
  '("allegro.so" "allegro.o" "allegro.import.so")
- '((version 1.4)
+ '((version 1.5)
    (static "allegro.o")))
 
 
