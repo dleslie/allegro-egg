@@ -12,6 +12,7 @@
   #include <allegro5/allegro_windows.h>
 #endif
 <#
+
 (module allegro *
         (import scheme chicken foreign foreigners)
 
@@ -55,5 +56,4 @@
         (include "opengl")
         (include "primitives")
         (include "audio")
-        (include "glext")
 )
