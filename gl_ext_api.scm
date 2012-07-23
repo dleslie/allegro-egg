@@ -3,13 +3,13 @@
 
 (begin
   (begin
-    (define glBlendColor
+    (define gl:BlendColor
       (foreign-lambda void "glBlendColor" float float float float)))
   (begin
-    (define glBlendEquation
+    (define gl:BlendEquation
       (foreign-lambda void "glBlendEquation" unsigned-integer)))
   (begin
-    (define glDrawRangeElements
+    (define gl:DrawRangeElements
       (foreign-lambda
         void
         "glDrawRangeElements"
@@ -20,7 +20,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glColorTable
+    (define gl:ColorTable
       (foreign-lambda
         void
         "glColorTable"
@@ -31,7 +31,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glColorTableParameterfv
+    (define gl:ColorTableParameterfv
       (foreign-lambda
         void
         "glColorTableParameterfv"
@@ -39,7 +39,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glColorTableParameteriv
+    (define gl:ColorTableParameteriv
       (foreign-lambda
         void
         "glColorTableParameteriv"
@@ -47,7 +47,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glCopyColorTable
+    (define gl:CopyColorTable
       (foreign-lambda
         void
         "glCopyColorTable"
@@ -57,7 +57,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glGetColorTable
+    (define gl:GetColorTable
       (foreign-lambda
         void
         "glGetColorTable"
@@ -66,7 +66,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetColorTableParameterfv
+    (define gl:GetColorTableParameterfv
       (foreign-lambda
         void
         "glGetColorTableParameterfv"
@@ -74,7 +74,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetColorTableParameteriv
+    (define gl:GetColorTableParameteriv
       (foreign-lambda
         void
         "glGetColorTableParameteriv"
@@ -82,7 +82,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glColorSubTable
+    (define gl:ColorSubTable
       (foreign-lambda
         void
         "glColorSubTable"
@@ -93,7 +93,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyColorSubTable
+    (define gl:CopyColorSubTable
       (foreign-lambda
         void
         "glCopyColorSubTable"
@@ -103,7 +103,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glTexImage3D
+    (define gl:TexImage3D
       (foreign-lambda
         void
         "glTexImage3D"
@@ -118,7 +118,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTexSubImage3D
+    (define gl:TexSubImage3D
       (foreign-lambda
         void
         "glTexSubImage3D"
@@ -134,7 +134,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyTexSubImage3D
+    (define gl:CopyTexSubImage3D
       (foreign-lambda
         void
         "glCopyTexSubImage3D"
@@ -148,7 +148,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glConvolutionFilter1D
+    (define gl:ConvolutionFilter1D
       (foreign-lambda
         void
         "glConvolutionFilter1D"
@@ -159,7 +159,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glConvolutionFilter2D
+    (define gl:ConvolutionFilter2D
       (foreign-lambda
         void
         "glConvolutionFilter2D"
@@ -171,7 +171,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glConvolutionParameterf
+    (define gl:ConvolutionParameterf
       (foreign-lambda
         void
         "glConvolutionParameterf"
@@ -179,7 +179,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glConvolutionParameterfv
+    (define gl:ConvolutionParameterfv
       (foreign-lambda
         void
         "glConvolutionParameterfv"
@@ -187,7 +187,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glConvolutionParameteri
+    (define gl:ConvolutionParameteri
       (foreign-lambda
         void
         "glConvolutionParameteri"
@@ -195,7 +195,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glConvolutionParameteriv
+    (define gl:ConvolutionParameteriv
       (foreign-lambda
         void
         "glConvolutionParameteriv"
@@ -203,7 +203,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glCopyConvolutionFilter1D
+    (define gl:CopyConvolutionFilter1D
       (foreign-lambda
         void
         "glCopyConvolutionFilter1D"
@@ -213,7 +213,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glCopyConvolutionFilter2D
+    (define gl:CopyConvolutionFilter2D
       (foreign-lambda
         void
         "glCopyConvolutionFilter2D"
@@ -224,7 +224,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetConvolutionFilter
+    (define gl:GetConvolutionFilter
       (foreign-lambda
         void
         "glGetConvolutionFilter"
@@ -233,7 +233,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetConvolutionParameterfv
+    (define gl:GetConvolutionParameterfv
       (foreign-lambda
         void
         "glGetConvolutionParameterfv"
@@ -241,7 +241,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetConvolutionParameteriv
+    (define gl:GetConvolutionParameteriv
       (foreign-lambda
         void
         "glGetConvolutionParameteriv"
@@ -249,7 +249,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetSeparableFilter
+    (define gl:GetSeparableFilter
       (foreign-lambda
         void
         "glGetSeparableFilter"
@@ -260,7 +260,7 @@
         (c-pointer void)
         (c-pointer void))))
   (begin
-    (define glSeparableFilter2D
+    (define gl:SeparableFilter2D
       (foreign-lambda
         void
         "glSeparableFilter2D"
@@ -273,7 +273,7 @@
         (c-pointer void)
         (c-pointer void))))
   (begin
-    (define glGetHistogram
+    (define gl:GetHistogram
       (foreign-lambda
         void
         "glGetHistogram"
@@ -283,7 +283,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetHistogramParameterfv
+    (define gl:GetHistogramParameterfv
       (foreign-lambda
         void
         "glGetHistogramParameterfv"
@@ -291,7 +291,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetHistogramParameteriv
+    (define gl:GetHistogramParameteriv
       (foreign-lambda
         void
         "glGetHistogramParameteriv"
@@ -299,7 +299,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMinmax
+    (define gl:GetMinmax
       (foreign-lambda
         void
         "glGetMinmax"
@@ -309,7 +309,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetMinmaxParameterfv
+    (define gl:GetMinmaxParameterfv
       (foreign-lambda
         void
         "glGetMinmaxParameterfv"
@@ -317,7 +317,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMinmaxParameteriv
+    (define gl:GetMinmaxParameteriv
       (foreign-lambda
         void
         "glGetMinmaxParameteriv"
@@ -325,7 +325,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glHistogram
+    (define gl:Histogram
       (foreign-lambda
         void
         "glHistogram"
@@ -334,7 +334,7 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glMinmax
+    (define gl:Minmax
       (foreign-lambda
         void
         "glMinmax"
@@ -342,43 +342,43 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glResetHistogram
+    (define gl:ResetHistogram
       (foreign-lambda void "glResetHistogram" unsigned-integer)))
   (begin
-    (define glResetMinmax
+    (define gl:ResetMinmax
       (foreign-lambda void "glResetMinmax" unsigned-integer)))
   (begin
-    (define glActiveTexture
+    (define gl:ActiveTexture
       (foreign-lambda void "glActiveTexture" unsigned-integer)))
   (begin
-    (define glClientActiveTexture
+    (define gl:ClientActiveTexture
       (foreign-lambda void "glClientActiveTexture" unsigned-integer)))
   (begin
-    (define glMultiTexCoord1d
+    (define gl:MultiTexCoord1d
       (foreign-lambda void "glMultiTexCoord1d" unsigned-integer double)))
   (begin
-    (define glMultiTexCoord1dv
+    (define gl:MultiTexCoord1dv
       (foreign-lambda void "glMultiTexCoord1dv" unsigned-integer f64vector)))
   (begin
-    (define glMultiTexCoord1f
+    (define gl:MultiTexCoord1f
       (foreign-lambda void "glMultiTexCoord1f" unsigned-integer float)))
   (begin
-    (define glMultiTexCoord1fv
+    (define gl:MultiTexCoord1fv
       (foreign-lambda void "glMultiTexCoord1fv" unsigned-integer f32vector)))
   (begin
-    (define glMultiTexCoord1i
+    (define gl:MultiTexCoord1i
       (foreign-lambda void "glMultiTexCoord1i" unsigned-integer integer)))
   (begin
-    (define glMultiTexCoord1iv
+    (define gl:MultiTexCoord1iv
       (foreign-lambda void "glMultiTexCoord1iv" unsigned-integer s32vector)))
   (begin
-    (define glMultiTexCoord1s
+    (define gl:MultiTexCoord1s
       (foreign-lambda void "glMultiTexCoord1s" unsigned-integer short)))
   (begin
-    (define glMultiTexCoord1sv
+    (define gl:MultiTexCoord1sv
       (foreign-lambda void "glMultiTexCoord1sv" unsigned-integer s16vector)))
   (begin
-    (define glMultiTexCoord2d
+    (define gl:MultiTexCoord2d
       (foreign-lambda
         void
         "glMultiTexCoord2d"
@@ -386,16 +386,16 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord2dv
+    (define gl:MultiTexCoord2dv
       (foreign-lambda void "glMultiTexCoord2dv" unsigned-integer f64vector)))
   (begin
-    (define glMultiTexCoord2f
+    (define gl:MultiTexCoord2f
       (foreign-lambda void "glMultiTexCoord2f" unsigned-integer float float)))
   (begin
-    (define glMultiTexCoord2fv
+    (define gl:MultiTexCoord2fv
       (foreign-lambda void "glMultiTexCoord2fv" unsigned-integer f32vector)))
   (begin
-    (define glMultiTexCoord2i
+    (define gl:MultiTexCoord2i
       (foreign-lambda
         void
         "glMultiTexCoord2i"
@@ -403,16 +403,16 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord2iv
+    (define gl:MultiTexCoord2iv
       (foreign-lambda void "glMultiTexCoord2iv" unsigned-integer s32vector)))
   (begin
-    (define glMultiTexCoord2s
+    (define gl:MultiTexCoord2s
       (foreign-lambda void "glMultiTexCoord2s" unsigned-integer short short)))
   (begin
-    (define glMultiTexCoord2sv
+    (define gl:MultiTexCoord2sv
       (foreign-lambda void "glMultiTexCoord2sv" unsigned-integer s16vector)))
   (begin
-    (define glMultiTexCoord3d
+    (define gl:MultiTexCoord3d
       (foreign-lambda
         void
         "glMultiTexCoord3d"
@@ -421,10 +421,10 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord3dv
+    (define gl:MultiTexCoord3dv
       (foreign-lambda void "glMultiTexCoord3dv" unsigned-integer f64vector)))
   (begin
-    (define glMultiTexCoord3f
+    (define gl:MultiTexCoord3f
       (foreign-lambda
         void
         "glMultiTexCoord3f"
@@ -433,10 +433,10 @@
         float
         float)))
   (begin
-    (define glMultiTexCoord3fv
+    (define gl:MultiTexCoord3fv
       (foreign-lambda void "glMultiTexCoord3fv" unsigned-integer f32vector)))
   (begin
-    (define glMultiTexCoord3i
+    (define gl:MultiTexCoord3i
       (foreign-lambda
         void
         "glMultiTexCoord3i"
@@ -445,10 +445,10 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord3iv
+    (define gl:MultiTexCoord3iv
       (foreign-lambda void "glMultiTexCoord3iv" unsigned-integer s32vector)))
   (begin
-    (define glMultiTexCoord3s
+    (define gl:MultiTexCoord3s
       (foreign-lambda
         void
         "glMultiTexCoord3s"
@@ -457,10 +457,10 @@
         short
         short)))
   (begin
-    (define glMultiTexCoord3sv
+    (define gl:MultiTexCoord3sv
       (foreign-lambda void "glMultiTexCoord3sv" unsigned-integer s16vector)))
   (begin
-    (define glMultiTexCoord4d
+    (define gl:MultiTexCoord4d
       (foreign-lambda
         void
         "glMultiTexCoord4d"
@@ -470,10 +470,10 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord4dv
+    (define gl:MultiTexCoord4dv
       (foreign-lambda void "glMultiTexCoord4dv" unsigned-integer f64vector)))
   (begin
-    (define glMultiTexCoord4f
+    (define gl:MultiTexCoord4f
       (foreign-lambda
         void
         "glMultiTexCoord4f"
@@ -483,10 +483,10 @@
         float
         float)))
   (begin
-    (define glMultiTexCoord4fv
+    (define gl:MultiTexCoord4fv
       (foreign-lambda void "glMultiTexCoord4fv" unsigned-integer f32vector)))
   (begin
-    (define glMultiTexCoord4i
+    (define gl:MultiTexCoord4i
       (foreign-lambda
         void
         "glMultiTexCoord4i"
@@ -496,10 +496,10 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord4iv
+    (define gl:MultiTexCoord4iv
       (foreign-lambda void "glMultiTexCoord4iv" unsigned-integer s32vector)))
   (begin
-    (define glMultiTexCoord4s
+    (define gl:MultiTexCoord4s
       (foreign-lambda
         void
         "glMultiTexCoord4s"
@@ -509,25 +509,25 @@
         short
         short)))
   (begin
-    (define glMultiTexCoord4sv
+    (define gl:MultiTexCoord4sv
       (foreign-lambda void "glMultiTexCoord4sv" unsigned-integer s16vector)))
   (begin
-    (define glLoadTransposeMatrixf
+    (define gl:LoadTransposeMatrixf
       (foreign-lambda void "glLoadTransposeMatrixf" f32vector)))
   (begin
-    (define glLoadTransposeMatrixd
+    (define gl:LoadTransposeMatrixd
       (foreign-lambda void "glLoadTransposeMatrixd" f64vector)))
   (begin
-    (define glMultTransposeMatrixf
+    (define gl:MultTransposeMatrixf
       (foreign-lambda void "glMultTransposeMatrixf" f32vector)))
   (begin
-    (define glMultTransposeMatrixd
+    (define gl:MultTransposeMatrixd
       (foreign-lambda void "glMultTransposeMatrixd" f64vector)))
   (begin
-    (define glSampleCoverage
+    (define gl:SampleCoverage
       (foreign-lambda void "glSampleCoverage" float unsigned-char)))
   (begin
-    (define glCompressedTexImage3D
+    (define gl:CompressedTexImage3D
       (foreign-lambda
         void
         "glCompressedTexImage3D"
@@ -541,7 +541,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexImage2D
+    (define gl:CompressedTexImage2D
       (foreign-lambda
         void
         "glCompressedTexImage2D"
@@ -554,7 +554,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexImage1D
+    (define gl:CompressedTexImage1D
       (foreign-lambda
         void
         "glCompressedTexImage1D"
@@ -566,7 +566,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage3D
+    (define gl:CompressedTexSubImage3D
       (foreign-lambda
         void
         "glCompressedTexSubImage3D"
@@ -582,7 +582,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage2D
+    (define gl:CompressedTexSubImage2D
       (foreign-lambda
         void
         "glCompressedTexSubImage2D"
@@ -596,7 +596,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage1D
+    (define gl:CompressedTexSubImage1D
       (foreign-lambda
         void
         "glCompressedTexSubImage1D"
@@ -608,7 +608,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetCompressedTexImage
+    (define gl:GetCompressedTexImage
       (foreign-lambda
         void
         "glGetCompressedTexImage"
@@ -616,7 +616,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glBlendFuncSeparate
+    (define gl:BlendFuncSeparate
       (foreign-lambda
         void
         "glBlendFuncSeparate"
@@ -624,12 +624,12 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer)))
-  (begin (define glFogCoordf (foreign-lambda void "glFogCoordf" float)))
-  (begin (define glFogCoordfv (foreign-lambda void "glFogCoordfv" f32vector)))
-  (begin (define glFogCoordd (foreign-lambda void "glFogCoordd" double)))
-  (begin (define glFogCoorddv (foreign-lambda void "glFogCoorddv" f64vector)))
+  (begin (define gl:FogCoordf (foreign-lambda void "glFogCoordf" float)))
+  (begin (define gl:FogCoordfv (foreign-lambda void "glFogCoordfv" f32vector)))
+  (begin (define gl:FogCoordd (foreign-lambda void "glFogCoordd" double)))
+  (begin (define gl:FogCoorddv (foreign-lambda void "glFogCoorddv" f64vector)))
   (begin
-    (define glFogCoordPointer
+    (define gl:FogCoordPointer
       (foreign-lambda
         void
         "glFogCoordPointer"
@@ -637,7 +637,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiDrawArrays
+    (define gl:MultiDrawArrays
       (foreign-lambda
         void
         "glMultiDrawArrays"
@@ -646,7 +646,7 @@
         u32vector
         unsigned-integer)))
   (begin
-    (define glMultiDrawElements
+    (define gl:MultiDrawElements
       (foreign-lambda
         void
         "glMultiDrawElements"
@@ -656,49 +656,49 @@
         (c-pointer (c-pointer (const void)))
         unsigned-integer)))
   (begin
-    (define glPointParameterf
+    (define gl:PointParameterf
       (foreign-lambda void "glPointParameterf" unsigned-integer float)))
   (begin
-    (define glPointParameterfv
+    (define gl:PointParameterfv
       (foreign-lambda void "glPointParameterfv" unsigned-integer f32vector)))
   (begin
-    (define glPointParameteri
+    (define gl:PointParameteri
       (foreign-lambda void "glPointParameteri" unsigned-integer integer)))
   (begin
-    (define glPointParameteriv
+    (define gl:PointParameteriv
       (foreign-lambda void "glPointParameteriv" unsigned-integer s32vector)))
   (begin
-    (define glSecondaryColor3b
+    (define gl:SecondaryColor3b
       (foreign-lambda void "glSecondaryColor3b" char char char)))
   (begin
-    (define glSecondaryColor3bv
+    (define gl:SecondaryColor3bv
       (foreign-lambda void "glSecondaryColor3bv" c-string)))
   (begin
-    (define glSecondaryColor3d
+    (define gl:SecondaryColor3d
       (foreign-lambda void "glSecondaryColor3d" double double double)))
   (begin
-    (define glSecondaryColor3dv
+    (define gl:SecondaryColor3dv
       (foreign-lambda void "glSecondaryColor3dv" f64vector)))
   (begin
-    (define glSecondaryColor3f
+    (define gl:SecondaryColor3f
       (foreign-lambda void "glSecondaryColor3f" float float float)))
   (begin
-    (define glSecondaryColor3fv
+    (define gl:SecondaryColor3fv
       (foreign-lambda void "glSecondaryColor3fv" f32vector)))
   (begin
-    (define glSecondaryColor3i
+    (define gl:SecondaryColor3i
       (foreign-lambda void "glSecondaryColor3i" integer integer integer)))
   (begin
-    (define glSecondaryColor3iv
+    (define gl:SecondaryColor3iv
       (foreign-lambda void "glSecondaryColor3iv" s32vector)))
   (begin
-    (define glSecondaryColor3s
+    (define gl:SecondaryColor3s
       (foreign-lambda void "glSecondaryColor3s" short short short)))
   (begin
-    (define glSecondaryColor3sv
+    (define gl:SecondaryColor3sv
       (foreign-lambda void "glSecondaryColor3sv" s16vector)))
   (begin
-    (define glSecondaryColor3ub
+    (define gl:SecondaryColor3ub
       (foreign-lambda
         void
         "glSecondaryColor3ub"
@@ -706,10 +706,10 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glSecondaryColor3ubv
+    (define gl:SecondaryColor3ubv
       (foreign-lambda void "glSecondaryColor3ubv" u8vector)))
   (begin
-    (define glSecondaryColor3ui
+    (define gl:SecondaryColor3ui
       (foreign-lambda
         void
         "glSecondaryColor3ui"
@@ -717,10 +717,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSecondaryColor3uiv
+    (define gl:SecondaryColor3uiv
       (foreign-lambda void "glSecondaryColor3uiv" u32vector)))
   (begin
-    (define glSecondaryColor3us
+    (define gl:SecondaryColor3us
       (foreign-lambda
         void
         "glSecondaryColor3us"
@@ -728,10 +728,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glSecondaryColor3usv
+    (define gl:SecondaryColor3usv
       (foreign-lambda void "glSecondaryColor3usv" u16vector)))
   (begin
-    (define glSecondaryColorPointer
+    (define gl:SecondaryColorPointer
       (foreign-lambda
         void
         "glSecondaryColorPointer"
@@ -740,56 +740,56 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glWindowPos2d (foreign-lambda void "glWindowPos2d" double double)))
+    (define gl:WindowPos2d (foreign-lambda void "glWindowPos2d" double double)))
   (begin
-    (define glWindowPos2dv (foreign-lambda void "glWindowPos2dv" f64vector)))
+    (define gl:WindowPos2dv (foreign-lambda void "glWindowPos2dv" f64vector)))
   (begin
-    (define glWindowPos2f (foreign-lambda void "glWindowPos2f" float float)))
+    (define gl:WindowPos2f (foreign-lambda void "glWindowPos2f" float float)))
   (begin
-    (define glWindowPos2fv (foreign-lambda void "glWindowPos2fv" f32vector)))
+    (define gl:WindowPos2fv (foreign-lambda void "glWindowPos2fv" f32vector)))
   (begin
-    (define glWindowPos2i
+    (define gl:WindowPos2i
       (foreign-lambda void "glWindowPos2i" integer integer)))
   (begin
-    (define glWindowPos2iv (foreign-lambda void "glWindowPos2iv" s32vector)))
+    (define gl:WindowPos2iv (foreign-lambda void "glWindowPos2iv" s32vector)))
   (begin
-    (define glWindowPos2s (foreign-lambda void "glWindowPos2s" short short)))
+    (define gl:WindowPos2s (foreign-lambda void "glWindowPos2s" short short)))
   (begin
-    (define glWindowPos2sv (foreign-lambda void "glWindowPos2sv" s16vector)))
+    (define gl:WindowPos2sv (foreign-lambda void "glWindowPos2sv" s16vector)))
   (begin
-    (define glWindowPos3d
+    (define gl:WindowPos3d
       (foreign-lambda void "glWindowPos3d" double double double)))
   (begin
-    (define glWindowPos3dv (foreign-lambda void "glWindowPos3dv" f64vector)))
+    (define gl:WindowPos3dv (foreign-lambda void "glWindowPos3dv" f64vector)))
   (begin
-    (define glWindowPos3f
+    (define gl:WindowPos3f
       (foreign-lambda void "glWindowPos3f" float float float)))
   (begin
-    (define glWindowPos3fv (foreign-lambda void "glWindowPos3fv" f32vector)))
+    (define gl:WindowPos3fv (foreign-lambda void "glWindowPos3fv" f32vector)))
   (begin
-    (define glWindowPos3i
+    (define gl:WindowPos3i
       (foreign-lambda void "glWindowPos3i" integer integer integer)))
   (begin
-    (define glWindowPos3iv (foreign-lambda void "glWindowPos3iv" s32vector)))
+    (define gl:WindowPos3iv (foreign-lambda void "glWindowPos3iv" s32vector)))
   (begin
-    (define glWindowPos3s
+    (define gl:WindowPos3s
       (foreign-lambda void "glWindowPos3s" short short short)))
   (begin
-    (define glWindowPos3sv (foreign-lambda void "glWindowPos3sv" s16vector)))
+    (define gl:WindowPos3sv (foreign-lambda void "glWindowPos3sv" s16vector)))
   (begin
-    (define glBindBuffer
+    (define gl:BindBuffer
       (foreign-lambda void "glBindBuffer" unsigned-integer unsigned-integer)))
   (begin
-    (define glDeleteBuffers
+    (define gl:DeleteBuffers
       (foreign-lambda void "glDeleteBuffers" unsigned-integer u32vector)))
   (begin
-    (define glGenBuffers
+    (define gl:GenBuffers
       (foreign-lambda void "glGenBuffers" unsigned-integer u32vector)))
   (begin
-    (define glIsBuffer
+    (define gl:IsBuffer
       (foreign-lambda unsigned-char "glIsBuffer" unsigned-integer)))
   (begin
-    (define glBufferData
+    (define gl:BufferData
       (foreign-lambda
         void
         "glBufferData"
@@ -798,7 +798,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glBufferSubData
+    (define gl:BufferSubData
       (foreign-lambda
         void
         "glBufferSubData"
@@ -807,7 +807,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glGetBufferSubData
+    (define gl:GetBufferSubData
       (foreign-lambda
         void
         "glGetBufferSubData"
@@ -816,17 +816,17 @@
         integer
         (c-pointer void))))
   (begin
-    (define glMapBuffer
+    (define gl:MapBuffer
       (foreign-lambda
         (c-pointer void)
         "glMapBuffer"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUnmapBuffer
+    (define gl:UnmapBuffer
       (foreign-lambda unsigned-char "glUnmapBuffer" unsigned-integer)))
   (begin
-    (define glGetBufferParameteriv
+    (define gl:GetBufferParameteriv
       (foreign-lambda
         void
         "glGetBufferParameteriv"
@@ -834,7 +834,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetBufferPointerv
+    (define gl:GetBufferPointerv
       (foreign-lambda
         void
         "glGetBufferPointerv"
@@ -842,21 +842,21 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glGenQueries
+    (define gl:GenQueries
       (foreign-lambda void "glGenQueries" unsigned-integer u32vector)))
   (begin
-    (define glDeleteQueries
+    (define gl:DeleteQueries
       (foreign-lambda void "glDeleteQueries" unsigned-integer u32vector)))
   (begin
-    (define glIsQuery
+    (define gl:IsQuery
       (foreign-lambda unsigned-char "glIsQuery" unsigned-integer)))
   (begin
-    (define glBeginQuery
+    (define gl:BeginQuery
       (foreign-lambda void "glBeginQuery" unsigned-integer unsigned-integer)))
   (begin
-    (define glEndQuery (foreign-lambda void "glEndQuery" unsigned-integer)))
+    (define gl:EndQuery (foreign-lambda void "glEndQuery" unsigned-integer)))
   (begin
-    (define glGetQueryiv
+    (define gl:GetQueryiv
       (foreign-lambda
         void
         "glGetQueryiv"
@@ -864,7 +864,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectiv
+    (define gl:GetQueryObjectiv
       (foreign-lambda
         void
         "glGetQueryObjectiv"
@@ -872,7 +872,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectuiv
+    (define gl:GetQueryObjectuiv
       (foreign-lambda
         void
         "glGetQueryObjectuiv"
@@ -880,40 +880,40 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glBlendEquationSeparate
+    (define gl:BlendEquationSeparate
       (foreign-lambda
         void
         "glBlendEquationSeparate"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glCreateProgram
+    (define gl:CreateProgram
       (foreign-lambda unsigned-integer "glCreateProgram")))
   (begin
-    (define glCreateShader
+    (define gl:CreateShader
       (foreign-lambda unsigned-integer "glCreateShader" unsigned-integer)))
   (begin
-    (define glDeleteProgram
+    (define gl:DeleteProgram
       (foreign-lambda void "glDeleteProgram" unsigned-integer)))
   (begin
-    (define glDeleteShader
+    (define gl:DeleteShader
       (foreign-lambda void "glDeleteShader" unsigned-integer)))
   (begin
-    (define glAttachShader
+    (define gl:AttachShader
       (foreign-lambda
         void
         "glAttachShader"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDetachShader
+    (define gl:DetachShader
       (foreign-lambda
         void
         "glDetachShader"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glShaderSource
+    (define gl:ShaderSource
       (foreign-lambda
         void
         "glShaderSource"
@@ -922,44 +922,44 @@
         (c-pointer (c-pointer (const char)))
         s32vector)))
   (begin
-    (define glCompileShader
+    (define gl:CompileShader
       (foreign-lambda void "glCompileShader" unsigned-integer)))
   (begin
-    (define glIsProgram
+    (define gl:IsProgram
       (foreign-lambda unsigned-char "glIsProgram" unsigned-integer)))
   (begin
-    (define glIsShader
+    (define gl:IsShader
       (foreign-lambda unsigned-char "glIsShader" unsigned-integer)))
   (begin
-    (define glLinkProgram
+    (define gl:LinkProgram
       (foreign-lambda void "glLinkProgram" unsigned-integer)))
   (begin
-    (define glUseProgram
+    (define gl:UseProgram
       (foreign-lambda void "glUseProgram" unsigned-integer)))
   (begin
-    (define glValidateProgram
+    (define gl:ValidateProgram
       (foreign-lambda void "glValidateProgram" unsigned-integer)))
   (begin
-    (define glUniform1f (foreign-lambda void "glUniform1f" integer float)))
+    (define gl:Uniform1f (foreign-lambda void "glUniform1f" integer float)))
   (begin
-    (define glUniform2f
+    (define gl:Uniform2f
       (foreign-lambda void "glUniform2f" integer float float)))
   (begin
-    (define glUniform3f
+    (define gl:Uniform3f
       (foreign-lambda void "glUniform3f" integer float float float)))
   (begin
-    (define glUniform4f
+    (define gl:Uniform4f
       (foreign-lambda void "glUniform4f" integer float float float float)))
   (begin
-    (define glUniform1i (foreign-lambda void "glUniform1i" integer integer)))
+    (define gl:Uniform1i (foreign-lambda void "glUniform1i" integer integer)))
   (begin
-    (define glUniform2i
+    (define gl:Uniform2i
       (foreign-lambda void "glUniform2i" integer integer integer)))
   (begin
-    (define glUniform3i
+    (define gl:Uniform3i
       (foreign-lambda void "glUniform3i" integer integer integer integer)))
   (begin
-    (define glUniform4i
+    (define gl:Uniform4i
       (foreign-lambda
         void
         "glUniform4i"
@@ -969,31 +969,31 @@
         integer
         integer)))
   (begin
-    (define glUniform1fv
+    (define gl:Uniform1fv
       (foreign-lambda void "glUniform1fv" integer unsigned-integer f32vector)))
   (begin
-    (define glUniform2fv
+    (define gl:Uniform2fv
       (foreign-lambda void "glUniform2fv" integer unsigned-integer f32vector)))
   (begin
-    (define glUniform3fv
+    (define gl:Uniform3fv
       (foreign-lambda void "glUniform3fv" integer unsigned-integer f32vector)))
   (begin
-    (define glUniform4fv
+    (define gl:Uniform4fv
       (foreign-lambda void "glUniform4fv" integer unsigned-integer f32vector)))
   (begin
-    (define glUniform1iv
+    (define gl:Uniform1iv
       (foreign-lambda void "glUniform1iv" integer unsigned-integer s32vector)))
   (begin
-    (define glUniform2iv
+    (define gl:Uniform2iv
       (foreign-lambda void "glUniform2iv" integer unsigned-integer s32vector)))
   (begin
-    (define glUniform3iv
+    (define gl:Uniform3iv
       (foreign-lambda void "glUniform3iv" integer unsigned-integer s32vector)))
   (begin
-    (define glUniform4iv
+    (define gl:Uniform4iv
       (foreign-lambda void "glUniform4iv" integer unsigned-integer s32vector)))
   (begin
-    (define glUniformMatrix2fv
+    (define gl:UniformMatrix2fv
       (foreign-lambda
         void
         "glUniformMatrix2fv"
@@ -1002,7 +1002,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix3fv
+    (define gl:UniformMatrix3fv
       (foreign-lambda
         void
         "glUniformMatrix3fv"
@@ -1011,7 +1011,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix4fv
+    (define gl:UniformMatrix4fv
       (foreign-lambda
         void
         "glUniformMatrix4fv"
@@ -1020,7 +1020,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glGetShaderfv
+    (define gl:GetShaderfv
       (foreign-lambda
         void
         "glGetShaderfv"
@@ -1028,7 +1028,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetShaderiv
+    (define gl:GetShaderiv
       (foreign-lambda
         void
         "glGetShaderiv"
@@ -1036,7 +1036,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetProgramfv
+    (define gl:GetProgramfv
       (foreign-lambda
         void
         "glGetProgramfv"
@@ -1044,7 +1044,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetProgramiv
+    (define gl:GetProgramiv
       (foreign-lambda
         void
         "glGetProgramiv"
@@ -1052,7 +1052,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetShaderInfoLog
+    (define gl:GetShaderInfoLog
       (foreign-lambda
         void
         "glGetShaderInfoLog"
@@ -1061,7 +1061,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetProgramInfoLog
+    (define gl:GetProgramInfoLog
       (foreign-lambda
         void
         "glGetProgramInfoLog"
@@ -1070,7 +1070,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetAttachedShaders
+    (define gl:GetAttachedShaders
       (foreign-lambda
         void
         "glGetAttachedShaders"
@@ -1079,14 +1079,14 @@
         u32vector
         u32vector)))
   (begin
-    (define glGetUniformLocation
+    (define gl:GetUniformLocation
       (foreign-lambda
         integer
         "glGetUniformLocation"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveUniform
+    (define gl:GetActiveUniform
       (foreign-lambda
         void
         "glGetActiveUniform"
@@ -1098,7 +1098,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetUniformfv
+    (define gl:GetUniformfv
       (foreign-lambda
         void
         "glGetUniformfv"
@@ -1106,7 +1106,7 @@
         integer
         f32vector)))
   (begin
-    (define glGetUniformiv
+    (define gl:GetUniformiv
       (foreign-lambda
         void
         "glGetUniformiv"
@@ -1114,7 +1114,7 @@
         integer
         s32vector)))
   (begin
-    (define glGetShaderSource
+    (define gl:GetShaderSource
       (foreign-lambda
         void
         "glGetShaderSource"
@@ -1123,25 +1123,25 @@
         u32vector
         c-string)))
   (begin
-    (define glVertexAttrib1f
+    (define gl:VertexAttrib1f
       (foreign-lambda void "glVertexAttrib1f" unsigned-integer float)))
   (begin
-    (define glVertexAttrib1s
+    (define gl:VertexAttrib1s
       (foreign-lambda void "glVertexAttrib1s" unsigned-integer short)))
   (begin
-    (define glVertexAttrib1d
+    (define gl:VertexAttrib1d
       (foreign-lambda void "glVertexAttrib1d" unsigned-integer double)))
   (begin
-    (define glVertexAttrib2f
+    (define gl:VertexAttrib2f
       (foreign-lambda void "glVertexAttrib2f" unsigned-integer float float)))
   (begin
-    (define glVertexAttrib2s
+    (define gl:VertexAttrib2s
       (foreign-lambda void "glVertexAttrib2s" unsigned-integer short short)))
   (begin
-    (define glVertexAttrib2d
+    (define gl:VertexAttrib2d
       (foreign-lambda void "glVertexAttrib2d" unsigned-integer double double)))
   (begin
-    (define glVertexAttrib3f
+    (define gl:VertexAttrib3f
       (foreign-lambda
         void
         "glVertexAttrib3f"
@@ -1150,7 +1150,7 @@
         float
         float)))
   (begin
-    (define glVertexAttrib3s
+    (define gl:VertexAttrib3s
       (foreign-lambda
         void
         "glVertexAttrib3s"
@@ -1159,7 +1159,7 @@
         short
         short)))
   (begin
-    (define glVertexAttrib3d
+    (define gl:VertexAttrib3d
       (foreign-lambda
         void
         "glVertexAttrib3d"
@@ -1168,7 +1168,7 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4f
+    (define gl:VertexAttrib4f
       (foreign-lambda
         void
         "glVertexAttrib4f"
@@ -1178,7 +1178,7 @@
         float
         float)))
   (begin
-    (define glVertexAttrib4s
+    (define gl:VertexAttrib4s
       (foreign-lambda
         void
         "glVertexAttrib4s"
@@ -1188,7 +1188,7 @@
         short
         short)))
   (begin
-    (define glVertexAttrib4d
+    (define gl:VertexAttrib4d
       (foreign-lambda
         void
         "glVertexAttrib4d"
@@ -1198,7 +1198,7 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4Nub
+    (define gl:VertexAttrib4Nub
       (foreign-lambda
         void
         "glVertexAttrib4Nub"
@@ -1208,76 +1208,76 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glVertexAttrib1fv
+    (define gl:VertexAttrib1fv
       (foreign-lambda void "glVertexAttrib1fv" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib1sv
+    (define gl:VertexAttrib1sv
       (foreign-lambda void "glVertexAttrib1sv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib1dv
+    (define gl:VertexAttrib1dv
       (foreign-lambda void "glVertexAttrib1dv" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib2fv
+    (define gl:VertexAttrib2fv
       (foreign-lambda void "glVertexAttrib2fv" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib2sv
+    (define gl:VertexAttrib2sv
       (foreign-lambda void "glVertexAttrib2sv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib2dv
+    (define gl:VertexAttrib2dv
       (foreign-lambda void "glVertexAttrib2dv" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib3fv
+    (define gl:VertexAttrib3fv
       (foreign-lambda void "glVertexAttrib3fv" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib3sv
+    (define gl:VertexAttrib3sv
       (foreign-lambda void "glVertexAttrib3sv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib3dv
+    (define gl:VertexAttrib3dv
       (foreign-lambda void "glVertexAttrib3dv" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4fv
+    (define gl:VertexAttrib4fv
       (foreign-lambda void "glVertexAttrib4fv" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib4sv
+    (define gl:VertexAttrib4sv
       (foreign-lambda void "glVertexAttrib4sv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4dv
+    (define gl:VertexAttrib4dv
       (foreign-lambda void "glVertexAttrib4dv" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4iv
+    (define gl:VertexAttrib4iv
       (foreign-lambda void "glVertexAttrib4iv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttrib4bv
+    (define gl:VertexAttrib4bv
       (foreign-lambda void "glVertexAttrib4bv" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4ubv
+    (define gl:VertexAttrib4ubv
       (foreign-lambda void "glVertexAttrib4ubv" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttrib4usv
+    (define gl:VertexAttrib4usv
       (foreign-lambda void "glVertexAttrib4usv" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttrib4uiv
+    (define gl:VertexAttrib4uiv
       (foreign-lambda void "glVertexAttrib4uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttrib4Nbv
+    (define gl:VertexAttrib4Nbv
       (foreign-lambda void "glVertexAttrib4Nbv" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4Nsv
+    (define gl:VertexAttrib4Nsv
       (foreign-lambda void "glVertexAttrib4Nsv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4Niv
+    (define gl:VertexAttrib4Niv
       (foreign-lambda void "glVertexAttrib4Niv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttrib4Nubv
+    (define gl:VertexAttrib4Nubv
       (foreign-lambda void "glVertexAttrib4Nubv" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttrib4Nusv
+    (define gl:VertexAttrib4Nusv
       (foreign-lambda void "glVertexAttrib4Nusv" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttrib4Nuiv
+    (define gl:VertexAttrib4Nuiv
       (foreign-lambda void "glVertexAttrib4Nuiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttribPointer
+    (define gl:VertexAttribPointer
       (foreign-lambda
         void
         "glVertexAttribPointer"
@@ -1288,13 +1288,13 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glEnableVertexAttribArray
+    (define gl:EnableVertexAttribArray
       (foreign-lambda void "glEnableVertexAttribArray" unsigned-integer)))
   (begin
-    (define glDisableVertexAttribArray
+    (define gl:DisableVertexAttribArray
       (foreign-lambda void "glDisableVertexAttribArray" unsigned-integer)))
   (begin
-    (define glBindAttribLocation
+    (define gl:BindAttribLocation
       (foreign-lambda
         void
         "glBindAttribLocation"
@@ -1302,7 +1302,7 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveAttrib
+    (define gl:GetActiveAttrib
       (foreign-lambda
         void
         "glGetActiveAttrib"
@@ -1314,14 +1314,14 @@
         u32vector
         c-string)))
   (begin
-    (define glGetAttribLocation
+    (define gl:GetAttribLocation
       (foreign-lambda
         integer
         "glGetAttribLocation"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetVertexAttribdv
+    (define gl:GetVertexAttribdv
       (foreign-lambda
         void
         "glGetVertexAttribdv"
@@ -1329,7 +1329,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetVertexAttribfv
+    (define gl:GetVertexAttribfv
       (foreign-lambda
         void
         "glGetVertexAttribfv"
@@ -1337,7 +1337,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVertexAttribiv
+    (define gl:GetVertexAttribiv
       (foreign-lambda
         void
         "glGetVertexAttribiv"
@@ -1345,7 +1345,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribPointerv
+    (define gl:GetVertexAttribPointerv
       (foreign-lambda
         void
         "glGetVertexAttribPointerv"
@@ -1353,10 +1353,10 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glDrawBuffers
+    (define gl:DrawBuffers
       (foreign-lambda void "glDrawBuffers" unsigned-integer u32vector)))
   (begin
-    (define glStencilOpSeparate
+    (define gl:StencilOpSeparate
       (foreign-lambda
         void
         "glStencilOpSeparate"
@@ -1365,7 +1365,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glStencilFuncSeparate
+    (define gl:StencilFuncSeparate
       (foreign-lambda
         void
         "glStencilFuncSeparate"
@@ -1374,7 +1374,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glUniformMatrix2x3fv
+    (define gl:UniformMatrix2x3fv
       (foreign-lambda
         void
         "glUniformMatrix2x3fv"
@@ -1383,7 +1383,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix3x2fv
+    (define gl:UniformMatrix3x2fv
       (foreign-lambda
         void
         "glUniformMatrix3x2fv"
@@ -1392,7 +1392,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix2x4fv
+    (define gl:UniformMatrix2x4fv
       (foreign-lambda
         void
         "glUniformMatrix2x4fv"
@@ -1401,7 +1401,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix4x2fv
+    (define gl:UniformMatrix4x2fv
       (foreign-lambda
         void
         "glUniformMatrix4x2fv"
@@ -1410,7 +1410,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix3x4fv
+    (define gl:UniformMatrix3x4fv
       (foreign-lambda
         void
         "glUniformMatrix3x4fv"
@@ -1419,7 +1419,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix4x3fv
+    (define gl:UniformMatrix4x3fv
       (foreign-lambda
         void
         "glUniformMatrix4x3fv"
@@ -1428,7 +1428,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glColorMaski
+    (define gl:ColorMaski
       (foreign-lambda
         void
         "glColorMaski"
@@ -1438,7 +1438,7 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glGetBooleani_v
+    (define gl:GetBooleani_v
       (foreign-lambda
         void
         "glGetBooleani_v"
@@ -1446,7 +1446,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetIntegeri_v
+    (define gl:GetIntegeri_v
       (foreign-lambda
         void
         "glGetIntegeri_v"
@@ -1454,26 +1454,26 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glEnablei
+    (define gl:Enablei
       (foreign-lambda void "glEnablei" unsigned-integer unsigned-integer)))
   (begin
-    (define glDisablei
+    (define gl:Disablei
       (foreign-lambda void "glDisablei" unsigned-integer unsigned-integer)))
   (begin
-    (define glIsEnabledi
+    (define gl:IsEnabledi
       (foreign-lambda
         unsigned-char
         "glIsEnabledi"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBeginTransformFeedback
+    (define gl:BeginTransformFeedback
       (foreign-lambda void "glBeginTransformFeedback" unsigned-integer)))
   (begin
-    (define glEndTransformFeedback
+    (define gl:EndTransformFeedback
       (foreign-lambda void "glEndTransformFeedback")))
   (begin
-    (define glBindBufferRange
+    (define gl:BindBufferRange
       (foreign-lambda
         void
         "glBindBufferRange"
@@ -1483,7 +1483,7 @@
         integer
         integer)))
   (begin
-    (define glBindBufferBase
+    (define gl:BindBufferBase
       (foreign-lambda
         void
         "glBindBufferBase"
@@ -1491,7 +1491,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTransformFeedbackVaryings
+    (define gl:TransformFeedbackVaryings
       (foreign-lambda
         void
         "glTransformFeedbackVaryings"
@@ -1500,7 +1500,7 @@
         s32vector
         unsigned-integer)))
   (begin
-    (define glGetTransformFeedbackVarying
+    (define gl:GetTransformFeedbackVarying
       (foreign-lambda
         void
         "glGetTransformFeedbackVarying"
@@ -1508,23 +1508,23 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glClampColor
+    (define gl:ClampColor
       (foreign-lambda void "glClampColor" unsigned-integer unsigned-integer)))
   (begin
-    (define glBeginConditionalRender
+    (define gl:BeginConditionalRender
       (foreign-lambda
         void
         "glBeginConditionalRender"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEndConditionalRender
+    (define gl:EndConditionalRender
       (foreign-lambda void "glEndConditionalRender")))
   (begin
-    (define glVertexAttribI1i
+    (define gl:VertexAttribI1i
       (foreign-lambda void "glVertexAttribI1i" unsigned-integer integer)))
   (begin
-    (define glVertexAttribI2i
+    (define gl:VertexAttribI2i
       (foreign-lambda
         void
         "glVertexAttribI2i"
@@ -1532,7 +1532,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI3i
+    (define gl:VertexAttribI3i
       (foreign-lambda
         void
         "glVertexAttribI3i"
@@ -1541,7 +1541,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI4i
+    (define gl:VertexAttribI4i
       (foreign-lambda
         void
         "glVertexAttribI4i"
@@ -1551,14 +1551,14 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI1ui
+    (define gl:VertexAttribI1ui
       (foreign-lambda
         void
         "glVertexAttribI1ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI2ui
+    (define gl:VertexAttribI2ui
       (foreign-lambda
         void
         "glVertexAttribI2ui"
@@ -1566,7 +1566,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI3ui
+    (define gl:VertexAttribI3ui
       (foreign-lambda
         void
         "glVertexAttribI3ui"
@@ -1575,7 +1575,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI4ui
+    (define gl:VertexAttribI4ui
       (foreign-lambda
         void
         "glVertexAttribI4ui"
@@ -1585,43 +1585,43 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI1iv
+    (define gl:VertexAttribI1iv
       (foreign-lambda void "glVertexAttribI1iv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttribI2iv
+    (define gl:VertexAttribI2iv
       (foreign-lambda void "glVertexAttribI2iv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttribI3iv
+    (define gl:VertexAttribI3iv
       (foreign-lambda void "glVertexAttribI3iv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttribI4iv
+    (define gl:VertexAttribI4iv
       (foreign-lambda void "glVertexAttribI4iv" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttribI1uiv
+    (define gl:VertexAttribI1uiv
       (foreign-lambda void "glVertexAttribI1uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttribI2uiv
+    (define gl:VertexAttribI2uiv
       (foreign-lambda void "glVertexAttribI2uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttribI3uiv
+    (define gl:VertexAttribI3uiv
       (foreign-lambda void "glVertexAttribI3uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttribI4uiv
+    (define gl:VertexAttribI4uiv
       (foreign-lambda void "glVertexAttribI4uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexAttribI4bv
+    (define gl:VertexAttribI4bv
       (foreign-lambda void "glVertexAttribI4bv" unsigned-integer c-string)))
   (begin
-    (define glVertexAttribI4sv
+    (define gl:VertexAttribI4sv
       (foreign-lambda void "glVertexAttribI4sv" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttribI4ubv
+    (define gl:VertexAttribI4ubv
       (foreign-lambda void "glVertexAttribI4ubv" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttribI4usv
+    (define gl:VertexAttribI4usv
       (foreign-lambda void "glVertexAttribI4usv" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttribIPointer
+    (define gl:VertexAttribIPointer
       (foreign-lambda
         void
         "glVertexAttribIPointer"
@@ -1631,7 +1631,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetVertexAttribIiv
+    (define gl:GetVertexAttribIiv
       (foreign-lambda
         void
         "glGetVertexAttribIiv"
@@ -1639,7 +1639,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribIuiv
+    (define gl:GetVertexAttribIuiv
       (foreign-lambda
         void
         "glGetVertexAttribIuiv"
@@ -1647,7 +1647,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetUniformuiv
+    (define gl:GetUniformuiv
       (foreign-lambda
         void
         "glGetUniformuiv"
@@ -1655,7 +1655,7 @@
         integer
         u32vector)))
   (begin
-    (define glBindFragDataLocation
+    (define gl:BindFragDataLocation
       (foreign-lambda
         void
         "glBindFragDataLocation"
@@ -1663,17 +1663,17 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetFragDataLocation
+    (define gl:GetFragDataLocation
       (foreign-lambda
         integer
         "glGetFragDataLocation"
         unsigned-integer
         c-string)))
   (begin
-    (define glUniform1ui
+    (define gl:Uniform1ui
       (foreign-lambda void "glUniform1ui" integer unsigned-integer)))
   (begin
-    (define glUniform2ui
+    (define gl:Uniform2ui
       (foreign-lambda
         void
         "glUniform2ui"
@@ -1681,7 +1681,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform3ui
+    (define gl:Uniform3ui
       (foreign-lambda
         void
         "glUniform3ui"
@@ -1690,7 +1690,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform4ui
+    (define gl:Uniform4ui
       (foreign-lambda
         void
         "glUniform4ui"
@@ -1700,7 +1700,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform1uiv
+    (define gl:Uniform1uiv
       (foreign-lambda
         void
         "glUniform1uiv"
@@ -1708,7 +1708,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform2uiv
+    (define gl:Uniform2uiv
       (foreign-lambda
         void
         "glUniform2uiv"
@@ -1716,7 +1716,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform3uiv
+    (define gl:Uniform3uiv
       (foreign-lambda
         void
         "glUniform3uiv"
@@ -1724,7 +1724,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform4uiv
+    (define gl:Uniform4uiv
       (foreign-lambda
         void
         "glUniform4uiv"
@@ -1732,7 +1732,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glTexParameterIiv
+    (define gl:TexParameterIiv
       (foreign-lambda
         void
         "glTexParameterIiv"
@@ -1740,7 +1740,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glTexParameterIuiv
+    (define gl:TexParameterIuiv
       (foreign-lambda
         void
         "glTexParameterIuiv"
@@ -1748,7 +1748,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetTexParameterIiv
+    (define gl:GetTexParameterIiv
       (foreign-lambda
         void
         "glGetTexParameterIiv"
@@ -1756,7 +1756,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexParameterIuiv
+    (define gl:GetTexParameterIuiv
       (foreign-lambda
         void
         "glGetTexParameterIuiv"
@@ -1764,7 +1764,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glClearBufferiv
+    (define gl:ClearBufferiv
       (foreign-lambda
         void
         "glClearBufferiv"
@@ -1772,7 +1772,7 @@
         integer
         s32vector)))
   (begin
-    (define glClearBufferuiv
+    (define gl:ClearBufferuiv
       (foreign-lambda
         void
         "glClearBufferuiv"
@@ -1780,7 +1780,7 @@
         integer
         u32vector)))
   (begin
-    (define glClearBufferfv
+    (define gl:ClearBufferfv
       (foreign-lambda
         void
         "glClearBufferfv"
@@ -1788,7 +1788,7 @@
         integer
         f32vector)))
   (begin
-    (define glClearBufferfi
+    (define gl:ClearBufferfi
       (foreign-lambda
         void
         "glClearBufferfi"
@@ -1797,14 +1797,14 @@
         float
         integer)))
   (begin
-    (define glGetStringi
+    (define gl:GetStringi
       (foreign-lambda
         (c-pointer (const unsigned-char))
         "glGetStringi"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawArraysInstanced
+    (define gl:DrawArraysInstanced
       (foreign-lambda
         void
         "glDrawArraysInstanced"
@@ -1813,7 +1813,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawElementsInstanced
+    (define gl:DrawElementsInstanced
       (foreign-lambda
         void
         "glDrawElementsInstanced"
@@ -1823,7 +1823,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glTexBuffer
+    (define gl:TexBuffer
       (foreign-lambda
         void
         "glTexBuffer"
@@ -1831,56 +1831,56 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glPrimitiveRestartIndex
+    (define gl:PrimitiveRestartIndex
       (foreign-lambda void "glPrimitiveRestartIndex" unsigned-integer)))
   (begin
-    (define glActiveTextureARB
+    (define gl:ActiveTextureARB
       (foreign-lambda void "glActiveTextureARB" unsigned-integer)))
   (begin
-    (define glClientActiveTextureARB
+    (define gl:ClientActiveTextureARB
       (foreign-lambda void "glClientActiveTextureARB" unsigned-integer)))
   (begin
-    (define glMultiTexCoord1dARB
+    (define gl:MultiTexCoord1dARB
       (foreign-lambda void "glMultiTexCoord1dARB" unsigned-integer double)))
   (begin
-    (define glMultiTexCoord1dvARB
+    (define gl:MultiTexCoord1dvARB
       (foreign-lambda
         void
         "glMultiTexCoord1dvARB"
         unsigned-integer
         f64vector)))
   (begin
-    (define glMultiTexCoord1fARB
+    (define gl:MultiTexCoord1fARB
       (foreign-lambda void "glMultiTexCoord1fARB" unsigned-integer float)))
   (begin
-    (define glMultiTexCoord1fvARB
+    (define gl:MultiTexCoord1fvARB
       (foreign-lambda
         void
         "glMultiTexCoord1fvARB"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexCoord1iARB
+    (define gl:MultiTexCoord1iARB
       (foreign-lambda void "glMultiTexCoord1iARB" unsigned-integer integer)))
   (begin
-    (define glMultiTexCoord1ivARB
+    (define gl:MultiTexCoord1ivARB
       (foreign-lambda
         void
         "glMultiTexCoord1ivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord1sARB
+    (define gl:MultiTexCoord1sARB
       (foreign-lambda void "glMultiTexCoord1sARB" unsigned-integer short)))
   (begin
-    (define glMultiTexCoord1svARB
+    (define gl:MultiTexCoord1svARB
       (foreign-lambda
         void
         "glMultiTexCoord1svARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glMultiTexCoord2dARB
+    (define gl:MultiTexCoord2dARB
       (foreign-lambda
         void
         "glMultiTexCoord2dARB"
@@ -1888,14 +1888,14 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord2dvARB
+    (define gl:MultiTexCoord2dvARB
       (foreign-lambda
         void
         "glMultiTexCoord2dvARB"
         unsigned-integer
         f64vector)))
   (begin
-    (define glMultiTexCoord2fARB
+    (define gl:MultiTexCoord2fARB
       (foreign-lambda
         void
         "glMultiTexCoord2fARB"
@@ -1903,14 +1903,14 @@
         float
         float)))
   (begin
-    (define glMultiTexCoord2fvARB
+    (define gl:MultiTexCoord2fvARB
       (foreign-lambda
         void
         "glMultiTexCoord2fvARB"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexCoord2iARB
+    (define gl:MultiTexCoord2iARB
       (foreign-lambda
         void
         "glMultiTexCoord2iARB"
@@ -1918,14 +1918,14 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord2ivARB
+    (define gl:MultiTexCoord2ivARB
       (foreign-lambda
         void
         "glMultiTexCoord2ivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord2sARB
+    (define gl:MultiTexCoord2sARB
       (foreign-lambda
         void
         "glMultiTexCoord2sARB"
@@ -1933,14 +1933,14 @@
         short
         short)))
   (begin
-    (define glMultiTexCoord2svARB
+    (define gl:MultiTexCoord2svARB
       (foreign-lambda
         void
         "glMultiTexCoord2svARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glMultiTexCoord3dARB
+    (define gl:MultiTexCoord3dARB
       (foreign-lambda
         void
         "glMultiTexCoord3dARB"
@@ -1949,14 +1949,14 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord3dvARB
+    (define gl:MultiTexCoord3dvARB
       (foreign-lambda
         void
         "glMultiTexCoord3dvARB"
         unsigned-integer
         f64vector)))
   (begin
-    (define glMultiTexCoord3fARB
+    (define gl:MultiTexCoord3fARB
       (foreign-lambda
         void
         "glMultiTexCoord3fARB"
@@ -1965,14 +1965,14 @@
         float
         float)))
   (begin
-    (define glMultiTexCoord3fvARB
+    (define gl:MultiTexCoord3fvARB
       (foreign-lambda
         void
         "glMultiTexCoord3fvARB"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexCoord3iARB
+    (define gl:MultiTexCoord3iARB
       (foreign-lambda
         void
         "glMultiTexCoord3iARB"
@@ -1981,14 +1981,14 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord3ivARB
+    (define gl:MultiTexCoord3ivARB
       (foreign-lambda
         void
         "glMultiTexCoord3ivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord3sARB
+    (define gl:MultiTexCoord3sARB
       (foreign-lambda
         void
         "glMultiTexCoord3sARB"
@@ -1997,14 +1997,14 @@
         short
         short)))
   (begin
-    (define glMultiTexCoord3svARB
+    (define gl:MultiTexCoord3svARB
       (foreign-lambda
         void
         "glMultiTexCoord3svARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glMultiTexCoord4dARB
+    (define gl:MultiTexCoord4dARB
       (foreign-lambda
         void
         "glMultiTexCoord4dARB"
@@ -2014,14 +2014,14 @@
         double
         double)))
   (begin
-    (define glMultiTexCoord4dvARB
+    (define gl:MultiTexCoord4dvARB
       (foreign-lambda
         void
         "glMultiTexCoord4dvARB"
         unsigned-integer
         f64vector)))
   (begin
-    (define glMultiTexCoord4fARB
+    (define gl:MultiTexCoord4fARB
       (foreign-lambda
         void
         "glMultiTexCoord4fARB"
@@ -2031,14 +2031,14 @@
         float
         float)))
   (begin
-    (define glMultiTexCoord4fvARB
+    (define gl:MultiTexCoord4fvARB
       (foreign-lambda
         void
         "glMultiTexCoord4fvARB"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexCoord4iARB
+    (define gl:MultiTexCoord4iARB
       (foreign-lambda
         void
         "glMultiTexCoord4iARB"
@@ -2048,14 +2048,14 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord4ivARB
+    (define gl:MultiTexCoord4ivARB
       (foreign-lambda
         void
         "glMultiTexCoord4ivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord4sARB
+    (define gl:MultiTexCoord4sARB
       (foreign-lambda
         void
         "glMultiTexCoord4sARB"
@@ -2065,29 +2065,29 @@
         short
         short)))
   (begin
-    (define glMultiTexCoord4svARB
+    (define gl:MultiTexCoord4svARB
       (foreign-lambda
         void
         "glMultiTexCoord4svARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glLoadTransposeMatrixfARB
+    (define gl:LoadTransposeMatrixfARB
       (foreign-lambda void "glLoadTransposeMatrixfARB" f32vector)))
   (begin
-    (define glLoadTransposeMatrixdARB
+    (define gl:LoadTransposeMatrixdARB
       (foreign-lambda void "glLoadTransposeMatrixdARB" f64vector)))
   (begin
-    (define glMultTransposeMatrixfARB
+    (define gl:MultTransposeMatrixfARB
       (foreign-lambda void "glMultTransposeMatrixfARB" f32vector)))
   (begin
-    (define glMultTransposeMatrixdARB
+    (define gl:MultTransposeMatrixdARB
       (foreign-lambda void "glMultTransposeMatrixdARB" f64vector)))
   (begin
-    (define glSampleCoverageARB
+    (define gl:SampleCoverageARB
       (foreign-lambda void "glSampleCoverageARB" float unsigned-char)))
   (begin
-    (define glCompressedTexImage3DARB
+    (define gl:CompressedTexImage3DARB
       (foreign-lambda
         void
         "glCompressedTexImage3DARB"
@@ -2101,7 +2101,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexImage2DARB
+    (define gl:CompressedTexImage2DARB
       (foreign-lambda
         void
         "glCompressedTexImage2DARB"
@@ -2114,7 +2114,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexImage1DARB
+    (define gl:CompressedTexImage1DARB
       (foreign-lambda
         void
         "glCompressedTexImage1DARB"
@@ -2126,7 +2126,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage3DARB
+    (define gl:CompressedTexSubImage3DARB
       (foreign-lambda
         void
         "glCompressedTexSubImage3DARB"
@@ -2142,7 +2142,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage2DARB
+    (define gl:CompressedTexSubImage2DARB
       (foreign-lambda
         void
         "glCompressedTexSubImage2DARB"
@@ -2156,7 +2156,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTexSubImage1DARB
+    (define gl:CompressedTexSubImage1DARB
       (foreign-lambda
         void
         "glCompressedTexSubImage1DARB"
@@ -2168,7 +2168,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetCompressedTexImageARB
+    (define gl:GetCompressedTexImageARB
       (foreign-lambda
         void
         "glGetCompressedTexImageARB"
@@ -2176,41 +2176,41 @@
         integer
         (c-pointer void))))
   (begin
-    (define glPointParameterfARB
+    (define gl:PointParameterfARB
       (foreign-lambda void "glPointParameterfARB" unsigned-integer float)))
   (begin
-    (define glPointParameterfvARB
+    (define gl:PointParameterfvARB
       (foreign-lambda
         void
         "glPointParameterfvARB"
         unsigned-integer
         f32vector)))
   (begin
-    (define glWeightbvARB
+    (define gl:WeightbvARB
       (foreign-lambda void "glWeightbvARB" integer c-string)))
   (begin
-    (define glWeightsvARB
+    (define gl:WeightsvARB
       (foreign-lambda void "glWeightsvARB" integer s16vector)))
   (begin
-    (define glWeightivARB
+    (define gl:WeightivARB
       (foreign-lambda void "glWeightivARB" integer s32vector)))
   (begin
-    (define glWeightfvARB
+    (define gl:WeightfvARB
       (foreign-lambda void "glWeightfvARB" integer f32vector)))
   (begin
-    (define glWeightdvARB
+    (define gl:WeightdvARB
       (foreign-lambda void "glWeightdvARB" integer f64vector)))
   (begin
-    (define glWeightubvARB
+    (define gl:WeightubvARB
       (foreign-lambda void "glWeightubvARB" integer u8vector)))
   (begin
-    (define glWeightusvARB
+    (define gl:WeightusvARB
       (foreign-lambda void "glWeightusvARB" integer u16vector)))
   (begin
-    (define glWeightuivARB
+    (define gl:WeightuivARB
       (foreign-lambda void "glWeightuivARB" integer u32vector)))
   (begin
-    (define glWeightPointerARB
+    (define gl:WeightPointerARB
       (foreign-lambda
         void
         "glWeightPointerARB"
@@ -2219,21 +2219,21 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glVertexBlendARB (foreign-lambda void "glVertexBlendARB" integer)))
+    (define gl:VertexBlendARB (foreign-lambda void "glVertexBlendARB" integer)))
   (begin
-    (define glCurrentPaletteMatrixARB
+    (define gl:CurrentPaletteMatrixARB
       (foreign-lambda void "glCurrentPaletteMatrixARB" integer)))
   (begin
-    (define glMatrixIndexubvARB
+    (define gl:MatrixIndexubvARB
       (foreign-lambda void "glMatrixIndexubvARB" integer u8vector)))
   (begin
-    (define glMatrixIndexusvARB
+    (define gl:MatrixIndexusvARB
       (foreign-lambda void "glMatrixIndexusvARB" integer u16vector)))
   (begin
-    (define glMatrixIndexuivARB
+    (define gl:MatrixIndexuivARB
       (foreign-lambda void "glMatrixIndexuivARB" integer u32vector)))
   (begin
-    (define glMatrixIndexPointerARB
+    (define gl:MatrixIndexPointerARB
       (foreign-lambda
         void
         "glMatrixIndexPointerARB"
@@ -2242,73 +2242,73 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glWindowPos2dARB
+    (define gl:WindowPos2dARB
       (foreign-lambda void "glWindowPos2dARB" double double)))
   (begin
-    (define glWindowPos2dvARB
+    (define gl:WindowPos2dvARB
       (foreign-lambda void "glWindowPos2dvARB" f64vector)))
   (begin
-    (define glWindowPos2fARB
+    (define gl:WindowPos2fARB
       (foreign-lambda void "glWindowPos2fARB" float float)))
   (begin
-    (define glWindowPos2fvARB
+    (define gl:WindowPos2fvARB
       (foreign-lambda void "glWindowPos2fvARB" f32vector)))
   (begin
-    (define glWindowPos2iARB
+    (define gl:WindowPos2iARB
       (foreign-lambda void "glWindowPos2iARB" integer integer)))
   (begin
-    (define glWindowPos2ivARB
+    (define gl:WindowPos2ivARB
       (foreign-lambda void "glWindowPos2ivARB" s32vector)))
   (begin
-    (define glWindowPos2sARB
+    (define gl:WindowPos2sARB
       (foreign-lambda void "glWindowPos2sARB" short short)))
   (begin
-    (define glWindowPos2svARB
+    (define gl:WindowPos2svARB
       (foreign-lambda void "glWindowPos2svARB" s16vector)))
   (begin
-    (define glWindowPos3dARB
+    (define gl:WindowPos3dARB
       (foreign-lambda void "glWindowPos3dARB" double double double)))
   (begin
-    (define glWindowPos3dvARB
+    (define gl:WindowPos3dvARB
       (foreign-lambda void "glWindowPos3dvARB" f64vector)))
   (begin
-    (define glWindowPos3fARB
+    (define gl:WindowPos3fARB
       (foreign-lambda void "glWindowPos3fARB" float float float)))
   (begin
-    (define glWindowPos3fvARB
+    (define gl:WindowPos3fvARB
       (foreign-lambda void "glWindowPos3fvARB" f32vector)))
   (begin
-    (define glWindowPos3iARB
+    (define gl:WindowPos3iARB
       (foreign-lambda void "glWindowPos3iARB" integer integer integer)))
   (begin
-    (define glWindowPos3ivARB
+    (define gl:WindowPos3ivARB
       (foreign-lambda void "glWindowPos3ivARB" s32vector)))
   (begin
-    (define glWindowPos3sARB
+    (define gl:WindowPos3sARB
       (foreign-lambda void "glWindowPos3sARB" short short short)))
   (begin
-    (define glWindowPos3svARB
+    (define gl:WindowPos3svARB
       (foreign-lambda void "glWindowPos3svARB" s16vector)))
   (begin
-    (define glVertexAttrib1dARB
+    (define gl:VertexAttrib1dARB
       (foreign-lambda void "glVertexAttrib1dARB" unsigned-integer double)))
   (begin
-    (define glVertexAttrib1dvARB
+    (define gl:VertexAttrib1dvARB
       (foreign-lambda void "glVertexAttrib1dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib1fARB
+    (define gl:VertexAttrib1fARB
       (foreign-lambda void "glVertexAttrib1fARB" unsigned-integer float)))
   (begin
-    (define glVertexAttrib1fvARB
+    (define gl:VertexAttrib1fvARB
       (foreign-lambda void "glVertexAttrib1fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib1sARB
+    (define gl:VertexAttrib1sARB
       (foreign-lambda void "glVertexAttrib1sARB" unsigned-integer short)))
   (begin
-    (define glVertexAttrib1svARB
+    (define gl:VertexAttrib1svARB
       (foreign-lambda void "glVertexAttrib1svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib2dARB
+    (define gl:VertexAttrib2dARB
       (foreign-lambda
         void
         "glVertexAttrib2dARB"
@@ -2316,10 +2316,10 @@
         double
         double)))
   (begin
-    (define glVertexAttrib2dvARB
+    (define gl:VertexAttrib2dvARB
       (foreign-lambda void "glVertexAttrib2dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib2fARB
+    (define gl:VertexAttrib2fARB
       (foreign-lambda
         void
         "glVertexAttrib2fARB"
@@ -2327,10 +2327,10 @@
         float
         float)))
   (begin
-    (define glVertexAttrib2fvARB
+    (define gl:VertexAttrib2fvARB
       (foreign-lambda void "glVertexAttrib2fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib2sARB
+    (define gl:VertexAttrib2sARB
       (foreign-lambda
         void
         "glVertexAttrib2sARB"
@@ -2338,10 +2338,10 @@
         short
         short)))
   (begin
-    (define glVertexAttrib2svARB
+    (define gl:VertexAttrib2svARB
       (foreign-lambda void "glVertexAttrib2svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib3dARB
+    (define gl:VertexAttrib3dARB
       (foreign-lambda
         void
         "glVertexAttrib3dARB"
@@ -2350,10 +2350,10 @@
         double
         double)))
   (begin
-    (define glVertexAttrib3dvARB
+    (define gl:VertexAttrib3dvARB
       (foreign-lambda void "glVertexAttrib3dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib3fARB
+    (define gl:VertexAttrib3fARB
       (foreign-lambda
         void
         "glVertexAttrib3fARB"
@@ -2362,10 +2362,10 @@
         float
         float)))
   (begin
-    (define glVertexAttrib3fvARB
+    (define gl:VertexAttrib3fvARB
       (foreign-lambda void "glVertexAttrib3fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib3sARB
+    (define gl:VertexAttrib3sARB
       (foreign-lambda
         void
         "glVertexAttrib3sARB"
@@ -2374,27 +2374,27 @@
         short
         short)))
   (begin
-    (define glVertexAttrib3svARB
+    (define gl:VertexAttrib3svARB
       (foreign-lambda void "glVertexAttrib3svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4NbvARB
+    (define gl:VertexAttrib4NbvARB
       (foreign-lambda void "glVertexAttrib4NbvARB" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4NivARB
+    (define gl:VertexAttrib4NivARB
       (foreign-lambda
         void
         "glVertexAttrib4NivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttrib4NsvARB
+    (define gl:VertexAttrib4NsvARB
       (foreign-lambda
         void
         "glVertexAttrib4NsvARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttrib4NubARB
+    (define gl:VertexAttrib4NubARB
       (foreign-lambda
         void
         "glVertexAttrib4NubARB"
@@ -2404,31 +2404,31 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glVertexAttrib4NubvARB
+    (define gl:VertexAttrib4NubvARB
       (foreign-lambda
         void
         "glVertexAttrib4NubvARB"
         unsigned-integer
         u8vector)))
   (begin
-    (define glVertexAttrib4NuivARB
+    (define gl:VertexAttrib4NuivARB
       (foreign-lambda
         void
         "glVertexAttrib4NuivARB"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttrib4NusvARB
+    (define gl:VertexAttrib4NusvARB
       (foreign-lambda
         void
         "glVertexAttrib4NusvARB"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttrib4bvARB
+    (define gl:VertexAttrib4bvARB
       (foreign-lambda void "glVertexAttrib4bvARB" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4dARB
+    (define gl:VertexAttrib4dARB
       (foreign-lambda
         void
         "glVertexAttrib4dARB"
@@ -2438,10 +2438,10 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4dvARB
+    (define gl:VertexAttrib4dvARB
       (foreign-lambda void "glVertexAttrib4dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4fARB
+    (define gl:VertexAttrib4fARB
       (foreign-lambda
         void
         "glVertexAttrib4fARB"
@@ -2451,13 +2451,13 @@
         float
         float)))
   (begin
-    (define glVertexAttrib4fvARB
+    (define gl:VertexAttrib4fvARB
       (foreign-lambda void "glVertexAttrib4fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib4ivARB
+    (define gl:VertexAttrib4ivARB
       (foreign-lambda void "glVertexAttrib4ivARB" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttrib4sARB
+    (define gl:VertexAttrib4sARB
       (foreign-lambda
         void
         "glVertexAttrib4sARB"
@@ -2467,27 +2467,27 @@
         short
         short)))
   (begin
-    (define glVertexAttrib4svARB
+    (define gl:VertexAttrib4svARB
       (foreign-lambda void "glVertexAttrib4svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4ubvARB
+    (define gl:VertexAttrib4ubvARB
       (foreign-lambda void "glVertexAttrib4ubvARB" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttrib4uivARB
+    (define gl:VertexAttrib4uivARB
       (foreign-lambda
         void
         "glVertexAttrib4uivARB"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttrib4usvARB
+    (define gl:VertexAttrib4usvARB
       (foreign-lambda
         void
         "glVertexAttrib4usvARB"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribPointerARB
+    (define gl:VertexAttribPointerARB
       (foreign-lambda
         void
         "glVertexAttribPointerARB"
@@ -2498,13 +2498,13 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glEnableVertexAttribArrayARB
+    (define gl:EnableVertexAttribArrayARB
       (foreign-lambda void "glEnableVertexAttribArrayARB" unsigned-integer)))
   (begin
-    (define glDisableVertexAttribArrayARB
+    (define gl:DisableVertexAttribArrayARB
       (foreign-lambda void "glDisableVertexAttribArrayARB" unsigned-integer)))
   (begin
-    (define glProgramStringARB
+    (define gl:ProgramStringARB
       (foreign-lambda
         void
         "glProgramStringARB"
@@ -2513,20 +2513,20 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glBindProgramARB
+    (define gl:BindProgramARB
       (foreign-lambda
         void
         "glBindProgramARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteProgramsARB
+    (define gl:DeleteProgramsARB
       (foreign-lambda void "glDeleteProgramsARB" unsigned-integer u32vector)))
   (begin
-    (define glGenProgramsARB
+    (define gl:GenProgramsARB
       (foreign-lambda void "glGenProgramsARB" unsigned-integer u32vector)))
   (begin
-    (define glProgramEnvParameter4dARB
+    (define gl:ProgramEnvParameter4dARB
       (foreign-lambda
         void
         "glProgramEnvParameter4dARB"
@@ -2537,7 +2537,7 @@
         double
         double)))
   (begin
-    (define glProgramEnvParameter4dvARB
+    (define gl:ProgramEnvParameter4dvARB
       (foreign-lambda
         void
         "glProgramEnvParameter4dvARB"
@@ -2545,7 +2545,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramEnvParameter4fARB
+    (define gl:ProgramEnvParameter4fARB
       (foreign-lambda
         void
         "glProgramEnvParameter4fARB"
@@ -2556,7 +2556,7 @@
         float
         float)))
   (begin
-    (define glProgramEnvParameter4fvARB
+    (define gl:ProgramEnvParameter4fvARB
       (foreign-lambda
         void
         "glProgramEnvParameter4fvARB"
@@ -2564,7 +2564,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramLocalParameter4dARB
+    (define gl:ProgramLocalParameter4dARB
       (foreign-lambda
         void
         "glProgramLocalParameter4dARB"
@@ -2575,7 +2575,7 @@
         double
         double)))
   (begin
-    (define glProgramLocalParameter4dvARB
+    (define gl:ProgramLocalParameter4dvARB
       (foreign-lambda
         void
         "glProgramLocalParameter4dvARB"
@@ -2583,7 +2583,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramLocalParameter4fARB
+    (define gl:ProgramLocalParameter4fARB
       (foreign-lambda
         void
         "glProgramLocalParameter4fARB"
@@ -2594,7 +2594,7 @@
         float
         float)))
   (begin
-    (define glProgramLocalParameter4fvARB
+    (define gl:ProgramLocalParameter4fvARB
       (foreign-lambda
         void
         "glProgramLocalParameter4fvARB"
@@ -2602,7 +2602,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetProgramEnvParameterdvARB
+    (define gl:GetProgramEnvParameterdvARB
       (foreign-lambda
         void
         "glGetProgramEnvParameterdvARB"
@@ -2610,7 +2610,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetProgramEnvParameterfvARB
+    (define gl:GetProgramEnvParameterfvARB
       (foreign-lambda
         void
         "glGetProgramEnvParameterfvARB"
@@ -2618,7 +2618,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetProgramLocalParameterdvARB
+    (define gl:GetProgramLocalParameterdvARB
       (foreign-lambda
         void
         "glGetProgramLocalParameterdvARB"
@@ -2626,7 +2626,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetProgramLocalParameterfvARB
+    (define gl:GetProgramLocalParameterfvARB
       (foreign-lambda
         void
         "glGetProgramLocalParameterfvARB"
@@ -2634,7 +2634,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetProgramivARB
+    (define gl:GetProgramivARB
       (foreign-lambda
         void
         "glGetProgramivARB"
@@ -2642,7 +2642,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetProgramStringARB
+    (define gl:GetProgramStringARB
       (foreign-lambda
         void
         "glGetProgramStringARB"
@@ -2650,7 +2650,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetVertexAttribdvARB
+    (define gl:GetVertexAttribdvARB
       (foreign-lambda
         void
         "glGetVertexAttribdvARB"
@@ -2658,7 +2658,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetVertexAttribfvARB
+    (define gl:GetVertexAttribfvARB
       (foreign-lambda
         void
         "glGetVertexAttribfvARB"
@@ -2666,7 +2666,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVertexAttribivARB
+    (define gl:GetVertexAttribivARB
       (foreign-lambda
         void
         "glGetVertexAttribivARB"
@@ -2674,7 +2674,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribPointervARB
+    (define gl:GetVertexAttribPointervARB
       (foreign-lambda
         void
         "glGetVertexAttribPointervARB"
@@ -2682,26 +2682,26 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glIsProgramARB
+    (define gl:IsProgramARB
       (foreign-lambda unsigned-char "glIsProgramARB" unsigned-integer)))
   (begin
-    (define glBindBufferARB
+    (define gl:BindBufferARB
       (foreign-lambda
         void
         "glBindBufferARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteBuffersARB
+    (define gl:DeleteBuffersARB
       (foreign-lambda void "glDeleteBuffersARB" unsigned-integer u32vector)))
   (begin
-    (define glGenBuffersARB
+    (define gl:GenBuffersARB
       (foreign-lambda void "glGenBuffersARB" unsigned-integer u32vector)))
   (begin
-    (define glIsBufferARB
+    (define gl:IsBufferARB
       (foreign-lambda unsigned-char "glIsBufferARB" unsigned-integer)))
   (begin
-    (define glBufferDataARB
+    (define gl:BufferDataARB
       (foreign-lambda
         void
         "glBufferDataARB"
@@ -2710,7 +2710,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glBufferSubDataARB
+    (define gl:BufferSubDataARB
       (foreign-lambda
         void
         "glBufferSubDataARB"
@@ -2719,7 +2719,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glGetBufferSubDataARB
+    (define gl:GetBufferSubDataARB
       (foreign-lambda
         void
         "glGetBufferSubDataARB"
@@ -2728,17 +2728,17 @@
         integer
         (c-pointer void))))
   (begin
-    (define glMapBufferARB
+    (define gl:MapBufferARB
       (foreign-lambda
         (c-pointer void)
         "glMapBufferARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUnmapBufferARB
+    (define gl:UnmapBufferARB
       (foreign-lambda unsigned-char "glUnmapBufferARB" unsigned-integer)))
   (begin
-    (define glGetBufferParameterivARB
+    (define gl:GetBufferParameterivARB
       (foreign-lambda
         void
         "glGetBufferParameterivARB"
@@ -2746,7 +2746,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetBufferPointervARB
+    (define gl:GetBufferPointervARB
       (foreign-lambda
         void
         "glGetBufferPointervARB"
@@ -2754,26 +2754,26 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glGenQueriesARB
+    (define gl:GenQueriesARB
       (foreign-lambda void "glGenQueriesARB" unsigned-integer u32vector)))
   (begin
-    (define glDeleteQueriesARB
+    (define gl:DeleteQueriesARB
       (foreign-lambda void "glDeleteQueriesARB" unsigned-integer u32vector)))
   (begin
-    (define glIsQueryARB
+    (define gl:IsQueryARB
       (foreign-lambda unsigned-char "glIsQueryARB" unsigned-integer)))
   (begin
-    (define glBeginQueryARB
+    (define gl:BeginQueryARB
       (foreign-lambda
         void
         "glBeginQueryARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEndQueryARB
+    (define gl:EndQueryARB
       (foreign-lambda void "glEndQueryARB" unsigned-integer)))
   (begin
-    (define glGetQueryivARB
+    (define gl:GetQueryivARB
       (foreign-lambda
         void
         "glGetQueryivARB"
@@ -2781,7 +2781,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectivARB
+    (define gl:GetQueryObjectivARB
       (foreign-lambda
         void
         "glGetQueryObjectivARB"
@@ -2789,7 +2789,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectuivARB
+    (define gl:GetQueryObjectuivARB
       (foreign-lambda
         void
         "glGetQueryObjectuivARB"
@@ -2797,26 +2797,26 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glDeleteObjectARB
+    (define gl:DeleteObjectARB
       (foreign-lambda void "glDeleteObjectARB" unsigned-integer)))
   (begin
-    (define glGetHandleARB
+    (define gl:GetHandleARB
       (foreign-lambda unsigned-integer "glGetHandleARB" unsigned-integer)))
   (begin
-    (define glDetachObjectARB
+    (define gl:DetachObjectARB
       (foreign-lambda
         void
         "glDetachObjectARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glCreateShaderObjectARB
+    (define gl:CreateShaderObjectARB
       (foreign-lambda
         unsigned-integer
         "glCreateShaderObjectARB"
         unsigned-integer)))
   (begin
-    (define glShaderSourceARB
+    (define gl:ShaderSourceARB
       (foreign-lambda
         void
         "glShaderSourceARB"
@@ -2825,50 +2825,50 @@
         (c-pointer (c-pointer (const char)))
         s32vector)))
   (begin
-    (define glCompileShaderARB
+    (define gl:CompileShaderARB
       (foreign-lambda void "glCompileShaderARB" unsigned-integer)))
   (begin
-    (define glCreateProgramObjectARB
+    (define gl:CreateProgramObjectARB
       (foreign-lambda unsigned-integer "glCreateProgramObjectARB")))
   (begin
-    (define glAttachObjectARB
+    (define gl:AttachObjectARB
       (foreign-lambda
         void
         "glAttachObjectARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glLinkProgramARB
+    (define gl:LinkProgramARB
       (foreign-lambda void "glLinkProgramARB" unsigned-integer)))
   (begin
-    (define glUseProgramObjectARB
+    (define gl:UseProgramObjectARB
       (foreign-lambda void "glUseProgramObjectARB" unsigned-integer)))
   (begin
-    (define glValidateProgramARB
+    (define gl:ValidateProgramARB
       (foreign-lambda void "glValidateProgramARB" unsigned-integer)))
   (begin
-    (define glUniform1fARB
+    (define gl:Uniform1fARB
       (foreign-lambda void "glUniform1fARB" integer float)))
   (begin
-    (define glUniform2fARB
+    (define gl:Uniform2fARB
       (foreign-lambda void "glUniform2fARB" integer float float)))
   (begin
-    (define glUniform3fARB
+    (define gl:Uniform3fARB
       (foreign-lambda void "glUniform3fARB" integer float float float)))
   (begin
-    (define glUniform4fARB
+    (define gl:Uniform4fARB
       (foreign-lambda void "glUniform4fARB" integer float float float float)))
   (begin
-    (define glUniform1iARB
+    (define gl:Uniform1iARB
       (foreign-lambda void "glUniform1iARB" integer integer)))
   (begin
-    (define glUniform2iARB
+    (define gl:Uniform2iARB
       (foreign-lambda void "glUniform2iARB" integer integer integer)))
   (begin
-    (define glUniform3iARB
+    (define gl:Uniform3iARB
       (foreign-lambda void "glUniform3iARB" integer integer integer integer)))
   (begin
-    (define glUniform4iARB
+    (define gl:Uniform4iARB
       (foreign-lambda
         void
         "glUniform4iARB"
@@ -2878,7 +2878,7 @@
         integer
         integer)))
   (begin
-    (define glUniform1fvARB
+    (define gl:Uniform1fvARB
       (foreign-lambda
         void
         "glUniform1fvARB"
@@ -2886,7 +2886,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glUniform2fvARB
+    (define gl:Uniform2fvARB
       (foreign-lambda
         void
         "glUniform2fvARB"
@@ -2894,7 +2894,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glUniform3fvARB
+    (define gl:Uniform3fvARB
       (foreign-lambda
         void
         "glUniform3fvARB"
@@ -2902,7 +2902,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glUniform4fvARB
+    (define gl:Uniform4fvARB
       (foreign-lambda
         void
         "glUniform4fvARB"
@@ -2910,7 +2910,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glUniform1ivARB
+    (define gl:Uniform1ivARB
       (foreign-lambda
         void
         "glUniform1ivARB"
@@ -2918,7 +2918,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glUniform2ivARB
+    (define gl:Uniform2ivARB
       (foreign-lambda
         void
         "glUniform2ivARB"
@@ -2926,7 +2926,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glUniform3ivARB
+    (define gl:Uniform3ivARB
       (foreign-lambda
         void
         "glUniform3ivARB"
@@ -2934,7 +2934,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glUniform4ivARB
+    (define gl:Uniform4ivARB
       (foreign-lambda
         void
         "glUniform4ivARB"
@@ -2942,7 +2942,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glUniformMatrix2fvARB
+    (define gl:UniformMatrix2fvARB
       (foreign-lambda
         void
         "glUniformMatrix2fvARB"
@@ -2951,7 +2951,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix3fvARB
+    (define gl:UniformMatrix3fvARB
       (foreign-lambda
         void
         "glUniformMatrix3fvARB"
@@ -2960,7 +2960,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glUniformMatrix4fvARB
+    (define gl:UniformMatrix4fvARB
       (foreign-lambda
         void
         "glUniformMatrix4fvARB"
@@ -2969,7 +2969,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glGetObjectParameterfvARB
+    (define gl:GetObjectParameterfvARB
       (foreign-lambda
         void
         "glGetObjectParameterfvARB"
@@ -2977,7 +2977,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetObjectParameterivARB
+    (define gl:GetObjectParameterivARB
       (foreign-lambda
         void
         "glGetObjectParameterivARB"
@@ -2985,7 +2985,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetInfoLogARB
+    (define gl:GetInfoLogARB
       (foreign-lambda
         void
         "glGetInfoLogARB"
@@ -2994,7 +2994,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetAttachedObjectsARB
+    (define gl:GetAttachedObjectsARB
       (foreign-lambda
         void
         "glGetAttachedObjectsARB"
@@ -3003,14 +3003,14 @@
         u32vector
         u32vector)))
   (begin
-    (define glGetUniformLocationARB
+    (define gl:GetUniformLocationARB
       (foreign-lambda
         integer
         "glGetUniformLocationARB"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveUniformARB
+    (define gl:GetActiveUniformARB
       (foreign-lambda
         void
         "glGetActiveUniformARB"
@@ -3022,7 +3022,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetUniformfvARB
+    (define gl:GetUniformfvARB
       (foreign-lambda
         void
         "glGetUniformfvARB"
@@ -3030,7 +3030,7 @@
         integer
         f32vector)))
   (begin
-    (define glGetUniformivARB
+    (define gl:GetUniformivARB
       (foreign-lambda
         void
         "glGetUniformivARB"
@@ -3038,7 +3038,7 @@
         integer
         s32vector)))
   (begin
-    (define glGetShaderSourceARB
+    (define gl:GetShaderSourceARB
       (foreign-lambda
         void
         "glGetShaderSourceARB"
@@ -3047,16 +3047,16 @@
         u32vector
         c-string)))
   (begin
-    (define glVertexAttrib1fARB
+    (define gl:VertexAttrib1fARB
       (foreign-lambda void "glVertexAttrib1fARB" unsigned-integer float)))
   (begin
-    (define glVertexAttrib1sARB
+    (define gl:VertexAttrib1sARB
       (foreign-lambda void "glVertexAttrib1sARB" unsigned-integer short)))
   (begin
-    (define glVertexAttrib1dARB
+    (define gl:VertexAttrib1dARB
       (foreign-lambda void "glVertexAttrib1dARB" unsigned-integer double)))
   (begin
-    (define glVertexAttrib2fARB
+    (define gl:VertexAttrib2fARB
       (foreign-lambda
         void
         "glVertexAttrib2fARB"
@@ -3064,7 +3064,7 @@
         float
         float)))
   (begin
-    (define glVertexAttrib2sARB
+    (define gl:VertexAttrib2sARB
       (foreign-lambda
         void
         "glVertexAttrib2sARB"
@@ -3072,7 +3072,7 @@
         short
         short)))
   (begin
-    (define glVertexAttrib2dARB
+    (define gl:VertexAttrib2dARB
       (foreign-lambda
         void
         "glVertexAttrib2dARB"
@@ -3080,7 +3080,7 @@
         double
         double)))
   (begin
-    (define glVertexAttrib3fARB
+    (define gl:VertexAttrib3fARB
       (foreign-lambda
         void
         "glVertexAttrib3fARB"
@@ -3089,7 +3089,7 @@
         float
         float)))
   (begin
-    (define glVertexAttrib3sARB
+    (define gl:VertexAttrib3sARB
       (foreign-lambda
         void
         "glVertexAttrib3sARB"
@@ -3098,7 +3098,7 @@
         short
         short)))
   (begin
-    (define glVertexAttrib3dARB
+    (define gl:VertexAttrib3dARB
       (foreign-lambda
         void
         "glVertexAttrib3dARB"
@@ -3107,7 +3107,7 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4fARB
+    (define gl:VertexAttrib4fARB
       (foreign-lambda
         void
         "glVertexAttrib4fARB"
@@ -3117,7 +3117,7 @@
         float
         float)))
   (begin
-    (define glVertexAttrib4sARB
+    (define gl:VertexAttrib4sARB
       (foreign-lambda
         void
         "glVertexAttrib4sARB"
@@ -3127,7 +3127,7 @@
         short
         short)))
   (begin
-    (define glVertexAttrib4dARB
+    (define gl:VertexAttrib4dARB
       (foreign-lambda
         void
         "glVertexAttrib4dARB"
@@ -3137,7 +3137,7 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4NubARB
+    (define gl:VertexAttrib4NubARB
       (foreign-lambda
         void
         "glVertexAttrib4NubARB"
@@ -3147,104 +3147,104 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glVertexAttrib1fvARB
+    (define gl:VertexAttrib1fvARB
       (foreign-lambda void "glVertexAttrib1fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib1svARB
+    (define gl:VertexAttrib1svARB
       (foreign-lambda void "glVertexAttrib1svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib1dvARB
+    (define gl:VertexAttrib1dvARB
       (foreign-lambda void "glVertexAttrib1dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib2fvARB
+    (define gl:VertexAttrib2fvARB
       (foreign-lambda void "glVertexAttrib2fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib2svARB
+    (define gl:VertexAttrib2svARB
       (foreign-lambda void "glVertexAttrib2svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib2dvARB
+    (define gl:VertexAttrib2dvARB
       (foreign-lambda void "glVertexAttrib2dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib3fvARB
+    (define gl:VertexAttrib3fvARB
       (foreign-lambda void "glVertexAttrib3fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib3svARB
+    (define gl:VertexAttrib3svARB
       (foreign-lambda void "glVertexAttrib3svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib3dvARB
+    (define gl:VertexAttrib3dvARB
       (foreign-lambda void "glVertexAttrib3dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4fvARB
+    (define gl:VertexAttrib4fvARB
       (foreign-lambda void "glVertexAttrib4fvARB" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib4svARB
+    (define gl:VertexAttrib4svARB
       (foreign-lambda void "glVertexAttrib4svARB" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4dvARB
+    (define gl:VertexAttrib4dvARB
       (foreign-lambda void "glVertexAttrib4dvARB" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4ivARB
+    (define gl:VertexAttrib4ivARB
       (foreign-lambda void "glVertexAttrib4ivARB" unsigned-integer s32vector)))
   (begin
-    (define glVertexAttrib4bvARB
+    (define gl:VertexAttrib4bvARB
       (foreign-lambda void "glVertexAttrib4bvARB" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4ubvARB
+    (define gl:VertexAttrib4ubvARB
       (foreign-lambda void "glVertexAttrib4ubvARB" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttrib4usvARB
+    (define gl:VertexAttrib4usvARB
       (foreign-lambda
         void
         "glVertexAttrib4usvARB"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttrib4uivARB
+    (define gl:VertexAttrib4uivARB
       (foreign-lambda
         void
         "glVertexAttrib4uivARB"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttrib4NbvARB
+    (define gl:VertexAttrib4NbvARB
       (foreign-lambda void "glVertexAttrib4NbvARB" unsigned-integer c-string)))
   (begin
-    (define glVertexAttrib4NsvARB
+    (define gl:VertexAttrib4NsvARB
       (foreign-lambda
         void
         "glVertexAttrib4NsvARB"
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttrib4NivARB
+    (define gl:VertexAttrib4NivARB
       (foreign-lambda
         void
         "glVertexAttrib4NivARB"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttrib4NubvARB
+    (define gl:VertexAttrib4NubvARB
       (foreign-lambda
         void
         "glVertexAttrib4NubvARB"
         unsigned-integer
         u8vector)))
   (begin
-    (define glVertexAttrib4NusvARB
+    (define gl:VertexAttrib4NusvARB
       (foreign-lambda
         void
         "glVertexAttrib4NusvARB"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttrib4NuivARB
+    (define gl:VertexAttrib4NuivARB
       (foreign-lambda
         void
         "glVertexAttrib4NuivARB"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribPointerARB
+    (define gl:VertexAttribPointerARB
       (foreign-lambda
         void
         "glVertexAttribPointerARB"
@@ -3255,13 +3255,13 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glEnableVertexAttribArrayARB
+    (define gl:EnableVertexAttribArrayARB
       (foreign-lambda void "glEnableVertexAttribArrayARB" unsigned-integer)))
   (begin
-    (define glDisableVertexAttribArrayARB
+    (define gl:DisableVertexAttribArrayARB
       (foreign-lambda void "glDisableVertexAttribArrayARB" unsigned-integer)))
   (begin
-    (define glBindAttribLocationARB
+    (define gl:BindAttribLocationARB
       (foreign-lambda
         void
         "glBindAttribLocationARB"
@@ -3269,7 +3269,7 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveAttribARB
+    (define gl:GetActiveAttribARB
       (foreign-lambda
         void
         "glGetActiveAttribARB"
@@ -3281,14 +3281,14 @@
         u32vector
         c-string)))
   (begin
-    (define glGetAttribLocationARB
+    (define gl:GetAttribLocationARB
       (foreign-lambda
         integer
         "glGetAttribLocationARB"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetVertexAttribdvARB
+    (define gl:GetVertexAttribdvARB
       (foreign-lambda
         void
         "glGetVertexAttribdvARB"
@@ -3296,7 +3296,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetVertexAttribfvARB
+    (define gl:GetVertexAttribfvARB
       (foreign-lambda
         void
         "glGetVertexAttribfvARB"
@@ -3304,7 +3304,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVertexAttribivARB
+    (define gl:GetVertexAttribivARB
       (foreign-lambda
         void
         "glGetVertexAttribivARB"
@@ -3312,7 +3312,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribPointervARB
+    (define gl:GetVertexAttribPointervARB
       (foreign-lambda
         void
         "glGetVertexAttribPointervARB"
@@ -3320,17 +3320,17 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glDrawBuffersARB
+    (define gl:DrawBuffersARB
       (foreign-lambda void "glDrawBuffersARB" unsigned-integer u32vector)))
   (begin
-    (define glClampColorARB
+    (define gl:ClampColorARB
       (foreign-lambda
         void
         "glClampColorARB"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawArraysInstancedARB
+    (define gl:DrawArraysInstancedARB
       (foreign-lambda
         void
         "glDrawArraysInstancedARB"
@@ -3339,7 +3339,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawElementsInstancedARB
+    (define gl:DrawElementsInstancedARB
       (foreign-lambda
         void
         "glDrawElementsInstancedARB"
@@ -3349,27 +3349,27 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glIsRenderbuffer
+    (define gl:IsRenderbuffer
       (foreign-lambda unsigned-char "glIsRenderbuffer" unsigned-integer)))
   (begin
-    (define glBindRenderbuffer
+    (define gl:BindRenderbuffer
       (foreign-lambda
         void
         "glBindRenderbuffer"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteRenderbuffers
+    (define gl:DeleteRenderbuffers
       (foreign-lambda
         void
         "glDeleteRenderbuffers"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenRenderbuffers
+    (define gl:GenRenderbuffers
       (foreign-lambda void "glGenRenderbuffers" unsigned-integer u32vector)))
   (begin
-    (define glRenderbufferStorage
+    (define gl:RenderbufferStorage
       (foreign-lambda
         void
         "glRenderbufferStorage"
@@ -3378,7 +3378,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetRenderbufferParameteriv
+    (define gl:GetRenderbufferParameteriv
       (foreign-lambda
         void
         "glGetRenderbufferParameteriv"
@@ -3386,29 +3386,29 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glIsFramebuffer
+    (define gl:IsFramebuffer
       (foreign-lambda unsigned-char "glIsFramebuffer" unsigned-integer)))
   (begin
-    (define glBindFramebuffer
+    (define gl:BindFramebuffer
       (foreign-lambda
         void
         "glBindFramebuffer"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteFramebuffers
+    (define gl:DeleteFramebuffers
       (foreign-lambda void "glDeleteFramebuffers" unsigned-integer u32vector)))
   (begin
-    (define glGenFramebuffers
+    (define gl:GenFramebuffers
       (foreign-lambda void "glGenFramebuffers" unsigned-integer u32vector)))
   (begin
-    (define glCheckFramebufferStatus
+    (define gl:CheckFramebufferStatus
       (foreign-lambda
         unsigned-integer
         "glCheckFramebufferStatus"
         unsigned-integer)))
   (begin
-    (define glFramebufferTexture1D
+    (define gl:FramebufferTexture1D
       (foreign-lambda
         void
         "glFramebufferTexture1D"
@@ -3418,7 +3418,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTexture2D
+    (define gl:FramebufferTexture2D
       (foreign-lambda
         void
         "glFramebufferTexture2D"
@@ -3428,7 +3428,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTexture3D
+    (define gl:FramebufferTexture3D
       (foreign-lambda
         void
         "glFramebufferTexture3D"
@@ -3439,7 +3439,7 @@
         integer
         integer)))
   (begin
-    (define glFramebufferRenderbuffer
+    (define gl:FramebufferRenderbuffer
       (foreign-lambda
         void
         "glFramebufferRenderbuffer"
@@ -3448,7 +3448,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetFramebufferAttachmentParameteriv
+    (define gl:GetFramebufferAttachmentParameteriv
       (foreign-lambda
         void
         "glGetFramebufferAttachmentParameteriv"
@@ -3457,10 +3457,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGenerateMipmap
+    (define gl:GenerateMipmap
       (foreign-lambda void "glGenerateMipmap" unsigned-integer)))
   (begin
-    (define glBlitFramebuffer
+    (define gl:BlitFramebuffer
       (foreign-lambda
         void
         "glBlitFramebuffer"
@@ -3475,7 +3475,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glRenderbufferStorageMultisample
+    (define gl:RenderbufferStorageMultisample
       (foreign-lambda
         void
         "glRenderbufferStorageMultisample"
@@ -3485,7 +3485,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFramebufferTextureLayer
+    (define gl:FramebufferTextureLayer
       (foreign-lambda
         void
         "glFramebufferTextureLayer"
@@ -3495,7 +3495,7 @@
         integer
         integer)))
   (begin
-    (define glProgramParameteriARB
+    (define gl:ProgramParameteriARB
       (foreign-lambda
         void
         "glProgramParameteriARB"
@@ -3503,7 +3503,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTextureARB
+    (define gl:FramebufferTextureARB
       (foreign-lambda
         void
         "glFramebufferTextureARB"
@@ -3512,7 +3512,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTextureLayerARB
+    (define gl:FramebufferTextureLayerARB
       (foreign-lambda
         void
         "glFramebufferTextureLayerARB"
@@ -3522,7 +3522,7 @@
         integer
         integer)))
   (begin
-    (define glFramebufferTextureFaceARB
+    (define gl:FramebufferTextureFaceARB
       (foreign-lambda
         void
         "glFramebufferTextureFaceARB"
@@ -3532,14 +3532,14 @@
         integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribDivisor
+    (define gl:VertexAttribDivisor
       (foreign-lambda
         void
         "glVertexAttribDivisor"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMapBufferRange
+    (define gl:MapBufferRange
       (foreign-lambda
         void
         "glMapBufferRange"
@@ -3548,7 +3548,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glFlushMappedBufferRange
+    (define gl:FlushMappedBufferRange
       (foreign-lambda
         void
         "glFlushMappedBufferRange"
@@ -3556,7 +3556,7 @@
         integer
         integer)))
   (begin
-    (define glTexBufferARB
+    (define gl:TexBufferARB
       (foreign-lambda
         void
         "glTexBufferARB"
@@ -3564,19 +3564,19 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindVertexArray
+    (define gl:BindVertexArray
       (foreign-lambda void "glBindVertexArray" unsigned-integer)))
   (begin
-    (define glDeleteVertexArrays
+    (define gl:DeleteVertexArrays
       (foreign-lambda void "glDeleteVertexArrays" unsigned-integer u32vector)))
   (begin
-    (define glGenVertexArrays
+    (define gl:GenVertexArrays
       (foreign-lambda void "glGenVertexArrays" unsigned-integer u32vector)))
   (begin
-    (define glIsVertexArray
+    (define gl:IsVertexArray
       (foreign-lambda unsigned-char "glIsVertexArray" unsigned-integer)))
   (begin
-    (define glGetUniformIndices
+    (define gl:GetUniformIndices
       (foreign-lambda
         void
         "glGetUniformIndices"
@@ -3585,7 +3585,7 @@
         (c-pointer (c-pointer (const char)))
         u32vector)))
   (begin
-    (define glGetActiveUniformsiv
+    (define gl:GetActiveUniformsiv
       (foreign-lambda
         void
         "glGetActiveUniformsiv"
@@ -3595,7 +3595,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetActiveUniformName
+    (define gl:GetActiveUniformName
       (foreign-lambda
         void
         "glGetActiveUniformName"
@@ -3605,14 +3605,14 @@
         u32vector
         c-string)))
   (begin
-    (define glGetUniformBlockIndex
+    (define gl:GetUniformBlockIndex
       (foreign-lambda
         unsigned-integer
         "glGetUniformBlockIndex"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveUniformBlockiv
+    (define gl:GetActiveUniformBlockiv
       (foreign-lambda
         void
         "glGetActiveUniformBlockiv"
@@ -3621,7 +3621,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetActiveUniformBlockName
+    (define gl:GetActiveUniformBlockName
       (foreign-lambda
         void
         "glGetActiveUniformBlockName"
@@ -3631,7 +3631,7 @@
         u32vector
         c-string)))
   (begin
-    (define glUniformBlockBinding
+    (define gl:UniformBlockBinding
       (foreign-lambda
         void
         "glUniformBlockBinding"
@@ -3639,7 +3639,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glCopyBufferSubData
+    (define gl:CopyBufferSubData
       (foreign-lambda
         void
         "glCopyBufferSubData"
@@ -3649,7 +3649,7 @@
         integer
         integer)))
   (begin
-    (define glDrawElementsBaseVertex
+    (define gl:DrawElementsBaseVertex
       (foreign-lambda
         void
         "glDrawElementsBaseVertex"
@@ -3659,7 +3659,7 @@
         (c-pointer void)
         integer)))
   (begin
-    (define glDrawRangeElementsBaseVertex
+    (define gl:DrawRangeElementsBaseVertex
       (foreign-lambda
         void
         "glDrawRangeElementsBaseVertex"
@@ -3671,7 +3671,7 @@
         (c-pointer void)
         integer)))
   (begin
-    (define glDrawElementsInstancedBaseVertex
+    (define gl:DrawElementsInstancedBaseVertex
       (foreign-lambda
         void
         "glDrawElementsInstancedBaseVertex"
@@ -3682,7 +3682,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMultiDrawElementsBaseVertex
+    (define gl:MultiDrawElementsBaseVertex
       (foreign-lambda
         void
         "glMultiDrawElementsBaseVertex"
@@ -3693,26 +3693,26 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProvokingVertex
+    (define gl:ProvokingVertex
       (foreign-lambda void "glProvokingVertex" unsigned-integer)))
   (begin
-    (define glFenceSync
+    (define gl:FenceSync
       (foreign-lambda
         (c-pointer (struct "__GLsync"))
         "glFenceSync"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIsSync
+    (define gl:IsSync
       (foreign-lambda
         unsigned-char
         "glIsSync"
         (c-pointer (struct "__GLsync")))))
   (begin
-    (define glDeleteSync
+    (define gl:DeleteSync
       (foreign-lambda void "glDeleteSync" (c-pointer (struct "__GLsync")))))
   (begin
-    (define glClientWaitSync
+    (define gl:ClientWaitSync
       (foreign-lambda
         unsigned-integer
         "glClientWaitSync"
@@ -3720,7 +3720,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glWaitSync
+    (define gl:WaitSync
       (foreign-lambda
         void
         "glWaitSync"
@@ -3728,10 +3728,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetInteger64v
+    (define gl:GetInteger64v
       (foreign-lambda void "glGetInteger64v" unsigned-integer s32vector)))
   (begin
-    (define glGetSynciv
+    (define gl:GetSynciv
       (foreign-lambda
         void
         "glGetSynciv"
@@ -3741,7 +3741,7 @@
         u32vector
         s32vector)))
   (begin
-    (define glTexImage2DMultisample
+    (define gl:TexImage2DMultisample
       (foreign-lambda
         void
         "glTexImage2DMultisample"
@@ -3752,7 +3752,7 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glTexImage3DMultisample
+    (define gl:TexImage3DMultisample
       (foreign-lambda
         void
         "glTexImage3DMultisample"
@@ -3764,7 +3764,7 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glGetMultisamplefv
+    (define gl:GetMultisamplefv
       (foreign-lambda
         void
         "glGetMultisamplefv"
@@ -3772,17 +3772,17 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glSampleMaski
+    (define gl:SampleMaski
       (foreign-lambda void "glSampleMaski" unsigned-integer unsigned-integer)))
   (begin
-    (define glBlendEquationi
+    (define gl:BlendEquationi
       (foreign-lambda
         void
         "glBlendEquationi"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendEquationSeparatei
+    (define gl:BlendEquationSeparatei
       (foreign-lambda
         void
         "glBlendEquationSeparatei"
@@ -3790,7 +3790,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendFunci
+    (define gl:BlendFunci
       (foreign-lambda
         void
         "glBlendFunci"
@@ -3798,7 +3798,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendFuncSeparatei
+    (define gl:BlendFuncSeparatei
       (foreign-lambda
         void
         "glBlendFuncSeparatei"
@@ -3808,10 +3808,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMinSampleShading
+    (define gl:MinSampleShading
       (foreign-lambda void "glMinSampleShading" float)))
   (begin
-    (define glNamedStringARB
+    (define gl:NamedStringARB
       (foreign-lambda
         void
         "glNamedStringARB"
@@ -3821,10 +3821,10 @@
         integer
         c-string)))
   (begin
-    (define glDeleteNamedStringARB
+    (define gl:DeleteNamedStringARB
       (foreign-lambda void "glDeleteNamedStringARB" integer c-string)))
   (begin
-    (define glCompileShaderIncludeARB
+    (define gl:CompileShaderIncludeARB
       (foreign-lambda
         void
         "glCompileShaderIncludeARB"
@@ -3833,10 +3833,10 @@
         (c-pointer (c-pointer (const char)))
         s32vector)))
   (begin
-    (define glIsNamedStringARB
+    (define gl:IsNamedStringARB
       (foreign-lambda unsigned-char "glIsNamedStringARB" integer c-string)))
   (begin
-    (define glGetNamedStringARB
+    (define gl:GetNamedStringARB
       (foreign-lambda
         void
         "glGetNamedStringARB"
@@ -3846,7 +3846,7 @@
         s32vector
         c-string)))
   (begin
-    (define glGetNamedStringivARB
+    (define gl:GetNamedStringivARB
       (foreign-lambda
         void
         "glGetNamedStringivARB"
@@ -3855,7 +3855,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glBindFragDataLocationIndexed
+    (define gl:BindFragDataLocationIndexed
       (foreign-lambda
         void
         "glBindFragDataLocationIndexed"
@@ -3864,22 +3864,22 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetFragDataIndex
+    (define gl:GetFragDataIndex
       (foreign-lambda integer "glGetFragDataIndex" unsigned-integer c-string)))
   (begin
-    (define glGenSamplers
+    (define gl:GenSamplers
       (foreign-lambda void "glGenSamplers" unsigned-integer u32vector)))
   (begin
-    (define glDeleteSamplers
+    (define gl:DeleteSamplers
       (foreign-lambda void "glDeleteSamplers" unsigned-integer u32vector)))
   (begin
-    (define glIsSampler
+    (define gl:IsSampler
       (foreign-lambda unsigned-char "glIsSampler" unsigned-integer)))
   (begin
-    (define glBindSampler
+    (define gl:BindSampler
       (foreign-lambda void "glBindSampler" unsigned-integer unsigned-integer)))
   (begin
-    (define glSamplerParameteri
+    (define gl:SamplerParameteri
       (foreign-lambda
         void
         "glSamplerParameteri"
@@ -3887,7 +3887,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glSamplerParameteriv
+    (define gl:SamplerParameteriv
       (foreign-lambda
         void
         "glSamplerParameteriv"
@@ -3895,7 +3895,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glSamplerParameterf
+    (define gl:SamplerParameterf
       (foreign-lambda
         void
         "glSamplerParameterf"
@@ -3903,7 +3903,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glSamplerParameterfv
+    (define gl:SamplerParameterfv
       (foreign-lambda
         void
         "glSamplerParameterfv"
@@ -3911,7 +3911,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glSamplerParameterIiv
+    (define gl:SamplerParameterIiv
       (foreign-lambda
         void
         "glSamplerParameterIiv"
@@ -3919,7 +3919,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glSamplerParameterIuiv
+    (define gl:SamplerParameterIuiv
       (foreign-lambda
         void
         "glSamplerParameterIuiv"
@@ -3927,7 +3927,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetSamplerParameteriv
+    (define gl:GetSamplerParameteriv
       (foreign-lambda
         void
         "glGetSamplerParameteriv"
@@ -3935,7 +3935,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetSamplerParameterIiv
+    (define gl:GetSamplerParameterIiv
       (foreign-lambda
         void
         "glGetSamplerParameterIiv"
@@ -3943,7 +3943,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetSamplerParameterfv
+    (define gl:GetSamplerParameterfv
       (foreign-lambda
         void
         "glGetSamplerParameterfv"
@@ -3951,7 +3951,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetSamplerParameterIfv
+    (define gl:GetSamplerParameterIfv
       (foreign-lambda
         void
         "glGetSamplerParameterIfv"
@@ -3959,14 +3959,14 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glQueryCounter
+    (define gl:QueryCounter
       (foreign-lambda
         void
         "glQueryCounter"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetQueryObjecti64v
+    (define gl:GetQueryObjecti64v
       (foreign-lambda
         void
         "glGetQueryObjecti64v"
@@ -3974,7 +3974,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectui64v
+    (define gl:GetQueryObjectui64v
       (foreign-lambda
         void
         "glGetQueryObjectui64v"
@@ -3982,65 +3982,65 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexP2ui
+    (define gl:VertexP2ui
       (foreign-lambda void "glVertexP2ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glVertexP2uiv
+    (define gl:VertexP2uiv
       (foreign-lambda void "glVertexP2uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexP3ui
+    (define gl:VertexP3ui
       (foreign-lambda void "glVertexP3ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glVertexP3uiv
+    (define gl:VertexP3uiv
       (foreign-lambda void "glVertexP3uiv" unsigned-integer u32vector)))
   (begin
-    (define glVertexP4ui
+    (define gl:VertexP4ui
       (foreign-lambda void "glVertexP4ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glVertexP4uiv
+    (define gl:VertexP4uiv
       (foreign-lambda void "glVertexP4uiv" unsigned-integer u32vector)))
   (begin
-    (define glTexCoordP1ui
+    (define gl:TexCoordP1ui
       (foreign-lambda
         void
         "glTexCoordP1ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexCoordP1uiv
+    (define gl:TexCoordP1uiv
       (foreign-lambda void "glTexCoordP1uiv" unsigned-integer u32vector)))
   (begin
-    (define glTexCoordP2ui
+    (define gl:TexCoordP2ui
       (foreign-lambda
         void
         "glTexCoordP2ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexCoordP2uiv
+    (define gl:TexCoordP2uiv
       (foreign-lambda void "glTexCoordP2uiv" unsigned-integer u32vector)))
   (begin
-    (define glTexCoordP3ui
+    (define gl:TexCoordP3ui
       (foreign-lambda
         void
         "glTexCoordP3ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexCoordP3uiv
+    (define gl:TexCoordP3uiv
       (foreign-lambda void "glTexCoordP3uiv" unsigned-integer u32vector)))
   (begin
-    (define glTexCoordP4ui
+    (define gl:TexCoordP4ui
       (foreign-lambda
         void
         "glTexCoordP4ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexCoordP4uiv
+    (define gl:TexCoordP4uiv
       (foreign-lambda void "glTexCoordP4uiv" unsigned-integer u32vector)))
   (begin
-    (define glMultiTexCoordP1ui
+    (define gl:MultiTexCoordP1ui
       (foreign-lambda
         void
         "glMultiTexCoordP1ui"
@@ -4048,7 +4048,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexCoordP1uiv
+    (define gl:MultiTexCoordP1uiv
       (foreign-lambda
         void
         "glMultiTexCoordP1uiv"
@@ -4056,7 +4056,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glMultiTexCoordP2ui
+    (define gl:MultiTexCoordP2ui
       (foreign-lambda
         void
         "glMultiTexCoordP2ui"
@@ -4064,7 +4064,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexCoordP2uiv
+    (define gl:MultiTexCoordP2uiv
       (foreign-lambda
         void
         "glMultiTexCoordP2uiv"
@@ -4072,7 +4072,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glMultiTexCoordP3ui
+    (define gl:MultiTexCoordP3ui
       (foreign-lambda
         void
         "glMultiTexCoordP3ui"
@@ -4080,7 +4080,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexCoordP3uiv
+    (define gl:MultiTexCoordP3uiv
       (foreign-lambda
         void
         "glMultiTexCoordP3uiv"
@@ -4088,7 +4088,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glMultiTexCoordP4ui
+    (define gl:MultiTexCoordP4ui
       (foreign-lambda
         void
         "glMultiTexCoordP4ui"
@@ -4096,7 +4096,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexCoordP4uiv
+    (define gl:MultiTexCoordP4uiv
       (foreign-lambda
         void
         "glMultiTexCoordP4uiv"
@@ -4104,39 +4104,39 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glNormalP3ui
+    (define gl:NormalP3ui
       (foreign-lambda void "glNormalP3ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glNormalP3uiv
+    (define gl:NormalP3uiv
       (foreign-lambda void "glNormalP3uiv" unsigned-integer u32vector)))
   (begin
-    (define glColorP3ui
+    (define gl:ColorP3ui
       (foreign-lambda void "glColorP3ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glColorP3uiv
+    (define gl:ColorP3uiv
       (foreign-lambda void "glColorP3uiv" unsigned-integer u32vector)))
   (begin
-    (define glColorP4ui
+    (define gl:ColorP4ui
       (foreign-lambda void "glColorP4ui" unsigned-integer unsigned-integer)))
   (begin
-    (define glColorP4uiv
+    (define gl:ColorP4uiv
       (foreign-lambda void "glColorP4uiv" unsigned-integer u32vector)))
   (begin
-    (define glSecondaryColorP3ui
+    (define gl:SecondaryColorP3ui
       (foreign-lambda
         void
         "glSecondaryColorP3ui"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSecondaryColorP3uiv
+    (define gl:SecondaryColorP3uiv
       (foreign-lambda
         void
         "glSecondaryColorP3uiv"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribP1ui
+    (define gl:VertexAttribP1ui
       (foreign-lambda
         void
         "glVertexAttribP1ui"
@@ -4145,7 +4145,7 @@
         unsigned-char
         unsigned-integer)))
   (begin
-    (define glVertexAttribP1uiv
+    (define gl:VertexAttribP1uiv
       (foreign-lambda
         void
         "glVertexAttribP1uiv"
@@ -4154,7 +4154,7 @@
         unsigned-char
         u32vector)))
   (begin
-    (define glVertexAttribP2ui
+    (define gl:VertexAttribP2ui
       (foreign-lambda
         void
         "glVertexAttribP2ui"
@@ -4163,7 +4163,7 @@
         unsigned-char
         unsigned-integer)))
   (begin
-    (define glVertexAttribP2uiv
+    (define gl:VertexAttribP2uiv
       (foreign-lambda
         void
         "glVertexAttribP2uiv"
@@ -4172,7 +4172,7 @@
         unsigned-char
         u32vector)))
   (begin
-    (define glVertexAttribP3ui
+    (define gl:VertexAttribP3ui
       (foreign-lambda
         void
         "glVertexAttribP3ui"
@@ -4181,7 +4181,7 @@
         unsigned-char
         unsigned-integer)))
   (begin
-    (define glVertexAttribP3uiv
+    (define gl:VertexAttribP3uiv
       (foreign-lambda
         void
         "glVertexAttribP3uiv"
@@ -4190,7 +4190,7 @@
         unsigned-char
         u32vector)))
   (begin
-    (define glVertexAttribP4ui
+    (define gl:VertexAttribP4ui
       (foreign-lambda
         void
         "glVertexAttribP4ui"
@@ -4199,7 +4199,7 @@
         unsigned-char
         unsigned-integer)))
   (begin
-    (define glVertexAttribP4uiv
+    (define gl:VertexAttribP4uiv
       (foreign-lambda
         void
         "glVertexAttribP4uiv"
@@ -4208,14 +4208,14 @@
         unsigned-char
         u32vector)))
   (begin
-    (define glDrawArraysIndirect
+    (define gl:DrawArraysIndirect
       (foreign-lambda
         void
         "glDrawArraysIndirect"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glDrawElementsIndirect
+    (define gl:DrawElementsIndirect
       (foreign-lambda
         void
         "glDrawElementsIndirect"
@@ -4223,30 +4223,30 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glUniform1d (foreign-lambda void "glUniform1d" integer double)))
+    (define gl:Uniform1d (foreign-lambda void "glUniform1d" integer double)))
   (begin
-    (define glUniform2d
+    (define gl:Uniform2d
       (foreign-lambda void "glUniform2d" integer double double)))
   (begin
-    (define glUniform3d
+    (define gl:Uniform3d
       (foreign-lambda void "glUniform3d" integer double double double)))
   (begin
-    (define glUniform4d
+    (define gl:Uniform4d
       (foreign-lambda void "glUniform4d" integer double double double double)))
   (begin
-    (define glUniform1dv
+    (define gl:Uniform1dv
       (foreign-lambda void "glUniform1dv" integer unsigned-integer f64vector)))
   (begin
-    (define glUniform2dv
+    (define gl:Uniform2dv
       (foreign-lambda void "glUniform2dv" integer unsigned-integer f64vector)))
   (begin
-    (define glUniform3dv
+    (define gl:Uniform3dv
       (foreign-lambda void "glUniform3dv" integer unsigned-integer f64vector)))
   (begin
-    (define glUniform4dv
+    (define gl:Uniform4dv
       (foreign-lambda void "glUniform4dv" integer unsigned-integer f64vector)))
   (begin
-    (define glUniformMatrix2dv
+    (define gl:UniformMatrix2dv
       (foreign-lambda
         void
         "glUniformMatrix2dv"
@@ -4255,7 +4255,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix3dv
+    (define gl:UniformMatrix3dv
       (foreign-lambda
         void
         "glUniformMatrix3dv"
@@ -4264,7 +4264,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix4dv
+    (define gl:UniformMatrix4dv
       (foreign-lambda
         void
         "glUniformMatrix4dv"
@@ -4273,7 +4273,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix2x3dv
+    (define gl:UniformMatrix2x3dv
       (foreign-lambda
         void
         "glUniformMatrix2x3dv"
@@ -4282,7 +4282,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix2x4dv
+    (define gl:UniformMatrix2x4dv
       (foreign-lambda
         void
         "glUniformMatrix2x4dv"
@@ -4291,7 +4291,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix3x2dv
+    (define gl:UniformMatrix3x2dv
       (foreign-lambda
         void
         "glUniformMatrix3x2dv"
@@ -4300,7 +4300,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix3x4dv
+    (define gl:UniformMatrix3x4dv
       (foreign-lambda
         void
         "glUniformMatrix3x4dv"
@@ -4309,7 +4309,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix4x2dv
+    (define gl:UniformMatrix4x2dv
       (foreign-lambda
         void
         "glUniformMatrix4x2dv"
@@ -4318,7 +4318,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glUniformMatrix4x3dv
+    (define gl:UniformMatrix4x3dv
       (foreign-lambda
         void
         "glUniformMatrix4x3dv"
@@ -4327,7 +4327,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glGetUniformdv
+    (define gl:GetUniformdv
       (foreign-lambda
         void
         "glGetUniformdv"
@@ -4335,7 +4335,7 @@
         integer
         f64vector)))
   (begin
-    (define glProgramUniform1dEXT
+    (define gl:ProgramUniform1dEXT
       (foreign-lambda
         void
         "glProgramUniform1dEXT"
@@ -4343,7 +4343,7 @@
         integer
         double)))
   (begin
-    (define glProgramUniform2dEXT
+    (define gl:ProgramUniform2dEXT
       (foreign-lambda
         void
         "glProgramUniform2dEXT"
@@ -4352,7 +4352,7 @@
         double
         double)))
   (begin
-    (define glProgramUniform3dEXT
+    (define gl:ProgramUniform3dEXT
       (foreign-lambda
         void
         "glProgramUniform3dEXT"
@@ -4362,7 +4362,7 @@
         double
         double)))
   (begin
-    (define glProgramUniform4dEXT
+    (define gl:ProgramUniform4dEXT
       (foreign-lambda
         void
         "glProgramUniform4dEXT"
@@ -4373,7 +4373,7 @@
         double
         double)))
   (begin
-    (define glProgramUniform1dvEXT
+    (define gl:ProgramUniform1dvEXT
       (foreign-lambda
         void
         "glProgramUniform1dvEXT"
@@ -4382,7 +4382,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramUniform2dvEXT
+    (define gl:ProgramUniform2dvEXT
       (foreign-lambda
         void
         "glProgramUniform2dvEXT"
@@ -4391,7 +4391,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramUniform3dvEXT
+    (define gl:ProgramUniform3dvEXT
       (foreign-lambda
         void
         "glProgramUniform3dvEXT"
@@ -4400,7 +4400,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramUniform4dvEXT
+    (define gl:ProgramUniform4dvEXT
       (foreign-lambda
         void
         "glProgramUniform4dvEXT"
@@ -4409,7 +4409,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramUniformMatrix2dvEXT
+    (define gl:ProgramUniformMatrix2dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2dvEXT"
@@ -4419,7 +4419,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix3dvEXT
+    (define gl:ProgramUniformMatrix3dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3dvEXT"
@@ -4429,7 +4429,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix4dvEXT
+    (define gl:ProgramUniformMatrix4dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4dvEXT"
@@ -4439,7 +4439,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix2x3dvEXT
+    (define gl:ProgramUniformMatrix2x3dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2x3dvEXT"
@@ -4449,7 +4449,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix2x4dvEXT
+    (define gl:ProgramUniformMatrix2x4dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2x4dvEXT"
@@ -4459,7 +4459,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix3x2dvEXT
+    (define gl:ProgramUniformMatrix3x2dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3x2dvEXT"
@@ -4469,7 +4469,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix3x4dvEXT
+    (define gl:ProgramUniformMatrix3x4dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3x4dvEXT"
@@ -4479,7 +4479,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix4x2dvEXT
+    (define gl:ProgramUniformMatrix4x2dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4x2dvEXT"
@@ -4489,7 +4489,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glProgramUniformMatrix4x3dvEXT
+    (define gl:ProgramUniformMatrix4x3dvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4x3dvEXT"
@@ -4499,7 +4499,7 @@
         unsigned-char
         f64vector)))
   (begin
-    (define glGetSubroutineUniformLocation
+    (define gl:GetSubroutineUniformLocation
       (foreign-lambda
         integer
         "glGetSubroutineUniformLocation"
@@ -4507,7 +4507,7 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetSubroutineIndex
+    (define gl:GetSubroutineIndex
       (foreign-lambda
         unsigned-integer
         "glGetSubroutineIndex"
@@ -4515,7 +4515,7 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveSubroutineUniformiv
+    (define gl:GetActiveSubroutineUniformiv
       (foreign-lambda
         void
         "glGetActiveSubroutineUniformiv"
@@ -4525,7 +4525,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetActiveSubroutineUniformName
+    (define gl:GetActiveSubroutineUniformName
       (foreign-lambda
         void
         "glGetActiveSubroutineUniformName"
@@ -4536,7 +4536,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetActiveSubroutineName
+    (define gl:GetActiveSubroutineName
       (foreign-lambda
         void
         "glGetActiveSubroutineName"
@@ -4547,7 +4547,7 @@
         u32vector
         c-string)))
   (begin
-    (define glUniformSubroutinesuiv
+    (define gl:UniformSubroutinesuiv
       (foreign-lambda
         void
         "glUniformSubroutinesuiv"
@@ -4555,7 +4555,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetUniformSubroutineuiv
+    (define gl:GetUniformSubroutineuiv
       (foreign-lambda
         void
         "glGetUniformSubroutineuiv"
@@ -4563,7 +4563,7 @@
         integer
         u32vector)))
   (begin
-    (define glGetProgramStageiv
+    (define gl:GetProgramStageiv
       (foreign-lambda
         void
         "glGetProgramStageiv"
@@ -4572,50 +4572,50 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPatchParameteri
+    (define gl:PatchParameteri
       (foreign-lambda void "glPatchParameteri" unsigned-integer integer)))
   (begin
-    (define glPatchParameterfv
+    (define gl:PatchParameterfv
       (foreign-lambda void "glPatchParameterfv" unsigned-integer f32vector)))
   (begin
-    (define glBindTransformFeedback
+    (define gl:BindTransformFeedback
       (foreign-lambda
         void
         "glBindTransformFeedback"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteTransformFeedbacks
+    (define gl:DeleteTransformFeedbacks
       (foreign-lambda
         void
         "glDeleteTransformFeedbacks"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenTransformFeedbacks
+    (define gl:GenTransformFeedbacks
       (foreign-lambda
         void
         "glGenTransformFeedbacks"
         unsigned-integer
         u32vector)))
   (begin
-    (define glIsTransformFeedback
+    (define gl:IsTransformFeedback
       (foreign-lambda unsigned-char "glIsTransformFeedback" unsigned-integer)))
   (begin
-    (define glPauseTransformFeedback
+    (define gl:PauseTransformFeedback
       (foreign-lambda void "glPauseTransformFeedback")))
   (begin
-    (define glResumeTransformFeedback
+    (define gl:ResumeTransformFeedback
       (foreign-lambda void "glResumeTransformFeedback")))
   (begin
-    (define glDrawTransformFeedback
+    (define gl:DrawTransformFeedback
       (foreign-lambda
         void
         "glDrawTransformFeedback"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawTransformFeedbackStream
+    (define gl:DrawTransformFeedbackStream
       (foreign-lambda
         void
         "glDrawTransformFeedbackStream"
@@ -4623,7 +4623,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBeginQueryIndexed
+    (define gl:BeginQueryIndexed
       (foreign-lambda
         void
         "glBeginQueryIndexed"
@@ -4631,14 +4631,14 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEndQueryIndexed
+    (define gl:EndQueryIndexed
       (foreign-lambda
         void
         "glEndQueryIndexed"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetQueryIndexediv
+    (define gl:GetQueryIndexediv
       (foreign-lambda
         void
         "glGetQueryIndexediv"
@@ -4647,13 +4647,13 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glBlendColorEXT
+    (define gl:BlendColorEXT
       (foreign-lambda void "glBlendColorEXT" float float float float)))
   (begin
-    (define glPolygonOffsetEXT
+    (define gl:PolygonOffsetEXT
       (foreign-lambda void "glPolygonOffsetEXT" float float)))
   (begin
-    (define glTexImage3DEXT
+    (define gl:TexImage3DEXT
       (foreign-lambda
         void
         "glTexImage3DEXT"
@@ -4668,7 +4668,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTexSubImage3DEXT
+    (define gl:TexSubImage3DEXT
       (foreign-lambda
         void
         "glTexSubImage3DEXT"
@@ -4684,7 +4684,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetTexFilterFuncSGIS
+    (define gl:GetTexFilterFuncSGIS
       (foreign-lambda
         void
         "glGetTexFilterFuncSGIS"
@@ -4692,7 +4692,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glTexFilterFuncSGIS
+    (define gl:TexFilterFuncSGIS
       (foreign-lambda
         void
         "glTexFilterFuncSGIS"
@@ -4701,7 +4701,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glTexSubImage1DEXT
+    (define gl:TexSubImage1DEXT
       (foreign-lambda
         void
         "glTexSubImage1DEXT"
@@ -4713,7 +4713,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTexSubImage2DEXT
+    (define gl:TexSubImage2DEXT
       (foreign-lambda
         void
         "glTexSubImage2DEXT"
@@ -4727,7 +4727,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyTexImage1DEXT
+    (define gl:CopyTexImage1DEXT
       (foreign-lambda
         void
         "glCopyTexImage1DEXT"
@@ -4739,7 +4739,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyTexImage2DEXT
+    (define gl:CopyTexImage2DEXT
       (foreign-lambda
         void
         "glCopyTexImage2DEXT"
@@ -4752,7 +4752,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyTexSubImage1DEXT
+    (define gl:CopyTexSubImage1DEXT
       (foreign-lambda
         void
         "glCopyTexSubImage1DEXT"
@@ -4763,7 +4763,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glCopyTexSubImage2DEXT
+    (define gl:CopyTexSubImage2DEXT
       (foreign-lambda
         void
         "glCopyTexSubImage2DEXT"
@@ -4776,7 +4776,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glCopyTexSubImage3DEXT
+    (define gl:CopyTexSubImage3DEXT
       (foreign-lambda
         void
         "glCopyTexSubImage3DEXT"
@@ -4790,7 +4790,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetHistogramEXT
+    (define gl:GetHistogramEXT
       (foreign-lambda
         void
         "glGetHistogramEXT"
@@ -4800,7 +4800,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetHistogramParameterfvEXT
+    (define gl:GetHistogramParameterfvEXT
       (foreign-lambda
         void
         "glGetHistogramParameterfvEXT"
@@ -4808,7 +4808,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetHistogramParameterivEXT
+    (define gl:GetHistogramParameterivEXT
       (foreign-lambda
         void
         "glGetHistogramParameterivEXT"
@@ -4816,7 +4816,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMinmaxEXT
+    (define gl:GetMinmaxEXT
       (foreign-lambda
         void
         "glGetMinmaxEXT"
@@ -4826,7 +4826,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetMinmaxParameterfvEXT
+    (define gl:GetMinmaxParameterfvEXT
       (foreign-lambda
         void
         "glGetMinmaxParameterfvEXT"
@@ -4834,7 +4834,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMinmaxParameterivEXT
+    (define gl:GetMinmaxParameterivEXT
       (foreign-lambda
         void
         "glGetMinmaxParameterivEXT"
@@ -4842,7 +4842,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glHistogramEXT
+    (define gl:HistogramEXT
       (foreign-lambda
         void
         "glHistogramEXT"
@@ -4851,7 +4851,7 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glMinmaxEXT
+    (define gl:MinmaxEXT
       (foreign-lambda
         void
         "glMinmaxEXT"
@@ -4859,13 +4859,13 @@
         unsigned-integer
         unsigned-char)))
   (begin
-    (define glResetHistogramEXT
+    (define gl:ResetHistogramEXT
       (foreign-lambda void "glResetHistogramEXT" unsigned-integer)))
   (begin
-    (define glResetMinmaxEXT
+    (define gl:ResetMinmaxEXT
       (foreign-lambda void "glResetMinmaxEXT" unsigned-integer)))
   (begin
-    (define glConvolutionFilter1DEXT
+    (define gl:ConvolutionFilter1DEXT
       (foreign-lambda
         void
         "glConvolutionFilter1DEXT"
@@ -4876,7 +4876,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glConvolutionFilter2DEXT
+    (define gl:ConvolutionFilter2DEXT
       (foreign-lambda
         void
         "glConvolutionFilter2DEXT"
@@ -4888,7 +4888,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glConvolutionParameterfEXT
+    (define gl:ConvolutionParameterfEXT
       (foreign-lambda
         void
         "glConvolutionParameterfEXT"
@@ -4896,7 +4896,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glConvolutionParameterfvEXT
+    (define gl:ConvolutionParameterfvEXT
       (foreign-lambda
         void
         "glConvolutionParameterfvEXT"
@@ -4904,7 +4904,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glConvolutionParameteriEXT
+    (define gl:ConvolutionParameteriEXT
       (foreign-lambda
         void
         "glConvolutionParameteriEXT"
@@ -4912,7 +4912,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glConvolutionParameterivEXT
+    (define gl:ConvolutionParameterivEXT
       (foreign-lambda
         void
         "glConvolutionParameterivEXT"
@@ -4920,7 +4920,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glCopyConvolutionFilter1DEXT
+    (define gl:CopyConvolutionFilter1DEXT
       (foreign-lambda
         void
         "glCopyConvolutionFilter1DEXT"
@@ -4930,7 +4930,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glCopyConvolutionFilter2DEXT
+    (define gl:CopyConvolutionFilter2DEXT
       (foreign-lambda
         void
         "glCopyConvolutionFilter2DEXT"
@@ -4941,7 +4941,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetConvolutionFilterEXT
+    (define gl:GetConvolutionFilterEXT
       (foreign-lambda
         void
         "glGetConvolutionFilterEXT"
@@ -4950,7 +4950,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetConvolutionParameterfvEXT
+    (define gl:GetConvolutionParameterfvEXT
       (foreign-lambda
         void
         "glGetConvolutionParameterfvEXT"
@@ -4958,7 +4958,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetConvolutionParameterivEXT
+    (define gl:GetConvolutionParameterivEXT
       (foreign-lambda
         void
         "glGetConvolutionParameterivEXT"
@@ -4966,7 +4966,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetSeparableFilterEXT
+    (define gl:GetSeparableFilterEXT
       (foreign-lambda
         void
         "glGetSeparableFilterEXT"
@@ -4977,7 +4977,7 @@
         (c-pointer void)
         (c-pointer void))))
   (begin
-    (define glSeparableFilter2DEXT
+    (define gl:SeparableFilter2DEXT
       (foreign-lambda
         void
         "glSeparableFilter2DEXT"
@@ -4990,7 +4990,7 @@
         (c-pointer void)
         (c-pointer void))))
   (begin
-    (define glColorTableSGI
+    (define gl:ColorTableSGI
       (foreign-lambda
         void
         "glColorTableSGI"
@@ -5001,7 +5001,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glColorTableParameterfvSGI
+    (define gl:ColorTableParameterfvSGI
       (foreign-lambda
         void
         "glColorTableParameterfvSGI"
@@ -5009,7 +5009,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glColorTableParameterivSGI
+    (define gl:ColorTableParameterivSGI
       (foreign-lambda
         void
         "glColorTableParameterivSGI"
@@ -5017,7 +5017,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glCopyColorTableSGI
+    (define gl:CopyColorTableSGI
       (foreign-lambda
         void
         "glCopyColorTableSGI"
@@ -5027,7 +5027,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glGetColorTableSGI
+    (define gl:GetColorTableSGI
       (foreign-lambda
         void
         "glGetColorTableSGI"
@@ -5036,7 +5036,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetColorTableParameterfvSGI
+    (define gl:GetColorTableParameterfvSGI
       (foreign-lambda
         void
         "glGetColorTableParameterfvSGI"
@@ -5044,7 +5044,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetColorTableParameterivSGI
+    (define gl:GetColorTableParameterivSGI
       (foreign-lambda
         void
         "glGetColorTableParameterivSGI"
@@ -5052,52 +5052,52 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPixelTexGenSGIX
+    (define gl:PixelTexGenSGIX
       (foreign-lambda void "glPixelTexGenSGIX" unsigned-integer)))
   (begin
-    (define glPixelTexGenParameteriSGIS
+    (define gl:PixelTexGenParameteriSGIS
       (foreign-lambda
         void
         "glPixelTexGenParameteriSGIS"
         unsigned-integer
         integer)))
   (begin
-    (define glPixelTexGenParameterivSGIS
+    (define gl:PixelTexGenParameterivSGIS
       (foreign-lambda
         void
         "glPixelTexGenParameterivSGIS"
         unsigned-integer
         s32vector)))
   (begin
-    (define glPixelTexGenParameterfSGIS
+    (define gl:PixelTexGenParameterfSGIS
       (foreign-lambda
         void
         "glPixelTexGenParameterfSGIS"
         unsigned-integer
         float)))
   (begin
-    (define glPixelTexGenParameterfvSGIS
+    (define gl:PixelTexGenParameterfvSGIS
       (foreign-lambda
         void
         "glPixelTexGenParameterfvSGIS"
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetPixelTexGenParameterivSGIS
+    (define gl:GetPixelTexGenParameterivSGIS
       (foreign-lambda
         void
         "glGetPixelTexGenParameterivSGIS"
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetPixelTexGenParameterfvSGIS
+    (define gl:GetPixelTexGenParameterfvSGIS
       (foreign-lambda
         void
         "glGetPixelTexGenParameterfvSGIS"
         unsigned-integer
         f32vector)))
   (begin
-    (define glTexImage4DSGIS
+    (define gl:TexImage4DSGIS
       (foreign-lambda
         void
         "glTexImage4DSGIS"
@@ -5113,7 +5113,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTexSubImage4DSGIS
+    (define gl:TexSubImage4DSGIS
       (foreign-lambda
         void
         "glTexSubImage4DSGIS"
@@ -5131,7 +5131,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glAreTexturesResidentEXT
+    (define gl:AreTexturesResidentEXT
       (foreign-lambda
         unsigned-char
         "glAreTexturesResidentEXT"
@@ -5139,23 +5139,23 @@
         u32vector
         u8vector)))
   (begin
-    (define glBindTextureEXT
+    (define gl:BindTextureEXT
       (foreign-lambda
         void
         "glBindTextureEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteTexturesEXT
+    (define gl:DeleteTexturesEXT
       (foreign-lambda void "glDeleteTexturesEXT" unsigned-integer u32vector)))
   (begin
-    (define glGenTexturesEXT
+    (define gl:GenTexturesEXT
       (foreign-lambda void "glGenTexturesEXT" unsigned-integer u32vector)))
   (begin
-    (define glIsTextureEXT
+    (define gl:IsTextureEXT
       (foreign-lambda unsigned-char "glIsTextureEXT" unsigned-integer)))
   (begin
-    (define glPrioritizeTexturesEXT
+    (define gl:PrioritizeTexturesEXT
       (foreign-lambda
         void
         "glPrioritizeTexturesEXT"
@@ -5163,7 +5163,7 @@
         u32vector
         f32vector)))
   (begin
-    (define glDetailTexFuncSGIS
+    (define gl:DetailTexFuncSGIS
       (foreign-lambda
         void
         "glDetailTexFuncSGIS"
@@ -5171,14 +5171,14 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetDetailTexFuncSGIS
+    (define gl:GetDetailTexFuncSGIS
       (foreign-lambda
         void
         "glGetDetailTexFuncSGIS"
         unsigned-integer
         f32vector)))
   (begin
-    (define glSharpenTexFuncSGIS
+    (define gl:SharpenTexFuncSGIS
       (foreign-lambda
         void
         "glSharpenTexFuncSGIS"
@@ -5186,23 +5186,23 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetSharpenTexFuncSGIS
+    (define gl:GetSharpenTexFuncSGIS
       (foreign-lambda
         void
         "glGetSharpenTexFuncSGIS"
         unsigned-integer
         f32vector)))
   (begin
-    (define glSampleMaskSGIS
+    (define gl:SampleMaskSGIS
       (foreign-lambda void "glSampleMaskSGIS" float unsigned-char)))
   (begin
-    (define glSamplePatternSGIS
+    (define gl:SamplePatternSGIS
       (foreign-lambda void "glSamplePatternSGIS" unsigned-integer)))
   (begin
-    (define glArrayElementEXT
+    (define gl:ArrayElementEXT
       (foreign-lambda void "glArrayElementEXT" integer)))
   (begin
-    (define glColorPointerEXT
+    (define gl:ColorPointerEXT
       (foreign-lambda
         void
         "glColorPointerEXT"
@@ -5212,7 +5212,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glDrawArraysEXT
+    (define gl:DrawArraysEXT
       (foreign-lambda
         void
         "glDrawArraysEXT"
@@ -5220,7 +5220,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glEdgeFlagPointerEXT
+    (define gl:EdgeFlagPointerEXT
       (foreign-lambda
         void
         "glEdgeFlagPointerEXT"
@@ -5228,14 +5228,14 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetPointervEXT
+    (define gl:GetPointervEXT
       (foreign-lambda
         void
         "glGetPointervEXT"
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glIndexPointerEXT
+    (define gl:IndexPointerEXT
       (foreign-lambda
         void
         "glIndexPointerEXT"
@@ -5244,7 +5244,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glNormalPointerEXT
+    (define gl:NormalPointerEXT
       (foreign-lambda
         void
         "glNormalPointerEXT"
@@ -5253,7 +5253,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTexCoordPointerEXT
+    (define gl:TexCoordPointerEXT
       (foreign-lambda
         void
         "glTexCoordPointerEXT"
@@ -5263,7 +5263,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glVertexPointerEXT
+    (define gl:VertexPointerEXT
       (foreign-lambda
         void
         "glVertexPointerEXT"
@@ -5273,77 +5273,77 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glBlendEquationEXT
+    (define gl:BlendEquationEXT
       (foreign-lambda void "glBlendEquationEXT" unsigned-integer)))
   (begin
-    (define glSpriteParameterfSGIX
+    (define gl:SpriteParameterfSGIX
       (foreign-lambda void "glSpriteParameterfSGIX" unsigned-integer float)))
   (begin
-    (define glSpriteParameterfvSGIX
+    (define gl:SpriteParameterfvSGIX
       (foreign-lambda
         void
         "glSpriteParameterfvSGIX"
         unsigned-integer
         f32vector)))
   (begin
-    (define glSpriteParameteriSGIX
+    (define gl:SpriteParameteriSGIX
       (foreign-lambda void "glSpriteParameteriSGIX" unsigned-integer integer)))
   (begin
-    (define glSpriteParameterivSGIX
+    (define gl:SpriteParameterivSGIX
       (foreign-lambda
         void
         "glSpriteParameterivSGIX"
         unsigned-integer
         s32vector)))
   (begin
-    (define glPointParameterfEXT
+    (define gl:PointParameterfEXT
       (foreign-lambda void "glPointParameterfEXT" unsigned-integer float)))
   (begin
-    (define glPointParameterfvEXT
+    (define gl:PointParameterfvEXT
       (foreign-lambda
         void
         "glPointParameterfvEXT"
         unsigned-integer
         f32vector)))
   (begin
-    (define glPointParameterfSGIS
+    (define gl:PointParameterfSGIS
       (foreign-lambda void "glPointParameterfSGIS" unsigned-integer float)))
   (begin
-    (define glPointParameterfvSGIS
+    (define gl:PointParameterfvSGIS
       (foreign-lambda
         void
         "glPointParameterfvSGIS"
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetInstrumentsSGIX
+    (define gl:GetInstrumentsSGIX
       (foreign-lambda integer "glGetInstrumentsSGIX")))
   (begin
-    (define glInstrumentsBufferSGIX
+    (define gl:InstrumentsBufferSGIX
       (foreign-lambda
         void
         "glInstrumentsBufferSGIX"
         unsigned-integer
         s32vector)))
   (begin
-    (define glPollInstrumentsSGIX
+    (define gl:PollInstrumentsSGIX
       (foreign-lambda integer "glPollInstrumentsSGIX" s32vector)))
   (begin
-    (define glReadInstrumentsSGIX
+    (define gl:ReadInstrumentsSGIX
       (foreign-lambda void "glReadInstrumentsSGIX" integer)))
   (begin
-    (define glStartInstrumentsSGIX
+    (define gl:StartInstrumentsSGIX
       (foreign-lambda void "glStartInstrumentsSGIX")))
   (begin
-    (define glStopInstrumentsSGIX
+    (define gl:StopInstrumentsSGIX
       (foreign-lambda void "glStopInstrumentsSGIX" integer)))
   (begin
-    (define glFrameZoomSGIX (foreign-lambda void "glFrameZoomSGIX" integer)))
+    (define gl:FrameZoomSGIX (foreign-lambda void "glFrameZoomSGIX" integer)))
   (begin
-    (define glTagSampleBufferSGIX
+    (define gl:TagSampleBufferSGIX
       (foreign-lambda void "glTagSampleBufferSGIX")))
   (begin
-    (define glDeformationMap3dSGIX
+    (define gl:DeformationMap3dSGIX
       (foreign-lambda
         void
         "glDeformationMap3dSGIX"
@@ -5362,7 +5362,7 @@
         integer
         f64vector)))
   (begin
-    (define glDeformationMap3fSGIX
+    (define gl:DeformationMap3fSGIX
       (foreign-lambda
         void
         "glDeformationMap3fSGIX"
@@ -5381,26 +5381,26 @@
         integer
         f32vector)))
   (begin
-    (define glDeformSGIX
+    (define gl:DeformSGIX
       (foreign-lambda void "glDeformSGIX" unsigned-integer)))
   (begin
-    (define glLoadIdentityDeformationMapSGIX
+    (define gl:LoadIdentityDeformationMapSGIX
       (foreign-lambda
         void
         "glLoadIdentityDeformationMapSGIX"
         unsigned-integer)))
   (begin
-    (define glReferencePlaneSGIX
+    (define gl:ReferencePlaneSGIX
       (foreign-lambda void "glReferencePlaneSGIX" f64vector)))
-  (begin (define glFlushRasterSGIX (foreign-lambda void "glFlushRasterSGIX")))
+  (begin (define gl:FlushRasterSGIX (foreign-lambda void "glFlushRasterSGIX")))
   (begin
-    (define glFogFuncSGIS
+    (define gl:FogFuncSGIS
       (foreign-lambda void "glFogFuncSGIS" unsigned-integer f32vector)))
   (begin
-    (define glGetFogFuncSGIS
+    (define gl:GetFogFuncSGIS
       (foreign-lambda void "glGetFogFuncSGIS" f32vector)))
   (begin
-    (define glImageTransformParameteriHP
+    (define gl:ImageTransformParameteriHP
       (foreign-lambda
         void
         "glImageTransformParameteriHP"
@@ -5408,7 +5408,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glImageTransformParameterfHP
+    (define gl:ImageTransformParameterfHP
       (foreign-lambda
         void
         "glImageTransformParameterfHP"
@@ -5416,7 +5416,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glImageTransformParameterivHP
+    (define gl:ImageTransformParameterivHP
       (foreign-lambda
         void
         "glImageTransformParameterivHP"
@@ -5424,7 +5424,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glImageTransformParameterfvHP
+    (define gl:ImageTransformParameterfvHP
       (foreign-lambda
         void
         "glImageTransformParameterfvHP"
@@ -5432,7 +5432,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetImageTransformParameterivHP
+    (define gl:GetImageTransformParameterivHP
       (foreign-lambda
         void
         "glGetImageTransformParameterivHP"
@@ -5440,7 +5440,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetImageTransformParameterfvHP
+    (define gl:GetImageTransformParameterfvHP
       (foreign-lambda
         void
         "glGetImageTransformParameterfvHP"
@@ -5448,7 +5448,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glCopyColorSubTableEXT
+    (define gl:CopyColorSubTableEXT
       (foreign-lambda
         void
         "glCopyColorSubTableEXT"
@@ -5458,10 +5458,10 @@
         integer
         unsigned-integer)))
   (begin
-    (define glHintPGI
+    (define gl:HintPGI
       (foreign-lambda void "glHintPGI" unsigned-integer integer)))
   (begin
-    (define glColorTableEXT
+    (define gl:ColorTableEXT
       (foreign-lambda
         void
         "glColorTableEXT"
@@ -5472,7 +5472,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetColorTableEXT
+    (define gl:GetColorTableEXT
       (foreign-lambda
         void
         "glGetColorTableEXT"
@@ -5481,7 +5481,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetColorTableParameterivEXT
+    (define gl:GetColorTableParameterivEXT
       (foreign-lambda
         void
         "glGetColorTableParameterivEXT"
@@ -5489,7 +5489,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetColorTableParameterfvEXT
+    (define gl:GetColorTableParameterfvEXT
       (foreign-lambda
         void
         "glGetColorTableParameterfvEXT"
@@ -5497,7 +5497,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetListParameterfvSGIX
+    (define gl:GetListParameterfvSGIX
       (foreign-lambda
         void
         "glGetListParameterfvSGIX"
@@ -5505,7 +5505,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetListParameterivSGIX
+    (define gl:GetListParameterivSGIX
       (foreign-lambda
         void
         "glGetListParameterivSGIX"
@@ -5513,7 +5513,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glListParameterfSGIX
+    (define gl:ListParameterfSGIX
       (foreign-lambda
         void
         "glListParameterfSGIX"
@@ -5521,7 +5521,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glListParameterfvSGIX
+    (define gl:ListParameterfvSGIX
       (foreign-lambda
         void
         "glListParameterfvSGIX"
@@ -5529,7 +5529,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glListParameteriSGIX
+    (define gl:ListParameteriSGIX
       (foreign-lambda
         void
         "glListParameteriSGIX"
@@ -5537,7 +5537,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glListParameterivSGIX
+    (define gl:ListParameterivSGIX
       (foreign-lambda
         void
         "glListParameterivSGIX"
@@ -5545,34 +5545,34 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glIndexMaterialEXT
+    (define gl:IndexMaterialEXT
       (foreign-lambda
         void
         "glIndexMaterialEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIndexFuncEXT
+    (define gl:IndexFuncEXT
       (foreign-lambda void "glIndexFuncEXT" unsigned-integer float)))
   (begin
-    (define glLockArraysEXT
+    (define gl:LockArraysEXT
       (foreign-lambda void "glLockArraysEXT" integer unsigned-integer)))
-  (begin (define glUnlockArraysEXT (foreign-lambda void "glUnlockArraysEXT")))
+  (begin (define gl:UnlockArraysEXT (foreign-lambda void "glUnlockArraysEXT")))
   (begin
-    (define glCullParameterdvEXT
+    (define gl:CullParameterdvEXT
       (foreign-lambda void "glCullParameterdvEXT" unsigned-integer f64vector)))
   (begin
-    (define glCullParameterfvEXT
+    (define gl:CullParameterfvEXT
       (foreign-lambda void "glCullParameterfvEXT" unsigned-integer f32vector)))
   (begin
-    (define glFragmentColorMaterialSGIX
+    (define gl:FragmentColorMaterialSGIX
       (foreign-lambda
         void
         "glFragmentColorMaterialSGIX"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFragmentLightfSGIX
+    (define gl:FragmentLightfSGIX
       (foreign-lambda
         void
         "glFragmentLightfSGIX"
@@ -5580,7 +5580,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glFragmentLightfvSGIX
+    (define gl:FragmentLightfvSGIX
       (foreign-lambda
         void
         "glFragmentLightfvSGIX"
@@ -5588,7 +5588,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glFragmentLightiSGIX
+    (define gl:FragmentLightiSGIX
       (foreign-lambda
         void
         "glFragmentLightiSGIX"
@@ -5596,7 +5596,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFragmentLightivSGIX
+    (define gl:FragmentLightivSGIX
       (foreign-lambda
         void
         "glFragmentLightivSGIX"
@@ -5604,35 +5604,35 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glFragmentLightModelfSGIX
+    (define gl:FragmentLightModelfSGIX
       (foreign-lambda
         void
         "glFragmentLightModelfSGIX"
         unsigned-integer
         float)))
   (begin
-    (define glFragmentLightModelfvSGIX
+    (define gl:FragmentLightModelfvSGIX
       (foreign-lambda
         void
         "glFragmentLightModelfvSGIX"
         unsigned-integer
         f32vector)))
   (begin
-    (define glFragmentLightModeliSGIX
+    (define gl:FragmentLightModeliSGIX
       (foreign-lambda
         void
         "glFragmentLightModeliSGIX"
         unsigned-integer
         integer)))
   (begin
-    (define glFragmentLightModelivSGIX
+    (define gl:FragmentLightModelivSGIX
       (foreign-lambda
         void
         "glFragmentLightModelivSGIX"
         unsigned-integer
         s32vector)))
   (begin
-    (define glFragmentMaterialfSGIX
+    (define gl:FragmentMaterialfSGIX
       (foreign-lambda
         void
         "glFragmentMaterialfSGIX"
@@ -5640,7 +5640,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glFragmentMaterialfvSGIX
+    (define gl:FragmentMaterialfvSGIX
       (foreign-lambda
         void
         "glFragmentMaterialfvSGIX"
@@ -5648,7 +5648,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glFragmentMaterialiSGIX
+    (define gl:FragmentMaterialiSGIX
       (foreign-lambda
         void
         "glFragmentMaterialiSGIX"
@@ -5656,7 +5656,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFragmentMaterialivSGIX
+    (define gl:FragmentMaterialivSGIX
       (foreign-lambda
         void
         "glFragmentMaterialivSGIX"
@@ -5664,7 +5664,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetFragmentLightfvSGIX
+    (define gl:GetFragmentLightfvSGIX
       (foreign-lambda
         void
         "glGetFragmentLightfvSGIX"
@@ -5672,7 +5672,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetFragmentLightivSGIX
+    (define gl:GetFragmentLightivSGIX
       (foreign-lambda
         void
         "glGetFragmentLightivSGIX"
@@ -5680,7 +5680,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetFragmentMaterialfvSGIX
+    (define gl:GetFragmentMaterialfvSGIX
       (foreign-lambda
         void
         "glGetFragmentMaterialfvSGIX"
@@ -5688,7 +5688,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetFragmentMaterialivSGIX
+    (define gl:GetFragmentMaterialivSGIX
       (foreign-lambda
         void
         "glGetFragmentMaterialivSGIX"
@@ -5696,10 +5696,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glLightEnviSGIX
+    (define gl:LightEnviSGIX
       (foreign-lambda void "glLightEnviSGIX" unsigned-integer integer)))
   (begin
-    (define glDrawRangeElementsEXT
+    (define gl:DrawRangeElementsEXT
       (foreign-lambda
         void
         "glDrawRangeElementsEXT"
@@ -5710,45 +5710,45 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glApplyTextureEXT
+    (define gl:ApplyTextureEXT
       (foreign-lambda void "glApplyTextureEXT" unsigned-integer)))
   (begin
-    (define glTextureLightEXT
+    (define gl:TextureLightEXT
       (foreign-lambda void "glTextureLightEXT" unsigned-integer)))
   (begin
-    (define glTextureMaterialEXT
+    (define gl:TextureMaterialEXT
       (foreign-lambda
         void
         "glTextureMaterialEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glAsyncMarkerSGIX
+    (define gl:AsyncMarkerSGIX
       (foreign-lambda void "glAsyncMarkerSGIX" unsigned-integer)))
   (begin
-    (define glFinishAsyncSGIX
+    (define gl:FinishAsyncSGIX
       (foreign-lambda integer "glFinishAsyncSGIX" u32vector)))
   (begin
-    (define glPollAsyncSGIX
+    (define gl:PollAsyncSGIX
       (foreign-lambda integer "glPollAsyncSGIX" u32vector)))
   (begin
-    (define glGenAsyncMarkersSGIX
+    (define gl:GenAsyncMarkersSGIX
       (foreign-lambda
         unsigned-integer
         "glGenAsyncMarkersSGIX"
         unsigned-integer)))
   (begin
-    (define glDeleteAsyncMarkersSGIX
+    (define gl:DeleteAsyncMarkersSGIX
       (foreign-lambda
         void
         "glDeleteAsyncMarkersSGIX"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIsAsyncMarkerSGIX
+    (define gl:IsAsyncMarkerSGIX
       (foreign-lambda unsigned-char "glIsAsyncMarkerSGIX" unsigned-integer)))
   (begin
-    (define glVertexPointervINTEL
+    (define gl:VertexPointervINTEL
       (foreign-lambda
         void
         "glVertexPointervINTEL"
@@ -5756,14 +5756,14 @@
         unsigned-integer
         (c-pointer (c-pointer (const void))))))
   (begin
-    (define glNormalPointervINTEL
+    (define gl:NormalPointervINTEL
       (foreign-lambda
         void
         "glNormalPointervINTEL"
         unsigned-integer
         (c-pointer (c-pointer (const void))))))
   (begin
-    (define glColorPointervINTEL
+    (define gl:ColorPointervINTEL
       (foreign-lambda
         void
         "glColorPointervINTEL"
@@ -5771,7 +5771,7 @@
         unsigned-integer
         (c-pointer (c-pointer (const void))))))
   (begin
-    (define glTexCoordPointervINTEL
+    (define gl:TexCoordPointervINTEL
       (foreign-lambda
         void
         "glTexCoordPointervINTEL"
@@ -5779,7 +5779,7 @@
         unsigned-integer
         (c-pointer (c-pointer (const void))))))
   (begin
-    (define glPixelTransformParameteriEXT
+    (define gl:PixelTransformParameteriEXT
       (foreign-lambda
         void
         "glPixelTransformParameteriEXT"
@@ -5787,7 +5787,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glPixelTransformParameterfEXT
+    (define gl:PixelTransformParameterfEXT
       (foreign-lambda
         void
         "glPixelTransformParameterfEXT"
@@ -5795,7 +5795,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glPixelTransformParameterivEXT
+    (define gl:PixelTransformParameterivEXT
       (foreign-lambda
         void
         "glPixelTransformParameterivEXT"
@@ -5803,7 +5803,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPixelTransformParameterfvEXT
+    (define gl:PixelTransformParameterfvEXT
       (foreign-lambda
         void
         "glPixelTransformParameterfvEXT"
@@ -5811,37 +5811,37 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glSecondaryColor3bEXT
+    (define gl:SecondaryColor3bEXT
       (foreign-lambda void "glSecondaryColor3bEXT" char char char)))
   (begin
-    (define glSecondaryColor3bvEXT
+    (define gl:SecondaryColor3bvEXT
       (foreign-lambda void "glSecondaryColor3bvEXT" c-string)))
   (begin
-    (define glSecondaryColor3dEXT
+    (define gl:SecondaryColor3dEXT
       (foreign-lambda void "glSecondaryColor3dEXT" double double double)))
   (begin
-    (define glSecondaryColor3dvEXT
+    (define gl:SecondaryColor3dvEXT
       (foreign-lambda void "glSecondaryColor3dvEXT" f64vector)))
   (begin
-    (define glSecondaryColor3fEXT
+    (define gl:SecondaryColor3fEXT
       (foreign-lambda void "glSecondaryColor3fEXT" float float float)))
   (begin
-    (define glSecondaryColor3fvEXT
+    (define gl:SecondaryColor3fvEXT
       (foreign-lambda void "glSecondaryColor3fvEXT" f32vector)))
   (begin
-    (define glSecondaryColor3iEXT
+    (define gl:SecondaryColor3iEXT
       (foreign-lambda void "glSecondaryColor3iEXT" integer integer integer)))
   (begin
-    (define glSecondaryColor3ivEXT
+    (define gl:SecondaryColor3ivEXT
       (foreign-lambda void "glSecondaryColor3ivEXT" s32vector)))
   (begin
-    (define glSecondaryColor3sEXT
+    (define gl:SecondaryColor3sEXT
       (foreign-lambda void "glSecondaryColor3sEXT" short short short)))
   (begin
-    (define glSecondaryColor3svEXT
+    (define gl:SecondaryColor3svEXT
       (foreign-lambda void "glSecondaryColor3svEXT" s16vector)))
   (begin
-    (define glSecondaryColor3ubEXT
+    (define gl:SecondaryColor3ubEXT
       (foreign-lambda
         void
         "glSecondaryColor3ubEXT"
@@ -5849,10 +5849,10 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glSecondaryColor3ubvEXT
+    (define gl:SecondaryColor3ubvEXT
       (foreign-lambda void "glSecondaryColor3ubvEXT" u8vector)))
   (begin
-    (define glSecondaryColor3uiEXT
+    (define gl:SecondaryColor3uiEXT
       (foreign-lambda
         void
         "glSecondaryColor3uiEXT"
@@ -5860,10 +5860,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSecondaryColor3uivEXT
+    (define gl:SecondaryColor3uivEXT
       (foreign-lambda void "glSecondaryColor3uivEXT" u32vector)))
   (begin
-    (define glSecondaryColor3usEXT
+    (define gl:SecondaryColor3usEXT
       (foreign-lambda
         void
         "glSecondaryColor3usEXT"
@@ -5871,10 +5871,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glSecondaryColor3usvEXT
+    (define gl:SecondaryColor3usvEXT
       (foreign-lambda void "glSecondaryColor3usvEXT" u16vector)))
   (begin
-    (define glSecondaryColorPointerEXT
+    (define gl:SecondaryColorPointerEXT
       (foreign-lambda
         void
         "glSecondaryColorPointerEXT"
@@ -5883,10 +5883,10 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTextureNormalEXT
+    (define gl:TextureNormalEXT
       (foreign-lambda void "glTextureNormalEXT" unsigned-integer)))
   (begin
-    (define glMultiDrawArraysEXT
+    (define gl:MultiDrawArraysEXT
       (foreign-lambda
         void
         "glMultiDrawArraysEXT"
@@ -5895,7 +5895,7 @@
         u32vector
         unsigned-integer)))
   (begin
-    (define glMultiDrawElementsEXT
+    (define gl:MultiDrawElementsEXT
       (foreign-lambda
         void
         "glMultiDrawElementsEXT"
@@ -5904,14 +5904,14 @@
         unsigned-integer
         (c-pointer (c-pointer (const void)))
         unsigned-integer)))
-  (begin (define glFogCoordfEXT (foreign-lambda void "glFogCoordfEXT" float)))
+  (begin (define gl:FogCoordfEXT (foreign-lambda void "glFogCoordfEXT" float)))
   (begin
-    (define glFogCoordfvEXT (foreign-lambda void "glFogCoordfvEXT" f32vector)))
-  (begin (define glFogCoorddEXT (foreign-lambda void "glFogCoorddEXT" double)))
+    (define gl:FogCoordfvEXT (foreign-lambda void "glFogCoordfvEXT" f32vector)))
+  (begin (define gl:FogCoorddEXT (foreign-lambda void "glFogCoorddEXT" double)))
   (begin
-    (define glFogCoorddvEXT (foreign-lambda void "glFogCoorddvEXT" f64vector)))
+    (define gl:FogCoorddvEXT (foreign-lambda void "glFogCoorddvEXT" f64vector)))
   (begin
-    (define glFogCoordPointerEXT
+    (define gl:FogCoordPointerEXT
       (foreign-lambda
         void
         "glFogCoordPointerEXT"
@@ -5919,62 +5919,62 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTangent3bEXT
+    (define gl:Tangent3bEXT
       (foreign-lambda void "glTangent3bEXT" char char char)))
   (begin
-    (define glTangent3bvEXT (foreign-lambda void "glTangent3bvEXT" c-string)))
+    (define gl:Tangent3bvEXT (foreign-lambda void "glTangent3bvEXT" c-string)))
   (begin
-    (define glTangent3dEXT
+    (define gl:Tangent3dEXT
       (foreign-lambda void "glTangent3dEXT" double double double)))
   (begin
-    (define glTangent3dvEXT (foreign-lambda void "glTangent3dvEXT" f64vector)))
+    (define gl:Tangent3dvEXT (foreign-lambda void "glTangent3dvEXT" f64vector)))
   (begin
-    (define glTangent3fEXT
+    (define gl:Tangent3fEXT
       (foreign-lambda void "glTangent3fEXT" float float float)))
   (begin
-    (define glTangent3fvEXT (foreign-lambda void "glTangent3fvEXT" f32vector)))
+    (define gl:Tangent3fvEXT (foreign-lambda void "glTangent3fvEXT" f32vector)))
   (begin
-    (define glTangent3iEXT
+    (define gl:Tangent3iEXT
       (foreign-lambda void "glTangent3iEXT" integer integer integer)))
   (begin
-    (define glTangent3ivEXT (foreign-lambda void "glTangent3ivEXT" s32vector)))
+    (define gl:Tangent3ivEXT (foreign-lambda void "glTangent3ivEXT" s32vector)))
   (begin
-    (define glTangent3sEXT
+    (define gl:Tangent3sEXT
       (foreign-lambda void "glTangent3sEXT" short short short)))
   (begin
-    (define glTangent3svEXT (foreign-lambda void "glTangent3svEXT" s16vector)))
+    (define gl:Tangent3svEXT (foreign-lambda void "glTangent3svEXT" s16vector)))
   (begin
-    (define glBinormal3bEXT
+    (define gl:Binormal3bEXT
       (foreign-lambda void "glBinormal3bEXT" char char char)))
   (begin
-    (define glBinormal3bvEXT
+    (define gl:Binormal3bvEXT
       (foreign-lambda void "glBinormal3bvEXT" c-string)))
   (begin
-    (define glBinormal3dEXT
+    (define gl:Binormal3dEXT
       (foreign-lambda void "glBinormal3dEXT" double double double)))
   (begin
-    (define glBinormal3dvEXT
+    (define gl:Binormal3dvEXT
       (foreign-lambda void "glBinormal3dvEXT" f64vector)))
   (begin
-    (define glBinormal3fEXT
+    (define gl:Binormal3fEXT
       (foreign-lambda void "glBinormal3fEXT" float float float)))
   (begin
-    (define glBinormal3fvEXT
+    (define gl:Binormal3fvEXT
       (foreign-lambda void "glBinormal3fvEXT" f32vector)))
   (begin
-    (define glBinormal3iEXT
+    (define gl:Binormal3iEXT
       (foreign-lambda void "glBinormal3iEXT" integer integer integer)))
   (begin
-    (define glBinormal3ivEXT
+    (define gl:Binormal3ivEXT
       (foreign-lambda void "glBinormal3ivEXT" s32vector)))
   (begin
-    (define glBinormal3sEXT
+    (define gl:Binormal3sEXT
       (foreign-lambda void "glBinormal3sEXT" short short short)))
   (begin
-    (define glBinormal3svEXT
+    (define gl:Binormal3svEXT
       (foreign-lambda void "glBinormal3svEXT" s16vector)))
   (begin
-    (define glTangentPointerEXT
+    (define gl:TangentPointerEXT
       (foreign-lambda
         void
         "glTangentPointerEXT"
@@ -5982,7 +5982,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glBinormalPointerEXT
+    (define gl:BinormalPointerEXT
       (foreign-lambda
         void
         "glBinormalPointerEXT"
@@ -5990,51 +5990,51 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glFinishTextureSUNX (foreign-lambda void "glFinishTextureSUNX")))
+    (define gl:FinishTextureSUNX (foreign-lambda void "glFinishTextureSUNX")))
   (begin
-    (define glGlobalAlphaFactorbSUN
+    (define gl:GlobalAlphaFactorbSUN
       (foreign-lambda void "glGlobalAlphaFactorbSUN" char)))
   (begin
-    (define glGlobalAlphaFactorsSUN
+    (define gl:GlobalAlphaFactorsSUN
       (foreign-lambda void "glGlobalAlphaFactorsSUN" short)))
   (begin
-    (define glGlobalAlphaFactoriSUN
+    (define gl:GlobalAlphaFactoriSUN
       (foreign-lambda void "glGlobalAlphaFactoriSUN" integer)))
   (begin
-    (define glGlobalAlphaFactorfSUN
+    (define gl:GlobalAlphaFactorfSUN
       (foreign-lambda void "glGlobalAlphaFactorfSUN" float)))
   (begin
-    (define glGlobalAlphaFactordSUN
+    (define gl:GlobalAlphaFactordSUN
       (foreign-lambda void "glGlobalAlphaFactordSUN" double)))
   (begin
-    (define glGlobalAlphaFactorubSUN
+    (define gl:GlobalAlphaFactorubSUN
       (foreign-lambda void "glGlobalAlphaFactorubSUN" unsigned-char)))
   (begin
-    (define glGlobalAlphaFactorusSUN
+    (define gl:GlobalAlphaFactorusSUN
       (foreign-lambda void "glGlobalAlphaFactorusSUN" unsigned-short)))
   (begin
-    (define glGlobalAlphaFactoruiSUN
+    (define gl:GlobalAlphaFactoruiSUN
       (foreign-lambda void "glGlobalAlphaFactoruiSUN" unsigned-integer)))
   (begin
-    (define glReplacementCodeuiSUN
+    (define gl:ReplacementCodeuiSUN
       (foreign-lambda void "glReplacementCodeuiSUN" unsigned-integer)))
   (begin
-    (define glReplacementCodeusSUN
+    (define gl:ReplacementCodeusSUN
       (foreign-lambda void "glReplacementCodeusSUN" unsigned-short)))
   (begin
-    (define glReplacementCodeubSUN
+    (define gl:ReplacementCodeubSUN
       (foreign-lambda void "glReplacementCodeubSUN" unsigned-char)))
   (begin
-    (define glReplacementCodeuivSUN
+    (define gl:ReplacementCodeuivSUN
       (foreign-lambda void "glReplacementCodeuivSUN" u32vector)))
   (begin
-    (define glReplacementCodeusvSUN
+    (define gl:ReplacementCodeusvSUN
       (foreign-lambda void "glReplacementCodeusvSUN" u16vector)))
   (begin
-    (define glReplacementCodeubvSUN
+    (define gl:ReplacementCodeubvSUN
       (foreign-lambda void "glReplacementCodeubvSUN" u8vector)))
   (begin
-    (define glReplacementCodePointerSUN
+    (define gl:ReplacementCodePointerSUN
       (foreign-lambda
         void
         "glReplacementCodePointerSUN"
@@ -6042,7 +6042,7 @@
         unsigned-integer
         (c-pointer (c-pointer (const void))))))
   (begin
-    (define glColor4ubVertex2fSUN
+    (define gl:Color4ubVertex2fSUN
       (foreign-lambda
         void
         "glColor4ubVertex2fSUN"
@@ -6053,10 +6053,10 @@
         float
         float)))
   (begin
-    (define glColor4ubVertex2fvSUN
+    (define gl:Color4ubVertex2fvSUN
       (foreign-lambda void "glColor4ubVertex2fvSUN" u8vector f32vector)))
   (begin
-    (define glColor4ubVertex3fSUN
+    (define gl:Color4ubVertex3fSUN
       (foreign-lambda
         void
         "glColor4ubVertex3fSUN"
@@ -6068,10 +6068,10 @@
         float
         float)))
   (begin
-    (define glColor4ubVertex3fvSUN
+    (define gl:Color4ubVertex3fvSUN
       (foreign-lambda void "glColor4ubVertex3fvSUN" u8vector f32vector)))
   (begin
-    (define glColor3fVertex3fSUN
+    (define gl:Color3fVertex3fSUN
       (foreign-lambda
         void
         "glColor3fVertex3fSUN"
@@ -6082,10 +6082,10 @@
         float
         float)))
   (begin
-    (define glColor3fVertex3fvSUN
+    (define gl:Color3fVertex3fvSUN
       (foreign-lambda void "glColor3fVertex3fvSUN" f32vector f32vector)))
   (begin
-    (define glNormal3fVertex3fSUN
+    (define gl:Normal3fVertex3fSUN
       (foreign-lambda
         void
         "glNormal3fVertex3fSUN"
@@ -6096,10 +6096,10 @@
         float
         float)))
   (begin
-    (define glNormal3fVertex3fvSUN
+    (define gl:Normal3fVertex3fvSUN
       (foreign-lambda void "glNormal3fVertex3fvSUN" f32vector f32vector)))
   (begin
-    (define glColor4fNormal3fVertex3fSUN
+    (define gl:Color4fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glColor4fNormal3fVertex3fSUN"
@@ -6114,7 +6114,7 @@
         float
         float)))
   (begin
-    (define glColor4fNormal3fVertex3fvSUN
+    (define gl:Color4fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glColor4fNormal3fVertex3fvSUN"
@@ -6122,7 +6122,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glTexCoord2fVertex3fSUN
+    (define gl:TexCoord2fVertex3fSUN
       (foreign-lambda
         void
         "glTexCoord2fVertex3fSUN"
@@ -6132,10 +6132,10 @@
         float
         float)))
   (begin
-    (define glTexCoord2fVertex3fvSUN
+    (define gl:TexCoord2fVertex3fvSUN
       (foreign-lambda void "glTexCoord2fVertex3fvSUN" f32vector f32vector)))
   (begin
-    (define glTexCoord4fVertex4fSUN
+    (define gl:TexCoord4fVertex4fSUN
       (foreign-lambda
         void
         "glTexCoord4fVertex4fSUN"
@@ -6148,10 +6148,10 @@
         float
         float)))
   (begin
-    (define glTexCoord4fVertex4fvSUN
+    (define gl:TexCoord4fVertex4fvSUN
       (foreign-lambda void "glTexCoord4fVertex4fvSUN" f32vector f32vector)))
   (begin
-    (define glTexCoord2fColor4ubVertex3fSUN
+    (define gl:TexCoord2fColor4ubVertex3fSUN
       (foreign-lambda
         void
         "glTexCoord2fColor4ubVertex3fSUN"
@@ -6165,7 +6165,7 @@
         float
         float)))
   (begin
-    (define glTexCoord2fColor4ubVertex3fvSUN
+    (define gl:TexCoord2fColor4ubVertex3fvSUN
       (foreign-lambda
         void
         "glTexCoord2fColor4ubVertex3fvSUN"
@@ -6173,7 +6173,7 @@
         u8vector
         f32vector)))
   (begin
-    (define glTexCoord2fColor3fVertex3fSUN
+    (define gl:TexCoord2fColor3fVertex3fSUN
       (foreign-lambda
         void
         "glTexCoord2fColor3fVertex3fSUN"
@@ -6186,7 +6186,7 @@
         float
         float)))
   (begin
-    (define glTexCoord2fColor3fVertex3fvSUN
+    (define gl:TexCoord2fColor3fVertex3fvSUN
       (foreign-lambda
         void
         "glTexCoord2fColor3fVertex3fvSUN"
@@ -6194,7 +6194,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glTexCoord2fNormal3fVertex3fSUN
+    (define gl:TexCoord2fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glTexCoord2fNormal3fVertex3fSUN"
@@ -6207,7 +6207,7 @@
         float
         float)))
   (begin
-    (define glTexCoord2fNormal3fVertex3fvSUN
+    (define gl:TexCoord2fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glTexCoord2fNormal3fVertex3fvSUN"
@@ -6215,7 +6215,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glTexCoord2fColor4fNormal3fVertex3fSUN
+    (define gl:TexCoord2fColor4fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glTexCoord2fColor4fNormal3fVertex3fSUN"
@@ -6232,7 +6232,7 @@
         float
         float)))
   (begin
-    (define glTexCoord2fColor4fNormal3fVertex3fvSUN
+    (define gl:TexCoord2fColor4fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glTexCoord2fColor4fNormal3fVertex3fvSUN"
@@ -6241,7 +6241,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glTexCoord4fColor4fNormal3fVertex4fSUN
+    (define gl:TexCoord4fColor4fNormal3fVertex4fSUN
       (foreign-lambda
         void
         "glTexCoord4fColor4fNormal3fVertex4fSUN"
@@ -6261,7 +6261,7 @@
         float
         float)))
   (begin
-    (define glTexCoord4fColor4fNormal3fVertex4fvSUN
+    (define gl:TexCoord4fColor4fNormal3fVertex4fvSUN
       (foreign-lambda
         void
         "glTexCoord4fColor4fNormal3fVertex4fvSUN"
@@ -6270,7 +6270,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiVertex3fSUN
+    (define gl:ReplacementCodeuiVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiVertex3fSUN"
@@ -6279,14 +6279,14 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiVertex3fvSUN
+    (define gl:ReplacementCodeuiVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiVertex3fvSUN"
         u32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiColor4ubVertex3fSUN
+    (define gl:ReplacementCodeuiColor4ubVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor4ubVertex3fSUN"
@@ -6299,7 +6299,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiColor4ubVertex3fvSUN
+    (define gl:ReplacementCodeuiColor4ubVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor4ubVertex3fvSUN"
@@ -6307,7 +6307,7 @@
         u8vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiColor3fVertex3fSUN
+    (define gl:ReplacementCodeuiColor3fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor3fVertex3fSUN"
@@ -6319,7 +6319,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiColor3fVertex3fvSUN
+    (define gl:ReplacementCodeuiColor3fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor3fVertex3fvSUN"
@@ -6327,7 +6327,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiNormal3fVertex3fSUN
+    (define gl:ReplacementCodeuiNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiNormal3fVertex3fSUN"
@@ -6339,7 +6339,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiNormal3fVertex3fvSUN
+    (define gl:ReplacementCodeuiNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiNormal3fVertex3fvSUN"
@@ -6347,7 +6347,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiColor4fNormal3fVertex3fSUN
+    (define gl:ReplacementCodeuiColor4fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor4fNormal3fVertex3fSUN"
@@ -6363,7 +6363,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiColor4fNormal3fVertex3fvSUN
+    (define gl:ReplacementCodeuiColor4fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiColor4fNormal3fVertex3fvSUN"
@@ -6372,7 +6372,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiTexCoord2fVertex3fSUN
+    (define gl:ReplacementCodeuiTexCoord2fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fVertex3fSUN"
@@ -6383,7 +6383,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiTexCoord2fVertex3fvSUN
+    (define gl:ReplacementCodeuiTexCoord2fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fVertex3fvSUN"
@@ -6391,7 +6391,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN
+    (define gl:ReplacementCodeuiTexCoord2fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN"
@@ -6405,7 +6405,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN
+    (define gl:ReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN"
@@ -6414,7 +6414,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN
+    (define gl:ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN"
@@ -6432,7 +6432,7 @@
         float
         float)))
   (begin
-    (define glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN
+    (define gl:ReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN
       (foreign-lambda
         void
         "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN"
@@ -6442,7 +6442,7 @@
         f32vector
         f32vector)))
   (begin
-    (define glBlendFuncSeparateEXT
+    (define gl:BlendFuncSeparateEXT
       (foreign-lambda
         void
         "glBlendFuncSeparateEXT"
@@ -6451,7 +6451,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendFuncSeparateINGR
+    (define gl:BlendFuncSeparateINGR
       (foreign-lambda
         void
         "glBlendFuncSeparateINGR"
@@ -6460,13 +6460,13 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexWeightfEXT
+    (define gl:VertexWeightfEXT
       (foreign-lambda void "glVertexWeightfEXT" float)))
   (begin
-    (define glVertexWeightfvEXT
+    (define gl:VertexWeightfvEXT
       (foreign-lambda void "glVertexWeightfvEXT" f32vector)))
   (begin
-    (define glVertexWeightPointerEXT
+    (define gl:VertexWeightPointerEXT
       (foreign-lambda
         void
         "glVertexWeightPointerEXT"
@@ -6475,37 +6475,37 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glFlushVertexArrayRangeNV
+    (define gl:FlushVertexArrayRangeNV
       (foreign-lambda void "glFlushVertexArrayRangeNV")))
   (begin
-    (define glVertexArrayRangeNV
+    (define gl:VertexArrayRangeNV
       (foreign-lambda
         void
         "glVertexArrayRangeNV"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCombinerParameterfvNV
+    (define gl:CombinerParameterfvNV
       (foreign-lambda
         void
         "glCombinerParameterfvNV"
         unsigned-integer
         f32vector)))
   (begin
-    (define glCombinerParameterfNV
+    (define gl:CombinerParameterfNV
       (foreign-lambda void "glCombinerParameterfNV" unsigned-integer float)))
   (begin
-    (define glCombinerParameterivNV
+    (define gl:CombinerParameterivNV
       (foreign-lambda
         void
         "glCombinerParameterivNV"
         unsigned-integer
         s32vector)))
   (begin
-    (define glCombinerParameteriNV
+    (define gl:CombinerParameteriNV
       (foreign-lambda void "glCombinerParameteriNV" unsigned-integer integer)))
   (begin
-    (define glCombinerInputNV
+    (define gl:CombinerInputNV
       (foreign-lambda
         void
         "glCombinerInputNV"
@@ -6516,7 +6516,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glCombinerOutputNV
+    (define gl:CombinerOutputNV
       (foreign-lambda
         void
         "glCombinerOutputNV"
@@ -6531,7 +6531,7 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glFinalCombinerInputNV
+    (define gl:FinalCombinerInputNV
       (foreign-lambda
         void
         "glFinalCombinerInputNV"
@@ -6540,7 +6540,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetCombinerInputParameterfvNV
+    (define gl:GetCombinerInputParameterfvNV
       (foreign-lambda
         void
         "glGetCombinerInputParameterfvNV"
@@ -6550,7 +6550,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetCombinerInputParameterivNV
+    (define gl:GetCombinerInputParameterivNV
       (foreign-lambda
         void
         "glGetCombinerInputParameterivNV"
@@ -6560,7 +6560,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetCombinerOutputParameterfvNV
+    (define gl:GetCombinerOutputParameterfvNV
       (foreign-lambda
         void
         "glGetCombinerOutputParameterfvNV"
@@ -6569,7 +6569,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetCombinerOutputParameterivNV
+    (define gl:GetCombinerOutputParameterivNV
       (foreign-lambda
         void
         "glGetCombinerOutputParameterivNV"
@@ -6578,7 +6578,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetFinalCombinerInputParameterfvNV
+    (define gl:GetFinalCombinerInputParameterfvNV
       (foreign-lambda
         void
         "glGetFinalCombinerInputParameterfvNV"
@@ -6586,7 +6586,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetFinalCombinerInputParameterivNV
+    (define gl:GetFinalCombinerInputParameterivNV
       (foreign-lambda
         void
         "glGetFinalCombinerInputParameterivNV"
@@ -6594,69 +6594,69 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glResizeBuffersMESA (foreign-lambda void "glResizeBuffersMESA")))
+    (define gl:ResizeBuffersMESA (foreign-lambda void "glResizeBuffersMESA")))
   (begin
-    (define glWindowPos2dMESA
+    (define gl:WindowPos2dMESA
       (foreign-lambda void "glWindowPos2dMESA" double double)))
   (begin
-    (define glWindowPos2dvMESA
+    (define gl:WindowPos2dvMESA
       (foreign-lambda void "glWindowPos2dvMESA" f64vector)))
   (begin
-    (define glWindowPos2fMESA
+    (define gl:WindowPos2fMESA
       (foreign-lambda void "glWindowPos2fMESA" float float)))
   (begin
-    (define glWindowPos2fvMESA
+    (define gl:WindowPos2fvMESA
       (foreign-lambda void "glWindowPos2fvMESA" f32vector)))
   (begin
-    (define glWindowPos2iMESA
+    (define gl:WindowPos2iMESA
       (foreign-lambda void "glWindowPos2iMESA" integer integer)))
   (begin
-    (define glWindowPos2ivMESA
+    (define gl:WindowPos2ivMESA
       (foreign-lambda void "glWindowPos2ivMESA" s32vector)))
   (begin
-    (define glWindowPos2sMESA
+    (define gl:WindowPos2sMESA
       (foreign-lambda void "glWindowPos2sMESA" short short)))
   (begin
-    (define glWindowPos2svMESA
+    (define gl:WindowPos2svMESA
       (foreign-lambda void "glWindowPos2svMESA" s16vector)))
   (begin
-    (define glWindowPos3dMESA
+    (define gl:WindowPos3dMESA
       (foreign-lambda void "glWindowPos3dMESA" double double double)))
   (begin
-    (define glWindowPos3dvMESA
+    (define gl:WindowPos3dvMESA
       (foreign-lambda void "glWindowPos3dvMESA" f64vector)))
   (begin
-    (define glWindowPos3fMESA
+    (define gl:WindowPos3fMESA
       (foreign-lambda void "glWindowPos3fMESA" float float float)))
   (begin
-    (define glWindowPos3fvMESA
+    (define gl:WindowPos3fvMESA
       (foreign-lambda void "glWindowPos3fvMESA" f32vector)))
   (begin
-    (define glWindowPos3iMESA
+    (define gl:WindowPos3iMESA
       (foreign-lambda void "glWindowPos3iMESA" integer integer integer)))
   (begin
-    (define glWindowPos3ivMESA
+    (define gl:WindowPos3ivMESA
       (foreign-lambda void "glWindowPos3ivMESA" s32vector)))
   (begin
-    (define glWindowPos3sMESA
+    (define gl:WindowPos3sMESA
       (foreign-lambda void "glWindowPos3sMESA" short short short)))
   (begin
-    (define glWindowPos3svMESA
+    (define gl:WindowPos3svMESA
       (foreign-lambda void "glWindowPos3svMESA" s16vector)))
   (begin
-    (define glWindowPos4dMESA
+    (define gl:WindowPos4dMESA
       (foreign-lambda void "glWindowPos4dMESA" double double double double)))
   (begin
-    (define glWindowPos4dvMESA
+    (define gl:WindowPos4dvMESA
       (foreign-lambda void "glWindowPos4dvMESA" f64vector)))
   (begin
-    (define glWindowPos4fMESA
+    (define gl:WindowPos4fMESA
       (foreign-lambda void "glWindowPos4fMESA" float float float float)))
   (begin
-    (define glWindowPos4fvMESA
+    (define gl:WindowPos4fvMESA
       (foreign-lambda void "glWindowPos4fvMESA" f32vector)))
   (begin
-    (define glWindowPos4iMESA
+    (define gl:WindowPos4iMESA
       (foreign-lambda
         void
         "glWindowPos4iMESA"
@@ -6665,16 +6665,16 @@
         integer
         integer)))
   (begin
-    (define glWindowPos4ivMESA
+    (define gl:WindowPos4ivMESA
       (foreign-lambda void "glWindowPos4ivMESA" s32vector)))
   (begin
-    (define glWindowPos4sMESA
+    (define gl:WindowPos4sMESA
       (foreign-lambda void "glWindowPos4sMESA" short short short short)))
   (begin
-    (define glWindowPos4svMESA
+    (define gl:WindowPos4svMESA
       (foreign-lambda void "glWindowPos4svMESA" s16vector)))
   (begin
-    (define glMultiModeDrawArraysIBM
+    (define gl:MultiModeDrawArraysIBM
       (foreign-lambda
         void
         "glMultiModeDrawArraysIBM"
@@ -6684,7 +6684,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMultiModeDrawElementsIBM
+    (define gl:MultiModeDrawElementsIBM
       (foreign-lambda
         void
         "glMultiModeDrawElementsIBM"
@@ -6695,16 +6695,16 @@
         unsigned-integer
         integer)))
   (begin
-    (define glTbufferMask3DFX
+    (define gl:TbufferMask3DFX
       (foreign-lambda void "glTbufferMask3DFX" unsigned-integer)))
   (begin
-    (define glSampleMaskEXT
+    (define gl:SampleMaskEXT
       (foreign-lambda void "glSampleMaskEXT" float unsigned-char)))
   (begin
-    (define glSamplePatternEXT
+    (define gl:SamplePatternEXT
       (foreign-lambda void "glSamplePatternEXT" unsigned-integer)))
   (begin
-    (define glTextureColorMaskSGIS
+    (define gl:TextureColorMaskSGIS
       (foreign-lambda
         void
         "glTextureColorMaskSGIS"
@@ -6713,26 +6713,26 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glIglooInterfaceSGIX
+    (define gl:IglooInterfaceSGIX
       (foreign-lambda
         void
         "glIglooInterfaceSGIX"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glDeleteFencesNV
+    (define gl:DeleteFencesNV
       (foreign-lambda void "glDeleteFencesNV" unsigned-integer u32vector)))
   (begin
-    (define glGenFencesNV
+    (define gl:GenFencesNV
       (foreign-lambda void "glGenFencesNV" unsigned-integer u32vector)))
   (begin
-    (define glIsFenceNV
+    (define gl:IsFenceNV
       (foreign-lambda unsigned-char "glIsFenceNV" unsigned-integer)))
   (begin
-    (define glTestFenceNV
+    (define gl:TestFenceNV
       (foreign-lambda unsigned-char "glTestFenceNV" unsigned-integer)))
   (begin
-    (define glGetFenceivNV
+    (define gl:GetFenceivNV
       (foreign-lambda
         void
         "glGetFenceivNV"
@@ -6740,13 +6740,13 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glFinishFenceNV
+    (define gl:FinishFenceNV
       (foreign-lambda void "glFinishFenceNV" unsigned-integer)))
   (begin
-    (define glSetFenceNV
+    (define gl:SetFenceNV
       (foreign-lambda void "glSetFenceNV" unsigned-integer unsigned-integer)))
   (begin
-    (define glMapControlPointsNV
+    (define gl:MapControlPointsNV
       (foreign-lambda
         void
         "glMapControlPointsNV"
@@ -6760,7 +6760,7 @@
         unsigned-char
         (c-pointer void))))
   (begin
-    (define glMapParameterivNV
+    (define gl:MapParameterivNV
       (foreign-lambda
         void
         "glMapParameterivNV"
@@ -6768,7 +6768,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glMapParameterfvNV
+    (define gl:MapParameterfvNV
       (foreign-lambda
         void
         "glMapParameterfvNV"
@@ -6776,7 +6776,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMapControlPointsNV
+    (define gl:GetMapControlPointsNV
       (foreign-lambda
         void
         "glGetMapControlPointsNV"
@@ -6788,7 +6788,7 @@
         unsigned-char
         (c-pointer void))))
   (begin
-    (define glGetMapParameterivNV
+    (define gl:GetMapParameterivNV
       (foreign-lambda
         void
         "glGetMapParameterivNV"
@@ -6796,7 +6796,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMapParameterfvNV
+    (define gl:GetMapParameterfvNV
       (foreign-lambda
         void
         "glGetMapParameterfvNV"
@@ -6804,7 +6804,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMapAttribParameterivNV
+    (define gl:GetMapAttribParameterivNV
       (foreign-lambda
         void
         "glGetMapAttribParameterivNV"
@@ -6813,7 +6813,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMapAttribParameterfvNV
+    (define gl:GetMapAttribParameterfvNV
       (foreign-lambda
         void
         "glGetMapAttribParameterfvNV"
@@ -6822,10 +6822,10 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glEvalMapsNV
+    (define gl:EvalMapsNV
       (foreign-lambda void "glEvalMapsNV" unsigned-integer unsigned-integer)))
   (begin
-    (define glCombinerStageParameterfvNV
+    (define gl:CombinerStageParameterfvNV
       (foreign-lambda
         void
         "glCombinerStageParameterfvNV"
@@ -6833,7 +6833,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetCombinerStageParameterfvNV
+    (define gl:GetCombinerStageParameterfvNV
       (foreign-lambda
         void
         "glGetCombinerStageParameterfvNV"
@@ -6841,7 +6841,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glAreProgramsResidentNV
+    (define gl:AreProgramsResidentNV
       (foreign-lambda
         unsigned-char
         "glAreProgramsResidentNV"
@@ -6849,17 +6849,17 @@
         u32vector
         u8vector)))
   (begin
-    (define glBindProgramNV
+    (define gl:BindProgramNV
       (foreign-lambda
         void
         "glBindProgramNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteProgramsNV
+    (define gl:DeleteProgramsNV
       (foreign-lambda void "glDeleteProgramsNV" unsigned-integer u32vector)))
   (begin
-    (define glExecuteProgramNV
+    (define gl:ExecuteProgramNV
       (foreign-lambda
         void
         "glExecuteProgramNV"
@@ -6867,10 +6867,10 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGenProgramsNV
+    (define gl:GenProgramsNV
       (foreign-lambda void "glGenProgramsNV" unsigned-integer u32vector)))
   (begin
-    (define glGetProgramParameterdvNV
+    (define gl:GetProgramParameterdvNV
       (foreign-lambda
         void
         "glGetProgramParameterdvNV"
@@ -6879,7 +6879,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetProgramParameterfvNV
+    (define gl:GetProgramParameterfvNV
       (foreign-lambda
         void
         "glGetProgramParameterfvNV"
@@ -6888,7 +6888,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetProgramivNV
+    (define gl:GetProgramivNV
       (foreign-lambda
         void
         "glGetProgramivNV"
@@ -6896,7 +6896,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetProgramStringNV
+    (define gl:GetProgramStringNV
       (foreign-lambda
         void
         "glGetProgramStringNV"
@@ -6904,7 +6904,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetTrackMatrixivNV
+    (define gl:GetTrackMatrixivNV
       (foreign-lambda
         void
         "glGetTrackMatrixivNV"
@@ -6913,7 +6913,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribdvNV
+    (define gl:GetVertexAttribdvNV
       (foreign-lambda
         void
         "glGetVertexAttribdvNV"
@@ -6921,7 +6921,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetVertexAttribfvNV
+    (define gl:GetVertexAttribfvNV
       (foreign-lambda
         void
         "glGetVertexAttribfvNV"
@@ -6929,7 +6929,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVertexAttribivNV
+    (define gl:GetVertexAttribivNV
       (foreign-lambda
         void
         "glGetVertexAttribivNV"
@@ -6937,7 +6937,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribPointervNV
+    (define gl:GetVertexAttribPointervNV
       (foreign-lambda
         void
         "glGetVertexAttribPointervNV"
@@ -6945,10 +6945,10 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glIsProgramNV
+    (define gl:IsProgramNV
       (foreign-lambda unsigned-char "glIsProgramNV" unsigned-integer)))
   (begin
-    (define glLoadProgramNV
+    (define gl:LoadProgramNV
       (foreign-lambda
         void
         "glLoadProgramNV"
@@ -6957,7 +6957,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glProgramParameter4dNV
+    (define gl:ProgramParameter4dNV
       (foreign-lambda
         void
         "glProgramParameter4dNV"
@@ -6968,7 +6968,7 @@
         double
         double)))
   (begin
-    (define glProgramParameter4dvNV
+    (define gl:ProgramParameter4dvNV
       (foreign-lambda
         void
         "glProgramParameter4dvNV"
@@ -6976,7 +6976,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramParameter4fNV
+    (define gl:ProgramParameter4fNV
       (foreign-lambda
         void
         "glProgramParameter4fNV"
@@ -6987,7 +6987,7 @@
         float
         float)))
   (begin
-    (define glProgramParameter4fvNV
+    (define gl:ProgramParameter4fvNV
       (foreign-lambda
         void
         "glProgramParameter4fvNV"
@@ -6995,7 +6995,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramParameters4dvNV
+    (define gl:ProgramParameters4dvNV
       (foreign-lambda
         void
         "glProgramParameters4dvNV"
@@ -7004,7 +7004,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glProgramParameters4fvNV
+    (define gl:ProgramParameters4fvNV
       (foreign-lambda
         void
         "glProgramParameters4fvNV"
@@ -7013,14 +7013,14 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glRequestResidentProgramsNV
+    (define gl:RequestResidentProgramsNV
       (foreign-lambda
         void
         "glRequestResidentProgramsNV"
         unsigned-integer
         u32vector)))
   (begin
-    (define glTrackMatrixNV
+    (define gl:TrackMatrixNV
       (foreign-lambda
         void
         "glTrackMatrixNV"
@@ -7029,7 +7029,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribPointerNV
+    (define gl:VertexAttribPointerNV
       (foreign-lambda
         void
         "glVertexAttribPointerNV"
@@ -7039,25 +7039,25 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glVertexAttrib1dNV
+    (define gl:VertexAttrib1dNV
       (foreign-lambda void "glVertexAttrib1dNV" unsigned-integer double)))
   (begin
-    (define glVertexAttrib1dvNV
+    (define gl:VertexAttrib1dvNV
       (foreign-lambda void "glVertexAttrib1dvNV" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib1fNV
+    (define gl:VertexAttrib1fNV
       (foreign-lambda void "glVertexAttrib1fNV" unsigned-integer float)))
   (begin
-    (define glVertexAttrib1fvNV
+    (define gl:VertexAttrib1fvNV
       (foreign-lambda void "glVertexAttrib1fvNV" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib1sNV
+    (define gl:VertexAttrib1sNV
       (foreign-lambda void "glVertexAttrib1sNV" unsigned-integer short)))
   (begin
-    (define glVertexAttrib1svNV
+    (define gl:VertexAttrib1svNV
       (foreign-lambda void "glVertexAttrib1svNV" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib2dNV
+    (define gl:VertexAttrib2dNV
       (foreign-lambda
         void
         "glVertexAttrib2dNV"
@@ -7065,22 +7065,22 @@
         double
         double)))
   (begin
-    (define glVertexAttrib2dvNV
+    (define gl:VertexAttrib2dvNV
       (foreign-lambda void "glVertexAttrib2dvNV" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib2fNV
+    (define gl:VertexAttrib2fNV
       (foreign-lambda void "glVertexAttrib2fNV" unsigned-integer float float)))
   (begin
-    (define glVertexAttrib2fvNV
+    (define gl:VertexAttrib2fvNV
       (foreign-lambda void "glVertexAttrib2fvNV" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib2sNV
+    (define gl:VertexAttrib2sNV
       (foreign-lambda void "glVertexAttrib2sNV" unsigned-integer short short)))
   (begin
-    (define glVertexAttrib2svNV
+    (define gl:VertexAttrib2svNV
       (foreign-lambda void "glVertexAttrib2svNV" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib3dNV
+    (define gl:VertexAttrib3dNV
       (foreign-lambda
         void
         "glVertexAttrib3dNV"
@@ -7089,10 +7089,10 @@
         double
         double)))
   (begin
-    (define glVertexAttrib3dvNV
+    (define gl:VertexAttrib3dvNV
       (foreign-lambda void "glVertexAttrib3dvNV" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib3fNV
+    (define gl:VertexAttrib3fNV
       (foreign-lambda
         void
         "glVertexAttrib3fNV"
@@ -7101,10 +7101,10 @@
         float
         float)))
   (begin
-    (define glVertexAttrib3fvNV
+    (define gl:VertexAttrib3fvNV
       (foreign-lambda void "glVertexAttrib3fvNV" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib3sNV
+    (define gl:VertexAttrib3sNV
       (foreign-lambda
         void
         "glVertexAttrib3sNV"
@@ -7113,10 +7113,10 @@
         short
         short)))
   (begin
-    (define glVertexAttrib3svNV
+    (define gl:VertexAttrib3svNV
       (foreign-lambda void "glVertexAttrib3svNV" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4dNV
+    (define gl:VertexAttrib4dNV
       (foreign-lambda
         void
         "glVertexAttrib4dNV"
@@ -7126,10 +7126,10 @@
         double
         double)))
   (begin
-    (define glVertexAttrib4dvNV
+    (define gl:VertexAttrib4dvNV
       (foreign-lambda void "glVertexAttrib4dvNV" unsigned-integer f64vector)))
   (begin
-    (define glVertexAttrib4fNV
+    (define gl:VertexAttrib4fNV
       (foreign-lambda
         void
         "glVertexAttrib4fNV"
@@ -7139,10 +7139,10 @@
         float
         float)))
   (begin
-    (define glVertexAttrib4fvNV
+    (define gl:VertexAttrib4fvNV
       (foreign-lambda void "glVertexAttrib4fvNV" unsigned-integer f32vector)))
   (begin
-    (define glVertexAttrib4sNV
+    (define gl:VertexAttrib4sNV
       (foreign-lambda
         void
         "glVertexAttrib4sNV"
@@ -7152,10 +7152,10 @@
         short
         short)))
   (begin
-    (define glVertexAttrib4svNV
+    (define gl:VertexAttrib4svNV
       (foreign-lambda void "glVertexAttrib4svNV" unsigned-integer s16vector)))
   (begin
-    (define glVertexAttrib4ubNV
+    (define gl:VertexAttrib4ubNV
       (foreign-lambda
         void
         "glVertexAttrib4ubNV"
@@ -7165,10 +7165,10 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glVertexAttrib4ubvNV
+    (define gl:VertexAttrib4ubvNV
       (foreign-lambda void "glVertexAttrib4ubvNV" unsigned-integer u8vector)))
   (begin
-    (define glVertexAttribs1dvNV
+    (define gl:VertexAttribs1dvNV
       (foreign-lambda
         void
         "glVertexAttribs1dvNV"
@@ -7176,7 +7176,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glVertexAttribs1fvNV
+    (define gl:VertexAttribs1fvNV
       (foreign-lambda
         void
         "glVertexAttribs1fvNV"
@@ -7184,7 +7184,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVertexAttribs1svNV
+    (define gl:VertexAttribs1svNV
       (foreign-lambda
         void
         "glVertexAttribs1svNV"
@@ -7192,7 +7192,7 @@
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribs2dvNV
+    (define gl:VertexAttribs2dvNV
       (foreign-lambda
         void
         "glVertexAttribs2dvNV"
@@ -7200,7 +7200,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glVertexAttribs2fvNV
+    (define gl:VertexAttribs2fvNV
       (foreign-lambda
         void
         "glVertexAttribs2fvNV"
@@ -7208,7 +7208,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVertexAttribs2svNV
+    (define gl:VertexAttribs2svNV
       (foreign-lambda
         void
         "glVertexAttribs2svNV"
@@ -7216,7 +7216,7 @@
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribs3dvNV
+    (define gl:VertexAttribs3dvNV
       (foreign-lambda
         void
         "glVertexAttribs3dvNV"
@@ -7224,7 +7224,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glVertexAttribs3fvNV
+    (define gl:VertexAttribs3fvNV
       (foreign-lambda
         void
         "glVertexAttribs3fvNV"
@@ -7232,7 +7232,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVertexAttribs3svNV
+    (define gl:VertexAttribs3svNV
       (foreign-lambda
         void
         "glVertexAttribs3svNV"
@@ -7240,7 +7240,7 @@
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribs4dvNV
+    (define gl:VertexAttribs4dvNV
       (foreign-lambda
         void
         "glVertexAttribs4dvNV"
@@ -7248,7 +7248,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glVertexAttribs4fvNV
+    (define gl:VertexAttribs4fvNV
       (foreign-lambda
         void
         "glVertexAttribs4fvNV"
@@ -7256,7 +7256,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVertexAttribs4svNV
+    (define gl:VertexAttribs4svNV
       (foreign-lambda
         void
         "glVertexAttribs4svNV"
@@ -7264,7 +7264,7 @@
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribs4ubvNV
+    (define gl:VertexAttribs4ubvNV
       (foreign-lambda
         void
         "glVertexAttribs4ubvNV"
@@ -7272,53 +7272,53 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glTexBumpParameterivATI
+    (define gl:TexBumpParameterivATI
       (foreign-lambda
         void
         "glTexBumpParameterivATI"
         unsigned-integer
         s32vector)))
   (begin
-    (define glTexBumpParameterfvATI
+    (define gl:TexBumpParameterfvATI
       (foreign-lambda
         void
         "glTexBumpParameterfvATI"
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetTexBumpParameterivATI
+    (define gl:GetTexBumpParameterivATI
       (foreign-lambda
         void
         "glGetTexBumpParameterivATI"
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexBumpParameterfvATI
+    (define gl:GetTexBumpParameterfvATI
       (foreign-lambda
         void
         "glGetTexBumpParameterfvATI"
         unsigned-integer
         f32vector)))
   (begin
-    (define glGenFragmentShadersATI
+    (define gl:GenFragmentShadersATI
       (foreign-lambda
         unsigned-integer
         "glGenFragmentShadersATI"
         unsigned-integer)))
   (begin
-    (define glBindFragmentShaderATI
+    (define gl:BindFragmentShaderATI
       (foreign-lambda void "glBindFragmentShaderATI" unsigned-integer)))
   (begin
-    (define glDeleteFragmentShaderATI
+    (define gl:DeleteFragmentShaderATI
       (foreign-lambda void "glDeleteFragmentShaderATI" unsigned-integer)))
   (begin
-    (define glBeginFragmentShaderATI
+    (define gl:BeginFragmentShaderATI
       (foreign-lambda void "glBeginFragmentShaderATI")))
   (begin
-    (define glEndFragmentShaderATI
+    (define gl:EndFragmentShaderATI
       (foreign-lambda void "glEndFragmentShaderATI")))
   (begin
-    (define glPassTexCoordATI
+    (define gl:PassTexCoordATI
       (foreign-lambda
         void
         "glPassTexCoordATI"
@@ -7326,7 +7326,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSampleMapATI
+    (define gl:SampleMapATI
       (foreign-lambda
         void
         "glSampleMapATI"
@@ -7334,7 +7334,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glColorFragmentOp1ATI
+    (define gl:ColorFragmentOp1ATI
       (foreign-lambda
         void
         "glColorFragmentOp1ATI"
@@ -7346,7 +7346,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glColorFragmentOp2ATI
+    (define gl:ColorFragmentOp2ATI
       (foreign-lambda
         void
         "glColorFragmentOp2ATI"
@@ -7361,7 +7361,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glColorFragmentOp3ATI
+    (define gl:ColorFragmentOp3ATI
       (foreign-lambda
         void
         "glColorFragmentOp3ATI"
@@ -7379,7 +7379,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glAlphaFragmentOp1ATI
+    (define gl:AlphaFragmentOp1ATI
       (foreign-lambda
         void
         "glAlphaFragmentOp1ATI"
@@ -7390,7 +7390,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glAlphaFragmentOp2ATI
+    (define gl:AlphaFragmentOp2ATI
       (foreign-lambda
         void
         "glAlphaFragmentOp2ATI"
@@ -7404,7 +7404,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glAlphaFragmentOp3ATI
+    (define gl:AlphaFragmentOp3ATI
       (foreign-lambda
         void
         "glAlphaFragmentOp3ATI"
@@ -7421,20 +7421,20 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSetFragmentShaderConstantATI
+    (define gl:SetFragmentShaderConstantATI
       (foreign-lambda
         void
         "glSetFragmentShaderConstantATI"
         unsigned-integer
         f32vector)))
   (begin
-    (define glPNTrianglesiATI
+    (define gl:PNTrianglesiATI
       (foreign-lambda void "glPNTrianglesiATI" unsigned-integer integer)))
   (begin
-    (define glPNTrianglesfATI
+    (define gl:PNTrianglesfATI
       (foreign-lambda void "glPNTrianglesfATI" unsigned-integer float)))
   (begin
-    (define glNewObjectBufferATI
+    (define gl:NewObjectBufferATI
       (foreign-lambda
         unsigned-integer
         "glNewObjectBufferATI"
@@ -7442,10 +7442,10 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glIsObjectBufferATI
+    (define gl:IsObjectBufferATI
       (foreign-lambda unsigned-char "glIsObjectBufferATI" unsigned-integer)))
   (begin
-    (define glUpdateObjectBufferATI
+    (define gl:UpdateObjectBufferATI
       (foreign-lambda
         void
         "glUpdateObjectBufferATI"
@@ -7455,7 +7455,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glGetObjectBufferfvATI
+    (define gl:GetObjectBufferfvATI
       (foreign-lambda
         void
         "glGetObjectBufferfvATI"
@@ -7463,7 +7463,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetObjectBufferivATI
+    (define gl:GetObjectBufferivATI
       (foreign-lambda
         void
         "glGetObjectBufferivATI"
@@ -7471,10 +7471,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glFreeObjectBufferATI
+    (define gl:FreeObjectBufferATI
       (foreign-lambda void "glFreeObjectBufferATI" unsigned-integer)))
   (begin
-    (define glArrayObjectATI
+    (define gl:ArrayObjectATI
       (foreign-lambda
         void
         "glArrayObjectATI"
@@ -7485,7 +7485,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetArrayObjectfvATI
+    (define gl:GetArrayObjectfvATI
       (foreign-lambda
         void
         "glGetArrayObjectfvATI"
@@ -7493,7 +7493,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetArrayObjectivATI
+    (define gl:GetArrayObjectivATI
       (foreign-lambda
         void
         "glGetArrayObjectivATI"
@@ -7501,7 +7501,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glVariantArrayObjectATI
+    (define gl:VariantArrayObjectATI
       (foreign-lambda
         void
         "glVariantArrayObjectATI"
@@ -7511,7 +7511,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetVariantArrayObjectfvATI
+    (define gl:GetVariantArrayObjectfvATI
       (foreign-lambda
         void
         "glGetVariantArrayObjectfvATI"
@@ -7519,7 +7519,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVariantArrayObjectivATI
+    (define gl:GetVariantArrayObjectivATI
       (foreign-lambda
         void
         "glGetVariantArrayObjectivATI"
@@ -7527,24 +7527,24 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glBeginVertexShaderEXT
+    (define gl:BeginVertexShaderEXT
       (foreign-lambda void "glBeginVertexShaderEXT")))
   (begin
-    (define glEndVertexShaderEXT (foreign-lambda void "glEndVertexShaderEXT")))
+    (define gl:EndVertexShaderEXT (foreign-lambda void "glEndVertexShaderEXT")))
   (begin
-    (define glBindVertexShaderEXT
+    (define gl:BindVertexShaderEXT
       (foreign-lambda void "glBindVertexShaderEXT" unsigned-integer)))
   (begin
-    (define glGenVertexShadersEXT
+    (define gl:GenVertexShadersEXT
       (foreign-lambda
         unsigned-integer
         "glGenVertexShadersEXT"
         unsigned-integer)))
   (begin
-    (define glDeleteVertexShaderEXT
+    (define gl:DeleteVertexShaderEXT
       (foreign-lambda void "glDeleteVertexShaderEXT" unsigned-integer)))
   (begin
-    (define glShaderOp1EXT
+    (define gl:ShaderOp1EXT
       (foreign-lambda
         void
         "glShaderOp1EXT"
@@ -7552,7 +7552,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glShaderOp2EXT
+    (define gl:ShaderOp2EXT
       (foreign-lambda
         void
         "glShaderOp2EXT"
@@ -7561,7 +7561,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glShaderOp3EXT
+    (define gl:ShaderOp3EXT
       (foreign-lambda
         void
         "glShaderOp3EXT"
@@ -7571,7 +7571,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSwizzleEXT
+    (define gl:SwizzleEXT
       (foreign-lambda
         void
         "glSwizzleEXT"
@@ -7582,7 +7582,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glWriteMaskEXT
+    (define gl:WriteMaskEXT
       (foreign-lambda
         void
         "glWriteMaskEXT"
@@ -7593,7 +7593,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glInsertComponentEXT
+    (define gl:InsertComponentEXT
       (foreign-lambda
         void
         "glInsertComponentEXT"
@@ -7601,7 +7601,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glExtractComponentEXT
+    (define gl:ExtractComponentEXT
       (foreign-lambda
         void
         "glExtractComponentEXT"
@@ -7609,7 +7609,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGenSymbolsEXT
+    (define gl:GenSymbolsEXT
       (foreign-lambda
         unsigned-integer
         "glGenSymbolsEXT"
@@ -7618,7 +7618,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glSetInvariantEXT
+    (define gl:SetInvariantEXT
       (foreign-lambda
         void
         "glSetInvariantEXT"
@@ -7626,7 +7626,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glSetLocalConstantEXT
+    (define gl:SetLocalConstantEXT
       (foreign-lambda
         void
         "glSetLocalConstantEXT"
@@ -7634,31 +7634,31 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glVariantbvEXT
+    (define gl:VariantbvEXT
       (foreign-lambda void "glVariantbvEXT" unsigned-integer c-string)))
   (begin
-    (define glVariantsvEXT
+    (define gl:VariantsvEXT
       (foreign-lambda void "glVariantsvEXT" unsigned-integer s16vector)))
   (begin
-    (define glVariantivEXT
+    (define gl:VariantivEXT
       (foreign-lambda void "glVariantivEXT" unsigned-integer s32vector)))
   (begin
-    (define glVariantfvEXT
+    (define gl:VariantfvEXT
       (foreign-lambda void "glVariantfvEXT" unsigned-integer f32vector)))
   (begin
-    (define glVariantdvEXT
+    (define gl:VariantdvEXT
       (foreign-lambda void "glVariantdvEXT" unsigned-integer f64vector)))
   (begin
-    (define glVariantubvEXT
+    (define gl:VariantubvEXT
       (foreign-lambda void "glVariantubvEXT" unsigned-integer u8vector)))
   (begin
-    (define glVariantusvEXT
+    (define gl:VariantusvEXT
       (foreign-lambda void "glVariantusvEXT" unsigned-integer u16vector)))
   (begin
-    (define glVariantuivEXT
+    (define gl:VariantuivEXT
       (foreign-lambda void "glVariantuivEXT" unsigned-integer u32vector)))
   (begin
-    (define glVariantPointerEXT
+    (define gl:VariantPointerEXT
       (foreign-lambda
         void
         "glVariantPointerEXT"
@@ -7667,27 +7667,27 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glEnableVariantClientStateEXT
+    (define gl:EnableVariantClientStateEXT
       (foreign-lambda void "glEnableVariantClientStateEXT" unsigned-integer)))
   (begin
-    (define glDisableVariantClientStateEXT
+    (define gl:DisableVariantClientStateEXT
       (foreign-lambda void "glDisableVariantClientStateEXT" unsigned-integer)))
   (begin
-    (define glBindLightParameterEXT
+    (define gl:BindLightParameterEXT
       (foreign-lambda
         unsigned-integer
         "glBindLightParameterEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindMaterialParameterEXT
+    (define gl:BindMaterialParameterEXT
       (foreign-lambda
         unsigned-integer
         "glBindMaterialParameterEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindTexGenParameterEXT
+    (define gl:BindTexGenParameterEXT
       (foreign-lambda
         unsigned-integer
         "glBindTexGenParameterEXT"
@@ -7695,24 +7695,24 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindTextureUnitParameterEXT
+    (define gl:BindTextureUnitParameterEXT
       (foreign-lambda
         unsigned-integer
         "glBindTextureUnitParameterEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindParameterEXT
+    (define gl:BindParameterEXT
       (foreign-lambda unsigned-integer "glBindParameterEXT" unsigned-integer)))
   (begin
-    (define glIsVariantEnabledEXT
+    (define gl:IsVariantEnabledEXT
       (foreign-lambda
         unsigned-char
         "glIsVariantEnabledEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetVariantBooleanvEXT
+    (define gl:GetVariantBooleanvEXT
       (foreign-lambda
         void
         "glGetVariantBooleanvEXT"
@@ -7720,7 +7720,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetVariantIntegervEXT
+    (define gl:GetVariantIntegervEXT
       (foreign-lambda
         void
         "glGetVariantIntegervEXT"
@@ -7728,7 +7728,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVariantFloatvEXT
+    (define gl:GetVariantFloatvEXT
       (foreign-lambda
         void
         "glGetVariantFloatvEXT"
@@ -7736,7 +7736,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVariantPointervEXT
+    (define gl:GetVariantPointervEXT
       (foreign-lambda
         void
         "glGetVariantPointervEXT"
@@ -7744,7 +7744,7 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glGetInvariantBooleanvEXT
+    (define gl:GetInvariantBooleanvEXT
       (foreign-lambda
         void
         "glGetInvariantBooleanvEXT"
@@ -7752,7 +7752,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetInvariantIntegervEXT
+    (define gl:GetInvariantIntegervEXT
       (foreign-lambda
         void
         "glGetInvariantIntegervEXT"
@@ -7760,7 +7760,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetInvariantFloatvEXT
+    (define gl:GetInvariantFloatvEXT
       (foreign-lambda
         void
         "glGetInvariantFloatvEXT"
@@ -7768,7 +7768,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetLocalConstantBooleanvEXT
+    (define gl:GetLocalConstantBooleanvEXT
       (foreign-lambda
         void
         "glGetLocalConstantBooleanvEXT"
@@ -7776,7 +7776,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetLocalConstantIntegervEXT
+    (define gl:GetLocalConstantIntegervEXT
       (foreign-lambda
         void
         "glGetLocalConstantIntegervEXT"
@@ -7784,7 +7784,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetLocalConstantFloatvEXT
+    (define gl:GetLocalConstantFloatvEXT
       (foreign-lambda
         void
         "glGetLocalConstantFloatvEXT"
@@ -7792,31 +7792,31 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVertexStream1sATI
+    (define gl:VertexStream1sATI
       (foreign-lambda void "glVertexStream1sATI" unsigned-integer short)))
   (begin
-    (define glVertexStream1svATI
+    (define gl:VertexStream1svATI
       (foreign-lambda void "glVertexStream1svATI" unsigned-integer s16vector)))
   (begin
-    (define glVertexStream1iATI
+    (define gl:VertexStream1iATI
       (foreign-lambda void "glVertexStream1iATI" unsigned-integer integer)))
   (begin
-    (define glVertexStream1ivATI
+    (define gl:VertexStream1ivATI
       (foreign-lambda void "glVertexStream1ivATI" unsigned-integer s32vector)))
   (begin
-    (define glVertexStream1fATI
+    (define gl:VertexStream1fATI
       (foreign-lambda void "glVertexStream1fATI" unsigned-integer float)))
   (begin
-    (define glVertexStream1fvATI
+    (define gl:VertexStream1fvATI
       (foreign-lambda void "glVertexStream1fvATI" unsigned-integer f32vector)))
   (begin
-    (define glVertexStream1dATI
+    (define gl:VertexStream1dATI
       (foreign-lambda void "glVertexStream1dATI" unsigned-integer double)))
   (begin
-    (define glVertexStream1dvATI
+    (define gl:VertexStream1dvATI
       (foreign-lambda void "glVertexStream1dvATI" unsigned-integer f64vector)))
   (begin
-    (define glVertexStream2sATI
+    (define gl:VertexStream2sATI
       (foreign-lambda
         void
         "glVertexStream2sATI"
@@ -7824,10 +7824,10 @@
         short
         short)))
   (begin
-    (define glVertexStream2svATI
+    (define gl:VertexStream2svATI
       (foreign-lambda void "glVertexStream2svATI" unsigned-integer s16vector)))
   (begin
-    (define glVertexStream2iATI
+    (define gl:VertexStream2iATI
       (foreign-lambda
         void
         "glVertexStream2iATI"
@@ -7835,10 +7835,10 @@
         integer
         integer)))
   (begin
-    (define glVertexStream2ivATI
+    (define gl:VertexStream2ivATI
       (foreign-lambda void "glVertexStream2ivATI" unsigned-integer s32vector)))
   (begin
-    (define glVertexStream2fATI
+    (define gl:VertexStream2fATI
       (foreign-lambda
         void
         "glVertexStream2fATI"
@@ -7846,10 +7846,10 @@
         float
         float)))
   (begin
-    (define glVertexStream2fvATI
+    (define gl:VertexStream2fvATI
       (foreign-lambda void "glVertexStream2fvATI" unsigned-integer f32vector)))
   (begin
-    (define glVertexStream2dATI
+    (define gl:VertexStream2dATI
       (foreign-lambda
         void
         "glVertexStream2dATI"
@@ -7857,10 +7857,10 @@
         double
         double)))
   (begin
-    (define glVertexStream2dvATI
+    (define gl:VertexStream2dvATI
       (foreign-lambda void "glVertexStream2dvATI" unsigned-integer f64vector)))
   (begin
-    (define glVertexStream3sATI
+    (define gl:VertexStream3sATI
       (foreign-lambda
         void
         "glVertexStream3sATI"
@@ -7869,10 +7869,10 @@
         short
         short)))
   (begin
-    (define glVertexStream3svATI
+    (define gl:VertexStream3svATI
       (foreign-lambda void "glVertexStream3svATI" unsigned-integer s16vector)))
   (begin
-    (define glVertexStream3iATI
+    (define gl:VertexStream3iATI
       (foreign-lambda
         void
         "glVertexStream3iATI"
@@ -7881,10 +7881,10 @@
         integer
         integer)))
   (begin
-    (define glVertexStream3ivATI
+    (define gl:VertexStream3ivATI
       (foreign-lambda void "glVertexStream3ivATI" unsigned-integer s32vector)))
   (begin
-    (define glVertexStream3fATI
+    (define gl:VertexStream3fATI
       (foreign-lambda
         void
         "glVertexStream3fATI"
@@ -7893,10 +7893,10 @@
         float
         float)))
   (begin
-    (define glVertexStream3fvATI
+    (define gl:VertexStream3fvATI
       (foreign-lambda void "glVertexStream3fvATI" unsigned-integer f32vector)))
   (begin
-    (define glVertexStream3dATI
+    (define gl:VertexStream3dATI
       (foreign-lambda
         void
         "glVertexStream3dATI"
@@ -7905,10 +7905,10 @@
         double
         double)))
   (begin
-    (define glVertexStream3dvATI
+    (define gl:VertexStream3dvATI
       (foreign-lambda void "glVertexStream3dvATI" unsigned-integer f64vector)))
   (begin
-    (define glVertexStream4sATI
+    (define gl:VertexStream4sATI
       (foreign-lambda
         void
         "glVertexStream4sATI"
@@ -7918,10 +7918,10 @@
         short
         short)))
   (begin
-    (define glVertexStream4svATI
+    (define gl:VertexStream4svATI
       (foreign-lambda void "glVertexStream4svATI" unsigned-integer s16vector)))
   (begin
-    (define glVertexStream4iATI
+    (define gl:VertexStream4iATI
       (foreign-lambda
         void
         "glVertexStream4iATI"
@@ -7931,10 +7931,10 @@
         integer
         integer)))
   (begin
-    (define glVertexStream4ivATI
+    (define gl:VertexStream4ivATI
       (foreign-lambda void "glVertexStream4ivATI" unsigned-integer s32vector)))
   (begin
-    (define glVertexStream4fATI
+    (define gl:VertexStream4fATI
       (foreign-lambda
         void
         "glVertexStream4fATI"
@@ -7944,10 +7944,10 @@
         float
         float)))
   (begin
-    (define glVertexStream4fvATI
+    (define gl:VertexStream4fvATI
       (foreign-lambda void "glVertexStream4fvATI" unsigned-integer f32vector)))
   (begin
-    (define glVertexStream4dATI
+    (define gl:VertexStream4dATI
       (foreign-lambda
         void
         "glVertexStream4dATI"
@@ -7957,10 +7957,10 @@
         double
         double)))
   (begin
-    (define glVertexStream4dvATI
+    (define gl:VertexStream4dvATI
       (foreign-lambda void "glVertexStream4dvATI" unsigned-integer f64vector)))
   (begin
-    (define glNormalStream3bATI
+    (define gl:NormalStream3bATI
       (foreign-lambda
         void
         "glNormalStream3bATI"
@@ -7969,10 +7969,10 @@
         char
         char)))
   (begin
-    (define glNormalStream3bvATI
+    (define gl:NormalStream3bvATI
       (foreign-lambda void "glNormalStream3bvATI" unsigned-integer c-string)))
   (begin
-    (define glNormalStream3sATI
+    (define gl:NormalStream3sATI
       (foreign-lambda
         void
         "glNormalStream3sATI"
@@ -7981,10 +7981,10 @@
         short
         short)))
   (begin
-    (define glNormalStream3svATI
+    (define gl:NormalStream3svATI
       (foreign-lambda void "glNormalStream3svATI" unsigned-integer s16vector)))
   (begin
-    (define glNormalStream3iATI
+    (define gl:NormalStream3iATI
       (foreign-lambda
         void
         "glNormalStream3iATI"
@@ -7993,10 +7993,10 @@
         integer
         integer)))
   (begin
-    (define glNormalStream3ivATI
+    (define gl:NormalStream3ivATI
       (foreign-lambda void "glNormalStream3ivATI" unsigned-integer s32vector)))
   (begin
-    (define glNormalStream3fATI
+    (define gl:NormalStream3fATI
       (foreign-lambda
         void
         "glNormalStream3fATI"
@@ -8005,10 +8005,10 @@
         float
         float)))
   (begin
-    (define glNormalStream3fvATI
+    (define gl:NormalStream3fvATI
       (foreign-lambda void "glNormalStream3fvATI" unsigned-integer f32vector)))
   (begin
-    (define glNormalStream3dATI
+    (define gl:NormalStream3dATI
       (foreign-lambda
         void
         "glNormalStream3dATI"
@@ -8017,33 +8017,33 @@
         double
         double)))
   (begin
-    (define glNormalStream3dvATI
+    (define gl:NormalStream3dvATI
       (foreign-lambda void "glNormalStream3dvATI" unsigned-integer f64vector)))
   (begin
-    (define glClientActiveVertexStreamATI
+    (define gl:ClientActiveVertexStreamATI
       (foreign-lambda void "glClientActiveVertexStreamATI" unsigned-integer)))
   (begin
-    (define glVertexBlendEnviATI
+    (define gl:VertexBlendEnviATI
       (foreign-lambda void "glVertexBlendEnviATI" unsigned-integer integer)))
   (begin
-    (define glVertexBlendEnvfATI
+    (define gl:VertexBlendEnvfATI
       (foreign-lambda void "glVertexBlendEnvfATI" unsigned-integer float)))
   (begin
-    (define glElementPointerATI
+    (define gl:ElementPointerATI
       (foreign-lambda
         void
         "glElementPointerATI"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glDrawElementArrayATI
+    (define gl:DrawElementArrayATI
       (foreign-lambda
         void
         "glDrawElementArrayATI"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawRangeElementArrayATI
+    (define gl:DrawRangeElementArrayATI
       (foreign-lambda
         void
         "glDrawRangeElementArrayATI"
@@ -8052,7 +8052,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawMeshArraysSUN
+    (define gl:DrawMeshArraysSUN
       (foreign-lambda
         void
         "glDrawMeshArraysSUN"
@@ -8061,30 +8061,30 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGenOcclusionQueriesNV
+    (define gl:GenOcclusionQueriesNV
       (foreign-lambda
         void
         "glGenOcclusionQueriesNV"
         unsigned-integer
         u32vector)))
   (begin
-    (define glDeleteOcclusionQueriesNV
+    (define gl:DeleteOcclusionQueriesNV
       (foreign-lambda
         void
         "glDeleteOcclusionQueriesNV"
         unsigned-integer
         u32vector)))
   (begin
-    (define glIsOcclusionQueryNV
+    (define gl:IsOcclusionQueryNV
       (foreign-lambda unsigned-char "glIsOcclusionQueryNV" unsigned-integer)))
   (begin
-    (define glBeginOcclusionQueryNV
+    (define gl:BeginOcclusionQueryNV
       (foreign-lambda void "glBeginOcclusionQueryNV" unsigned-integer)))
   (begin
-    (define glEndOcclusionQueryNV
+    (define gl:EndOcclusionQueryNV
       (foreign-lambda void "glEndOcclusionQueryNV")))
   (begin
-    (define glGetOcclusionQueryivNV
+    (define gl:GetOcclusionQueryivNV
       (foreign-lambda
         void
         "glGetOcclusionQueryivNV"
@@ -8092,7 +8092,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetOcclusionQueryuivNV
+    (define gl:GetOcclusionQueryuivNV
       (foreign-lambda
         void
         "glGetOcclusionQueryuivNV"
@@ -8100,23 +8100,23 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glPointParameteriNV
+    (define gl:PointParameteriNV
       (foreign-lambda void "glPointParameteriNV" unsigned-integer integer)))
   (begin
-    (define glPointParameterivNV
+    (define gl:PointParameterivNV
       (foreign-lambda void "glPointParameterivNV" unsigned-integer s32vector)))
   (begin
-    (define glActiveStencilFaceEXT
+    (define gl:ActiveStencilFaceEXT
       (foreign-lambda void "glActiveStencilFaceEXT" unsigned-integer)))
   (begin
-    (define glElementPointerAPPLE
+    (define gl:ElementPointerAPPLE
       (foreign-lambda
         void
         "glElementPointerAPPLE"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glDrawElementArrayAPPLE
+    (define gl:DrawElementArrayAPPLE
       (foreign-lambda
         void
         "glDrawElementArrayAPPLE"
@@ -8124,7 +8124,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glDrawRangeElementArrayAPPLE
+    (define gl:DrawRangeElementArrayAPPLE
       (foreign-lambda
         void
         "glDrawRangeElementArrayAPPLE"
@@ -8134,7 +8134,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glMultiDrawElementArrayAPPLE
+    (define gl:MultiDrawElementArrayAPPLE
       (foreign-lambda
         void
         "glMultiDrawElementArrayAPPLE"
@@ -8143,7 +8143,7 @@
         u32vector
         unsigned-integer)))
   (begin
-    (define glMultiDrawRangeElementArrayAPPLE
+    (define gl:MultiDrawRangeElementArrayAPPLE
       (foreign-lambda
         void
         "glMultiDrawRangeElementArrayAPPLE"
@@ -8154,79 +8154,79 @@
         u32vector
         unsigned-integer)))
   (begin
-    (define glGenFencesAPPLE
+    (define gl:GenFencesAPPLE
       (foreign-lambda void "glGenFencesAPPLE" unsigned-integer u32vector)))
   (begin
-    (define glDeleteFencesAPPLE
+    (define gl:DeleteFencesAPPLE
       (foreign-lambda void "glDeleteFencesAPPLE" unsigned-integer u32vector)))
   (begin
-    (define glSetFenceAPPLE
+    (define gl:SetFenceAPPLE
       (foreign-lambda void "glSetFenceAPPLE" unsigned-integer)))
   (begin
-    (define glIsFenceAPPLE
+    (define gl:IsFenceAPPLE
       (foreign-lambda unsigned-char "glIsFenceAPPLE" unsigned-integer)))
   (begin
-    (define glTestFenceAPPLE
+    (define gl:TestFenceAPPLE
       (foreign-lambda unsigned-char "glTestFenceAPPLE" unsigned-integer)))
   (begin
-    (define glFinishFenceAPPLE
+    (define gl:FinishFenceAPPLE
       (foreign-lambda void "glFinishFenceAPPLE" unsigned-integer)))
   (begin
-    (define glTestObjectAPPLE
+    (define gl:TestObjectAPPLE
       (foreign-lambda
         unsigned-char
         "glTestObjectAPPLE"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFinishObjectAPPLE
+    (define gl:FinishObjectAPPLE
       (foreign-lambda void "glFinishObjectAPPLE" unsigned-integer integer)))
   (begin
-    (define glBindVertexArrayAPPLE
+    (define gl:BindVertexArrayAPPLE
       (foreign-lambda void "glBindVertexArrayAPPLE" unsigned-integer)))
   (begin
-    (define glDeleteVertexArraysAPPLE
+    (define gl:DeleteVertexArraysAPPLE
       (foreign-lambda
         void
         "glDeleteVertexArraysAPPLE"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenVertexArraysAPPLE
+    (define gl:GenVertexArraysAPPLE
       (foreign-lambda
         void
         "glGenVertexArraysAPPLE"
         unsigned-integer
         u32vector)))
   (begin
-    (define glIsVertexArrayAPPLE
+    (define gl:IsVertexArrayAPPLE
       (foreign-lambda unsigned-char "glIsVertexArrayAPPLE" unsigned-integer)))
   (begin
-    (define glVertexArrayRangeAPPLE
+    (define gl:VertexArrayRangeAPPLE
       (foreign-lambda
         void
         "glVertexArrayRangeAPPLE"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glFlushVertexArrayRangeAPPLE
+    (define gl:FlushVertexArrayRangeAPPLE
       (foreign-lambda
         void
         "glFlushVertexArrayRangeAPPLE"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glVertexArrayParameteriAPPLE
+    (define gl:VertexArrayParameteriAPPLE
       (foreign-lambda
         void
         "glVertexArrayParameteriAPPLE"
         unsigned-integer
         integer)))
   (begin
-    (define glDrawBuffersATI
+    (define gl:DrawBuffersATI
       (foreign-lambda void "glDrawBuffersATI" unsigned-integer u32vector)))
   (begin
-    (define glProgramNamedParameter4fNV
+    (define gl:ProgramNamedParameter4fNV
       (foreign-lambda
         void
         "glProgramNamedParameter4fNV"
@@ -8238,7 +8238,7 @@
         float
         float)))
   (begin
-    (define glProgramNamedParameter4dNV
+    (define gl:ProgramNamedParameter4dNV
       (foreign-lambda
         void
         "glProgramNamedParameter4dNV"
@@ -8250,7 +8250,7 @@
         double
         double)))
   (begin
-    (define glProgramNamedParameter4fvNV
+    (define gl:ProgramNamedParameter4fvNV
       (foreign-lambda
         void
         "glProgramNamedParameter4fvNV"
@@ -8259,7 +8259,7 @@
         u8vector
         f32vector)))
   (begin
-    (define glProgramNamedParameter4dvNV
+    (define gl:ProgramNamedParameter4dvNV
       (foreign-lambda
         void
         "glProgramNamedParameter4dvNV"
@@ -8268,7 +8268,7 @@
         u8vector
         f64vector)))
   (begin
-    (define glGetProgramNamedParameterfvNV
+    (define gl:GetProgramNamedParameterfvNV
       (foreign-lambda
         void
         "glGetProgramNamedParameterfvNV"
@@ -8277,7 +8277,7 @@
         u8vector
         f32vector)))
   (begin
-    (define glGetProgramNamedParameterdvNV
+    (define gl:GetProgramNamedParameterdvNV
       (foreign-lambda
         void
         "glGetProgramNamedParameterdvNV"
@@ -8286,12 +8286,12 @@
         u8vector
         f64vector)))
   (begin
-    (define glVertex2hNV
+    (define gl:Vertex2hNV
       (foreign-lambda void "glVertex2hNV" unsigned-short unsigned-short)))
   (begin
-    (define glVertex2hvNV (foreign-lambda void "glVertex2hvNV" u16vector)))
+    (define gl:Vertex2hvNV (foreign-lambda void "glVertex2hvNV" u16vector)))
   (begin
-    (define glVertex3hNV
+    (define gl:Vertex3hNV
       (foreign-lambda
         void
         "glVertex3hNV"
@@ -8299,9 +8299,9 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glVertex3hvNV (foreign-lambda void "glVertex3hvNV" u16vector)))
+    (define gl:Vertex3hvNV (foreign-lambda void "glVertex3hvNV" u16vector)))
   (begin
-    (define glVertex4hNV
+    (define gl:Vertex4hNV
       (foreign-lambda
         void
         "glVertex4hNV"
@@ -8310,9 +8310,9 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glVertex4hvNV (foreign-lambda void "glVertex4hvNV" u16vector)))
+    (define gl:Vertex4hvNV (foreign-lambda void "glVertex4hvNV" u16vector)))
   (begin
-    (define glNormal3hNV
+    (define gl:Normal3hNV
       (foreign-lambda
         void
         "glNormal3hNV"
@@ -8320,18 +8320,18 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glNormal3hvNV (foreign-lambda void "glNormal3hvNV" u16vector)))
+    (define gl:Normal3hvNV (foreign-lambda void "glNormal3hvNV" u16vector)))
   (begin
-    (define glColor3hNV
+    (define gl:Color3hNV
       (foreign-lambda
         void
         "glColor3hNV"
         unsigned-short
         unsigned-short
         unsigned-short)))
-  (begin (define glColor3hvNV (foreign-lambda void "glColor3hvNV" u16vector)))
+  (begin (define gl:Color3hvNV (foreign-lambda void "glColor3hvNV" u16vector)))
   (begin
-    (define glColor4hNV
+    (define gl:Color4hNV
       (foreign-lambda
         void
         "glColor4hNV"
@@ -8339,19 +8339,19 @@
         unsigned-short
         unsigned-short
         unsigned-short)))
-  (begin (define glColor4hvNV (foreign-lambda void "glColor4hvNV" u16vector)))
+  (begin (define gl:Color4hvNV (foreign-lambda void "glColor4hvNV" u16vector)))
   (begin
-    (define glTexCoord1hNV
+    (define gl:TexCoord1hNV
       (foreign-lambda void "glTexCoord1hNV" unsigned-short)))
   (begin
-    (define glTexCoord1hvNV (foreign-lambda void "glTexCoord1hvNV" u16vector)))
+    (define gl:TexCoord1hvNV (foreign-lambda void "glTexCoord1hvNV" u16vector)))
   (begin
-    (define glTexCoord2hNV
+    (define gl:TexCoord2hNV
       (foreign-lambda void "glTexCoord2hNV" unsigned-short unsigned-short)))
   (begin
-    (define glTexCoord2hvNV (foreign-lambda void "glTexCoord2hvNV" u16vector)))
+    (define gl:TexCoord2hvNV (foreign-lambda void "glTexCoord2hvNV" u16vector)))
   (begin
-    (define glTexCoord3hNV
+    (define gl:TexCoord3hNV
       (foreign-lambda
         void
         "glTexCoord3hNV"
@@ -8359,9 +8359,9 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glTexCoord3hvNV (foreign-lambda void "glTexCoord3hvNV" u16vector)))
+    (define gl:TexCoord3hvNV (foreign-lambda void "glTexCoord3hvNV" u16vector)))
   (begin
-    (define glTexCoord4hNV
+    (define gl:TexCoord4hNV
       (foreign-lambda
         void
         "glTexCoord4hNV"
@@ -8370,19 +8370,19 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glTexCoord4hvNV (foreign-lambda void "glTexCoord4hvNV" u16vector)))
+    (define gl:TexCoord4hvNV (foreign-lambda void "glTexCoord4hvNV" u16vector)))
   (begin
-    (define glMultiTexCoord1hNV
+    (define gl:MultiTexCoord1hNV
       (foreign-lambda
         void
         "glMultiTexCoord1hNV"
         unsigned-integer
         unsigned-short)))
   (begin
-    (define glMultiTexCoord1hvNV
+    (define gl:MultiTexCoord1hvNV
       (foreign-lambda void "glMultiTexCoord1hvNV" unsigned-integer u16vector)))
   (begin
-    (define glMultiTexCoord2hNV
+    (define gl:MultiTexCoord2hNV
       (foreign-lambda
         void
         "glMultiTexCoord2hNV"
@@ -8390,10 +8390,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glMultiTexCoord2hvNV
+    (define gl:MultiTexCoord2hvNV
       (foreign-lambda void "glMultiTexCoord2hvNV" unsigned-integer u16vector)))
   (begin
-    (define glMultiTexCoord3hNV
+    (define gl:MultiTexCoord3hNV
       (foreign-lambda
         void
         "glMultiTexCoord3hNV"
@@ -8402,10 +8402,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glMultiTexCoord3hvNV
+    (define gl:MultiTexCoord3hvNV
       (foreign-lambda void "glMultiTexCoord3hvNV" unsigned-integer u16vector)))
   (begin
-    (define glMultiTexCoord4hNV
+    (define gl:MultiTexCoord4hNV
       (foreign-lambda
         void
         "glMultiTexCoord4hNV"
@@ -8415,15 +8415,15 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glMultiTexCoord4hvNV
+    (define gl:MultiTexCoord4hvNV
       (foreign-lambda void "glMultiTexCoord4hvNV" unsigned-integer u16vector)))
   (begin
-    (define glFogCoordhNV
+    (define gl:FogCoordhNV
       (foreign-lambda void "glFogCoordhNV" unsigned-short)))
   (begin
-    (define glFogCoordhvNV (foreign-lambda void "glFogCoordhvNV" u16vector)))
+    (define gl:FogCoordhvNV (foreign-lambda void "glFogCoordhvNV" u16vector)))
   (begin
-    (define glSecondaryColor3hNV
+    (define gl:SecondaryColor3hNV
       (foreign-lambda
         void
         "glSecondaryColor3hNV"
@@ -8431,26 +8431,26 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glSecondaryColor3hvNV
+    (define gl:SecondaryColor3hvNV
       (foreign-lambda void "glSecondaryColor3hvNV" u16vector)))
   (begin
-    (define glVertexWeighthNV
+    (define gl:VertexWeighthNV
       (foreign-lambda void "glVertexWeighthNV" unsigned-short)))
   (begin
-    (define glVertexWeighthvNV
+    (define gl:VertexWeighthvNV
       (foreign-lambda void "glVertexWeighthvNV" u16vector)))
   (begin
-    (define glVertexAttrib1hNV
+    (define gl:VertexAttrib1hNV
       (foreign-lambda
         void
         "glVertexAttrib1hNV"
         unsigned-integer
         unsigned-short)))
   (begin
-    (define glVertexAttrib1hvNV
+    (define gl:VertexAttrib1hvNV
       (foreign-lambda void "glVertexAttrib1hvNV" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttrib2hNV
+    (define gl:VertexAttrib2hNV
       (foreign-lambda
         void
         "glVertexAttrib2hNV"
@@ -8458,10 +8458,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glVertexAttrib2hvNV
+    (define gl:VertexAttrib2hvNV
       (foreign-lambda void "glVertexAttrib2hvNV" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttrib3hNV
+    (define gl:VertexAttrib3hNV
       (foreign-lambda
         void
         "glVertexAttrib3hNV"
@@ -8470,10 +8470,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glVertexAttrib3hvNV
+    (define gl:VertexAttrib3hvNV
       (foreign-lambda void "glVertexAttrib3hvNV" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttrib4hNV
+    (define gl:VertexAttrib4hNV
       (foreign-lambda
         void
         "glVertexAttrib4hNV"
@@ -8483,10 +8483,10 @@
         unsigned-short
         unsigned-short)))
   (begin
-    (define glVertexAttrib4hvNV
+    (define gl:VertexAttrib4hvNV
       (foreign-lambda void "glVertexAttrib4hvNV" unsigned-integer u16vector)))
   (begin
-    (define glVertexAttribs1hvNV
+    (define gl:VertexAttribs1hvNV
       (foreign-lambda
         void
         "glVertexAttribs1hvNV"
@@ -8494,7 +8494,7 @@
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribs2hvNV
+    (define gl:VertexAttribs2hvNV
       (foreign-lambda
         void
         "glVertexAttribs2hvNV"
@@ -8502,7 +8502,7 @@
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribs3hvNV
+    (define gl:VertexAttribs3hvNV
       (foreign-lambda
         void
         "glVertexAttribs3hvNV"
@@ -8510,7 +8510,7 @@
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribs4hvNV
+    (define gl:VertexAttribs4hvNV
       (foreign-lambda
         void
         "glVertexAttribs4hvNV"
@@ -8518,7 +8518,7 @@
         unsigned-integer
         u16vector)))
   (begin
-    (define glPixelDataRangeNV
+    (define gl:PixelDataRangeNV
       (foreign-lambda
         void
         "glPixelDataRangeNV"
@@ -8526,24 +8526,24 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glFlushPixelDataRangeNV
+    (define gl:FlushPixelDataRangeNV
       (foreign-lambda void "glFlushPixelDataRangeNV" unsigned-integer)))
   (begin
-    (define glPrimitiveRestartNV (foreign-lambda void "glPrimitiveRestartNV")))
+    (define gl:PrimitiveRestartNV (foreign-lambda void "glPrimitiveRestartNV")))
   (begin
-    (define glPrimitiveRestartIndexNV
+    (define gl:PrimitiveRestartIndexNV
       (foreign-lambda void "glPrimitiveRestartIndexNV" unsigned-integer)))
   (begin
-    (define glMapObjectBufferATI
+    (define gl:MapObjectBufferATI
       (foreign-lambda
         (c-pointer void)
         "glMapObjectBufferATI"
         unsigned-integer)))
   (begin
-    (define glUnmapObjectBufferATI
+    (define gl:UnmapObjectBufferATI
       (foreign-lambda void "glUnmapObjectBufferATI" unsigned-integer)))
   (begin
-    (define glVertexAttribArrayObjectATI
+    (define gl:VertexAttribArrayObjectATI
       (foreign-lambda
         void
         "glVertexAttribArrayObjectATI"
@@ -8555,7 +8555,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetVertexAttribArrayObjectfvATI
+    (define gl:GetVertexAttribArrayObjectfvATI
       (foreign-lambda
         void
         "glGetVertexAttribArrayObjectfvATI"
@@ -8563,7 +8563,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVertexAttribArrayObjectivATI
+    (define gl:GetVertexAttribArrayObjectivATI
       (foreign-lambda
         void
         "glGetVertexAttribArrayObjectivATI"
@@ -8571,48 +8571,48 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertex2bOES (foreign-lambda void "glVertex2bOES" char char)))
+    (define gl:Vertex2bOES (foreign-lambda void "glVertex2bOES" char char)))
   (begin
-    (define glVertex3bOES
+    (define gl:Vertex3bOES
       (foreign-lambda void "glVertex3bOES" char char char)))
   (begin
-    (define glVertex4bOES
+    (define gl:Vertex4bOES
       (foreign-lambda void "glVertex4bOES" char char char char)))
   (begin
-    (define glVertex2bvOES (foreign-lambda void "glVertex2bvOES" c-string)))
+    (define gl:Vertex2bvOES (foreign-lambda void "glVertex2bvOES" c-string)))
   (begin
-    (define glVertex3bvOES (foreign-lambda void "glVertex3bvOES" c-string)))
+    (define gl:Vertex3bvOES (foreign-lambda void "glVertex3bvOES" c-string)))
   (begin
-    (define glVertex4bvOES (foreign-lambda void "glVertex4bvOES" c-string)))
-  (begin (define glTexCoord1bOES (foreign-lambda void "glTexCoord1bOES" char)))
+    (define gl:Vertex4bvOES (foreign-lambda void "glVertex4bvOES" c-string)))
+  (begin (define gl:TexCoord1bOES (foreign-lambda void "glTexCoord1bOES" char)))
   (begin
-    (define glTexCoord2bOES (foreign-lambda void "glTexCoord2bOES" char char)))
+    (define gl:TexCoord2bOES (foreign-lambda void "glTexCoord2bOES" char char)))
   (begin
-    (define glTexCoord3bOES
+    (define gl:TexCoord3bOES
       (foreign-lambda void "glTexCoord3bOES" char char char)))
   (begin
-    (define glTexCoord4bOES
+    (define gl:TexCoord4bOES
       (foreign-lambda void "glTexCoord4bOES" char char char char)))
   (begin
-    (define glTexCoord1bvOES
+    (define gl:TexCoord1bvOES
       (foreign-lambda void "glTexCoord1bvOES" c-string)))
   (begin
-    (define glTexCoord2bvOES
+    (define gl:TexCoord2bvOES
       (foreign-lambda void "glTexCoord2bvOES" c-string)))
   (begin
-    (define glTexCoord3bvOES
+    (define gl:TexCoord3bvOES
       (foreign-lambda void "glTexCoord3bvOES" c-string)))
   (begin
-    (define glTexCoord4bvOES
+    (define gl:TexCoord4bvOES
       (foreign-lambda void "glTexCoord4bvOES" c-string)))
   (begin
-    (define glMultiTexCoord1bOES
+    (define gl:MultiTexCoord1bOES
       (foreign-lambda void "glMultiTexCoord1bOES" unsigned-integer char)))
   (begin
-    (define glMultiTexCoord2bOES
+    (define gl:MultiTexCoord2bOES
       (foreign-lambda void "glMultiTexCoord2bOES" unsigned-integer char char)))
   (begin
-    (define glMultiTexCoord3bOES
+    (define gl:MultiTexCoord3bOES
       (foreign-lambda
         void
         "glMultiTexCoord3bOES"
@@ -8621,7 +8621,7 @@
         char
         char)))
   (begin
-    (define glMultiTexCoord4bOES
+    (define gl:MultiTexCoord4bOES
       (foreign-lambda
         void
         "glMultiTexCoord4bOES"
@@ -8631,65 +8631,65 @@
         char
         char)))
   (begin
-    (define glMultiTexCoord1bvOES
+    (define gl:MultiTexCoord1bvOES
       (foreign-lambda void "glMultiTexCoord1bvOES" unsigned-integer c-string)))
   (begin
-    (define glMultiTexCoord2bvOES
+    (define gl:MultiTexCoord2bvOES
       (foreign-lambda void "glMultiTexCoord2bvOES" unsigned-integer c-string)))
   (begin
-    (define glMultiTexCoord3bvOES
+    (define gl:MultiTexCoord3bvOES
       (foreign-lambda void "glMultiTexCoord3bvOES" unsigned-integer c-string)))
   (begin
-    (define glMultiTexCoord4bvOES
+    (define gl:MultiTexCoord4bvOES
       (foreign-lambda void "glMultiTexCoord4bvOES" unsigned-integer c-string)))
   (begin
-    (define glVertex2xOES
+    (define gl:Vertex2xOES
       (foreign-lambda void "glVertex2xOES" integer integer)))
   (begin
-    (define glVertex3xOES
+    (define gl:Vertex3xOES
       (foreign-lambda void "glVertex3xOES" integer integer integer)))
   (begin
-    (define glVertex4xOES
+    (define gl:Vertex4xOES
       (foreign-lambda void "glVertex4xOES" integer integer integer integer)))
   (begin
-    (define glVertex2xvOES (foreign-lambda void "glVertex2xvOES" s32vector)))
+    (define gl:Vertex2xvOES (foreign-lambda void "glVertex2xvOES" s32vector)))
   (begin
-    (define glVertex3xvOES (foreign-lambda void "glVertex3xvOES" s32vector)))
+    (define gl:Vertex3xvOES (foreign-lambda void "glVertex3xvOES" s32vector)))
   (begin
-    (define glVertex4xvOES (foreign-lambda void "glVertex4xvOES" s32vector)))
+    (define gl:Vertex4xvOES (foreign-lambda void "glVertex4xvOES" s32vector)))
   (begin
-    (define glNormal3xOES
+    (define gl:Normal3xOES
       (foreign-lambda void "glNormal3xOES" integer integer integer)))
   (begin
-    (define glNormal3xvOES (foreign-lambda void "glNormal3xvOES" s32vector)))
+    (define gl:Normal3xvOES (foreign-lambda void "glNormal3xvOES" s32vector)))
   (begin
-    (define glTexCoord1xOES (foreign-lambda void "glTexCoord1xOES" integer)))
+    (define gl:TexCoord1xOES (foreign-lambda void "glTexCoord1xOES" integer)))
   (begin
-    (define glTexCoord2xOES
+    (define gl:TexCoord2xOES
       (foreign-lambda void "glTexCoord2xOES" integer integer)))
   (begin
-    (define glTexCoord3xOES
+    (define gl:TexCoord3xOES
       (foreign-lambda void "glTexCoord3xOES" integer integer integer)))
   (begin
-    (define glTexCoord4xOES
+    (define gl:TexCoord4xOES
       (foreign-lambda void "glTexCoord4xOES" integer integer integer integer)))
   (begin
-    (define glTexCoord1xvOES
+    (define gl:TexCoord1xvOES
       (foreign-lambda void "glTexCoord1xvOES" s32vector)))
   (begin
-    (define glTexCoord2xvOES
+    (define gl:TexCoord2xvOES
       (foreign-lambda void "glTexCoord2xvOES" s32vector)))
   (begin
-    (define glTexCoord3xvOES
+    (define gl:TexCoord3xvOES
       (foreign-lambda void "glTexCoord3xvOES" s32vector)))
   (begin
-    (define glTexCoord4xvOES
+    (define gl:TexCoord4xvOES
       (foreign-lambda void "glTexCoord4xvOES" s32vector)))
   (begin
-    (define glMultiTexCoord1xOES
+    (define gl:MultiTexCoord1xOES
       (foreign-lambda void "glMultiTexCoord1xOES" unsigned-integer integer)))
   (begin
-    (define glMultiTexCoord2xOES
+    (define gl:MultiTexCoord2xOES
       (foreign-lambda
         void
         "glMultiTexCoord2xOES"
@@ -8697,7 +8697,7 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord3xOES
+    (define gl:MultiTexCoord3xOES
       (foreign-lambda
         void
         "glMultiTexCoord3xOES"
@@ -8706,7 +8706,7 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord4xOES
+    (define gl:MultiTexCoord4xOES
       (foreign-lambda
         void
         "glMultiTexCoord4xOES"
@@ -8716,77 +8716,77 @@
         integer
         integer)))
   (begin
-    (define glMultiTexCoord1xvOES
+    (define gl:MultiTexCoord1xvOES
       (foreign-lambda
         void
         "glMultiTexCoord1xvOES"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord2xvOES
+    (define gl:MultiTexCoord2xvOES
       (foreign-lambda
         void
         "glMultiTexCoord2xvOES"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord3xvOES
+    (define gl:MultiTexCoord3xvOES
       (foreign-lambda
         void
         "glMultiTexCoord3xvOES"
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexCoord4xvOES
+    (define gl:MultiTexCoord4xvOES
       (foreign-lambda
         void
         "glMultiTexCoord4xvOES"
         unsigned-integer
         s32vector)))
   (begin
-    (define glColor3xOES
+    (define gl:Color3xOES
       (foreign-lambda void "glColor3xOES" integer integer integer)))
   (begin
-    (define glColor4xOES
+    (define gl:Color4xOES
       (foreign-lambda void "glColor4xOES" integer integer integer integer)))
   (begin
-    (define glColor3xvOES (foreign-lambda void "glColor3xvOES" s32vector)))
+    (define gl:Color3xvOES (foreign-lambda void "glColor3xvOES" s32vector)))
   (begin
-    (define glColor4xvOES (foreign-lambda void "glColor4xvOES" s32vector)))
-  (begin (define glIndexxOES (foreign-lambda void "glIndexxOES" integer)))
-  (begin (define glIndexxvOES (foreign-lambda void "glIndexxvOES" s32vector)))
+    (define gl:Color4xvOES (foreign-lambda void "glColor4xvOES" s32vector)))
+  (begin (define gl:IndexxOES (foreign-lambda void "glIndexxOES" integer)))
+  (begin (define gl:IndexxvOES (foreign-lambda void "glIndexxvOES" s32vector)))
   (begin
-    (define glRectxOES
+    (define gl:RectxOES
       (foreign-lambda void "glRectxOES" integer integer integer integer)))
   (begin
-    (define glRectxvOES
+    (define gl:RectxvOES
       (foreign-lambda void "glRectxvOES" s32vector s32vector)))
   (begin
-    (define glDepthRangexOES
+    (define gl:DepthRangexOES
       (foreign-lambda void "glDepthRangexOES" integer integer)))
   (begin
-    (define glLoadMatrixxOES
+    (define gl:LoadMatrixxOES
       (foreign-lambda void "glLoadMatrixxOES" s32vector)))
   (begin
-    (define glMultMatrixxOES
+    (define gl:MultMatrixxOES
       (foreign-lambda void "glMultMatrixxOES" s32vector)))
   (begin
-    (define glLoadTransposeMatrixxOES
+    (define gl:LoadTransposeMatrixxOES
       (foreign-lambda void "glLoadTransposeMatrixxOES" s32vector)))
   (begin
-    (define glMultTransposeMatrixxOES
+    (define gl:MultTransposeMatrixxOES
       (foreign-lambda void "glMultTransposeMatrixxOES" s32vector)))
   (begin
-    (define glRotatexOES
+    (define gl:RotatexOES
       (foreign-lambda void "glRotatexOES" integer integer integer integer)))
   (begin
-    (define glScalexOES
+    (define gl:ScalexOES
       (foreign-lambda void "glScalexOES" integer integer integer)))
   (begin
-    (define glTranslatexOES
+    (define gl:TranslatexOES
       (foreign-lambda void "glTranslatexOES" integer integer integer)))
   (begin
-    (define glFrustumxOES
+    (define gl:FrustumxOES
       (foreign-lambda
         void
         "glFrustumxOES"
@@ -8797,7 +8797,7 @@
         integer
         integer)))
   (begin
-    (define glOrthoxOES
+    (define gl:OrthoxOES
       (foreign-lambda
         void
         "glOrthoxOES"
@@ -8808,7 +8808,7 @@
         integer
         integer)))
   (begin
-    (define glTexGenxOES
+    (define gl:TexGenxOES
       (foreign-lambda
         void
         "glTexGenxOES"
@@ -8816,7 +8816,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glTexGenxvOES
+    (define gl:TexGenxvOES
       (foreign-lambda
         void
         "glTexGenxvOES"
@@ -8824,7 +8824,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexGenxvOES
+    (define gl:GetTexGenxvOES
       (foreign-lambda
         void
         "glGetTexGenxvOES"
@@ -8832,19 +8832,19 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glClipPlanexOES
+    (define gl:ClipPlanexOES
       (foreign-lambda void "glClipPlanexOES" unsigned-integer s32vector)))
   (begin
-    (define glGetClipPlanexOES
+    (define gl:GetClipPlanexOES
       (foreign-lambda void "glGetClipPlanexOES" unsigned-integer s32vector)))
   (begin
-    (define glRasterPos2xOES
+    (define gl:RasterPos2xOES
       (foreign-lambda void "glRasterPos2xOES" integer integer)))
   (begin
-    (define glRasterPos3xOES
+    (define gl:RasterPos3xOES
       (foreign-lambda void "glRasterPos3xOES" integer integer integer)))
   (begin
-    (define glRasterPos4xOES
+    (define gl:RasterPos4xOES
       (foreign-lambda
         void
         "glRasterPos4xOES"
@@ -8853,16 +8853,16 @@
         integer
         integer)))
   (begin
-    (define glRasterPos2xvOES
+    (define gl:RasterPos2xvOES
       (foreign-lambda void "glRasterPos2xvOES" s32vector)))
   (begin
-    (define glRasterPos3xvOES
+    (define gl:RasterPos3xvOES
       (foreign-lambda void "glRasterPos3xvOES" s32vector)))
   (begin
-    (define glRasterPos4xvOES
+    (define gl:RasterPos4xvOES
       (foreign-lambda void "glRasterPos4xvOES" s32vector)))
   (begin
-    (define glMaterialxOES
+    (define gl:MaterialxOES
       (foreign-lambda
         void
         "glMaterialxOES"
@@ -8870,7 +8870,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMaterialxvOES
+    (define gl:MaterialxvOES
       (foreign-lambda
         void
         "glMaterialxvOES"
@@ -8878,7 +8878,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMaterialxOES
+    (define gl:GetMaterialxOES
       (foreign-lambda
         void
         "glGetMaterialxOES"
@@ -8886,7 +8886,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glLightxOES
+    (define gl:LightxOES
       (foreign-lambda
         void
         "glLightxOES"
@@ -8894,7 +8894,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glLightxvOES
+    (define gl:LightxvOES
       (foreign-lambda
         void
         "glLightxvOES"
@@ -8902,7 +8902,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetLightxOES
+    (define gl:GetLightxOES
       (foreign-lambda
         void
         "glGetLightxOES"
@@ -8910,29 +8910,29 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glLightModelxOES
+    (define gl:LightModelxOES
       (foreign-lambda void "glLightModelxOES" unsigned-integer integer)))
   (begin
-    (define glLightModelxvOES
+    (define gl:LightModelxvOES
       (foreign-lambda void "glLightModelxvOES" unsigned-integer s32vector)))
   (begin
-    (define glPointSizexOES (foreign-lambda void "glPointSizexOES" integer)))
+    (define gl:PointSizexOES (foreign-lambda void "glPointSizexOES" integer)))
   (begin
-    (define glLineWidthxOES (foreign-lambda void "glLineWidthxOES" integer)))
+    (define gl:LineWidthxOES (foreign-lambda void "glLineWidthxOES" integer)))
   (begin
-    (define glPolygonOffsetxOES
+    (define gl:PolygonOffsetxOES
       (foreign-lambda void "glPolygonOffsetxOES" integer integer)))
   (begin
-    (define glPixelStorex
+    (define gl:PixelStorex
       (foreign-lambda void "glPixelStorex" unsigned-integer integer)))
   (begin
-    (define glPixelTransferxOES
+    (define gl:PixelTransferxOES
       (foreign-lambda void "glPixelTransferxOES" unsigned-integer integer)))
   (begin
-    (define glPixelMapx
+    (define gl:PixelMapx
       (foreign-lambda void "glPixelMapx" unsigned-integer integer s32vector)))
   (begin
-    (define glGetPixelMapxv
+    (define gl:GetPixelMapxv
       (foreign-lambda
         void
         "glGetPixelMapxv"
@@ -8940,7 +8940,7 @@
         integer
         s32vector)))
   (begin
-    (define glConvolutionParameterxOES
+    (define gl:ConvolutionParameterxOES
       (foreign-lambda
         void
         "glConvolutionParameterxOES"
@@ -8948,7 +8948,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glConvolutionParameterxvOES
+    (define gl:ConvolutionParameterxvOES
       (foreign-lambda
         void
         "glConvolutionParameterxvOES"
@@ -8956,7 +8956,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetConvolutionParameterxvOES
+    (define gl:GetConvolutionParameterxvOES
       (foreign-lambda
         void
         "glGetConvolutionParameterxvOES"
@@ -8964,7 +8964,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetHistogramParameterxvOES
+    (define gl:GetHistogramParameterxvOES
       (foreign-lambda
         void
         "glGetHistogramParameterxvOES"
@@ -8972,10 +8972,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPixelZoomxOES
+    (define gl:PixelZoomxOES
       (foreign-lambda void "glPixelZoomxOES" integer integer)))
   (begin
-    (define glBitmapxOES
+    (define gl:BitmapxOES
       (foreign-lambda
         void
         "glBitmapxOES"
@@ -8987,7 +8987,7 @@
         integer
         u8vector)))
   (begin
-    (define glTexParameterxOES
+    (define gl:TexParameterxOES
       (foreign-lambda
         void
         "glTexParameterxOES"
@@ -8995,7 +8995,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glTexParameterxvOES
+    (define gl:TexParameterxvOES
       (foreign-lambda
         void
         "glTexParameterxvOES"
@@ -9003,7 +9003,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexParameterxvOES
+    (define gl:GetTexParameterxvOES
       (foreign-lambda
         void
         "glGetTexParameterxvOES"
@@ -9011,7 +9011,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexLevelParameterxvOES
+    (define gl:GetTexLevelParameterxvOES
       (foreign-lambda
         void
         "glGetTexLevelParameterxvOES"
@@ -9020,7 +9020,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPrioritizeTexturesxOES
+    (define gl:PrioritizeTexturesxOES
       (foreign-lambda
         void
         "glPrioritizeTexturesxOES"
@@ -9028,7 +9028,7 @@
         u32vector
         s32vector)))
   (begin
-    (define glTexEnvxOES
+    (define gl:TexEnvxOES
       (foreign-lambda
         void
         "glTexEnvxOES"
@@ -9036,7 +9036,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glTexEnvxvOES
+    (define gl:TexEnvxvOES
       (foreign-lambda
         void
         "glTexEnvxvOES"
@@ -9044,7 +9044,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTexEnvxvOES
+    (define gl:GetTexEnvxvOES
       (foreign-lambda
         void
         "glGetTexEnvxvOES"
@@ -9052,19 +9052,19 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glFogxOES
+    (define gl:FogxOES
       (foreign-lambda void "glFogxOES" unsigned-integer integer)))
   (begin
-    (define glFogxvOES
+    (define gl:FogxvOES
       (foreign-lambda void "glFogxvOES" unsigned-integer s32vector)))
   (begin
-    (define glSampleCoverageOES
+    (define gl:SampleCoverageOES
       (foreign-lambda void "glSampleCoverageOES" integer unsigned-char)))
   (begin
-    (define glAlphaFuncxOES
+    (define gl:AlphaFuncxOES
       (foreign-lambda void "glAlphaFuncxOES" unsigned-integer integer)))
   (begin
-    (define glBlendColorxOES
+    (define gl:BlendColorxOES
       (foreign-lambda
         void
         "glBlendColorxOES"
@@ -9073,7 +9073,7 @@
         integer
         integer)))
   (begin
-    (define glClearColorxOES
+    (define gl:ClearColorxOES
       (foreign-lambda
         void
         "glClearColorxOES"
@@ -9082,9 +9082,9 @@
         integer
         integer)))
   (begin
-    (define glClearDepthxOES (foreign-lambda void "glClearDepthxOES" integer)))
+    (define gl:ClearDepthxOES (foreign-lambda void "glClearDepthxOES" integer)))
   (begin
-    (define glClearAccumxOES
+    (define gl:ClearAccumxOES
       (foreign-lambda
         void
         "glClearAccumxOES"
@@ -9093,10 +9093,10 @@
         integer
         integer)))
   (begin
-    (define glAccumxOES
+    (define gl:AccumxOES
       (foreign-lambda void "glAccumxOES" unsigned-integer integer)))
   (begin
-    (define glMap1xOES
+    (define gl:Map1xOES
       (foreign-lambda
         void
         "glMap1xOES"
@@ -9107,7 +9107,7 @@
         integer
         s32vector)))
   (begin
-    (define glMap2xOES
+    (define gl:Map2xOES
       (foreign-lambda
         void
         "glMap2xOES"
@@ -9122,10 +9122,10 @@
         integer
         s32vector)))
   (begin
-    (define glMapGrid1xOES
+    (define gl:MapGrid1xOES
       (foreign-lambda void "glMapGrid1xOES" integer integer integer)))
   (begin
-    (define glMapGrid2xOES
+    (define gl:MapGrid2xOES
       (foreign-lambda
         void
         "glMapGrid2xOES"
@@ -9135,7 +9135,7 @@
         integer
         integer)))
   (begin
-    (define glGetMapxvOES
+    (define gl:GetMapxvOES
       (foreign-lambda
         void
         "glGetMapxvOES"
@@ -9143,18 +9143,18 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glEvalCoord1xOES (foreign-lambda void "glEvalCoord1xOES" integer)))
+    (define gl:EvalCoord1xOES (foreign-lambda void "glEvalCoord1xOES" integer)))
   (begin
-    (define glEvalCoord2xOES
+    (define gl:EvalCoord2xOES
       (foreign-lambda void "glEvalCoord2xOES" integer integer)))
   (begin
-    (define glEvalCoord1xvOES
+    (define gl:EvalCoord1xvOES
       (foreign-lambda void "glEvalCoord1xvOES" s32vector)))
   (begin
-    (define glEvalCoord2xvOES
+    (define gl:EvalCoord2xvOES
       (foreign-lambda void "glEvalCoord2xvOES" s32vector)))
   (begin
-    (define glFeedbackBufferxOES
+    (define gl:FeedbackBufferxOES
       (foreign-lambda
         void
         "glFeedbackBufferxOES"
@@ -9162,16 +9162,16 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glPassThroughxOES
+    (define gl:PassThroughxOES
       (foreign-lambda void "glPassThroughxOES" integer)))
   (begin
-    (define glGetFixedvOES
+    (define gl:GetFixedvOES
       (foreign-lambda void "glGetFixedvOES" unsigned-integer s32vector)))
   (begin
-    (define glDepthRangefOES
+    (define gl:DepthRangefOES
       (foreign-lambda void "glDepthRangefOES" float float)))
   (begin
-    (define glFrustumfOES
+    (define gl:FrustumfOES
       (foreign-lambda
         void
         "glFrustumfOES"
@@ -9182,59 +9182,59 @@
         float
         float)))
   (begin
-    (define glOrthofOES
+    (define gl:OrthofOES
       (foreign-lambda void "glOrthofOES" float float float float float float)))
   (begin
-    (define glClipPlanefOES
+    (define gl:ClipPlanefOES
       (foreign-lambda void "glClipPlanefOES" unsigned-integer f32vector)))
   (begin
-    (define glGetClipPlanefOES
+    (define gl:GetClipPlanefOES
       (foreign-lambda void "glGetClipPlanefOES" unsigned-integer f32vector)))
   (begin
-    (define glClearDepthfOES (foreign-lambda void "glClearDepthfOES" double)))
+    (define gl:ClearDepthfOES (foreign-lambda void "glClearDepthfOES" double)))
   (begin
-    (define glQueryMatrixxOES
+    (define gl:QueryMatrixxOES
       (foreign-lambda
         unsigned-integer
         "glQueryMatrixxOES"
         s32vector
         s32vector)))
   (begin
-    (define glDepthBoundsEXT
+    (define gl:DepthBoundsEXT
       (foreign-lambda void "glDepthBoundsEXT" double double)))
   (begin
-    (define glBlendEquationSeparateEXT
+    (define gl:BlendEquationSeparateEXT
       (foreign-lambda
         void
         "glBlendEquationSeparateEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIsRenderbufferEXT
+    (define gl:IsRenderbufferEXT
       (foreign-lambda unsigned-char "glIsRenderbufferEXT" unsigned-integer)))
   (begin
-    (define glBindRenderbufferEXT
+    (define gl:BindRenderbufferEXT
       (foreign-lambda
         void
         "glBindRenderbufferEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteRenderbuffersEXT
+    (define gl:DeleteRenderbuffersEXT
       (foreign-lambda
         void
         "glDeleteRenderbuffersEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenRenderbuffersEXT
+    (define gl:GenRenderbuffersEXT
       (foreign-lambda
         void
         "glGenRenderbuffersEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glRenderbufferStorageEXT
+    (define gl:RenderbufferStorageEXT
       (foreign-lambda
         void
         "glRenderbufferStorageEXT"
@@ -9243,7 +9243,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetRenderbufferParameterivEXT
+    (define gl:GetRenderbufferParameterivEXT
       (foreign-lambda
         void
         "glGetRenderbufferParameterivEXT"
@@ -9251,33 +9251,33 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glIsFramebufferEXT
+    (define gl:IsFramebufferEXT
       (foreign-lambda unsigned-char "glIsFramebufferEXT" unsigned-integer)))
   (begin
-    (define glBindFramebufferEXT
+    (define gl:BindFramebufferEXT
       (foreign-lambda
         void
         "glBindFramebufferEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteFramebuffersEXT
+    (define gl:DeleteFramebuffersEXT
       (foreign-lambda
         void
         "glDeleteFramebuffersEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenFramebuffersEXT
+    (define gl:GenFramebuffersEXT
       (foreign-lambda void "glGenFramebuffersEXT" unsigned-integer u32vector)))
   (begin
-    (define glCheckFramebufferStatusEXT
+    (define gl:CheckFramebufferStatusEXT
       (foreign-lambda
         unsigned-integer
         "glCheckFramebufferStatusEXT"
         unsigned-integer)))
   (begin
-    (define glFramebufferTexture1DEXT
+    (define gl:FramebufferTexture1DEXT
       (foreign-lambda
         void
         "glFramebufferTexture1DEXT"
@@ -9287,7 +9287,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTexture2DEXT
+    (define gl:FramebufferTexture2DEXT
       (foreign-lambda
         void
         "glFramebufferTexture2DEXT"
@@ -9297,7 +9297,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTexture3DEXT
+    (define gl:FramebufferTexture3DEXT
       (foreign-lambda
         void
         "glFramebufferTexture3DEXT"
@@ -9308,7 +9308,7 @@
         integer
         integer)))
   (begin
-    (define glFramebufferRenderbufferEXT
+    (define gl:FramebufferRenderbufferEXT
       (foreign-lambda
         void
         "glFramebufferRenderbufferEXT"
@@ -9317,7 +9317,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetFramebufferAttachmentParameterivEXT
+    (define gl:GetFramebufferAttachmentParameterivEXT
       (foreign-lambda
         void
         "glGetFramebufferAttachmentParameterivEXT"
@@ -9326,24 +9326,24 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGenerateMipmapEXT
+    (define gl:GenerateMipmapEXT
       (foreign-lambda void "glGenerateMipmapEXT" unsigned-integer)))
   (begin
-    (define glStringMarkerGREMEDY
+    (define gl:StringMarkerGREMEDY
       (foreign-lambda
         void
         "glStringMarkerGREMEDY"
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glStencilClearTagEXT
+    (define gl:StencilClearTagEXT
       (foreign-lambda
         void
         "glStencilClearTagEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlitFramebufferEXT
+    (define gl:BlitFramebufferEXT
       (foreign-lambda
         void
         "glBlitFramebufferEXT"
@@ -9358,7 +9358,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glRenderbufferStorageMultisampleEXT
+    (define gl:RenderbufferStorageMultisampleEXT
       (foreign-lambda
         void
         "glRenderbufferStorageMultisampleEXT"
@@ -9368,7 +9368,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetQueryObjecti64vEXT
+    (define gl:GetQueryObjecti64vEXT
       (foreign-lambda
         void
         "glGetQueryObjecti64vEXT"
@@ -9376,7 +9376,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetQueryObjectui64vEXT
+    (define gl:GetQueryObjectui64vEXT
       (foreign-lambda
         void
         "glGetQueryObjectui64vEXT"
@@ -9384,7 +9384,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramEnvParameters4fvEXT
+    (define gl:ProgramEnvParameters4fvEXT
       (foreign-lambda
         void
         "glProgramEnvParameters4fvEXT"
@@ -9393,7 +9393,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramLocalParameters4fvEXT
+    (define gl:ProgramLocalParameters4fvEXT
       (foreign-lambda
         void
         "glProgramLocalParameters4fvEXT"
@@ -9402,7 +9402,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glBufferParameteriAPPLE
+    (define gl:BufferParameteriAPPLE
       (foreign-lambda
         void
         "glBufferParameteriAPPLE"
@@ -9410,7 +9410,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFlushMappedBufferRangeAPPLE
+    (define gl:FlushMappedBufferRangeAPPLE
       (foreign-lambda
         void
         "glFlushMappedBufferRangeAPPLE"
@@ -9418,7 +9418,7 @@
         integer
         integer)))
   (begin
-    (define glUniformBufferEXT
+    (define gl:UniformBufferEXT
       (foreign-lambda
         void
         "glUniformBufferEXT"
@@ -9426,21 +9426,21 @@
         integer
         unsigned-integer)))
   (begin
-    (define glGetUniformBufferSizeEXT
+    (define gl:GetUniformBufferSizeEXT
       (foreign-lambda
         integer
         "glGetUniformBufferSizeEXT"
         unsigned-integer
         integer)))
   (begin
-    (define glGetUniformOffsetEXT
+    (define gl:GetUniformOffsetEXT
       (foreign-lambda
         integer
         "glGetUniformOffsetEXT"
         unsigned-integer
         integer)))
   (begin
-    (define glColorMaskIndexedEXT
+    (define gl:ColorMaskIndexedEXT
       (foreign-lambda
         void
         "glColorMaskIndexedEXT"
@@ -9450,7 +9450,7 @@
         unsigned-char
         unsigned-char)))
   (begin
-    (define glGetBooleanIndexedvEXT
+    (define gl:GetBooleanIndexedvEXT
       (foreign-lambda
         void
         "glGetBooleanIndexedvEXT"
@@ -9458,7 +9458,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glGetIntegerIndexedvEXT
+    (define gl:GetIntegerIndexedvEXT
       (foreign-lambda
         void
         "glGetIntegerIndexedvEXT"
@@ -9466,28 +9466,28 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glEnableIndexedEXT
+    (define gl:EnableIndexedEXT
       (foreign-lambda
         void
         "glEnableIndexedEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDisableIndexedEXT
+    (define gl:DisableIndexedEXT
       (foreign-lambda
         void
         "glDisableIndexedEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIsEnabledIndexedEXT
+    (define gl:IsEnabledIndexedEXT
       (foreign-lambda
         unsigned-char
         "glIsEnabledIndexedEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawArraysInstancedEXT
+    (define gl:DrawArraysInstancedEXT
       (foreign-lambda
         void
         "glDrawArraysInstancedEXT"
@@ -9496,7 +9496,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDrawElementsInstancedEXT
+    (define gl:DrawElementsInstancedEXT
       (foreign-lambda
         void
         "glDrawElementsInstancedEXT"
@@ -9506,7 +9506,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glProgramParameteriEXT
+    (define gl:ProgramParameteriEXT
       (foreign-lambda
         void
         "glProgramParameteriEXT"
@@ -9514,7 +9514,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTextureEXT
+    (define gl:FramebufferTextureEXT
       (foreign-lambda
         void
         "glFramebufferTextureEXT"
@@ -9523,7 +9523,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTextureLayerEXT
+    (define gl:FramebufferTextureLayerEXT
       (foreign-lambda
         void
         "glFramebufferTextureLayerEXT"
@@ -9533,7 +9533,7 @@
         integer
         integer)))
   (begin
-    (define glFramebufferTextureFaceEXT
+    (define gl:FramebufferTextureFaceEXT
       (foreign-lambda
         void
         "glFramebufferTextureFaceEXT"
@@ -9543,10 +9543,10 @@
         integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI1iEXT
+    (define gl:VertexAttribI1iEXT
       (foreign-lambda void "glVertexAttribI1iEXT" unsigned-integer integer)))
   (begin
-    (define glVertexAttribI2iEXT
+    (define gl:VertexAttribI2iEXT
       (foreign-lambda
         void
         "glVertexAttribI2iEXT"
@@ -9554,7 +9554,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI3iEXT
+    (define gl:VertexAttribI3iEXT
       (foreign-lambda
         void
         "glVertexAttribI3iEXT"
@@ -9563,7 +9563,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI4iEXT
+    (define gl:VertexAttribI4iEXT
       (foreign-lambda
         void
         "glVertexAttribI4iEXT"
@@ -9573,14 +9573,14 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI1uiEXT
+    (define gl:VertexAttribI1uiEXT
       (foreign-lambda
         void
         "glVertexAttribI1uiEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI2uiEXT
+    (define gl:VertexAttribI2uiEXT
       (foreign-lambda
         void
         "glVertexAttribI2uiEXT"
@@ -9588,7 +9588,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI3uiEXT
+    (define gl:VertexAttribI3uiEXT
       (foreign-lambda
         void
         "glVertexAttribI3uiEXT"
@@ -9597,7 +9597,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI4uiEXT
+    (define gl:VertexAttribI4uiEXT
       (foreign-lambda
         void
         "glVertexAttribI4uiEXT"
@@ -9607,87 +9607,87 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI1ivEXT
+    (define gl:VertexAttribI1ivEXT
       (foreign-lambda
         void
         "glVertexAttribI1ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI2ivEXT
+    (define gl:VertexAttribI2ivEXT
       (foreign-lambda
         void
         "glVertexAttribI2ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI3ivEXT
+    (define gl:VertexAttribI3ivEXT
       (foreign-lambda
         void
         "glVertexAttribI3ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI4ivEXT
+    (define gl:VertexAttribI4ivEXT
       (foreign-lambda
         void
         "glVertexAttribI4ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI1uivEXT
+    (define gl:VertexAttribI1uivEXT
       (foreign-lambda
         void
         "glVertexAttribI1uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI2uivEXT
+    (define gl:VertexAttribI2uivEXT
       (foreign-lambda
         void
         "glVertexAttribI2uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI3uivEXT
+    (define gl:VertexAttribI3uivEXT
       (foreign-lambda
         void
         "glVertexAttribI3uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI4uivEXT
+    (define gl:VertexAttribI4uivEXT
       (foreign-lambda
         void
         "glVertexAttribI4uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI4bvEXT
+    (define gl:VertexAttribI4bvEXT
       (foreign-lambda void "glVertexAttribI4bvEXT" unsigned-integer c-string)))
   (begin
-    (define glVertexAttribI4svEXT
+    (define gl:VertexAttribI4svEXT
       (foreign-lambda
         void
         "glVertexAttribI4svEXT"
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribI4ubvEXT
+    (define gl:VertexAttribI4ubvEXT
       (foreign-lambda
         void
         "glVertexAttribI4ubvEXT"
         unsigned-integer
         u8vector)))
   (begin
-    (define glVertexAttribI4usvEXT
+    (define gl:VertexAttribI4usvEXT
       (foreign-lambda
         void
         "glVertexAttribI4usvEXT"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribIPointerEXT
+    (define gl:VertexAttribIPointerEXT
       (foreign-lambda
         void
         "glVertexAttribIPointerEXT"
@@ -9697,7 +9697,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetVertexAttribIivEXT
+    (define gl:GetVertexAttribIivEXT
       (foreign-lambda
         void
         "glGetVertexAttribIivEXT"
@@ -9705,7 +9705,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribIuivEXT
+    (define gl:GetVertexAttribIuivEXT
       (foreign-lambda
         void
         "glGetVertexAttribIuivEXT"
@@ -9713,10 +9713,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glUniform1uiEXT
+    (define gl:Uniform1uiEXT
       (foreign-lambda void "glUniform1uiEXT" integer unsigned-integer)))
   (begin
-    (define glUniform2uiEXT
+    (define gl:Uniform2uiEXT
       (foreign-lambda
         void
         "glUniform2uiEXT"
@@ -9724,7 +9724,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform3uiEXT
+    (define gl:Uniform3uiEXT
       (foreign-lambda
         void
         "glUniform3uiEXT"
@@ -9733,7 +9733,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform4uiEXT
+    (define gl:Uniform4uiEXT
       (foreign-lambda
         void
         "glUniform4uiEXT"
@@ -9743,7 +9743,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUniform1uivEXT
+    (define gl:Uniform1uivEXT
       (foreign-lambda
         void
         "glUniform1uivEXT"
@@ -9751,7 +9751,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform2uivEXT
+    (define gl:Uniform2uivEXT
       (foreign-lambda
         void
         "glUniform2uivEXT"
@@ -9759,7 +9759,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform3uivEXT
+    (define gl:Uniform3uivEXT
       (foreign-lambda
         void
         "glUniform3uivEXT"
@@ -9767,7 +9767,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glUniform4uivEXT
+    (define gl:Uniform4uivEXT
       (foreign-lambda
         void
         "glUniform4uivEXT"
@@ -9775,7 +9775,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetUniformuivEXT
+    (define gl:GetUniformuivEXT
       (foreign-lambda
         void
         "glGetUniformuivEXT"
@@ -9783,7 +9783,7 @@
         integer
         s32vector)))
   (begin
-    (define glBindFragDataLocationEXT
+    (define gl:BindFragDataLocationEXT
       (foreign-lambda
         void
         "glBindFragDataLocationEXT"
@@ -9791,14 +9791,14 @@
         unsigned-integer
         c-string)))
   (begin
-    (define glGetFragDataLocationEXT
+    (define gl:GetFragDataLocationEXT
       (foreign-lambda
         integer
         "glGetFragDataLocationEXT"
         unsigned-integer
         c-string)))
   (begin
-    (define glFramebufferTextureLayerEXT
+    (define gl:FramebufferTextureLayerEXT
       (foreign-lambda
         void
         "glFramebufferTextureLayerEXT"
@@ -9808,7 +9808,7 @@
         integer
         integer)))
   (begin
-    (define glTexBufferEXT
+    (define gl:TexBufferEXT
       (foreign-lambda
         void
         "glTexBufferEXT"
@@ -9816,15 +9816,15 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDepthRangedNV
+    (define gl:DepthRangedNV
       (foreign-lambda void "glDepthRangedNV" double double)))
   (begin
-    (define glClearDepthdNV (foreign-lambda void "glClearDepthdNV" double)))
+    (define gl:ClearDepthdNV (foreign-lambda void "glClearDepthdNV" double)))
   (begin
-    (define glDepthBoundsdNV
+    (define gl:DepthBoundsdNV
       (foreign-lambda void "glDepthBoundsdNV" double double)))
   (begin
-    (define glRenderbufferStorageMultsampleCoverageNV
+    (define gl:RenderbufferStorageMultsampleCoverageNV
       (foreign-lambda
         void
         "glRenderbufferStorageMultsampleCoverageNV"
@@ -9835,10 +9835,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramVertexLimitNV
+    (define gl:ProgramVertexLimitNV
       (foreign-lambda void "glProgramVertexLimitNV" unsigned-integer integer)))
   (begin
-    (define glFramebufferTextureEXT
+    (define gl:FramebufferTextureEXT
       (foreign-lambda
         void
         "glFramebufferTextureEXT"
@@ -9847,7 +9847,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glFramebufferTextureLayerEXT
+    (define gl:FramebufferTextureLayerEXT
       (foreign-lambda
         void
         "glFramebufferTextureLayerEXT"
@@ -9857,7 +9857,7 @@
         integer
         integer)))
   (begin
-    (define glProgramLocalParameterI4iNV
+    (define gl:ProgramLocalParameterI4iNV
       (foreign-lambda
         void
         "glProgramLocalParameterI4iNV"
@@ -9868,7 +9868,7 @@
         integer
         integer)))
   (begin
-    (define glProgramLocalParameterI4ivNV
+    (define gl:ProgramLocalParameterI4ivNV
       (foreign-lambda
         void
         "glProgramLocalParameterI4ivNV"
@@ -9876,7 +9876,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramLocalParametersI4ivNV
+    (define gl:ProgramLocalParametersI4ivNV
       (foreign-lambda
         void
         "glProgramLocalParametersI4ivNV"
@@ -9885,7 +9885,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramLocalParameterI4uiNV
+    (define gl:ProgramLocalParameterI4uiNV
       (foreign-lambda
         void
         "glProgramLocalParameterI4uiNV"
@@ -9896,7 +9896,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramLocalParameterI4uivNV
+    (define gl:ProgramLocalParameterI4uivNV
       (foreign-lambda
         void
         "glProgramLocalParameterI4uivNV"
@@ -9904,7 +9904,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramLocalParametersI4uivNV
+    (define gl:ProgramLocalParametersI4uivNV
       (foreign-lambda
         void
         "glProgramLocalParametersI4uivNV"
@@ -9913,7 +9913,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramEnvParameterI4iNV
+    (define gl:ProgramEnvParameterI4iNV
       (foreign-lambda
         void
         "glProgramEnvParameterI4iNV"
@@ -9924,7 +9924,7 @@
         integer
         integer)))
   (begin
-    (define glProgramEnvParameterI4ivNV
+    (define gl:ProgramEnvParameterI4ivNV
       (foreign-lambda
         void
         "glProgramEnvParameterI4ivNV"
@@ -9932,7 +9932,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramEnvParametersI4ivNV
+    (define gl:ProgramEnvParametersI4ivNV
       (foreign-lambda
         void
         "glProgramEnvParametersI4ivNV"
@@ -9941,7 +9941,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramEnvParameterI4uiNV
+    (define gl:ProgramEnvParameterI4uiNV
       (foreign-lambda
         void
         "glProgramEnvParameterI4uiNV"
@@ -9952,7 +9952,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramEnvParameterI4uivNV
+    (define gl:ProgramEnvParameterI4uivNV
       (foreign-lambda
         void
         "glProgramEnvParameterI4uivNV"
@@ -9960,7 +9960,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramEnvParametersI4uivNV
+    (define gl:ProgramEnvParametersI4uivNV
       (foreign-lambda
         void
         "glProgramEnvParametersI4uivNV"
@@ -9969,7 +9969,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetProgramLocalParameterIivNV
+    (define gl:GetProgramLocalParameterIivNV
       (foreign-lambda
         void
         "glGetProgramLocalParameterIivNV"
@@ -9977,7 +9977,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetProgramLocalParameterIuivNV
+    (define gl:GetProgramLocalParameterIuivNV
       (foreign-lambda
         void
         "glGetProgramLocalParameterIuivNV"
@@ -9985,7 +9985,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetProgramEnvParameterIivNV
+    (define gl:GetProgramEnvParameterIivNV
       (foreign-lambda
         void
         "glGetProgramEnvParameterIivNV"
@@ -9993,7 +9993,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetProgramEnvParameterIuivNV
+    (define gl:GetProgramEnvParameterIuivNV
       (foreign-lambda
         void
         "glGetProgramEnvParameterIuivNV"
@@ -10001,7 +10001,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glBindBufferRangeNV
+    (define gl:BindBufferRangeNV
       (foreign-lambda
         void
         "glBindBufferRangeNV"
@@ -10011,7 +10011,7 @@
         integer
         integer)))
   (begin
-    (define glBindBufferOffsetNV
+    (define gl:BindBufferOffsetNV
       (foreign-lambda
         void
         "glBindBufferOffsetNV"
@@ -10020,7 +10020,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glBindBufferBaseNV
+    (define gl:BindBufferBaseNV
       (foreign-lambda
         void
         "glBindBufferBaseNV"
@@ -10028,7 +10028,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramBufferParametersfvNV
+    (define gl:ProgramBufferParametersfvNV
       (foreign-lambda
         void
         "glProgramBufferParametersfvNV"
@@ -10038,7 +10038,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramBufferParametersIivNV
+    (define gl:ProgramBufferParametersIivNV
       (foreign-lambda
         void
         "glProgramBufferParametersIivNV"
@@ -10048,7 +10048,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramBufferParametersIuivNV
+    (define gl:ProgramBufferParametersIuivNV
       (foreign-lambda
         void
         "glProgramBufferParametersIuivNV"
@@ -10058,7 +10058,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetIntegerIndexedvEXT
+    (define gl:GetIntegerIndexedvEXT
       (foreign-lambda
         void
         "glGetIntegerIndexedvEXT"
@@ -10066,7 +10066,7 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glBindBufferRangeNV
+    (define gl:BindBufferRangeNV
       (foreign-lambda
         void
         "glBindBufferRangeNV"
@@ -10076,7 +10076,7 @@
         integer
         integer)))
   (begin
-    (define glBindBufferOffsetNV
+    (define gl:BindBufferOffsetNV
       (foreign-lambda
         void
         "glBindBufferOffsetNV"
@@ -10085,7 +10085,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glBindBufferBaseNV
+    (define gl:BindBufferBaseNV
       (foreign-lambda
         void
         "glBindBufferBaseNV"
@@ -10093,7 +10093,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTransformFeedbackAttribsNV
+    (define gl:TransformFeedbackAttribsNV
       (foreign-lambda
         void
         "glTransformFeedbackAttribsNV"
@@ -10101,7 +10101,7 @@
         s32vector
         unsigned-integer)))
   (begin
-    (define glTransformFeedbackVaryingsNV
+    (define gl:TransformFeedbackVaryingsNV
       (foreign-lambda
         void
         "glTransformFeedbackVaryingsNV"
@@ -10110,20 +10110,20 @@
         s32vector
         unsigned-integer)))
   (begin
-    (define glBeginTransformFeedbackNV
+    (define gl:BeginTransformFeedbackNV
       (foreign-lambda void "glBeginTransformFeedbackNV" unsigned-integer)))
   (begin
-    (define glEndTransformFeedbackNV
+    (define gl:EndTransformFeedbackNV
       (foreign-lambda void "glEndTransformFeedbackNV")))
   (begin
-    (define glGetVaryingLocationNV
+    (define gl:GetVaryingLocationNV
       (foreign-lambda
         integer
         "glGetVaryingLocationNV"
         unsigned-integer
         c-string)))
   (begin
-    (define glGetActiveVaryingNV
+    (define gl:GetActiveVaryingNV
       (foreign-lambda
         void
         "glGetActiveVaryingNV"
@@ -10135,10 +10135,10 @@
         u32vector
         c-string)))
   (begin
-    (define glActiveVaryingNV
+    (define gl:ActiveVaryingNV
       (foreign-lambda void "glActiveVaryingNV" unsigned-integer c-string)))
   (begin
-    (define glGetTransformFeedbackVaryingNV
+    (define gl:GetTransformFeedbackVaryingNV
       (foreign-lambda
         void
         "glGetTransformFeedbackVaryingNV"
@@ -10146,7 +10146,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetBooleanIndexedvEXT
+    (define gl:GetBooleanIndexedvEXT
       (foreign-lambda
         void
         "glGetBooleanIndexedvEXT"
@@ -10154,10 +10154,10 @@
         unsigned-integer
         u8vector)))
   (begin
-    (define glVertexAttribI1iEXT
+    (define gl:VertexAttribI1iEXT
       (foreign-lambda void "glVertexAttribI1iEXT" unsigned-integer integer)))
   (begin
-    (define glVertexAttribI2iEXT
+    (define gl:VertexAttribI2iEXT
       (foreign-lambda
         void
         "glVertexAttribI2iEXT"
@@ -10165,7 +10165,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI3iEXT
+    (define gl:VertexAttribI3iEXT
       (foreign-lambda
         void
         "glVertexAttribI3iEXT"
@@ -10174,7 +10174,7 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI4iEXT
+    (define gl:VertexAttribI4iEXT
       (foreign-lambda
         void
         "glVertexAttribI4iEXT"
@@ -10184,14 +10184,14 @@
         integer
         integer)))
   (begin
-    (define glVertexAttribI1uiEXT
+    (define gl:VertexAttribI1uiEXT
       (foreign-lambda
         void
         "glVertexAttribI1uiEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI2uiEXT
+    (define gl:VertexAttribI2uiEXT
       (foreign-lambda
         void
         "glVertexAttribI2uiEXT"
@@ -10199,7 +10199,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI3uiEXT
+    (define gl:VertexAttribI3uiEXT
       (foreign-lambda
         void
         "glVertexAttribI3uiEXT"
@@ -10208,7 +10208,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI4uiEXT
+    (define gl:VertexAttribI4uiEXT
       (foreign-lambda
         void
         "glVertexAttribI4uiEXT"
@@ -10218,87 +10218,87 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribI1ivEXT
+    (define gl:VertexAttribI1ivEXT
       (foreign-lambda
         void
         "glVertexAttribI1ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI2ivEXT
+    (define gl:VertexAttribI2ivEXT
       (foreign-lambda
         void
         "glVertexAttribI2ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI3ivEXT
+    (define gl:VertexAttribI3ivEXT
       (foreign-lambda
         void
         "glVertexAttribI3ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI4ivEXT
+    (define gl:VertexAttribI4ivEXT
       (foreign-lambda
         void
         "glVertexAttribI4ivEXT"
         unsigned-integer
         s32vector)))
   (begin
-    (define glVertexAttribI1uivEXT
+    (define gl:VertexAttribI1uivEXT
       (foreign-lambda
         void
         "glVertexAttribI1uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI2uivEXT
+    (define gl:VertexAttribI2uivEXT
       (foreign-lambda
         void
         "glVertexAttribI2uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI3uivEXT
+    (define gl:VertexAttribI3uivEXT
       (foreign-lambda
         void
         "glVertexAttribI3uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI4uivEXT
+    (define gl:VertexAttribI4uivEXT
       (foreign-lambda
         void
         "glVertexAttribI4uivEXT"
         unsigned-integer
         u32vector)))
   (begin
-    (define glVertexAttribI4bvEXT
+    (define gl:VertexAttribI4bvEXT
       (foreign-lambda void "glVertexAttribI4bvEXT" unsigned-integer c-string)))
   (begin
-    (define glVertexAttribI4svEXT
+    (define gl:VertexAttribI4svEXT
       (foreign-lambda
         void
         "glVertexAttribI4svEXT"
         unsigned-integer
         s16vector)))
   (begin
-    (define glVertexAttribI4ubvEXT
+    (define gl:VertexAttribI4ubvEXT
       (foreign-lambda
         void
         "glVertexAttribI4ubvEXT"
         unsigned-integer
         u8vector)))
   (begin
-    (define glVertexAttribI4usvEXT
+    (define gl:VertexAttribI4usvEXT
       (foreign-lambda
         void
         "glVertexAttribI4usvEXT"
         unsigned-integer
         u16vector)))
   (begin
-    (define glVertexAttribIPointerEXT
+    (define gl:VertexAttribIPointerEXT
       (foreign-lambda
         void
         "glVertexAttribIPointerEXT"
@@ -10308,7 +10308,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetVertexAttribIivEXT
+    (define gl:GetVertexAttribIivEXT
       (foreign-lambda
         void
         "glGetVertexAttribIivEXT"
@@ -10316,7 +10316,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVertexAttribIuivEXT
+    (define gl:GetVertexAttribIuivEXT
       (foreign-lambda
         void
         "glGetVertexAttribIuivEXT"
@@ -10324,26 +10324,26 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glFrameTerminatorGREMEDY
+    (define gl:FrameTerminatorGREMEDY
       (foreign-lambda void "glFrameTerminatorGREMEDY")))
   (begin
-    (define glBeginConditionalRenderNV
+    (define gl:BeginConditionalRenderNV
       (foreign-lambda
         void
         "glBeginConditionalRenderNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEndConditionalRenderNV
+    (define gl:EndConditionalRenderNV
       (foreign-lambda void "glEndConditionalRenderNV")))
   (begin
-    (define glBeginTransformFeedbackEXT
+    (define gl:BeginTransformFeedbackEXT
       (foreign-lambda void "glBeginTransformFeedbackEXT" unsigned-integer)))
   (begin
-    (define glEndTransformFeedbackEXT
+    (define gl:EndTransformFeedbackEXT
       (foreign-lambda void "glEndTransformFeedbackEXT")))
   (begin
-    (define glBindBufferRangeEXT
+    (define gl:BindBufferRangeEXT
       (foreign-lambda
         void
         "glBindBufferRangeEXT"
@@ -10353,7 +10353,7 @@
         integer
         integer)))
   (begin
-    (define glBindBufferOffsetEXT
+    (define gl:BindBufferOffsetEXT
       (foreign-lambda
         void
         "glBindBufferOffsetEXT"
@@ -10362,7 +10362,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glBindBufferBaseEXT
+    (define gl:BindBufferBaseEXT
       (foreign-lambda
         void
         "glBindBufferBaseEXT"
@@ -10370,7 +10370,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTransformFeedbackVaryingsEXT
+    (define gl:TransformFeedbackVaryingsEXT
       (foreign-lambda
         void
         "glTransformFeedbackVaryingsEXT"
@@ -10379,7 +10379,7 @@
         s32vector
         unsigned-integer)))
   (begin
-    (define glGetTransformFeedbackVaryingEXT
+    (define gl:GetTransformFeedbackVaryingEXT
       (foreign-lambda
         void
         "glGetTransformFeedbackVaryingEXT"
@@ -10387,28 +10387,28 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glClientAttribDefaultEXT
+    (define gl:ClientAttribDefaultEXT
       (foreign-lambda void "glClientAttribDefaultEXT" unsigned-integer)))
   (begin
-    (define glPushClientAttribDefaultEXT
+    (define gl:PushClientAttribDefaultEXT
       (foreign-lambda void "glPushClientAttribDefaultEXT" unsigned-integer)))
   (begin
-    (define glMatrixLoadfEXT
+    (define gl:MatrixLoadfEXT
       (foreign-lambda void "glMatrixLoadfEXT" unsigned-integer f32vector)))
   (begin
-    (define glMatrixLoaddEXT
+    (define gl:MatrixLoaddEXT
       (foreign-lambda void "glMatrixLoaddEXT" unsigned-integer f64vector)))
   (begin
-    (define glMatrixMultfEXT
+    (define gl:MatrixMultfEXT
       (foreign-lambda void "glMatrixMultfEXT" unsigned-integer f32vector)))
   (begin
-    (define glMatrixMultdEXT
+    (define gl:MatrixMultdEXT
       (foreign-lambda void "glMatrixMultdEXT" unsigned-integer f64vector)))
   (begin
-    (define glMatrixLoadIdentityEXT
+    (define gl:MatrixLoadIdentityEXT
       (foreign-lambda void "glMatrixLoadIdentityEXT" unsigned-integer)))
   (begin
-    (define glMatrixRotatefEXT
+    (define gl:MatrixRotatefEXT
       (foreign-lambda
         void
         "glMatrixRotatefEXT"
@@ -10418,7 +10418,7 @@
         float
         float)))
   (begin
-    (define glMatrixRotatedEXT
+    (define gl:MatrixRotatedEXT
       (foreign-lambda
         void
         "glMatrixRotatedEXT"
@@ -10428,7 +10428,7 @@
         double
         double)))
   (begin
-    (define glMatrixScalefEXT
+    (define gl:MatrixScalefEXT
       (foreign-lambda
         void
         "glMatrixScalefEXT"
@@ -10437,7 +10437,7 @@
         float
         float)))
   (begin
-    (define glMatrixScaledEXT
+    (define gl:MatrixScaledEXT
       (foreign-lambda
         void
         "glMatrixScaledEXT"
@@ -10446,7 +10446,7 @@
         double
         double)))
   (begin
-    (define glMatrixTranslatefEXT
+    (define gl:MatrixTranslatefEXT
       (foreign-lambda
         void
         "glMatrixTranslatefEXT"
@@ -10455,7 +10455,7 @@
         float
         float)))
   (begin
-    (define glMatrixTranslatedEXT
+    (define gl:MatrixTranslatedEXT
       (foreign-lambda
         void
         "glMatrixTranslatedEXT"
@@ -10464,7 +10464,7 @@
         double
         double)))
   (begin
-    (define glMatrixFrustumEXT
+    (define gl:MatrixFrustumEXT
       (foreign-lambda
         void
         "glMatrixFrustumEXT"
@@ -10476,7 +10476,7 @@
         double
         double)))
   (begin
-    (define glMatrixOrthoEXT
+    (define gl:MatrixOrthoEXT
       (foreign-lambda
         void
         "glMatrixOrthoEXT"
@@ -10488,41 +10488,41 @@
         double
         double)))
   (begin
-    (define glMatrixPopEXT
+    (define gl:MatrixPopEXT
       (foreign-lambda void "glMatrixPopEXT" unsigned-integer)))
   (begin
-    (define glMatrixPushEXT
+    (define gl:MatrixPushEXT
       (foreign-lambda void "glMatrixPushEXT" unsigned-integer)))
   (begin
-    (define glMatrixLoadTransposefEXT
+    (define gl:MatrixLoadTransposefEXT
       (foreign-lambda
         void
         "glMatrixLoadTransposefEXT"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMatrixLoadTransposedEXT
+    (define gl:MatrixLoadTransposedEXT
       (foreign-lambda
         void
         "glMatrixLoadTransposedEXT"
         unsigned-integer
         f64vector)))
   (begin
-    (define glMatrixMultTransposefEXT
+    (define gl:MatrixMultTransposefEXT
       (foreign-lambda
         void
         "glMatrixMultTransposefEXT"
         unsigned-integer
         f32vector)))
   (begin
-    (define glMatrixMultTransposedEXT
+    (define gl:MatrixMultTransposedEXT
       (foreign-lambda
         void
         "glMatrixMultTransposedEXT"
         unsigned-integer
         f64vector)))
   (begin
-    (define glTextureParameterfEXT
+    (define gl:TextureParameterfEXT
       (foreign-lambda
         void
         "glTextureParameterfEXT"
@@ -10531,7 +10531,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glTextureParameterfvEXT
+    (define gl:TextureParameterfvEXT
       (foreign-lambda
         void
         "glTextureParameterfvEXT"
@@ -10540,7 +10540,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glTextureParameteriEXT
+    (define gl:TextureParameteriEXT
       (foreign-lambda
         void
         "glTextureParameteriEXT"
@@ -10549,7 +10549,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glTextureParameterivEXT
+    (define gl:TextureParameterivEXT
       (foreign-lambda
         void
         "glTextureParameterivEXT"
@@ -10558,7 +10558,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glTextureImage1DEXT
+    (define gl:TextureImage1DEXT
       (foreign-lambda
         void
         "glTextureImage1DEXT"
@@ -10572,7 +10572,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTextureImage2DEXT
+    (define gl:TextureImage2DEXT
       (foreign-lambda
         void
         "glTextureImage2DEXT"
@@ -10587,7 +10587,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTextureSubImage1DEXT
+    (define gl:TextureSubImage1DEXT
       (foreign-lambda
         void
         "glTextureSubImage1DEXT"
@@ -10600,7 +10600,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTextureSubImage2DEXT
+    (define gl:TextureSubImage2DEXT
       (foreign-lambda
         void
         "glTextureSubImage2DEXT"
@@ -10615,7 +10615,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyTextureImage1DEXT
+    (define gl:CopyTextureImage1DEXT
       (foreign-lambda
         void
         "glCopyTextureImage1DEXT"
@@ -10628,7 +10628,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyTextureImage2DEXT
+    (define gl:CopyTextureImage2DEXT
       (foreign-lambda
         void
         "glCopyTextureImage2DEXT"
@@ -10642,7 +10642,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyTextureSubImage1DEXT
+    (define gl:CopyTextureSubImage1DEXT
       (foreign-lambda
         void
         "glCopyTextureSubImage1DEXT"
@@ -10654,7 +10654,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glCopyTextureSubImage2DEXT
+    (define gl:CopyTextureSubImage2DEXT
       (foreign-lambda
         void
         "glCopyTextureSubImage2DEXT"
@@ -10668,7 +10668,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetTextureImageEXT
+    (define gl:GetTextureImageEXT
       (foreign-lambda
         void
         "glGetTextureImageEXT"
@@ -10679,7 +10679,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetTextureParameterfvEXT
+    (define gl:GetTextureParameterfvEXT
       (foreign-lambda
         void
         "glGetTextureParameterfvEXT"
@@ -10688,7 +10688,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetTextureParameterivEXT
+    (define gl:GetTextureParameterivEXT
       (foreign-lambda
         void
         "glGetTextureParameterivEXT"
@@ -10697,7 +10697,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTextureLevelParameterfvEXT
+    (define gl:GetTextureLevelParameterfvEXT
       (foreign-lambda
         void
         "glGetTextureLevelParameterfvEXT"
@@ -10707,7 +10707,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetTextureLevelParameterivEXT
+    (define gl:GetTextureLevelParameterivEXT
       (foreign-lambda
         void
         "glGetTextureLevelParameterivEXT"
@@ -10717,7 +10717,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glTextureImage3DEXT
+    (define gl:TextureImage3DEXT
       (foreign-lambda
         void
         "glTextureImage3DEXT"
@@ -10733,7 +10733,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glTextureSubImage3DEXT
+    (define gl:TextureSubImage3DEXT
       (foreign-lambda
         void
         "glTextureSubImage3DEXT"
@@ -10750,7 +10750,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyTextureSubImage3DEXT
+    (define gl:CopyTextureSubImage3DEXT
       (foreign-lambda
         void
         "glCopyTextureSubImage3DEXT"
@@ -10765,7 +10765,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexParameterfEXT
+    (define gl:MultiTexParameterfEXT
       (foreign-lambda
         void
         "glMultiTexParameterfEXT"
@@ -10774,7 +10774,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glMultiTexParameterfvEXT
+    (define gl:MultiTexParameterfvEXT
       (foreign-lambda
         void
         "glMultiTexParameterfvEXT"
@@ -10783,7 +10783,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexParameteriEXT
+    (define gl:MultiTexParameteriEXT
       (foreign-lambda
         void
         "glMultiTexParameteriEXT"
@@ -10792,7 +10792,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMultiTexParameterivEXT
+    (define gl:MultiTexParameterivEXT
       (foreign-lambda
         void
         "glMultiTexParameterivEXT"
@@ -10801,7 +10801,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexImage1DEXT
+    (define gl:MultiTexImage1DEXT
       (foreign-lambda
         void
         "glMultiTexImage1DEXT"
@@ -10815,7 +10815,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiTexImage2DEXT
+    (define gl:MultiTexImage2DEXT
       (foreign-lambda
         void
         "glMultiTexImage2DEXT"
@@ -10830,7 +10830,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiTexSubImage1DEXT
+    (define gl:MultiTexSubImage1DEXT
       (foreign-lambda
         void
         "glMultiTexSubImage1DEXT"
@@ -10843,7 +10843,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiTexSubImage2DEXT
+    (define gl:MultiTexSubImage2DEXT
       (foreign-lambda
         void
         "glMultiTexSubImage2DEXT"
@@ -10858,7 +10858,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyMultiTexImage1DEXT
+    (define gl:CopyMultiTexImage1DEXT
       (foreign-lambda
         void
         "glCopyMultiTexImage1DEXT"
@@ -10871,7 +10871,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyMultiTexImage2DEXT
+    (define gl:CopyMultiTexImage2DEXT
       (foreign-lambda
         void
         "glCopyMultiTexImage2DEXT"
@@ -10885,7 +10885,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glCopyMultiTexSubImage1DEXT
+    (define gl:CopyMultiTexSubImage1DEXT
       (foreign-lambda
         void
         "glCopyMultiTexSubImage1DEXT"
@@ -10897,7 +10897,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glCopyMultiTexSubImage2DEXT
+    (define gl:CopyMultiTexSubImage2DEXT
       (foreign-lambda
         void
         "glCopyMultiTexSubImage2DEXT"
@@ -10911,7 +10911,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetMultiTexImageEXT
+    (define gl:GetMultiTexImageEXT
       (foreign-lambda
         void
         "glGetMultiTexImageEXT"
@@ -10922,7 +10922,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetMultiTexParameterfvEXT
+    (define gl:GetMultiTexParameterfvEXT
       (foreign-lambda
         void
         "glGetMultiTexParameterfvEXT"
@@ -10931,7 +10931,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMultiTexParameterivEXT
+    (define gl:GetMultiTexParameterivEXT
       (foreign-lambda
         void
         "glGetMultiTexParameterivEXT"
@@ -10940,7 +10940,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMultiTexLevelParameterfvEXT
+    (define gl:GetMultiTexLevelParameterfvEXT
       (foreign-lambda
         void
         "glGetMultiTexLevelParameterfvEXT"
@@ -10950,7 +10950,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMultiTexLevelParameterivEXT
+    (define gl:GetMultiTexLevelParameterivEXT
       (foreign-lambda
         void
         "glGetMultiTexLevelParameterivEXT"
@@ -10960,7 +10960,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexImage3DEXT
+    (define gl:MultiTexImage3DEXT
       (foreign-lambda
         void
         "glMultiTexImage3DEXT"
@@ -10976,7 +10976,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiTexSubImage3DEXT
+    (define gl:MultiTexSubImage3DEXT
       (foreign-lambda
         void
         "glMultiTexSubImage3DEXT"
@@ -10993,7 +10993,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCopyMultiTexSubImage3DEXT
+    (define gl:CopyMultiTexSubImage3DEXT
       (foreign-lambda
         void
         "glCopyMultiTexSubImage3DEXT"
@@ -11008,7 +11008,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindMultiTextureEXT
+    (define gl:BindMultiTextureEXT
       (foreign-lambda
         void
         "glBindMultiTextureEXT"
@@ -11016,21 +11016,21 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEnableClientStateIndexedEXT
+    (define gl:EnableClientStateIndexedEXT
       (foreign-lambda
         void
         "glEnableClientStateIndexedEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDisableClientStateIndexedEXT
+    (define gl:DisableClientStateIndexedEXT
       (foreign-lambda
         void
         "glDisableClientStateIndexedEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexCoordPointerEXT
+    (define gl:MultiTexCoordPointerEXT
       (foreign-lambda
         void
         "glMultiTexCoordPointerEXT"
@@ -11040,7 +11040,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glMultiTexEnvfEXT
+    (define gl:MultiTexEnvfEXT
       (foreign-lambda
         void
         "glMultiTexEnvfEXT"
@@ -11049,7 +11049,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glMultiTexEnvfvEXT
+    (define gl:MultiTexEnvfvEXT
       (foreign-lambda
         void
         "glMultiTexEnvfvEXT"
@@ -11058,7 +11058,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexEnviEXT
+    (define gl:MultiTexEnviEXT
       (foreign-lambda
         void
         "glMultiTexEnviEXT"
@@ -11067,7 +11067,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMultiTexEnvivEXT
+    (define gl:MultiTexEnvivEXT
       (foreign-lambda
         void
         "glMultiTexEnvivEXT"
@@ -11076,7 +11076,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexGendEXT
+    (define gl:MultiTexGendEXT
       (foreign-lambda
         void
         "glMultiTexGendEXT"
@@ -11085,7 +11085,7 @@
         unsigned-integer
         double)))
   (begin
-    (define glMultiTexGendvEXT
+    (define gl:MultiTexGendvEXT
       (foreign-lambda
         void
         "glMultiTexGendvEXT"
@@ -11094,7 +11094,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glMultiTexGenfEXT
+    (define gl:MultiTexGenfEXT
       (foreign-lambda
         void
         "glMultiTexGenfEXT"
@@ -11103,7 +11103,7 @@
         unsigned-integer
         float)))
   (begin
-    (define glMultiTexGenfvEXT
+    (define gl:MultiTexGenfvEXT
       (foreign-lambda
         void
         "glMultiTexGenfvEXT"
@@ -11112,7 +11112,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glMultiTexGeniEXT
+    (define gl:MultiTexGeniEXT
       (foreign-lambda
         void
         "glMultiTexGeniEXT"
@@ -11121,7 +11121,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glMultiTexGenivEXT
+    (define gl:MultiTexGenivEXT
       (foreign-lambda
         void
         "glMultiTexGenivEXT"
@@ -11130,7 +11130,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMultiTexEnvfvEXT
+    (define gl:GetMultiTexEnvfvEXT
       (foreign-lambda
         void
         "glGetMultiTexEnvfvEXT"
@@ -11139,7 +11139,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMultiTexEnvivEXT
+    (define gl:GetMultiTexEnvivEXT
       (foreign-lambda
         void
         "glGetMultiTexEnvivEXT"
@@ -11148,7 +11148,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMultiTexGendvEXT
+    (define gl:GetMultiTexGendvEXT
       (foreign-lambda
         void
         "glGetMultiTexGendvEXT"
@@ -11157,7 +11157,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetMultiTexGenfvEXT
+    (define gl:GetMultiTexGenfvEXT
       (foreign-lambda
         void
         "glGetMultiTexGenfvEXT"
@@ -11166,7 +11166,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetMultiTexGenivEXT
+    (define gl:GetMultiTexGenivEXT
       (foreign-lambda
         void
         "glGetMultiTexGenivEXT"
@@ -11175,7 +11175,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetFloatIndexedvEXT
+    (define gl:GetFloatIndexedvEXT
       (foreign-lambda
         void
         "glGetFloatIndexedvEXT"
@@ -11183,7 +11183,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetDoubleIndexedvEXT
+    (define gl:GetDoubleIndexedvEXT
       (foreign-lambda
         void
         "glGetDoubleIndexedvEXT"
@@ -11191,7 +11191,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetPointerIndexedvEXT
+    (define gl:GetPointerIndexedvEXT
       (foreign-lambda
         void
         "glGetPointerIndexedvEXT"
@@ -11199,7 +11199,7 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glCompressedTextureImage3DEXT
+    (define gl:CompressedTextureImage3DEXT
       (foreign-lambda
         void
         "glCompressedTextureImage3DEXT"
@@ -11214,7 +11214,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTextureImage2DEXT
+    (define gl:CompressedTextureImage2DEXT
       (foreign-lambda
         void
         "glCompressedTextureImage2DEXT"
@@ -11228,7 +11228,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTextureImage1DEXT
+    (define gl:CompressedTextureImage1DEXT
       (foreign-lambda
         void
         "glCompressedTextureImage1DEXT"
@@ -11241,7 +11241,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTextureSubImage3DEXT
+    (define gl:CompressedTextureSubImage3DEXT
       (foreign-lambda
         void
         "glCompressedTextureSubImage3DEXT"
@@ -11258,7 +11258,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTextureSubImage2DEXT
+    (define gl:CompressedTextureSubImage2DEXT
       (foreign-lambda
         void
         "glCompressedTextureSubImage2DEXT"
@@ -11273,7 +11273,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedTextureSubImage1DEXT
+    (define gl:CompressedTextureSubImage1DEXT
       (foreign-lambda
         void
         "glCompressedTextureSubImage1DEXT"
@@ -11286,7 +11286,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetCompressedTextureImageEXT
+    (define gl:GetCompressedTextureImageEXT
       (foreign-lambda
         void
         "glGetCompressedTextureImageEXT"
@@ -11295,7 +11295,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexImage3DEXT
+    (define gl:CompressedMultiTexImage3DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexImage3DEXT"
@@ -11310,7 +11310,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexImage2DEXT
+    (define gl:CompressedMultiTexImage2DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexImage2DEXT"
@@ -11324,7 +11324,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexImage1DEXT
+    (define gl:CompressedMultiTexImage1DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexImage1DEXT"
@@ -11337,7 +11337,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexSubImage3DEXT
+    (define gl:CompressedMultiTexSubImage3DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexSubImage3DEXT"
@@ -11354,7 +11354,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexSubImage2DEXT
+    (define gl:CompressedMultiTexSubImage2DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexSubImage2DEXT"
@@ -11369,7 +11369,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glCompressedMultiTexSubImage1DEXT
+    (define gl:CompressedMultiTexSubImage1DEXT
       (foreign-lambda
         void
         "glCompressedMultiTexSubImage1DEXT"
@@ -11382,7 +11382,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetCompressedMultiTexImageEXT
+    (define gl:GetCompressedMultiTexImageEXT
       (foreign-lambda
         void
         "glGetCompressedMultiTexImageEXT"
@@ -11391,7 +11391,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glNamedProgramStringEXT
+    (define gl:NamedProgramStringEXT
       (foreign-lambda
         void
         "glNamedProgramStringEXT"
@@ -11401,7 +11401,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glNamedProgramLocalParameter4dEXT
+    (define gl:NamedProgramLocalParameter4dEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameter4dEXT"
@@ -11413,7 +11413,7 @@
         double
         double)))
   (begin
-    (define glNamedProgramLocalParameter4dvEXT
+    (define gl:NamedProgramLocalParameter4dvEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameter4dvEXT"
@@ -11422,7 +11422,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glNamedProgramLocalParameter4fEXT
+    (define gl:NamedProgramLocalParameter4fEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameter4fEXT"
@@ -11434,7 +11434,7 @@
         float
         float)))
   (begin
-    (define glNamedProgramLocalParameter4fvEXT
+    (define gl:NamedProgramLocalParameter4fvEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameter4fvEXT"
@@ -11443,7 +11443,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetNamedProgramLocalParameterdvEXT
+    (define gl:GetNamedProgramLocalParameterdvEXT
       (foreign-lambda
         void
         "glGetNamedProgramLocalParameterdvEXT"
@@ -11452,7 +11452,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glGetNamedProgramLocalParameterfvEXT
+    (define gl:GetNamedProgramLocalParameterfvEXT
       (foreign-lambda
         void
         "glGetNamedProgramLocalParameterfvEXT"
@@ -11461,7 +11461,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetNamedProgramivEXT
+    (define gl:GetNamedProgramivEXT
       (foreign-lambda
         void
         "glGetNamedProgramivEXT"
@@ -11470,7 +11470,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetNamedProgramStringEXT
+    (define gl:GetNamedProgramStringEXT
       (foreign-lambda
         void
         "glGetNamedProgramStringEXT"
@@ -11479,7 +11479,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glNamedProgramLocalParameters4fvEXT
+    (define gl:NamedProgramLocalParameters4fvEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameters4fvEXT"
@@ -11489,7 +11489,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glNamedProgramLocalParameterI4iEXT
+    (define gl:NamedProgramLocalParameterI4iEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameterI4iEXT"
@@ -11501,7 +11501,7 @@
         integer
         integer)))
   (begin
-    (define glNamedProgramLocalParameterI4ivEXT
+    (define gl:NamedProgramLocalParameterI4ivEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameterI4ivEXT"
@@ -11510,7 +11510,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glNamedProgramLocalParametersI4ivEXT
+    (define gl:NamedProgramLocalParametersI4ivEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParametersI4ivEXT"
@@ -11520,7 +11520,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glNamedProgramLocalParameterI4uiEXT
+    (define gl:NamedProgramLocalParameterI4uiEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameterI4uiEXT"
@@ -11532,7 +11532,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNamedProgramLocalParameterI4uivEXT
+    (define gl:NamedProgramLocalParameterI4uivEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParameterI4uivEXT"
@@ -11541,7 +11541,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glNamedProgramLocalParametersI4uivEXT
+    (define gl:NamedProgramLocalParametersI4uivEXT
       (foreign-lambda
         void
         "glNamedProgramLocalParametersI4uivEXT"
@@ -11551,7 +11551,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetNamedProgramLocalParameterIivEXT
+    (define gl:GetNamedProgramLocalParameterIivEXT
       (foreign-lambda
         void
         "glGetNamedProgramLocalParameterIivEXT"
@@ -11560,7 +11560,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetNamedProgramLocalParameterIuivEXT
+    (define gl:GetNamedProgramLocalParameterIuivEXT
       (foreign-lambda
         void
         "glGetNamedProgramLocalParameterIuivEXT"
@@ -11569,7 +11569,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glTextureParameterIivEXT
+    (define gl:TextureParameterIivEXT
       (foreign-lambda
         void
         "glTextureParameterIivEXT"
@@ -11578,7 +11578,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glTextureParameterIuivEXT
+    (define gl:TextureParameterIuivEXT
       (foreign-lambda
         void
         "glTextureParameterIuivEXT"
@@ -11587,7 +11587,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetTextureParameterIivEXT
+    (define gl:GetTextureParameterIivEXT
       (foreign-lambda
         void
         "glGetTextureParameterIivEXT"
@@ -11596,7 +11596,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetTextureParameterIuivEXT
+    (define gl:GetTextureParameterIuivEXT
       (foreign-lambda
         void
         "glGetTextureParameterIuivEXT"
@@ -11605,7 +11605,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glMultiTexParameterIivEXT
+    (define gl:MultiTexParameterIivEXT
       (foreign-lambda
         void
         "glMultiTexParameterIivEXT"
@@ -11614,7 +11614,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glMultiTexParameterIuivEXT
+    (define gl:MultiTexParameterIuivEXT
       (foreign-lambda
         void
         "glMultiTexParameterIuivEXT"
@@ -11623,7 +11623,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetMultiTexParameterIivEXT
+    (define gl:GetMultiTexParameterIivEXT
       (foreign-lambda
         void
         "glGetMultiTexParameterIivEXT"
@@ -11632,7 +11632,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetMultiTexParameterIuivEXT
+    (define gl:GetMultiTexParameterIuivEXT
       (foreign-lambda
         void
         "glGetMultiTexParameterIuivEXT"
@@ -11641,7 +11641,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramUniform1fEXT
+    (define gl:ProgramUniform1fEXT
       (foreign-lambda
         void
         "glProgramUniform1fEXT"
@@ -11649,7 +11649,7 @@
         integer
         float)))
   (begin
-    (define glProgramUniform2fEXT
+    (define gl:ProgramUniform2fEXT
       (foreign-lambda
         void
         "glProgramUniform2fEXT"
@@ -11658,7 +11658,7 @@
         float
         float)))
   (begin
-    (define glProgramUniform3fEXT
+    (define gl:ProgramUniform3fEXT
       (foreign-lambda
         void
         "glProgramUniform3fEXT"
@@ -11668,7 +11668,7 @@
         float
         float)))
   (begin
-    (define glProgramUniform4fEXT
+    (define gl:ProgramUniform4fEXT
       (foreign-lambda
         void
         "glProgramUniform4fEXT"
@@ -11679,7 +11679,7 @@
         float
         float)))
   (begin
-    (define glProgramUniform1iEXT
+    (define gl:ProgramUniform1iEXT
       (foreign-lambda
         void
         "glProgramUniform1iEXT"
@@ -11687,7 +11687,7 @@
         integer
         integer)))
   (begin
-    (define glProgramUniform2iEXT
+    (define gl:ProgramUniform2iEXT
       (foreign-lambda
         void
         "glProgramUniform2iEXT"
@@ -11696,7 +11696,7 @@
         integer
         integer)))
   (begin
-    (define glProgramUniform3iEXT
+    (define gl:ProgramUniform3iEXT
       (foreign-lambda
         void
         "glProgramUniform3iEXT"
@@ -11706,7 +11706,7 @@
         integer
         integer)))
   (begin
-    (define glProgramUniform4iEXT
+    (define gl:ProgramUniform4iEXT
       (foreign-lambda
         void
         "glProgramUniform4iEXT"
@@ -11717,7 +11717,7 @@
         integer
         integer)))
   (begin
-    (define glProgramUniform1fvEXT
+    (define gl:ProgramUniform1fvEXT
       (foreign-lambda
         void
         "glProgramUniform1fvEXT"
@@ -11726,7 +11726,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramUniform2fvEXT
+    (define gl:ProgramUniform2fvEXT
       (foreign-lambda
         void
         "glProgramUniform2fvEXT"
@@ -11735,7 +11735,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramUniform3fvEXT
+    (define gl:ProgramUniform3fvEXT
       (foreign-lambda
         void
         "glProgramUniform3fvEXT"
@@ -11744,7 +11744,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramUniform4fvEXT
+    (define gl:ProgramUniform4fvEXT
       (foreign-lambda
         void
         "glProgramUniform4fvEXT"
@@ -11753,7 +11753,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glProgramUniform1ivEXT
+    (define gl:ProgramUniform1ivEXT
       (foreign-lambda
         void
         "glProgramUniform1ivEXT"
@@ -11762,7 +11762,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramUniform2ivEXT
+    (define gl:ProgramUniform2ivEXT
       (foreign-lambda
         void
         "glProgramUniform2ivEXT"
@@ -11771,7 +11771,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramUniform3ivEXT
+    (define gl:ProgramUniform3ivEXT
       (foreign-lambda
         void
         "glProgramUniform3ivEXT"
@@ -11780,7 +11780,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramUniform4ivEXT
+    (define gl:ProgramUniform4ivEXT
       (foreign-lambda
         void
         "glProgramUniform4ivEXT"
@@ -11789,7 +11789,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glProgramUniformMatrix2fvEXT
+    (define gl:ProgramUniformMatrix2fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2fvEXT"
@@ -11799,7 +11799,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix3fvEXT
+    (define gl:ProgramUniformMatrix3fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3fvEXT"
@@ -11809,7 +11809,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix4fvEXT
+    (define gl:ProgramUniformMatrix4fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4fvEXT"
@@ -11819,7 +11819,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix2x3fvEXT
+    (define gl:ProgramUniformMatrix2x3fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2x3fvEXT"
@@ -11829,7 +11829,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix3x2fvEXT
+    (define gl:ProgramUniformMatrix3x2fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3x2fvEXT"
@@ -11839,7 +11839,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix2x4fvEXT
+    (define gl:ProgramUniformMatrix2x4fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix2x4fvEXT"
@@ -11849,7 +11849,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix4x2fvEXT
+    (define gl:ProgramUniformMatrix4x2fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4x2fvEXT"
@@ -11859,7 +11859,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix3x4fvEXT
+    (define gl:ProgramUniformMatrix3x4fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix3x4fvEXT"
@@ -11869,7 +11869,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniformMatrix4x3fvEXT
+    (define gl:ProgramUniformMatrix4x3fvEXT
       (foreign-lambda
         void
         "glProgramUniformMatrix4x3fvEXT"
@@ -11879,7 +11879,7 @@
         unsigned-char
         f32vector)))
   (begin
-    (define glProgramUniform1uiEXT
+    (define gl:ProgramUniform1uiEXT
       (foreign-lambda
         void
         "glProgramUniform1uiEXT"
@@ -11887,7 +11887,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glProgramUniform2uiEXT
+    (define gl:ProgramUniform2uiEXT
       (foreign-lambda
         void
         "glProgramUniform2uiEXT"
@@ -11896,7 +11896,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramUniform3uiEXT
+    (define gl:ProgramUniform3uiEXT
       (foreign-lambda
         void
         "glProgramUniform3uiEXT"
@@ -11906,7 +11906,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramUniform4uiEXT
+    (define gl:ProgramUniform4uiEXT
       (foreign-lambda
         void
         "glProgramUniform4uiEXT"
@@ -11917,7 +11917,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glProgramUniform1uivEXT
+    (define gl:ProgramUniform1uivEXT
       (foreign-lambda
         void
         "glProgramUniform1uivEXT"
@@ -11926,7 +11926,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramUniform2uivEXT
+    (define gl:ProgramUniform2uivEXT
       (foreign-lambda
         void
         "glProgramUniform2uivEXT"
@@ -11935,7 +11935,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramUniform3uivEXT
+    (define gl:ProgramUniform3uivEXT
       (foreign-lambda
         void
         "glProgramUniform3uivEXT"
@@ -11944,7 +11944,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glProgramUniform4uivEXT
+    (define gl:ProgramUniform4uivEXT
       (foreign-lambda
         void
         "glProgramUniform4uivEXT"
@@ -11953,7 +11953,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glNamedBufferDataEXT
+    (define gl:NamedBufferDataEXT
       (foreign-lambda
         void
         "glNamedBufferDataEXT"
@@ -11962,7 +11962,7 @@
         (c-pointer void)
         unsigned-integer)))
   (begin
-    (define glNamedBufferSubDataEXT
+    (define gl:NamedBufferSubDataEXT
       (foreign-lambda
         void
         "glNamedBufferSubDataEXT"
@@ -11971,17 +11971,17 @@
         integer
         (c-pointer void))))
   (begin
-    (define glMapNamedBufferEXT
+    (define gl:MapNamedBufferEXT
       (foreign-lambda
         (c-pointer void)
         "glMapNamedBufferEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glUnmapNamedBufferEXT
+    (define gl:UnmapNamedBufferEXT
       (foreign-lambda unsigned-char "glUnmapNamedBufferEXT" unsigned-integer)))
   (begin
-    (define glGetNamedBufferParameterivEXT
+    (define gl:GetNamedBufferParameterivEXT
       (foreign-lambda
         void
         "glGetNamedBufferParameterivEXT"
@@ -11989,7 +11989,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetNamedBufferPointervEXT
+    (define gl:GetNamedBufferPointervEXT
       (foreign-lambda
         void
         "glGetNamedBufferPointervEXT"
@@ -11997,7 +11997,7 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glGetNamedBufferSubDataEXT
+    (define gl:GetNamedBufferSubDataEXT
       (foreign-lambda
         void
         "glGetNamedBufferSubDataEXT"
@@ -12006,7 +12006,7 @@
         integer
         (c-pointer void))))
   (begin
-    (define glTextureBufferEXT
+    (define gl:TextureBufferEXT
       (foreign-lambda
         void
         "glTextureBufferEXT"
@@ -12015,7 +12015,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexBufferEXT
+    (define gl:MultiTexBufferEXT
       (foreign-lambda
         void
         "glMultiTexBufferEXT"
@@ -12024,7 +12024,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNamedRenderbufferStorageEXT
+    (define gl:NamedRenderbufferStorageEXT
       (foreign-lambda
         void
         "glNamedRenderbufferStorageEXT"
@@ -12033,7 +12033,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetNamedRenderbufferParameterivEXT
+    (define gl:GetNamedRenderbufferParameterivEXT
       (foreign-lambda
         void
         "glGetNamedRenderbufferParameterivEXT"
@@ -12041,14 +12041,14 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glCheckNamedFramebufferStatusEXT
+    (define gl:CheckNamedFramebufferStatusEXT
       (foreign-lambda
         unsigned-integer
         "glCheckNamedFramebufferStatusEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNamedFramebufferTexture1DEXT
+    (define gl:NamedFramebufferTexture1DEXT
       (foreign-lambda
         void
         "glNamedFramebufferTexture1DEXT"
@@ -12058,7 +12058,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glNamedFramebufferTexture2DEXT
+    (define gl:NamedFramebufferTexture2DEXT
       (foreign-lambda
         void
         "glNamedFramebufferTexture2DEXT"
@@ -12068,7 +12068,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glNamedFramebufferTexture3DEXT
+    (define gl:NamedFramebufferTexture3DEXT
       (foreign-lambda
         void
         "glNamedFramebufferTexture3DEXT"
@@ -12079,7 +12079,7 @@
         integer
         integer)))
   (begin
-    (define glNamedFramebufferRenderbufferEXT
+    (define gl:NamedFramebufferRenderbufferEXT
       (foreign-lambda
         void
         "glNamedFramebufferRenderbufferEXT"
@@ -12088,7 +12088,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetNamedFramebufferAttachmentParameterivEXT
+    (define gl:GetNamedFramebufferAttachmentParameterivEXT
       (foreign-lambda
         void
         "glGetNamedFramebufferAttachmentParameterivEXT"
@@ -12097,28 +12097,28 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGenerateTextureMipmapEXT
+    (define gl:GenerateTextureMipmapEXT
       (foreign-lambda
         void
         "glGenerateTextureMipmapEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGenerateMultiTexMipmapEXT
+    (define gl:GenerateMultiTexMipmapEXT
       (foreign-lambda
         void
         "glGenerateMultiTexMipmapEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFramebufferDrawBufferEXT
+    (define gl:FramebufferDrawBufferEXT
       (foreign-lambda
         void
         "glFramebufferDrawBufferEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFramebufferDrawBuffersEXT
+    (define gl:FramebufferDrawBuffersEXT
       (foreign-lambda
         void
         "glFramebufferDrawBuffersEXT"
@@ -12126,14 +12126,14 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glFramebufferReadBufferEXT
+    (define gl:FramebufferReadBufferEXT
       (foreign-lambda
         void
         "glFramebufferReadBufferEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetFramebufferParameterivEXT
+    (define gl:GetFramebufferParameterivEXT
       (foreign-lambda
         void
         "glGetFramebufferParameterivEXT"
@@ -12141,7 +12141,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glNamedRenderbufferStorageMultisampleEXT
+    (define gl:NamedRenderbufferStorageMultisampleEXT
       (foreign-lambda
         void
         "glNamedRenderbufferStorageMultisampleEXT"
@@ -12151,7 +12151,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNamedRenderbufferStorageMultisampleCoverageEXT
+    (define gl:NamedRenderbufferStorageMultisampleCoverageEXT
       (foreign-lambda
         void
         "glNamedRenderbufferStorageMultisampleCoverageEXT"
@@ -12162,7 +12162,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNamedFramebufferTextureEXT
+    (define gl:NamedFramebufferTextureEXT
       (foreign-lambda
         void
         "glNamedFramebufferTextureEXT"
@@ -12171,7 +12171,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glNamedFramebufferTextureLayerEXT
+    (define gl:NamedFramebufferTextureLayerEXT
       (foreign-lambda
         void
         "glNamedFramebufferTextureLayerEXT"
@@ -12181,7 +12181,7 @@
         integer
         integer)))
   (begin
-    (define glNamedFramebufferTextureFaceEXT
+    (define gl:NamedFramebufferTextureFaceEXT
       (foreign-lambda
         void
         "glNamedFramebufferTextureFaceEXT"
@@ -12191,7 +12191,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glTextureRenderbufferEXT
+    (define gl:TextureRenderbufferEXT
       (foreign-lambda
         void
         "glTextureRenderbufferEXT"
@@ -12199,7 +12199,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMultiTexRenderbufferEXT
+    (define gl:MultiTexRenderbufferEXT
       (foreign-lambda
         void
         "glMultiTexRenderbufferEXT"
@@ -12207,7 +12207,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetMultisamplefvNV
+    (define gl:GetMultisamplefvNV
       (foreign-lambda
         void
         "glGetMultisamplefvNV"
@@ -12215,61 +12215,61 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glSampleMaskIndexedNV
+    (define gl:SampleMaskIndexedNV
       (foreign-lambda
         void
         "glSampleMaskIndexedNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexRenderbufferNV
+    (define gl:TexRenderbufferNV
       (foreign-lambda
         void
         "glTexRenderbufferNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBindTransformFeedbackNV
+    (define gl:BindTransformFeedbackNV
       (foreign-lambda
         void
         "glBindTransformFeedbackNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDeleteTransformFeedbacksNV
+    (define gl:DeleteTransformFeedbacksNV
       (foreign-lambda
         void
         "glDeleteTransformFeedbacksNV"
         unsigned-integer
         u32vector)))
   (begin
-    (define glGenTransformFeedbacksNV
+    (define gl:GenTransformFeedbacksNV
       (foreign-lambda
         void
         "glGenTransformFeedbacksNV"
         unsigned-integer
         u32vector)))
   (begin
-    (define glIsTransformFeedbackNV
+    (define gl:IsTransformFeedbackNV
       (foreign-lambda
         unsigned-char
         "glIsTransformFeedbackNV"
         unsigned-integer)))
   (begin
-    (define glPauseTransformFeedbackNV
+    (define gl:PauseTransformFeedbackNV
       (foreign-lambda void "glPauseTransformFeedbackNV")))
   (begin
-    (define glResumeTransformFeedbackNV
+    (define gl:ResumeTransformFeedbackNV
       (foreign-lambda void "glResumeTransformFeedbackNV")))
   (begin
-    (define glDrawTransformFeedbackNV
+    (define gl:DrawTransformFeedbackNV
       (foreign-lambda
         void
         "glDrawTransformFeedbackNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetPerfMonitorGroupsAMD
+    (define gl:GetPerfMonitorGroupsAMD
       (foreign-lambda
         void
         "glGetPerfMonitorGroupsAMD"
@@ -12277,7 +12277,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetPerfMonitorCountersAMD
+    (define gl:GetPerfMonitorCountersAMD
       (foreign-lambda
         void
         "glGetPerfMonitorCountersAMD"
@@ -12287,7 +12287,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetPerfMonitorGroupStringAMD
+    (define gl:GetPerfMonitorGroupStringAMD
       (foreign-lambda
         void
         "glGetPerfMonitorGroupStringAMD"
@@ -12296,7 +12296,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetPerfMonitorCounterStringAMD
+    (define gl:GetPerfMonitorCounterStringAMD
       (foreign-lambda
         void
         "glGetPerfMonitorCounterStringAMD"
@@ -12306,7 +12306,7 @@
         u32vector
         c-string)))
   (begin
-    (define glGetPerfMonitorCounterInfoAMD
+    (define gl:GetPerfMonitorCounterInfoAMD
       (foreign-lambda
         void
         "glGetPerfMonitorCounterInfoAMD"
@@ -12315,17 +12315,17 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGenPerfMonitorsAMD
+    (define gl:GenPerfMonitorsAMD
       (foreign-lambda void "glGenPerfMonitorsAMD" unsigned-integer u32vector)))
   (begin
-    (define glDeletePerfMonitorsAMD
+    (define gl:DeletePerfMonitorsAMD
       (foreign-lambda
         void
         "glDeletePerfMonitorsAMD"
         unsigned-integer
         u32vector)))
   (begin
-    (define glSelectPerfMonitorCountersAMD
+    (define gl:SelectPerfMonitorCountersAMD
       (foreign-lambda
         void
         "glSelectPerfMonitorCountersAMD"
@@ -12335,13 +12335,13 @@
         integer
         u32vector)))
   (begin
-    (define glBeginPerfMonitorAMD
+    (define gl:BeginPerfMonitorAMD
       (foreign-lambda void "glBeginPerfMonitorAMD" unsigned-integer)))
   (begin
-    (define glEndPerfMonitorAMD
+    (define gl:EndPerfMonitorAMD
       (foreign-lambda void "glEndPerfMonitorAMD" unsigned-integer)))
   (begin
-    (define glGetPerfMonitorCounterDataAMD
+    (define gl:GetPerfMonitorCounterDataAMD
       (foreign-lambda
         void
         "glGetPerfMonitorCounterDataAMD"
@@ -12351,16 +12351,16 @@
         u32vector
         s32vector)))
   (begin
-    (define glTessellationFactorAMD
+    (define gl:TessellationFactorAMD
       (foreign-lambda void "glTessellationFactorAMD" float)))
   (begin
-    (define glTessellationModeAMD
+    (define gl:TessellationModeAMD
       (foreign-lambda void "glTessellationModeAMD" unsigned-integer)))
   (begin
-    (define glProvokingVertexEXT
+    (define gl:ProvokingVertexEXT
       (foreign-lambda void "glProvokingVertexEXT" unsigned-integer)))
   (begin
-    (define glBlendFuncIndexedAMD
+    (define gl:BlendFuncIndexedAMD
       (foreign-lambda
         void
         "glBlendFuncIndexedAMD"
@@ -12368,7 +12368,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendFuncSeparateIndexedAMD
+    (define gl:BlendFuncSeparateIndexedAMD
       (foreign-lambda
         void
         "glBlendFuncSeparateIndexedAMD"
@@ -12378,14 +12378,14 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendEquationIndexedAMD
+    (define gl:BlendEquationIndexedAMD
       (foreign-lambda
         void
         "glBlendEquationIndexedAMD"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glBlendEquationSeparateIndexedAMD
+    (define gl:BlendEquationSeparateIndexedAMD
       (foreign-lambda
         void
         "glBlendEquationSeparateIndexedAMD"
@@ -12393,7 +12393,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTextureRangeAPPLE
+    (define gl:TextureRangeAPPLE
       (foreign-lambda
         void
         "glTextureRangeAPPLE"
@@ -12401,7 +12401,7 @@
         unsigned-integer
         (c-pointer void))))
   (begin
-    (define glGetTexParameterPointervAPPLE
+    (define gl:GetTexParameterPointervAPPLE
       (foreign-lambda
         void
         "glGetTexParameterPointervAPPLE"
@@ -12409,28 +12409,28 @@
         unsigned-integer
         (c-pointer (c-pointer void)))))
   (begin
-    (define glEnableVertexAttribAPPLE
+    (define gl:EnableVertexAttribAPPLE
       (foreign-lambda
         void
         "glEnableVertexAttribAPPLE"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glDisableVertexAttribAPPLE
+    (define gl:DisableVertexAttribAPPLE
       (foreign-lambda
         void
         "glDisableVertexAttribAPPLE"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIsVertexAttribEnabledAPPLE
+    (define gl:IsVertexAttribEnabledAPPLE
       (foreign-lambda
         unsigned-char
         "glIsVertexAttribEnabledAPPLE"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMapVertexAttrib1dAPPLE
+    (define gl:MapVertexAttrib1dAPPLE
       (foreign-lambda
         void
         "glMapVertexAttrib1dAPPLE"
@@ -12442,7 +12442,7 @@
         integer
         f64vector)))
   (begin
-    (define glMapVertexAttrib1fAPPLE
+    (define gl:MapVertexAttrib1fAPPLE
       (foreign-lambda
         void
         "glMapVertexAttrib1fAPPLE"
@@ -12454,7 +12454,7 @@
         integer
         f32vector)))
   (begin
-    (define glMapVertexAttrib2dAPPLE
+    (define gl:MapVertexAttrib2dAPPLE
       (foreign-lambda
         void
         "glMapVertexAttrib2dAPPLE"
@@ -12470,7 +12470,7 @@
         integer
         f64vector)))
   (begin
-    (define glMapVertexAttrib2fAPPLE
+    (define gl:MapVertexAttrib2fAPPLE
       (foreign-lambda
         void
         "glMapVertexAttrib2fAPPLE"
@@ -12486,7 +12486,7 @@
         integer
         f32vector)))
   (begin
-    (define glObjectPurgeableAPPLE
+    (define gl:ObjectPurgeableAPPLE
       (foreign-lambda
         unsigned-integer
         "glObjectPurgeableAPPLE"
@@ -12494,7 +12494,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glObjectUnpurgeableAPPLE
+    (define gl:ObjectUnpurgeableAPPLE
       (foreign-lambda
         unsigned-integer
         "glObjectUnpurgeableAPPLE"
@@ -12502,7 +12502,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetObjectParameterivAPPLE
+    (define gl:GetObjectParameterivAPPLE
       (foreign-lambda
         void
         "glGetObjectParameterivAPPLE"
@@ -12511,10 +12511,10 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glBeginVideoCaptureNV
+    (define gl:BeginVideoCaptureNV
       (foreign-lambda void "glBeginVideoCaptureNV" unsigned-integer)))
   (begin
-    (define glBindVideoCaptureStreamBufferNV
+    (define gl:BindVideoCaptureStreamBufferNV
       (foreign-lambda
         void
         "glBindVideoCaptureStreamBufferNV"
@@ -12523,7 +12523,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glBindVideoCaptureStreamTextureNV
+    (define gl:BindVideoCaptureStreamTextureNV
       (foreign-lambda
         void
         "glBindVideoCaptureStreamTextureNV"
@@ -12533,10 +12533,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEndVideoCaptureNV
+    (define gl:EndVideoCaptureNV
       (foreign-lambda void "glEndVideoCaptureNV" unsigned-integer)))
   (begin
-    (define glGetVideoCaptureivNV
+    (define gl:GetVideoCaptureivNV
       (foreign-lambda
         void
         "glGetVideoCaptureivNV"
@@ -12544,7 +12544,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVideoCaptureStreamivNV
+    (define gl:GetVideoCaptureStreamivNV
       (foreign-lambda
         void
         "glGetVideoCaptureStreamivNV"
@@ -12553,7 +12553,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glGetVideoCaptureStreamfvNV
+    (define gl:GetVideoCaptureStreamfvNV
       (foreign-lambda
         void
         "glGetVideoCaptureStreamfvNV"
@@ -12562,7 +12562,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glGetVideoCaptureStreamdvNV
+    (define gl:GetVideoCaptureStreamdvNV
       (foreign-lambda
         void
         "glGetVideoCaptureStreamdvNV"
@@ -12571,7 +12571,7 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glVideoCaptureNV
+    (define gl:VideoCaptureNV
       (foreign-lambda
         unsigned-integer
         "glVideoCaptureNV"
@@ -12579,7 +12579,7 @@
         u32vector
         u32vector)))
   (begin
-    (define glVideoCaptureStreamParameterivNV
+    (define gl:VideoCaptureStreamParameterivNV
       (foreign-lambda
         void
         "glVideoCaptureStreamParameterivNV"
@@ -12588,7 +12588,7 @@
         unsigned-integer
         s32vector)))
   (begin
-    (define glVideoCaptureStreamParameterfvNV
+    (define gl:VideoCaptureStreamParameterfvNV
       (foreign-lambda
         void
         "glVideoCaptureStreamParameterfvNV"
@@ -12597,7 +12597,7 @@
         unsigned-integer
         f32vector)))
   (begin
-    (define glVideoCaptureStreamParameterdvNV
+    (define gl:VideoCaptureStreamParameterdvNV
       (foreign-lambda
         void
         "glVideoCaptureStreamParameterdvNV"
@@ -12606,53 +12606,53 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define glUseShaderProgramEXT
+    (define gl:UseShaderProgramEXT
       (foreign-lambda
         void
         "glUseShaderProgramEXT"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glActiveProgramEXT
+    (define gl:ActiveProgramEXT
       (foreign-lambda void "glActiveProgramEXT" unsigned-integer)))
   (begin
-    (define glCreateShaderProgramEXT
+    (define gl:CreateShaderProgramEXT
       (foreign-lambda
         unsigned-integer
         "glCreateShaderProgramEXT"
         unsigned-integer
         c-string)))
   (begin
-    (define glMakeBufferResidentNV
+    (define gl:MakeBufferResidentNV
       (foreign-lambda
         void
         "glMakeBufferResidentNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMakeBufferNonResidentNV
+    (define gl:MakeBufferNonResidentNV
       (foreign-lambda void "glMakeBufferNonResidentNV" unsigned-integer)))
   (begin
-    (define glIsBufferResidentNV
+    (define gl:IsBufferResidentNV
       (foreign-lambda unsigned-char "glIsBufferResidentNV" unsigned-integer)))
   (begin
-    (define glMakeNamedBufferResidentNV
+    (define gl:MakeNamedBufferResidentNV
       (foreign-lambda
         void
         "glMakeNamedBufferResidentNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glMakeNamedBufferNonResidentNV
+    (define gl:MakeNamedBufferNonResidentNV
       (foreign-lambda void "glMakeNamedBufferNonResidentNV" unsigned-integer)))
   (begin
-    (define glIsNamedBufferResidentNV
+    (define gl:IsNamedBufferResidentNV
       (foreign-lambda
         unsigned-char
         "glIsNamedBufferResidentNV"
         unsigned-integer)))
   (begin
-    (define glGetBufferParameterui64vNV
+    (define gl:GetBufferParameterui64vNV
       (foreign-lambda
         void
         "glGetBufferParameterui64vNV"
@@ -12660,7 +12660,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetNamedBufferParameterui64vNV
+    (define gl:GetNamedBufferParameterui64vNV
       (foreign-lambda
         void
         "glGetNamedBufferParameterui64vNV"
@@ -12668,13 +12668,13 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetIntegerui64vNV
+    (define gl:GetIntegerui64vNV
       (foreign-lambda void "glGetIntegerui64vNV" unsigned-integer u32vector)))
   (begin
-    (define glUniformui64NV
+    (define gl:Uniformui64NV
       (foreign-lambda void "glUniformui64NV" integer unsigned-integer)))
   (begin
-    (define glUniformui64vNV
+    (define gl:Uniformui64vNV
       (foreign-lambda
         void
         "glUniformui64vNV"
@@ -12682,7 +12682,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glGetUniformui64vNV
+    (define gl:GetUniformui64vNV
       (foreign-lambda
         void
         "glGetUniformui64vNV"
@@ -12690,7 +12690,7 @@
         integer
         u32vector)))
   (begin
-    (define glProgramUniformui64NV
+    (define gl:ProgramUniformui64NV
       (foreign-lambda
         void
         "glProgramUniformui64NV"
@@ -12698,7 +12698,7 @@
         integer
         unsigned-integer)))
   (begin
-    (define glProgramUniformui64vNV
+    (define gl:ProgramUniformui64vNV
       (foreign-lambda
         void
         "glProgramUniformui64vNV"
@@ -12707,7 +12707,7 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glBufferAddressRangeNV
+    (define gl:BufferAddressRangeNV
       (foreign-lambda
         void
         "glBufferAddressRangeNV"
@@ -12716,7 +12716,7 @@
         unsigned-integer
         integer)))
   (begin
-    (define glVertexFormatNV
+    (define gl:VertexFormatNV
       (foreign-lambda
         void
         "glVertexFormatNV"
@@ -12724,14 +12724,14 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glNormalFormatNV
+    (define gl:NormalFormatNV
       (foreign-lambda
         void
         "glNormalFormatNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glColorFormatNV
+    (define gl:ColorFormatNV
       (foreign-lambda
         void
         "glColorFormatNV"
@@ -12739,14 +12739,14 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glIndexFormatNV
+    (define gl:IndexFormatNV
       (foreign-lambda
         void
         "glIndexFormatNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glTexCoordFormatNV
+    (define gl:TexCoordFormatNV
       (foreign-lambda
         void
         "glTexCoordFormatNV"
@@ -12754,10 +12754,10 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glEdgeFlagFormatNV
+    (define gl:EdgeFlagFormatNV
       (foreign-lambda void "glEdgeFlagFormatNV" unsigned-integer)))
   (begin
-    (define glSecondaryColorFormatNV
+    (define gl:SecondaryColorFormatNV
       (foreign-lambda
         void
         "glSecondaryColorFormatNV"
@@ -12765,14 +12765,14 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glFogCoordFormatNV
+    (define gl:FogCoordFormatNV
       (foreign-lambda
         void
         "glFogCoordFormatNV"
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glVertexAttribFormatNV
+    (define gl:VertexAttribFormatNV
       (foreign-lambda
         void
         "glVertexAttribFormatNV"
@@ -12782,7 +12782,7 @@
         unsigned-char
         unsigned-integer)))
   (begin
-    (define glVertexAttribIFormatNV
+    (define gl:VertexAttribIFormatNV
       (foreign-lambda
         void
         "glVertexAttribIFormatNV"
@@ -12791,7 +12791,7 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define glGetIntegerui64i_vNV
+    (define gl:GetIntegerui64i_vNV
       (foreign-lambda
         void
         "glGetIntegerui64i_vNV"
@@ -12799,6 +12799,6 @@
         unsigned-integer
         u32vector)))
   (begin
-    (define glTextureBarrierNV (foreign-lambda void "glTextureBarrierNV"))))
+    (define gl:TextureBarrierNV (foreign-lambda void "glTextureBarrierNV"))))
 
 ;;; END OF FILE

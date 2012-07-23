@@ -24,6 +24,5 @@
 
 (install-extension
  'allegro
- '("allegro.so" "allegro.o" "allegro.import.so" "allegro-glext.so" "allegro-glext.o" "allegro-glext.import.so")
- '((version 1.7)
-   (static "allegro.o" "allegro-glext.o")))
+ '("allegro.so" "allegro.import.so" "allegro-glext.so" "allegro-glext.import.so")
+ '((version 2.0)))
