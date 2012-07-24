@@ -4480,7 +4480,7 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:DOT_PRODUCT_TEXTURE_2D_NV</constant>
 <constant>gl:DOT_PRODUCT_TEXTURE_3D_NV</constant>
 <constant>gl:DOT_PRODUCT_TEXTURE_CUBE_MAP_NV</constant>
-<constant>gl:DOT_PRODUCT_TEXTURE_RECTANgl:E_NV</constant>
+<constant>gl:DOT_PRODUCT_TEXTURE_RECTANglE_NV</constant>
 <constant>gl:DOUBLE_MAT2</constant>
 <constant>gl:DOUBLE_MAT2x3</constant>
 <constant>gl:DOUBLE_MAT2x4</constant>
@@ -4836,8 +4836,8 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:GEOMETRY_VERTICES_OUT</constant>
 <constant>gl:GEOMETRY_VERTICES_OUT_ARB</constant>
 <constant>gl:GEOMETRY_VERTICES_OUT_EXT</constant>
-<constant>gl:gl:OBAL_ALPHA_FACTOR_SUN</constant>
-<constant>gl:gl:OBAL_ALPHA_SUN</constant>
+<constant>gl:GLOBAL_ALPHA_FACTOR_SUN</constant>
+<constant>gl:GLOBAL_ALPHA_SUN</constant>
 <constant>gl:GPU_ADDRESS_NV</constant>
 <constant>gl:GREEN_BIT_ATI</constant>
 <constant>gl:GREEN_INTEGER</constant>
@@ -4879,7 +4879,7 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:IMAGE_CUBIC_WEIGHT_HP</constant>
 <constant>gl:IMAGE_MAG_FILTER_HP</constant>
 <constant>gl:IMAGE_MIN_FILTER_HP</constant>
-<constant>gl:IMAGE_ROTATE_ANgl:E_HP</constant>
+<constant>gl:IMAGE_ROTATE_ANGLE_HP</constant>
 <constant>gl:IMAGE_ROTATE_ORIGIN_X_HP</constant>
 <constant>gl:IMAGE_ROTATE_ORIGIN_Y_HP</constant>
 <constant>gl:IMAGE_SCALE_X_HP</constant>
@@ -5248,7 +5248,7 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:MAX_PALETTE_MATRICES_ARB</constant>
 <constant>gl:MAX_PATCH_VERTICES</constant>
 <constant>gl:MAX_PIXEL_TRANSFORM_2D_STACK_DEPTH_EXT</constant>
-<constant>gl:MAX_PN_TRIANgl:ES_TESSELATION_LEVEL_ATI</constant>
+<constant>gl:MAX_PN_TRIANGLES_TESSELATION_LEVEL_ATI</constant>
 <constant>gl:MAX_PROGRAM_ADDRESS_REGISTERS_ARB</constant>
 <constant>gl:MAX_PROGRAM_ALU_INSTRUCTIONS_ARB</constant>
 <constant>gl:MAX_PROGRAM_ATTRIB_COMPONENTS_NV</constant>
@@ -5286,10 +5286,10 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB</constant>
 <constant>gl:MAX_PROGRAM_TOTAL_OUTPUT_COMPONENTS_NV</constant>
 <constant>gl:MAX_RATIONAL_EVAL_ORDER_NV</constant>
-<constant>gl:MAX_RECTANgl:E_TEXTURE_SIZE</constant>
-<constant>gl:MAX_RECTANgl:E_TEXTURE_SIZE_ARB</constant>
-<constant>gl:MAX_RECTANgl:E_TEXTURE_SIZE_EXT</constant>
-<constant>gl:MAX_RECTANgl:E_TEXTURE_SIZE_NV</constant>
+<constant>gl:MAX_RECTANGLE_TEXTURE_SIZE</constant>
+<constant>gl:MAX_RECTANGLE_TEXTURE_SIZE_ARB</constant>
+<constant>gl:MAX_RECTANGLE_TEXTURE_SIZE_EXT</constant>
+<constant>gl:MAX_RECTANGLE_TEXTURE_SIZE_NV</constant>
 <constant>gl:MAX_RENDERBUFFER_SIZE</constant>
 <constant>gl:MAX_RENDERBUFFER_SIZE_EXT</constant>
 <constant>gl:MAX_SAMPLE_MASK_WORDS</constant>
@@ -5510,18 +5510,18 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:OCCLUSION_TEST_HP</constant>
 <constant>gl:OCCLUSION_TEST_RESULT_HP</constant>
 <constant>gl:OFFSET_HILO_PROJECTIVE_TEXTURE_2D_NV</constant>
-<constant>gl:OFFSET_HILO_PROJECTIVE_TEXTURE_RECTANgl:E_NV</constant>
+<constant>gl:OFFSET_HILO_PROJECTIVE_TEXTURE_RECTANGLE_NV</constant>
 <constant>gl:OFFSET_HILO_TEXTURE_2D_NV</constant>
-<constant>gl:OFFSET_HILO_TEXTURE_RECTANgl:E_NV</constant>
+<constant>gl:OFFSET_HILO_TEXTURE_RECTANGLE_NV</constant>
 <constant>gl:OFFSET_PROJECTIVE_TEXTURE_2D_NV</constant>
 <constant>gl:OFFSET_PROJECTIVE_TEXTURE_2D_SCALE_NV</constant>
-<constant>gl:OFFSET_PROJECTIVE_TEXTURE_RECTANgl:E_NV</constant>
-<constant>gl:OFFSET_PROJECTIVE_TEXTURE_RECTANgl:E_SCALE_NV</constant>
+<constant>gl:OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_NV</constant>
+<constant>gl:OFFSET_PROJECTIVE_TEXTURE_RECTANGLE_SCALE_NV</constant>
 <constant>gl:OFFSET_TEXTURE_2D_NV</constant>
 <constant>gl:OFFSET_TEXTURE_BIAS_NV</constant>
 <constant>gl:OFFSET_TEXTURE_MATRIX_NV</constant>
-<constant>gl:OFFSET_TEXTURE_RECTANgl:E_NV</constant>
-<constant>gl:OFFSET_TEXTURE_RECTANgl:E_SCALE_NV</constant>
+<constant>gl:OFFSET_TEXTURE_RECTANGLE_NV</constant>
+<constant>gl:OFFSET_TEXTURE_RECTANGLE_SCALE_NV</constant>
 <constant>gl:OFFSET_TEXTURE_SCALE_NV</constant>
 <constant>gl:ONE_EXT</constant>
 <constant>gl:ONE_MINUS_CONSTANT_ALPHA</constant>
@@ -5692,14 +5692,14 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:PIXEL_UNPACK_BUFFER_BINDING_ARB</constant>
 <constant>gl:PIXEL_UNPACK_BUFFER_BINDING_EXT</constant>
 <constant>gl:PIXEL_UNPACK_BUFFER_EXT</constant>
-<constant>gl:PN_TRIANgl:ES_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_NORMAL_MODE_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_NORMAL_MODE_LINEAR_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_NORMAL_MODE_QUADRATIC_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_POINT_MODE_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_POINT_MODE_CUBIC_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_POINT_MODE_LINEAR_ATI</constant>
-<constant>gl:PN_TRIANgl:ES_TESSELATION_LEVEL_ATI</constant>
+<constant>gl:PN_TRIANGLES_ATI</constant>
+<constant>gl:PN_TRIANGLES_NORMAL_MODE_ATI</constant>
+<constant>gl:PN_TRIANGLES_NORMAL_MODE_LINEAR_ATI</constant>
+<constant>gl:PN_TRIANGLES_NORMAL_MODE_QUADRATIC_ATI</constant>
+<constant>gl:PN_TRIANGLES_POINT_MODE_ATI</constant>
+<constant>gl:PN_TRIANGLES_POINT_MODE_CUBIC_ATI</constant>
+<constant>gl:PN_TRIANGLES_POINT_MODE_LINEAR_ATI</constant>
+<constant>gl:PN_TRIANGLES_TESSELATION_LEVEL_ATI</constant>
 <constant>gl:POINT_DISTANCE_ATTENUATION</constant>
 <constant>gl:POINT_DISTANCE_ATTENUATION_ARB</constant>
 <constant>gl:POINT_FADE_THRESHOLD_SIZE</constant>
@@ -5851,10 +5851,10 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:PROXY_TEXTURE_CUBE_MAP_ARB</constant>
 <constant>gl:PROXY_TEXTURE_CUBE_MAP_ARRAY</constant>
 <constant>gl:PROXY_TEXTURE_CUBE_MAP_EXT</constant>
-<constant>gl:PROXY_TEXTURE_RECTANgl:E</constant>
-<constant>gl:PROXY_TEXTURE_RECTANgl:E_ARB</constant>
-<constant>gl:PROXY_TEXTURE_RECTANgl:E_EXT</constant>
-<constant>gl:PROXY_TEXTURE_RECTANgl:E_NV</constant>
+<constant>gl:PROXY_TEXTURE_RECTANGLE</constant>
+<constant>gl:PROXY_TEXTURE_RECTANGLE_ARB</constant>
+<constant>gl:PROXY_TEXTURE_RECTANGLE_EXT</constant>
+<constant>gl:PROXY_TEXTURE_RECTANGLE_NV</constant>
 <constant>gl:PURGEABLE_APPLE</constant>
 <constant>gl:QUAD_ALPHA4_SGIS</constant>
 <constant>gl:QUAD_ALPHA8_SGIS</constant>
@@ -6242,8 +6242,8 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:SIGNED_RGBA_NV</constant>
 <constant>gl:SIGNED_RGB_NV</constant>
 <constant>gl:SIGNED_RGB_UNSIGNED_ALPHA_NV</constant>
-<constant>gl:SINgl:E_COLOR</constant>
-<constant>gl:SINgl:E_COLOR_EXT</constant>
+<constant>gl:SINGLE_COLOR</constant>
+<constant>gl:SINGLE_COLOR_EXT</constant>
 <constant>gl:SLICE_ACCUM_SUN</constant>
 <constant>gl:SLUMINANCE</constant>
 <constant>gl:SLUMINANCE8</constant>
@@ -6489,10 +6489,10 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:TEXTURE_BINDING_CUBE_MAP_ARB</constant>
 <constant>gl:TEXTURE_BINDING_CUBE_MAP_ARRAY</constant>
 <constant>gl:TEXTURE_BINDING_CUBE_MAP_EXT</constant>
-<constant>gl:TEXTURE_BINDING_RECTANgl:E</constant>
-<constant>gl:TEXTURE_BINDING_RECTANgl:E_ARB</constant>
-<constant>gl:TEXTURE_BINDING_RECTANgl:E_EXT</constant>
-<constant>gl:TEXTURE_BINDING_RECTANgl:E_NV</constant>
+<constant>gl:TEXTURE_BINDING_RECTANGL:E</constant>
+<constant>gl:TEXTURE_BINDING_RECTANGLE_ARB</constant>
+<constant>gl:TEXTURE_BINDING_RECTANGLE_EXT</constant>
+<constant>gl:TEXTURE_BINDING_RECTANGLE_NV</constant>
 <constant>gl:TEXTURE_BINDING_RENDERBUFFER_NV</constant>
 <constant>gl:TEXTURE_BLUE_SIZE_EXT</constant>
 <constant>gl:TEXTURE_BLUE_TYPE</constant>
@@ -6624,10 +6624,10 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:TEXTURE_PRIORITY_EXT</constant>
 <constant>gl:TEXTURE_RANGE_LENGTH_APPLE</constant>
 <constant>gl:TEXTURE_RANGE_POINTER_APPLE</constant>
-<constant>gl:TEXTURE_RECTANgl:E</constant>
-<constant>gl:TEXTURE_RECTANgl:E_ARB</constant>
-<constant>gl:TEXTURE_RECTANgl:E_EXT</constant>
-<constant>gl:TEXTURE_RECTANgl:E_NV</constant>
+<constant>gl:TEXTURE_RECTANGLE</constant>
+<constant>gl:TEXTURE_RECTANGLE_ARB</constant>
+<constant>gl:TEXTURE_RECTANGLE_EXT</constant>
+<constant>gl:TEXTURE_RECTANGLE_NV</constant>
 <constant>gl:TEXTURE_RED_SIZE_EXT</constant>
 <constant>gl:TEXTURE_RED_TYPE</constant>
 <constant>gl:TEXTURE_RED_TYPE_ARB</constant>
@@ -6707,14 +6707,14 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <constant>gl:TRANSPOSE_PROJECTION_MATRIX_ARB</constant>
 <constant>gl:TRANSPOSE_TEXTURE_MATRIX</constant>
 <constant>gl:TRANSPOSE_TEXTURE_MATRIX_ARB</constant>
-<constant>gl:TRIANgl:E_LIST_SUN</constant>
-<constant>gl:TRIANgl:E_MESH_SUN</constant>
-<constant>gl:TRIANgl:ES_ADJACENCY</constant>
-<constant>gl:TRIANgl:ES_ADJACENCY_ARB</constant>
-<constant>gl:TRIANgl:ES_ADJACENCY_EXT</constant>
-<constant>gl:TRIANgl:E_STRIP_ADJACENCY</constant>
-<constant>gl:TRIANgl:E_STRIP_ADJACENCY_ARB</constant>
-<constant>gl:TRIANgl:E_STRIP_ADJACENCY_EXT</constant>
+<constant>gl:TRIANGLE_LIST_SUN</constant>
+<constant>gl:TRIANGLE_MESH_SUN</constant>
+<constant>gl:TRIANGLES_ADJACENCY</constant>
+<constant>gl:TRIANGLES_ADJACENCY_ARB</constant>
+<constant>gl:TRIANGLES_ADJACENCY_EXT</constant>
+<constant>gl:TRIANGLE_STRIP_ADJACENCY</constant>
+<constant>gl:TRIANGLE_STRIP_ADJACENCY_ARB</constant>
+<constant>gl:TRIANGLE_STRIP_ADJACENCY_EXT</constant>
 <constant>gl:UNDEFINED_APPLE</constant>
 <constant>gl:UNIFORM_ARRAY_STRIDE</constant>
 <constant>gl:UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES</constant>
@@ -7708,7 +7708,7 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <procedure>gl:GetVariantFloatvEXT</procedure>
 <procedure>gl:GetVariantIntegervEXT</procedure>
 <procedure>gl:GetVariantPointervEXT</procedure>
-<procedure>gl:GetVaryingl:ocationNV</procedure>
+<procedure>gl:GetVaryinglocationNV</procedure>
 <procedure>gl:GetVertexAttribArrayObjectfvATI</procedure>
 <procedure>gl:GetVertexAttribArrayObjectivATI</procedure>
 <procedure>gl:GetVertexAttribIiv</procedure>
@@ -7737,18 +7737,18 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <procedure>gl:GetVideoCaptureStreamfvNV</procedure>
 <procedure>gl:GetVideoCaptureStreamivNV</procedure>
 <procedure>gl:GetVideoCaptureivNV</procedure>
-<procedure>gl:Gl:obalAlphaFactorbSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactordSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactorfSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactoriSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactorsSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactorubSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactoruiSUN</procedure>
-<procedure>gl:Gl:obalAlphaFactorusSUN</procedure>
+<procedure>gl:GlobalAlphaFactorbSUN</procedure>
+<procedure>gl:GlobalAlphaFactordSUN</procedure>
+<procedure>gl:GlobalAlphaFactorfSUN</procedure>
+<procedure>gl:GlobalAlphaFactoriSUN</procedure>
+<procedure>gl:GlobalAlphaFactorsSUN</procedure>
+<procedure>gl:GlobalAlphaFactorubSUN</procedure>
+<procedure>gl:GlobalAlphaFactoruiSUN</procedure>
+<procedure>gl:GlobalAlphaFactorusSUN</procedure>
 <procedure>gl:HintPGI</procedure>
 <procedure>gl:Histogram</procedure>
 <procedure>gl:HistogramEXT</procedure>
-<procedure>gl:Igl:ooInterfaceSGIX</procedure>
+<procedure>gl:IglooInterfaceSGIX</procedure>
 <procedure>gl:ImageTransformParameterfHP</procedure>
 <procedure>gl:ImageTransformParameterfvHP</procedure>
 <procedure>gl:ImageTransformParameteriHP</procedure>
@@ -8048,8 +8048,8 @@ Because the Egg is so large it needed to be separated, as such the extensions ca
 <procedure>gl:ObjectUnpurgeableAPPLE</procedure>
 <procedure>gl:OrthofOES</procedure>
 <procedure>gl:OrthoxOES</procedure>
-<procedure>gl:PNTriangl:esfATI</procedure>
-<procedure>gl:PNTriangl:esiATI</procedure>
+<procedure>gl:PNTrianglesfATI</procedure>
+<procedure>gl:PNTrianglesiATI</procedure>
 <procedure>gl:PassTexCoordATI</procedure>
 <procedure>gl:PassThroughxOES</procedure>
 <procedure>gl:PatchParameterfv</procedure>
@@ -8938,7 +8938,7 @@ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
 CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEgl:IGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The views and conclusions contained in the software and documentation are those of the
