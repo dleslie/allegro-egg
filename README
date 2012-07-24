@@ -56,6 +56,14 @@ The gist is something like this:
 
 If a function begins with a type name then you can be assured that the first parameter will be an object of that specific type.
 
+== General Utility Functions
+
+=== allegro-c-util
+
+==== (make-c-string-list obj)
+
+The obj parameter can either be a single string or list of strings. Returns a managed pointer to a NULL-terminated (char **) list suitable for use with GL extension methods.
+
 == Records and Related Procedures
 
 === audio-stream
