@@ -278,7 +278,7 @@
         void
         "glGetHistogram"
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         unsigned-integer
         (c-pointer void))))
@@ -304,7 +304,7 @@
         void
         "glGetMinmax"
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         unsigned-integer
         (c-pointer void))))
@@ -332,7 +332,7 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:Minmax
       (foreign-lambda
@@ -340,7 +340,7 @@
         "glMinmax"
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:ResetHistogram
       (foreign-lambda void "glResetHistogram" unsigned-integer)))
@@ -525,7 +525,7 @@
       (foreign-lambda void "glMultTransposeMatrixd" f64vector)))
   (begin
     (define gl:SampleCoverage
-      (foreign-lambda void "glSampleCoverage" float unsigned-char)))
+      (foreign-lambda void "glSampleCoverage" float unsigned-byte)))
   (begin
     (define gl:CompressedTexImage3D
       (foreign-lambda
@@ -702,9 +702,9 @@
       (foreign-lambda
         void
         "glSecondaryColor3ub"
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:SecondaryColor3ubv
       (foreign-lambda void "glSecondaryColor3ubv" u8vector)))
@@ -999,7 +999,7 @@
         "glUniformMatrix2fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix3fv
@@ -1008,7 +1008,7 @@
         "glUniformMatrix3fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix4fv
@@ -1017,7 +1017,7 @@
         "glUniformMatrix4fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:GetShaderfv
@@ -1203,10 +1203,10 @@
         void
         "glVertexAttrib4Nub"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:VertexAttrib1fv
       (foreign-lambda void "glVertexAttrib1fv" unsigned-integer f32vector)))
@@ -1284,7 +1284,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         (c-pointer void))))
   (begin
@@ -1380,7 +1380,7 @@
         "glUniformMatrix2x3fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix3x2fv
@@ -1389,7 +1389,7 @@
         "glUniformMatrix3x2fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix2x4fv
@@ -1398,7 +1398,7 @@
         "glUniformMatrix2x4fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix4x2fv
@@ -1407,7 +1407,7 @@
         "glUniformMatrix4x2fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix3x4fv
@@ -1416,7 +1416,7 @@
         "glUniformMatrix3x4fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix4x3fv
@@ -1425,7 +1425,7 @@
         "glUniformMatrix4x3fv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ColorMaski
@@ -1433,10 +1433,10 @@
         void
         "glColorMaski"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:GetBooleani_v
       (foreign-lambda
@@ -1462,7 +1462,7 @@
   (begin
     (define gl:IsEnabledi
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsEnabledi"
         unsigned-integer
         unsigned-integer)))
@@ -2085,7 +2085,7 @@
       (foreign-lambda void "glMultTransposeMatrixdARB" f64vector)))
   (begin
     (define gl:SampleCoverageARB
-      (foreign-lambda void "glSampleCoverageARB" float unsigned-char)))
+      (foreign-lambda void "glSampleCoverageARB" float unsigned-byte)))
   (begin
     (define gl:CompressedTexImage3DARB
       (foreign-lambda
@@ -2399,10 +2399,10 @@
         void
         "glVertexAttrib4NubARB"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:VertexAttrib4NubvARB
       (foreign-lambda
@@ -2494,7 +2494,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         (c-pointer void))))
   (begin
@@ -2948,7 +2948,7 @@
         "glUniformMatrix2fvARB"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix3fvARB
@@ -2957,7 +2957,7 @@
         "glUniformMatrix3fvARB"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:UniformMatrix4fvARB
@@ -2966,7 +2966,7 @@
         "glUniformMatrix4fvARB"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:GetObjectParameterfvARB
@@ -3142,10 +3142,10 @@
         void
         "glVertexAttrib4NubARB"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:VertexAttrib1fvARB
       (foreign-lambda void "glVertexAttrib1fvARB" unsigned-integer f32vector)))
@@ -3251,7 +3251,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         (c-pointer void))))
   (begin
@@ -3705,7 +3705,7 @@
   (begin
     (define gl:IsSync
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsSync"
         (c-pointer (struct "__GLsync")))))
   (begin
@@ -3750,7 +3750,7 @@
         integer
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:TexImage3DMultisample
       (foreign-lambda
@@ -3762,7 +3762,7 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:GetMultisamplefv
       (foreign-lambda
@@ -4142,7 +4142,7 @@
         "glVertexAttribP1ui"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer)))
   (begin
     (define gl:VertexAttribP1uiv
@@ -4151,7 +4151,7 @@
         "glVertexAttribP1uiv"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         u32vector)))
   (begin
     (define gl:VertexAttribP2ui
@@ -4160,7 +4160,7 @@
         "glVertexAttribP2ui"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer)))
   (begin
     (define gl:VertexAttribP2uiv
@@ -4169,7 +4169,7 @@
         "glVertexAttribP2uiv"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         u32vector)))
   (begin
     (define gl:VertexAttribP3ui
@@ -4178,7 +4178,7 @@
         "glVertexAttribP3ui"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer)))
   (begin
     (define gl:VertexAttribP3uiv
@@ -4187,7 +4187,7 @@
         "glVertexAttribP3uiv"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         u32vector)))
   (begin
     (define gl:VertexAttribP4ui
@@ -4196,7 +4196,7 @@
         "glVertexAttribP4ui"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer)))
   (begin
     (define gl:VertexAttribP4uiv
@@ -4205,7 +4205,7 @@
         "glVertexAttribP4uiv"
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         u32vector)))
   (begin
     (define gl:DrawArraysIndirect
@@ -4252,7 +4252,7 @@
         "glUniformMatrix2dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix3dv
@@ -4261,7 +4261,7 @@
         "glUniformMatrix3dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix4dv
@@ -4270,7 +4270,7 @@
         "glUniformMatrix4dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix2x3dv
@@ -4279,7 +4279,7 @@
         "glUniformMatrix2x3dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix2x4dv
@@ -4288,7 +4288,7 @@
         "glUniformMatrix2x4dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix3x2dv
@@ -4297,7 +4297,7 @@
         "glUniformMatrix3x2dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix3x4dv
@@ -4306,7 +4306,7 @@
         "glUniformMatrix3x4dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix4x2dv
@@ -4315,7 +4315,7 @@
         "glUniformMatrix4x2dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:UniformMatrix4x3dv
@@ -4324,7 +4324,7 @@
         "glUniformMatrix4x3dv"
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:GetUniformdv
@@ -4416,7 +4416,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix3dvEXT
@@ -4426,7 +4426,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix4dvEXT
@@ -4436,7 +4436,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix2x3dvEXT
@@ -4446,7 +4446,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix2x4dvEXT
@@ -4456,7 +4456,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix3x2dvEXT
@@ -4466,7 +4466,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix3x4dvEXT
@@ -4476,7 +4476,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix4x2dvEXT
@@ -4486,7 +4486,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:ProgramUniformMatrix4x3dvEXT
@@ -4496,7 +4496,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f64vector)))
   (begin
     (define gl:GetSubroutineUniformLocation
@@ -4795,7 +4795,7 @@
         void
         "glGetHistogramEXT"
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         unsigned-integer
         (c-pointer void))))
@@ -4821,7 +4821,7 @@
         void
         "glGetMinmaxEXT"
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         unsigned-integer
         (c-pointer void))))
@@ -4849,7 +4849,7 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:MinmaxEXT
       (foreign-lambda
@@ -4857,7 +4857,7 @@
         "glMinmaxEXT"
         unsigned-integer
         unsigned-integer
-        unsigned-char)))
+        unsigned-byte)))
   (begin
     (define gl:ResetHistogramEXT
       (foreign-lambda void "glResetHistogramEXT" unsigned-integer)))
@@ -5133,7 +5133,7 @@
   (begin
     (define gl:AreTexturesResidentEXT
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glAreTexturesResidentEXT"
         unsigned-integer
         u32vector
@@ -5194,7 +5194,7 @@
         f32vector)))
   (begin
     (define gl:SampleMaskSGIS
-      (foreign-lambda void "glSampleMaskSGIS" float unsigned-char)))
+      (foreign-lambda void "glSampleMaskSGIS" float unsigned-byte)))
   (begin
     (define gl:SamplePatternSGIS
       (foreign-lambda void "glSamplePatternSGIS" unsigned-integer)))
@@ -5845,9 +5845,9 @@
       (foreign-lambda
         void
         "glSecondaryColor3ubEXT"
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:SecondaryColor3ubvEXT
       (foreign-lambda void "glSecondaryColor3ubvEXT" u8vector)))
@@ -6008,7 +6008,7 @@
       (foreign-lambda void "glGlobalAlphaFactordSUN" double)))
   (begin
     (define gl:GlobalAlphaFactorubSUN
-      (foreign-lambda void "glGlobalAlphaFactorubSUN" unsigned-char)))
+      (foreign-lambda void "glGlobalAlphaFactorubSUN" unsigned-byte)))
   (begin
     (define gl:GlobalAlphaFactorusSUN
       (foreign-lambda void "glGlobalAlphaFactorusSUN" unsigned-short)))
@@ -6023,7 +6023,7 @@
       (foreign-lambda void "glReplacementCodeusSUN" unsigned-short)))
   (begin
     (define gl:ReplacementCodeubSUN
-      (foreign-lambda void "glReplacementCodeubSUN" unsigned-char)))
+      (foreign-lambda void "glReplacementCodeubSUN" unsigned-byte)))
   (begin
     (define gl:ReplacementCodeuivSUN
       (foreign-lambda void "glReplacementCodeuivSUN" u32vector)))
@@ -6046,10 +6046,10 @@
       (foreign-lambda
         void
         "glColor4ubVertex2fSUN"
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
         float
         float)))
   (begin
@@ -6060,10 +6060,10 @@
       (foreign-lambda
         void
         "glColor4ubVertex3fSUN"
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
         float
         float
         float)))
@@ -6157,10 +6157,10 @@
         "glTexCoord2fColor4ubVertex3fSUN"
         float
         float
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
         float
         float
         float)))
@@ -6291,10 +6291,10 @@
         void
         "glReplacementCodeuiColor4ubVertex3fSUN"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
         float
         float
         float)))
@@ -6527,9 +6527,9 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:FinalCombinerInputNV
       (foreign-lambda
@@ -6699,7 +6699,7 @@
       (foreign-lambda void "glTbufferMask3DFX" unsigned-integer)))
   (begin
     (define gl:SampleMaskEXT
-      (foreign-lambda void "glSampleMaskEXT" float unsigned-char)))
+      (foreign-lambda void "glSampleMaskEXT" float unsigned-byte)))
   (begin
     (define gl:SamplePatternEXT
       (foreign-lambda void "glSamplePatternEXT" unsigned-integer)))
@@ -6708,10 +6708,10 @@
       (foreign-lambda
         void
         "glTextureColorMaskSGIS"
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:IglooInterfaceSGIX
       (foreign-lambda
@@ -6757,7 +6757,7 @@
         unsigned-integer
         integer
         integer
-        unsigned-char
+        unsigned-byte
         (c-pointer void))))
   (begin
     (define gl:MapParameterivNV
@@ -6785,7 +6785,7 @@
         unsigned-integer
         unsigned-integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         (c-pointer void))))
   (begin
     (define gl:GetMapParameterivNV
@@ -6843,7 +6843,7 @@
   (begin
     (define gl:AreProgramsResidentNV
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glAreProgramsResidentNV"
         unsigned-integer
         u32vector
@@ -7160,10 +7160,10 @@
         void
         "glVertexAttrib4ubNV"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:VertexAttrib4ubvNV
       (foreign-lambda void "glVertexAttrib4ubvNV" unsigned-integer u8vector)))
@@ -7707,7 +7707,7 @@
   (begin
     (define gl:IsVariantEnabledEXT
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsVariantEnabledEXT"
         unsigned-integer
         unsigned-integer)))
@@ -8174,7 +8174,7 @@
   (begin
     (define gl:TestObjectAPPLE
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glTestObjectAPPLE"
         unsigned-integer
         unsigned-integer)))
@@ -8550,7 +8550,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         unsigned-integer
         unsigned-integer)))
@@ -9059,7 +9059,7 @@
       (foreign-lambda void "glFogxvOES" unsigned-integer s32vector)))
   (begin
     (define gl:SampleCoverageOES
-      (foreign-lambda void "glSampleCoverageOES" integer unsigned-char)))
+      (foreign-lambda void "glSampleCoverageOES" integer unsigned-byte)))
   (begin
     (define gl:AlphaFuncxOES
       (foreign-lambda void "glAlphaFuncxOES" unsigned-integer integer)))
@@ -9445,10 +9445,10 @@
         void
         "glColorMaskIndexedEXT"
         unsigned-integer
-        unsigned-char
-        unsigned-char
-        unsigned-char
-        unsigned-char)))
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte
+        unsigned-byte)))
   (begin
     (define gl:GetBooleanIndexedvEXT
       (foreign-lambda
@@ -9482,7 +9482,7 @@
   (begin
     (define gl:IsEnabledIndexedEXT
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsEnabledIndexedEXT"
         unsigned-integer
         unsigned-integer)))
@@ -11796,7 +11796,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix3fvEXT
@@ -11806,7 +11806,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix4fvEXT
@@ -11816,7 +11816,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix2x3fvEXT
@@ -11826,7 +11826,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix3x2fvEXT
@@ -11836,7 +11836,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix2x4fvEXT
@@ -11846,7 +11846,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix4x2fvEXT
@@ -11856,7 +11856,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix3x4fvEXT
@@ -11866,7 +11866,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniformMatrix4x3fvEXT
@@ -11876,7 +11876,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         f32vector)))
   (begin
     (define gl:ProgramUniform1uiEXT
@@ -12252,7 +12252,7 @@
   (begin
     (define gl:IsTransformFeedbackNV
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsTransformFeedbackNV"
         unsigned-integer)))
   (begin
@@ -12330,7 +12330,7 @@
         void
         "glSelectPerfMonitorCountersAMD"
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer
         integer
         u32vector)))
@@ -12425,7 +12425,7 @@
   (begin
     (define gl:IsVertexAttribEnabledAPPLE
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsVertexAttribEnabledAPPLE"
         unsigned-integer
         unsigned-integer)))
@@ -12648,7 +12648,7 @@
   (begin
     (define gl:IsNamedBufferResidentNV
       (foreign-lambda
-        unsigned-char
+        unsigned-byte
         "glIsNamedBufferResidentNV"
         unsigned-integer)))
   (begin
@@ -12779,7 +12779,7 @@
         unsigned-integer
         integer
         unsigned-integer
-        unsigned-char
+        unsigned-byte
         unsigned-integer)))
   (begin
     (define gl:VertexAttribIFormatNV
