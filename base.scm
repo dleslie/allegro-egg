@@ -51,6 +51,11 @@
    ((symbol? x) (list x (uninstall-symbol x)))
    (else #f)))
 
+(define uninstall
+  (case-lambda
+   (() (uninstall-this 'system))
+   ((x) (uninstall-this x))))
+
 (define (uninstall-symbol x)
   (cond
    ((eq? 'system x) (system-addon-uninstall))
