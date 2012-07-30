@@ -1512,7 +1512,15 @@ Implements al_create_bitmap, with (free-bitmap!) declared as a finalizer.
 
 Implements al_draw_bitmap.
 
+<procedure>(draw-bitmap bitmap (float dx) (float dy) bitmap-flag)</procedure>
+
+Implements al_draw_bitmap.
+
 <procedure>(bitmap-draw-region bitmap (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_bitmap_region.
+
+<procedure>(draw-bitmap-region bitmap (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer bitmap-flags))</procedure>
 
 Implements al_draw_bitmap_region.
 
@@ -1520,7 +1528,15 @@ Implements al_draw_bitmap_region.
 
 Implements al_draw_scaled_bitmap.
 
+<procedure>(draw-scaled-bitmap bitmap (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer bitmap-flags))</procedure>
+
+Implements al_draw_scaled_bitmap.
+
 <procedure>(bitmap-draw-rotated bitmap (float cx) (float cy) (float dx) (float dy) (float angle) (integer bitmap-flags))</procedure>
+
+Implements al_draw_rotated_bitmap.
+
+<procedure>(draw-rotated-bitmap bitmap (float cx) (float cy) (float dx) (float dy) (float angle) (integer bitmap-flags))</procedure>
 
 Implements al_draw_rotated_bitmap.
 
@@ -1528,7 +1544,15 @@ Implements al_draw_rotated_bitmap.
 
 Implements al_draw_scaled_rotated_bitmap.
 
+<procedure>(draw-scaled-rotated-bitmap bitmap (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer bitmap-flags))</procedure>
+
+Implements al_draw_scaled_rotated_bitmap.
+
 <procedure>(bitmap-draw-tinted (bitmap bmp) (color tint) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_tinted_bitmap.
+
+<procedure>(draw-tinted-bitmap (bitmap bmp) (color tint) (float dx) (float dy) (integer bitmap-flags))</procedure>
 
 Implements al_draw_tinted_bitmap.
 
@@ -1536,7 +1560,15 @@ Implements al_draw_tinted_bitmap.
 
 Implements al_draw_tinted_bitmap_region.
 
+<procedure>(draw-tinted-bitmap-region (bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (integer bitmap-flags))</procedure>
+
+Implements al_draw_tinted_bitmap_region.
+
 <procedure>(bitmap-draw-tinted-scaled (bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer flags))</procedure>
+
+Implements al_draw_tinted_scale_bitmap.
+
+<procedure>(draw-tinted-scaled-bitmap (bitmap bmp) (color tint) (float sx) (float sy) (float sw) (float sh) (float dx) (float dy) (float dw) (float dh) (integer flags))</procedure>
 
 Implements al_draw_tinted_scale_bitmap.
 
@@ -1544,7 +1576,15 @@ Implements al_draw_tinted_scale_bitmap.
 
 Implements al_draw_tinted_rotated_bitmap.
 
+<procedure>(draw-tinted-rotated-bitmap (bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float angle) (integer flags))</procedure>
+
+Implements al_draw_tinted_rotated_bitmap.
+
 <procedure>(bitmap-draw-tinted-scaled-rotated (bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer flags))</procedure>
+
+Implements al_draw_tinted_scaled_rotated_bitmap.
+
+<procedure>(draw-tinted-scaled-rotated-bitmap (bitmap bmp) (color tint) (float cx) (float cy) (float dx) (float dy) (float xscale) (float yscale) (float angle) (integer flags))</procedure>
 
 Implements al_draw_tinted_scaled_rotated_bitmap.
 
@@ -1552,7 +1592,15 @@ Implements al_draw_tinted_scaled_rotated_bitmap.
 
 Implements al_lock_bitmap.
 
+<procedure>(lock-bitmap*! bitmap pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap.
+
 <procedure>(bitmap-lock-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap_region.
+
+<procedure>(lock-bitmap-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
 
 Implements al_lock_bitmap_region.
 
@@ -1560,11 +1608,23 @@ Implements al_lock_bitmap_region.
 
 Implements al_unlock_bitmap.
 
+<procedure>(unlock-bitmap! bitmap)</procedure>
+
+Implements al_unlock_bitmap.
+
 <procedure>(bitmap-lock! bitmap pixel-format (integer bitmap-flags))</procedure>
 
 Implements al_lock_bitmap, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
 
+<procedure>(lock-bitmap! bitmap pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
+
 <procedure>(bitmap-lock-region! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+
+Implements al_lock_bitmap_region, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
+
+<procedure>(lock-bitmap-region! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
 
 Implements al_lock_bitmap_region, with (bitmap-unlock!) and (free-locked-region!) declared as finalizers.
 

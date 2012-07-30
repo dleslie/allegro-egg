@@ -1,4 +1,4 @@
-(define init (foreign-lambda bool "al_init"))
+(define init-system (foreign-lambda bool "al_init"))
 (define inhibit-screensaver (foreign-lambda bool "al_inhibit_screensaver" bool))
 
 (define org-name (foreign-lambda c-string "al_get_org_name"))

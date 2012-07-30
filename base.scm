@@ -20,7 +20,7 @@
 
 (define (init-symbol x)
   (cond
-   ((eq? 'allegro x) (init))
+   ((eq? 'allegro x) (init-system))
    ((eq? 'audio x) (audio-addon-install))
    ((eq? 'font x) (font-addon-install))
    ((eq? 'image x) (image-addon-install))
@@ -36,6 +36,11 @@
    ((list? x) (map init-this x))
    ((symbol? x) (list x (init-symbol x)))
    (else #f)))
+
+(define init
+  (case-lambda
+   (() (init-this 'allegro))
+   ((x) (init-this x))))
 
 (define (uninstall-everything)
   (uninstall-this (list 'system 'audio 'font 'image 'joystick 'keyboard 'mouse 'primitives 'ttf)))
