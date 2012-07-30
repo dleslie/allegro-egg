@@ -30,6 +30,12 @@ I have limited time these days. If you could undertake any of the following it w
 
 The main repository can be found on [https://github.com/dleslie/allegro-egg|GitHub].
 
+== Examples
+
+A growing number of examples can be found on [https://github.com/dleslie/allegro-examples|GitHub].
+
+Please contribute!
+
 == Windows Extras
 
 Since building all your packages on windows is a bit of a pain in the ass I've written the Egg with the assumption that you're using the pre-built Allegro libraries.
