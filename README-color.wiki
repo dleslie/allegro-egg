@@ -1,0 +1,148 @@
+[[tags: allegro game]]
+
+== allegro
+
+This document pertains to color related methods found in the Allegro egg.
+
+[[toc:]]
+
+== Functions
+
+=== Color
+
+<procedure>(color-addon-version)</procedure>
+
+Implements al_get_allegro_color_version.
+
+<procedure>(hsv->rgb (float h) (float s) (float v))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->hsl (float red) (float green) (float blue))</procedure>
+
+Returns a 3-element list consisting of the hsl elements.
+
+<procedure>(hsl->rgb (float hue) (float saturation) (float lightness))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(name->rgb string)</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->name (float red) (float green) (float blue))</procedure>
+
+Returns a string representation of the rgb elements.
+
+<procedure>(cmyk->rgb (float cyan) (float magenta) (float yellow) (float key))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->cmyk (float red) (float green) (float blue))</procedure>
+
+Returns a 4-element list consisting of the cmyk elements.
+
+<procedure>(yuv->rgb (float y) (float u) (float v))</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(rgb->yuv (float red) (float green) (float blue))</procedure>
+
+Returns a 3-element list consisting of the yuv elements.
+
+<procedure>(rgb->html (float red) (float green) (float blue))</procedure>
+
+Returns a string consisting of the html representation.
+
+<procedure>(html->rgb string)</procedure>
+
+Returns a 3-element list consisting of the rgb elements.
+
+<procedure>(make-color-rgb* (integer r) (integer g) (integer b))</procedure>
+
+Creates a color struct from rgb elements.
+
+<procedure>(make-color-rgb (integer r) (integer g) (integer b))</procedure>
+
+Creates a color struct from rgb elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-rgba*(integer r) (integer g) (integer b) (integer a))</procedure>
+
+Creates a color struct from rgba elements.
+
+<procedure>(make-color-rgba (integer r) (integer g) (integer b) (integer a))</procedure>
+
+Creates a color struct from rgba elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-yuv* (integer y) (integer u) (integer v))</procedure>
+
+Creates a color struct from yuv elements.
+
+<procedure>(make-color-yuv (integer y) (integer u) (integer v))</procedure>
+
+Creates a color struct from yuv elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-cmyk* (integer c) (integer m) (integer y) (integer k))</procedure>
+
+Creates a color struct from cmyk elements.
+
+<procedure>(make-color-cmyk  (integer c) (integer m) (integer y) (integer k))</procedure>
+
+Creates a color struct from cmyk elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-hsl*(integer h) (integer s) (integer l))</procedure>
+
+Creates a color struct from hsl elements.
+
+<procedure>(make-color-hsl  (integer h) (integer s) (integer l))</procedure>
+
+Creates a color struct from hsl elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-hsv*(integer h) (integer s) (integer v))</procedure>
+
+Creates a color struct from hsv elements.
+
+<procedure>(make-color-hsv  (integer h) (integer s) (integer v))</procedure>
+
+Creates a color struct from hsv elements, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-name* string)</procedure>
+
+Creates a color struct from a string name.
+
+<procedure>(make-color-name string)</procedure>
+
+Creates a color struct from a string name, with (free-color!) declared as a finalizer.
+
+<procedure>(make-color-html* string)</procedure>
+
+Creates a color struct from a html representation.
+
+<procedure>(make-color-html string)</procedure>
+
+Creates a color struct from a html representation, with (free-color!) declared as a finalizer.
+
+<procedure>(color-yuv! color (float y) (float u) (float v))</procedure>
+
+Maps yuv elements to a color struct.
+
+<procedure>(color-cmyk! color (float c) (float m) (float y) (float k))</procedure>
+
+Maps cmyk elements to a color struct.
+
+<procedure>(color-hsl! color (float h) (float s) (float l))</procedure>
+
+Maps hsl elements to a color struct.
+
+<procedure>(color-hsv! color (float h) (float s) (float v))</procedure>
+
+Maps hsv elements to a color struct.
+
+<procedure>(color-name! color string)</procedure>
+
+Maps a color name to a color struct.
+
+<procedure>(color-html! color string)</procedure>
+
+Maps a html representation to a color struct.
+

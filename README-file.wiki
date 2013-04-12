@@ -1,0 +1,372 @@
+[[tags: allegro game]]
+
+== allegro
+
+This document pertains to file related methods found in the Allegro egg.
+
+[[toc:]]
+
+== Functions
+
+=== File Operations
+
+<procedure>(make-temp-file* (string template) ((c-pointer path) out_path))</procedure>
+
+Implements al_make_temp_file.
+
+<procedure>(make-temp-file (string template) ((c-pointer path) out_path))</procedure>
+
+Implements al_make_temp_file, with (free&close-file!) declared as a finalizer.
+
+<procedure>(file-open* (string path) (string mode))</procedure>
+
+Implements al_fopen.
+
+<procedure>(file-open (string path) (string mode))</procedure>
+
+Implements al_fopen, with (free&close-file!) declared as a finalizer.
+
+<procedure>(file-open-fd* (integer file-descriptor) (string mode))</procedure>
+
+Implements al_fopen_fd.
+
+<procedure>(file-open-fd (integer file-descriptor) (string mode))</procedure>
+
+Implements al_fopen_fd, with (free&close-file!) declared as a finalizer.
+
+<procedure>(free&close-file! file)</procedure>
+
+Closes a file with (file-close!), then uses (free!) to clear the file struct from memory.
+
+<procedure>(file-close! file)</procedure>
+
+Implements al_fclose.
+
+<procedure>(file-read! file blob (integer size))</procedure>
+
+Implements al_fread.
+
+<procedure>(file-write! file blob (integer size))</procedure>
+
+Implements al_fwrite.
+
+<procedure>(file-tell file)</procedure.
+
+Implements al_ftell.
+
+<procedure>(file-seek! file (integer offset) (integer whence))</procedure>
+
+Implements al_fseek.
+
+<procedure>(file-eof? file)</procedure>
+
+Implements al_feof.
+
+<procedure>(file-error? file)</procedure>
+
+Implements al_ferror.
+
+<procedure>(file-clear-error! file)</procedure>
+
+Implements al_fclearerr.
+
+<procedure>(file-unget-chars! file (integer count))</procedure>
+
+Implements al_fungetc.
+
+<procedure>(file-size file)</procedure>
+
+Implements al_fsize.
+
+<procedure>(file-get-char! file)</procedure>
+
+Implements al_fgetc.
+
+<procedure>(file-put-char! file (integer character))</procedure>
+
+Implements al_fputc.
+
+<procedure>(file-read-16le! file)</procedure>
+
+Implements al_fread16le.
+
+<procedure>(file-read-16be! file)</procedure>
+
+Implements al_fread16be.
+
+<procedure>(file-write-16le! file integer)</procedure>
+
+Implements al_fwrite16le.
+
+<procedure>(file-read-32le! file)</procedure>
+
+Implements al_fread32le.
+
+<procedure>(file-read-32be! file)</procedure>
+
+Implements al_fread32be.
+
+<procedure>(file-write-32le! file integer)</procedure>
+
+Implements al_fwrite32le.
+
+<procedure>(file-write-32be! file integer)</procedure>
+
+Implements al_fwrite32be.
+
+<procedure>(file-get-string! file blob (integer max))</procedure>
+
+Implements al_fgets.
+
+<procedure>(file-get-utf-string*! file)</procedure>
+
+Implements al_get_ustr.
+
+<procedure>(file-get-utf-string! file)</procedure>
+
+Implements al_get_ustr, with (free-utf-string!) declared as a finalizer.
+
+<procedure>(file-put-string! file string)</procedure>
+
+Implements al_fputs.
+
+<procedure>(file-userdata file)</procedure>
+
+Implements al_get_file_userdata.
+
+<procedure>(new-file-interface-set! file-interface)</procedure>
+
+Implements al_set_new_file_interface.
+
+<procedure>(file-interface-open* file-interface (string path) (string mode))</procedure>
+
+Implements al_fopen_interface.
+
+<procedure>(file-interface-open file-interface (string path) (string mode))</procedure>
+
+Implements al_fopen_interface, with (free&close-file!) declared as a finalizer.
+
+<procedure>(make-file-handle* file-interface (c-pointer userdata))</procedure>
+
+Implements al_create_file_handle.
+
+<procedure>(make-file-handle file-interface (c-pointer userdata))</procedure>
+
+Implements al_create_file_handle, with (free&close-file!) decalred as a finalizer.
+
+=== File System Hooks
+
+<procedure>(make-fs-entry* string)</procedure>
+
+Implements al_create_fs_entry.
+
+<procedure>(make-fs-entry string)</procedure>
+
+Implements al_create_fs_entry, with (free-fs-entry!) declared as a finalizer.
+
+<procedure>(free-fs-entry! fs-entry)</procedure>
+
+Implements al_destroy_fs_entry.
+
+<procedure>(fs-entry-name fs-entry)</procedure>
+
+Implements al_get_fs_entry_name.
+
+<procedure>(fs-entry-update! fs-entry)</procedure>
+
+Implements al_update_fs_entry.
+
+<procedure>(fs-entry-mode fs-entry)</procedure>
+
+Implements al_get_fs_entry_mode.
+
+<procedure>(fs-entry-atime fs-entry)</procedure>
+
+Implements al_get_fs_entry_atime.
+
+<procedure>(fs-entry-mtime fs-entry)</procedure>
+
+Implements al_get_fs_entry_mtime.
+
+<procedure>(fs-entry-ctime fs-entry)</procedure>
+
+Implements al_get_fs_entry_ctime.
+
+<procedure>(fs-entry-size fs-entry)</procedure>
+
+Implements al_get_fs_entry_size.
+
+<procedure>(fs-entry-exists? fs-entry)</procedure>
+
+Implements al_fs_entry_exists.
+
+<procedure>(fs-entry-remove! fs-entry)</procedure>
+
+Implements al_remove_fs_entry.
+
+<procedure>(fs-entry-open fs-enty string)</procedure>
+
+Implements al_open_fs_entry.
+
+<procedure>(fs-entry-directory-open! fs-entry)</procedure>
+
+Implements al_open_directory.
+
+<procedure>(fs-entry-directory-read fs-entry)<procedure>
+
+Implements al_read_directory.
+
+<procedure>(fs-entry-directory-close! fs-entry)</procedure>
+
+Implements al_close_directory.
+
+<procedure>(current-directory)</procedure>
+
+Implements al_get_current_directory.
+
+<procedure>(change-directory string)</procedure>
+
+Implements al_change_directory.
+
+<procedure>(make-directory string)</procedure>
+
+Implements al_make_directory.
+
+<procedure>(filename-exists? string)</procedure>
+
+Implements al_filename_exists.
+
+<procedure>(filename-remove! string)</procedure>
+
+Implements al_remove_filename.
+
+<procedure>(new-file-interface)</procedure>
+
+Implements al_get_new_file_interface.
+
+<procedure>(current-fs-interface)</procedure>
+
+Implements al_get_fs_interface.
+
+<setter>(current-fs-interface-set!)</setter>
+
+Implements al_set_fs_interface.
+
+<setter>(standard-fs-interface-set!)</setter>
+
+Implements al_set_standard_fs_interface.
+
+=== Paths
+
+<procedure>(make-path* string)</procedure>
+
+Implements al_create_path.
+
+<procedure>(make-path string)<procedure>
+
+Implements al_create_path, with (free-path!) declared as a finalizer.
+
+<procedure>(make-path-for-directory* string)</procedure>
+
+Implements al_create_path_for_directory.
+
+<procedure>(make-path-for-directory string)</procedure>
+
+Implements al_create_path_for_directory, with (free-path!) declared as a finalizer.
+
+<procedure>(free-path! path)</procedure>
+
+Implements al_destroy_path.
+
+<procedure>(path->string path (char separator))</procedure>
+
+Implements al_path_cstr.
+
+<procedure>(path-component-count path)</procedure>
+
+Implements al_get_path_num_components.
+
+<procedure>(path-component path integer)</procedure>
+
+Implements al_get_path_compoenent.
+
+<setter>(path-component-set! path integer string)</setter>
+
+Implements al_replace_path_component.
+
+<procedure>(path-component-remove! path integer)</procedure>
+
+Implements al_remove_path_component.
+
+<procedure>(path-component-insert! path integer string)</procedure>
+
+Implements al_insert_path_component.
+
+<procedure>(path-clone path)</procedure>
+
+Implements al_clone_path.
+
+<procedure>(path-tail path)</procedure>
+
+Implements al_get_path_tail.
+
+<procedure>(path-drop-tail! path)</procedure>
+
+Implements al_drop_path_tail.
+
+<procedure>(path-append! path string)</procedure>
+
+Implements al_append_path_component.
+
+<procedure>(path-join! path path)</procedure>
+
+Implements al_join_paths.
+
+<procedure>(path-rebase! path path)</procedure>
+
+Implements al_rebase_path.
+
+<procedure>(path-drive path)</procedure>
+
+Implements al_get_path_drive.
+
+<setter>(path-drive-set! path string)</setter>
+
+Implements al_set_path_drive.
+
+<procedure>(path-filename path)</procedure>
+
+Implements al_get_path_filename.
+
+<setter>(path-filename-set! path string)</setter>
+
+Implements al_set_path_filename.
+
+<procedure>(path-extension path)</procedure>
+
+Implements al_get_path_extension.
+
+<setter>(path-extension-set! path string)</setter>
+
+Implements al_set_path_extension.
+
+<procedure>(path-basename path)</procedure>
+
+Implements al_get_path_basename.
+
+<procedure>(path-make-canonical! path)</procedure>
+
+Implements al_make_path_canonical.
+
+=== PhysicsFS
+
+See also: the [[physfs]] egg.
+
+<procedure>(enable-physfs-file-interface)</procedure>
+
+Implements al_set_physfs_file_interface.
+
+<procedure>(physfs-addon-version)</procedure>
+
+Implements al_get_allegro_physfs_version.
+

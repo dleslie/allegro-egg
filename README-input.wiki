@@ -1,0 +1,204 @@
+[[tags: allegro game]]
+
+== allegro
+
+This document pertains to user input related methods found in the Allegro egg.
+
+[[toc:]]
+
+== Functions
+
+=== Joystick
+
+<procedure>(joystick-addon-install)</procedure>
+
+Implements al_install_joystick.
+
+<procedure>(joystick-addon-uninstall)</procedure>
+
+Implements al_uninstall_joystick.
+
+<procedure>(joystick-addon-installed?)<procedure>
+
+Implements al_is_joystick_installed.
+
+<procedure>(joystick-addon-reconfigure)</procedure>
+
+Implements al_reconfigure_joysticks.
+
+<procedure>(joystick-event-source)<procedure>
+
+Implements al_get_joystick_event_source.
+
+<procedure>(joystick-count)</procedure>
+
+Implements al_get_num_joysticks.
+
+<procedure>(joystick-ref integer)</procedure>
+
+Implements al_get_joystick.
+
+<procedure>(joystick-release joystick)</procedure>
+
+Implements al_release_joystick.
+
+<procedure>(joystick-active? joystick)</procedure>
+
+Implements al_get_joystick_active.
+
+<procedure>(joystick-name joystick)</procedure>
+
+Implements al_get_joystick_name.
+
+<procedure>(joystick-axes-count joystick (integer stick))</procedure>
+
+Implements al_get_joystick_num_axes.
+
+<procedure>(joystick-button-count joystick)</procedure>
+
+Implements al_get_joystick_num_buttons.
+
+<procedure>(joystick-button-name joystick (integer button))</procedure>
+
+Implements al_get_joystick_button_name.
+
+<procedure>(joystick-state-init! joystick-state joystick)</procedure>
+
+Implements al_get_joystick_state.
+
+<procedure>(joystick-state-axis joystick-state (integer stick) (integer axis))</procedure>
+
+Retrieves desired axis value for a particular stick; #f if either stick or axis is out of available bounds.
+
+=== Keyboard
+
+<procedure>(keyboard-addon-installed?)</procedure>
+
+Implements al_is_keyboard_installed.
+
+<procedure>(keyboard-addon-install)</procedure>
+
+Implements al_install_keyboard.
+
+<procedure>(keyboard-addon-uninstall)</procedure>
+
+Implements al_uninstall_keyboard.
+
+<procedure>(keycode->string key)</procedure>
+
+Implements al_keycode_to_name. Not strictly necessary, since the enums are symbols which can easily be converted to strings.
+
+<procedure>(keyboard-event-source)</procedure>
+
+Implements al_get_keyboard_event_source.
+
+<procedure>(keyboard-led-set! integer)</procedure>
+
+Implements al_set_keyboard_leds.
+
+<procedure>(keyboard-state-init! keyboard-state)</procedure>
+
+Implements al_get_keyboard_state.
+
+<procedure>(keyboard-state-key-down? keyboard-state key)</procedure>
+
+Implements al_key_down.
+
+<procedure>(keyboard-three-finger-flag?)</procedure>
+
+Wraps _al_three_finger_flag.
+
+<procedure>(keyboard-led-flag?)</procedure>
+
+Wraps _al_key_led_flag.
+
+=== Mouse
+
+<procedure>(mouse-addon-installed?)</procedure>
+
+Implements al_is_mouse_installed.
+
+<procedure>(mouse-addon-install)</procedure>
+
+Implements al_install_mouse.
+
+<procedure>(mouse-addon-uninstall)</procedure>
+
+Implements al_uninstall_mouse.
+
+<procedure>(mouse-button-count)</procedure>
+
+Implements al_get_mouse_num_buttons.
+
+<procedure>(mouse-axes-count)</procedure>
+
+Implements al_get_mouse_num_axes.
+
+<procedure>(mouse-xy-set! display (integer x) (integer y))</procedure>
+
+Implements al_set_mouse_xy.
+
+<procedure>(mouse-z-set! display integer)</procedure>
+
+Implements al_set_mouse_z.
+
+<procedure>(mouse-w-set! display integer)</procedure>
+
+Implements al_set_mouse_w.
+
+<procedure>(mouse-event-source)</procedure>
+
+Implements al_get_mouse_event_source.
+
+<procedure>(mouse-state-init! mouse-state)</procedure.
+
+Implements al_get_mouse_state.
+
+<procedure>(mouse-state-button-down mouse-state (integer button))</procedure>
+
+Implements al_mouse_button_down.
+
+<procedure>(mouse-state-axis mouse-state (integer axis))</procedure>
+
+Implements al_get_mouse_state_axis.
+
+<procedure>(mouse-axis-set! (integer axis) (integer value))</procedure>
+
+Implements al_set_mouse_axis.
+
+<procedure>(make-cursor* (bitmap sprite) (integer xfocus) (integer yfocus))</procedure>
+
+Implements al_create_mouse_cursor.
+
+<procedure>(make-cursor (bitmap sprite) (integer xfocus) (integer yfocus))</procedure>
+
+Implements al_create_mouse_cursor, with (free-cursor!) declared as a finalizer.
+
+<procedure>(free-cursor! cursor)</procedure>
+
+Implements al_destroy_mouse_cursor.
+
+<procedure>(mouse-cursor-position)</procedure>
+
+Returns a 2-element list consisting of the x and y position of the mouse cursor.
+
+<procedure>(mouse-ungrab)</procedure>
+
+Implements al_ungrab_mouse.
+
+<procedure>(display-grab-mouse! display)</procedure>
+
+Implements al_grab_mouse.
+
+<procedure>(display-cursor-set! display mouse-cursor)</procedure>
+
+Implements al_set_mouse_cursor.
+
+<procedure>(display-hide-cursor! display)</procedure>
+
+Implements al_hide_mouse_cursor.
+
+<procedure>(display-system-mouse-cursor-set! display cursor-type)</procedure>
+
+Implements al_set_system_mouse_cursor.
+

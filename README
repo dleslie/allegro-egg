@@ -1,6 +1,6 @@
 == allegro
 
-Allegro 5.0 bindings for Chicken.
+Allegro 5.0x bindings for Chicken.
 
 == Author
 
@@ -27,24 +27,6 @@ I have limited time these days. If you could undertake any of the following it w
 Allegro versions 5.0.x up to 5.0.6 are supported. All 5.0.x versions should work, but features added post-5.0.6 will not be available.
 
 Future version support will likely be added in the future. Patches are welcome!
-
-== Naming Key
-
-In general, the naming is fairly indicative of the function's behaviour.
-
-The gist is something like this:
-
-; make-type : Constructs a type (Not always available)
-; make-type* : Constructs a type, returning a value which must be manually destructed
-; free-type! : Manually destructs a type (Not available for internally managed types)
-; type-noun : Accessor for value "noun" on a specific type
-; type-noun-set! : Mutator for value "noun" on a specific type
-; type-verb : Method which requires a specific type to operate
-; type-verb! : Method which modifies an object of a specific type
-; verbage : Function which operates on the global state
-; verbage* : Function which operates on the global state, but also returns a value which must be manually destructed
-
-If a function begins with a type name then you can be assured that the first parameter will be an object of that specific type.
 
 == License
 

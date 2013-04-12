@@ -1,0 +1,279 @@
+[[tags: allegro game]]
+
+== allegro
+
+This document pertains to display related methods found in the Allegro egg.
+
+[[toc:]]
+
+== Functions
+
+=== Display
+
+<procedure>(new-display-refresh-rate)</procedure>
+
+Implements al_get_new_display_refresh_rate.
+
+<procedure>(new-display-refresh-rate-set! integer)</procedure>
+
+Implements al_set_new_display_refresh_rate.
+
+<procedure>(new-display-flags)</procedure>
+
+Implements al_get_new_display_flags.
+
+<procedure>(new-display-flags-set! integer)</procedure>
+
+Implements al_set_new_display_flags.
+
+<procedure>(new-display-adapter)</procedure>
+
+Implements al_get_new_display_adapter.
+
+<procedure>(new-display-adapter-set! integer)</procedure>
+
+Implements al_set_new_display_adpater.
+
+<procedure>(new-display-window-position)</procedure>
+
+Returns a 2-element list consisting of the new display coordinates.
+
+<procedure>(new-display-window-position-set! (integer x) (integer y))</procedure>
+
+Sets the a new display's window position.
+
+<procedure>(new-display-option-value display-option)</procedure>
+
+Retrieves the value for a particular display-option for newly created displays.
+
+<procedure>(new-display-option-importance display-option)</procedure>
+
+Retrieves the importance for a particular display-option for newly created dispalys.
+
+<procedure>(new-display-option-set! display-option (integer value) display-option-importance)</procedure>
+
+Implements al_set_new_display_option.
+
+<procedure>(new-display-reset-options)</procedure>
+
+Implements al_reset_new_display_options.
+
+<procedure>(make-display* (integer width) (integer height))</procedure>
+
+Implements al_create_display.
+
+<procedure>(make-display (integer width) (integer height))</procedure>
+
+Implements al_create_display, with (free-display!) declared as a finalizer.
+
+<procedure>(make-display/mode* display-mode (integer adapter) (integer flags))</procedure>
+
+Creates a new display, taking the refresh rate, width and height from a display-mode struct.
+
+<procedure>(make-display/mode display-mode (integer adapter) (integer flags))</procedure>
+
+Creates a new display, taking the refresh rate, width and height from a display-mode struct, with (free-display-mode!) declared as a finalizer.
+
+<procedure>(free-display! display)</procedure>
+
+Implements al_destroy_display.
+
+<procedure>(current-display)</procedure>
+
+Implements al_get_current_display.
+
+<procedure>(display-mode-count)</procedure>
+
+Implements al_get_num_display_modes.
+
+<procedure>(display-mode-init! display-mode (integer index))</procedure>
+
+Implements al_get_display_mode, returning #f if unsuccessful.
+
+<procedure>(update-display-region! (integer x) (integer y) (integer width) (integer height))</procedure>
+
+Implements al_update_display_region.
+
+<procedure>(compatible-bitmap? bitmap)</procedure>
+
+Implements al_is_compatible_bitmap.
+
+<procedure>(wait-for-vsync)</procedure>
+
+Implements al_wait_for_vsync.
+
+<procedure>(draw-pixel (float x) (floay y) color)</procedure>
+
+Implements al_draw_pixel.
+
+<procedure>(video-adapter-count)</procedure>
+
+Implements al_get_num_video_adapters.
+
+<procedure>(monitor-init! monitor (integer adapter))</procedure>
+
+Implements al_get_monitor_info.
+
+<procedure>(display-option display display-option)</procedure>
+
+Implements al_get_display_option.
+
+<setter>(display-hold-bitmap-drawing! bool)</setter>
+
+Implements al_hold_bitmap_drawing.
+
+<procedure>(display-bitmap-drawing-held?)</procedure>
+
+Implements al_is_bitmap_drawing_help.
+
+<procedure>(display-window-title-set! display string)</procedure>
+
+Implements al_set_window_title.
+
+<procedure>(display-width display)</procedure>
+
+Implements al_get_display_width.
+
+<procedure>(display-height display)</procedure>
+
+Implements al_get_display_height.
+
+<procedure>(display-format display)</procedure>
+
+Implements al_get_display_format.
+
+<procedure>(display-refresh-rate display)</procedure>
+
+Implements al_get_display_refresh_rate.
+
+<procedure>(display-flags display)</procedure>
+
+Implements al_get_display_flags.
+
+<procedure>(display-toggle-flag! display display-flag bool)</procedure>
+
+Implements al_toggle_display_flag.
+
+<procedure>(display-backbuffer display)</procedure>
+
+Implements al_get_backbuffer.
+
+<procedure>(display-acknowledge-resize display)</procedure>
+
+Implements al_acknowledge_resize.
+
+<procedure>(display-resize! display (integer width) (integer height))</procedure>
+
+Implements al_resize_display.
+
+<procedure>(display-event-source display)</procedure>
+
+Implements al_get_display_event_source.
+
+<procedure>(display-iconset! display bitmap)</procedure>
+
+Implements al_set_display_icon.
+
+<procedure>(clear-to-color color)</procedure>
+
+Implements al_clear_to_color.
+
+<procedure>(target-bitmap)</procedure>
+
+Implements al_get_target_bitmap.
+
+<procedure>(target-bitmap-set! bitmap)</procedure>
+
+Implements al_set_target_bitmap.
+
+<procedure>(target-backbuffer-set! display)</procedure>
+
+Implements al_set_target_backbuffer.
+
+<procedure>(flip-display)</procedure>
+
+Implements al_flip_display.
+
+=== Direct3D
+
+<procedure>(d3d-non-pow2-texture-support?)</procedure>
+
+Implements al_have_d3d_non_pow2_texture_support.
+
+<procedure>(d3d-non-square-texture-support?)</procedure>
+
+Implements al_have_d3d_non_square_texture_support.
+
+==== Bitmap Specific
+
+<procedure>(bitmap-d3d-system-texture bitmap)</procedure>
+
+Implements al_get_d3d_system_texture.
+
+<procedure>(bitmap-d3d-video-texture bitmap)</procedure>
+
+Implements al_get_d3d_video_texture.
+
+<procedure>(bitmap-d3d-texture-position bitmap)</procedure>
+
+Returns a 2-element list consisting of a u, v pair.
+
+==== Display Specific
+
+<procedure>(display-d3d-device-lost? display)</procedure>
+
+Implements al_is_d3d_device_lost.
+
+<procedure>(display-d3d-device display)</procedure>
+
+Implements al_get_d3d_device.
+
+
+=== OpenGL
+
+<procedure>(opengl-addon-version)</procedure>
+
+Implements al_get_opengl_version.
+
+<procedure>(opengl-extension-exists? string)</procedure>
+
+Implements al_have_opengl_extension.
+
+<procedure>(opengl-proc-address string)</procedure>
+
+Implements al_get_opengl_proc_address.
+
+<procedure>(opengl-texture bitmap)</procedure>
+
+Implements al_get_opengl_texture.
+
+<procedure>(opengl-remove-fbo! bitmap)</procedure>
+
+Implements al_remove_opengl_fbo.
+
+<procedure>(opengl-fbo bitmap)</procedure>
+
+Implements al_get_opengl_fbo.
+
+<procedure>(opengl-texture-size bitmap)</procedure>
+
+Returns a 2-element list of the width and height of the opengl texture for the given bitmap.
+
+<procedure>(opengl-texture-position bitmap)</procedure>
+
+Returns a 2-element list of the u,v position of the opengl texture for the given bitmap.
+
+<procedure>(opengl-context-set! display)</procedure>
+
+Implements al_set_current_opengl_context.
+
+<procedure>(opengl-variant)</procedure>
+
+Implements al_get_opengl_variant.
+
+=== Windows
+
+<procedure>(windows-window-handle)</procedure>
+
+Implements al_get_win_window_handle.
+
