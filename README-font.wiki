@@ -6,6 +6,31 @@ This document pertains to font related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Enums
+
+=== font-align
+
+<procedure>(font-align->int font-align)</procedure>
+
+{{font-align}} may be one of the following symbols:
+* left
+* center
+* right
+
+<procedure>(int->font-align integer)</procedure>
+
+== Records
+
+=== font
+
+<record>font</record>
+<procedure>(font-data font)</procedure>
+<procedure>(font-height font)</procedure>
+
+=== utf-string
+
+<record>utf-string</record>
+
 == Functions
 
 === Fonts

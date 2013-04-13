@@ -6,6 +6,101 @@ This document pertains to system related functions found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* build-version
+* pi
+
+== Enums
+
+=== state-flag
+
+<procedure>(state-flag->int state-flag)</procedure>
+
+{{state-flag}} may be one of the following symbols:
+* new-display-parameters
+* new-bitmap-parameters
+* display
+* target-bitmap
+* blender
+* new-file-interface
+* transform
+* bitmap
+* all
+
+<procedure>(int->state-flag integer)</procedure>
+
+=== system-path
+
+<procedure>(system-path->int system-path)</procedure>
+
+{{system-path}} may be one of the following symbols:
+* resources-path
+* temp-path
+* user-data-path
+* user-home-path
+* user-settings-path
+* user-documents-path
+* exename-path
+* last-path
+
+== Records
+
+=== condition
+
+<record>condition</record>
+
+=== driver
+
+<record>driver</record>
+<procedure>(free-driver!)</procedure>
+<procedure>(driver-id driver)</procedure>
+<procedure>(driver-ptr driver)</procedure>
+<procedure>(driver-autodetect driver)</procedure>
+
+=== mutex
+
+<record>mutex</record>
+
+=== state
+
+<record>state</record>
+<procedure>(make-state*)</procedure>
+<procedure>(make-state)</procedure>
+<procedure>(free-state! state)</procedure>
+
+=== system
+
+<record>system</record>
+
+=== thread
+
+<record>thread</record>
+
+=== timer
+
+<record>timer</record>
+
+=== timeout
+
+<record>timeout</record>
+<procedure>(make-timeout*)</procedure>
+<procedure>(make-timeout)</procedure>
+<procedure>(free-timeout! timeout)</procedure>
+
+=== version
+
+<record>version</record>
+
+<procedure>(version-major version)</procedure>
+<procedure>(version-sub version)</procedure>
+<procedure>(version-wip version)</procedure>
+<procedure>(version-release-number version)</procedure>
+<procedure>(version-string version)</procedure>
+<procedure>(version-date-string version)</procedure>
+<procedure>(version-date version)</procedure>
+<procedure>(version-int version)</procedure>
+
 == Functions
 
 === System

@@ -6,6 +6,80 @@ This document pertains to file related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* eof
+
+== Enums
+
+=== file-mode
+
+<procedure>(file-mode->int file-mode)</procedure>
+
+{{file-mode}} may be one of the following symbols:
+* read
+* write
+* execute
+* hidden
+* file
+* directory
+
+<procedure>(int->file-mode integer)</procedure>
+
+=== seek-flag
+
+<procedure>(seek-flag->int seek-flag)</procedure>
+
+{{seek-flag}} may be one of the following symbols:
+* set
+* current
+* end
+
+<procedure>(int->seek-flag integer)</procedure>
+
+== Records
+
+=== file
+
+<record>file</record>
+
+=== file-interface
+
+<record>file-interface</record>
+
+=== fs-entry
+
+<record>fs-entry</record>
+<procedure>(fs-entry-vtable fs-entry)</procedure>
+
+=== fs-interface
+
+<record>fs-interface</record>
+<procedure>(free-fs-interface! fs-interface)</procedure>
+<procedure>(fs-interface-create-entry fs-interface)</procedure>
+<procedure>(fs-interface-entry-name fs-interface)</procedure>
+<procedure>(fs-interface-update-entry fs-interface)</procedure>
+<procedure>(fs-interface-entry-mode fs-interface)</procedure>
+<procedure>(fs-interface-atime fs-interface)</procedure>
+<procedure>(fs-interface-mtime fs-interface)</procedure>
+<procedure>(fs-interface-ctime fs-interface)</procedure>
+<procedure>(fs-interface-entry-size fs-interface)</procedure>
+<procedure>(fs-interface-entry-exists? fs-interface)</procedure>
+<procedure>(fs-interface-remove-entry fs-interface)</procedure>
+<procedure>(fs-interface-open-directory fs-interface)</procedure>
+<procedure>(fs-interface-read-directory fs-interface)</procedure>
+<procedure>(fs-interface-close-directory fs-interface)</procedure>
+<procedure>(fs-interface-current-directory fs-interface)</procedure>
+<procedure>(fs-interface-make-directory fs-interface)</procedure>
+<procedure>(fs-interface-filename-exists? fs-interface)</procedure>
+<procedure>(fs-interface-remove-filename fs-interface)</procedure>
+<procedure>(fs-interface-open-file fs-interface)</procedure>
+
+=== path
+
+<record>path</record>
+
+
 == Functions
 
 === File Operations

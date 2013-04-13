@@ -6,6 +6,138 @@ This document pertains to display related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* default-display-adapter
+* vertex-cache-size
+
+== Enums
+
+=== display-flag
+
+<procedure>(display-flag->int display-flag)</procedure>
+
+{{display-flag}} may be one of the following symbols:
+* windowed
+* fullscreen
+* opengl
+* direct3d-internal
+* resizable
+* noframe
+* generate-expose-events
+* opengl3
+* opengl-forward-compatible
+* fullscreen-window
+* minimized
+
+<procedure>(int->display-flag integer)</procedure>
+
+=== display-option
+
+<procedure>(display-option->int display-option)</procedure>
+
+{{display-option}} may be one of the following symbols:
+* red-size
+* green-size
+* blue-size
+* alpha-size
+* red-shift
+* green-shift
+* blue-shift
+* alpha-shift
+* acc-red-size
+* acc-green-size
+* acc-blue-size
+* acc-alpha-size
+* stereo
+* aux-buffers
+* color-size
+* depth-size
+* stencil-size
+* sample-buffers
+* samples
+* render-method
+* float-color
+* float-depth
+* single-buffer
+* swap-method
+* compatible-display
+* update-display-region
+* vsync
+* max-bitmap-size
+* support-npot-bitmap
+* can-draw-into-bitmap
+* support-separate-alpha
+
+<procedure>(int->display-option integer)</procedure>
+
+=== display-option-importance
+
+<procedure>(display-option-importance->int display-option-importance)</procedure>
+
+{{display-option-importance}} may be one of the following symbols:
+* dont-care
+* require
+* suggest
+
+<procedure>(int->display-option-importance integer)</procedure>
+
+=== display-orientation
+
+<procedure>(display-orientation->int display-orientation)</procedure>
+
+{{display-orientation}} may be one of the following symbols:
+* degrees-0
+* degrees-90
+* degrees-180
+* degrees-270
+* face-up
+* face-down
+
+<procedure>(int->display-oprientation integer)</procedure>
+
+
+=== gl-variant
+
+<procedure>(gl-variant->int gl-variant)</procedure>
+
+{{gl-variant}} may be one of the following symbols:
+* opengl
+* opengl-es
+
+<procedure>(int->gl-variant integer)</procedure>
+
+== Records
+=== display
+
+<record>display</record>
+
+=== display-mode
+
+<record>display-mode</record>
+<procedure>(make-display-mode*)</procedure>
+<procedure>(make-display-mode)</procedure>
+<procedure>(free-display-mode! display-mode)</procedure>
+<procedure>(display-mode-width display-mode)</procedure>
+<setter>(display-mode-width-set! display-mode integer)</setter>
+<procedure>(display-mode-height display-mode)</procedure>
+<setter>(display-mode-height-set! display-mode integer)</setter>
+<procedure>(display-mode-format display-mode)</procedure>
+<setter>(display-mode-format-set! display-mode pixel-format)</setter>
+<procedure>(display-mode-refresh-rate display-mode)</procedure>
+<setter>(display-mode-refresh-rate-set! display-mode integer)</setter>
+
+=== monitor
+
+<record>monitor</record>
+<procedure>(make-monitor*)</procedure>
+<procedure>(make-monitor)</procedure>
+<procedure>(free-monitor! monitor)</procedure>
+<procedure>(monitor-x1 monitor)</procedure>
+<procedure>(monitor-y1 monitor)</procedure>
+<procedure>(monitor-x2 monitor)</procedure>
+<procedure>(monitor-y2 monitor)</procedure>
+
 == Functions
 
 === Display

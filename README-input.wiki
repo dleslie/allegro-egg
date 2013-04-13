@@ -6,6 +6,256 @@ This document pertains to user input related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* joystick-max-axes
+* jostick-max-sticks
+* joystick-max-buttons
+* mouse-max-extra-axis
+
+== Enums
+
+=== cursor-type
+
+<procedure>(cursor-type->int cursor-type)</procedure>
+
+{{cursor-type}} may be one of the following symbols:
+* none
+* default
+* arrow
+* busy
+* question
+* edit
+* move
+* resize-north
+* resize-west
+* resize-south
+* resize-east
+* resize-northwest
+* resize-southwest
+* resize-southeast
+* resize-northeast
+* progress
+* precision
+* link
+* alt-select
+* unavailable
+
+<procedure>(int->cursor-type integer)</procedure>
+
+=== joystick-flag
+
+<procedure>(joystick-flag->int joystick-flag)</procedure>
+
+{{joystick-flag}} may be one of the following symbols:
+* digital
+* analog
+
+<procedure>(int->joystick-flag integer)</procedure>
+
+=== key
+
+<procedure>(key->int key)</procedure>
+
+{{key}} may be one of the following symbols:
+* a
+* b
+* c
+* d
+* e
+* f
+* g
+* h
+* i
+* j
+* k
+* l
+* m
+* n
+* o
+* p
+* q
+* r
+* s
+* t
+* u
+* v
+* w
+* x
+* y
+* z
+* one
+* two
+* three
+* four
+* five
+* six
+* seven
+* eight
+* nine
+* zero
+* pad-one
+* pad-two
+* pad-three
+* pad-four
+* pad-five
+* pad-six
+* pad-seven
+* pad-eight
+* pad-nine
+* pad-zerp
+* f1
+* f2
+* f3
+* f4
+* f5
+* f6
+* f7
+* f9
+* f9
+* f10
+* f11
+* f12
+* escape
+* tilde
+* minus
+* equals
+* backspace
+* tab
+* openbrace
+* enter
+* semicolon
+* quote
+* backslash
+* backslash2
+* comma
+* fullstop
+* slash
+* space
+* insert
+* delete
+* home
+* end
+* pgup
+* pgdn
+* left
+* right
+* up
+* down
+* pad-slash
+* pad-asterisk
+* pad-minus
+* pad-plus
+* pad-delete
+* pad-enter
+* printscreen
+* pause
+* abnt-c1
+* yen
+* kana
+* convert
+* noconvert
+* at
+* circumflex
+* colon2
+* kanji
+* pad-equals
+* backquote
+* semicolon2
+* command
+* unknown
+* lshift
+* rshift
+* lctrl
+* rctrl
+* alt
+* altgr
+* lwin
+* rwin
+* menu
+* scrolllock
+* numlock
+* capslock
+
+<procedure>(int->key integer)</procedure>
+
+=== keymod
+
+<procedure>(keymod->int keymod)</procedure>
+
+{{keymod}} may be one of the following symbols:
+* shift
+* ctrl
+* alt
+* lwin
+* rwin
+* menu
+* altgr
+* command
+* scrolllock
+* numlock
+* capslock
+* inaltseq
+* accent1
+* accent2
+* accent3
+* accent4
+
+<procedure>(int->keymod integer)</procedure>
+
+== Records
+
+=== cursor
+
+<record>cursor</record>
+
+=== joystick
+
+<record>joystick</record>
+
+=== joystick-state
+
+<record>joystick-state</record>
+<procedure>(make-joystick-state*)</procedure>
+<procedure>(make-joystick-state)</procedure>
+<procedure>(free-joystick-state! joystick-state)</procedure>
+<procedure>(joystick-state-button int)</procedure>
+
+=== keyboard
+
+<record>keyboard</record>
+
+=== keyboard-state
+
+<record>keyboard-state</record>
+<procedure>(make-keyboard-state*)</procedure>
+<procedure>(make-keyboard-state)</procedure>
+<procedure>(free-keyboard-state! keyboard-state)</procedure>
+<procedure>(keyboard-state-display)</procedure>
+
+=== mouse
+
+<record>mouse</record>
+
+=== mouse-cursor
+
+<record>mouse-cursor</record>
+
+=== mouse-state
+
+<record>mouse-state</record>
+<procedure>(make-mouse-state)</procedure>
+<procedure>(make-mouse-state*)</procedure>
+<procedure>(free-mouse-state! mouse-state)</procedure>
+<procedure>(mouse-state-x mouse-state)</procedure>
+<procedure>(mouse-state-y mouse-state)</procedure>
+<procedure>(mouse-state-z mouse-state)</procedure>
+<procedure>(mouse-state-w mouse-state)</procedure>
+<procedure>(mouse-state-buttons mouse-state)</procedure>
+<procedure>(mouse-state-pressure mouse-state)</procedure>
+<procedure>(mouse-state-axis mouse-state integer)</procedure>
+<procedure>(mouse-state-display mouse-state)</procedure>
+
 == Functions
 
 === Joystick

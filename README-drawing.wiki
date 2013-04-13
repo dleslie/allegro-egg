@@ -6,6 +6,93 @@ This document pertains to drawing related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* primitive-quality
+
+== Enums
+
+=== primitive-attribute
+
+<procedure>(primitive-attribute->int primitive-attribute)</procedure>
+
+{{primitive-attribute}} may be one of the following symbols:
+* position
+* color
+* texture-coordinate
+* texture-pixel-coordinate
+
+<procedure>(int->primitive-attribute integer)</procedure>
+
+=== primitive-type
+
+<procedure>(primitive-type->int primitive-type)</procedure>
+
+{{primitive-type}} may be one of the following symbols:
+* line-list
+* line-strip
+* line-loop
+* triangle-list
+* triangle-strip
+* point-list
+
+<procedure>(int->primitive-type integer)</procedure>
+
+=== primitive-storage
+
+<procedure>(primitive-storage->int primitive-storage)</procedure>
+
+{{primitive-storage}} may be one of the following symbols:
+* float-2
+* float-3
+* short-2
+
+<procedure>(int->primitive-storage integer)</procedure>
+
+== Records
+
+=== transform
+
+<record>transform</record>
+<procedure>(make-transform*)</procedure>
+<procedure>(make-transform)</procedure>
+<procedure>(free-transform! transform)</procedure>
+<procedure>(transform-value transform i j)</procedure>
+
+=== vertex
+
+<record>vertex</record>
+<procedure>(make-vertex*)</procedure>
+<procedure>(make-vertex)</procedure>
+<procedure>(free-vertex! vertex)</procedure>
+<procedure>(vertex-x vertex)</procedure>
+<setter>(vertex-x-set! vertex float)</setter>
+<procedure>(vertex-y vertex)</procedure>
+<setter>(vertex-y-set! vertex float)</setter>
+<procedure>(vertex-z vertex)</procedure>
+<setter>(vertex-z-set! vertex float)</setter>
+<procedure>(vertex-u vertex)</procedure>
+<setter>(vertex-u-set! vertex float)</setter>
+<procedure>(vertex-v vertex)</procedure>
+<setter>(vertex-v-set! vertex float)</setter>
+
+=== vertex-declaration
+
+<record>vertex-declaration</record>
+
+=== vertex-element
+
+<record>vertex-element</record>
+<procedure>(make-vertex-element*)</procedure>
+<procedure>(make-vertex-element)</procedure>
+<procedure>(free-vertex-element! vertex-element)</procedure>
+<procedure>(vertex-element-attribute vertex-element)</procedure>
+<setter>(vertex-element-attribute-set! vertex-element primitive-attribute)</setter>
+<procedure>(vertex-element-storage vertex-element)</procedure>
+<setter>(vertex-element-storage-set! vertex-element primitive-storage)</setter>
+<procedure>(vertex-element-offset vertex-element)</procedure>
+<setter>(vertex-element-offset-set! vertex-element integer)</setter>
+
 == Functions
 
 === Primitives

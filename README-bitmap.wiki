@@ -6,6 +6,120 @@ This document pertains to bitmap related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Enums
+
+=== bitmap-flag
+
+<procedure>(bitmap-flag->int bitmap-flag)</procedure>
+
+{{bitmap-flag}} may be one of the following symbols:
+* memory-bitmap
+* keep-bitmap-format
+* force-locking
+* no-preserve-texture
+* alpha-test
+* min-linear
+* mag-linear
+* mipmap
+* no-premultiplied-alpha
+* video-bitmap
+
+<procedure>(int->bitmap-flag integer)</procedure>
+
+=== blend-operation
+
+<procedure>(blend-operation->int blend-operation)</procedure>
+
+{{blend-operation}} may be one of the following symbols:
+* add
+* source-minus-destination
+* destination-minus-source
+
+<procedure>(int->blend-operation integer)</procedure>
+
+=== blending-mode
+
+<procedure>(blending-mode->int blending-mode)</procedure>
+
+{{blending-mode}} may be one of the following symbols:
+* zero
+* one
+* alpha
+* inverse-alpha
+
+<procedure>(int->blending-mode integer)</procedure>
+
+=== blitting-flag
+
+<procedure>(blitting-flag->int blitting-flag)</procedure>
+
+{{blitting-flag}} may be one of the following symbols:
+* flip-horizontal
+* flip-vertical
+
+<procedure>(int->blitting-flag integer)</procedure>
+
+=== locking-flag
+
+<procedure>(locking-flag->int locking-flag)</procedure>
+
+{{locking-flag}} may be one of the following symbols:
+* read-write
+* read-only
+* write-only
+
+<procedure>(int->locking-flag integer)</procedure>
+
+=== pixel-format
+
+<procedure>(pixel-format->int pixel-format)</procedure>
+
+{{pixel-format}} may be one of the following symbols:
+* any
+* any-no-alpha
+* any-with-alpha
+* any-15-no-alpha
+* any-16-no-alpha
+* any-16-with-alpha
+* any-24-no-alpha
+* any-32-no-alpha
+* any-32-with-alpha
+* argb-8888
+* rgba-8888
+* argb-4444
+* rgb-888
+* rgb-565
+* rgb555
+* rgba-5551
+* argb-1555
+* abgr-8888
+* xbgr-8888
+* bgr-888
+* bgr-565
+* bgr-555
+* rgbx-8888
+* xrgb-8888
+* abgr-f32
+* abgr-8888-le
+* rgba-4444
+
+<procedure>(int->pixel-format integer)</procedure>
+
+== Records
+
+=== bitmap
+
+<record>bitmap</record>
+
+=== locked-region
+
+<record>locked-region</record>
+<procedure>(free-locked-region! locked-region)</procedure>
+<procedure>(locked-region-data locked-region)</procedure>
+<procedure>(locked-region-format locked-region)</procedure>
+<procedure>(locked-region-pitch locked-region)</procedure>
+<procedure>(locked-region-pixel-size locked-region)</procedure>
+
 == Functions
 
 === Bitmap
@@ -118,19 +232,19 @@ Implements al_draw_tinted_scaled_rotated_bitmap.
 
 Implements al_draw_tinted_scaled_rotated_bitmap.
 
-<procedure>(bitmap-lock*! bitmap pixel-format (integer bitmap-flags))</procedure>
+<procedure>(bitmap-lock*! bitmap pixel-format (integer locking-flag))</procedure>
 
 Implements al_lock_bitmap.
 
-<procedure>(lock-bitmap*! bitmap pixel-format (integer bitmap-flags))</procedure>
+<procedure>(lock-bitmap*! bitmap pixel-format (integer locking-flag))</procedure>
 
 Implements al_lock_bitmap.
 
-<procedure>(bitmap-lock-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+<procedure>(bitmap-lock-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer locking-flag))</procedure>
 
 Implements al_lock_bitmap_region.
 
-<procedure>(lock-bitmap-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer bitmap-flags))</procedure>
+<procedure>(lock-bitmap-region*! bitmap (integer x) (integer y) (integer width) (integer height) pixel-format (integer locking-flag))</procedure>
 
 Implements al_lock_bitmap_region.
 

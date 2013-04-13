@@ -6,6 +6,90 @@ This document pertains to audio related methods found in the Allegro egg.
 
 [[toc:]]
 
+== Constants
+
+* audio-pan-none
+
+== Enums
+
+=== audio-depth
+
+<procedure>(audio-depth->int audio-depth)</procedure>
+
+{{{audio-depth}} may be one of the following symbols:
+* int8
+* int16
+* int24
+* float32
+* unsigned
+* uint8
+* uint16
+* uint24
+
+<procedure>(int->audio-depth integer)</procedure>
+
+=== channel-configuration
+
+<procedure>(channel-configuration->int channel-configuration)</procedure>
+
+{{channel-configuration}} may be one of the following symbols:
+* one
+* two
+* three
+* four
+* five-one
+* six-one
+* seven-one
+
+<procedure>(int->channel-configuration integer)</procedure>
+
+=== mixer-quality
+
+<procedure>(mixer-quality->int mixer-quality)</procedure>
+
+{{mixer-quality}} may be one of the following symbols:
+* point
+* linear
+
+<procedure>(int->mixer-quality integer)</procedure>
+
+=== playmode
+
+<procedure>(playmode->int playmode)</procedure>
+
+{{playmode}} may be one of the following symbols:
+* once
+* loop
+* bidirectional
+
+<procedure>(int->playmode integer)</procedure>
+
+== Records
+
+=== audio-stream
+
+<record>audio-stream</record>
+
+=== mixer
+
+<record>mixer</record>
+
+=== sample
+
+<record>sample</record>
+
+=== sample-id
+
+<record>sample-id</record>
+
+=== sample-instance
+
+<record>sample-instance</record>
+
+=== voice
+
+<record>voice</record>
+
 == Functions
 
 === Audio
