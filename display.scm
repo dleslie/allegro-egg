@@ -4,7 +4,7 @@
 (define new-display-flags (foreign-lambda int "al_get_new_display_flags"))
 (define new-display-adapter (foreign-lambda int "al_get_new_display_adapter"))
 (define new-display-adapter-set! (foreign-lambda void "al_set_new_display_adapter" int))
-(define new-display-window-position (foreign-safe-lambda* scheme-object () #<<ENDC
+(define new-display-window-position (foreign-primitive scheme-object () #<<ENDC
 int x, y;
 C_word *ptr = C_alloc(C_SIZEOF_LIST(2));
 

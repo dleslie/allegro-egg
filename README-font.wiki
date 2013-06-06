@@ -4,6 +4,8 @@
 
 This document pertains to font related methods found in the Allegro egg.
 
+Please see the main [allegro] wiki page for more information.
+
 [[toc:]]
 
 == Enums

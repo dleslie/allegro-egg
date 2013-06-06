@@ -3,7 +3,7 @@
 
 (define bitmap-d3d-system-texture (foreign-lambda integer64 "al_get_d3d_system_texture" bitmap))
 (define bitmap-d3d-video-texture (foreign-lambda integer64 "al_get_d3d_video_texture" bitmap))
-(define bitmap-d3d-texture-position (foreign-safe-lambda* scheme-object ((bitmap bmp)) "
+(define bitmap-d3d-texture-position (foreign-primitive scheme-object ((bitmap bmp)) "
 int u, v;
 al_get_d3d_texture_position(bmp, &u, &v);
 C_word *ptr = C_alloc(C_SIZEOF_LIST(2));

@@ -4,6 +4,8 @@
 
 This document pertains to drawing related methods found in the Allegro egg.
 
+Please see the main [allegro] wiki page for more information.
+
 [[toc:]]
 
 == Constants
@@ -94,6 +96,20 @@ This document pertains to drawing related methods found in the Allegro egg.
 <setter>(vertex-element-offset-set! vertex-element integer)</setter>
 
 == Functions
+
+=== Image Formats
+
+<procedure>(image-addon-install)</procedure>
+
+Implements al_init_image_addon.
+
+<procedure>(image-addon-uninstall)</procedure>
+
+Implements al_shutdown_image_addon.
+
+<procedure>(image-addon-version)</procedure>
+
+Implements al_get_allegro_image_version.
 
 === Primitives
 

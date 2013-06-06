@@ -6,7 +6,7 @@
 (define transform-translate! (foreign-lambda void "al_translate_transform" transform float float))
 (define transform-scale! (foreign-lambda void "al_scale_transform" transform float float))
 
-(define transform-coordinates (foreign-safe-lambda* scheme-object ((transform t) (float x) (float y)) "
+(define transform-coordinates (foreign-primitive scheme-object ((transform t) (float x) (float y)) "
 float sx = x;
 float sy = y;
 al_transform_coordinates(t, &sx, &sy);

@@ -90,7 +90,7 @@ else
 
 (define utf-get (foreign-lambda integer32 "al_ustr_get" utf-string integer))
 
-(define utf-get-next (foreign-safe-lambda* integer32 ((utf-string us) (integer pos)) "
+(define utf-get-next (foreign-primitive integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_get_next(us, &pos);
 if (val >= 0)
 {
@@ -101,7 +101,7 @@ else
   C_return(C_SCHEME_FALSE);
 "))
 
-(define utf-get-prev (foreign-safe-lambda* integer32 ((utf-string us) (integer pos)) "
+(define utf-get-prev (foreign-primitive integer32 ((utf-string us) (integer pos)) "
 int32_t val = al_ustr_prev_get(us, &pos);
 if (val >= 0)
 {
