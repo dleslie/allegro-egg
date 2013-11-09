@@ -214,12 +214,6 @@
     (set-finalizer! ms free-mouse-state!)
     ms))
 
-(define-foreign-record-type (driver "_AL_DRIVER_INFO")
-  (destructor: free-driver!)
-  (int id           driver-id)
-  (c-pointer driver driver-ptr)
-  (int autodetect   driver-autodetect))
-
 (define-foreign-record-type (any-event "ALLEGRO_ANY_EVENT")
   (event-type type     any-event-type)
   (event-source source any-event-source)
