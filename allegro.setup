@@ -91,4 +91,4 @@
 (install-extension
  'allegro
  '("allegro.so" "allegro.import.so" "allegro-glext.so" "allegro-glext.import.so" "allegro-c-util.so" "allegro-c-util.import.so")
- '((version 2.4.2)))
+ '((version 2.4.3)))
