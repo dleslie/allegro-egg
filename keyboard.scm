@@ -15,4 +15,4 @@
  (windows 
   (define keyboard-three-finger-flag? (foreign-value "_al_three_finger_flag" bool))
   (define keyboard-led-flag? (foreign-value "_al_key_led_flag" bool)))
- (else '()))
+ (else #f))

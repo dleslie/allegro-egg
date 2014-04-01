@@ -10,5 +10,4 @@
         (import scheme chicken foreign foreigners allegro)
         
         (include "gl_ext_defs")
-        (include "gl_ext_api")
-)
+        (include "gl_ext_api"))

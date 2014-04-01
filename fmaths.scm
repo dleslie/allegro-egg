@@ -8,4 +8,4 @@
   (define fixed-cos (foreign-lambda* integer32 ((integer32 val)) "C_return(_al_fix_cos_tbl[val]);"))
   (define fixed-tan (foreign-lambda* integer32 ((integer32 val)) "C_return(_al_fix_tan_tbl[val]);"))
   (define fixed-acos (foreign-lambda* integer32 ((integer32 val)) "C_return(_al_fix_acos_tbl[val]);")))
- (else '()))
+ (else #f))

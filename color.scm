@@ -1,32 +1,36 @@
-(define color-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_color_version"))
+(cond-expand
+ (has-allegro-color
+  (register-feature! 'allegro-color)
+  
+  (define color-addon-version (foreign-lambda unsigned-integer32 "al_get_allegro_color_version"))
 
-(define hsv->rgb (foreign-primitive scheme-object ((float h) (float s) (float v)) "
+  (define hsv->rgb (foreign-primitive scheme-object ((float h) (float s) (float v)) "
 float r, g, b;
 al_color_hsv_to_rgb((float)h, (float)s, (float)v, &r, &g, &b);
 C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_flonum(&ptr, r), C_flonum(&ptr, g), C_flonum(&ptr, b)));
 "))
-(define rgb->hsl (foreign-primitive scheme-object ((float red) (float green) (float blue)) "
+  (define rgb->hsl (foreign-primitive scheme-object ((float red) (float green) (float blue)) "
 float h,s,l;
 al_color_rgb_to_hsl(red, green, blue, &h, &s, &l);
 C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_flonum(&ptr, h), C_flonum(&ptr, s), C_flonum(&ptr, l)));
 "))
-(define hsl->rgb (foreign-primitive scheme-object ((float hue) (float saturation) (float lightness)) "
+  (define hsl->rgb (foreign-primitive scheme-object ((float hue) (float saturation) (float lightness)) "
 float r,g,b;
 al_color_hsl_to_rgb(hue, saturation, lightness, &r, &g, &b);
 C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
 C_return(C_list(&ptr, 3, C_flonum(&ptr, r), C_flonum(&ptr, g), C_flonum(&ptr, b)));
 "))
-(define name->rgb (foreign-primitive scheme-object (((const c-string) name)) "
+  (define name->rgb (foreign-primitive scheme-object (((const c-string) name)) "
 float r, g, b;
 if (al_color_name_to_rgb(name, &r, &g, &b))
 {
-  C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
-  C_return(C_list(&ptr, 3, C_flonum(&ptr, r), C_flonum(&ptr, g), C_flonum(&ptr, b)));
-}
+ C_word *ptr = C_alloc(C_SIZEOF_FLONUM * 3 + C_SIZEOF_LIST(3));
+	C_return(C_list(&ptr, 3, C_flonum(&ptr, r), C_flonum(&ptr, g), C_flonum(&ptr, b)));
+	}
 else
-  C_return(C_SCHEME_FALSE);
+C_return(C_SCHEME_FALSE);
 "))
 (define rgb->name (foreign-lambda c-string "al_color_rgb_to_name" float float float))
 (define cmyk->rgb (foreign-primitive scheme-object ((float cyan) (float magenta) (float yellow) (float key)) "
@@ -163,3 +167,5 @@ al_color_name_to_rgb(n, &r, &g, &b);
 float r, g, b;
 al_color_html_to_rgb(html, &r, &g, &b);
 *clr = al_map_rgb_f(r, g, b);"))
+)
+(else #f))

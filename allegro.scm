@@ -9,7 +9,7 @@
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_color.h>
 #ifdef _WIN32
-  #include <allegro5/allegro_windows.h>
+#include <allegro5/allegro_windows.h>
 #endif
 <#
 
@@ -56,4 +56,4 @@
         (include "opengl")
         (include "primitives")
         (include "audio")
-)
+	)
