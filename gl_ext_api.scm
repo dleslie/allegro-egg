@@ -10333,6 +10333,10 @@
         "glGetTransformFeedbackVaryingEXT"
         unsigned-integer
         unsigned-integer
+        integer
+        integer
+        integer
+        unsigned-integer
         s32vector)))
   (begin
     (define gl:ClientAttribDefaultEXT
