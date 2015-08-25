@@ -13,7 +13,14 @@
     (if (string-null? output)
 	#f
 	(string-delete (lambda (c) (char=? #\newline c)) output))))
-  
+
+(let* ((allegro-version (call-with-input-pipe "pkg-config --variable=version allegro-5.0" read-all))
+       (allegro-version (if (string-null? allegro-version) #f
+			    (string-delete (lambda (c) (char=? #\newline c)) allegro-version))))
+  (when (or (version>=? "5.0.9" allegro-version)
+	    (version>=? allegro-version "5.0.11"))
+    (error (string-append "Allegro version " allegro-version " is not supported."))))
+
 (let ((allegro (pkg-config "allegro-5.0")))
   (when allegro
 	(set! link-options (string-append link-options " " allegro))))
@@ -91,4 +98,4 @@
 (install-extension
  'allegro
  '("allegro.so" "allegro.import.so" "allegro-glext.so" "allegro-glext.import.so" "allegro-c-util.so" "allegro-c-util.import.so")
- '((version 2.4.3)))
+ '((version 2.4.4)))
