@@ -92,7 +92,7 @@
   (syntax-rules ()
     ((build scm imp)
      (begin
-       (compile -s -d1 scm -j allegro ,link-options ,compile-options ,@extra-defines)
+       (compile -s -d1 scm ,link-options ,compile-options ,@extra-defines)
        (compile -s imp -d0 ,link-options ,compile-options ,@extra-defines)))))
 
 (make
