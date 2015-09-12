@@ -10326,18 +10326,29 @@
         unsigned-integer
         s32vector
         unsigned-integer)))
-  (begin
-    (define gl:GetTransformFeedbackVaryingEXT
-      (foreign-lambda
-        void
-        "glGetTransformFeedbackVaryingEXT"
-        unsigned-integer
-        unsigned-integer
-        integer
-        integer
-        integer
-        unsigned-integer
-        s32vector)))
+  (cond-expand
+    (macosx
+     (begin
+       (define gl:GetTransformFeedbackVaryingEXT
+	 (foreign-lambda
+	     void
+	     "glGetTransformFeedbackVaryingEXT"
+	   unsigned-integer
+	   unsigned-integer
+	   integer
+	   integer
+	   integer
+	   unsigned-integer
+	   s32vector))))
+    (else
+     (begin
+       (define gl:GetTransformFeedbackVaryingEXT
+	 (foreign-lambda
+	     void
+	     "glGetTransformFeedbackVaryingEXT"
+	   unsigned-integer
+	   unsigned-integer
+	   s32vector)))))
   (begin
     (define gl:ClientAttribDefaultEXT
       (foreign-lambda void "glClientAttribDefaultEXT" unsigned-integer)))
