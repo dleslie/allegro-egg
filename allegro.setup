@@ -18,7 +18,7 @@
        (allegro-version (if (string-null? allegro-version) #f
 			    (string-delete (lambda (c) (char=? #\newline c)) allegro-version))))
   (when (or (version>=? "5.0.9" allegro-version)
-	    (version>=? allegro-version "5.0.11"))
+	    (version>=? allegro-version "5.0.12"))
     (error (string-append "Allegro version " allegro-version " is not supported."))))
 
 (let ((allegro (pkg-config "allegro-5.0")))
