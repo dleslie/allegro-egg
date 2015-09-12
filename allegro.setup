@@ -1,5 +1,9 @@
 ;;;; allegro.setup -*- Scheme -*-
-(use posix srfi-13)
+(use posix srfi-13 make)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Config
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define compile-options "-O3 -C -O3")
 (define link-options "")
@@ -80,22 +84,29 @@
 	(set! link-options (string-append link-options " " image))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-image)))))
 
-(compile -s -d1 allegro.scm -j allegro ,link-options ,compile-options
-         ,@extra-defines)
-(compile -s allegro.import.scm -d0 ,link-options ,compile-options
-         ,@extra-defines)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Compile
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(compile -s -d1 allegro-glext.scm -j allegro-glext ,link-options ,compile-options
-         ,@extra-defines)
-(compile -s allegro-glext.import.scm -d0 ,link-options ,compile-options
-         ,@extra-defines)
+(define-syntax build
+  (syntax-rules ()
+    ((build scm imp)
+     (begin
+       (compile -s -d1 scm -j allegro ,link-options ,compile-options ,@extra-defines)
+       (compile -s imp -d0 ,link-options ,compile-options ,@extra-defines)))))
 
-(compile -s -d1 allegro-c-util.scm -j allegro-c-util ,link-options ,compile-options
-         ,@extra-defines)
-(compile -s allegro-c-util.import.scm -d0 ,link-options ,compile-options
-         ,@extra-defines)
+(make
+    (("allegro.import.so" ("acodec.scm" "altime.scm" "audio.scm" "allegro.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "debug.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
+      (build allegro.scm allegro.import.scm))
+     ("allegro-glext.import.so" ("allegro-glext.scm" "gl_ext_api.scm" "gl_ext_defs.scm")
+      (build allegro-glext.scm allegro-glext.import.scm))
+     ("allegro-c-util.import.so" ("allegro-c-util.scm")
+      (build allegro-c-util.scm allegro-c-util.import.scm))
+     ("all" ("allegro.import.so" "allegro-glext.import.so" "allegro-c-util.import.so")
+      (lambda () (display "Building of Allegro completed"))))
+  "all")
 
 (install-extension
  'allegro
  '("allegro.so" "allegro.import.so" "allegro-glext.so" "allegro-glext.import.so" "allegro-c-util.so" "allegro-c-util.import.so")
- '((version 2.4.5)))
+ '((version 2.4.6)))
