@@ -2994,15 +2994,6 @@
         u32vector
         c-string)))
   (begin
-    (define gl:GetAttachedObjectsARB
-      (foreign-lambda
-        void
-        "glGetAttachedObjectsARB"
-        unsigned-integer
-        unsigned-integer
-        u32vector
-        u32vector)))
-  (begin
     (define gl:GetUniformLocationARB
       (foreign-lambda
         integer
@@ -3728,9 +3719,6 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define gl:GetInteger64v
-      (foreign-lambda void "glGetInteger64v" unsigned-integer s32vector)))
-  (begin
     (define gl:GetSynciv
       (foreign-lambda
         void
@@ -3965,22 +3953,6 @@
         "glQueryCounter"
         unsigned-integer
         unsigned-integer)))
-  (begin
-    (define gl:GetQueryObjecti64v
-      (foreign-lambda
-        void
-        "glGetQueryObjecti64v"
-        unsigned-integer
-        unsigned-integer
-        s32vector)))
-  (begin
-    (define gl:GetQueryObjectui64v
-      (foreign-lambda
-        void
-        "glGetQueryObjectui64v"
-        unsigned-integer
-        unsigned-integer
-        u32vector)))
   (begin
     (define gl:VertexP2ui
       (foreign-lambda void "glVertexP2ui" unsigned-integer unsigned-integer)))
@@ -9368,22 +9340,6 @@
         unsigned-integer
         unsigned-integer)))
   (begin
-    (define gl:GetQueryObjecti64vEXT
-      (foreign-lambda
-        void
-        "glGetQueryObjecti64vEXT"
-        unsigned-integer
-        unsigned-integer
-        s32vector)))
-  (begin
-    (define gl:GetQueryObjectui64vEXT
-      (foreign-lambda
-        void
-        "glGetQueryObjectui64vEXT"
-        unsigned-integer
-        unsigned-integer
-        u32vector)))
-  (begin
     (define gl:ProgramEnvParameters4fvEXT
       (foreign-lambda
         void
@@ -9457,14 +9413,6 @@
         unsigned-integer
         unsigned-integer
         u8vector)))
-  (begin
-    (define gl:GetIntegerIndexedvEXT
-      (foreign-lambda
-        void
-        "glGetIntegerIndexedvEXT"
-        unsigned-integer
-        unsigned-integer
-        s32vector)))
   (begin
     (define gl:EnableIndexedEXT
       (foreign-lambda
@@ -10064,7 +10012,7 @@
         "glGetIntegerIndexedvEXT"
         unsigned-integer
         unsigned-integer
-        u8vector)))
+        s32vector)))
   (begin
     (define gl:BindBufferRangeNV
       (foreign-lambda
@@ -12571,14 +12519,6 @@
         unsigned-integer
         f64vector)))
   (begin
-    (define gl:VideoCaptureNV
-      (foreign-lambda
-        unsigned-integer
-        "glVideoCaptureNV"
-        unsigned-integer
-        u32vector
-        u32vector)))
-  (begin
     (define gl:VideoCaptureStreamParameterivNV
       (foreign-lambda
         void
@@ -12651,61 +12591,6 @@
         unsigned-byte
         "glIsNamedBufferResidentNV"
         unsigned-integer)))
-  (begin
-    (define gl:GetBufferParameterui64vNV
-      (foreign-lambda
-        void
-        "glGetBufferParameterui64vNV"
-        unsigned-integer
-        unsigned-integer
-        u32vector)))
-  (begin
-    (define gl:GetNamedBufferParameterui64vNV
-      (foreign-lambda
-        void
-        "glGetNamedBufferParameterui64vNV"
-        unsigned-integer
-        unsigned-integer
-        u32vector)))
-  (begin
-    (define gl:GetIntegerui64vNV
-      (foreign-lambda void "glGetIntegerui64vNV" unsigned-integer u32vector)))
-  (begin
-    (define gl:Uniformui64NV
-      (foreign-lambda void "glUniformui64NV" integer unsigned-integer)))
-  (begin
-    (define gl:Uniformui64vNV
-      (foreign-lambda
-        void
-        "glUniformui64vNV"
-        integer
-        unsigned-integer
-        u32vector)))
-  (begin
-    (define gl:GetUniformui64vNV
-      (foreign-lambda
-        void
-        "glGetUniformui64vNV"
-        unsigned-integer
-        integer
-        u32vector)))
-  (begin
-    (define gl:ProgramUniformui64NV
-      (foreign-lambda
-        void
-        "glProgramUniformui64NV"
-        unsigned-integer
-        integer
-        unsigned-integer)))
-  (begin
-    (define gl:ProgramUniformui64vNV
-      (foreign-lambda
-        void
-        "glProgramUniformui64vNV"
-        unsigned-integer
-        integer
-        unsigned-integer
-        u32vector)))
   (begin
     (define gl:BufferAddressRangeNV
       (foreign-lambda
@@ -12790,14 +12675,6 @@
         integer
         unsigned-integer
         unsigned-integer)))
-  (begin
-    (define gl:GetIntegerui64i_vNV
-      (foreign-lambda
-        void
-        "glGetIntegerui64i_vNV"
-        unsigned-integer
-        unsigned-integer
-        u32vector)))
   (begin
     (define gl:TextureBarrierNV (foreign-lambda void "glTextureBarrierNV"))))
 
