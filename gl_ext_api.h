@@ -1859,7 +1859,7 @@ void glBindBufferRangeEXT(GLenum, GLuint, GLuint, GLintptr, GLsizeiptr);
 void glBindBufferOffsetEXT(GLenum, GLuint, GLuint, GLintptr);
 void glBindBufferBaseEXT(GLenum, GLuint, GLuint);
 void glTransformFeedbackVaryingsEXT(GLuint, GLsizei, const GLint *, GLenum);
-void glGetTransformFeedbackVaryingEXT(GLuint, GLuint, GLint *);
+void glGetTransformFeedbackVaryingEXT(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei* size, GLenum* type, GLchar* name);
 
 void glClientAttribDefaultEXT(GLbitfield);
 void glPushClientAttribDefaultEXT(GLbitfield);
