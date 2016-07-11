@@ -18,68 +18,69 @@
 	#f
 	(string-delete (lambda (c) (char=? #\newline c)) output))))
 
-(let* ((allegro-version (call-with-input-pipe "pkg-config --variable=version allegro-5.0" read-all))
-       (allegro-version (if (string-null? allegro-version) #f
+(let* ((allegro-version (call-with-input-pipe "pkg-config --variable=version allegro-5" read-all))
+       (allegro-version (if (string-null? allegro-version) "(none found)"
 			    (string-delete (lambda (c) (char=? #\newline c)) allegro-version))))
-  (when (or (version>=? "5.0.9" allegro-version)
-	    (version>=? allegro-version "5.0.12"))
+  (when (or
+	 (not (version>=? "5.0.9" allegro-version))
+	 (version>=? allegro-version "5.0.12"))
     (error (string-append "Allegro version " allegro-version " is not supported."))))
 
-(let ((allegro (pkg-config "allegro-5.0")))
+(let ((allegro (pkg-config "allegro-5")))
   (when allegro
 	(set! link-options (string-append link-options " " allegro))))
 
-(let ((primitives (pkg-config "allegro_primitives-5.0")))
+(let ((primitives (pkg-config "allegro_primitives-5")))
   (when primitives
 	(set! link-options (string-append link-options " " primitives))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-primitives)))))
 
-(let ((color (pkg-config "allegro_color-5.0")))
+(let ((color (pkg-config "allegro_color-5")))
   (when color
 	(set! link-options (string-append link-options " " color))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-color)))))
 
-(let ((dialog (pkg-config "allegro_dialog-5.0")))
+(let ((dialog (pkg-config "allegro_dialog-5")))
   (when dialog
 	(set! link-options (string-append link-options " " dialog))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-dialog)))))
 
-(let ((main (pkg-config "allegro_main-5.0")))
+(let ((main (pkg-config "allegro_main-5")))
   (when main
 	(set! link-options (string-append link-options " " main))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-main)))))
   
-(let ((physfs (pkg-config "allegro_physfs-5.0")))
+(let ((physfs (pkg-config "allegro_physfs-5")))
   (when physfs
 	(set! link-options (string-append link-options " " physfs))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-physfs)))))
 
-(let ((font (pkg-config "allegro_font-5.0")))
+(let ((font (pkg-config "allegro_font-5")))
   (when font
 	(set! link-options (string-append link-options " " font))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-font)))))
 
-(let ((ttf (pkg-config "allegro_ttf-5.0")))
+(let ((ttf (pkg-config "allegro_ttf-5")))
   (when ttf
 	(set! link-options (string-append link-options " " ttf))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-ttf)))))
 
-(let ((audio (pkg-config "allegro_audio-5.0")))
+(let ((audio (pkg-config "allegro_audio-5")))
   (when audio
 	(set! link-options (string-append link-options " " audio))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-audio)))))
 
-(let ((memfile (pkg-config "allegro_memfile-5.0")))
+(let ((memfile (pkg-config "allegro_memfile-5")))
   (when memfile
 	(set! link-options (string-append link-options " " memfile))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-memfile)))))
 
-(let ((acodec (pkg-config "allegro_acodec-5.0")))
+(let ((acodec (pkg-config "allegro_acodec-5")))
   (when acodec
 	(set! link-options (string-append link-options " " acodec))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-acodec)))))
 
-(let ((image (pkg-config "allegro_image-5.0")))
+(let ((image (pkg-config "allegro_image-5")))
   (when image
 	(set! link-options (string-append link-options " " image))
 	(set! extra-defines (append extra-defines '(-Dhas-allegro-image)))))
