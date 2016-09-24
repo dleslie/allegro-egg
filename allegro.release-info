@@ -1,3 +1,4 @@
+;; allegro.setup -*- Scheme -*-
 (repo git "git@github.com:dleslie/allegro-egg.git")
 (uri targz "https://github.com/dleslie/allegro-egg/tarball/{egg-release}")
 (release "1.0")
@@ -21,3 +22,4 @@
 (release "2.4.5")
 (release "2.4.6")
 (release "2.4.7")
+(release "2.4.8")

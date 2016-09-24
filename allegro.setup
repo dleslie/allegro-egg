@@ -30,12 +30,15 @@
 	   (string-delete (lambda (c) (char=? #\newline c)) output))))
     (else #f)))
 
-(let* ((allegro-version (pkg-version "allegro-5" "allegro-5.0"))
-       (allegro-version (if allegro-version allegro-version "(none found)")))
-  (when (or
-	 (not (version>=? allegro-version "5.0.9"))
-	 (version>=? allegro-version "5.0.12"))
-    (error (string-append "Allegro version " allegro-version " is not supported."))))
+(cond-expand
+  (windows (display "Ignoring version check on account of Windows"))
+  (else
+   (let* ((allegro-version (pkg-version "allegro-5" "allegro-5.0"))
+	  (allegro-version (if allegro-version allegro-version "(none found)")))
+     (when (or
+	    (not (version>=? allegro-version "5.0.9"))
+	    (version>=? allegro-version "5.0.12"))
+       (error (string-append "Allegro version " allegro-version " is not supported."))))))
 
 (let ((allegro (pkg-libs "allegro-5" "allegro-5.0")))
   (when allegro
@@ -121,4 +124,4 @@
 (install-extension
  'allegro
  '("allegro.so" "allegro.import.so" "allegro-glext.so" "allegro-glext.import.so" "allegro-c-util.so" "allegro-c-util.import.so")
- '((version 2.4.6)))
+ '((version 2.4.7)))
