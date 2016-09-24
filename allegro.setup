@@ -13,13 +13,17 @@
 	  '()))
 
 (define (pkg-libs . lib-names)
-  (match lib-names
-    ((lib-name . rest)
-     (let ((output (call-with-input-pipe (string-append "pkg-config --libs " lib-name) read-all)))
-       (if (string-null? output)
-	   (apply pkg-libs rest)
-	   (string-delete (lambda (c) (char=? #\newline c)) output))))
-    (else #f)))
+  (cond-expand
+    (windows
+     "-lallegro-5.0.10-monolith-mt -lopengl32")
+    (else
+     (match lib-names
+       ((lib-name . rest)
+	(let ((output (call-with-input-pipe (string-append "pkg-config --libs " lib-name) read-all)))
+	  (if (string-null? output)
+	      (apply pkg-libs rest)
+	      (string-delete (lambda (c) (char=? #\newline c)) output))))
+       (else #f)))))
 
 (define (pkg-version . lib-names)
   (match lib-names
