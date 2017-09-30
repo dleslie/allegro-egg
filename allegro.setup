@@ -5,26 +5,6 @@
 ;; Config
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define compile-options "-O3 -C -O3")
-(define link-options "")
-(define extra-defines
-  (if (version>=? (chicken-version) "4.7.0")
-	  '(-Dimproved-64-bit-support)
-	  '()))
-
-(define (pkg-libs . lib-names)
-  (cond-expand
-    (windows
-     "-lallegro-5.0.10-monolith-mt -lopengl32")
-    (else
-     (match lib-names
-       ((lib-name . rest)
-	(let ((output (call-with-input-pipe (string-append "pkg-config --libs " lib-name) read-all)))
-	  (if (string-null? output)
-	      (apply pkg-libs rest)
-	      (string-delete (lambda (c) (char=? #\newline c)) output))))
-       (else #f)))))
-
 (define (pkg-version . lib-names)
   (match lib-names
     ((lib-name . rest)
@@ -34,15 +14,33 @@
 	   (string-delete (lambda (c) (char=? #\newline c)) output))))
     (else #f)))
 
-(cond-expand
-  (windows (display "Ignoring version check on account of Windows"))
-  (else
-   (let* ((allegro-version (pkg-version "allegro-5" "allegro-5.0"))
-	  (allegro-version (if allegro-version allegro-version "(none found)")))
-     (when (or
-	    (not (version>=? allegro-version "5.0.9"))
-	    (version>=? allegro-version "5.0.12"))
-       (error (string-append "Allegro version " allegro-version " is not supported."))))))
+(define (pkg-libs . lib-names)
+  (match lib-names
+    ((lib-name . rest)
+     (let ((output (call-with-input-pipe (string-append "pkg-config --libs " lib-name) read-all)))
+       (if (string-null? output)
+	   (apply pkg-libs rest)
+	   (string-delete (lambda (c) (char=? #\newline c)) output))))
+    (else #f)))
+
+(define compile-options "-O3 -C -O3")
+(define link-options "")
+(define allegro-version 
+  (let* ((allegro-version (pkg-version "allegro-5" "allegro-5.0"))
+	 (allegro-version (if allegro-version allegro-version "(none found)")))
+    allegro-version))
+
+(when
+    (or
+     (not (version>=? allegro-version "5.0.9"))
+     (version>=? allegro-version "5.3.0"))
+  (error (string-append "Allegro version " allegro-version " is not supported.")))
+
+(define extra-defines
+  (append
+   (if (version>=? (chicken-version) "4.7.0") '(-Dimproved-64-bit-support) '())
+   (if (version>=? allegro-version "5.2.0") '(-Dallegro-52) '())
+   (if (version>=? allegro-version "5.0.0") '(-Dallegro-50) '())))
 
 (let ((allegro (pkg-libs "allegro-5" "allegro-5.0")))
   (when allegro
@@ -115,7 +113,7 @@
        (compile -s imp -d0 ,link-options ,compile-options ,@extra-defines)))))
 
 (make
-    (("allegro.import.so" ("acodec.scm" "altime.scm" "audio.scm" "allegro.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "debug.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
+    (("allegro.import.so" ("acodec.scm" "altime.scm" "audio.scm" "allegro.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
       (build allegro.scm allegro.import.scm))
      ("allegro-glext.import.so" ("allegro-glext.scm" "gl_ext_api.scm" "gl_ext_defs.scm")
       (build allegro-glext.scm allegro-glext.import.scm))

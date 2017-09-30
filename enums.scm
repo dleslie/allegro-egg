@@ -163,17 +163,21 @@
   ((abgr-8888-le) ALLEGRO_PIXEL_FORMAT_ABGR_8888_LE)
   ((rgba-4444) ALLEGRO_PIXEL_FORMAT_RGBA_4444))
 
+(define-foreign-enum-type (bitmap-loader-flag int)
+  (bitmap-loader-flag->int int->bitmap-loader-flag)
+  ((keep-bitmap-format) ALLEGRO_KEEP_BITMAP_FORMAT)
+  ((no-premultiplied-alpha) ALLEGRO_NO_PREMULTIPLIED_ALPHA)
+  ((keep-index) ALLEGRO_KEEP_INDEX))
+
 (define-foreign-enum-type (bitmap-flag int)
   (bitmap-flag->int int->bitmap-flag)
   ((memory-bitmap) ALLEGRO_MEMORY_BITMAP)
-  ((keep-bitmap-format) ALLEGRO_KEEP_BITMAP_FORMAT)
   ((force-locking) ALLEGRO_FORCE_LOCKING)
   ((no-preserve-texture) ALLEGRO_NO_PRESERVE_TEXTURE)
   ((alpha-test) ALLEGRO_ALPHA_TEST)
   ((min-linear) ALLEGRO_MIN_LINEAR)
   ((mag-linear) ALLEGRO_MAG_LINEAR)
   ((mipmap) ALLEGRO_MIPMAP)
-  ((no-premultiplied-alpha) ALLEGRO_NO_PREMULTIPLIED_ALPHA)
   ((video-bitmap) ALLEGRO_VIDEO_BITMAP))
 
 (define-foreign-enum-type (blitting-flag int)

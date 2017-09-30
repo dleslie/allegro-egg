@@ -80,10 +80,6 @@
 
 (define bitmap-locked? (foreign-lambda bool "al_is_bitmap_locked" bitmap))
 
-(define bitmap-put-pixel! (foreign-lambda* void ((bitmap bmp) (int x) (int y) (color c)) "
-_al_put_pixel(bmp, x, y, *c);
-"))
-
 (define make-sub-bitmap* (foreign-lambda bitmap "al_create_sub_bitmap" bitmap int int int int))
 (define (make-sub-bitmap bmp i1 i2 i3 i4)
   (let ((bmp2 (make-sub-bitmap* bmp i1 i2 i3 i4)))

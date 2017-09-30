@@ -2,6 +2,10 @@
  (has-allegro-memfile
   (register-feature! 'allegro-memfile)
 
+  #>
+  #include <allegro5/allegro_memfile.h>
+  <#
+  
   (define open-memfile* (foreign-safe-lambda* file ((c-pointer mem) (unsigned-integer64 size) ((const c-string) mode)) "
 ALLEGRO_FILE *file = (ALLEGRO_FILE *)al_open_memfile(mem, size, mode);
 C_return(file);

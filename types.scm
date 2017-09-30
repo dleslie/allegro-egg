@@ -28,6 +28,7 @@
 (define-foreign-record-type (joystick "ALLEGRO_JOYSTICK"))
 (define-foreign-record-type (keyboard "ALLEGRO_KEYBOARD"))
 (define-foreign-record-type (event-source "ALLEGRO_EVENT_SOURCE"))
+(define-foreign-record-type (font "ALLEGRO_FONT"))
 
 (cond-expand
  (has-allegro-audio
@@ -63,10 +64,6 @@
   (let ((v (make-vertex-element)))
     (set-finalizer! v free-vertex-element!)
     v))
-
-(define-foreign-record-type (font "ALLEGRO_FONT")
-  (c-pointer data font-data)
-  (int height font-height))
 
 (define-foreign-record-type (memory-interface "ALLEGRO_MEMORY_INTERFACE")
   (constructor: make-memory-interface*)

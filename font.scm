@@ -25,18 +25,18 @@
 (define font-draw-string/shared
   (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (scheme-pointer text) (integer length)) "
 ALLEGRO_USTR_INFO info;
-ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
+const ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
 al_draw_ustr(f, *c, x, y, flags, ustr);
 "))
 (define font-draw-justified-string/shared (foreign-lambda* void (((const font) f) (color c) (float x1) (float x2) (float y) (float diff)  (font-align flags) (scheme-pointer text) (integer length)) "
 ALLEGRO_USTR_INFO info;
-ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
+const ALLEGRO_USTR *ustr = al_ref_buffer(&info, text, length);
 al_draw_justified_ustr(f, *c, x1, x2, y, diff, flags, ustr);
 "))
 (define font-draw-substring/shared (foreign-lambda* void (((const font) f) (color c) (float x) (float y) (font-align flags) (int start) (int end) (scheme-pointer text)) "
 ALLEGRO_USTR_INFO info;
 char * txtp = (char *)text;
-ALLEGRO_USTR *ustr = al_ref_buffer(&info, &txtp[start], end - start);
+const ALLEGRO_USTR *ustr = al_ref_buffer(&info, &txtp[start], end - start);
 al_draw_ustr(f, *c, x, y, flags, ustr);
 "))
 

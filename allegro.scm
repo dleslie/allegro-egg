@@ -1,13 +1,13 @@
 #>
 #include <allegro5/allegro.h>
+#include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_color.h>
+#include <allegro5/allegro_color.h>
 #include <allegro5/allegro_font.h>
 #include <allegro5/allegro_opengl.h>
-#include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_primitives.h>
-#include <allegro5/allegro_acodec.h>
-#include <allegro5/allegro_color.h>
 #include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_color.h>
 #ifdef _WIN32
 #include <allegro5/allegro_windows.h>
 #endif
@@ -28,7 +28,6 @@
         (include "altime")
         (include "direct3d")
         (include "fmaths")
-        (include "debug")
         (include "memory")
         (include "error")
         (include "bitmap_io")
