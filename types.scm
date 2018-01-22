@@ -266,7 +266,7 @@
 
 (define-foreign-record-type (display-event "ALLEGRO_DISPLAY_EVENT")
   (event-type type                 display-event-type)
-  (display source                  display-event-source)
+  (display source                  display-event-source-display)
   (double timestamp                display-event-timestamp)
   (int x                           display-event-x)
   (int y                           display-event-y)
