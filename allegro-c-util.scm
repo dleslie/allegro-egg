@@ -3,8 +3,8 @@
 <#
 
 (module allegro-c-util *
-	(import scheme chicken lolevel foreign)
-	
+	(import scheme (chicken base) (chicken foreign) (chicken gc) allegro)
+
 	(define (make-c-string-list* items)
 	  (if (list? items)
 	      (letrec ((malloc-list (foreign-lambda* (c-pointer (c-pointer char)) ((int count)) "C_return((char **)C_malloc(sizeof(char *) * (count + 1)));"))

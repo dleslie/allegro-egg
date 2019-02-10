@@ -1,0 +1,25 @@
+((license "BSD")
+ (category io)
+ (foreign-dependencies
+  liballegro5-dev
+  liballegro-acodec5-dev
+  liballegro-audio5-dev
+  liballegro-dialog5-dev
+  liballegro-image5-dev
+  liballegro-physfs5-dev
+  liballegro-ttf5-dev
+  liballegro-video5-dev)
+ (build-dependencies foreigners)
+ (author "Daniel J. Leslie")
+ (synopsis "Allegro")
+ (components
+  (extension allegro
+             (source-dependencies "acodec.scm" "altime.scm" "audio.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
+             (custom-build "build"))
+  (extension allegro-glext
+             (source-dependencies "gl_ext_api.scm" "gl_ext_defs.scm")
+             (custom-build "build")
+             (component-dependencies allegro))
+  (extension allegro-c-util
+             (custom-build "build")
+             (component-dependencies allegro))))
