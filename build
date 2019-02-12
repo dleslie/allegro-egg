@@ -1,0 +1,18 @@
+# -*- sh -*-
+
+CFLAGS=`pkg-config --cflags allegro-5 allegro_image-5 allegro_primitives-5 allegro_color-5 allegro_dialog-5 allegro_main-5 allegro_physfs-5 allegro_font-5 allegro_ttf-5 allegro_audio-5 allegro_memfile-5 allegro_acodec-5 allegro_image-5`
+LDFLAGS=`pkg-config --libs allegro-5 allegro_image-5 allegro_primitives-5 allegro_color-5 allegro_dialog-5 allegro_main-5 allegro_physfs-5 allegro_font-5 allegro_ttf-5 allegro_audio-5 allegro_memfile-5 allegro_acodec-5 allegro_image-5`
+
+"$CHICKEN_CSC" -s -d1 -O3 -J -C "-O3 $CFLAGS" -L "$LDFLAGS" \
+               -Dhas-allegro-primitives \
+               -Dhas-allegro-color \
+               -Dhas-allegro-dialog \
+               -Dhas-allegro-main \
+               -Dhas-allegro-physfs \
+               -Dhas-allegro-font \
+               -Dhas-allegro-ttf \
+               -Dhas-allegro-audio \
+               -Dhas-allegro-memfile \
+               -Dhas-allegro-acodec \
+               -Dhas-allegro-image \
+               "$@"

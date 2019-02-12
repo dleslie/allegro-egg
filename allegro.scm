@@ -14,7 +14,16 @@
 <#
 
 (module allegro *
-        (import scheme chicken foreign foreigners)
+
+        (import
+         scheme
+         (chicken base)
+         (chicken blob)
+         (chicken fixnum)
+         (chicken foreign)
+         (chicken gc)
+         (chicken platform)
+         foreigners)
 
         (include "types")
         (include "enums")
@@ -55,4 +64,4 @@
         (include "opengl")
         (include "primitives")
         (include "audio")
-	)
+	    )

@@ -7,7 +7,11 @@
 <#
 
 (module allegro-glext *
-        (import scheme chicken foreign foreigners allegro)
-        
+        (import
+         scheme
+         (chicken base)
+         (chicken foreign)
+         allegro)
+
         (include "gl_ext_defs")
         (include "gl_ext_api"))
