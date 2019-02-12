@@ -4,6 +4,8 @@
 *.c
 *.import.scm
 .*
+*.link
+*.sh
 files
 meld
 open-files

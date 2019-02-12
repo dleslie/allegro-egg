@@ -25,8 +25,8 @@
          (chicken platform)
          foreigners)
 
-        (include "types")
         (include "enums")
+        (include "types")
         (include "constants")
 
         (include "base")
