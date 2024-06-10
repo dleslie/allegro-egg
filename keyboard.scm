@@ -10,9 +10,3 @@
 (define keyboard-state-init! (foreign-lambda void "al_get_keyboard_state" keyboard-state))
 
 (define keyboard-state-key-down? (foreign-lambda bool "al_key_down" keyboard-state key))
-
-(cond-expand
- (windows 
-  (define keyboard-three-finger-flag? (foreign-value "_al_three_finger_flag" bool))
-  (define keyboard-led-flag? (foreign-value "_al_key_led_flag" bool)))
- (else #f))

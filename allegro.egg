@@ -9,7 +9,7 @@
   liballegro-physfs5-dev
   liballegro-ttf5-dev
   liballegro-video5-dev)
- (build-dependencies foreigners)
+ (build-dependencies foreigners chicken)
  (author "Daniel J. Leslie")
  (synopsis "Allegro")
  (components

@@ -1,6 +1,6 @@
 (cond-expand
   (windows 
-   (register-feature 'allegro-direct3d)
+   (register-feature! 'allegro-direct3d)
 
    #>
    #include <allegro5/allegro_direct3d.h>
