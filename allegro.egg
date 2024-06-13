@@ -16,6 +16,10 @@
   (extension allegro
              (source-dependencies "acodec.scm" "altime.scm" "audio.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
              (custom-build "build"))
+  (extension allegro-glext
+             (source-dependencies "glext.scm" "glext_defs.scm")
+             (custom-build "build")
+             (component-dependencies allegro))
   (extension allegro-c-util
              (custom-build "build")
              (component-dependencies allegro))))
