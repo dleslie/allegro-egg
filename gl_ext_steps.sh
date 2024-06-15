@@ -46,5 +46,24 @@ cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_def
    -rename-regex "(GL_)":"gl:" \
    -default-renaming "" \
    -export-constants \
-   -o glext_defs.scm -
+   -o glext_defs.scm \
+   -
 
+gcc -DAPIENTRY= -DWINGDIAPI= -Istub -nostdinc -P -E /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+| grep -v typedef \
+| chicken-bind \
+   -o gl.scm \
+   -rename-regex "(GL_)":"gl:" \
+   -rename-regex "(gl)":"gl:" \
+   -default-renaming "" \
+   -export-constants \
+   -
+
+cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+| grep \#define\ GL \
+| chicken-bind \
+    -o gl_defs.scm \
+    -rename-regex "(GL_)":"gl:" \
+    -default-renaming "" \
+    -export-constants \
+    -
