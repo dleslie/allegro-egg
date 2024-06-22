@@ -6,453 +6,469 @@
     (define gl:accum
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLfloat" a1))
+        ((unsigned-integer a0) (float a1))
         "glAccum(a0 , a1);")))
   (begin
     (define gl:alpha-func
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLclampf" a1))
+        ((unsigned-integer a0) (float a1))
         "glAlphaFunc(a0 , a1);")))
   (begin
     (define gl:are-textures-resident
       (foreign-lambda*
-        "GLboolean"
-        (("GLsizei" a0) ((c-pointer "GLuint") a1) ((c-pointer "GLboolean") a2))
+        unsigned-char
+        ((integer a0) (u32vector a1) (u8vector a2))
         "return(glAreTexturesResident(a0 , a1 , a2));")))
   (begin
     (define gl:array-element
-      (foreign-lambda* void (("GLint" a0)) "glArrayElement(a0);")))
+      (foreign-lambda* void ((integer a0)) "glArrayElement(a0);")))
   (begin
-    (define gl:begin (foreign-lambda* void (("GLenum" a0)) "glBegin(a0);")))
+    (define gl:begin
+      (foreign-lambda* void ((unsigned-integer a0)) "glBegin(a0);")))
   (begin
     (define gl:bind-texture
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLuint" a1))
+        ((unsigned-integer a0) (unsigned-integer a1))
         "glBindTexture(a0 , a1);")))
   (begin
     (define gl:bitmap
       (foreign-lambda*
         void
-        (("GLsizei" a0)
-         ("GLsizei" a1)
-         ("GLfloat" a2)
-         ("GLfloat" a3)
-         ("GLfloat" a4)
-         ("GLfloat" a5)
-         ((c-pointer "GLubyte") a6))
+        ((integer a0)
+         (integer a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (u8vector a6))
         "glBitmap(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:blend-func
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1))
+        ((unsigned-integer a0) (unsigned-integer a1))
         "glBlendFunc(a0 , a1);")))
   (begin
     (define gl:call-list
-      (foreign-lambda* void (("GLuint" a0)) "glCallList(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glCallList(a0);")))
   (begin
     (define gl:call-lists
       (foreign-lambda*
         void
-        (("GLsizei" a0) ("GLenum" a1) ((c-pointer "GLvoid") a2))
+        ((integer a0) (unsigned-integer a1) ((c-pointer void) a2))
         "glCallLists(a0 , a1 , a2);")))
   (begin
     (define gl:clear
-      (foreign-lambda* void (("GLbitfield" a0)) "glClear(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glClear(a0);")))
   (begin
     (define gl:clear-accum
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glClearAccum(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:clear-color
       (foreign-lambda*
         void
-        (("GLclampf" a0) ("GLclampf" a1) ("GLclampf" a2) ("GLclampf" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glClearColor(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:clear-depth
-      (foreign-lambda* void (("GLclampd" a0)) "glClearDepth(a0);")))
+      (foreign-lambda* void ((double a0)) "glClearDepth(a0);")))
   (begin
     (define gl:clear-index
-      (foreign-lambda* void (("GLfloat" a0)) "glClearIndex(a0);")))
+      (foreign-lambda* void ((float a0)) "glClearIndex(a0);")))
   (begin
     (define gl:clear-stencil
-      (foreign-lambda* void (("GLint" a0)) "glClearStencil(a0);")))
+      (foreign-lambda* void ((integer a0)) "glClearStencil(a0);")))
   (begin
     (define gl:clip-plane
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLdouble") a1))
+        ((unsigned-integer a0) (f64vector a1))
         "glClipPlane(a0 , a1);")))
   (begin
     (define gl:color3b
       (foreign-lambda*
         void
-        (("GLbyte" a0) ("GLbyte" a1) ("GLbyte" a2))
+        ((char a0) (char a1) (char a2))
         "glColor3b(a0 , a1 , a2);")))
   (begin
     (define gl:color3bv
-      (foreign-lambda* void (((c-pointer "GLbyte") a0)) "glColor3bv(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glColor3bv(a0);")))
   (begin
     (define gl:color3d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glColor3d(a0 , a1 , a2);")))
   (begin
     (define gl:color3dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glColor3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glColor3dv(a0);")))
   (begin
     (define gl:color3f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glColor3f(a0 , a1 , a2);")))
   (begin
     (define gl:color3fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glColor3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glColor3fv(a0);")))
   (begin
     (define gl:color3i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2))
+        ((integer a0) (integer a1) (integer a2))
         "glColor3i(a0 , a1 , a2);")))
   (begin
     (define gl:color3iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glColor3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glColor3iv(a0);")))
   (begin
     (define gl:color3s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2))
+        ((short a0) (short a1) (short a2))
         "glColor3s(a0 , a1 , a2);")))
   (begin
     (define gl:color3sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glColor3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glColor3sv(a0);")))
   (begin
     (define gl:color3ub
       (foreign-lambda*
         void
-        (("GLubyte" a0) ("GLubyte" a1) ("GLubyte" a2))
+        ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
         "glColor3ub(a0 , a1 , a2);")))
   (begin
     (define gl:color3ubv
-      (foreign-lambda* void (((c-pointer "GLubyte") a0)) "glColor3ubv(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glColor3ubv(a0);")))
   (begin
     (define gl:color3ui
       (foreign-lambda*
         void
-        (("GLuint" a0) ("GLuint" a1) ("GLuint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
         "glColor3ui(a0 , a1 , a2);")))
   (begin
     (define gl:color3uiv
-      (foreign-lambda* void (((c-pointer "GLuint") a0)) "glColor3uiv(a0);")))
+      (foreign-lambda* void ((u32vector a0)) "glColor3uiv(a0);")))
   (begin
     (define gl:color3us
       (foreign-lambda*
         void
-        (("GLushort" a0) ("GLushort" a1) ("GLushort" a2))
+        ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
         "glColor3us(a0 , a1 , a2);")))
   (begin
     (define gl:color3usv
-      (foreign-lambda* void (((c-pointer "GLushort") a0)) "glColor3usv(a0);")))
+      (foreign-lambda* void ((u16vector a0)) "glColor3usv(a0);")))
   (begin
     (define gl:color4b
       (foreign-lambda*
         void
-        (("GLbyte" a0) ("GLbyte" a1) ("GLbyte" a2) ("GLbyte" a3))
+        ((char a0) (char a1) (char a2) (char a3))
         "glColor4b(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4bv
-      (foreign-lambda* void (((c-pointer "GLbyte") a0)) "glColor4bv(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glColor4bv(a0);")))
   (begin
     (define gl:color4d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glColor4d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glColor4dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glColor4dv(a0);")))
   (begin
     (define gl:color4f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glColor4f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glColor4fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glColor4fv(a0);")))
   (begin
     (define gl:color4i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glColor4i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glColor4iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glColor4iv(a0);")))
   (begin
     (define gl:color4s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2) ("GLshort" a3))
+        ((short a0) (short a1) (short a2) (short a3))
         "glColor4s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glColor4sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glColor4sv(a0);")))
   (begin
     (define gl:color4ub
       (foreign-lambda*
         void
-        (("GLubyte" a0) ("GLubyte" a1) ("GLubyte" a2) ("GLubyte" a3))
+        ((unsigned-char a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3))
         "glColor4ub(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4ubv
-      (foreign-lambda* void (((c-pointer "GLubyte") a0)) "glColor4ubv(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glColor4ubv(a0);")))
   (begin
     (define gl:color4ui
       (foreign-lambda*
         void
-        (("GLuint" a0) ("GLuint" a1) ("GLuint" a2) ("GLuint" a3))
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
         "glColor4ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4uiv
-      (foreign-lambda* void (((c-pointer "GLuint") a0)) "glColor4uiv(a0);")))
+      (foreign-lambda* void ((u32vector a0)) "glColor4uiv(a0);")))
   (begin
     (define gl:color4us
       (foreign-lambda*
         void
-        (("GLushort" a0) ("GLushort" a1) ("GLushort" a2) ("GLushort" a3))
+        ((unsigned-short a0)
+         (unsigned-short a1)
+         (unsigned-short a2)
+         (unsigned-short a3))
         "glColor4us(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4usv
-      (foreign-lambda* void (((c-pointer "GLushort") a0)) "glColor4usv(a0);")))
+      (foreign-lambda* void ((u16vector a0)) "glColor4usv(a0);")))
   (begin
     (define gl:color-mask
       (foreign-lambda*
         void
-        (("GLboolean" a0) ("GLboolean" a1) ("GLboolean" a2) ("GLboolean" a3))
+        ((unsigned-char a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3))
         "glColorMask(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color-material
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1))
+        ((unsigned-integer a0) (unsigned-integer a1))
         "glColorMaterial(a0 , a1);")))
   (begin
     (define gl:color-pointer
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLenum" a1) ("GLsizei" a2) ((c-pointer "GLvoid") a3))
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
         "glColorPointer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:copy-pixels
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLsizei" a2) ("GLsizei" a3) ("GLenum" a4))
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4))
         "glCopyPixels(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:copy-tex-image1d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLenum" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLsizei" a5)
-         ("GLint" a6))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
         "glCopyTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:copy-tex-image2d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLenum" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLsizei" a5)
-         ("GLsizei" a6)
-         ("GLint" a7))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
         "glCopyTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:copy-tex-sub-image1d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLsizei" a5))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
         "glCopyTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:copy-tex-sub-image2d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLint" a5)
-         ("GLsizei" a6)
-         ("GLsizei" a7))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
         "glCopyTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:cull-face
-      (foreign-lambda* void (("GLenum" a0)) "glCullFace(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glCullFace(a0);")))
   (begin
     (define gl:delete-lists
       (foreign-lambda*
         void
-        (("GLuint" a0) ("GLsizei" a1))
+        ((unsigned-integer a0) (integer a1))
         "glDeleteLists(a0 , a1);")))
   (begin
     (define gl:delete-textures
       (foreign-lambda*
         void
-        (("GLsizei" a0) ((c-pointer "GLuint") a1))
+        ((integer a0) (u32vector a1))
         "glDeleteTextures(a0 , a1);")))
   (begin
     (define gl:depth-func
-      (foreign-lambda* void (("GLenum" a0)) "glDepthFunc(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDepthFunc(a0);")))
   (begin
     (define gl:depth-mask
-      (foreign-lambda* void (("GLboolean" a0)) "glDepthMask(a0);")))
+      (foreign-lambda* void ((unsigned-char a0)) "glDepthMask(a0);")))
   (begin
     (define gl:depth-range
       (foreign-lambda*
         void
-        (("GLclampd" a0) ("GLclampd" a1))
+        ((double a0) (double a1))
         "glDepthRange(a0 , a1);")))
   (begin
     (define gl:disable
-      (foreign-lambda* void (("GLenum" a0)) "glDisable(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDisable(a0);")))
   (begin
     (define gl:disable-client-state
-      (foreign-lambda* void (("GLenum" a0)) "glDisableClientState(a0);")))
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "glDisableClientState(a0);")))
   (begin
     (define gl:draw-arrays
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLsizei" a2))
+        ((unsigned-integer a0) (integer a1) (integer a2))
         "glDrawArrays(a0 , a1 , a2);")))
   (begin
     (define gl:draw-buffer
-      (foreign-lambda* void (("GLenum" a0)) "glDrawBuffer(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDrawBuffer(a0);")))
   (begin
     (define gl:draw-elements
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ("GLenum" a2) ((c-pointer "GLvoid") a3))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
         "glDrawElements(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-pixels
       (foreign-lambda*
         void
-        (("GLsizei" a0)
-         ("GLsizei" a1)
-         ("GLenum" a2)
-         ("GLenum" a3)
-         ((c-pointer "GLvoid") a4))
+        ((integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
         "glDrawPixels(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:edge-flag
-      (foreign-lambda* void (("GLboolean" a0)) "glEdgeFlag(a0);")))
+      (foreign-lambda* void ((unsigned-char a0)) "glEdgeFlag(a0);")))
   (begin
     (define gl:edge-flag-pointer
       (foreign-lambda*
         void
-        (("GLsizei" a0) ((c-pointer "GLvoid") a1))
+        ((integer a0) ((c-pointer void) a1))
         "glEdgeFlagPointer(a0 , a1);")))
   (begin
     (define gl:edge-flagv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLboolean") a0))
-        "glEdgeFlagv(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glEdgeFlagv(a0);")))
   (begin
-    (define gl:enable (foreign-lambda* void (("GLenum" a0)) "glEnable(a0);")))
+    (define gl:enable
+      (foreign-lambda* void ((unsigned-integer a0)) "glEnable(a0);")))
   (begin
     (define gl:enable-client-state
-      (foreign-lambda* void (("GLenum" a0)) "glEnableClientState(a0);")))
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "glEnableClientState(a0);")))
   (begin (define gl:end (foreign-lambda* void () "glEnd();")))
   (begin (define gl:end-list (foreign-lambda* void () "glEndList();")))
   (begin
     (define gl:eval-coord1d
-      (foreign-lambda* void (("GLdouble" a0)) "glEvalCoord1d(a0);")))
+      (foreign-lambda* void ((double a0)) "glEvalCoord1d(a0);")))
   (begin
     (define gl:eval-coord1dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glEvalCoord1dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glEvalCoord1dv(a0);")))
   (begin
     (define gl:eval-coord1f
-      (foreign-lambda* void (("GLfloat" a0)) "glEvalCoord1f(a0);")))
+      (foreign-lambda* void ((float a0)) "glEvalCoord1f(a0);")))
   (begin
     (define gl:eval-coord1fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glEvalCoord1fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glEvalCoord1fv(a0);")))
   (begin
     (define gl:eval-coord2d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1))
+        ((double a0) (double a1))
         "glEvalCoord2d(a0 , a1);")))
   (begin
     (define gl:eval-coord2dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glEvalCoord2dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glEvalCoord2dv(a0);")))
   (begin
     (define gl:eval-coord2f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1))
+        ((float a0) (float a1))
         "glEvalCoord2f(a0 , a1);")))
   (begin
     (define gl:eval-coord2fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glEvalCoord2fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glEvalCoord2fv(a0);")))
   (begin
     (define gl:eval-mesh1
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLint" a2))
+        ((unsigned-integer a0) (integer a1) (integer a2))
         "glEvalMesh1(a0 , a1 , a2);")))
   (begin
     (define gl:eval-mesh2
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3) ("GLint" a4))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
         "glEvalMesh2(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:eval-point1
-      (foreign-lambda* void (("GLint" a0)) "glEvalPoint1(a0);")))
+      (foreign-lambda* void ((integer a0)) "glEvalPoint1(a0);")))
   (begin
     (define gl:eval-point2
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1))
+        ((integer a0) (integer a1))
         "glEvalPoint2(a0 , a1);")))
   (begin
     (define gl:feedback-buffer
       (foreign-lambda*
         void
-        (("GLsizei" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((integer a0) (unsigned-integer a1) (f32vector a2))
         "glFeedbackBuffer(a0 , a1 , a2);")))
   (begin (define gl:finish (foreign-lambda* void () "glFinish();")))
   (begin (define gl:flush (foreign-lambda* void () "glFlush();")))
@@ -460,627 +476,618 @@
     (define gl:fogf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLfloat" a1))
+        ((unsigned-integer a0) (float a1))
         "glFogf(a0 , a1);")))
   (begin
     (define gl:fogfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLfloat") a1))
+        ((unsigned-integer a0) (f32vector a1))
         "glFogfv(a0 , a1);")))
   (begin
     (define gl:fogi
-      (foreign-lambda* void (("GLenum" a0) ("GLint" a1)) "glFogi(a0 , a1);")))
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "glFogi(a0 , a1);")))
   (begin
     (define gl:fogiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLint") a1))
+        ((unsigned-integer a0) (s32vector a1))
         "glFogiv(a0 , a1);")))
   (begin
     (define gl:front-face
-      (foreign-lambda* void (("GLenum" a0)) "glFrontFace(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glFrontFace(a0);")))
   (begin
     (define gl:frustum
       (foreign-lambda*
         void
-        (("GLdouble" a0)
-         ("GLdouble" a1)
-         ("GLdouble" a2)
-         ("GLdouble" a3)
-         ("GLdouble" a4)
-         ("GLdouble" a5))
+        ((double a0)
+         (double a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
         "glFrustum(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:gen-lists
-      (foreign-lambda* "GLuint" (("GLsizei" a0)) "return(glGenLists(a0));")))
+      (foreign-lambda*
+        unsigned-integer
+        ((integer a0))
+        "return(glGenLists(a0));")))
   (begin
     (define gl:gen-textures
       (foreign-lambda*
         void
-        (("GLsizei" a0) ((c-pointer "GLuint") a1))
+        ((integer a0) (u32vector a1))
         "glGenTextures(a0 , a1);")))
   (begin
     (define gl:get-booleanv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLboolean") a1))
+        ((unsigned-integer a0) (u8vector a1))
         "glGetBooleanv(a0 , a1);")))
   (begin
     (define gl:get-clip-plane
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLdouble") a1))
+        ((unsigned-integer a0) (f64vector a1))
         "glGetClipPlane(a0 , a1);")))
   (begin
     (define gl:get-doublev
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLdouble") a1))
+        ((unsigned-integer a0) (f64vector a1))
         "glGetDoublev(a0 , a1);")))
   (begin
     (define gl:get-error
-      (foreign-lambda* "GLenum" () "return(glGetError());")))
+      (foreign-lambda* unsigned-integer () "return(glGetError());")))
   (begin
     (define gl:get-floatv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLfloat") a1))
+        ((unsigned-integer a0) (f32vector a1))
         "glGetFloatv(a0 , a1);")))
   (begin
     (define gl:get-integerv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLint") a1))
+        ((unsigned-integer a0) (s32vector a1))
         "glGetIntegerv(a0 , a1);")))
   (begin
     (define gl:get-lightfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetLightfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-lightiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetLightiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-mapdv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLdouble") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
         "glGetMapdv(a0 , a1 , a2);")))
   (begin
     (define gl:get-mapfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetMapfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-mapiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetMapiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-materialfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetMaterialfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-materialiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetMaterialiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-pixel-mapfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLfloat") a1))
+        ((unsigned-integer a0) (f32vector a1))
         "glGetPixelMapfv(a0 , a1);")))
   (begin
     (define gl:get-pixel-mapuiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLuint") a1))
+        ((unsigned-integer a0) (u32vector a1))
         "glGetPixelMapuiv(a0 , a1);")))
   (begin
     (define gl:get-pixel-mapusv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLushort") a1))
+        ((unsigned-integer a0) (u16vector a1))
         "glGetPixelMapusv(a0 , a1);")))
   (begin
     (define gl:get-pointerv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer (c-pointer "GLvoid")) a1))
+        ((unsigned-integer a0) ((c-pointer (c-pointer void)) a1))
         "glGetPointerv(a0 , a1);")))
   (begin
     (define gl:get-polygon-stipple
-      (foreign-lambda*
-        void
-        (((c-pointer "GLubyte") a0))
-        "glGetPolygonStipple(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glGetPolygonStipple(a0);")))
   (begin
     (define gl:get-string
       (foreign-lambda*
-        (c-pointer (const "GLubyte"))
-        (("GLenum" a0))
+        (c-pointer (const unsigned-char))
+        ((unsigned-integer a0))
         "return(glGetString(a0));")))
   (begin
     (define gl:get-tex-envfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetTexEnvfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-enviv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetTexEnviv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-gendv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLdouble") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
         "glGetTexGendv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-genfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetTexGenfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-geniv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetTexGeniv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-image
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLenum" a2)
-         ("GLenum" a3)
-         ((c-pointer "GLvoid") a4))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
         "glGetTexImage(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-tex-level-parameterfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLenum" a2) ((c-pointer "GLfloat") a3))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
         "glGetTexLevelParameterfv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-tex-level-parameteriv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLenum" a2) ((c-pointer "GLint") a3))
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
         "glGetTexLevelParameteriv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-tex-parameterfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glGetTexParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-parameteriv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glGetTexParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:hint
-      (foreign-lambda* void (("GLenum" a0) ("GLenum" a1)) "glHint(a0 , a1);")))
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "glHint(a0 , a1);")))
   (begin
     (define gl:index-mask
-      (foreign-lambda* void (("GLuint" a0)) "glIndexMask(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glIndexMask(a0);")))
   (begin
     (define gl:index-pointer
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLvoid") a2))
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
         "glIndexPointer(a0 , a1 , a2);")))
   (begin
-    (define gl:indexd
-      (foreign-lambda* void (("GLdouble" a0)) "glIndexd(a0);")))
+    (define gl:indexd (foreign-lambda* void ((double a0)) "glIndexd(a0);")))
   (begin
     (define gl:indexdv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glIndexdv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glIndexdv(a0);")))
   (begin
-    (define gl:indexf (foreign-lambda* void (("GLfloat" a0)) "glIndexf(a0);")))
+    (define gl:indexf (foreign-lambda* void ((float a0)) "glIndexf(a0);")))
   (begin
     (define gl:indexfv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glIndexfv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glIndexfv(a0);")))
   (begin
-    (define gl:indexi (foreign-lambda* void (("GLint" a0)) "glIndexi(a0);")))
+    (define gl:indexi (foreign-lambda* void ((integer a0)) "glIndexi(a0);")))
   (begin
     (define gl:indexiv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glIndexiv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glIndexiv(a0);")))
   (begin
-    (define gl:indexs (foreign-lambda* void (("GLshort" a0)) "glIndexs(a0);")))
+    (define gl:indexs (foreign-lambda* void ((short a0)) "glIndexs(a0);")))
   (begin
     (define gl:indexsv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glIndexsv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glIndexsv(a0);")))
   (begin
     (define gl:indexub
-      (foreign-lambda* void (("GLubyte" a0)) "glIndexub(a0);")))
+      (foreign-lambda* void ((unsigned-char a0)) "glIndexub(a0);")))
   (begin
     (define gl:indexubv
-      (foreign-lambda* void (((c-pointer "GLubyte") a0)) "glIndexubv(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glIndexubv(a0);")))
   (begin (define gl:init-names (foreign-lambda* void () "glInitNames();")))
   (begin
     (define gl:interleaved-arrays
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLvoid") a2))
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
         "glInterleavedArrays(a0 , a1 , a2);")))
   (begin
     (define gl:is-enabled
       (foreign-lambda*
-        "GLboolean"
-        (("GLenum" a0))
+        unsigned-char
+        ((unsigned-integer a0))
         "return(glIsEnabled(a0));")))
   (begin
     (define gl:is-list
-      (foreign-lambda* "GLboolean" (("GLuint" a0)) "return(glIsList(a0));")))
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(glIsList(a0));")))
   (begin
     (define gl:is-texture
       (foreign-lambda*
-        "GLboolean"
-        (("GLuint" a0))
+        unsigned-char
+        ((unsigned-integer a0))
         "return(glIsTexture(a0));")))
   (begin
     (define gl:light-modelf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLfloat" a1))
+        ((unsigned-integer a0) (float a1))
         "glLightModelf(a0 , a1);")))
   (begin
     (define gl:light-modelfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLfloat") a1))
+        ((unsigned-integer a0) (f32vector a1))
         "glLightModelfv(a0 , a1);")))
   (begin
     (define gl:light-modeli
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1))
+        ((unsigned-integer a0) (integer a1))
         "glLightModeli(a0 , a1);")))
   (begin
     (define gl:light-modeliv
       (foreign-lambda*
         void
-        (("GLenum" a0) ((c-pointer "GLint") a1))
+        ((unsigned-integer a0) (s32vector a1))
         "glLightModeliv(a0 , a1);")))
   (begin
     (define gl:lightf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLfloat" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
         "glLightf(a0 , a1 , a2);")))
   (begin
     (define gl:lightfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glLightfv(a0 , a1 , a2);")))
   (begin
     (define gl:lighti
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
         "glLighti(a0 , a1 , a2);")))
   (begin
     (define gl:lightiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glLightiv(a0 , a1 , a2);")))
   (begin
     (define gl:line-stipple
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLushort" a1))
+        ((integer a0) (unsigned-short a1))
         "glLineStipple(a0 , a1);")))
   (begin
     (define gl:line-width
-      (foreign-lambda* void (("GLfloat" a0)) "glLineWidth(a0);")))
+      (foreign-lambda* void ((float a0)) "glLineWidth(a0);")))
   (begin
     (define gl:list-base
-      (foreign-lambda* void (("GLuint" a0)) "glListBase(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glListBase(a0);")))
   (begin
     (define gl:load-identity (foreign-lambda* void () "glLoadIdentity();")))
   (begin
     (define gl:load-matrixd
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glLoadMatrixd(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glLoadMatrixd(a0);")))
   (begin
     (define gl:load-matrixf
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glLoadMatrixf(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glLoadMatrixf(a0);")))
   (begin
     (define gl:load-name
-      (foreign-lambda* void (("GLuint" a0)) "glLoadName(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glLoadName(a0);")))
   (begin
     (define gl:logic-op
-      (foreign-lambda* void (("GLenum" a0)) "glLogicOp(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glLogicOp(a0);")))
   (begin
     (define gl:map1d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLdouble" a1)
-         ("GLdouble" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ((c-pointer "GLdouble") a5))
+        ((unsigned-integer a0)
+         (double a1)
+         (double a2)
+         (integer a3)
+         (integer a4)
+         (f64vector a5))
         "glMap1d(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:map1f
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLfloat" a1)
-         ("GLfloat" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ((c-pointer "GLfloat") a5))
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (integer a3)
+         (integer a4)
+         (f32vector a5))
         "glMap1f(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:map2d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLdouble" a1)
-         ("GLdouble" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLdouble" a5)
-         ("GLdouble" a6)
-         ("GLint" a7)
-         ("GLint" a8)
-         ((c-pointer "GLdouble") a9))
+        ((unsigned-integer a0)
+         (double a1)
+         (double a2)
+         (integer a3)
+         (integer a4)
+         (double a5)
+         (double a6)
+         (integer a7)
+         (integer a8)
+         (f64vector a9))
         "glMap2d(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:map2f
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLfloat" a1)
-         ("GLfloat" a2)
-         ("GLint" a3)
-         ("GLint" a4)
-         ("GLfloat" a5)
-         ("GLfloat" a6)
-         ("GLint" a7)
-         ("GLint" a8)
-         ((c-pointer "GLfloat") a9))
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (integer a3)
+         (integer a4)
+         (float a5)
+         (float a6)
+         (integer a7)
+         (integer a8)
+         (f32vector a9))
         "glMap2f(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:map-grid1d
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((integer a0) (double a1) (double a2))
         "glMapGrid1d(a0 , a1 , a2);")))
   (begin
     (define gl:map-grid1f
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((integer a0) (float a1) (float a2))
         "glMapGrid1f(a0 , a1 , a2);")))
   (begin
     (define gl:map-grid2d
       (foreign-lambda*
         void
-        (("GLint" a0)
-         ("GLdouble" a1)
-         ("GLdouble" a2)
-         ("GLint" a3)
-         ("GLdouble" a4)
-         ("GLdouble" a5))
+        ((integer a0)
+         (double a1)
+         (double a2)
+         (integer a3)
+         (double a4)
+         (double a5))
         "glMapGrid2d(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:map-grid2f
       (foreign-lambda*
         void
-        (("GLint" a0)
-         ("GLfloat" a1)
-         ("GLfloat" a2)
-         ("GLint" a3)
-         ("GLfloat" a4)
-         ("GLfloat" a5))
+        ((integer a0) (float a1) (float a2) (integer a3) (float a4) (float a5))
         "glMapGrid2f(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:materialf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLfloat" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
         "glMaterialf(a0 , a1 , a2);")))
   (begin
     (define gl:materialfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glMaterialfv(a0 , a1 , a2);")))
   (begin
     (define gl:materiali
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
         "glMateriali(a0 , a1 , a2);")))
   (begin
     (define gl:materialiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glMaterialiv(a0 , a1 , a2);")))
   (begin
     (define gl:matrix-mode
-      (foreign-lambda* void (("GLenum" a0)) "glMatrixMode(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glMatrixMode(a0);")))
   (begin
     (define gl:mult-matrixd
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glMultMatrixd(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glMultMatrixd(a0);")))
   (begin
     (define gl:mult-matrixf
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glMultMatrixf(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glMultMatrixf(a0);")))
   (begin
     (define gl:new-list
       (foreign-lambda*
         void
-        (("GLuint" a0) ("GLenum" a1))
+        ((unsigned-integer a0) (unsigned-integer a1))
         "glNewList(a0 , a1);")))
   (begin
     (define gl:normal3b
       (foreign-lambda*
         void
-        (("GLbyte" a0) ("GLbyte" a1) ("GLbyte" a2))
+        ((char a0) (char a1) (char a2))
         "glNormal3b(a0 , a1 , a2);")))
   (begin
     (define gl:normal3bv
-      (foreign-lambda* void (((c-pointer "GLbyte") a0)) "glNormal3bv(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glNormal3bv(a0);")))
   (begin
     (define gl:normal3d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glNormal3d(a0 , a1 , a2);")))
   (begin
     (define gl:normal3dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glNormal3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glNormal3dv(a0);")))
   (begin
     (define gl:normal3f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glNormal3f(a0 , a1 , a2);")))
   (begin
     (define gl:normal3fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glNormal3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glNormal3fv(a0);")))
   (begin
     (define gl:normal3i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2))
+        ((integer a0) (integer a1) (integer a2))
         "glNormal3i(a0 , a1 , a2);")))
   (begin
     (define gl:normal3iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glNormal3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glNormal3iv(a0);")))
   (begin
     (define gl:normal3s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2))
+        ((short a0) (short a1) (short a2))
         "glNormal3s(a0 , a1 , a2);")))
   (begin
     (define gl:normal3sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glNormal3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glNormal3sv(a0);")))
   (begin
     (define gl:normal-pointer
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLvoid") a2))
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
         "glNormalPointer(a0 , a1 , a2);")))
   (begin
     (define gl:ortho
       (foreign-lambda*
         void
-        (("GLdouble" a0)
-         ("GLdouble" a1)
-         ("GLdouble" a2)
-         ("GLdouble" a3)
-         ("GLdouble" a4)
-         ("GLdouble" a5))
+        ((double a0)
+         (double a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
         "glOrtho(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:pass-through
-      (foreign-lambda* void (("GLfloat" a0)) "glPassThrough(a0);")))
+      (foreign-lambda* void ((float a0)) "glPassThrough(a0);")))
   (begin
     (define gl:pixel-mapfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
         "glPixelMapfv(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-mapuiv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLuint") a2))
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
         "glPixelMapuiv(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-mapusv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLsizei" a1) ((c-pointer "GLushort") a2))
+        ((unsigned-integer a0) (integer a1) (u16vector a2))
         "glPixelMapusv(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-storef
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLfloat" a1))
+        ((unsigned-integer a0) (float a1))
         "glPixelStoref(a0 , a1);")))
   (begin
     (define gl:pixel-storei
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1))
+        ((unsigned-integer a0) (integer a1))
         "glPixelStorei(a0 , a1);")))
   (begin
     (define gl:pixel-transferf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLfloat" a1))
+        ((unsigned-integer a0) (float a1))
         "glPixelTransferf(a0 , a1);")))
   (begin
     (define gl:pixel-transferi
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1))
+        ((unsigned-integer a0) (integer a1))
         "glPixelTransferi(a0 , a1);")))
   (begin
     (define gl:pixel-zoom
-      (foreign-lambda*
-        void
-        (("GLfloat" a0) ("GLfloat" a1))
-        "glPixelZoom(a0 , a1);")))
+      (foreign-lambda* void ((float a0) (float a1)) "glPixelZoom(a0 , a1);")))
   (begin
     (define gl:point-size
-      (foreign-lambda* void (("GLfloat" a0)) "glPointSize(a0);")))
+      (foreign-lambda* void ((float a0)) "glPointSize(a0);")))
   (begin
     (define gl:polygon-mode
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1))
+        ((unsigned-integer a0) (unsigned-integer a1))
         "glPolygonMode(a0 , a1);")))
   (begin
     (define gl:polygon-offset
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1))
+        ((float a0) (float a1))
         "glPolygonOffset(a0 , a1);")))
   (begin
     (define gl:polygon-stipple
-      (foreign-lambda*
-        void
-        (((c-pointer "GLubyte") a0))
-        "glPolygonStipple(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glPolygonStipple(a0);")))
   (begin (define gl:pop-attrib (foreign-lambda* void () "glPopAttrib();")))
   (begin
     (define gl:pop-client-attrib
@@ -1091,715 +1098,643 @@
     (define gl:prioritize-textures
       (foreign-lambda*
         void
-        (("GLsizei" a0) ((c-pointer "GLuint") a1) ((c-pointer "GLclampf") a2))
+        ((integer a0) (u32vector a1) (f32vector a2))
         "glPrioritizeTextures(a0 , a1 , a2);")))
   (begin
     (define gl:push-attrib
-      (foreign-lambda* void (("GLbitfield" a0)) "glPushAttrib(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glPushAttrib(a0);")))
   (begin
     (define gl:push-client-attrib
-      (foreign-lambda* void (("GLbitfield" a0)) "glPushClientAttrib(a0);")))
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "glPushClientAttrib(a0);")))
   (begin (define gl:push-matrix (foreign-lambda* void () "glPushMatrix();")))
   (begin
     (define gl:push-name
-      (foreign-lambda* void (("GLuint" a0)) "glPushName(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glPushName(a0);")))
   (begin
     (define gl:raster-pos2d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1))
+        ((double a0) (double a1))
         "glRasterPos2d(a0 , a1);")))
   (begin
     (define gl:raster-pos2dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glRasterPos2dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glRasterPos2dv(a0);")))
   (begin
     (define gl:raster-pos2f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1))
+        ((float a0) (float a1))
         "glRasterPos2f(a0 , a1);")))
   (begin
     (define gl:raster-pos2fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glRasterPos2fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glRasterPos2fv(a0);")))
   (begin
     (define gl:raster-pos2i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1))
+        ((integer a0) (integer a1))
         "glRasterPos2i(a0 , a1);")))
   (begin
     (define gl:raster-pos2iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glRasterPos2iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos2iv(a0);")))
   (begin
     (define gl:raster-pos2s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1))
+        ((short a0) (short a1))
         "glRasterPos2s(a0 , a1);")))
   (begin
     (define gl:raster-pos2sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glRasterPos2sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glRasterPos2sv(a0);")))
   (begin
     (define gl:raster-pos3d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glRasterPos3d(a0 , a1 , a2);")))
   (begin
     (define gl:raster-pos3dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glRasterPos3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glRasterPos3dv(a0);")))
   (begin
     (define gl:raster-pos3f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glRasterPos3f(a0 , a1 , a2);")))
   (begin
     (define gl:raster-pos3fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glRasterPos3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glRasterPos3fv(a0);")))
   (begin
     (define gl:raster-pos3i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2))
+        ((integer a0) (integer a1) (integer a2))
         "glRasterPos3i(a0 , a1 , a2);")))
   (begin
     (define gl:raster-pos3iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glRasterPos3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos3iv(a0);")))
   (begin
     (define gl:raster-pos3s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2))
+        ((short a0) (short a1) (short a2))
         "glRasterPos3s(a0 , a1 , a2);")))
   (begin
     (define gl:raster-pos3sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glRasterPos3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glRasterPos3sv(a0);")))
   (begin
     (define gl:raster-pos4d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glRasterPos4d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:raster-pos4dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glRasterPos4dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glRasterPos4dv(a0);")))
   (begin
     (define gl:raster-pos4f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glRasterPos4f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:raster-pos4fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glRasterPos4fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glRasterPos4fv(a0);")))
   (begin
     (define gl:raster-pos4i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glRasterPos4i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:raster-pos4iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glRasterPos4iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos4iv(a0);")))
   (begin
     (define gl:raster-pos4s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2) ("GLshort" a3))
+        ((short a0) (short a1) (short a2) (short a3))
         "glRasterPos4s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:raster-pos4sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glRasterPos4sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glRasterPos4sv(a0);")))
   (begin
     (define gl:read-buffer
-      (foreign-lambda* void (("GLenum" a0)) "glReadBuffer(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glReadBuffer(a0);")))
   (begin
     (define gl:read-pixels
       (foreign-lambda*
         void
-        (("GLint" a0)
-         ("GLint" a1)
-         ("GLsizei" a2)
-         ("GLsizei" a3)
-         ("GLenum" a4)
-         ("GLenum" a5)
-         ((c-pointer "GLvoid") a6))
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
         "glReadPixels(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:rectd
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glRectd(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:rectdv
       (foreign-lambda*
         void
-        (((c-pointer "GLdouble") a0) ((c-pointer "GLdouble") a1))
+        ((f64vector a0) (f64vector a1))
         "glRectdv(a0 , a1);")))
   (begin
     (define gl:rectf
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glRectf(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:rectfv
       (foreign-lambda*
         void
-        (((c-pointer "GLfloat") a0) ((c-pointer "GLfloat") a1))
+        ((f32vector a0) (f32vector a1))
         "glRectfv(a0 , a1);")))
   (begin
     (define gl:recti
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glRecti(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:rectiv
       (foreign-lambda*
         void
-        (((c-pointer "GLint") a0) ((c-pointer "GLint") a1))
+        ((s32vector a0) (s32vector a1))
         "glRectiv(a0 , a1);")))
   (begin
     (define gl:rects
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2) ("GLshort" a3))
+        ((short a0) (short a1) (short a2) (short a3))
         "glRects(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:rectsv
       (foreign-lambda*
         void
-        (((c-pointer "GLshort") a0) ((c-pointer "GLshort") a1))
+        ((s16vector a0) (s16vector a1))
         "glRectsv(a0 , a1);")))
   (begin
     (define gl:render-mode
-      (foreign-lambda* "GLint" (("GLenum" a0)) "return(glRenderMode(a0));")))
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0))
+        "return(glRenderMode(a0));")))
   (begin
     (define gl:rotated
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glRotated(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:rotatef
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glRotatef(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:scaled
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glScaled(a0 , a1 , a2);")))
   (begin
     (define gl:scalef
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glScalef(a0 , a1 , a2);")))
   (begin
     (define gl:scissor
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLsizei" a2) ("GLsizei" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glScissor(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:select-buffer
       (foreign-lambda*
         void
-        (("GLsizei" a0) ((c-pointer "GLuint") a1))
+        ((integer a0) (u32vector a1))
         "glSelectBuffer(a0 , a1);")))
   (begin
     (define gl:shade-model
-      (foreign-lambda* void (("GLenum" a0)) "glShadeModel(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glShadeModel(a0);")))
   (begin
     (define gl:stencil-func
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLint" a1) ("GLuint" a2))
+        ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
         "glStencilFunc(a0 , a1 , a2);")))
   (begin
     (define gl:stencil-mask
-      (foreign-lambda* void (("GLuint" a0)) "glStencilMask(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glStencilMask(a0);")))
   (begin
     (define gl:stencil-op
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLenum" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
         "glStencilOp(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord1d
-      (foreign-lambda* void (("GLdouble" a0)) "glTexCoord1d(a0);")))
+      (foreign-lambda* void ((double a0)) "glTexCoord1d(a0);")))
   (begin
     (define gl:tex-coord1dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glTexCoord1dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glTexCoord1dv(a0);")))
   (begin
     (define gl:tex-coord1f
-      (foreign-lambda* void (("GLfloat" a0)) "glTexCoord1f(a0);")))
+      (foreign-lambda* void ((float a0)) "glTexCoord1f(a0);")))
   (begin
     (define gl:tex-coord1fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glTexCoord1fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glTexCoord1fv(a0);")))
   (begin
     (define gl:tex-coord1i
-      (foreign-lambda* void (("GLint" a0)) "glTexCoord1i(a0);")))
+      (foreign-lambda* void ((integer a0)) "glTexCoord1i(a0);")))
   (begin
     (define gl:tex-coord1iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glTexCoord1iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord1iv(a0);")))
   (begin
     (define gl:tex-coord1s
-      (foreign-lambda* void (("GLshort" a0)) "glTexCoord1s(a0);")))
+      (foreign-lambda* void ((short a0)) "glTexCoord1s(a0);")))
   (begin
     (define gl:tex-coord1sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glTexCoord1sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord1sv(a0);")))
   (begin
     (define gl:tex-coord2d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1))
+        ((double a0) (double a1))
         "glTexCoord2d(a0 , a1);")))
   (begin
     (define gl:tex-coord2dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glTexCoord2dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glTexCoord2dv(a0);")))
   (begin
     (define gl:tex-coord2f
-      (foreign-lambda*
-        void
-        (("GLfloat" a0) ("GLfloat" a1))
-        "glTexCoord2f(a0 , a1);")))
+      (foreign-lambda* void ((float a0) (float a1)) "glTexCoord2f(a0 , a1);")))
   (begin
     (define gl:tex-coord2fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glTexCoord2fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glTexCoord2fv(a0);")))
   (begin
     (define gl:tex-coord2i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1))
+        ((integer a0) (integer a1))
         "glTexCoord2i(a0 , a1);")))
   (begin
     (define gl:tex-coord2iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glTexCoord2iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord2iv(a0);")))
   (begin
     (define gl:tex-coord2s
-      (foreign-lambda*
-        void
-        (("GLshort" a0) ("GLshort" a1))
-        "glTexCoord2s(a0 , a1);")))
+      (foreign-lambda* void ((short a0) (short a1)) "glTexCoord2s(a0 , a1);")))
   (begin
     (define gl:tex-coord2sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glTexCoord2sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord2sv(a0);")))
   (begin
     (define gl:tex-coord3d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glTexCoord3d(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord3dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glTexCoord3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glTexCoord3dv(a0);")))
   (begin
     (define gl:tex-coord3f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glTexCoord3f(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord3fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glTexCoord3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glTexCoord3fv(a0);")))
   (begin
     (define gl:tex-coord3i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2))
+        ((integer a0) (integer a1) (integer a2))
         "glTexCoord3i(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord3iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glTexCoord3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord3iv(a0);")))
   (begin
     (define gl:tex-coord3s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2))
+        ((short a0) (short a1) (short a2))
         "glTexCoord3s(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord3sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glTexCoord3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord3sv(a0);")))
   (begin
     (define gl:tex-coord4d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glTexCoord4d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4dv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLdouble") a0))
-        "glTexCoord4dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glTexCoord4dv(a0);")))
   (begin
     (define gl:tex-coord4f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glTexCoord4f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4fv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLfloat") a0))
-        "glTexCoord4fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glTexCoord4fv(a0);")))
   (begin
     (define gl:tex-coord4i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glTexCoord4i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glTexCoord4iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord4iv(a0);")))
   (begin
     (define gl:tex-coord4s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2) ("GLshort" a3))
+        ((short a0) (short a1) (short a2) (short a3))
         "glTexCoord4s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4sv
-      (foreign-lambda*
-        void
-        (((c-pointer "GLshort") a0))
-        "glTexCoord4sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord4sv(a0);")))
   (begin
     (define gl:tex-coord-pointer
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLenum" a1) ("GLsizei" a2) ((c-pointer "GLvoid") a3))
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
         "glTexCoordPointer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-envf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLfloat" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
         "glTexEnvf(a0 , a1 , a2);")))
   (begin
     (define gl:tex-envfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glTexEnvfv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-envi
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
         "glTexEnvi(a0 , a1 , a2);")))
   (begin
     (define gl:tex-enviv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glTexEnviv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-gend
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLdouble" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (double a2))
         "glTexGend(a0 , a1 , a2);")))
   (begin
     (define gl:tex-gendv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLdouble") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
         "glTexGendv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-genf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLfloat" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
         "glTexGenf(a0 , a1 , a2);")))
   (begin
     (define gl:tex-genfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glTexGenfv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-geni
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
         "glTexGeni(a0 , a1 , a2);")))
   (begin
     (define gl:tex-geniv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glTexGeniv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-image1d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLsizei" a3)
-         ("GLint" a4)
-         ("GLenum" a5)
-         ("GLenum" a6)
-         ((c-pointer "GLvoid") a7))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         ((c-pointer void) a7))
         "glTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:tex-image2d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLsizei" a3)
-         ("GLsizei" a4)
-         ("GLint" a5)
-         ("GLenum" a6)
-         ("GLenum" a7)
-         ((c-pointer "GLvoid") a8))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         ((c-pointer void) a8))
         "glTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:tex-parameterf
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLfloat" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
         "glTexParameterf(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameterfv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLfloat") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
         "glTexParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameteri
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ("GLint" a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
         "glTexParameteri(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameteriv
       (foreign-lambda*
         void
-        (("GLenum" a0) ("GLenum" a1) ((c-pointer "GLint") a2))
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
         "glTexParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-sub-image1d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLsizei" a3)
-         ("GLenum" a4)
-         ("GLenum" a5)
-         ((c-pointer "GLvoid") a6))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
         "glTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:tex-sub-image2d
       (foreign-lambda*
         void
-        (("GLenum" a0)
-         ("GLint" a1)
-         ("GLint" a2)
-         ("GLint" a3)
-         ("GLsizei" a4)
-         ("GLsizei" a5)
-         ("GLenum" a6)
-         ("GLenum" a7)
-         ((c-pointer "GLvoid") a8))
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         ((c-pointer void) a8))
         "glTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:translated
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glTranslated(a0 , a1 , a2);")))
   (begin
     (define gl:translatef
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glTranslatef(a0 , a1 , a2);")))
   (begin
     (define gl:vertex2d
-      (foreign-lambda*
-        void
-        (("GLdouble" a0) ("GLdouble" a1))
-        "glVertex2d(a0 , a1);")))
+      (foreign-lambda* void ((double a0) (double a1)) "glVertex2d(a0 , a1);")))
   (begin
     (define gl:vertex2dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glVertex2dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glVertex2dv(a0);")))
   (begin
     (define gl:vertex2f
-      (foreign-lambda*
-        void
-        (("GLfloat" a0) ("GLfloat" a1))
-        "glVertex2f(a0 , a1);")))
+      (foreign-lambda* void ((float a0) (float a1)) "glVertex2f(a0 , a1);")))
   (begin
     (define gl:vertex2fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glVertex2fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glVertex2fv(a0);")))
   (begin
     (define gl:vertex2i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1))
+        ((integer a0) (integer a1))
         "glVertex2i(a0 , a1);")))
   (begin
     (define gl:vertex2iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glVertex2iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex2iv(a0);")))
   (begin
     (define gl:vertex2s
-      (foreign-lambda*
-        void
-        (("GLshort" a0) ("GLshort" a1))
-        "glVertex2s(a0 , a1);")))
+      (foreign-lambda* void ((short a0) (short a1)) "glVertex2s(a0 , a1);")))
   (begin
     (define gl:vertex2sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glVertex2sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex2sv(a0);")))
   (begin
     (define gl:vertex3d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2))
+        ((double a0) (double a1) (double a2))
         "glVertex3d(a0 , a1 , a2);")))
   (begin
     (define gl:vertex3dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glVertex3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glVertex3dv(a0);")))
   (begin
     (define gl:vertex3f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2))
+        ((float a0) (float a1) (float a2))
         "glVertex3f(a0 , a1 , a2);")))
   (begin
     (define gl:vertex3fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glVertex3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glVertex3fv(a0);")))
   (begin
     (define gl:vertex3i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2))
+        ((integer a0) (integer a1) (integer a2))
         "glVertex3i(a0 , a1 , a2);")))
   (begin
     (define gl:vertex3iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glVertex3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex3iv(a0);")))
   (begin
     (define gl:vertex3s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2))
+        ((short a0) (short a1) (short a2))
         "glVertex3s(a0 , a1 , a2);")))
   (begin
     (define gl:vertex3sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glVertex3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex3sv(a0);")))
   (begin
     (define gl:vertex4d
       (foreign-lambda*
         void
-        (("GLdouble" a0) ("GLdouble" a1) ("GLdouble" a2) ("GLdouble" a3))
+        ((double a0) (double a1) (double a2) (double a3))
         "glVertex4d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex4dv
-      (foreign-lambda* void (((c-pointer "GLdouble") a0)) "glVertex4dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glVertex4dv(a0);")))
   (begin
     (define gl:vertex4f
       (foreign-lambda*
         void
-        (("GLfloat" a0) ("GLfloat" a1) ("GLfloat" a2) ("GLfloat" a3))
+        ((float a0) (float a1) (float a2) (float a3))
         "glVertex4f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex4fv
-      (foreign-lambda* void (((c-pointer "GLfloat") a0)) "glVertex4fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glVertex4fv(a0);")))
   (begin
     (define gl:vertex4i
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLint" a2) ("GLint" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glVertex4i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex4iv
-      (foreign-lambda* void (((c-pointer "GLint") a0)) "glVertex4iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex4iv(a0);")))
   (begin
     (define gl:vertex4s
       (foreign-lambda*
         void
-        (("GLshort" a0) ("GLshort" a1) ("GLshort" a2) ("GLshort" a3))
+        ((short a0) (short a1) (short a2) (short a3))
         "glVertex4s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex4sv
-      (foreign-lambda* void (((c-pointer "GLshort") a0)) "glVertex4sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex4sv(a0);")))
   (begin
     (define gl:vertex-pointer
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLenum" a1) ("GLsizei" a2) ((c-pointer "GLvoid") a3))
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
         "glVertexPointer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:viewport
       (foreign-lambda*
         void
-        (("GLint" a0) ("GLint" a1) ("GLsizei" a2) ("GLsizei" a3))
+        ((integer a0) (integer a1) (integer a2) (integer a3))
         "glViewport(a0 , a1 , a2 , a3);"))))
 
 ;;; END OF FILE

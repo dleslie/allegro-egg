@@ -50,7 +50,6 @@ cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_def
    -
 
 gcc -DAPIENTRY= -DWINGDIAPI= -Istub -nostdinc -P -E /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
-| grep -v typedef \
 | chicken-bind \
    -o gl.scm \
    -rename-regex "(GL_)":"gl:" \
