@@ -1,10 +1,17 @@
 #! /bin/sh
 
 (cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
-  | grep typedef \
-  | grep -v "typedef void (";
-  gcc -DALLEGRO_UNSTABLE -D"AL_VAR(type, name) extern type name" \
-      -nostdinc -P -E -Istub /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/gl_ext.h) \
+     | grep typedef \
+     | grep -v "typedef void (";
+ cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+     | grep \#define\ GL;
+ cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_defs.h \
+     | grep -v typedef;
+ gcc -DAPIENTRY= -DWINGDIAPI= -Istub -nostdinc -P -E \
+     /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h;
+ gcc -DALLEGRO_UNSTABLE -D"AL_VAR(type, name) extern type name" \
+     -nostdinc -P -E -Istub \
+     /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/gl_ext.h) \
 | grep -v '^# ' - \
 | sed -e "s#__[^ _]*__##g" \
 | sed -e "s#(([^)]*))##g" \
@@ -21,7 +28,7 @@
 | grep -v "glMultTransposeMatrixxOES" \
 | grep -v "glQueryMatrixxOES" \
 | chicken-bind \
-    -o gl_ext.scm \
+    -o gl.scm \
     -export-constants \
     -rename-regex "_ALLEGRO_gl(.*)_t":"gl:\1" \
     -rename-regex "(ALLEGRO_OGL_EXT_API-)":"gl-ext-api:" \
@@ -41,30 +48,3 @@
     -rename-regex "(ALLEGRO_GL_APPLE_)":"apple:" \
     -default-renaming "" \
 	  -
-
-cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_defs.h \
-| grep -v typedef \
-| chicken-bind \
-   -rename-regex "(GL_)":"gl:" \
-   -default-renaming "" \
-   -export-constants \
-   -o gl_ext_defs.scm \
-   -
-
-# gcc -DAPIENTRY= -DWINGDIAPI= -Istub -nostdinc -P -E /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
-# | chicken-bind \
-#    -o gl.scm \
-#    -rename-regex "(GL_)":"gl:" \
-#    -rename-regex "(gl)":"gl:" \
-#    -default-renaming "" \
-#    -export-constants \
-#    -
-
-# cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
-# | grep \#define\ GL \
-# | chicken-bind \
-#     -o gl_defs.scm \
-#     -rename-regex "(GL_)":"gl:" \
-#     -default-renaming "" \
-#     -export-constants \
-#     -
