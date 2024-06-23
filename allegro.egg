@@ -17,6 +17,20 @@
              (source-dependencies "acodec.scm" "altime.scm" "audio.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
              (custom-build "build"))
   (extension allegro-gl
+             (cond-expand
+                (windows
+                  (link-options "-L" "-lopengl32" "-L" "-lglu32"))
+                (macosx
+                  (csc-options "-FOpenGL")
+                  (link-options "-framework OpenGL"
+                                "-framework Foundation"))
+                (openbsd
+                  (csc-options "-I/usr/X11R6/include" "-I/usr/local/include")
+                  (link-options "-L/usr/X11R6/lib" "-L/usr/X11R6/lib"
+                                "-LX11" "-L/usr/local/lib" "-L" "-lGL"
+                                "-L" "-lGLU"))
+                (else
+                  (link-options "-LX11" "-L" "-lGL" "-L" "-lGLU")))
              (source-dependencies "gl.scm")
              (custom-build "build")
              (component-dependencies allegro))
