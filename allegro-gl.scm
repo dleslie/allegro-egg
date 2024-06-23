@@ -1,12 +1,12 @@
-#>
-#include <GL/gl.h>
-<#
+;; #>
+;; #include <GL/gl.h>
+;; <#
 
-(module allegro-gl *
-        (import
-         scheme
-         (chicken base)
-         (chicken foreign))
+;; (module allegro-gl *
+;;         (import
+;;          scheme
+;;          (chicken base)
+;;          (chicken foreign))
 
-        (include "gl_defs")
-        (include "gl"))
+;;         (include "gl_defs")
+;;         (include "gl"))

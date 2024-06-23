@@ -17,5 +17,5 @@
          (chicken foreign)
          allegro)
 
-        (include "glext_defs")
-        (include "glext"))
+        (include "gl_ext_defs")
+        (include "gl_ext"))
