@@ -1,6 +1,6 @@
 #! /bin/sh
 
-(echo "typedef intptr_t ptrdiff_t;";
+(echo "typedef void* ptrdiff_t;";
  cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
      | grep typedef \
      | grep -v "typedef void (";
@@ -33,14 +33,17 @@
 | grep -v "glLoadTransposeMatrixxOES" \
 | grep -v "glMultTransposeMatrixxOES" \
 | grep -v "glQueryMatrixxOES" \
+| grep -v "GLDEBUGPROC" \
+| grep -v "^_ALLEGRO[^ ]*" \
+| grep -v "^int ALLEGRO_GL_[^ ]*" \
 | chicken-bind \
     -o gl.scm \
     -export-constants \
-    -rename-regex "_ALLEGRO_gl(.*)_t":"gl:\1" \
-    -rename-regex "ALLEGRO_OGL_EXT_API-(.*)":"gl-ext-api:\1" \
-    -rename-regex "ALLEGRO_OGL_EXT_LIST-(.*)":"gl-ext-list:\1" \
+    -rename-regex "ALLEGRO_OGL_EXT_API-(.*)":"ext-api:\1" \
+    -rename-regex "ALLEGRO_OGL_EXT_LIST-(.*)":"ext-list:\1" \
     -rename-regex "ALLEGRO_GL_(.*)":"gl:\1" \
-    -rename-regex "^GL_?(.*)$":"gl:\1" \
+    -rename-regex "_ALLEGRO_gl(.*)_t":"gl:\1" \
     -rename-regex "^gl(.*)$":"gl:\1" \
+    -rename-regex "^GL_?(.*)$":"gl:\1" \
     -default-renaming "" \
 	  -

@@ -7,6 +7,9 @@
   #include <allegro5/allegro_windows.h>
 #endif
 
+#include <GL/glu.h>
+#include <GL/gl.h>
+
 #include <allegro5/allegro_opengl.h>
 <#
 
