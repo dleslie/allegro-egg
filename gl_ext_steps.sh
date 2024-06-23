@@ -1,6 +1,7 @@
 #! /bin/sh
 
-(cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+(echo "typedef intptr_t ptrdiff_t;";
+ cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
      | grep typedef \
      | grep -v "typedef void (";
  cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
@@ -30,21 +31,11 @@
 | chicken-bind \
     -o gl.scm \
     -export-constants \
-    -rename-regex "_ALLEGRO_gl(.*)_t":"gl:\1" \
-    -rename-regex "(ALLEGRO_OGL_EXT_API-)":"gl-ext-api:" \
-    -rename-regex "(ALLEGRO_OGL_EXT_LIST-)":"gl-ext-list:" \
-    -rename-regex "(ALLEGRO_GL_ARB_)":"arb:" \
-    -rename-regex "(ALLEGRO_GL_NV_)":"nv:" \
-    -rename-regex "(ALLEGRO_GL_SGIX_)":"sgix:" \
-    -rename-regex "(ALLEGRO_GL_SUN_)":"sun:" \
-    -rename-regex "(ALLEGRO_GL_SGIS_)":"sgis:" \
-    -rename-regex "(ALLEGRO_GL_EXT_)":"ext:" \
-    -rename-regex "(ALLEGRO_GL_HP_)":"hp:" \
-    -rename-regex "(ALLEGRO_GL_WIN_)":"win:" \
-    -rename-regex "(ALLEGRO_GL_IBM_)":"ibm:" \
-    -rename-regex "(ALLEGRO_GL_SGI_)":"sgi:" \
-    -rename-regex "(ALLEGRO_GL_PGI_)":"pgi:" \
-    -rename-regex "(ALLEGRO_GL_INTEL_)":"intel:" \
-    -rename-regex "(ALLEGRO_GL_APPLE_)":"apple:" \
+    -rename-regex "_ALLEGRO_gl(.*)_t":"\1" \
+    -rename-regex "(ALLEGRO_OGL_EXT_API-)":"ext-api:" \
+    -rename-regex "(ALLEGRO_OGL_EXT_LIST-)":"ext-list:" \
+    -rename-regex "ALLEGRO_GL_(.*)":"\1" \
+    -rename-regex "^GL_?(.*)$":"\1" \
+    -rename-regex "^gl(.*)$":"\1" \
     -default-renaming "" \
 	  -
