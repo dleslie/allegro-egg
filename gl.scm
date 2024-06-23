@@ -1737,1740 +1737,6 @@
         ((integer a0) (integer a1) (integer a2) (integer a3))
         "glViewport(a0 , a1 , a2 , a3);")))
   (begin
-    (define gl:accum
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glAccum(a0 , a1);")))
-  (begin
-    (define gl:alpha-func
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glAlphaFunc(a0 , a1);")))
-  (begin
-    (define gl:are-textures-resident
-      (foreign-lambda*
-        unsigned-char
-        ((integer a0) (u32vector a1) (u8vector a2))
-        "return(glAreTexturesResident(a0 , a1 , a2));")))
-  (begin
-    (define gl:array-element
-      (foreign-lambda* void ((integer a0)) "glArrayElement(a0);")))
-  (begin
-    (define gl:begin
-      (foreign-lambda* void ((unsigned-integer a0)) "glBegin(a0);")))
-  (begin
-    (define gl:bind-texture
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glBindTexture(a0 , a1);")))
-  (begin
-    (define gl:bitmap
-      (foreign-lambda*
-        void
-        ((integer a0)
-         (integer a1)
-         (float a2)
-         (float a3)
-         (float a4)
-         (float a5)
-         (u8vector a6))
-        "glBitmap(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define gl:blend-func
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glBlendFunc(a0 , a1);")))
-  (begin
-    (define gl:call-list
-      (foreign-lambda* void ((unsigned-integer a0)) "glCallList(a0);")))
-  (begin
-    (define gl:call-lists
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-integer a1) ((c-pointer void) a2))
-        "glCallLists(a0 , a1 , a2);")))
-  (begin
-    (define gl:clear
-      (foreign-lambda* void ((unsigned-integer a0)) "glClear(a0);")))
-  (begin
-    (define gl:clear-accum
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glClearAccum(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:clear-color
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glClearColor(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:clear-depth
-      (foreign-lambda* void ((double a0)) "glClearDepth(a0);")))
-  (begin
-    (define gl:clear-index
-      (foreign-lambda* void ((float a0)) "glClearIndex(a0);")))
-  (begin
-    (define gl:clear-stencil
-      (foreign-lambda* void ((integer a0)) "glClearStencil(a0);")))
-  (begin
-    (define gl:clip-plane
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f64vector a1))
-        "glClipPlane(a0 , a1);")))
-  (begin
-    (define gl:color3b
-      (foreign-lambda*
-        void
-        ((char a0) (char a1) (char a2))
-        "glColor3b(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3bv
-      (foreign-lambda* void ((c-string a0)) "glColor3bv(a0);")))
-  (begin
-    (define gl:color3d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glColor3d(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3dv
-      (foreign-lambda* void ((f64vector a0)) "glColor3dv(a0);")))
-  (begin
-    (define gl:color3f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glColor3f(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3fv
-      (foreign-lambda* void ((f32vector a0)) "glColor3fv(a0);")))
-  (begin
-    (define gl:color3i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2))
-        "glColor3i(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3iv
-      (foreign-lambda* void ((s32vector a0)) "glColor3iv(a0);")))
-  (begin
-    (define gl:color3s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2))
-        "glColor3s(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3sv
-      (foreign-lambda* void ((s16vector a0)) "glColor3sv(a0);")))
-  (begin
-    (define gl:color3ub
-      (foreign-lambda*
-        void
-        ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
-        "glColor3ub(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3ubv
-      (foreign-lambda* void ((u8vector a0)) "glColor3ubv(a0);")))
-  (begin
-    (define gl:color3ui
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "glColor3ui(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3uiv
-      (foreign-lambda* void ((u32vector a0)) "glColor3uiv(a0);")))
-  (begin
-    (define gl:color3us
-      (foreign-lambda*
-        void
-        ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
-        "glColor3us(a0 , a1 , a2);")))
-  (begin
-    (define gl:color3usv
-      (foreign-lambda* void ((u16vector a0)) "glColor3usv(a0);")))
-  (begin
-    (define gl:color4b
-      (foreign-lambda*
-        void
-        ((char a0) (char a1) (char a2) (char a3))
-        "glColor4b(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4bv
-      (foreign-lambda* void ((c-string a0)) "glColor4bv(a0);")))
-  (begin
-    (define gl:color4d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glColor4d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4dv
-      (foreign-lambda* void ((f64vector a0)) "glColor4dv(a0);")))
-  (begin
-    (define gl:color4f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glColor4f(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4fv
-      (foreign-lambda* void ((f32vector a0)) "glColor4fv(a0);")))
-  (begin
-    (define gl:color4i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glColor4i(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4iv
-      (foreign-lambda* void ((s32vector a0)) "glColor4iv(a0);")))
-  (begin
-    (define gl:color4s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2) (short a3))
-        "glColor4s(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4sv
-      (foreign-lambda* void ((s16vector a0)) "glColor4sv(a0);")))
-  (begin
-    (define gl:color4ub
-      (foreign-lambda*
-        void
-        ((unsigned-char a0)
-         (unsigned-char a1)
-         (unsigned-char a2)
-         (unsigned-char a3))
-        "glColor4ub(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4ubv
-      (foreign-lambda* void ((u8vector a0)) "glColor4ubv(a0);")))
-  (begin
-    (define gl:color4ui
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (unsigned-integer a1)
-         (unsigned-integer a2)
-         (unsigned-integer a3))
-        "glColor4ui(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4uiv
-      (foreign-lambda* void ((u32vector a0)) "glColor4uiv(a0);")))
-  (begin
-    (define gl:color4us
-      (foreign-lambda*
-        void
-        ((unsigned-short a0)
-         (unsigned-short a1)
-         (unsigned-short a2)
-         (unsigned-short a3))
-        "glColor4us(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color4usv
-      (foreign-lambda* void ((u16vector a0)) "glColor4usv(a0);")))
-  (begin
-    (define gl:color-mask
-      (foreign-lambda*
-        void
-        ((unsigned-char a0)
-         (unsigned-char a1)
-         (unsigned-char a2)
-         (unsigned-char a3))
-        "glColorMask(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:color-material
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glColorMaterial(a0 , a1);")))
-  (begin
-    (define gl:color-pointer
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "glColorPointer(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:copy-pixels
-      (foreign-lambda*
-        void
-        ((integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (unsigned-integer a4))
-        "glCopyPixels(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define gl:copy-tex-image1d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5)
-         (integer a6))
-        "glCopyTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define gl:copy-tex-image2d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5)
-         (integer a6)
-         (integer a7))
-        "glCopyTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
-  (begin
-    (define gl:copy-tex-sub-image1d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5))
-        "glCopyTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:copy-tex-sub-image2d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5)
-         (integer a6)
-         (integer a7))
-        "glCopyTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
-  (begin
-    (define gl:cull-face
-      (foreign-lambda* void ((unsigned-integer a0)) "glCullFace(a0);")))
-  (begin
-    (define gl:delete-lists
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1))
-        "glDeleteLists(a0 , a1);")))
-  (begin
-    (define gl:delete-textures
-      (foreign-lambda*
-        void
-        ((integer a0) (u32vector a1))
-        "glDeleteTextures(a0 , a1);")))
-  (begin
-    (define gl:depth-func
-      (foreign-lambda* void ((unsigned-integer a0)) "glDepthFunc(a0);")))
-  (begin
-    (define gl:depth-mask
-      (foreign-lambda* void ((unsigned-char a0)) "glDepthMask(a0);")))
-  (begin
-    (define gl:depth-range
-      (foreign-lambda*
-        void
-        ((double a0) (double a1))
-        "glDepthRange(a0 , a1);")))
-  (begin
-    (define gl:disable
-      (foreign-lambda* void ((unsigned-integer a0)) "glDisable(a0);")))
-  (begin
-    (define gl:disable-client-state
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "glDisableClientState(a0);")))
-  (begin
-    (define gl:draw-arrays
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (integer a2))
-        "glDrawArrays(a0 , a1 , a2);")))
-  (begin
-    (define gl:draw-buffer
-      (foreign-lambda* void ((unsigned-integer a0)) "glDrawBuffer(a0);")))
-  (begin
-    (define gl:draw-elements
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         ((c-pointer void) a3))
-        "glDrawElements(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:draw-pixels
-      (foreign-lambda*
-        void
-        ((integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (unsigned-integer a3)
-         ((c-pointer void) a4))
-        "glDrawPixels(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define gl:edge-flag
-      (foreign-lambda* void ((unsigned-char a0)) "glEdgeFlag(a0);")))
-  (begin
-    (define gl:edge-flag-pointer
-      (foreign-lambda*
-        void
-        ((integer a0) ((c-pointer void) a1))
-        "glEdgeFlagPointer(a0 , a1);")))
-  (begin
-    (define gl:edge-flagv
-      (foreign-lambda* void ((u8vector a0)) "glEdgeFlagv(a0);")))
-  (begin
-    (define gl:enable
-      (foreign-lambda* void ((unsigned-integer a0)) "glEnable(a0);")))
-  (begin
-    (define gl:enable-client-state
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "glEnableClientState(a0);")))
-  (begin (define gl:end (foreign-lambda* void () "glEnd();")))
-  (begin (define gl:end-list (foreign-lambda* void () "glEndList();")))
-  (begin
-    (define gl:eval-coord1d
-      (foreign-lambda* void ((double a0)) "glEvalCoord1d(a0);")))
-  (begin
-    (define gl:eval-coord1dv
-      (foreign-lambda* void ((f64vector a0)) "glEvalCoord1dv(a0);")))
-  (begin
-    (define gl:eval-coord1f
-      (foreign-lambda* void ((float a0)) "glEvalCoord1f(a0);")))
-  (begin
-    (define gl:eval-coord1fv
-      (foreign-lambda* void ((f32vector a0)) "glEvalCoord1fv(a0);")))
-  (begin
-    (define gl:eval-coord2d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1))
-        "glEvalCoord2d(a0 , a1);")))
-  (begin
-    (define gl:eval-coord2dv
-      (foreign-lambda* void ((f64vector a0)) "glEvalCoord2dv(a0);")))
-  (begin
-    (define gl:eval-coord2f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1))
-        "glEvalCoord2f(a0 , a1);")))
-  (begin
-    (define gl:eval-coord2fv
-      (foreign-lambda* void ((f32vector a0)) "glEvalCoord2fv(a0);")))
-  (begin
-    (define gl:eval-mesh1
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (integer a2))
-        "glEvalMesh1(a0 , a1 , a2);")))
-  (begin
-    (define gl:eval-mesh2
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4))
-        "glEvalMesh2(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define gl:eval-point1
-      (foreign-lambda* void ((integer a0)) "glEvalPoint1(a0);")))
-  (begin
-    (define gl:eval-point2
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1))
-        "glEvalPoint2(a0 , a1);")))
-  (begin
-    (define gl:feedback-buffer
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-integer a1) (f32vector a2))
-        "glFeedbackBuffer(a0 , a1 , a2);")))
-  (begin (define gl:finish (foreign-lambda* void () "glFinish();")))
-  (begin (define gl:flush (foreign-lambda* void () "glFlush();")))
-  (begin
-    (define gl:fogf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glFogf(a0 , a1);")))
-  (begin
-    (define gl:fogfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f32vector a1))
-        "glFogfv(a0 , a1);")))
-  (begin
-    (define gl:fogi
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1))
-        "glFogi(a0 , a1);")))
-  (begin
-    (define gl:fogiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (s32vector a1))
-        "glFogiv(a0 , a1);")))
-  (begin
-    (define gl:front-face
-      (foreign-lambda* void ((unsigned-integer a0)) "glFrontFace(a0);")))
-  (begin
-    (define gl:frustum
-      (foreign-lambda*
-        void
-        ((double a0)
-         (double a1)
-         (double a2)
-         (double a3)
-         (double a4)
-         (double a5))
-        "glFrustum(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:gen-lists
-      (foreign-lambda*
-        unsigned-integer
-        ((integer a0))
-        "return(glGenLists(a0));")))
-  (begin
-    (define gl:gen-textures
-      (foreign-lambda*
-        void
-        ((integer a0) (u32vector a1))
-        "glGenTextures(a0 , a1);")))
-  (begin
-    (define gl:get-booleanv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (u8vector a1))
-        "glGetBooleanv(a0 , a1);")))
-  (begin
-    (define gl:get-clip-plane
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f64vector a1))
-        "glGetClipPlane(a0 , a1);")))
-  (begin
-    (define gl:get-doublev
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f64vector a1))
-        "glGetDoublev(a0 , a1);")))
-  (begin
-    (define gl:get-error
-      (foreign-lambda* unsigned-integer () "return(glGetError());")))
-  (begin
-    (define gl:get-floatv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f32vector a1))
-        "glGetFloatv(a0 , a1);")))
-  (begin
-    (define gl:get-integerv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (s32vector a1))
-        "glGetIntegerv(a0 , a1);")))
-  (begin
-    (define gl:get-lightfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetLightfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-lightiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetLightiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-mapdv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "glGetMapdv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-mapfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetMapfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-mapiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetMapiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-materialfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetMaterialfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-materialiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetMaterialiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-pixel-mapfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f32vector a1))
-        "glGetPixelMapfv(a0 , a1);")))
-  (begin
-    (define gl:get-pixel-mapuiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (u32vector a1))
-        "glGetPixelMapuiv(a0 , a1);")))
-  (begin
-    (define gl:get-pixel-mapusv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (u16vector a1))
-        "glGetPixelMapusv(a0 , a1);")))
-  (begin
-    (define gl:get-pointerv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) ((c-pointer (c-pointer void)) a1))
-        "glGetPointerv(a0 , a1);")))
-  (begin
-    (define gl:get-polygon-stipple
-      (foreign-lambda* void ((u8vector a0)) "glGetPolygonStipple(a0);")))
-  (begin
-    (define gl:get-string
-      (foreign-lambda*
-        (c-pointer (const unsigned-char))
-        ((unsigned-integer a0))
-        "return(glGetString(a0));")))
-  (begin
-    (define gl:get-tex-envfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetTexEnvfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-enviv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetTexEnviv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-gendv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "glGetTexGendv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-genfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetTexGenfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-geniv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetTexGeniv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-image
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (unsigned-integer a3)
-         ((c-pointer void) a4))
-        "glGetTexImage(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define gl:get-tex-level-parameterfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (f32vector a3))
-        "glGetTexLevelParameterfv(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:get-tex-level-parameteriv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (unsigned-integer a2)
-         (s32vector a3))
-        "glGetTexLevelParameteriv(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:get-tex-parameterfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glGetTexParameterfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:get-tex-parameteriv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glGetTexParameteriv(a0 , a1 , a2);")))
-  (begin
-    (define gl:hint
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glHint(a0 , a1);")))
-  (begin
-    (define gl:index-mask
-      (foreign-lambda* void ((unsigned-integer a0)) "glIndexMask(a0);")))
-  (begin
-    (define gl:index-pointer
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "glIndexPointer(a0 , a1 , a2);")))
-  (begin
-    (define gl:indexd (foreign-lambda* void ((double a0)) "glIndexd(a0);")))
-  (begin
-    (define gl:indexdv
-      (foreign-lambda* void ((f64vector a0)) "glIndexdv(a0);")))
-  (begin
-    (define gl:indexf (foreign-lambda* void ((float a0)) "glIndexf(a0);")))
-  (begin
-    (define gl:indexfv
-      (foreign-lambda* void ((f32vector a0)) "glIndexfv(a0);")))
-  (begin
-    (define gl:indexi (foreign-lambda* void ((integer a0)) "glIndexi(a0);")))
-  (begin
-    (define gl:indexiv
-      (foreign-lambda* void ((s32vector a0)) "glIndexiv(a0);")))
-  (begin
-    (define gl:indexs (foreign-lambda* void ((short a0)) "glIndexs(a0);")))
-  (begin
-    (define gl:indexsv
-      (foreign-lambda* void ((s16vector a0)) "glIndexsv(a0);")))
-  (begin
-    (define gl:indexub
-      (foreign-lambda* void ((unsigned-char a0)) "glIndexub(a0);")))
-  (begin
-    (define gl:indexubv
-      (foreign-lambda* void ((u8vector a0)) "glIndexubv(a0);")))
-  (begin (define gl:init-names (foreign-lambda* void () "glInitNames();")))
-  (begin
-    (define gl:interleaved-arrays
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "glInterleavedArrays(a0 , a1 , a2);")))
-  (begin
-    (define gl:is-enabled
-      (foreign-lambda*
-        unsigned-char
-        ((unsigned-integer a0))
-        "return(glIsEnabled(a0));")))
-  (begin
-    (define gl:is-list
-      (foreign-lambda*
-        unsigned-char
-        ((unsigned-integer a0))
-        "return(glIsList(a0));")))
-  (begin
-    (define gl:is-texture
-      (foreign-lambda*
-        unsigned-char
-        ((unsigned-integer a0))
-        "return(glIsTexture(a0));")))
-  (begin
-    (define gl:light-modelf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glLightModelf(a0 , a1);")))
-  (begin
-    (define gl:light-modelfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (f32vector a1))
-        "glLightModelfv(a0 , a1);")))
-  (begin
-    (define gl:light-modeli
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1))
-        "glLightModeli(a0 , a1);")))
-  (begin
-    (define gl:light-modeliv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (s32vector a1))
-        "glLightModeliv(a0 , a1);")))
-  (begin
-    (define gl:lightf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "glLightf(a0 , a1 , a2);")))
-  (begin
-    (define gl:lightfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glLightfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:lighti
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "glLighti(a0 , a1 , a2);")))
-  (begin
-    (define gl:lightiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glLightiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:line-stipple
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-short a1))
-        "glLineStipple(a0 , a1);")))
-  (begin
-    (define gl:line-width
-      (foreign-lambda* void ((float a0)) "glLineWidth(a0);")))
-  (begin
-    (define gl:list-base
-      (foreign-lambda* void ((unsigned-integer a0)) "glListBase(a0);")))
-  (begin
-    (define gl:load-identity (foreign-lambda* void () "glLoadIdentity();")))
-  (begin
-    (define gl:load-matrixd
-      (foreign-lambda* void ((f64vector a0)) "glLoadMatrixd(a0);")))
-  (begin
-    (define gl:load-matrixf
-      (foreign-lambda* void ((f32vector a0)) "glLoadMatrixf(a0);")))
-  (begin
-    (define gl:load-name
-      (foreign-lambda* void ((unsigned-integer a0)) "glLoadName(a0);")))
-  (begin
-    (define gl:logic-op
-      (foreign-lambda* void ((unsigned-integer a0)) "glLogicOp(a0);")))
-  (begin
-    (define gl:map1d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (double a1)
-         (double a2)
-         (integer a3)
-         (integer a4)
-         (f64vector a5))
-        "glMap1d(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:map1f
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (float a1)
-         (float a2)
-         (integer a3)
-         (integer a4)
-         (f32vector a5))
-        "glMap1f(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:map2d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (double a1)
-         (double a2)
-         (integer a3)
-         (integer a4)
-         (double a5)
-         (double a6)
-         (integer a7)
-         (integer a8)
-         (f64vector a9))
-        "glMap2d(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
-  (begin
-    (define gl:map2f
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (float a1)
-         (float a2)
-         (integer a3)
-         (integer a4)
-         (float a5)
-         (float a6)
-         (integer a7)
-         (integer a8)
-         (f32vector a9))
-        "glMap2f(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
-  (begin
-    (define gl:map-grid1d
-      (foreign-lambda*
-        void
-        ((integer a0) (double a1) (double a2))
-        "glMapGrid1d(a0 , a1 , a2);")))
-  (begin
-    (define gl:map-grid1f
-      (foreign-lambda*
-        void
-        ((integer a0) (float a1) (float a2))
-        "glMapGrid1f(a0 , a1 , a2);")))
-  (begin
-    (define gl:map-grid2d
-      (foreign-lambda*
-        void
-        ((integer a0)
-         (double a1)
-         (double a2)
-         (integer a3)
-         (double a4)
-         (double a5))
-        "glMapGrid2d(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:map-grid2f
-      (foreign-lambda*
-        void
-        ((integer a0) (float a1) (float a2) (integer a3) (float a4) (float a5))
-        "glMapGrid2f(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:materialf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "glMaterialf(a0 , a1 , a2);")))
-  (begin
-    (define gl:materialfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glMaterialfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:materiali
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "glMateriali(a0 , a1 , a2);")))
-  (begin
-    (define gl:materialiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glMaterialiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:matrix-mode
-      (foreign-lambda* void ((unsigned-integer a0)) "glMatrixMode(a0);")))
-  (begin
-    (define gl:mult-matrixd
-      (foreign-lambda* void ((f64vector a0)) "glMultMatrixd(a0);")))
-  (begin
-    (define gl:mult-matrixf
-      (foreign-lambda* void ((f32vector a0)) "glMultMatrixf(a0);")))
-  (begin
-    (define gl:new-list
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glNewList(a0 , a1);")))
-  (begin
-    (define gl:normal3b
-      (foreign-lambda*
-        void
-        ((char a0) (char a1) (char a2))
-        "glNormal3b(a0 , a1 , a2);")))
-  (begin
-    (define gl:normal3bv
-      (foreign-lambda* void ((c-string a0)) "glNormal3bv(a0);")))
-  (begin
-    (define gl:normal3d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glNormal3d(a0 , a1 , a2);")))
-  (begin
-    (define gl:normal3dv
-      (foreign-lambda* void ((f64vector a0)) "glNormal3dv(a0);")))
-  (begin
-    (define gl:normal3f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glNormal3f(a0 , a1 , a2);")))
-  (begin
-    (define gl:normal3fv
-      (foreign-lambda* void ((f32vector a0)) "glNormal3fv(a0);")))
-  (begin
-    (define gl:normal3i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2))
-        "glNormal3i(a0 , a1 , a2);")))
-  (begin
-    (define gl:normal3iv
-      (foreign-lambda* void ((s32vector a0)) "glNormal3iv(a0);")))
-  (begin
-    (define gl:normal3s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2))
-        "glNormal3s(a0 , a1 , a2);")))
-  (begin
-    (define gl:normal3sv
-      (foreign-lambda* void ((s16vector a0)) "glNormal3sv(a0);")))
-  (begin
-    (define gl:normal-pointer
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "glNormalPointer(a0 , a1 , a2);")))
-  (begin
-    (define gl:ortho
-      (foreign-lambda*
-        void
-        ((double a0)
-         (double a1)
-         (double a2)
-         (double a3)
-         (double a4)
-         (double a5))
-        "glOrtho(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define gl:pass-through
-      (foreign-lambda* void ((float a0)) "glPassThrough(a0);")))
-  (begin
-    (define gl:pixel-mapfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "glPixelMapfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:pixel-mapuiv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "glPixelMapuiv(a0 , a1 , a2);")))
-  (begin
-    (define gl:pixel-mapusv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (u16vector a2))
-        "glPixelMapusv(a0 , a1 , a2);")))
-  (begin
-    (define gl:pixel-storef
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glPixelStoref(a0 , a1);")))
-  (begin
-    (define gl:pixel-storei
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1))
-        "glPixelStorei(a0 , a1);")))
-  (begin
-    (define gl:pixel-transferf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (float a1))
-        "glPixelTransferf(a0 , a1);")))
-  (begin
-    (define gl:pixel-transferi
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1))
-        "glPixelTransferi(a0 , a1);")))
-  (begin
-    (define gl:pixel-zoom
-      (foreign-lambda* void ((float a0) (float a1)) "glPixelZoom(a0 , a1);")))
-  (begin
-    (define gl:point-size
-      (foreign-lambda* void ((float a0)) "glPointSize(a0);")))
-  (begin
-    (define gl:polygon-mode
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1))
-        "glPolygonMode(a0 , a1);")))
-  (begin
-    (define gl:polygon-offset
-      (foreign-lambda*
-        void
-        ((float a0) (float a1))
-        "glPolygonOffset(a0 , a1);")))
-  (begin
-    (define gl:polygon-stipple
-      (foreign-lambda* void ((u8vector a0)) "glPolygonStipple(a0);")))
-  (begin (define gl:pop-attrib (foreign-lambda* void () "glPopAttrib();")))
-  (begin
-    (define gl:pop-client-attrib
-      (foreign-lambda* void () "glPopClientAttrib();")))
-  (begin (define gl:pop-matrix (foreign-lambda* void () "glPopMatrix();")))
-  (begin (define gl:pop-name (foreign-lambda* void () "glPopName();")))
-  (begin
-    (define gl:prioritize-textures
-      (foreign-lambda*
-        void
-        ((integer a0) (u32vector a1) (f32vector a2))
-        "glPrioritizeTextures(a0 , a1 , a2);")))
-  (begin
-    (define gl:push-attrib
-      (foreign-lambda* void ((unsigned-integer a0)) "glPushAttrib(a0);")))
-  (begin
-    (define gl:push-client-attrib
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "glPushClientAttrib(a0);")))
-  (begin (define gl:push-matrix (foreign-lambda* void () "glPushMatrix();")))
-  (begin
-    (define gl:push-name
-      (foreign-lambda* void ((unsigned-integer a0)) "glPushName(a0);")))
-  (begin
-    (define gl:raster-pos2d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1))
-        "glRasterPos2d(a0 , a1);")))
-  (begin
-    (define gl:raster-pos2dv
-      (foreign-lambda* void ((f64vector a0)) "glRasterPos2dv(a0);")))
-  (begin
-    (define gl:raster-pos2f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1))
-        "glRasterPos2f(a0 , a1);")))
-  (begin
-    (define gl:raster-pos2fv
-      (foreign-lambda* void ((f32vector a0)) "glRasterPos2fv(a0);")))
-  (begin
-    (define gl:raster-pos2i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1))
-        "glRasterPos2i(a0 , a1);")))
-  (begin
-    (define gl:raster-pos2iv
-      (foreign-lambda* void ((s32vector a0)) "glRasterPos2iv(a0);")))
-  (begin
-    (define gl:raster-pos2s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1))
-        "glRasterPos2s(a0 , a1);")))
-  (begin
-    (define gl:raster-pos2sv
-      (foreign-lambda* void ((s16vector a0)) "glRasterPos2sv(a0);")))
-  (begin
-    (define gl:raster-pos3d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glRasterPos3d(a0 , a1 , a2);")))
-  (begin
-    (define gl:raster-pos3dv
-      (foreign-lambda* void ((f64vector a0)) "glRasterPos3dv(a0);")))
-  (begin
-    (define gl:raster-pos3f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glRasterPos3f(a0 , a1 , a2);")))
-  (begin
-    (define gl:raster-pos3fv
-      (foreign-lambda* void ((f32vector a0)) "glRasterPos3fv(a0);")))
-  (begin
-    (define gl:raster-pos3i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2))
-        "glRasterPos3i(a0 , a1 , a2);")))
-  (begin
-    (define gl:raster-pos3iv
-      (foreign-lambda* void ((s32vector a0)) "glRasterPos3iv(a0);")))
-  (begin
-    (define gl:raster-pos3s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2))
-        "glRasterPos3s(a0 , a1 , a2);")))
-  (begin
-    (define gl:raster-pos3sv
-      (foreign-lambda* void ((s16vector a0)) "glRasterPos3sv(a0);")))
-  (begin
-    (define gl:raster-pos4d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glRasterPos4d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:raster-pos4dv
-      (foreign-lambda* void ((f64vector a0)) "glRasterPos4dv(a0);")))
-  (begin
-    (define gl:raster-pos4f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glRasterPos4f(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:raster-pos4fv
-      (foreign-lambda* void ((f32vector a0)) "glRasterPos4fv(a0);")))
-  (begin
-    (define gl:raster-pos4i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glRasterPos4i(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:raster-pos4iv
-      (foreign-lambda* void ((s32vector a0)) "glRasterPos4iv(a0);")))
-  (begin
-    (define gl:raster-pos4s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2) (short a3))
-        "glRasterPos4s(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:raster-pos4sv
-      (foreign-lambda* void ((s16vector a0)) "glRasterPos4sv(a0);")))
-  (begin
-    (define gl:read-buffer
-      (foreign-lambda* void ((unsigned-integer a0)) "glReadBuffer(a0);")))
-  (begin
-    (define gl:read-pixels
-      (foreign-lambda*
-        void
-        ((integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (unsigned-integer a4)
-         (unsigned-integer a5)
-         ((c-pointer void) a6))
-        "glReadPixels(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define gl:rectd
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glRectd(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:rectdv
-      (foreign-lambda*
-        void
-        ((f64vector a0) (f64vector a1))
-        "glRectdv(a0 , a1);")))
-  (begin
-    (define gl:rectf
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glRectf(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:rectfv
-      (foreign-lambda*
-        void
-        ((f32vector a0) (f32vector a1))
-        "glRectfv(a0 , a1);")))
-  (begin
-    (define gl:recti
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glRecti(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:rectiv
-      (foreign-lambda*
-        void
-        ((s32vector a0) (s32vector a1))
-        "glRectiv(a0 , a1);")))
-  (begin
-    (define gl:rects
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2) (short a3))
-        "glRects(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:rectsv
-      (foreign-lambda*
-        void
-        ((s16vector a0) (s16vector a1))
-        "glRectsv(a0 , a1);")))
-  (begin
-    (define gl:render-mode
-      (foreign-lambda*
-        integer
-        ((unsigned-integer a0))
-        "return(glRenderMode(a0));")))
-  (begin
-    (define gl:rotated
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glRotated(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:rotatef
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glRotatef(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:scaled
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glScaled(a0 , a1 , a2);")))
-  (begin
-    (define gl:scalef
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glScalef(a0 , a1 , a2);")))
-  (begin
-    (define gl:scissor
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glScissor(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:select-buffer
-      (foreign-lambda*
-        void
-        ((integer a0) (u32vector a1))
-        "glSelectBuffer(a0 , a1);")))
-  (begin
-    (define gl:shade-model
-      (foreign-lambda* void ((unsigned-integer a0)) "glShadeModel(a0);")))
-  (begin
-    (define gl:stencil-func
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
-        "glStencilFunc(a0 , a1 , a2);")))
-  (begin
-    (define gl:stencil-mask
-      (foreign-lambda* void ((unsigned-integer a0)) "glStencilMask(a0);")))
-  (begin
-    (define gl:stencil-op
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "glStencilOp(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-coord1d
-      (foreign-lambda* void ((double a0)) "glTexCoord1d(a0);")))
-  (begin
-    (define gl:tex-coord1dv
-      (foreign-lambda* void ((f64vector a0)) "glTexCoord1dv(a0);")))
-  (begin
-    (define gl:tex-coord1f
-      (foreign-lambda* void ((float a0)) "glTexCoord1f(a0);")))
-  (begin
-    (define gl:tex-coord1fv
-      (foreign-lambda* void ((f32vector a0)) "glTexCoord1fv(a0);")))
-  (begin
-    (define gl:tex-coord1i
-      (foreign-lambda* void ((integer a0)) "glTexCoord1i(a0);")))
-  (begin
-    (define gl:tex-coord1iv
-      (foreign-lambda* void ((s32vector a0)) "glTexCoord1iv(a0);")))
-  (begin
-    (define gl:tex-coord1s
-      (foreign-lambda* void ((short a0)) "glTexCoord1s(a0);")))
-  (begin
-    (define gl:tex-coord1sv
-      (foreign-lambda* void ((s16vector a0)) "glTexCoord1sv(a0);")))
-  (begin
-    (define gl:tex-coord2d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1))
-        "glTexCoord2d(a0 , a1);")))
-  (begin
-    (define gl:tex-coord2dv
-      (foreign-lambda* void ((f64vector a0)) "glTexCoord2dv(a0);")))
-  (begin
-    (define gl:tex-coord2f
-      (foreign-lambda* void ((float a0) (float a1)) "glTexCoord2f(a0 , a1);")))
-  (begin
-    (define gl:tex-coord2fv
-      (foreign-lambda* void ((f32vector a0)) "glTexCoord2fv(a0);")))
-  (begin
-    (define gl:tex-coord2i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1))
-        "glTexCoord2i(a0 , a1);")))
-  (begin
-    (define gl:tex-coord2iv
-      (foreign-lambda* void ((s32vector a0)) "glTexCoord2iv(a0);")))
-  (begin
-    (define gl:tex-coord2s
-      (foreign-lambda* void ((short a0) (short a1)) "glTexCoord2s(a0 , a1);")))
-  (begin
-    (define gl:tex-coord2sv
-      (foreign-lambda* void ((s16vector a0)) "glTexCoord2sv(a0);")))
-  (begin
-    (define gl:tex-coord3d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glTexCoord3d(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-coord3dv
-      (foreign-lambda* void ((f64vector a0)) "glTexCoord3dv(a0);")))
-  (begin
-    (define gl:tex-coord3f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glTexCoord3f(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-coord3fv
-      (foreign-lambda* void ((f32vector a0)) "glTexCoord3fv(a0);")))
-  (begin
-    (define gl:tex-coord3i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2))
-        "glTexCoord3i(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-coord3iv
-      (foreign-lambda* void ((s32vector a0)) "glTexCoord3iv(a0);")))
-  (begin
-    (define gl:tex-coord3s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2))
-        "glTexCoord3s(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-coord3sv
-      (foreign-lambda* void ((s16vector a0)) "glTexCoord3sv(a0);")))
-  (begin
-    (define gl:tex-coord4d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glTexCoord4d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:tex-coord4dv
-      (foreign-lambda* void ((f64vector a0)) "glTexCoord4dv(a0);")))
-  (begin
-    (define gl:tex-coord4f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glTexCoord4f(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:tex-coord4fv
-      (foreign-lambda* void ((f32vector a0)) "glTexCoord4fv(a0);")))
-  (begin
-    (define gl:tex-coord4i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glTexCoord4i(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:tex-coord4iv
-      (foreign-lambda* void ((s32vector a0)) "glTexCoord4iv(a0);")))
-  (begin
-    (define gl:tex-coord4s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2) (short a3))
-        "glTexCoord4s(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:tex-coord4sv
-      (foreign-lambda* void ((s16vector a0)) "glTexCoord4sv(a0);")))
-  (begin
-    (define gl:tex-coord-pointer
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "glTexCoordPointer(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:tex-envf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "glTexEnvf(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-envfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glTexEnvfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-envi
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "glTexEnvi(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-enviv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glTexEnviv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-gend
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (double a2))
-        "glTexGend(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-gendv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "glTexGendv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-genf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "glTexGenf(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-genfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glTexGenfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-geni
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "glTexGeni(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-geniv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glTexGeniv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-image1d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4)
-         (unsigned-integer a5)
-         (unsigned-integer a6)
-         ((c-pointer void) a7))
-        "glTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
-  (begin
-    (define gl:tex-image2d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5)
-         (unsigned-integer a6)
-         (unsigned-integer a7)
-         ((c-pointer void) a8))
-        "glTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
-  (begin
-    (define gl:tex-parameterf
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "glTexParameterf(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-parameterfv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "glTexParameterfv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-parameteri
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "glTexParameteri(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-parameteriv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "glTexParameteriv(a0 , a1 , a2);")))
-  (begin
-    (define gl:tex-sub-image1d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (unsigned-integer a4)
-         (unsigned-integer a5)
-         ((c-pointer void) a6))
-        "glTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define gl:tex-sub-image2d
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0)
-         (integer a1)
-         (integer a2)
-         (integer a3)
-         (integer a4)
-         (integer a5)
-         (unsigned-integer a6)
-         (unsigned-integer a7)
-         ((c-pointer void) a8))
-        "glTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
-  (begin
-    (define gl:translated
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glTranslated(a0 , a1 , a2);")))
-  (begin
-    (define gl:translatef
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glTranslatef(a0 , a1 , a2);")))
-  (begin
-    (define gl:vertex2d
-      (foreign-lambda* void ((double a0) (double a1)) "glVertex2d(a0 , a1);")))
-  (begin
-    (define gl:vertex2dv
-      (foreign-lambda* void ((f64vector a0)) "glVertex2dv(a0);")))
-  (begin
-    (define gl:vertex2f
-      (foreign-lambda* void ((float a0) (float a1)) "glVertex2f(a0 , a1);")))
-  (begin
-    (define gl:vertex2fv
-      (foreign-lambda* void ((f32vector a0)) "glVertex2fv(a0);")))
-  (begin
-    (define gl:vertex2i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1))
-        "glVertex2i(a0 , a1);")))
-  (begin
-    (define gl:vertex2iv
-      (foreign-lambda* void ((s32vector a0)) "glVertex2iv(a0);")))
-  (begin
-    (define gl:vertex2s
-      (foreign-lambda* void ((short a0) (short a1)) "glVertex2s(a0 , a1);")))
-  (begin
-    (define gl:vertex2sv
-      (foreign-lambda* void ((s16vector a0)) "glVertex2sv(a0);")))
-  (begin
-    (define gl:vertex3d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2))
-        "glVertex3d(a0 , a1 , a2);")))
-  (begin
-    (define gl:vertex3dv
-      (foreign-lambda* void ((f64vector a0)) "glVertex3dv(a0);")))
-  (begin
-    (define gl:vertex3f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2))
-        "glVertex3f(a0 , a1 , a2);")))
-  (begin
-    (define gl:vertex3fv
-      (foreign-lambda* void ((f32vector a0)) "glVertex3fv(a0);")))
-  (begin
-    (define gl:vertex3i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2))
-        "glVertex3i(a0 , a1 , a2);")))
-  (begin
-    (define gl:vertex3iv
-      (foreign-lambda* void ((s32vector a0)) "glVertex3iv(a0);")))
-  (begin
-    (define gl:vertex3s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2))
-        "glVertex3s(a0 , a1 , a2);")))
-  (begin
-    (define gl:vertex3sv
-      (foreign-lambda* void ((s16vector a0)) "glVertex3sv(a0);")))
-  (begin
-    (define gl:vertex4d
-      (foreign-lambda*
-        void
-        ((double a0) (double a1) (double a2) (double a3))
-        "glVertex4d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:vertex4dv
-      (foreign-lambda* void ((f64vector a0)) "glVertex4dv(a0);")))
-  (begin
-    (define gl:vertex4f
-      (foreign-lambda*
-        void
-        ((float a0) (float a1) (float a2) (float a3))
-        "glVertex4f(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:vertex4fv
-      (foreign-lambda* void ((f32vector a0)) "glVertex4fv(a0);")))
-  (begin
-    (define gl:vertex4i
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glVertex4i(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:vertex4iv
-      (foreign-lambda* void ((s32vector a0)) "glVertex4iv(a0);")))
-  (begin
-    (define gl:vertex4s
-      (foreign-lambda*
-        void
-        ((short a0) (short a1) (short a2) (short a3))
-        "glVertex4s(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:vertex4sv
-      (foreign-lambda* void ((s16vector a0)) "glVertex4sv(a0);")))
-  (begin
-    (define gl:vertex-pointer
-      (foreign-lambda*
-        void
-        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "glVertexPointer(a0 , a1 , a2 , a3);")))
-  (begin
-    (define gl:viewport
-      (foreign-lambda*
-        void
-        ((integer a0) (integer a1) (integer a2) (integer a3))
-        "glViewport(a0 , a1 , a2 , a3);")))
-  (begin
     (define gl:u-error-string
       (foreign-lambda*
         (c-pointer (const unsigned-char))
@@ -3831,6 +2097,2218 @@
       (foreign-lambda*
         void
         (((c-pointer (struct "GLUtesselator")) a0))
-        "gluEndPolygon(a0);"))))
+        "gluEndPolygon(a0);")))
+  (define allegro-ogl-ext-list-allegro-gl-arb-imaging
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_imaging);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-multitexture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_multitexture);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-transpose-matrix
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_transpose_matrix);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-add
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_env_add);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-cube-map
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_cube_map);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_compression);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-border-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_border_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-point-parameters
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_point_parameters);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-blend
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_blend);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-combine
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_env_combine);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-crossbar
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_env_crossbar);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-dot3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_env_dot3);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-mirrored-repeat
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_mirrored_repeat);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-depth-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_depth_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shadow
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shadow);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shadow-ambient
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shadow_ambient);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-window-pos
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_window_pos);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-program
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_program);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-program
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_fragment_program);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-occlusion-query
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_occlusion_query);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shader-objects
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shader_objects);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_fragment_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shading-language-100
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shading_language_100);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-non-power-of-two
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_non_power_of_two);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-point-sprite
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_point_sprite);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-program-shadow
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_fragment_program_shadow);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-draw-buffers
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_draw_buffers);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rectangle
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_rectangle);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-color-buffer-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_color_buffer_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-half-float-pixel
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_half_float_pixel);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-pixel-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_pixel_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-instanced-arrays
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_instanced_arrays);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-draw-instanced
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_draw_instanced);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-geometry-shader4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_geometry_shader4);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-depth-buffer-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_depth_buffer_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-framebuffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_framebuffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-framebuffer-s-rgb
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_framebuffer_sRGB);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-half-float-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_half_float_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-map-buffer-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_map_buffer_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression-rgtc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_compression_rgtc);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rg
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_rg);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-array-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_array_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-copy-buffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_copy_buffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-compatibility
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_compatibility);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-uniform-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_uniform_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shader-texture-lod
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shader_texture_lod);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-depth-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_depth_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-draw-elements-base-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_draw_elements_base_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-coord-conventions
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_fragment_coord_conventions);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-provoking-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_provoking_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-seamless-cube-map
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_seamless_cube_map);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-sync
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_sync);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-array-bgra
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_array_bgra);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-draw-buffers-blend
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_draw_buffers_blend);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-sample-shading
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_sample_shading);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-cube-map-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_cube_map_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-gather
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_gather);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-query-lod
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_query_lod);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shading-language-include
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shading_language_include);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression-bptc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_compression_bptc);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-blend-func-extended
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_blend_func_extended);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-explicit-attrib-location
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_explicit_attrib_location);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-occlusion-query2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_occlusion_query2);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-sampler-objects
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_sampler_objects);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shader-bit-encoding
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shader_bit_encoding);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rgb10-a2ui
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_rgb10_a2ui);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-swizzle
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_swizzle);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-timer-query
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_timer_query);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-type-2-10-10-10-rev
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-draw-indirect
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_draw_indirect);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-gpu-shader5
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_gpu_shader5);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-gpu-shader-fp64
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_gpu_shader_fp64);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-shader-subroutine
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_shader_subroutine);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-tessellation-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_tessellation_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-texture-buffer-object-rgb32
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_texture_buffer_object_rgb32);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-transform-feedback2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_transform_feedback2);"))
+  (define allegro-ogl-ext-list-allegro-gl-arb-transform-feedback3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ARB_transform_feedback3);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-abgr
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_abgr);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-color
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_color);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-polygon-offset
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_polygon_offset);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture3d
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture3D);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-filter4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_filter4);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-subtexture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_subtexture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-copy-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_copy_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-histogram
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_histogram);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-convolution
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_convolution);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgi-color-matrix
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGI_color_matrix);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgi-color-table
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGI_color_table);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-pixel-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_pixel_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-pixel-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_pixel_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture4d
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture4D);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgi-texture-color-table
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGI_texture_color_table);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-cmyka
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_cmyka);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-detail-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_detail_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-sharpen-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_sharpen_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-packed-pixels
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_packed_pixels);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-lod
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_lod);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-rescale-normal
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_rescale_normal);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_vertex_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-misc-attribute
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_misc_attribute);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-generate-mipmap
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_generate_mipmap);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-clipmap
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_clipmap);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-shadow
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_shadow);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-edge-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_edge_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-border-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_border_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-minmax
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_minmax);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-subtract
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_subtract);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-logic-op
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_logic_op);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-interlace
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_interlace);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-select
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_select);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-sprite
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_sprite);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-multi-buffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_multi_buffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-point-parameters
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_point_parameters);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-instruments
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_instruments);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-scale-bias
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_scale_bias);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-framezoom
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_framezoom);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-tag-sample-buffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_tag_sample_buffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-reference-plane
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_reference_plane);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-flush-raster
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_flush_raster);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-depth-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_depth_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-fog-function
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_fog_function);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-fog-offset
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_fog_offset);"))
+  (define allegro-ogl-ext-list-allegro-gl-hp-image-transform
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_HP_image_transform);"))
+  (define allegro-ogl-ext-list-allegro-gl-hp-convolution-border-modes
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_HP_convolution_border_modes);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-add-env
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_add_env);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-color-subtable
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_color_subtable);"))
+  (define allegro-ogl-ext-list-allegro-gl-pgi-vertex-hints
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_PGI_vertex_hints);"))
+  (define allegro-ogl-ext-list-allegro-gl-pgi-misc-hints
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_PGI_misc_hints);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-paletted-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_paletted_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-clip-volume-hint
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_clip_volume_hint);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-list-priority
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_list_priority);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-ir-instrument1
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_ir_instrument1);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-lod-bias
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_lod_bias);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-shadow-ambient
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_shadow_ambient);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-index-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_index_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-index-material
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_index_material);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-index-func
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_index_func);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-index-array-formats
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_index_array_formats);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-compiled-vertex-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_compiled_vertex_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-cull-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_cull_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-ycrcb
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_ycrcb);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-fragment-lighting
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_fragment_lighting);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-rasterpos-clip
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_rasterpos_clip);"))
+  (define allegro-ogl-ext-list-allegro-gl-hp-texture-lighting
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_HP_texture_lighting);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-draw-range-elements
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_draw_range_elements);"))
+  (define allegro-ogl-ext-list-allegro-gl-win-phong-shading
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_WIN_phong_shading);"))
+  (define allegro-ogl-ext-list-allegro-gl-win-specular-fog
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_WIN_specular_fog);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-light-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_light_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-blend-alpha-minmax
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_blend_alpha_minmax);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-scene-marker
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_scene_marker);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-pixel-texture-bits
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_pixel_texture_bits);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-bgra
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_bgra);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-async
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_async);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-async-pixel
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_async_pixel);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-async-histogram
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_async_histogram);"))
+  (define allegro-ogl-ext-list-allegro-gl-intel-texture-scissor
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_INTEL_texture_scissor);"))
+  (define allegro-ogl-ext-list-allegro-gl-intel-parallel-arrays
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_INTEL_parallel_arrays);"))
+  (define allegro-ogl-ext-list-allegro-gl-hp-occlusion-test
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_HP_occlusion_test);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-transform
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_pixel_transform);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-transform-color-table
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_pixel_transform_color_table);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-shared-texture-palette
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_shared_texture_palette);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-separate-specular-color
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_separate_specular_color);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-secondary-color
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_secondary_color);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_env);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-perturb-normal
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_perturb_normal);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-multi-draw-arrays
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_multi_draw_arrays);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-fog-coord
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_fog_coord);"))
+  (define allegro-ogl-ext-list-allegro-gl-rend-screen-coordinates
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_REND_screen_coordinates);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-coordinate-frame
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_coordinate_frame);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-combine
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_env_combine);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-specular-vector
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_specular_vector);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-transform-hint
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_transform_hint);"))
+  (define allegro-ogl-ext-list-allegro-gl-sunx-constant-data
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUNX_constant_data);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-global-alpha
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_global_alpha);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-triangle-list
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_triangle_list);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-func-separate
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_func_separate);"))
+  (define allegro-ogl-ext-list-allegro-gl-ingr-color-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_INGR_color_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-ingr-interlace-read
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_INGR_interlace_read);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-wrap
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_stencil_wrap);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-422-pixels
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_422_pixels);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texgen-reflection
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texgen_reflection);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-convolution-border-modes
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_convolution_border_modes);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-add
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_env_add);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-lod-bias
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_lod_bias);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-filter-anisotropic
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_filter_anisotropic);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-weighting
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_vertex_weighting);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-light-max-exponent
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_light_max_exponent);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-array-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_array_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-register-combiners
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_register_combiners);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fog-distance
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fog_distance);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texgen-emboss
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texgen_emboss);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-blend-square
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_blend_square);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-env-combine4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_env_combine4);"))
+  (define allegro-ogl-ext-list-allegro-gl-mesa-resize-buffers
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_MESA_resize_buffers);"))
+  (define allegro-ogl-ext-list-allegro-gl-mesa-window-pos
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_MESA_window_pos);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-s3tc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_compression_s3tc);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-cull-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_cull_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-multimode-draw-arrays
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_multimode_draw_arrays);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-vertex-array-lists
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_vertex_array_lists);"))
+  (define allegro-ogl-ext-list-allegro-gl-3dfx-texture-compression-fxt1
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_3DFX_texture_compression_FXT1);"))
+  (define allegro-ogl-ext-list-allegro-gl-3dfx-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_3DFX_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-3dfx-tbuffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_3DFX_tbuffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-vertex-preclip
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_vertex_preclip);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-resample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_resample);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-color-mask
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIS_texture_color_mask);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-dot3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_env_dot3);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-texture-mirror-once
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_texture_mirror_once);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fence
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fence);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-static-data
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_static_data);"))
+  (define allegro-ogl-ext-list-allegro-gl-ibm-texture-mirrored-repeat
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_IBM_texture_mirrored_repeat);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-evaluators
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_evaluators);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-packed-depth-stencil
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_packed_depth_stencil);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-register-combiners2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_register_combiners2);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-compression-vtc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_compression_vtc);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-rectangle
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_rectangle);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_shader2);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-array-range2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_array_range2);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program);"))
+  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-coordinate-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SGIX_texture_coordinate_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-oml-interlace
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OML_interlace);"))
+  (define allegro-ogl-ext-list-allegro-gl-oml-subsample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OML_subsample);"))
+  (define allegro-ogl-ext-list-allegro-gl-oml-resample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OML_resample);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-copy-depth-to-color
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_copy_depth_to_color);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-envmap-bumpmap
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_envmap_bumpmap);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-fragment-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_fragment_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-pn-triangles
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_pn_triangles);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-array-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_vertex_array_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_vertex_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-streams
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_vertex_streams);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-element-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_element_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-mesh-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_mesh_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-sun-slice-accum
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_SUN_slice_accum);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-multisample-filter-hint
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_multisample_filter_hint);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-depth-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_depth_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-occlusion-query
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_occlusion_query);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-point-sprite
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_point_sprite);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_shader3);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program1-1
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program1_1);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-shadow-funcs
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_shadow_funcs);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-two-side
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_stencil_two_side);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-text-fragment-shader
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_text_fragment_shader);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-client-storage
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_client_storage);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-element-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_element_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-fence
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_fence);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-array-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_vertex_array_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-array-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_vertex_array_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-ycbcr-422
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_ycbcr_422);"))
+  (define allegro-ogl-ext-list-allegro-gl-s3-s3tc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_S3_s3tc);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-draw-buffers
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_draw_buffers);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-texture-env-combine3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_texture_env_combine3);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-texture-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_texture_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-float-buffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_float_buffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fragment_program);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-half-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_half_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-pixel-data-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_pixel_data_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-primitive-restart
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_primitive_restart);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-expand-normal
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_expand_normal);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program2);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-map-object-buffer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_map_object_buffer);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-separate-stencil
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_separate_stencil);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-attrib-array-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_vertex_attrib_array_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-byte-coordinates
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_byte_coordinates);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-fixed-point
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_fixed_point);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-single-precision
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_single_precision);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-compressed-paletted-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_compressed_paletted_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-read-format
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_read_format);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-query-matrix
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_query_matrix);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-framebuffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_framebuffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-oes-texture-npot
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_OES_texture_npot);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-depth-bounds-test
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_depth_bounds_test);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-mirror-clamp
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_mirror_clamp);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-blend-equation-separate
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_blend_equation_separate);"))
+  (define allegro-ogl-ext-list-allegro-gl-mesa-pack-invert
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_MESA_pack_invert);"))
+  (define allegro-ogl-ext-list-allegro-gl-mesa-ycbcr-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_MESA_ycbcr_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_pixel_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program-option
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fragment_program_option);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fragment_program2);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program2-option
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program2_option);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program3
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program3);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-dxt1
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_compression_dxt1);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_framebuffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-gremedy-string-marker
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_GREMEDY_string_marker);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-packed-depth-stencil
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_packed_depth_stencil);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-clear-tag
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_stencil_clear_tag);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-s-rgb
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_sRGB);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-blit
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_framebuffer_blit);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_framebuffer_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-mesax-texture-stack
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_MESAX_texture_stack);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-timer-query
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_timer_query);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-gpu-program-parameters
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_gpu_program_parameters);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-flush-buffer-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_flush_buffer_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-bindable-uniform
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_bindable_uniform);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-draw-buffers2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_draw_buffers2);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-draw-instanced
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_draw_instanced);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-s-rgb
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_framebuffer_sRGB);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-geometry-shader4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_geometry_shader4);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-gpu-shader4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_gpu_shader4);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-packed-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_packed_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-array
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_array);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-latc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_compression_latc);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-rgtc
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_compression_rgtc);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-integer
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_integer);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-shared-exponent
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_shared_exponent);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-depth-buffer-float
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_depth_buffer_float);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_fragment_program4);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-framebuffer-multisample-coverage
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_framebuffer_multisample_coverage);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-geometry-program4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_geometry_program4);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-gpu-program4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_gpu_program4);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-parameter-buffer-object
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_parameter_buffer_object);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-transform-feedback
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_transform_feedback);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_program4);"))
+  (define allegro-ogl-ext-list-allegro-gl-gremedy-frame-terminator
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_GREMEDY_frame_terminator);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-conditional-render
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_conditional_render);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-present-video
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_present_video);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-direct-state-access
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_direct_state_access);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-transform-feedback
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_transform_feedback);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-swizzle
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_swizzle);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-explicit-multisample
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_explicit_multisample);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-transform-feedback2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_transform_feedback2);"))
+  (define allegro-ogl-ext-list-allegro-gl-ati-meminfo
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_ATI_meminfo);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-performance-monitor
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_performance_monitor);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-texture-texture4
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_texture_texture4);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-vertex-shader-tesselator
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_vertex_shader_tesselator);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-provoking-vertex
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_provoking_vertex);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-texture-snorm
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_texture_snorm);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-draw-buffers-blend
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_draw_buffers_blend);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-texture-range
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_texture_range);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-float-pixels
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_float_pixels);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-program-evaluators
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_vertex_program_evaluators);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-aux-depth-stencil
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_aux_depth_stencil);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-object-purgeable
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_object_purgeable);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-row-bytes
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_row_bytes);"))
+  (define allegro-ogl-ext-list-allegro-gl-apple-rgb-422
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_APPLE_rgb_422);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-video-capture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_video_capture);"))
+  (define allegro-ogl-ext-list-allegro-gl-ext-separate-shader-objects
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_EXT_separate_shader_objects);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-parameter-buffer-object2
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_parameter_buffer_object2);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-shader-buffer-load
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_shader_buffer_load);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-buffer-unified-memory
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_vertex_buffer_unified_memory);"))
+  (define allegro-ogl-ext-list-allegro-gl-nv-texture-barrier
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_NV_texture_barrier);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-shader-stencil-export
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_shader_stencil_export);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-seamless-cubemap-per-texture
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_seamless_cubemap_per_texture);"))
+  (define allegro-ogl-ext-list-allegro-gl-amd-conservative-depth
+    (foreign-lambda*
+      integer
+      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
+      "return(s->ALLEGRO_GL_AMD_conservative_depth);"))
+  (define make-allegro-ogl-ext-list
+    (foreign-lambda*
+      (c-pointer (struct "ALLEGRO_OGL_EXT_LIST"))
+      ((integer ALLEGRO_GL_ARB_imaging)
+       (integer ALLEGRO_GL_ARB_multitexture)
+       (integer ALLEGRO_GL_ARB_transpose_matrix)
+       (integer ALLEGRO_GL_ARB_multisample)
+       (integer ALLEGRO_GL_ARB_texture_env_add)
+       (integer ALLEGRO_GL_ARB_texture_cube_map)
+       (integer ALLEGRO_GL_ARB_texture_compression)
+       (integer ALLEGRO_GL_ARB_texture_border_clamp)
+       (integer ALLEGRO_GL_ARB_point_parameters)
+       (integer ALLEGRO_GL_ARB_vertex_blend)
+       (integer ALLEGRO_GL_ARB_texture_env_combine)
+       (integer ALLEGRO_GL_ARB_texture_env_crossbar)
+       (integer ALLEGRO_GL_ARB_texture_env_dot3)
+       (integer ALLEGRO_GL_ARB_texture_mirrored_repeat)
+       (integer ALLEGRO_GL_ARB_depth_texture)
+       (integer ALLEGRO_GL_ARB_shadow)
+       (integer ALLEGRO_GL_ARB_shadow_ambient)
+       (integer ALLEGRO_GL_ARB_window_pos)
+       (integer ALLEGRO_GL_ARB_vertex_program)
+       (integer ALLEGRO_GL_ARB_fragment_program)
+       (integer ALLEGRO_GL_ARB_vertex_buffer_object)
+       (integer ALLEGRO_GL_ARB_occlusion_query)
+       (integer ALLEGRO_GL_ARB_shader_objects)
+       (integer ALLEGRO_GL_ARB_vertex_shader)
+       (integer ALLEGRO_GL_ARB_fragment_shader)
+       (integer ALLEGRO_GL_ARB_shading_language_100)
+       (integer ALLEGRO_GL_ARB_texture_non_power_of_two)
+       (integer ALLEGRO_GL_ARB_point_sprite)
+       (integer ALLEGRO_GL_ARB_fragment_program_shadow)
+       (integer ALLEGRO_GL_ARB_draw_buffers)
+       (integer ALLEGRO_GL_ARB_texture_rectangle)
+       (integer ALLEGRO_GL_ARB_color_buffer_float)
+       (integer ALLEGRO_GL_ARB_half_float_pixel)
+       (integer ALLEGRO_GL_ARB_texture_float)
+       (integer ALLEGRO_GL_ARB_pixel_buffer_object)
+       (integer ALLEGRO_GL_ARB_instanced_arrays)
+       (integer ALLEGRO_GL_ARB_draw_instanced)
+       (integer ALLEGRO_GL_ARB_geometry_shader4)
+       (integer ALLEGRO_GL_ARB_texture_buffer_object)
+       (integer ALLEGRO_GL_ARB_depth_buffer_float)
+       (integer ALLEGRO_GL_ARB_framebuffer_object)
+       (integer ALLEGRO_GL_ARB_framebuffer_sRGB)
+       (integer ALLEGRO_GL_ARB_half_float_vertex)
+       (integer ALLEGRO_GL_ARB_map_buffer_range)
+       (integer ALLEGRO_GL_ARB_texture_compression_rgtc)
+       (integer ALLEGRO_GL_ARB_texture_rg)
+       (integer ALLEGRO_GL_ARB_vertex_array_object)
+       (integer ALLEGRO_GL_ARB_copy_buffer)
+       (integer ALLEGRO_GL_ARB_compatibility)
+       (integer ALLEGRO_GL_ARB_uniform_buffer_object)
+       (integer ALLEGRO_GL_ARB_shader_texture_lod)
+       (integer ALLEGRO_GL_ARB_depth_clamp)
+       (integer ALLEGRO_GL_ARB_draw_elements_base_vertex)
+       (integer ALLEGRO_GL_ARB_fragment_coord_conventions)
+       (integer ALLEGRO_GL_ARB_provoking_vertex)
+       (integer ALLEGRO_GL_ARB_seamless_cube_map)
+       (integer ALLEGRO_GL_ARB_sync)
+       (integer ALLEGRO_GL_ARB_texture_multisample)
+       (integer ALLEGRO_GL_ARB_vertex_array_bgra)
+       (integer ALLEGRO_GL_ARB_draw_buffers_blend)
+       (integer ALLEGRO_GL_ARB_sample_shading)
+       (integer ALLEGRO_GL_ARB_texture_cube_map_array)
+       (integer ALLEGRO_GL_ARB_texture_gather)
+       (integer ALLEGRO_GL_ARB_texture_query_lod)
+       (integer ALLEGRO_GL_ARB_shading_language_include)
+       (integer ALLEGRO_GL_ARB_texture_compression_bptc)
+       (integer ALLEGRO_GL_ARB_blend_func_extended)
+       (integer ALLEGRO_GL_ARB_explicit_attrib_location)
+       (integer ALLEGRO_GL_ARB_occlusion_query2)
+       (integer ALLEGRO_GL_ARB_sampler_objects)
+       (integer ALLEGRO_GL_ARB_shader_bit_encoding)
+       (integer ALLEGRO_GL_ARB_texture_rgb10_a2ui)
+       (integer ALLEGRO_GL_ARB_texture_swizzle)
+       (integer ALLEGRO_GL_ARB_timer_query)
+       (integer ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev)
+       (integer ALLEGRO_GL_ARB_draw_indirect)
+       (integer ALLEGRO_GL_ARB_gpu_shader5)
+       (integer ALLEGRO_GL_ARB_gpu_shader_fp64)
+       (integer ALLEGRO_GL_ARB_shader_subroutine)
+       (integer ALLEGRO_GL_ARB_tessellation_shader)
+       (integer ALLEGRO_GL_ARB_texture_buffer_object_rgb32)
+       (integer ALLEGRO_GL_ARB_transform_feedback2)
+       (integer ALLEGRO_GL_ARB_transform_feedback3)
+       (integer ALLEGRO_GL_EXT_abgr)
+       (integer ALLEGRO_GL_EXT_blend_color)
+       (integer ALLEGRO_GL_EXT_polygon_offset)
+       (integer ALLEGRO_GL_EXT_texture)
+       (integer ALLEGRO_GL_EXT_texture3D)
+       (integer ALLEGRO_GL_SGIS_texture_filter4)
+       (integer ALLEGRO_GL_EXT_subtexture)
+       (integer ALLEGRO_GL_EXT_copy_texture)
+       (integer ALLEGRO_GL_EXT_histogram)
+       (integer ALLEGRO_GL_EXT_convolution)
+       (integer ALLEGRO_GL_SGI_color_matrix)
+       (integer ALLEGRO_GL_SGI_color_table)
+       (integer ALLEGRO_GL_SGIS_pixel_texture)
+       (integer ALLEGRO_GL_SGIX_pixel_texture)
+       (integer ALLEGRO_GL_SGIS_texture4D)
+       (integer ALLEGRO_GL_SGI_texture_color_table)
+       (integer ALLEGRO_GL_EXT_cmyka)
+       (integer ALLEGRO_GL_EXT_texture_object)
+       (integer ALLEGRO_GL_SGIS_detail_texture)
+       (integer ALLEGRO_GL_SGIS_sharpen_texture)
+       (integer ALLEGRO_GL_EXT_packed_pixels)
+       (integer ALLEGRO_GL_SGIS_texture_lod)
+       (integer ALLEGRO_GL_SGIS_multisample)
+       (integer ALLEGRO_GL_EXT_rescale_normal)
+       (integer ALLEGRO_GL_EXT_vertex_array)
+       (integer ALLEGRO_GL_EXT_misc_attribute)
+       (integer ALLEGRO_GL_SGIS_generate_mipmap)
+       (integer ALLEGRO_GL_SGIX_clipmap)
+       (integer ALLEGRO_GL_SGIX_shadow)
+       (integer ALLEGRO_GL_SGIS_texture_edge_clamp)
+       (integer ALLEGRO_GL_SGIS_texture_border_clamp)
+       (integer ALLEGRO_GL_EXT_blend_minmax)
+       (integer ALLEGRO_GL_EXT_blend_subtract)
+       (integer ALLEGRO_GL_EXT_blend_logic_op)
+       (integer ALLEGRO_GL_SGIX_interlace)
+       (integer ALLEGRO_GL_SGIS_texture_select)
+       (integer ALLEGRO_GL_SGIX_sprite)
+       (integer ALLEGRO_GL_SGIX_texture_multi_buffer)
+       (integer ALLEGRO_GL_EXT_point_parameters)
+       (integer ALLEGRO_GL_SGIX_instruments)
+       (integer ALLEGRO_GL_SGIX_texture_scale_bias)
+       (integer ALLEGRO_GL_SGIX_framezoom)
+       (integer ALLEGRO_GL_SGIX_tag_sample_buffer)
+       (integer ALLEGRO_GL_SGIX_reference_plane)
+       (integer ALLEGRO_GL_SGIX_flush_raster)
+       (integer ALLEGRO_GL_SGIX_depth_texture)
+       (integer ALLEGRO_GL_SGIS_fog_function)
+       (integer ALLEGRO_GL_SGIX_fog_offset)
+       (integer ALLEGRO_GL_HP_image_transform)
+       (integer ALLEGRO_GL_HP_convolution_border_modes)
+       (integer ALLEGRO_GL_SGIX_texture_add_env)
+       (integer ALLEGRO_GL_EXT_color_subtable)
+       (integer ALLEGRO_GL_PGI_vertex_hints)
+       (integer ALLEGRO_GL_PGI_misc_hints)
+       (integer ALLEGRO_GL_EXT_paletted_texture)
+       (integer ALLEGRO_GL_EXT_clip_volume_hint)
+       (integer ALLEGRO_GL_SGIX_list_priority)
+       (integer ALLEGRO_GL_SGIX_ir_instrument1)
+       (integer ALLEGRO_GL_SGIX_texture_lod_bias)
+       (integer ALLEGRO_GL_SGIX_shadow_ambient)
+       (integer ALLEGRO_GL_EXT_index_texture)
+       (integer ALLEGRO_GL_EXT_index_material)
+       (integer ALLEGRO_GL_EXT_index_func)
+       (integer ALLEGRO_GL_EXT_index_array_formats)
+       (integer ALLEGRO_GL_EXT_compiled_vertex_array)
+       (integer ALLEGRO_GL_EXT_cull_vertex)
+       (integer ALLEGRO_GL_SGIX_ycrcb)
+       (integer ALLEGRO_GL_EXT_fragment_lighting)
+       (integer ALLEGRO_GL_IBM_rasterpos_clip)
+       (integer ALLEGRO_GL_HP_texture_lighting)
+       (integer ALLEGRO_GL_EXT_draw_range_elements)
+       (integer ALLEGRO_GL_WIN_phong_shading)
+       (integer ALLEGRO_GL_WIN_specular_fog)
+       (integer ALLEGRO_GL_EXT_light_texture)
+       (integer ALLEGRO_GL_SGIX_blend_alpha_minmax)
+       (integer ALLEGRO_GL_EXT_scene_marker)
+       (integer ALLEGRO_GL_SGIX_pixel_texture_bits)
+       (integer ALLEGRO_GL_EXT_bgra)
+       (integer ALLEGRO_GL_SGIX_async)
+       (integer ALLEGRO_GL_SGIX_async_pixel)
+       (integer ALLEGRO_GL_SGIX_async_histogram)
+       (integer ALLEGRO_GL_INTEL_texture_scissor)
+       (integer ALLEGRO_GL_INTEL_parallel_arrays)
+       (integer ALLEGRO_GL_HP_occlusion_test)
+       (integer ALLEGRO_GL_EXT_pixel_transform)
+       (integer ALLEGRO_GL_EXT_pixel_transform_color_table)
+       (integer ALLEGRO_GL_EXT_shared_texture_palette)
+       (integer ALLEGRO_GL_EXT_separate_specular_color)
+       (integer ALLEGRO_GL_EXT_secondary_color)
+       (integer ALLEGRO_GL_EXT_texture_env)
+       (integer ALLEGRO_GL_EXT_texture_perturb_normal)
+       (integer ALLEGRO_GL_EXT_multi_draw_arrays)
+       (integer ALLEGRO_GL_EXT_fog_coord)
+       (integer ALLEGRO_GL_REND_screen_coordinates)
+       (integer ALLEGRO_GL_EXT_coordinate_frame)
+       (integer ALLEGRO_GL_EXT_texture_env_combine)
+       (integer ALLEGRO_GL_APPLE_specular_vector)
+       (integer ALLEGRO_GL_APPLE_transform_hint)
+       (integer ALLEGRO_GL_SUNX_constant_data)
+       (integer ALLEGRO_GL_SUN_global_alpha)
+       (integer ALLEGRO_GL_SUN_triangle_list)
+       (integer ALLEGRO_GL_SUN_vertex)
+       (integer ALLEGRO_GL_EXT_blend_func_separate)
+       (integer ALLEGRO_GL_INGR_color_clamp)
+       (integer ALLEGRO_GL_INGR_interlace_read)
+       (integer ALLEGRO_GL_EXT_stencil_wrap)
+       (integer ALLEGRO_GL_EXT_422_pixels)
+       (integer ALLEGRO_GL_NV_texgen_reflection)
+       (integer ALLEGRO_GL_SGIX_texture_range)
+       (integer ALLEGRO_GL_SUN_convolution_border_modes)
+       (integer ALLEGRO_GL_EXT_texture_env_add)
+       (integer ALLEGRO_GL_EXT_texture_lod_bias)
+       (integer ALLEGRO_GL_EXT_texture_filter_anisotropic)
+       (integer ALLEGRO_GL_EXT_vertex_weighting)
+       (integer ALLEGRO_GL_NV_light_max_exponent)
+       (integer ALLEGRO_GL_NV_vertex_array_range)
+       (integer ALLEGRO_GL_NV_register_combiners)
+       (integer ALLEGRO_GL_NV_fog_distance)
+       (integer ALLEGRO_GL_NV_texgen_emboss)
+       (integer ALLEGRO_GL_NV_blend_square)
+       (integer ALLEGRO_GL_NV_texture_env_combine4)
+       (integer ALLEGRO_GL_MESA_resize_buffers)
+       (integer ALLEGRO_GL_MESA_window_pos)
+       (integer ALLEGRO_GL_EXT_texture_compression_s3tc)
+       (integer ALLEGRO_GL_IBM_cull_vertex)
+       (integer ALLEGRO_GL_IBM_multimode_draw_arrays)
+       (integer ALLEGRO_GL_IBM_vertex_array_lists)
+       (integer ALLEGRO_GL_3DFX_texture_compression_FXT1)
+       (integer ALLEGRO_GL_3DFX_multisample)
+       (integer ALLEGRO_GL_3DFX_tbuffer)
+       (integer ALLEGRO_GL_SGIX_vertex_preclip)
+       (integer ALLEGRO_GL_SGIX_resample)
+       (integer ALLEGRO_GL_SGIS_texture_color_mask)
+       (integer ALLEGRO_GL_EXT_texture_env_dot3)
+       (integer ALLEGRO_GL_ATI_texture_mirror_once)
+       (integer ALLEGRO_GL_NV_fence)
+       (integer ALLEGRO_GL_IBM_static_data)
+       (integer ALLEGRO_GL_IBM_texture_mirrored_repeat)
+       (integer ALLEGRO_GL_NV_evaluators)
+       (integer ALLEGRO_GL_NV_packed_depth_stencil)
+       (integer ALLEGRO_GL_NV_register_combiners2)
+       (integer ALLEGRO_GL_NV_texture_compression_vtc)
+       (integer ALLEGRO_GL_NV_texture_rectangle)
+       (integer ALLEGRO_GL_NV_texture_shader)
+       (integer ALLEGRO_GL_NV_texture_shader2)
+       (integer ALLEGRO_GL_NV_vertex_array_range2)
+       (integer ALLEGRO_GL_NV_vertex_program)
+       (integer ALLEGRO_GL_SGIX_texture_coordinate_clamp)
+       (integer ALLEGRO_GL_OML_interlace)
+       (integer ALLEGRO_GL_OML_subsample)
+       (integer ALLEGRO_GL_OML_resample)
+       (integer ALLEGRO_GL_NV_copy_depth_to_color)
+       (integer ALLEGRO_GL_ATI_envmap_bumpmap)
+       (integer ALLEGRO_GL_ATI_fragment_shader)
+       (integer ALLEGRO_GL_ATI_pn_triangles)
+       (integer ALLEGRO_GL_ATI_vertex_array_object)
+       (integer ALLEGRO_GL_EXT_vertex_shader)
+       (integer ALLEGRO_GL_ATI_vertex_streams)
+       (integer ALLEGRO_GL_ATI_element_array)
+       (integer ALLEGRO_GL_SUN_mesh_array)
+       (integer ALLEGRO_GL_SUN_slice_accum)
+       (integer ALLEGRO_GL_NV_multisample_filter_hint)
+       (integer ALLEGRO_GL_NV_depth_clamp)
+       (integer ALLEGRO_GL_NV_occlusion_query)
+       (integer ALLEGRO_GL_NV_point_sprite)
+       (integer ALLEGRO_GL_NV_texture_shader3)
+       (integer ALLEGRO_GL_NV_vertex_program1_1)
+       (integer ALLEGRO_GL_EXT_shadow_funcs)
+       (integer ALLEGRO_GL_EXT_stencil_two_side)
+       (integer ALLEGRO_GL_ATI_text_fragment_shader)
+       (integer ALLEGRO_GL_APPLE_client_storage)
+       (integer ALLEGRO_GL_APPLE_element_array)
+       (integer ALLEGRO_GL_APPLE_fence)
+       (integer ALLEGRO_GL_APPLE_vertex_array_object)
+       (integer ALLEGRO_GL_APPLE_vertex_array_range)
+       (integer ALLEGRO_GL_APPLE_ycbcr_422)
+       (integer ALLEGRO_GL_S3_s3tc)
+       (integer ALLEGRO_GL_ATI_draw_buffers)
+       (integer ALLEGRO_GL_ATI_texture_env_combine3)
+       (integer ALLEGRO_GL_ATI_texture_float)
+       (integer ALLEGRO_GL_NV_float_buffer)
+       (integer ALLEGRO_GL_NV_fragment_program)
+       (integer ALLEGRO_GL_NV_half_float)
+       (integer ALLEGRO_GL_NV_pixel_data_range)
+       (integer ALLEGRO_GL_NV_primitive_restart)
+       (integer ALLEGRO_GL_NV_texture_expand_normal)
+       (integer ALLEGRO_GL_NV_vertex_program2)
+       (integer ALLEGRO_GL_ATI_map_object_buffer)
+       (integer ALLEGRO_GL_ATI_separate_stencil)
+       (integer ALLEGRO_GL_ATI_vertex_attrib_array_object)
+       (integer ALLEGRO_GL_OES_byte_coordinates)
+       (integer ALLEGRO_GL_OES_fixed_point)
+       (integer ALLEGRO_GL_OES_single_precision)
+       (integer ALLEGRO_GL_OES_compressed_paletted_texture)
+       (integer ALLEGRO_GL_OES_read_format)
+       (integer ALLEGRO_GL_OES_query_matrix)
+       (integer ALLEGRO_GL_OES_framebuffer_object)
+       (integer ALLEGRO_GL_OES_texture_npot)
+       (integer ALLEGRO_GL_EXT_depth_bounds_test)
+       (integer ALLEGRO_GL_EXT_texture_mirror_clamp)
+       (integer ALLEGRO_GL_EXT_blend_equation_separate)
+       (integer ALLEGRO_GL_MESA_pack_invert)
+       (integer ALLEGRO_GL_MESA_ycbcr_texture)
+       (integer ALLEGRO_GL_EXT_pixel_buffer_object)
+       (integer ALLEGRO_GL_NV_fragment_program_option)
+       (integer ALLEGRO_GL_NV_fragment_program2)
+       (integer ALLEGRO_GL_NV_vertex_program2_option)
+       (integer ALLEGRO_GL_NV_vertex_program3)
+       (integer ALLEGRO_GL_EXT_texture_compression_dxt1)
+       (integer ALLEGRO_GL_EXT_framebuffer_object)
+       (integer ALLEGRO_GL_GREMEDY_string_marker)
+       (integer ALLEGRO_GL_EXT_packed_depth_stencil)
+       (integer ALLEGRO_GL_EXT_stencil_clear_tag)
+       (integer ALLEGRO_GL_EXT_texture_sRGB)
+       (integer ALLEGRO_GL_EXT_framebuffer_blit)
+       (integer ALLEGRO_GL_EXT_framebuffer_multisample)
+       (integer ALLEGRO_GL_MESAX_texture_stack)
+       (integer ALLEGRO_GL_EXT_timer_query)
+       (integer ALLEGRO_GL_EXT_gpu_program_parameters)
+       (integer ALLEGRO_GL_APPLE_flush_buffer_range)
+       (integer ALLEGRO_GL_EXT_bindable_uniform)
+       (integer ALLEGRO_GL_EXT_draw_buffers2)
+       (integer ALLEGRO_GL_EXT_draw_instanced)
+       (integer ALLEGRO_GL_EXT_framebuffer_sRGB)
+       (integer ALLEGRO_GL_EXT_geometry_shader4)
+       (integer ALLEGRO_GL_EXT_gpu_shader4)
+       (integer ALLEGRO_GL_EXT_packed_float)
+       (integer ALLEGRO_GL_EXT_texture_array)
+       (integer ALLEGRO_GL_EXT_texture_buffer_object)
+       (integer ALLEGRO_GL_EXT_texture_compression_latc)
+       (integer ALLEGRO_GL_EXT_texture_compression_rgtc)
+       (integer ALLEGRO_GL_EXT_texture_integer)
+       (integer ALLEGRO_GL_EXT_texture_shared_exponent)
+       (integer ALLEGRO_GL_NV_depth_buffer_float)
+       (integer ALLEGRO_GL_NV_fragment_program4)
+       (integer ALLEGRO_GL_NV_framebuffer_multisample_coverage)
+       (integer ALLEGRO_GL_NV_geometry_program4)
+       (integer ALLEGRO_GL_NV_gpu_program4)
+       (integer ALLEGRO_GL_NV_parameter_buffer_object)
+       (integer ALLEGRO_GL_NV_transform_feedback)
+       (integer ALLEGRO_GL_NV_vertex_program4)
+       (integer ALLEGRO_GL_GREMEDY_frame_terminator)
+       (integer ALLEGRO_GL_NV_conditional_render)
+       (integer ALLEGRO_GL_NV_present_video)
+       (integer ALLEGRO_GL_EXT_direct_state_access)
+       (integer ALLEGRO_GL_EXT_transform_feedback)
+       (integer ALLEGRO_GL_EXT_texture_swizzle)
+       (integer ALLEGRO_GL_NV_explicit_multisample)
+       (integer ALLEGRO_GL_NV_transform_feedback2)
+       (integer ALLEGRO_GL_ATI_meminfo)
+       (integer ALLEGRO_GL_AMD_performance_monitor)
+       (integer ALLEGRO_GL_AMD_texture_texture4)
+       (integer ALLEGRO_GL_AMD_vertex_shader_tesselator)
+       (integer ALLEGRO_GL_EXT_provoking_vertex)
+       (integer ALLEGRO_GL_EXT_texture_snorm)
+       (integer ALLEGRO_GL_AMD_draw_buffers_blend)
+       (integer ALLEGRO_GL_APPLE_texture_range)
+       (integer ALLEGRO_GL_APPLE_float_pixels)
+       (integer ALLEGRO_GL_APPLE_vertex_program_evaluators)
+       (integer ALLEGRO_GL_APPLE_aux_depth_stencil)
+       (integer ALLEGRO_GL_APPLE_object_purgeable)
+       (integer ALLEGRO_GL_APPLE_row_bytes)
+       (integer ALLEGRO_GL_APPLE_rgb_422)
+       (integer ALLEGRO_GL_NV_video_capture)
+       (integer ALLEGRO_GL_EXT_separate_shader_objects)
+       (integer ALLEGRO_GL_NV_parameter_buffer_object2)
+       (integer ALLEGRO_GL_NV_shader_buffer_load)
+       (integer ALLEGRO_GL_NV_vertex_buffer_unified_memory)
+       (integer ALLEGRO_GL_NV_texture_barrier)
+       (integer ALLEGRO_GL_AMD_shader_stencil_export)
+       (integer ALLEGRO_GL_AMD_seamless_cubemap_per_texture)
+       (integer ALLEGRO_GL_AMD_conservative_depth))
+      "struct ALLEGRO_OGL_EXT_LIST *tmp_ =  (struct ALLEGRO_OGL_EXT_LIST *)C_malloc(sizeof(struct ALLEGRO_OGL_EXT_LIST));\ntmp_->ALLEGRO_GL_ARB_imaging = ALLEGRO_GL_ARB_imaging;\ntmp_->ALLEGRO_GL_ARB_multitexture = ALLEGRO_GL_ARB_multitexture;\ntmp_->ALLEGRO_GL_ARB_transpose_matrix = ALLEGRO_GL_ARB_transpose_matrix;\ntmp_->ALLEGRO_GL_ARB_multisample = ALLEGRO_GL_ARB_multisample;\ntmp_->ALLEGRO_GL_ARB_texture_env_add = ALLEGRO_GL_ARB_texture_env_add;\ntmp_->ALLEGRO_GL_ARB_texture_cube_map = ALLEGRO_GL_ARB_texture_cube_map;\ntmp_->ALLEGRO_GL_ARB_texture_compression = ALLEGRO_GL_ARB_texture_compression;\ntmp_->ALLEGRO_GL_ARB_texture_border_clamp = ALLEGRO_GL_ARB_texture_border_clamp;\ntmp_->ALLEGRO_GL_ARB_point_parameters = ALLEGRO_GL_ARB_point_parameters;\ntmp_->ALLEGRO_GL_ARB_vertex_blend = ALLEGRO_GL_ARB_vertex_blend;\ntmp_->ALLEGRO_GL_ARB_texture_env_combine = ALLEGRO_GL_ARB_texture_env_combine;\ntmp_->ALLEGRO_GL_ARB_texture_env_crossbar = ALLEGRO_GL_ARB_texture_env_crossbar;\ntmp_->ALLEGRO_GL_ARB_texture_env_dot3 = ALLEGRO_GL_ARB_texture_env_dot3;\ntmp_->ALLEGRO_GL_ARB_texture_mirrored_repeat = ALLEGRO_GL_ARB_texture_mirrored_repeat;\ntmp_->ALLEGRO_GL_ARB_depth_texture = ALLEGRO_GL_ARB_depth_texture;\ntmp_->ALLEGRO_GL_ARB_shadow = ALLEGRO_GL_ARB_shadow;\ntmp_->ALLEGRO_GL_ARB_shadow_ambient = ALLEGRO_GL_ARB_shadow_ambient;\ntmp_->ALLEGRO_GL_ARB_window_pos = ALLEGRO_GL_ARB_window_pos;\ntmp_->ALLEGRO_GL_ARB_vertex_program = ALLEGRO_GL_ARB_vertex_program;\ntmp_->ALLEGRO_GL_ARB_fragment_program = ALLEGRO_GL_ARB_fragment_program;\ntmp_->ALLEGRO_GL_ARB_vertex_buffer_object = ALLEGRO_GL_ARB_vertex_buffer_object;\ntmp_->ALLEGRO_GL_ARB_occlusion_query = ALLEGRO_GL_ARB_occlusion_query;\ntmp_->ALLEGRO_GL_ARB_shader_objects = ALLEGRO_GL_ARB_shader_objects;\ntmp_->ALLEGRO_GL_ARB_vertex_shader = ALLEGRO_GL_ARB_vertex_shader;\ntmp_->ALLEGRO_GL_ARB_fragment_shader = ALLEGRO_GL_ARB_fragment_shader;\ntmp_->ALLEGRO_GL_ARB_shading_language_100 = ALLEGRO_GL_ARB_shading_language_100;\ntmp_->ALLEGRO_GL_ARB_texture_non_power_of_two = ALLEGRO_GL_ARB_texture_non_power_of_two;\ntmp_->ALLEGRO_GL_ARB_point_sprite = ALLEGRO_GL_ARB_point_sprite;\ntmp_->ALLEGRO_GL_ARB_fragment_program_shadow = ALLEGRO_GL_ARB_fragment_program_shadow;\ntmp_->ALLEGRO_GL_ARB_draw_buffers = ALLEGRO_GL_ARB_draw_buffers;\ntmp_->ALLEGRO_GL_ARB_texture_rectangle = ALLEGRO_GL_ARB_texture_rectangle;\ntmp_->ALLEGRO_GL_ARB_color_buffer_float = ALLEGRO_GL_ARB_color_buffer_float;\ntmp_->ALLEGRO_GL_ARB_half_float_pixel = ALLEGRO_GL_ARB_half_float_pixel;\ntmp_->ALLEGRO_GL_ARB_texture_float = ALLEGRO_GL_ARB_texture_float;\ntmp_->ALLEGRO_GL_ARB_pixel_buffer_object = ALLEGRO_GL_ARB_pixel_buffer_object;\ntmp_->ALLEGRO_GL_ARB_instanced_arrays = ALLEGRO_GL_ARB_instanced_arrays;\ntmp_->ALLEGRO_GL_ARB_draw_instanced = ALLEGRO_GL_ARB_draw_instanced;\ntmp_->ALLEGRO_GL_ARB_geometry_shader4 = ALLEGRO_GL_ARB_geometry_shader4;\ntmp_->ALLEGRO_GL_ARB_texture_buffer_object = ALLEGRO_GL_ARB_texture_buffer_object;\ntmp_->ALLEGRO_GL_ARB_depth_buffer_float = ALLEGRO_GL_ARB_depth_buffer_float;\ntmp_->ALLEGRO_GL_ARB_framebuffer_object = ALLEGRO_GL_ARB_framebuffer_object;\ntmp_->ALLEGRO_GL_ARB_framebuffer_sRGB = ALLEGRO_GL_ARB_framebuffer_sRGB;\ntmp_->ALLEGRO_GL_ARB_half_float_vertex = ALLEGRO_GL_ARB_half_float_vertex;\ntmp_->ALLEGRO_GL_ARB_map_buffer_range = ALLEGRO_GL_ARB_map_buffer_range;\ntmp_->ALLEGRO_GL_ARB_texture_compression_rgtc = ALLEGRO_GL_ARB_texture_compression_rgtc;\ntmp_->ALLEGRO_GL_ARB_texture_rg = ALLEGRO_GL_ARB_texture_rg;\ntmp_->ALLEGRO_GL_ARB_vertex_array_object = ALLEGRO_GL_ARB_vertex_array_object;\ntmp_->ALLEGRO_GL_ARB_copy_buffer = ALLEGRO_GL_ARB_copy_buffer;\ntmp_->ALLEGRO_GL_ARB_compatibility = ALLEGRO_GL_ARB_compatibility;\ntmp_->ALLEGRO_GL_ARB_uniform_buffer_object = ALLEGRO_GL_ARB_uniform_buffer_object;\ntmp_->ALLEGRO_GL_ARB_shader_texture_lod = ALLEGRO_GL_ARB_shader_texture_lod;\ntmp_->ALLEGRO_GL_ARB_depth_clamp = ALLEGRO_GL_ARB_depth_clamp;\ntmp_->ALLEGRO_GL_ARB_draw_elements_base_vertex = ALLEGRO_GL_ARB_draw_elements_base_vertex;\ntmp_->ALLEGRO_GL_ARB_fragment_coord_conventions = ALLEGRO_GL_ARB_fragment_coord_conventions;\ntmp_->ALLEGRO_GL_ARB_provoking_vertex = ALLEGRO_GL_ARB_provoking_vertex;\ntmp_->ALLEGRO_GL_ARB_seamless_cube_map = ALLEGRO_GL_ARB_seamless_cube_map;\ntmp_->ALLEGRO_GL_ARB_sync = ALLEGRO_GL_ARB_sync;\ntmp_->ALLEGRO_GL_ARB_texture_multisample = ALLEGRO_GL_ARB_texture_multisample;\ntmp_->ALLEGRO_GL_ARB_vertex_array_bgra = ALLEGRO_GL_ARB_vertex_array_bgra;\ntmp_->ALLEGRO_GL_ARB_draw_buffers_blend = ALLEGRO_GL_ARB_draw_buffers_blend;\ntmp_->ALLEGRO_GL_ARB_sample_shading = ALLEGRO_GL_ARB_sample_shading;\ntmp_->ALLEGRO_GL_ARB_texture_cube_map_array = ALLEGRO_GL_ARB_texture_cube_map_array;\ntmp_->ALLEGRO_GL_ARB_texture_gather = ALLEGRO_GL_ARB_texture_gather;\ntmp_->ALLEGRO_GL_ARB_texture_query_lod = ALLEGRO_GL_ARB_texture_query_lod;\ntmp_->ALLEGRO_GL_ARB_shading_language_include = ALLEGRO_GL_ARB_shading_language_include;\ntmp_->ALLEGRO_GL_ARB_texture_compression_bptc = ALLEGRO_GL_ARB_texture_compression_bptc;\ntmp_->ALLEGRO_GL_ARB_blend_func_extended = ALLEGRO_GL_ARB_blend_func_extended;\ntmp_->ALLEGRO_GL_ARB_explicit_attrib_location = ALLEGRO_GL_ARB_explicit_attrib_location;\ntmp_->ALLEGRO_GL_ARB_occlusion_query2 = ALLEGRO_GL_ARB_occlusion_query2;\ntmp_->ALLEGRO_GL_ARB_sampler_objects = ALLEGRO_GL_ARB_sampler_objects;\ntmp_->ALLEGRO_GL_ARB_shader_bit_encoding = ALLEGRO_GL_ARB_shader_bit_encoding;\ntmp_->ALLEGRO_GL_ARB_texture_rgb10_a2ui = ALLEGRO_GL_ARB_texture_rgb10_a2ui;\ntmp_->ALLEGRO_GL_ARB_texture_swizzle = ALLEGRO_GL_ARB_texture_swizzle;\ntmp_->ALLEGRO_GL_ARB_timer_query = ALLEGRO_GL_ARB_timer_query;\ntmp_->ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev = ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev;\ntmp_->ALLEGRO_GL_ARB_draw_indirect = ALLEGRO_GL_ARB_draw_indirect;\ntmp_->ALLEGRO_GL_ARB_gpu_shader5 = ALLEGRO_GL_ARB_gpu_shader5;\ntmp_->ALLEGRO_GL_ARB_gpu_shader_fp64 = ALLEGRO_GL_ARB_gpu_shader_fp64;\ntmp_->ALLEGRO_GL_ARB_shader_subroutine = ALLEGRO_GL_ARB_shader_subroutine;\ntmp_->ALLEGRO_GL_ARB_tessellation_shader = ALLEGRO_GL_ARB_tessellation_shader;\ntmp_->ALLEGRO_GL_ARB_texture_buffer_object_rgb32 = ALLEGRO_GL_ARB_texture_buffer_object_rgb32;\ntmp_->ALLEGRO_GL_ARB_transform_feedback2 = ALLEGRO_GL_ARB_transform_feedback2;\ntmp_->ALLEGRO_GL_ARB_transform_feedback3 = ALLEGRO_GL_ARB_transform_feedback3;\ntmp_->ALLEGRO_GL_EXT_abgr = ALLEGRO_GL_EXT_abgr;\ntmp_->ALLEGRO_GL_EXT_blend_color = ALLEGRO_GL_EXT_blend_color;\ntmp_->ALLEGRO_GL_EXT_polygon_offset = ALLEGRO_GL_EXT_polygon_offset;\ntmp_->ALLEGRO_GL_EXT_texture = ALLEGRO_GL_EXT_texture;\ntmp_->ALLEGRO_GL_EXT_texture3D = ALLEGRO_GL_EXT_texture3D;\ntmp_->ALLEGRO_GL_SGIS_texture_filter4 = ALLEGRO_GL_SGIS_texture_filter4;\ntmp_->ALLEGRO_GL_EXT_subtexture = ALLEGRO_GL_EXT_subtexture;\ntmp_->ALLEGRO_GL_EXT_copy_texture = ALLEGRO_GL_EXT_copy_texture;\ntmp_->ALLEGRO_GL_EXT_histogram = ALLEGRO_GL_EXT_histogram;\ntmp_->ALLEGRO_GL_EXT_convolution = ALLEGRO_GL_EXT_convolution;\ntmp_->ALLEGRO_GL_SGI_color_matrix = ALLEGRO_GL_SGI_color_matrix;\ntmp_->ALLEGRO_GL_SGI_color_table = ALLEGRO_GL_SGI_color_table;\ntmp_->ALLEGRO_GL_SGIS_pixel_texture = ALLEGRO_GL_SGIS_pixel_texture;\ntmp_->ALLEGRO_GL_SGIX_pixel_texture = ALLEGRO_GL_SGIX_pixel_texture;\ntmp_->ALLEGRO_GL_SGIS_texture4D = ALLEGRO_GL_SGIS_texture4D;\ntmp_->ALLEGRO_GL_SGI_texture_color_table = ALLEGRO_GL_SGI_texture_color_table;\ntmp_->ALLEGRO_GL_EXT_cmyka = ALLEGRO_GL_EXT_cmyka;\ntmp_->ALLEGRO_GL_EXT_texture_object = ALLEGRO_GL_EXT_texture_object;\ntmp_->ALLEGRO_GL_SGIS_detail_texture = ALLEGRO_GL_SGIS_detail_texture;\ntmp_->ALLEGRO_GL_SGIS_sharpen_texture = ALLEGRO_GL_SGIS_sharpen_texture;\ntmp_->ALLEGRO_GL_EXT_packed_pixels = ALLEGRO_GL_EXT_packed_pixels;\ntmp_->ALLEGRO_GL_SGIS_texture_lod = ALLEGRO_GL_SGIS_texture_lod;\ntmp_->ALLEGRO_GL_SGIS_multisample = ALLEGRO_GL_SGIS_multisample;\ntmp_->ALLEGRO_GL_EXT_rescale_normal = ALLEGRO_GL_EXT_rescale_normal;\ntmp_->ALLEGRO_GL_EXT_vertex_array = ALLEGRO_GL_EXT_vertex_array;\ntmp_->ALLEGRO_GL_EXT_misc_attribute = ALLEGRO_GL_EXT_misc_attribute;\ntmp_->ALLEGRO_GL_SGIS_generate_mipmap = ALLEGRO_GL_SGIS_generate_mipmap;\ntmp_->ALLEGRO_GL_SGIX_clipmap = ALLEGRO_GL_SGIX_clipmap;\ntmp_->ALLEGRO_GL_SGIX_shadow = ALLEGRO_GL_SGIX_shadow;\ntmp_->ALLEGRO_GL_SGIS_texture_edge_clamp = ALLEGRO_GL_SGIS_texture_edge_clamp;\ntmp_->ALLEGRO_GL_SGIS_texture_border_clamp = ALLEGRO_GL_SGIS_texture_border_clamp;\ntmp_->ALLEGRO_GL_EXT_blend_minmax = ALLEGRO_GL_EXT_blend_minmax;\ntmp_->ALLEGRO_GL_EXT_blend_subtract = ALLEGRO_GL_EXT_blend_subtract;\ntmp_->ALLEGRO_GL_EXT_blend_logic_op = ALLEGRO_GL_EXT_blend_logic_op;\ntmp_->ALLEGRO_GL_SGIX_interlace = ALLEGRO_GL_SGIX_interlace;\ntmp_->ALLEGRO_GL_SGIS_texture_select = ALLEGRO_GL_SGIS_texture_select;\ntmp_->ALLEGRO_GL_SGIX_sprite = ALLEGRO_GL_SGIX_sprite;\ntmp_->ALLEGRO_GL_SGIX_texture_multi_buffer = ALLEGRO_GL_SGIX_texture_multi_buffer;\ntmp_->ALLEGRO_GL_EXT_point_parameters = ALLEGRO_GL_EXT_point_parameters;\ntmp_->ALLEGRO_GL_SGIX_instruments = ALLEGRO_GL_SGIX_instruments;\ntmp_->ALLEGRO_GL_SGIX_texture_scale_bias = ALLEGRO_GL_SGIX_texture_scale_bias;\ntmp_->ALLEGRO_GL_SGIX_framezoom = ALLEGRO_GL_SGIX_framezoom;\ntmp_->ALLEGRO_GL_SGIX_tag_sample_buffer = ALLEGRO_GL_SGIX_tag_sample_buffer;\ntmp_->ALLEGRO_GL_SGIX_reference_plane = ALLEGRO_GL_SGIX_reference_plane;\ntmp_->ALLEGRO_GL_SGIX_flush_raster = ALLEGRO_GL_SGIX_flush_raster;\ntmp_->ALLEGRO_GL_SGIX_depth_texture = ALLEGRO_GL_SGIX_depth_texture;\ntmp_->ALLEGRO_GL_SGIS_fog_function = ALLEGRO_GL_SGIS_fog_function;\ntmp_->ALLEGRO_GL_SGIX_fog_offset = ALLEGRO_GL_SGIX_fog_offset;\ntmp_->ALLEGRO_GL_HP_image_transform = ALLEGRO_GL_HP_image_transform;\ntmp_->ALLEGRO_GL_HP_convolution_border_modes = ALLEGRO_GL_HP_convolution_border_modes;\ntmp_->ALLEGRO_GL_SGIX_texture_add_env = ALLEGRO_GL_SGIX_texture_add_env;\ntmp_->ALLEGRO_GL_EXT_color_subtable = ALLEGRO_GL_EXT_color_subtable;\ntmp_->ALLEGRO_GL_PGI_vertex_hints = ALLEGRO_GL_PGI_vertex_hints;\ntmp_->ALLEGRO_GL_PGI_misc_hints = ALLEGRO_GL_PGI_misc_hints;\ntmp_->ALLEGRO_GL_EXT_paletted_texture = ALLEGRO_GL_EXT_paletted_texture;\ntmp_->ALLEGRO_GL_EXT_clip_volume_hint = ALLEGRO_GL_EXT_clip_volume_hint;\ntmp_->ALLEGRO_GL_SGIX_list_priority = ALLEGRO_GL_SGIX_list_priority;\ntmp_->ALLEGRO_GL_SGIX_ir_instrument1 = ALLEGRO_GL_SGIX_ir_instrument1;\ntmp_->ALLEGRO_GL_SGIX_texture_lod_bias = ALLEGRO_GL_SGIX_texture_lod_bias;\ntmp_->ALLEGRO_GL_SGIX_shadow_ambient = ALLEGRO_GL_SGIX_shadow_ambient;\ntmp_->ALLEGRO_GL_EXT_index_texture = ALLEGRO_GL_EXT_index_texture;\ntmp_->ALLEGRO_GL_EXT_index_material = ALLEGRO_GL_EXT_index_material;\ntmp_->ALLEGRO_GL_EXT_index_func = ALLEGRO_GL_EXT_index_func;\ntmp_->ALLEGRO_GL_EXT_index_array_formats = ALLEGRO_GL_EXT_index_array_formats;\ntmp_->ALLEGRO_GL_EXT_compiled_vertex_array = ALLEGRO_GL_EXT_compiled_vertex_array;\ntmp_->ALLEGRO_GL_EXT_cull_vertex = ALLEGRO_GL_EXT_cull_vertex;\ntmp_->ALLEGRO_GL_SGIX_ycrcb = ALLEGRO_GL_SGIX_ycrcb;\ntmp_->ALLEGRO_GL_EXT_fragment_lighting = ALLEGRO_GL_EXT_fragment_lighting;\ntmp_->ALLEGRO_GL_IBM_rasterpos_clip = ALLEGRO_GL_IBM_rasterpos_clip;\ntmp_->ALLEGRO_GL_HP_texture_lighting = ALLEGRO_GL_HP_texture_lighting;\ntmp_->ALLEGRO_GL_EXT_draw_range_elements = ALLEGRO_GL_EXT_draw_range_elements;\ntmp_->ALLEGRO_GL_WIN_phong_shading = ALLEGRO_GL_WIN_phong_shading;\ntmp_->ALLEGRO_GL_WIN_specular_fog = ALLEGRO_GL_WIN_specular_fog;\ntmp_->ALLEGRO_GL_EXT_light_texture = ALLEGRO_GL_EXT_light_texture;\ntmp_->ALLEGRO_GL_SGIX_blend_alpha_minmax = ALLEGRO_GL_SGIX_blend_alpha_minmax;\ntmp_->ALLEGRO_GL_EXT_scene_marker = ALLEGRO_GL_EXT_scene_marker;\ntmp_->ALLEGRO_GL_SGIX_pixel_texture_bits = ALLEGRO_GL_SGIX_pixel_texture_bits;\ntmp_->ALLEGRO_GL_EXT_bgra = ALLEGRO_GL_EXT_bgra;\ntmp_->ALLEGRO_GL_SGIX_async = ALLEGRO_GL_SGIX_async;\ntmp_->ALLEGRO_GL_SGIX_async_pixel = ALLEGRO_GL_SGIX_async_pixel;\ntmp_->ALLEGRO_GL_SGIX_async_histogram = ALLEGRO_GL_SGIX_async_histogram;\ntmp_->ALLEGRO_GL_INTEL_texture_scissor = ALLEGRO_GL_INTEL_texture_scissor;\ntmp_->ALLEGRO_GL_INTEL_parallel_arrays = ALLEGRO_GL_INTEL_parallel_arrays;\ntmp_->ALLEGRO_GL_HP_occlusion_test = ALLEGRO_GL_HP_occlusion_test;\ntmp_->ALLEGRO_GL_EXT_pixel_transform = ALLEGRO_GL_EXT_pixel_transform;\ntmp_->ALLEGRO_GL_EXT_pixel_transform_color_table = ALLEGRO_GL_EXT_pixel_transform_color_table;\ntmp_->ALLEGRO_GL_EXT_shared_texture_palette = ALLEGRO_GL_EXT_shared_texture_palette;\ntmp_->ALLEGRO_GL_EXT_separate_specular_color = ALLEGRO_GL_EXT_separate_specular_color;\ntmp_->ALLEGRO_GL_EXT_secondary_color = ALLEGRO_GL_EXT_secondary_color;\ntmp_->ALLEGRO_GL_EXT_texture_env = ALLEGRO_GL_EXT_texture_env;\ntmp_->ALLEGRO_GL_EXT_texture_perturb_normal = ALLEGRO_GL_EXT_texture_perturb_normal;\ntmp_->ALLEGRO_GL_EXT_multi_draw_arrays = ALLEGRO_GL_EXT_multi_draw_arrays;\ntmp_->ALLEGRO_GL_EXT_fog_coord = ALLEGRO_GL_EXT_fog_coord;\ntmp_->ALLEGRO_GL_REND_screen_coordinates = ALLEGRO_GL_REND_screen_coordinates;\ntmp_->ALLEGRO_GL_EXT_coordinate_frame = ALLEGRO_GL_EXT_coordinate_frame;\ntmp_->ALLEGRO_GL_EXT_texture_env_combine = ALLEGRO_GL_EXT_texture_env_combine;\ntmp_->ALLEGRO_GL_APPLE_specular_vector = ALLEGRO_GL_APPLE_specular_vector;\ntmp_->ALLEGRO_GL_APPLE_transform_hint = ALLEGRO_GL_APPLE_transform_hint;\ntmp_->ALLEGRO_GL_SUNX_constant_data = ALLEGRO_GL_SUNX_constant_data;\ntmp_->ALLEGRO_GL_SUN_global_alpha = ALLEGRO_GL_SUN_global_alpha;\ntmp_->ALLEGRO_GL_SUN_triangle_list = ALLEGRO_GL_SUN_triangle_list;\ntmp_->ALLEGRO_GL_SUN_vertex = ALLEGRO_GL_SUN_vertex;\ntmp_->ALLEGRO_GL_EXT_blend_func_separate = ALLEGRO_GL_EXT_blend_func_separate;\ntmp_->ALLEGRO_GL_INGR_color_clamp = ALLEGRO_GL_INGR_color_clamp;\ntmp_->ALLEGRO_GL_INGR_interlace_read = ALLEGRO_GL_INGR_interlace_read;\ntmp_->ALLEGRO_GL_EXT_stencil_wrap = ALLEGRO_GL_EXT_stencil_wrap;\ntmp_->ALLEGRO_GL_EXT_422_pixels = ALLEGRO_GL_EXT_422_pixels;\ntmp_->ALLEGRO_GL_NV_texgen_reflection = ALLEGRO_GL_NV_texgen_reflection;\ntmp_->ALLEGRO_GL_SGIX_texture_range = ALLEGRO_GL_SGIX_texture_range;\ntmp_->ALLEGRO_GL_SUN_convolution_border_modes = ALLEGRO_GL_SUN_convolution_border_modes;\ntmp_->ALLEGRO_GL_EXT_texture_env_add = ALLEGRO_GL_EXT_texture_env_add;\ntmp_->ALLEGRO_GL_EXT_texture_lod_bias = ALLEGRO_GL_EXT_texture_lod_bias;\ntmp_->ALLEGRO_GL_EXT_texture_filter_anisotropic = ALLEGRO_GL_EXT_texture_filter_anisotropic;\ntmp_->ALLEGRO_GL_EXT_vertex_weighting = ALLEGRO_GL_EXT_vertex_weighting;\ntmp_->ALLEGRO_GL_NV_light_max_exponent = ALLEGRO_GL_NV_light_max_exponent;\ntmp_->ALLEGRO_GL_NV_vertex_array_range = ALLEGRO_GL_NV_vertex_array_range;\ntmp_->ALLEGRO_GL_NV_register_combiners = ALLEGRO_GL_NV_register_combiners;\ntmp_->ALLEGRO_GL_NV_fog_distance = ALLEGRO_GL_NV_fog_distance;\ntmp_->ALLEGRO_GL_NV_texgen_emboss = ALLEGRO_GL_NV_texgen_emboss;\ntmp_->ALLEGRO_GL_NV_blend_square = ALLEGRO_GL_NV_blend_square;\ntmp_->ALLEGRO_GL_NV_texture_env_combine4 = ALLEGRO_GL_NV_texture_env_combine4;\ntmp_->ALLEGRO_GL_MESA_resize_buffers = ALLEGRO_GL_MESA_resize_buffers;\ntmp_->ALLEGRO_GL_MESA_window_pos = ALLEGRO_GL_MESA_window_pos;\ntmp_->ALLEGRO_GL_EXT_texture_compression_s3tc = ALLEGRO_GL_EXT_texture_compression_s3tc;\ntmp_->ALLEGRO_GL_IBM_cull_vertex = ALLEGRO_GL_IBM_cull_vertex;\ntmp_->ALLEGRO_GL_IBM_multimode_draw_arrays = ALLEGRO_GL_IBM_multimode_draw_arrays;\ntmp_->ALLEGRO_GL_IBM_vertex_array_lists = ALLEGRO_GL_IBM_vertex_array_lists;\ntmp_->ALLEGRO_GL_3DFX_texture_compression_FXT1 = ALLEGRO_GL_3DFX_texture_compression_FXT1;\ntmp_->ALLEGRO_GL_3DFX_multisample = ALLEGRO_GL_3DFX_multisample;\ntmp_->ALLEGRO_GL_3DFX_tbuffer = ALLEGRO_GL_3DFX_tbuffer;\ntmp_->ALLEGRO_GL_SGIX_vertex_preclip = ALLEGRO_GL_SGIX_vertex_preclip;\ntmp_->ALLEGRO_GL_SGIX_resample = ALLEGRO_GL_SGIX_resample;\ntmp_->ALLEGRO_GL_SGIS_texture_color_mask = ALLEGRO_GL_SGIS_texture_color_mask;\ntmp_->ALLEGRO_GL_EXT_texture_env_dot3 = ALLEGRO_GL_EXT_texture_env_dot3;\ntmp_->ALLEGRO_GL_ATI_texture_mirror_once = ALLEGRO_GL_ATI_texture_mirror_once;\ntmp_->ALLEGRO_GL_NV_fence = ALLEGRO_GL_NV_fence;\ntmp_->ALLEGRO_GL_IBM_static_data = ALLEGRO_GL_IBM_static_data;\ntmp_->ALLEGRO_GL_IBM_texture_mirrored_repeat = ALLEGRO_GL_IBM_texture_mirrored_repeat;\ntmp_->ALLEGRO_GL_NV_evaluators = ALLEGRO_GL_NV_evaluators;\ntmp_->ALLEGRO_GL_NV_packed_depth_stencil = ALLEGRO_GL_NV_packed_depth_stencil;\ntmp_->ALLEGRO_GL_NV_register_combiners2 = ALLEGRO_GL_NV_register_combiners2;\ntmp_->ALLEGRO_GL_NV_texture_compression_vtc = ALLEGRO_GL_NV_texture_compression_vtc;\ntmp_->ALLEGRO_GL_NV_texture_rectangle = ALLEGRO_GL_NV_texture_rectangle;\ntmp_->ALLEGRO_GL_NV_texture_shader = ALLEGRO_GL_NV_texture_shader;\ntmp_->ALLEGRO_GL_NV_texture_shader2 = ALLEGRO_GL_NV_texture_shader2;\ntmp_->ALLEGRO_GL_NV_vertex_array_range2 = ALLEGRO_GL_NV_vertex_array_range2;\ntmp_->ALLEGRO_GL_NV_vertex_program = ALLEGRO_GL_NV_vertex_program;\ntmp_->ALLEGRO_GL_SGIX_texture_coordinate_clamp = ALLEGRO_GL_SGIX_texture_coordinate_clamp;\ntmp_->ALLEGRO_GL_OML_interlace = ALLEGRO_GL_OML_interlace;\ntmp_->ALLEGRO_GL_OML_subsample = ALLEGRO_GL_OML_subsample;\ntmp_->ALLEGRO_GL_OML_resample = ALLEGRO_GL_OML_resample;\ntmp_->ALLEGRO_GL_NV_copy_depth_to_color = ALLEGRO_GL_NV_copy_depth_to_color;\ntmp_->ALLEGRO_GL_ATI_envmap_bumpmap = ALLEGRO_GL_ATI_envmap_bumpmap;\ntmp_->ALLEGRO_GL_ATI_fragment_shader = ALLEGRO_GL_ATI_fragment_shader;\ntmp_->ALLEGRO_GL_ATI_pn_triangles = ALLEGRO_GL_ATI_pn_triangles;\ntmp_->ALLEGRO_GL_ATI_vertex_array_object = ALLEGRO_GL_ATI_vertex_array_object;\ntmp_->ALLEGRO_GL_EXT_vertex_shader = ALLEGRO_GL_EXT_vertex_shader;\ntmp_->ALLEGRO_GL_ATI_vertex_streams = ALLEGRO_GL_ATI_vertex_streams;\ntmp_->ALLEGRO_GL_ATI_element_array = ALLEGRO_GL_ATI_element_array;\ntmp_->ALLEGRO_GL_SUN_mesh_array = ALLEGRO_GL_SUN_mesh_array;\ntmp_->ALLEGRO_GL_SUN_slice_accum = ALLEGRO_GL_SUN_slice_accum;\ntmp_->ALLEGRO_GL_NV_multisample_filter_hint = ALLEGRO_GL_NV_multisample_filter_hint;\ntmp_->ALLEGRO_GL_NV_depth_clamp = ALLEGRO_GL_NV_depth_clamp;\ntmp_->ALLEGRO_GL_NV_occlusion_query = ALLEGRO_GL_NV_occlusion_query;\ntmp_->ALLEGRO_GL_NV_point_sprite = ALLEGRO_GL_NV_point_sprite;\ntmp_->ALLEGRO_GL_NV_texture_shader3 = ALLEGRO_GL_NV_texture_shader3;\ntmp_->ALLEGRO_GL_NV_vertex_program1_1 = ALLEGRO_GL_NV_vertex_program1_1;\ntmp_->ALLEGRO_GL_EXT_shadow_funcs = ALLEGRO_GL_EXT_shadow_funcs;\ntmp_->ALLEGRO_GL_EXT_stencil_two_side = ALLEGRO_GL_EXT_stencil_two_side;\ntmp_->ALLEGRO_GL_ATI_text_fragment_shader = ALLEGRO_GL_ATI_text_fragment_shader;\ntmp_->ALLEGRO_GL_APPLE_client_storage = ALLEGRO_GL_APPLE_client_storage;\ntmp_->ALLEGRO_GL_APPLE_element_array = ALLEGRO_GL_APPLE_element_array;\ntmp_->ALLEGRO_GL_APPLE_fence = ALLEGRO_GL_APPLE_fence;\ntmp_->ALLEGRO_GL_APPLE_vertex_array_object = ALLEGRO_GL_APPLE_vertex_array_object;\ntmp_->ALLEGRO_GL_APPLE_vertex_array_range = ALLEGRO_GL_APPLE_vertex_array_range;\ntmp_->ALLEGRO_GL_APPLE_ycbcr_422 = ALLEGRO_GL_APPLE_ycbcr_422;\ntmp_->ALLEGRO_GL_S3_s3tc = ALLEGRO_GL_S3_s3tc;\ntmp_->ALLEGRO_GL_ATI_draw_buffers = ALLEGRO_GL_ATI_draw_buffers;\ntmp_->ALLEGRO_GL_ATI_texture_env_combine3 = ALLEGRO_GL_ATI_texture_env_combine3;\ntmp_->ALLEGRO_GL_ATI_texture_float = ALLEGRO_GL_ATI_texture_float;\ntmp_->ALLEGRO_GL_NV_float_buffer = ALLEGRO_GL_NV_float_buffer;\ntmp_->ALLEGRO_GL_NV_fragment_program = ALLEGRO_GL_NV_fragment_program;\ntmp_->ALLEGRO_GL_NV_half_float = ALLEGRO_GL_NV_half_float;\ntmp_->ALLEGRO_GL_NV_pixel_data_range = ALLEGRO_GL_NV_pixel_data_range;\ntmp_->ALLEGRO_GL_NV_primitive_restart = ALLEGRO_GL_NV_primitive_restart;\ntmp_->ALLEGRO_GL_NV_texture_expand_normal = ALLEGRO_GL_NV_texture_expand_normal;\ntmp_->ALLEGRO_GL_NV_vertex_program2 = ALLEGRO_GL_NV_vertex_program2;\ntmp_->ALLEGRO_GL_ATI_map_object_buffer = ALLEGRO_GL_ATI_map_object_buffer;\ntmp_->ALLEGRO_GL_ATI_separate_stencil = ALLEGRO_GL_ATI_separate_stencil;\ntmp_->ALLEGRO_GL_ATI_vertex_attrib_array_object = ALLEGRO_GL_ATI_vertex_attrib_array_object;\ntmp_->ALLEGRO_GL_OES_byte_coordinates = ALLEGRO_GL_OES_byte_coordinates;\ntmp_->ALLEGRO_GL_OES_fixed_point = ALLEGRO_GL_OES_fixed_point;\ntmp_->ALLEGRO_GL_OES_single_precision = ALLEGRO_GL_OES_single_precision;\ntmp_->ALLEGRO_GL_OES_compressed_paletted_texture = ALLEGRO_GL_OES_compressed_paletted_texture;\ntmp_->ALLEGRO_GL_OES_read_format = ALLEGRO_GL_OES_read_format;\ntmp_->ALLEGRO_GL_OES_query_matrix = ALLEGRO_GL_OES_query_matrix;\ntmp_->ALLEGRO_GL_OES_framebuffer_object = ALLEGRO_GL_OES_framebuffer_object;\ntmp_->ALLEGRO_GL_OES_texture_npot = ALLEGRO_GL_OES_texture_npot;\ntmp_->ALLEGRO_GL_EXT_depth_bounds_test = ALLEGRO_GL_EXT_depth_bounds_test;\ntmp_->ALLEGRO_GL_EXT_texture_mirror_clamp = ALLEGRO_GL_EXT_texture_mirror_clamp;\ntmp_->ALLEGRO_GL_EXT_blend_equation_separate = ALLEGRO_GL_EXT_blend_equation_separate;\ntmp_->ALLEGRO_GL_MESA_pack_invert = ALLEGRO_GL_MESA_pack_invert;\ntmp_->ALLEGRO_GL_MESA_ycbcr_texture = ALLEGRO_GL_MESA_ycbcr_texture;\ntmp_->ALLEGRO_GL_EXT_pixel_buffer_object = ALLEGRO_GL_EXT_pixel_buffer_object;\ntmp_->ALLEGRO_GL_NV_fragment_program_option = ALLEGRO_GL_NV_fragment_program_option;\ntmp_->ALLEGRO_GL_NV_fragment_program2 = ALLEGRO_GL_NV_fragment_program2;\ntmp_->ALLEGRO_GL_NV_vertex_program2_option = ALLEGRO_GL_NV_vertex_program2_option;\ntmp_->ALLEGRO_GL_NV_vertex_program3 = ALLEGRO_GL_NV_vertex_program3;\ntmp_->ALLEGRO_GL_EXT_texture_compression_dxt1 = ALLEGRO_GL_EXT_texture_compression_dxt1;\ntmp_->ALLEGRO_GL_EXT_framebuffer_object = ALLEGRO_GL_EXT_framebuffer_object;\ntmp_->ALLEGRO_GL_GREMEDY_string_marker = ALLEGRO_GL_GREMEDY_string_marker;\ntmp_->ALLEGRO_GL_EXT_packed_depth_stencil = ALLEGRO_GL_EXT_packed_depth_stencil;\ntmp_->ALLEGRO_GL_EXT_stencil_clear_tag = ALLEGRO_GL_EXT_stencil_clear_tag;\ntmp_->ALLEGRO_GL_EXT_texture_sRGB = ALLEGRO_GL_EXT_texture_sRGB;\ntmp_->ALLEGRO_GL_EXT_framebuffer_blit = ALLEGRO_GL_EXT_framebuffer_blit;\ntmp_->ALLEGRO_GL_EXT_framebuffer_multisample = ALLEGRO_GL_EXT_framebuffer_multisample;\ntmp_->ALLEGRO_GL_MESAX_texture_stack = ALLEGRO_GL_MESAX_texture_stack;\ntmp_->ALLEGRO_GL_EXT_timer_query = ALLEGRO_GL_EXT_timer_query;\ntmp_->ALLEGRO_GL_EXT_gpu_program_parameters = ALLEGRO_GL_EXT_gpu_program_parameters;\ntmp_->ALLEGRO_GL_APPLE_flush_buffer_range = ALLEGRO_GL_APPLE_flush_buffer_range;\ntmp_->ALLEGRO_GL_EXT_bindable_uniform = ALLEGRO_GL_EXT_bindable_uniform;\ntmp_->ALLEGRO_GL_EXT_draw_buffers2 = ALLEGRO_GL_EXT_draw_buffers2;\ntmp_->ALLEGRO_GL_EXT_draw_instanced = ALLEGRO_GL_EXT_draw_instanced;\ntmp_->ALLEGRO_GL_EXT_framebuffer_sRGB = ALLEGRO_GL_EXT_framebuffer_sRGB;\ntmp_->ALLEGRO_GL_EXT_geometry_shader4 = ALLEGRO_GL_EXT_geometry_shader4;\ntmp_->ALLEGRO_GL_EXT_gpu_shader4 = ALLEGRO_GL_EXT_gpu_shader4;\ntmp_->ALLEGRO_GL_EXT_packed_float = ALLEGRO_GL_EXT_packed_float;\ntmp_->ALLEGRO_GL_EXT_texture_array = ALLEGRO_GL_EXT_texture_array;\ntmp_->ALLEGRO_GL_EXT_texture_buffer_object = ALLEGRO_GL_EXT_texture_buffer_object;\ntmp_->ALLEGRO_GL_EXT_texture_compression_latc = ALLEGRO_GL_EXT_texture_compression_latc;\ntmp_->ALLEGRO_GL_EXT_texture_compression_rgtc = ALLEGRO_GL_EXT_texture_compression_rgtc;\ntmp_->ALLEGRO_GL_EXT_texture_integer = ALLEGRO_GL_EXT_texture_integer;\ntmp_->ALLEGRO_GL_EXT_texture_shared_exponent = ALLEGRO_GL_EXT_texture_shared_exponent;\ntmp_->ALLEGRO_GL_NV_depth_buffer_float = ALLEGRO_GL_NV_depth_buffer_float;\ntmp_->ALLEGRO_GL_NV_fragment_program4 = ALLEGRO_GL_NV_fragment_program4;\ntmp_->ALLEGRO_GL_NV_framebuffer_multisample_coverage = ALLEGRO_GL_NV_framebuffer_multisample_coverage;\ntmp_->ALLEGRO_GL_NV_geometry_program4 = ALLEGRO_GL_NV_geometry_program4;\ntmp_->ALLEGRO_GL_NV_gpu_program4 = ALLEGRO_GL_NV_gpu_program4;\ntmp_->ALLEGRO_GL_NV_parameter_buffer_object = ALLEGRO_GL_NV_parameter_buffer_object;\ntmp_->ALLEGRO_GL_NV_transform_feedback = ALLEGRO_GL_NV_transform_feedback;\ntmp_->ALLEGRO_GL_NV_vertex_program4 = ALLEGRO_GL_NV_vertex_program4;\ntmp_->ALLEGRO_GL_GREMEDY_frame_terminator = ALLEGRO_GL_GREMEDY_frame_terminator;\ntmp_->ALLEGRO_GL_NV_conditional_render = ALLEGRO_GL_NV_conditional_render;\ntmp_->ALLEGRO_GL_NV_present_video = ALLEGRO_GL_NV_present_video;\ntmp_->ALLEGRO_GL_EXT_direct_state_access = ALLEGRO_GL_EXT_direct_state_access;\ntmp_->ALLEGRO_GL_EXT_transform_feedback = ALLEGRO_GL_EXT_transform_feedback;\ntmp_->ALLEGRO_GL_EXT_texture_swizzle = ALLEGRO_GL_EXT_texture_swizzle;\ntmp_->ALLEGRO_GL_NV_explicit_multisample = ALLEGRO_GL_NV_explicit_multisample;\ntmp_->ALLEGRO_GL_NV_transform_feedback2 = ALLEGRO_GL_NV_transform_feedback2;\ntmp_->ALLEGRO_GL_ATI_meminfo = ALLEGRO_GL_ATI_meminfo;\ntmp_->ALLEGRO_GL_AMD_performance_monitor = ALLEGRO_GL_AMD_performance_monitor;\ntmp_->ALLEGRO_GL_AMD_texture_texture4 = ALLEGRO_GL_AMD_texture_texture4;\ntmp_->ALLEGRO_GL_AMD_vertex_shader_tesselator = ALLEGRO_GL_AMD_vertex_shader_tesselator;\ntmp_->ALLEGRO_GL_EXT_provoking_vertex = ALLEGRO_GL_EXT_provoking_vertex;\ntmp_->ALLEGRO_GL_EXT_texture_snorm = ALLEGRO_GL_EXT_texture_snorm;\ntmp_->ALLEGRO_GL_AMD_draw_buffers_blend = ALLEGRO_GL_AMD_draw_buffers_blend;\ntmp_->ALLEGRO_GL_APPLE_texture_range = ALLEGRO_GL_APPLE_texture_range;\ntmp_->ALLEGRO_GL_APPLE_float_pixels = ALLEGRO_GL_APPLE_float_pixels;\ntmp_->ALLEGRO_GL_APPLE_vertex_program_evaluators = ALLEGRO_GL_APPLE_vertex_program_evaluators;\ntmp_->ALLEGRO_GL_APPLE_aux_depth_stencil = ALLEGRO_GL_APPLE_aux_depth_stencil;\ntmp_->ALLEGRO_GL_APPLE_object_purgeable = ALLEGRO_GL_APPLE_object_purgeable;\ntmp_->ALLEGRO_GL_APPLE_row_bytes = ALLEGRO_GL_APPLE_row_bytes;\ntmp_->ALLEGRO_GL_APPLE_rgb_422 = ALLEGRO_GL_APPLE_rgb_422;\ntmp_->ALLEGRO_GL_NV_video_capture = ALLEGRO_GL_NV_video_capture;\ntmp_->ALLEGRO_GL_EXT_separate_shader_objects = ALLEGRO_GL_EXT_separate_shader_objects;\ntmp_->ALLEGRO_GL_NV_parameter_buffer_object2 = ALLEGRO_GL_NV_parameter_buffer_object2;\ntmp_->ALLEGRO_GL_NV_shader_buffer_load = ALLEGRO_GL_NV_shader_buffer_load;\ntmp_->ALLEGRO_GL_NV_vertex_buffer_unified_memory = ALLEGRO_GL_NV_vertex_buffer_unified_memory;\ntmp_->ALLEGRO_GL_NV_texture_barrier = ALLEGRO_GL_NV_texture_barrier;\ntmp_->ALLEGRO_GL_AMD_shader_stencil_export = ALLEGRO_GL_AMD_shader_stencil_export;\ntmp_->ALLEGRO_GL_AMD_seamless_cubemap_per_texture = ALLEGRO_GL_AMD_seamless_cubemap_per_texture;\ntmp_->ALLEGRO_GL_AMD_conservative_depth = ALLEGRO_GL_AMD_conservative_depth;\nreturn(tmp_);;\n"))
+  (define make-allegro-ogl-ext-api
+    (foreign-lambda*
+      (c-pointer (struct "ALLEGRO_OGL_EXT_API"))
+      ()
+      "struct ALLEGRO_OGL_EXT_API *tmp_ =  (struct ALLEGRO_OGL_EXT_API *)C_malloc(sizeof(struct ALLEGRO_OGL_EXT_API));\nreturn(tmp_);;\n"))
+  (define-constant allegro-desktop-opengl 0)
+  (define allegro-desktop-opengl allegro-desktop-opengl)
+  (define-constant allegro-opengl-es 1)
+  (define allegro-opengl-es allegro-opengl-es)
+  (begin
+    (define al-get-opengl-version
+      (foreign-lambda*
+        unsigned-integer32
+        ()
+        "return(al_get_opengl_version());")))
+  (begin
+    (define al-have-opengl-extension
+      (foreign-lambda*
+        bool
+        ((c-string a0))
+        "return(al_have_opengl_extension(a0));")))
+  (begin
+    (define al-get-opengl-proc-address
+      (foreign-lambda*
+        (c-pointer void)
+        ((c-string a0))
+        "return(al_get_opengl_proc_address(a0));")))
+  (begin
+    (define al-get-opengl-extension-list
+      (foreign-lambda*
+        (c-pointer (struct "ALLEGRO_OGL_EXT_LIST"))
+        ()
+        "return(al_get_opengl_extension_list());")))
+  (begin
+    (define al-get-opengl-texture
+      (foreign-lambda*
+        unsigned-integer
+        (((c-pointer "ALLEGRO_BITMAP") a0))
+        "return(al_get_opengl_texture(a0));")))
+  (begin
+    (define al-remove-opengl-fbo
+      (foreign-lambda*
+        void
+        (((c-pointer "ALLEGRO_BITMAP") a0))
+        "al_remove_opengl_fbo(a0);")))
+  (begin
+    (define al-get-opengl-fbo
+      (foreign-lambda*
+        unsigned-integer
+        (((c-pointer "ALLEGRO_BITMAP") a0))
+        "return(al_get_opengl_fbo(a0));")))
+  (begin
+    (define al-get-opengl-texture-size
+      (foreign-lambda*
+        bool
+        (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
+        "return(al_get_opengl_texture_size(a0 , a1 , a2));")))
+  (begin
+    (define al-get-opengl-texture-position
+      (foreign-lambda*
+        void
+        (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
+        "al_get_opengl_texture_position(a0 , a1 , a2);")))
+  (begin
+    (define al-get-opengl-program-object
+      (foreign-lambda*
+        unsigned-integer
+        (((c-pointer "ALLEGRO_SHADER") a0))
+        "return(al_get_opengl_program_object(a0));")))
+  (begin
+    (define al-set-current-opengl-context
+      (foreign-lambda*
+        void
+        (((c-pointer "ALLEGRO_DISPLAY") a0))
+        "al_set_current_opengl_context(a0);")))
+  (begin
+    (define al-get-opengl-variant
+      (foreign-lambda* integer () "return(al_get_opengl_variant());"))))
 
 ;;; END OF FILE
