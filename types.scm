@@ -29,6 +29,7 @@
 (define-foreign-record-type (keyboard "ALLEGRO_KEYBOARD"))
 (define-foreign-record-type (event-source "ALLEGRO_EVENT_SOURCE"))
 (define-foreign-record-type (font "ALLEGRO_FONT"))
+(define-foreign-record-type (shader "ALLEGRO_SHADER"))
 
 (cond-expand
  (has-allegro-audio

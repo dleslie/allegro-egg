@@ -8,6 +8,7 @@
 #endif
 
 #include <allegro5/allegro_opengl.h>
+#include <GL/glu.h>
 <#
 
 (module allegro-opengl *
@@ -17,6 +18,5 @@
          (chicken foreign)
          allegro)
 
-        (include "opengl")
-        (include "transformations")
+        (include "gen-opengl-defs")
         (include "gen-opengl"))

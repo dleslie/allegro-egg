@@ -15,8 +15,6 @@
     | grep -v "#include" \
     | sed -e "s#char const *#const char *#g" \
     | gcc -Istub -nostdinc -P -E -;
- cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
-     | grep "#define GL_";
 )\
 | sed -e "s#__[^ _]*__##g" \
 | sed -e "s#(([^)]*))##g" \
@@ -40,3 +38,17 @@
     -rename-regex "^al_(.*)$":"al:\1" \
     -default-renaming "" \
 	  -
+
+cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+    | grep "#define GL_.* 0x.*" \
+    | chicken-bind \
+          -o gen-opengl-defs.scm \
+          -export-constants \
+          -rename-regex "^gl(.*)$":"gl:\1" \
+          -rename-regex "^GL_?(.*)$":"gl:\1" \
+          -rename-regex "^ALLEGRO_(.*)$":"al:\1" \
+          -rename-regex "^AL_(.*)$":"al:\1" \
+          -rename-regex "^al_(.*)$":"al:\1" \
+          -default-renaming "" \
+	        -
+

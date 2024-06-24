@@ -62,4 +62,7 @@
         (include "utf8")
         (include "primitives")
         (include "audio")
+        (include "transformations")
+        (include "opengl")
+        (include "shader")
 	    )
