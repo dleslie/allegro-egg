@@ -2098,1777 +2098,1777 @@
         void
         (((c-pointer (struct "GLUtesselator")) a0))
         "gluEndPolygon(a0);")))
-  (define allegro-ogl-ext-list-allegro-gl-arb-imaging
+  (define al:ogl-ext-list-allegro-gl-arb-imaging
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_imaging);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-multitexture
+  (define al:ogl-ext-list-allegro-gl-arb-multitexture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_multitexture);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-transpose-matrix
+  (define al:ogl-ext-list-allegro-gl-arb-transpose-matrix
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_transpose_matrix);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-multisample
+  (define al:ogl-ext-list-allegro-gl-arb-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-add
+  (define al:ogl-ext-list-allegro-gl-arb-texture-env-add
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_env_add);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-cube-map
+  (define al:ogl-ext-list-allegro-gl-arb-texture-cube-map
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_cube_map);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression
+  (define al:ogl-ext-list-allegro-gl-arb-texture-compression
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_compression);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-border-clamp
+  (define al:ogl-ext-list-allegro-gl-arb-texture-border-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_border_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-point-parameters
+  (define al:ogl-ext-list-allegro-gl-arb-point-parameters
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_point_parameters);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-blend
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-blend
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_blend);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-combine
+  (define al:ogl-ext-list-allegro-gl-arb-texture-env-combine
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_env_combine);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-crossbar
+  (define al:ogl-ext-list-allegro-gl-arb-texture-env-crossbar
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_env_crossbar);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-env-dot3
+  (define al:ogl-ext-list-allegro-gl-arb-texture-env-dot3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_env_dot3);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-mirrored-repeat
+  (define al:ogl-ext-list-allegro-gl-arb-texture-mirrored-repeat
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_mirrored_repeat);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-depth-texture
+  (define al:ogl-ext-list-allegro-gl-arb-depth-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_depth_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shadow
+  (define al:ogl-ext-list-allegro-gl-arb-shadow
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shadow);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shadow-ambient
+  (define al:ogl-ext-list-allegro-gl-arb-shadow-ambient
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shadow_ambient);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-window-pos
+  (define al:ogl-ext-list-allegro-gl-arb-window-pos
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_window_pos);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-program
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-program
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_program);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-program
+  (define al:ogl-ext-list-allegro-gl-arb-fragment-program
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_fragment_program);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-buffer-object
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-occlusion-query
+  (define al:ogl-ext-list-allegro-gl-arb-occlusion-query
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_occlusion_query);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shader-objects
+  (define al:ogl-ext-list-allegro-gl-arb-shader-objects
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shader_objects);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-shader
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-shader
+  (define al:ogl-ext-list-allegro-gl-arb-fragment-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_fragment_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shading-language-100
+  (define al:ogl-ext-list-allegro-gl-arb-shading-language-100
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shading_language_100);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-non-power-of-two
+  (define al:ogl-ext-list-allegro-gl-arb-texture-non-power-of-two
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_non_power_of_two);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-point-sprite
+  (define al:ogl-ext-list-allegro-gl-arb-point-sprite
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_point_sprite);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-program-shadow
+  (define al:ogl-ext-list-allegro-gl-arb-fragment-program-shadow
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_fragment_program_shadow);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-draw-buffers
+  (define al:ogl-ext-list-allegro-gl-arb-draw-buffers
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_draw_buffers);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rectangle
+  (define al:ogl-ext-list-allegro-gl-arb-texture-rectangle
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_rectangle);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-color-buffer-float
+  (define al:ogl-ext-list-allegro-gl-arb-color-buffer-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_color_buffer_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-half-float-pixel
+  (define al:ogl-ext-list-allegro-gl-arb-half-float-pixel
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_half_float_pixel);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-float
+  (define al:ogl-ext-list-allegro-gl-arb-texture-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-pixel-buffer-object
+  (define al:ogl-ext-list-allegro-gl-arb-pixel-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_pixel_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-instanced-arrays
+  (define al:ogl-ext-list-allegro-gl-arb-instanced-arrays
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_instanced_arrays);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-draw-instanced
+  (define al:ogl-ext-list-allegro-gl-arb-draw-instanced
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_draw_instanced);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-geometry-shader4
+  (define al:ogl-ext-list-allegro-gl-arb-geometry-shader4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_geometry_shader4);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-buffer-object
+  (define al:ogl-ext-list-allegro-gl-arb-texture-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-depth-buffer-float
+  (define al:ogl-ext-list-allegro-gl-arb-depth-buffer-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_depth_buffer_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-framebuffer-object
+  (define al:ogl-ext-list-allegro-gl-arb-framebuffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_framebuffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-framebuffer-s-rgb
+  (define al:ogl-ext-list-allegro-gl-arb-framebuffer-s-rgb
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_framebuffer_sRGB);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-half-float-vertex
+  (define al:ogl-ext-list-allegro-gl-arb-half-float-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_half_float_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-map-buffer-range
+  (define al:ogl-ext-list-allegro-gl-arb-map-buffer-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_map_buffer_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression-rgtc
+  (define al:ogl-ext-list-allegro-gl-arb-texture-compression-rgtc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_compression_rgtc);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rg
+  (define al:ogl-ext-list-allegro-gl-arb-texture-rg
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_rg);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-array-object
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-array-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_array_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-copy-buffer
+  (define al:ogl-ext-list-allegro-gl-arb-copy-buffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_copy_buffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-compatibility
+  (define al:ogl-ext-list-allegro-gl-arb-compatibility
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_compatibility);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-uniform-buffer-object
+  (define al:ogl-ext-list-allegro-gl-arb-uniform-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_uniform_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shader-texture-lod
+  (define al:ogl-ext-list-allegro-gl-arb-shader-texture-lod
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shader_texture_lod);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-depth-clamp
+  (define al:ogl-ext-list-allegro-gl-arb-depth-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_depth_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-draw-elements-base-vertex
+  (define al:ogl-ext-list-allegro-gl-arb-draw-elements-base-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_draw_elements_base_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-fragment-coord-conventions
+  (define al:ogl-ext-list-allegro-gl-arb-fragment-coord-conventions
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_fragment_coord_conventions);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-provoking-vertex
+  (define al:ogl-ext-list-allegro-gl-arb-provoking-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_provoking_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-seamless-cube-map
+  (define al:ogl-ext-list-allegro-gl-arb-seamless-cube-map
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_seamless_cube_map);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-sync
+  (define al:ogl-ext-list-allegro-gl-arb-sync
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_sync);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-multisample
+  (define al:ogl-ext-list-allegro-gl-arb-texture-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-array-bgra
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-array-bgra
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_array_bgra);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-draw-buffers-blend
+  (define al:ogl-ext-list-allegro-gl-arb-draw-buffers-blend
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_draw_buffers_blend);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-sample-shading
+  (define al:ogl-ext-list-allegro-gl-arb-sample-shading
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_sample_shading);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-cube-map-array
+  (define al:ogl-ext-list-allegro-gl-arb-texture-cube-map-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_cube_map_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-gather
+  (define al:ogl-ext-list-allegro-gl-arb-texture-gather
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_gather);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-query-lod
+  (define al:ogl-ext-list-allegro-gl-arb-texture-query-lod
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_query_lod);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shading-language-include
+  (define al:ogl-ext-list-allegro-gl-arb-shading-language-include
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shading_language_include);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-compression-bptc
+  (define al:ogl-ext-list-allegro-gl-arb-texture-compression-bptc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_compression_bptc);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-blend-func-extended
+  (define al:ogl-ext-list-allegro-gl-arb-blend-func-extended
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_blend_func_extended);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-explicit-attrib-location
+  (define al:ogl-ext-list-allegro-gl-arb-explicit-attrib-location
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_explicit_attrib_location);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-occlusion-query2
+  (define al:ogl-ext-list-allegro-gl-arb-occlusion-query2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_occlusion_query2);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-sampler-objects
+  (define al:ogl-ext-list-allegro-gl-arb-sampler-objects
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_sampler_objects);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shader-bit-encoding
+  (define al:ogl-ext-list-allegro-gl-arb-shader-bit-encoding
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shader_bit_encoding);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-rgb10-a2ui
+  (define al:ogl-ext-list-allegro-gl-arb-texture-rgb10-a2ui
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_rgb10_a2ui);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-swizzle
+  (define al:ogl-ext-list-allegro-gl-arb-texture-swizzle
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_swizzle);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-timer-query
+  (define al:ogl-ext-list-allegro-gl-arb-timer-query
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_timer_query);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-vertex-type-2-10-10-10-rev
+  (define al:ogl-ext-list-allegro-gl-arb-vertex-type-2-10-10-10-rev
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-draw-indirect
+  (define al:ogl-ext-list-allegro-gl-arb-draw-indirect
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_draw_indirect);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-gpu-shader5
+  (define al:ogl-ext-list-allegro-gl-arb-gpu-shader5
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_gpu_shader5);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-gpu-shader-fp64
+  (define al:ogl-ext-list-allegro-gl-arb-gpu-shader-fp64
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_gpu_shader_fp64);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-shader-subroutine
+  (define al:ogl-ext-list-allegro-gl-arb-shader-subroutine
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_shader_subroutine);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-tessellation-shader
+  (define al:ogl-ext-list-allegro-gl-arb-tessellation-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_tessellation_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-texture-buffer-object-rgb32
+  (define al:ogl-ext-list-allegro-gl-arb-texture-buffer-object-rgb32
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_texture_buffer_object_rgb32);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-transform-feedback2
+  (define al:ogl-ext-list-allegro-gl-arb-transform-feedback2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_transform_feedback2);"))
-  (define allegro-ogl-ext-list-allegro-gl-arb-transform-feedback3
+  (define al:ogl-ext-list-allegro-gl-arb-transform-feedback3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ARB_transform_feedback3);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-abgr
+  (define al:ogl-ext-list-allegro-gl-ext-abgr
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_abgr);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-color
+  (define al:ogl-ext-list-allegro-gl-ext-blend-color
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_color);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-polygon-offset
+  (define al:ogl-ext-list-allegro-gl-ext-polygon-offset
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_polygon_offset);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture
+  (define al:ogl-ext-list-allegro-gl-ext-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture3d
+  (define al:ogl-ext-list-allegro-gl-ext-texture3d
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture3D);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-filter4
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-filter4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_filter4);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-subtexture
+  (define al:ogl-ext-list-allegro-gl-ext-subtexture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_subtexture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-copy-texture
+  (define al:ogl-ext-list-allegro-gl-ext-copy-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_copy_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-histogram
+  (define al:ogl-ext-list-allegro-gl-ext-histogram
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_histogram);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-convolution
+  (define al:ogl-ext-list-allegro-gl-ext-convolution
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_convolution);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgi-color-matrix
+  (define al:ogl-ext-list-allegro-gl-sgi-color-matrix
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGI_color_matrix);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgi-color-table
+  (define al:ogl-ext-list-allegro-gl-sgi-color-table
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGI_color_table);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-pixel-texture
+  (define al:ogl-ext-list-allegro-gl-sgis-pixel-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_pixel_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-pixel-texture
+  (define al:ogl-ext-list-allegro-gl-sgix-pixel-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_pixel_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture4d
+  (define al:ogl-ext-list-allegro-gl-sgis-texture4d
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture4D);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgi-texture-color-table
+  (define al:ogl-ext-list-allegro-gl-sgi-texture-color-table
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGI_texture_color_table);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-cmyka
+  (define al:ogl-ext-list-allegro-gl-ext-cmyka
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_cmyka);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-object
+  (define al:ogl-ext-list-allegro-gl-ext-texture-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-detail-texture
+  (define al:ogl-ext-list-allegro-gl-sgis-detail-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_detail_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-sharpen-texture
+  (define al:ogl-ext-list-allegro-gl-sgis-sharpen-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_sharpen_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-packed-pixels
+  (define al:ogl-ext-list-allegro-gl-ext-packed-pixels
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_packed_pixels);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-lod
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-lod
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_lod);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-multisample
+  (define al:ogl-ext-list-allegro-gl-sgis-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-rescale-normal
+  (define al:ogl-ext-list-allegro-gl-ext-rescale-normal
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_rescale_normal);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-array
+  (define al:ogl-ext-list-allegro-gl-ext-vertex-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_vertex_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-misc-attribute
+  (define al:ogl-ext-list-allegro-gl-ext-misc-attribute
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_misc_attribute);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-generate-mipmap
+  (define al:ogl-ext-list-allegro-gl-sgis-generate-mipmap
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_generate_mipmap);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-clipmap
+  (define al:ogl-ext-list-allegro-gl-sgix-clipmap
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_clipmap);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-shadow
+  (define al:ogl-ext-list-allegro-gl-sgix-shadow
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_shadow);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-edge-clamp
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-edge-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_edge_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-border-clamp
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-border-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_border_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-minmax
+  (define al:ogl-ext-list-allegro-gl-ext-blend-minmax
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_minmax);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-subtract
+  (define al:ogl-ext-list-allegro-gl-ext-blend-subtract
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_subtract);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-logic-op
+  (define al:ogl-ext-list-allegro-gl-ext-blend-logic-op
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_logic_op);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-interlace
+  (define al:ogl-ext-list-allegro-gl-sgix-interlace
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_interlace);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-select
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-select
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_select);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-sprite
+  (define al:ogl-ext-list-allegro-gl-sgix-sprite
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_sprite);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-multi-buffer
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-multi-buffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_multi_buffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-point-parameters
+  (define al:ogl-ext-list-allegro-gl-ext-point-parameters
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_point_parameters);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-instruments
+  (define al:ogl-ext-list-allegro-gl-sgix-instruments
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_instruments);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-scale-bias
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-scale-bias
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_scale_bias);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-framezoom
+  (define al:ogl-ext-list-allegro-gl-sgix-framezoom
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_framezoom);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-tag-sample-buffer
+  (define al:ogl-ext-list-allegro-gl-sgix-tag-sample-buffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_tag_sample_buffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-reference-plane
+  (define al:ogl-ext-list-allegro-gl-sgix-reference-plane
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_reference_plane);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-flush-raster
+  (define al:ogl-ext-list-allegro-gl-sgix-flush-raster
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_flush_raster);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-depth-texture
+  (define al:ogl-ext-list-allegro-gl-sgix-depth-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_depth_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-fog-function
+  (define al:ogl-ext-list-allegro-gl-sgis-fog-function
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_fog_function);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-fog-offset
+  (define al:ogl-ext-list-allegro-gl-sgix-fog-offset
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_fog_offset);"))
-  (define allegro-ogl-ext-list-allegro-gl-hp-image-transform
+  (define al:ogl-ext-list-allegro-gl-hp-image-transform
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_HP_image_transform);"))
-  (define allegro-ogl-ext-list-allegro-gl-hp-convolution-border-modes
+  (define al:ogl-ext-list-allegro-gl-hp-convolution-border-modes
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_HP_convolution_border_modes);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-add-env
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-add-env
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_add_env);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-color-subtable
+  (define al:ogl-ext-list-allegro-gl-ext-color-subtable
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_color_subtable);"))
-  (define allegro-ogl-ext-list-allegro-gl-pgi-vertex-hints
+  (define al:ogl-ext-list-allegro-gl-pgi-vertex-hints
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_PGI_vertex_hints);"))
-  (define allegro-ogl-ext-list-allegro-gl-pgi-misc-hints
+  (define al:ogl-ext-list-allegro-gl-pgi-misc-hints
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_PGI_misc_hints);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-paletted-texture
+  (define al:ogl-ext-list-allegro-gl-ext-paletted-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_paletted_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-clip-volume-hint
+  (define al:ogl-ext-list-allegro-gl-ext-clip-volume-hint
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_clip_volume_hint);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-list-priority
+  (define al:ogl-ext-list-allegro-gl-sgix-list-priority
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_list_priority);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-ir-instrument1
+  (define al:ogl-ext-list-allegro-gl-sgix-ir-instrument1
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_ir_instrument1);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-lod-bias
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-lod-bias
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_lod_bias);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-shadow-ambient
+  (define al:ogl-ext-list-allegro-gl-sgix-shadow-ambient
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_shadow_ambient);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-index-texture
+  (define al:ogl-ext-list-allegro-gl-ext-index-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_index_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-index-material
+  (define al:ogl-ext-list-allegro-gl-ext-index-material
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_index_material);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-index-func
+  (define al:ogl-ext-list-allegro-gl-ext-index-func
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_index_func);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-index-array-formats
+  (define al:ogl-ext-list-allegro-gl-ext-index-array-formats
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_index_array_formats);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-compiled-vertex-array
+  (define al:ogl-ext-list-allegro-gl-ext-compiled-vertex-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_compiled_vertex_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-cull-vertex
+  (define al:ogl-ext-list-allegro-gl-ext-cull-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_cull_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-ycrcb
+  (define al:ogl-ext-list-allegro-gl-sgix-ycrcb
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_ycrcb);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-fragment-lighting
+  (define al:ogl-ext-list-allegro-gl-ext-fragment-lighting
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_fragment_lighting);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-rasterpos-clip
+  (define al:ogl-ext-list-allegro-gl-ibm-rasterpos-clip
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_rasterpos_clip);"))
-  (define allegro-ogl-ext-list-allegro-gl-hp-texture-lighting
+  (define al:ogl-ext-list-allegro-gl-hp-texture-lighting
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_HP_texture_lighting);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-draw-range-elements
+  (define al:ogl-ext-list-allegro-gl-ext-draw-range-elements
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_draw_range_elements);"))
-  (define allegro-ogl-ext-list-allegro-gl-win-phong-shading
+  (define al:ogl-ext-list-allegro-gl-win-phong-shading
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_WIN_phong_shading);"))
-  (define allegro-ogl-ext-list-allegro-gl-win-specular-fog
+  (define al:ogl-ext-list-allegro-gl-win-specular-fog
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_WIN_specular_fog);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-light-texture
+  (define al:ogl-ext-list-allegro-gl-ext-light-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_light_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-blend-alpha-minmax
+  (define al:ogl-ext-list-allegro-gl-sgix-blend-alpha-minmax
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_blend_alpha_minmax);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-scene-marker
+  (define al:ogl-ext-list-allegro-gl-ext-scene-marker
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_scene_marker);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-pixel-texture-bits
+  (define al:ogl-ext-list-allegro-gl-sgix-pixel-texture-bits
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_pixel_texture_bits);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-bgra
+  (define al:ogl-ext-list-allegro-gl-ext-bgra
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_bgra);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-async
+  (define al:ogl-ext-list-allegro-gl-sgix-async
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_async);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-async-pixel
+  (define al:ogl-ext-list-allegro-gl-sgix-async-pixel
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_async_pixel);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-async-histogram
+  (define al:ogl-ext-list-allegro-gl-sgix-async-histogram
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_async_histogram);"))
-  (define allegro-ogl-ext-list-allegro-gl-intel-texture-scissor
+  (define al:ogl-ext-list-allegro-gl-intel-texture-scissor
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_INTEL_texture_scissor);"))
-  (define allegro-ogl-ext-list-allegro-gl-intel-parallel-arrays
+  (define al:ogl-ext-list-allegro-gl-intel-parallel-arrays
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_INTEL_parallel_arrays);"))
-  (define allegro-ogl-ext-list-allegro-gl-hp-occlusion-test
+  (define al:ogl-ext-list-allegro-gl-hp-occlusion-test
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_HP_occlusion_test);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-transform
+  (define al:ogl-ext-list-allegro-gl-ext-pixel-transform
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_pixel_transform);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-transform-color-table
+  (define al:ogl-ext-list-allegro-gl-ext-pixel-transform-color-table
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_pixel_transform_color_table);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-shared-texture-palette
+  (define al:ogl-ext-list-allegro-gl-ext-shared-texture-palette
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_shared_texture_palette);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-separate-specular-color
+  (define al:ogl-ext-list-allegro-gl-ext-separate-specular-color
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_separate_specular_color);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-secondary-color
+  (define al:ogl-ext-list-allegro-gl-ext-secondary-color
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_secondary_color);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env
+  (define al:ogl-ext-list-allegro-gl-ext-texture-env
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_env);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-perturb-normal
+  (define al:ogl-ext-list-allegro-gl-ext-texture-perturb-normal
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_perturb_normal);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-multi-draw-arrays
+  (define al:ogl-ext-list-allegro-gl-ext-multi-draw-arrays
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_multi_draw_arrays);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-fog-coord
+  (define al:ogl-ext-list-allegro-gl-ext-fog-coord
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_fog_coord);"))
-  (define allegro-ogl-ext-list-allegro-gl-rend-screen-coordinates
+  (define al:ogl-ext-list-allegro-gl-rend-screen-coordinates
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_REND_screen_coordinates);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-coordinate-frame
+  (define al:ogl-ext-list-allegro-gl-ext-coordinate-frame
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_coordinate_frame);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-combine
+  (define al:ogl-ext-list-allegro-gl-ext-texture-env-combine
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_env_combine);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-specular-vector
+  (define al:ogl-ext-list-allegro-gl-apple-specular-vector
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_specular_vector);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-transform-hint
+  (define al:ogl-ext-list-allegro-gl-apple-transform-hint
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_transform_hint);"))
-  (define allegro-ogl-ext-list-allegro-gl-sunx-constant-data
+  (define al:ogl-ext-list-allegro-gl-sunx-constant-data
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUNX_constant_data);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-global-alpha
+  (define al:ogl-ext-list-allegro-gl-sun-global-alpha
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_global_alpha);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-triangle-list
+  (define al:ogl-ext-list-allegro-gl-sun-triangle-list
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_triangle_list);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-vertex
+  (define al:ogl-ext-list-allegro-gl-sun-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-func-separate
+  (define al:ogl-ext-list-allegro-gl-ext-blend-func-separate
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_func_separate);"))
-  (define allegro-ogl-ext-list-allegro-gl-ingr-color-clamp
+  (define al:ogl-ext-list-allegro-gl-ingr-color-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_INGR_color_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-ingr-interlace-read
+  (define al:ogl-ext-list-allegro-gl-ingr-interlace-read
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_INGR_interlace_read);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-wrap
+  (define al:ogl-ext-list-allegro-gl-ext-stencil-wrap
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_stencil_wrap);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-422-pixels
+  (define al:ogl-ext-list-allegro-gl-ext-422-pixels
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_422_pixels);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texgen-reflection
+  (define al:ogl-ext-list-allegro-gl-nv-texgen-reflection
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texgen_reflection);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-range
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-convolution-border-modes
+  (define al:ogl-ext-list-allegro-gl-sun-convolution-border-modes
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_convolution_border_modes);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-add
+  (define al:ogl-ext-list-allegro-gl-ext-texture-env-add
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_env_add);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-lod-bias
+  (define al:ogl-ext-list-allegro-gl-ext-texture-lod-bias
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_lod_bias);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-filter-anisotropic
+  (define al:ogl-ext-list-allegro-gl-ext-texture-filter-anisotropic
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_filter_anisotropic);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-weighting
+  (define al:ogl-ext-list-allegro-gl-ext-vertex-weighting
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_vertex_weighting);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-light-max-exponent
+  (define al:ogl-ext-list-allegro-gl-nv-light-max-exponent
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_light_max_exponent);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-array-range
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-array-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_array_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-register-combiners
+  (define al:ogl-ext-list-allegro-gl-nv-register-combiners
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_register_combiners);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fog-distance
+  (define al:ogl-ext-list-allegro-gl-nv-fog-distance
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fog_distance);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texgen-emboss
+  (define al:ogl-ext-list-allegro-gl-nv-texgen-emboss
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texgen_emboss);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-blend-square
+  (define al:ogl-ext-list-allegro-gl-nv-blend-square
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_blend_square);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-env-combine4
+  (define al:ogl-ext-list-allegro-gl-nv-texture-env-combine4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_env_combine4);"))
-  (define allegro-ogl-ext-list-allegro-gl-mesa-resize-buffers
+  (define al:ogl-ext-list-allegro-gl-mesa-resize-buffers
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_MESA_resize_buffers);"))
-  (define allegro-ogl-ext-list-allegro-gl-mesa-window-pos
+  (define al:ogl-ext-list-allegro-gl-mesa-window-pos
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_MESA_window_pos);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-s3tc
+  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-s3tc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_compression_s3tc);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-cull-vertex
+  (define al:ogl-ext-list-allegro-gl-ibm-cull-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_cull_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-multimode-draw-arrays
+  (define al:ogl-ext-list-allegro-gl-ibm-multimode-draw-arrays
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_multimode_draw_arrays);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-vertex-array-lists
+  (define al:ogl-ext-list-allegro-gl-ibm-vertex-array-lists
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_vertex_array_lists);"))
-  (define allegro-ogl-ext-list-allegro-gl-3dfx-texture-compression-fxt1
+  (define al:ogl-ext-list-allegro-gl-3dfx-texture-compression-fxt1
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_3DFX_texture_compression_FXT1);"))
-  (define allegro-ogl-ext-list-allegro-gl-3dfx-multisample
+  (define al:ogl-ext-list-allegro-gl-3dfx-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_3DFX_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-3dfx-tbuffer
+  (define al:ogl-ext-list-allegro-gl-3dfx-tbuffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_3DFX_tbuffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-vertex-preclip
+  (define al:ogl-ext-list-allegro-gl-sgix-vertex-preclip
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_vertex_preclip);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-resample
+  (define al:ogl-ext-list-allegro-gl-sgix-resample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_resample);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgis-texture-color-mask
+  (define al:ogl-ext-list-allegro-gl-sgis-texture-color-mask
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIS_texture_color_mask);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-env-dot3
+  (define al:ogl-ext-list-allegro-gl-ext-texture-env-dot3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_env_dot3);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-texture-mirror-once
+  (define al:ogl-ext-list-allegro-gl-ati-texture-mirror-once
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_texture_mirror_once);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fence
+  (define al:ogl-ext-list-allegro-gl-nv-fence
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fence);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-static-data
+  (define al:ogl-ext-list-allegro-gl-ibm-static-data
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_static_data);"))
-  (define allegro-ogl-ext-list-allegro-gl-ibm-texture-mirrored-repeat
+  (define al:ogl-ext-list-allegro-gl-ibm-texture-mirrored-repeat
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_IBM_texture_mirrored_repeat);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-evaluators
+  (define al:ogl-ext-list-allegro-gl-nv-evaluators
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_evaluators);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-packed-depth-stencil
+  (define al:ogl-ext-list-allegro-gl-nv-packed-depth-stencil
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_packed_depth_stencil);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-register-combiners2
+  (define al:ogl-ext-list-allegro-gl-nv-register-combiners2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_register_combiners2);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-compression-vtc
+  (define al:ogl-ext-list-allegro-gl-nv-texture-compression-vtc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_compression_vtc);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-rectangle
+  (define al:ogl-ext-list-allegro-gl-nv-texture-rectangle
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_rectangle);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader
+  (define al:ogl-ext-list-allegro-gl-nv-texture-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader2
+  (define al:ogl-ext-list-allegro-gl-nv-texture-shader2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_shader2);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-array-range2
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-array-range2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_array_range2);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program);"))
-  (define allegro-ogl-ext-list-allegro-gl-sgix-texture-coordinate-clamp
+  (define al:ogl-ext-list-allegro-gl-sgix-texture-coordinate-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SGIX_texture_coordinate_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-oml-interlace
+  (define al:ogl-ext-list-allegro-gl-oml-interlace
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OML_interlace);"))
-  (define allegro-ogl-ext-list-allegro-gl-oml-subsample
+  (define al:ogl-ext-list-allegro-gl-oml-subsample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OML_subsample);"))
-  (define allegro-ogl-ext-list-allegro-gl-oml-resample
+  (define al:ogl-ext-list-allegro-gl-oml-resample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OML_resample);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-copy-depth-to-color
+  (define al:ogl-ext-list-allegro-gl-nv-copy-depth-to-color
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_copy_depth_to_color);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-envmap-bumpmap
+  (define al:ogl-ext-list-allegro-gl-ati-envmap-bumpmap
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_envmap_bumpmap);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-fragment-shader
+  (define al:ogl-ext-list-allegro-gl-ati-fragment-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_fragment_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-pn-triangles
+  (define al:ogl-ext-list-allegro-gl-ati-pn-triangles
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_pn_triangles);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-array-object
+  (define al:ogl-ext-list-allegro-gl-ati-vertex-array-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_vertex_array_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-vertex-shader
+  (define al:ogl-ext-list-allegro-gl-ext-vertex-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_vertex_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-streams
+  (define al:ogl-ext-list-allegro-gl-ati-vertex-streams
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_vertex_streams);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-element-array
+  (define al:ogl-ext-list-allegro-gl-ati-element-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_element_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-mesh-array
+  (define al:ogl-ext-list-allegro-gl-sun-mesh-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_mesh_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-sun-slice-accum
+  (define al:ogl-ext-list-allegro-gl-sun-slice-accum
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_SUN_slice_accum);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-multisample-filter-hint
+  (define al:ogl-ext-list-allegro-gl-nv-multisample-filter-hint
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_multisample_filter_hint);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-depth-clamp
+  (define al:ogl-ext-list-allegro-gl-nv-depth-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_depth_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-occlusion-query
+  (define al:ogl-ext-list-allegro-gl-nv-occlusion-query
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_occlusion_query);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-point-sprite
+  (define al:ogl-ext-list-allegro-gl-nv-point-sprite
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_point_sprite);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-shader3
+  (define al:ogl-ext-list-allegro-gl-nv-texture-shader3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_shader3);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program1-1
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program1-1
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program1_1);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-shadow-funcs
+  (define al:ogl-ext-list-allegro-gl-ext-shadow-funcs
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_shadow_funcs);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-two-side
+  (define al:ogl-ext-list-allegro-gl-ext-stencil-two-side
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_stencil_two_side);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-text-fragment-shader
+  (define al:ogl-ext-list-allegro-gl-ati-text-fragment-shader
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_text_fragment_shader);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-client-storage
+  (define al:ogl-ext-list-allegro-gl-apple-client-storage
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_client_storage);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-element-array
+  (define al:ogl-ext-list-allegro-gl-apple-element-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_element_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-fence
+  (define al:ogl-ext-list-allegro-gl-apple-fence
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_fence);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-array-object
+  (define al:ogl-ext-list-allegro-gl-apple-vertex-array-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_vertex_array_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-array-range
+  (define al:ogl-ext-list-allegro-gl-apple-vertex-array-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_vertex_array_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-ycbcr-422
+  (define al:ogl-ext-list-allegro-gl-apple-ycbcr-422
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_ycbcr_422);"))
-  (define allegro-ogl-ext-list-allegro-gl-s3-s3tc
+  (define al:ogl-ext-list-allegro-gl-s3-s3tc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_S3_s3tc);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-draw-buffers
+  (define al:ogl-ext-list-allegro-gl-ati-draw-buffers
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_draw_buffers);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-texture-env-combine3
+  (define al:ogl-ext-list-allegro-gl-ati-texture-env-combine3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_texture_env_combine3);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-texture-float
+  (define al:ogl-ext-list-allegro-gl-ati-texture-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_texture_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-float-buffer
+  (define al:ogl-ext-list-allegro-gl-nv-float-buffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_float_buffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program
+  (define al:ogl-ext-list-allegro-gl-nv-fragment-program
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fragment_program);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-half-float
+  (define al:ogl-ext-list-allegro-gl-nv-half-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_half_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-pixel-data-range
+  (define al:ogl-ext-list-allegro-gl-nv-pixel-data-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_pixel_data_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-primitive-restart
+  (define al:ogl-ext-list-allegro-gl-nv-primitive-restart
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_primitive_restart);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-expand-normal
+  (define al:ogl-ext-list-allegro-gl-nv-texture-expand-normal
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_expand_normal);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program2
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program2);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-map-object-buffer
+  (define al:ogl-ext-list-allegro-gl-ati-map-object-buffer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_map_object_buffer);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-separate-stencil
+  (define al:ogl-ext-list-allegro-gl-ati-separate-stencil
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_separate_stencil);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-vertex-attrib-array-object
+  (define al:ogl-ext-list-allegro-gl-ati-vertex-attrib-array-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_vertex_attrib_array_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-byte-coordinates
+  (define al:ogl-ext-list-allegro-gl-oes-byte-coordinates
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_byte_coordinates);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-fixed-point
+  (define al:ogl-ext-list-allegro-gl-oes-fixed-point
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_fixed_point);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-single-precision
+  (define al:ogl-ext-list-allegro-gl-oes-single-precision
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_single_precision);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-compressed-paletted-texture
+  (define al:ogl-ext-list-allegro-gl-oes-compressed-paletted-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_compressed_paletted_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-read-format
+  (define al:ogl-ext-list-allegro-gl-oes-read-format
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_read_format);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-query-matrix
+  (define al:ogl-ext-list-allegro-gl-oes-query-matrix
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_query_matrix);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-framebuffer-object
+  (define al:ogl-ext-list-allegro-gl-oes-framebuffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_framebuffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-oes-texture-npot
+  (define al:ogl-ext-list-allegro-gl-oes-texture-npot
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_OES_texture_npot);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-depth-bounds-test
+  (define al:ogl-ext-list-allegro-gl-ext-depth-bounds-test
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_depth_bounds_test);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-mirror-clamp
+  (define al:ogl-ext-list-allegro-gl-ext-texture-mirror-clamp
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_mirror_clamp);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-blend-equation-separate
+  (define al:ogl-ext-list-allegro-gl-ext-blend-equation-separate
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_blend_equation_separate);"))
-  (define allegro-ogl-ext-list-allegro-gl-mesa-pack-invert
+  (define al:ogl-ext-list-allegro-gl-mesa-pack-invert
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_MESA_pack_invert);"))
-  (define allegro-ogl-ext-list-allegro-gl-mesa-ycbcr-texture
+  (define al:ogl-ext-list-allegro-gl-mesa-ycbcr-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_MESA_ycbcr_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-pixel-buffer-object
+  (define al:ogl-ext-list-allegro-gl-ext-pixel-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_pixel_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program-option
+  (define al:ogl-ext-list-allegro-gl-nv-fragment-program-option
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fragment_program_option);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program2
+  (define al:ogl-ext-list-allegro-gl-nv-fragment-program2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fragment_program2);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program2-option
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program2-option
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program2_option);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program3
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program3
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program3);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-dxt1
+  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-dxt1
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_compression_dxt1);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-object
+  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_framebuffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-gremedy-string-marker
+  (define al:ogl-ext-list-allegro-gl-gremedy-string-marker
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_GREMEDY_string_marker);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-packed-depth-stencil
+  (define al:ogl-ext-list-allegro-gl-ext-packed-depth-stencil
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_packed_depth_stencil);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-stencil-clear-tag
+  (define al:ogl-ext-list-allegro-gl-ext-stencil-clear-tag
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_stencil_clear_tag);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-s-rgb
+  (define al:ogl-ext-list-allegro-gl-ext-texture-s-rgb
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_sRGB);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-blit
+  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-blit
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_framebuffer_blit);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-multisample
+  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_framebuffer_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-mesax-texture-stack
+  (define al:ogl-ext-list-allegro-gl-mesax-texture-stack
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_MESAX_texture_stack);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-timer-query
+  (define al:ogl-ext-list-allegro-gl-ext-timer-query
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_timer_query);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-gpu-program-parameters
+  (define al:ogl-ext-list-allegro-gl-ext-gpu-program-parameters
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_gpu_program_parameters);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-flush-buffer-range
+  (define al:ogl-ext-list-allegro-gl-apple-flush-buffer-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_flush_buffer_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-bindable-uniform
+  (define al:ogl-ext-list-allegro-gl-ext-bindable-uniform
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_bindable_uniform);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-draw-buffers2
+  (define al:ogl-ext-list-allegro-gl-ext-draw-buffers2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_draw_buffers2);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-draw-instanced
+  (define al:ogl-ext-list-allegro-gl-ext-draw-instanced
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_draw_instanced);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-framebuffer-s-rgb
+  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-s-rgb
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_framebuffer_sRGB);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-geometry-shader4
+  (define al:ogl-ext-list-allegro-gl-ext-geometry-shader4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_geometry_shader4);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-gpu-shader4
+  (define al:ogl-ext-list-allegro-gl-ext-gpu-shader4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_gpu_shader4);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-packed-float
+  (define al:ogl-ext-list-allegro-gl-ext-packed-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_packed_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-array
+  (define al:ogl-ext-list-allegro-gl-ext-texture-array
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_array);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-buffer-object
+  (define al:ogl-ext-list-allegro-gl-ext-texture-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-latc
+  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-latc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_compression_latc);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-compression-rgtc
+  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-rgtc
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_compression_rgtc);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-integer
+  (define al:ogl-ext-list-allegro-gl-ext-texture-integer
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_integer);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-shared-exponent
+  (define al:ogl-ext-list-allegro-gl-ext-texture-shared-exponent
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_shared_exponent);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-depth-buffer-float
+  (define al:ogl-ext-list-allegro-gl-nv-depth-buffer-float
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_depth_buffer_float);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-fragment-program4
+  (define al:ogl-ext-list-allegro-gl-nv-fragment-program4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_fragment_program4);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-framebuffer-multisample-coverage
+  (define al:ogl-ext-list-allegro-gl-nv-framebuffer-multisample-coverage
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_framebuffer_multisample_coverage);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-geometry-program4
+  (define al:ogl-ext-list-allegro-gl-nv-geometry-program4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_geometry_program4);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-gpu-program4
+  (define al:ogl-ext-list-allegro-gl-nv-gpu-program4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_gpu_program4);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-parameter-buffer-object
+  (define al:ogl-ext-list-allegro-gl-nv-parameter-buffer-object
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_parameter_buffer_object);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-transform-feedback
+  (define al:ogl-ext-list-allegro-gl-nv-transform-feedback
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_transform_feedback);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-program4
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-program4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_program4);"))
-  (define allegro-ogl-ext-list-allegro-gl-gremedy-frame-terminator
+  (define al:ogl-ext-list-allegro-gl-gremedy-frame-terminator
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_GREMEDY_frame_terminator);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-conditional-render
+  (define al:ogl-ext-list-allegro-gl-nv-conditional-render
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_conditional_render);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-present-video
+  (define al:ogl-ext-list-allegro-gl-nv-present-video
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_present_video);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-direct-state-access
+  (define al:ogl-ext-list-allegro-gl-ext-direct-state-access
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_direct_state_access);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-transform-feedback
+  (define al:ogl-ext-list-allegro-gl-ext-transform-feedback
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_transform_feedback);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-swizzle
+  (define al:ogl-ext-list-allegro-gl-ext-texture-swizzle
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_swizzle);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-explicit-multisample
+  (define al:ogl-ext-list-allegro-gl-nv-explicit-multisample
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_explicit_multisample);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-transform-feedback2
+  (define al:ogl-ext-list-allegro-gl-nv-transform-feedback2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_transform_feedback2);"))
-  (define allegro-ogl-ext-list-allegro-gl-ati-meminfo
+  (define al:ogl-ext-list-allegro-gl-ati-meminfo
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_ATI_meminfo);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-performance-monitor
+  (define al:ogl-ext-list-allegro-gl-amd-performance-monitor
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_performance_monitor);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-texture-texture4
+  (define al:ogl-ext-list-allegro-gl-amd-texture-texture4
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_texture_texture4);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-vertex-shader-tesselator
+  (define al:ogl-ext-list-allegro-gl-amd-vertex-shader-tesselator
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_vertex_shader_tesselator);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-provoking-vertex
+  (define al:ogl-ext-list-allegro-gl-ext-provoking-vertex
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_provoking_vertex);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-texture-snorm
+  (define al:ogl-ext-list-allegro-gl-ext-texture-snorm
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_texture_snorm);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-draw-buffers-blend
+  (define al:ogl-ext-list-allegro-gl-amd-draw-buffers-blend
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_draw_buffers_blend);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-texture-range
+  (define al:ogl-ext-list-allegro-gl-apple-texture-range
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_texture_range);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-float-pixels
+  (define al:ogl-ext-list-allegro-gl-apple-float-pixels
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_float_pixels);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-vertex-program-evaluators
+  (define al:ogl-ext-list-allegro-gl-apple-vertex-program-evaluators
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_vertex_program_evaluators);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-aux-depth-stencil
+  (define al:ogl-ext-list-allegro-gl-apple-aux-depth-stencil
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_aux_depth_stencil);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-object-purgeable
+  (define al:ogl-ext-list-allegro-gl-apple-object-purgeable
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_object_purgeable);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-row-bytes
+  (define al:ogl-ext-list-allegro-gl-apple-row-bytes
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_row_bytes);"))
-  (define allegro-ogl-ext-list-allegro-gl-apple-rgb-422
+  (define al:ogl-ext-list-allegro-gl-apple-rgb-422
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_APPLE_rgb_422);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-video-capture
+  (define al:ogl-ext-list-allegro-gl-nv-video-capture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_video_capture);"))
-  (define allegro-ogl-ext-list-allegro-gl-ext-separate-shader-objects
+  (define al:ogl-ext-list-allegro-gl-ext-separate-shader-objects
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_EXT_separate_shader_objects);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-parameter-buffer-object2
+  (define al:ogl-ext-list-allegro-gl-nv-parameter-buffer-object2
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_parameter_buffer_object2);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-shader-buffer-load
+  (define al:ogl-ext-list-allegro-gl-nv-shader-buffer-load
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_shader_buffer_load);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-vertex-buffer-unified-memory
+  (define al:ogl-ext-list-allegro-gl-nv-vertex-buffer-unified-memory
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_vertex_buffer_unified_memory);"))
-  (define allegro-ogl-ext-list-allegro-gl-nv-texture-barrier
+  (define al:ogl-ext-list-allegro-gl-nv-texture-barrier
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_NV_texture_barrier);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-shader-stencil-export
+  (define al:ogl-ext-list-allegro-gl-amd-shader-stencil-export
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_shader_stencil_export);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-seamless-cubemap-per-texture
+  (define al:ogl-ext-list-allegro-gl-amd-seamless-cubemap-per-texture
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
       "return(s->ALLEGRO_GL_AMD_seamless_cubemap_per_texture);"))
-  (define allegro-ogl-ext-list-allegro-gl-amd-conservative-depth
+  (define al:ogl-ext-list-allegro-gl-amd-conservative-depth
     (foreign-lambda*
       integer
       (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
@@ -4237,415 +4237,1185 @@
       (c-pointer (struct "ALLEGRO_OGL_EXT_API"))
       ()
       "struct ALLEGRO_OGL_EXT_API *tmp_ =  (struct ALLEGRO_OGL_EXT_API *)C_malloc(sizeof(struct ALLEGRO_OGL_EXT_API));\nreturn(tmp_);;\n"))
-  (define make-allegro-transform
-    (foreign-lambda*
-      (c-pointer (struct "ALLEGRO_TRANSFORM"))
-      ()
-      "struct ALLEGRO_TRANSFORM *tmp_ =  (struct ALLEGRO_TRANSFORM *)C_malloc(sizeof(struct ALLEGRO_TRANSFORM));\nreturn(tmp_);;\n"))
-  (begin
-    (define al:use-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
-        "al_use_transform(a0);")))
-  (begin
-    (define al:use-projection-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
-        "al_use_projection_transform(a0);")))
-  (begin
-    (define al:copy-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
-        "al_copy_transform(a0 , a1);")))
-  (begin
-    (define al:identity-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
-        "al_identity_transform(a0);")))
-  (begin
-    (define al:build-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3)
-         (float a4)
-         (float a5))
-        "al_build_transform(a0 , a1 , a2 , a3 , a4 , a5);")))
-  (begin
-    (define al:build-camera-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3)
-         (float a4)
-         (float a5)
-         (float a6)
-         (float a7)
-         (float a8)
-         (float a9))
-        "al_build_camera_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
-  (begin
-    (define al:translate-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1) (float a2))
-        "al_translate_transform(a0 , a1 , a2);")))
-  (begin
-    (define al:translate-transform-3d
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3))
-        "al_translate_transform_3d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define al:rotate-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
-        "al_rotate_transform(a0 , a1);")))
-  (begin
-    (define al:rotate-transform-3d
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3)
-         (float a4))
-        "al_rotate_transform_3d(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define al:scale-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1) (float a2))
-        "al_scale_transform(a0 , a1 , a2);")))
-  (begin
-    (define al:scale-transform-3d
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3))
-        "al_scale_transform_3d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define al:transform-coordinates
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (f32vector a1)
-         (f32vector a2))
-        "al_transform_coordinates(a0 , a1 , a2);")))
-  (begin
-    (define al:transform-coordinates-3d
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (f32vector a1)
-         (f32vector a2)
-         (f32vector a3))
-        "al_transform_coordinates_3d(a0 , a1 , a2 , a3);")))
-  (begin
-    (define al:transform-coordinates-4d
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (f32vector a1)
-         (f32vector a2)
-         (f32vector a3)
-         (f32vector a4))
-        "al_transform_coordinates_4d(a0 , a1 , a2 , a3 , a4);")))
-  (begin
-    (define al:transform-coordinates-3d-projective
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (f32vector a1)
-         (f32vector a2)
-         (f32vector a3))
-        "al_transform_coordinates_3d_projective(a0 , a1 , a2 , a3);")))
-  (begin
-    (define al:compose-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
-        "al_compose_transform(a0 , a1);")))
-  (begin
-    (define al:get-current-transform
-      (foreign-lambda*
-        (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
-        ()
-        "return(al_get_current_transform());")))
-  (begin
-    (define al:get-current-inverse-transform
-      (foreign-lambda*
-        (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
-        ()
-        "return(al_get_current_inverse_transform());")))
-  (begin
-    (define al:get-current-projection-transform
-      (foreign-lambda*
-        (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
-        ()
-        "return(al_get_current_projection_transform());")))
-  (begin
-    (define al:invert-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
-        "al_invert_transform(a0);")))
-  (begin
-    (define al:transpose-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
-        "al_transpose_transform(a0);")))
-  (begin
-    (define al:check-inverse
-      (foreign-lambda*
-        integer
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
-        "return(al_check_inverse(a0 , a1));")))
-  (begin
-    (define al:orthographic-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3)
-         (float a4)
-         (float a5)
-         (float a6))
-        "al_orthographic_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define al:perspective-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
-         (float a1)
-         (float a2)
-         (float a3)
-         (float a4)
-         (float a5)
-         (float a6))
-        "al_perspective_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
-  (begin
-    (define al:horizontal-shear-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
-        "al_horizontal_shear_transform(a0 , a1);")))
-  (begin
-    (define al:vertical-shear-transform
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
-        "al_vertical_shear_transform(a0 , a1);")))
-  (define-constant allegro-vertex-shader 1)
-  (define allegro-vertex-shader allegro-vertex-shader)
-  (define-constant allegro-pixel-shader 2)
-  (define allegro-pixel-shader allegro-pixel-shader)
-  (define-constant allegro-shader-auto 0)
-  (define allegro-shader-auto allegro-shader-auto)
-  (define-constant allegro-shader-glsl 1)
-  (define allegro-shader-glsl allegro-shader-glsl)
-  (define-constant allegro-shader-hlsl 2)
-  (define allegro-shader-hlsl allegro-shader-hlsl)
-  (define-constant allegro-shader-auto-minimal 3)
-  (define allegro-shader-auto-minimal allegro-shader-auto-minimal)
-  (define-constant allegro-shader-glsl-minimal 4)
-  (define allegro-shader-glsl-minimal allegro-shader-glsl-minimal)
-  (define-constant allegro-shader-hlsl-minimal 5)
-  (define allegro-shader-hlsl-minimal allegro-shader-hlsl-minimal)
-  (define-constant allegro-shader-hlsl-sm-3-0 6)
-  (define allegro-shader-hlsl-sm-3-0 allegro-shader-hlsl-sm-3-0)
-  (begin
-    (define al:create-shader
-      (foreign-lambda*
-        (c-pointer (struct "ALLEGRO_SHADER"))
-        ((integer a0))
-        "return(al_create_shader(a0));")))
-  (begin
-    (define al:attach-shader-source
-      (foreign-lambda*
-        bool
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0) (integer a1) (c-string a2))
-        "return(al_attach_shader_source(a0 , a1 , a2));")))
-  (begin
-    (define al:attach-shader-source-file
-      (foreign-lambda*
-        bool
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0) (integer a1) (c-string a2))
-        "return(al_attach_shader_source_file(a0 , a1 , a2));")))
-  (begin
-    (define al:build-shader
-      (foreign-lambda*
-        bool
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "return(al_build_shader(a0));")))
-  (begin
-    (define al:get-shader-log
-      (foreign-lambda*
-        c-string
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "return(al_get_shader_log(a0));")))
-  (begin
-    (define al:get-shader-platform
-      (foreign-lambda*
-        integer
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "return(al_get_shader_platform(a0));")))
-  (begin
-    (define al:use-shader
-      (foreign-lambda*
-        bool
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "return(al_use_shader(a0));")))
-  (begin
-    (define al:get-current-shader
-      (foreign-lambda*
-        (c-pointer (struct "ALLEGRO_SHADER"))
-        ()
-        "return(al_get_current_shader());")))
-  (begin
-    (define al:destroy-shader
-      (foreign-lambda*
-        void
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "al_destroy_shader(a0);")))
-  (begin
-    (define al:set-shader-sampler
-      (foreign-lambda*
-        bool
-        ((c-string a0) ((c-pointer "ALLEGRO_BITMAP") a1) (integer a2))
-        "return(al_set_shader_sampler(a0 , a1 , a2));")))
-  (begin
-    (define al:set-shader-matrix
-      (foreign-lambda*
-        bool
-        ((c-string a0) ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
-        "return(al_set_shader_matrix(a0 , a1));")))
-  (begin
-    (define al:set-shader-int
-      (foreign-lambda*
-        bool
-        ((c-string a0) (integer a1))
-        "return(al_set_shader_int(a0 , a1));")))
-  (begin
-    (define al:set-shader-float
-      (foreign-lambda*
-        bool
-        ((c-string a0) (float a1))
-        "return(al_set_shader_float(a0 , a1));")))
-  (begin
-    (define al:set-shader-int-vector
-      (foreign-lambda*
-        bool
-        ((c-string a0) (integer a1) (s32vector a2) (integer a3))
-        "return(al_set_shader_int_vector(a0 , a1 , a2 , a3));")))
-  (begin
-    (define al:set-shader-float-vector
-      (foreign-lambda*
-        bool
-        ((c-string a0) (integer a1) (f32vector a2) (integer a3))
-        "return(al_set_shader_float_vector(a0 , a1 , a2 , a3));")))
-  (begin
-    (define al:set-shader-bool
-      (foreign-lambda*
-        bool
-        ((c-string a0) (bool a1))
-        "return(al_set_shader_bool(a0 , a1));")))
-  (begin
-    (define al:get-default-shader-source
-      (foreign-lambda*
-        (c-pointer (c-pointer (const char)))
-        ((integer a0) (integer a1))
-        "return(al_get_default_shader_source(a0 , a1));")))
-  (define-constant allegro-desktop-opengl 0)
-  (define allegro-desktop-opengl allegro-desktop-opengl)
-  (define-constant allegro-opengl-es 1)
-  (define allegro-opengl-es allegro-opengl-es)
-  (begin
-    (define al:get-opengl-version
-      (foreign-lambda*
-        unsigned-integer32
-        ()
-        "return(al_get_opengl_version());")))
-  (begin
-    (define al:have-opengl-extension
-      (foreign-lambda*
-        bool
-        ((c-string a0))
-        "return(al_have_opengl_extension(a0));")))
-  (begin
-    (define al:get-opengl-proc-address
-      (foreign-lambda*
-        (c-pointer void)
-        ((c-string a0))
-        "return(al_get_opengl_proc_address(a0));")))
-  (begin
-    (define al:get-opengl-extension-list
-      (foreign-lambda*
-        (c-pointer (struct "ALLEGRO_OGL_EXT_LIST"))
-        ()
-        "return(al_get_opengl_extension_list());")))
-  (begin
-    (define al:get-opengl-texture
-      (foreign-lambda*
-        unsigned-integer
-        (((c-pointer "ALLEGRO_BITMAP") a0))
-        "return(al_get_opengl_texture(a0));")))
-  (begin
-    (define al:remove-opengl-fbo
-      (foreign-lambda*
-        void
-        (((c-pointer "ALLEGRO_BITMAP") a0))
-        "al_remove_opengl_fbo(a0);")))
-  (begin
-    (define al:get-opengl-fbo
-      (foreign-lambda*
-        unsigned-integer
-        (((c-pointer "ALLEGRO_BITMAP") a0))
-        "return(al_get_opengl_fbo(a0));")))
-  (begin
-    (define al:get-opengl-texture-size
-      (foreign-lambda*
-        bool
-        (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
-        "return(al_get_opengl_texture_size(a0 , a1 , a2));")))
-  (begin
-    (define al:get-opengl-texture-position
-      (foreign-lambda*
-        void
-        (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
-        "al_get_opengl_texture_position(a0 , a1 , a2);")))
-  (begin
-    (define al:get-opengl-program-object
-      (foreign-lambda*
-        unsigned-integer
-        (((c-pointer (struct "ALLEGRO_SHADER")) a0))
-        "return(al_get_opengl_program_object(a0));")))
-  (begin
-    (define al:set-current-opengl-context
-      (foreign-lambda*
-        void
-        (((c-pointer "ALLEGRO_DISPLAY") a0))
-        "al_set_current_opengl_context(a0);")))
-  (begin
-    (define al:get-opengl-variant
-      (foreign-lambda* integer () "return(al_get_opengl_variant());"))))
+  (define-constant gl:version-1-1 1)
+  (define gl:version-1-1 gl:version-1-1)
+  (define-constant gl:accum 256)
+  (define gl:accum gl:accum)
+  (define-constant gl:load 257)
+  (define gl:load gl:load)
+  (define-constant gl:return 258)
+  (define gl:return gl:return)
+  (define-constant gl:mult 259)
+  (define gl:mult gl:mult)
+  (define-constant gl:add 260)
+  (define gl:add gl:add)
+  (define-constant gl:never 512)
+  (define gl:never gl:never)
+  (define-constant gl:less 513)
+  (define gl:less gl:less)
+  (define-constant gl:equal 514)
+  (define gl:equal gl:equal)
+  (define-constant gl:lequal 515)
+  (define gl:lequal gl:lequal)
+  (define-constant gl:greater 516)
+  (define gl:greater gl:greater)
+  (define-constant gl:notequal 517)
+  (define gl:notequal gl:notequal)
+  (define-constant gl:gequal 518)
+  (define gl:gequal gl:gequal)
+  (define-constant gl:always 519)
+  (define gl:always gl:always)
+  (define-constant gl:current-bit 1)
+  (define gl:current-bit gl:current-bit)
+  (define-constant gl:point-bit 2)
+  (define gl:point-bit gl:point-bit)
+  (define-constant gl:line-bit 4)
+  (define gl:line-bit gl:line-bit)
+  (define-constant gl:polygon-bit 8)
+  (define gl:polygon-bit gl:polygon-bit)
+  (define-constant gl:polygon-stipple-bit 16)
+  (define gl:polygon-stipple-bit gl:polygon-stipple-bit)
+  (define-constant gl:pixel-mode-bit 32)
+  (define gl:pixel-mode-bit gl:pixel-mode-bit)
+  (define-constant gl:lighting-bit 64)
+  (define gl:lighting-bit gl:lighting-bit)
+  (define-constant gl:fog-bit 128)
+  (define gl:fog-bit gl:fog-bit)
+  (define-constant gl:depth-buffer-bit 256)
+  (define gl:depth-buffer-bit gl:depth-buffer-bit)
+  (define-constant gl:accum-buffer-bit 512)
+  (define gl:accum-buffer-bit gl:accum-buffer-bit)
+  (define-constant gl:stencil-buffer-bit 1024)
+  (define gl:stencil-buffer-bit gl:stencil-buffer-bit)
+  (define-constant gl:viewport-bit 2048)
+  (define gl:viewport-bit gl:viewport-bit)
+  (define-constant gl:transform-bit 4096)
+  (define gl:transform-bit gl:transform-bit)
+  (define-constant gl:enable-bit 8192)
+  (define gl:enable-bit gl:enable-bit)
+  (define-constant gl:color-buffer-bit 16384)
+  (define gl:color-buffer-bit gl:color-buffer-bit)
+  (define-constant gl:hint-bit 32768)
+  (define gl:hint-bit gl:hint-bit)
+  (define-constant gl:eval-bit 65536)
+  (define gl:eval-bit gl:eval-bit)
+  (define-constant gl:list-bit 131072)
+  (define gl:list-bit gl:list-bit)
+  (define-constant gl:texture-bit 262144)
+  (define gl:texture-bit gl:texture-bit)
+  (define-constant gl:scissor-bit 524288)
+  (define gl:scissor-bit gl:scissor-bit)
+  (define-constant gl:all-attrib-bits 1048575)
+  (define gl:all-attrib-bits gl:all-attrib-bits)
+  (define-constant gl:points 0)
+  (define gl:points gl:points)
+  (define-constant gl:lines 1)
+  (define gl:lines gl:lines)
+  (define-constant gl:line-loop 2)
+  (define gl:line-loop gl:line-loop)
+  (define-constant gl:line-strip 3)
+  (define gl:line-strip gl:line-strip)
+  (define-constant gl:triangles 4)
+  (define gl:triangles gl:triangles)
+  (define-constant gl:triangle-strip 5)
+  (define gl:triangle-strip gl:triangle-strip)
+  (define-constant gl:triangle-fan 6)
+  (define gl:triangle-fan gl:triangle-fan)
+  (define-constant gl:quads 7)
+  (define gl:quads gl:quads)
+  (define-constant gl:quad-strip 8)
+  (define gl:quad-strip gl:quad-strip)
+  (define-constant gl:polygon 9)
+  (define gl:polygon gl:polygon)
+  (define-constant gl:zero 0)
+  (define gl:zero gl:zero)
+  (define-constant gl:one 1)
+  (define gl:one gl:one)
+  (define-constant gl:src-color 768)
+  (define gl:src-color gl:src-color)
+  (define-constant gl:one-minus-src-color 769)
+  (define gl:one-minus-src-color gl:one-minus-src-color)
+  (define-constant gl:src-alpha 770)
+  (define gl:src-alpha gl:src-alpha)
+  (define-constant gl:one-minus-src-alpha 771)
+  (define gl:one-minus-src-alpha gl:one-minus-src-alpha)
+  (define-constant gl:dst-alpha 772)
+  (define gl:dst-alpha gl:dst-alpha)
+  (define-constant gl:one-minus-dst-alpha 773)
+  (define gl:one-minus-dst-alpha gl:one-minus-dst-alpha)
+  (define-constant gl:dst-color 774)
+  (define gl:dst-color gl:dst-color)
+  (define-constant gl:one-minus-dst-color 775)
+  (define gl:one-minus-dst-color gl:one-minus-dst-color)
+  (define-constant gl:src-alpha-saturate 776)
+  (define gl:src-alpha-saturate gl:src-alpha-saturate)
+  (define-constant gl:true 1)
+  (define gl:true gl:true)
+  (define-constant gl:false 0)
+  (define gl:false gl:false)
+  (define-constant gl:clip-plane0 12288)
+  (define gl:clip-plane0 gl:clip-plane0)
+  (define-constant gl:clip-plane1 12289)
+  (define gl:clip-plane1 gl:clip-plane1)
+  (define-constant gl:clip-plane2 12290)
+  (define gl:clip-plane2 gl:clip-plane2)
+  (define-constant gl:clip-plane3 12291)
+  (define gl:clip-plane3 gl:clip-plane3)
+  (define-constant gl:clip-plane4 12292)
+  (define gl:clip-plane4 gl:clip-plane4)
+  (define-constant gl:clip-plane5 12293)
+  (define gl:clip-plane5 gl:clip-plane5)
+  (define-constant gl:byte 5120)
+  (define gl:byte gl:byte)
+  (define-constant gl:unsigned-byte 5121)
+  (define gl:unsigned-byte gl:unsigned-byte)
+  (define-constant gl:short 5122)
+  (define gl:short gl:short)
+  (define-constant gl:unsigned-short 5123)
+  (define gl:unsigned-short gl:unsigned-short)
+  (define-constant gl:int 5124)
+  (define gl:int gl:int)
+  (define-constant gl:unsigned-int 5125)
+  (define gl:unsigned-int gl:unsigned-int)
+  (define-constant gl:float 5126)
+  (define gl:float gl:float)
+  (define-constant gl:2-bytes 5127)
+  (define gl:2-bytes gl:2-bytes)
+  (define-constant gl:3-bytes 5128)
+  (define gl:3-bytes gl:3-bytes)
+  (define-constant gl:4-bytes 5129)
+  (define gl:4-bytes gl:4-bytes)
+  (define-constant gl:double 5130)
+  (define gl:double gl:double)
+  (define-constant gl:none 0)
+  (define gl:none gl:none)
+  (define-constant gl:front-left 1024)
+  (define gl:front-left gl:front-left)
+  (define-constant gl:front-right 1025)
+  (define gl:front-right gl:front-right)
+  (define-constant gl:back-left 1026)
+  (define gl:back-left gl:back-left)
+  (define-constant gl:back-right 1027)
+  (define gl:back-right gl:back-right)
+  (define-constant gl:front 1028)
+  (define gl:front gl:front)
+  (define-constant gl:back 1029)
+  (define gl:back gl:back)
+  (define-constant gl:left 1030)
+  (define gl:left gl:left)
+  (define-constant gl:right 1031)
+  (define gl:right gl:right)
+  (define-constant gl:front-and-back 1032)
+  (define gl:front-and-back gl:front-and-back)
+  (define-constant gl:aux0 1033)
+  (define gl:aux0 gl:aux0)
+  (define-constant gl:aux1 1034)
+  (define gl:aux1 gl:aux1)
+  (define-constant gl:aux2 1035)
+  (define gl:aux2 gl:aux2)
+  (define-constant gl:aux3 1036)
+  (define gl:aux3 gl:aux3)
+  (define-constant gl:no-error 0)
+  (define gl:no-error gl:no-error)
+  (define-constant gl:invalid-enum 1280)
+  (define gl:invalid-enum gl:invalid-enum)
+  (define-constant gl:invalid-value 1281)
+  (define gl:invalid-value gl:invalid-value)
+  (define-constant gl:invalid-operation 1282)
+  (define gl:invalid-operation gl:invalid-operation)
+  (define-constant gl:stack-overflow 1283)
+  (define gl:stack-overflow gl:stack-overflow)
+  (define-constant gl:stack-underflow 1284)
+  (define gl:stack-underflow gl:stack-underflow)
+  (define-constant gl:out-of-memory 1285)
+  (define gl:out-of-memory gl:out-of-memory)
+  (define-constant gl:2d 1536)
+  (define gl:2d gl:2d)
+  (define-constant gl:3d 1537)
+  (define gl:3d gl:3d)
+  (define-constant gl:3d-color 1538)
+  (define gl:3d-color gl:3d-color)
+  (define-constant gl:3d-color-texture 1539)
+  (define gl:3d-color-texture gl:3d-color-texture)
+  (define-constant gl:4d-color-texture 1540)
+  (define gl:4d-color-texture gl:4d-color-texture)
+  (define-constant gl:pass-through-token 1792)
+  (define gl:pass-through-token gl:pass-through-token)
+  (define-constant gl:point-token 1793)
+  (define gl:point-token gl:point-token)
+  (define-constant gl:line-token 1794)
+  (define gl:line-token gl:line-token)
+  (define-constant gl:polygon-token 1795)
+  (define gl:polygon-token gl:polygon-token)
+  (define-constant gl:bitmap-token 1796)
+  (define gl:bitmap-token gl:bitmap-token)
+  (define-constant gl:draw-pixel-token 1797)
+  (define gl:draw-pixel-token gl:draw-pixel-token)
+  (define-constant gl:copy-pixel-token 1798)
+  (define gl:copy-pixel-token gl:copy-pixel-token)
+  (define-constant gl:line-reset-token 1799)
+  (define gl:line-reset-token gl:line-reset-token)
+  (define-constant gl:exp 2048)
+  (define gl:exp gl:exp)
+  (define-constant gl:exp2 2049)
+  (define gl:exp2 gl:exp2)
+  (define-constant gl:cw 2304)
+  (define gl:cw gl:cw)
+  (define-constant gl:ccw 2305)
+  (define gl:ccw gl:ccw)
+  (define-constant gl:coeff 2560)
+  (define gl:coeff gl:coeff)
+  (define-constant gl:order 2561)
+  (define gl:order gl:order)
+  (define-constant gl:domain 2562)
+  (define gl:domain gl:domain)
+  (define-constant gl:current-color 2816)
+  (define gl:current-color gl:current-color)
+  (define-constant gl:current-index 2817)
+  (define gl:current-index gl:current-index)
+  (define-constant gl:current-normal 2818)
+  (define gl:current-normal gl:current-normal)
+  (define-constant gl:current-texture-coords 2819)
+  (define gl:current-texture-coords gl:current-texture-coords)
+  (define-constant gl:current-raster-color 2820)
+  (define gl:current-raster-color gl:current-raster-color)
+  (define-constant gl:current-raster-index 2821)
+  (define gl:current-raster-index gl:current-raster-index)
+  (define-constant gl:current-raster-texture-coords 2822)
+  (define gl:current-raster-texture-coords gl:current-raster-texture-coords)
+  (define-constant gl:current-raster-position 2823)
+  (define gl:current-raster-position gl:current-raster-position)
+  (define-constant gl:current-raster-position-valid 2824)
+  (define gl:current-raster-position-valid gl:current-raster-position-valid)
+  (define-constant gl:current-raster-distance 2825)
+  (define gl:current-raster-distance gl:current-raster-distance)
+  (define-constant gl:point-smooth 2832)
+  (define gl:point-smooth gl:point-smooth)
+  (define-constant gl:point-size 2833)
+  (define gl:point-size gl:point-size)
+  (define-constant gl:point-size-range 2834)
+  (define gl:point-size-range gl:point-size-range)
+  (define-constant gl:point-size-granularity 2835)
+  (define gl:point-size-granularity gl:point-size-granularity)
+  (define-constant gl:line-smooth 2848)
+  (define gl:line-smooth gl:line-smooth)
+  (define-constant gl:line-width 2849)
+  (define gl:line-width gl:line-width)
+  (define-constant gl:line-width-range 2850)
+  (define gl:line-width-range gl:line-width-range)
+  (define-constant gl:line-width-granularity 2851)
+  (define gl:line-width-granularity gl:line-width-granularity)
+  (define-constant gl:line-stipple 2852)
+  (define gl:line-stipple gl:line-stipple)
+  (define-constant gl:line-stipple-pattern 2853)
+  (define gl:line-stipple-pattern gl:line-stipple-pattern)
+  (define-constant gl:line-stipple-repeat 2854)
+  (define gl:line-stipple-repeat gl:line-stipple-repeat)
+  (define-constant gl:list-mode 2864)
+  (define gl:list-mode gl:list-mode)
+  (define-constant gl:max-list-nesting 2865)
+  (define gl:max-list-nesting gl:max-list-nesting)
+  (define-constant gl:list-base 2866)
+  (define gl:list-base gl:list-base)
+  (define-constant gl:list-index 2867)
+  (define gl:list-index gl:list-index)
+  (define-constant gl:polygon-mode 2880)
+  (define gl:polygon-mode gl:polygon-mode)
+  (define-constant gl:polygon-smooth 2881)
+  (define gl:polygon-smooth gl:polygon-smooth)
+  (define-constant gl:polygon-stipple 2882)
+  (define gl:polygon-stipple gl:polygon-stipple)
+  (define-constant gl:edge-flag 2883)
+  (define gl:edge-flag gl:edge-flag)
+  (define-constant gl:cull-face 2884)
+  (define gl:cull-face gl:cull-face)
+  (define-constant gl:cull-face-mode 2885)
+  (define gl:cull-face-mode gl:cull-face-mode)
+  (define-constant gl:front-face 2886)
+  (define gl:front-face gl:front-face)
+  (define-constant gl:lighting 2896)
+  (define gl:lighting gl:lighting)
+  (define-constant gl:light-model-local-viewer 2897)
+  (define gl:light-model-local-viewer gl:light-model-local-viewer)
+  (define-constant gl:light-model-two-side 2898)
+  (define gl:light-model-two-side gl:light-model-two-side)
+  (define-constant gl:light-model-ambient 2899)
+  (define gl:light-model-ambient gl:light-model-ambient)
+  (define-constant gl:shade-model 2900)
+  (define gl:shade-model gl:shade-model)
+  (define-constant gl:color-material-face 2901)
+  (define gl:color-material-face gl:color-material-face)
+  (define-constant gl:color-material-parameter 2902)
+  (define gl:color-material-parameter gl:color-material-parameter)
+  (define-constant gl:color-material 2903)
+  (define gl:color-material gl:color-material)
+  (define-constant gl:fog 2912)
+  (define gl:fog gl:fog)
+  (define-constant gl:fog-index 2913)
+  (define gl:fog-index gl:fog-index)
+  (define-constant gl:fog-density 2914)
+  (define gl:fog-density gl:fog-density)
+  (define-constant gl:fog-start 2915)
+  (define gl:fog-start gl:fog-start)
+  (define-constant gl:fog-end 2916)
+  (define gl:fog-end gl:fog-end)
+  (define-constant gl:fog-mode 2917)
+  (define gl:fog-mode gl:fog-mode)
+  (define-constant gl:fog-color 2918)
+  (define gl:fog-color gl:fog-color)
+  (define-constant gl:depth-range 2928)
+  (define gl:depth-range gl:depth-range)
+  (define-constant gl:depth-test 2929)
+  (define gl:depth-test gl:depth-test)
+  (define-constant gl:depth-writemask 2930)
+  (define gl:depth-writemask gl:depth-writemask)
+  (define-constant gl:depth-clear-value 2931)
+  (define gl:depth-clear-value gl:depth-clear-value)
+  (define-constant gl:depth-func 2932)
+  (define gl:depth-func gl:depth-func)
+  (define-constant gl:accum-clear-value 2944)
+  (define gl:accum-clear-value gl:accum-clear-value)
+  (define-constant gl:stencil-test 2960)
+  (define gl:stencil-test gl:stencil-test)
+  (define-constant gl:stencil-clear-value 2961)
+  (define gl:stencil-clear-value gl:stencil-clear-value)
+  (define-constant gl:stencil-func 2962)
+  (define gl:stencil-func gl:stencil-func)
+  (define-constant gl:stencil-value-mask 2963)
+  (define gl:stencil-value-mask gl:stencil-value-mask)
+  (define-constant gl:stencil-fail 2964)
+  (define gl:stencil-fail gl:stencil-fail)
+  (define-constant gl:stencil-pass-depth-fail 2965)
+  (define gl:stencil-pass-depth-fail gl:stencil-pass-depth-fail)
+  (define-constant gl:stencil-pass-depth-pass 2966)
+  (define gl:stencil-pass-depth-pass gl:stencil-pass-depth-pass)
+  (define-constant gl:stencil-ref 2967)
+  (define gl:stencil-ref gl:stencil-ref)
+  (define-constant gl:stencil-writemask 2968)
+  (define gl:stencil-writemask gl:stencil-writemask)
+  (define-constant gl:matrix-mode 2976)
+  (define gl:matrix-mode gl:matrix-mode)
+  (define-constant gl:normalize 2977)
+  (define gl:normalize gl:normalize)
+  (define-constant gl:viewport 2978)
+  (define gl:viewport gl:viewport)
+  (define-constant gl:modelview-stack-depth 2979)
+  (define gl:modelview-stack-depth gl:modelview-stack-depth)
+  (define-constant gl:projection-stack-depth 2980)
+  (define gl:projection-stack-depth gl:projection-stack-depth)
+  (define-constant gl:texture-stack-depth 2981)
+  (define gl:texture-stack-depth gl:texture-stack-depth)
+  (define-constant gl:modelview-matrix 2982)
+  (define gl:modelview-matrix gl:modelview-matrix)
+  (define-constant gl:projection-matrix 2983)
+  (define gl:projection-matrix gl:projection-matrix)
+  (define-constant gl:texture-matrix 2984)
+  (define gl:texture-matrix gl:texture-matrix)
+  (define-constant gl:attrib-stack-depth 2992)
+  (define gl:attrib-stack-depth gl:attrib-stack-depth)
+  (define-constant gl:client-attrib-stack-depth 2993)
+  (define gl:client-attrib-stack-depth gl:client-attrib-stack-depth)
+  (define-constant gl:alpha-test 3008)
+  (define gl:alpha-test gl:alpha-test)
+  (define-constant gl:alpha-test-func 3009)
+  (define gl:alpha-test-func gl:alpha-test-func)
+  (define-constant gl:alpha-test-ref 3010)
+  (define gl:alpha-test-ref gl:alpha-test-ref)
+  (define-constant gl:dither 3024)
+  (define gl:dither gl:dither)
+  (define-constant gl:blend-dst 3040)
+  (define gl:blend-dst gl:blend-dst)
+  (define-constant gl:blend-src 3041)
+  (define gl:blend-src gl:blend-src)
+  (define-constant gl:blend 3042)
+  (define gl:blend gl:blend)
+  (define-constant gl:logic-op-mode 3056)
+  (define gl:logic-op-mode gl:logic-op-mode)
+  (define-constant gl:index-logic-op 3057)
+  (define gl:index-logic-op gl:index-logic-op)
+  (define-constant gl:color-logic-op 3058)
+  (define gl:color-logic-op gl:color-logic-op)
+  (define-constant gl:aux-buffers 3072)
+  (define gl:aux-buffers gl:aux-buffers)
+  (define-constant gl:draw-buffer 3073)
+  (define gl:draw-buffer gl:draw-buffer)
+  (define-constant gl:read-buffer 3074)
+  (define gl:read-buffer gl:read-buffer)
+  (define-constant gl:scissor-box 3088)
+  (define gl:scissor-box gl:scissor-box)
+  (define-constant gl:scissor-test 3089)
+  (define gl:scissor-test gl:scissor-test)
+  (define-constant gl:index-clear-value 3104)
+  (define gl:index-clear-value gl:index-clear-value)
+  (define-constant gl:index-writemask 3105)
+  (define gl:index-writemask gl:index-writemask)
+  (define-constant gl:color-clear-value 3106)
+  (define gl:color-clear-value gl:color-clear-value)
+  (define-constant gl:color-writemask 3107)
+  (define gl:color-writemask gl:color-writemask)
+  (define-constant gl:index-mode 3120)
+  (define gl:index-mode gl:index-mode)
+  (define-constant gl:rgba-mode 3121)
+  (define gl:rgba-mode gl:rgba-mode)
+  (define-constant gl:doublebuffer 3122)
+  (define gl:doublebuffer gl:doublebuffer)
+  (define-constant gl:stereo 3123)
+  (define gl:stereo gl:stereo)
+  (define-constant gl:render-mode 3136)
+  (define gl:render-mode gl:render-mode)
+  (define-constant gl:perspective-correction-hint 3152)
+  (define gl:perspective-correction-hint gl:perspective-correction-hint)
+  (define-constant gl:point-smooth-hint 3153)
+  (define gl:point-smooth-hint gl:point-smooth-hint)
+  (define-constant gl:line-smooth-hint 3154)
+  (define gl:line-smooth-hint gl:line-smooth-hint)
+  (define-constant gl:polygon-smooth-hint 3155)
+  (define gl:polygon-smooth-hint gl:polygon-smooth-hint)
+  (define-constant gl:fog-hint 3156)
+  (define gl:fog-hint gl:fog-hint)
+  (define-constant gl:texture-gen-s 3168)
+  (define gl:texture-gen-s gl:texture-gen-s)
+  (define-constant gl:texture-gen-t 3169)
+  (define gl:texture-gen-t gl:texture-gen-t)
+  (define-constant gl:texture-gen-r 3170)
+  (define gl:texture-gen-r gl:texture-gen-r)
+  (define-constant gl:texture-gen-q 3171)
+  (define gl:texture-gen-q gl:texture-gen-q)
+  (define-constant gl:pixel-map-i-to-i 3184)
+  (define gl:pixel-map-i-to-i gl:pixel-map-i-to-i)
+  (define-constant gl:pixel-map-s-to-s 3185)
+  (define gl:pixel-map-s-to-s gl:pixel-map-s-to-s)
+  (define-constant gl:pixel-map-i-to-r 3186)
+  (define gl:pixel-map-i-to-r gl:pixel-map-i-to-r)
+  (define-constant gl:pixel-map-i-to-g 3187)
+  (define gl:pixel-map-i-to-g gl:pixel-map-i-to-g)
+  (define-constant gl:pixel-map-i-to-b 3188)
+  (define gl:pixel-map-i-to-b gl:pixel-map-i-to-b)
+  (define-constant gl:pixel-map-i-to-a 3189)
+  (define gl:pixel-map-i-to-a gl:pixel-map-i-to-a)
+  (define-constant gl:pixel-map-r-to-r 3190)
+  (define gl:pixel-map-r-to-r gl:pixel-map-r-to-r)
+  (define-constant gl:pixel-map-g-to-g 3191)
+  (define gl:pixel-map-g-to-g gl:pixel-map-g-to-g)
+  (define-constant gl:pixel-map-b-to-b 3192)
+  (define gl:pixel-map-b-to-b gl:pixel-map-b-to-b)
+  (define-constant gl:pixel-map-a-to-a 3193)
+  (define gl:pixel-map-a-to-a gl:pixel-map-a-to-a)
+  (define-constant gl:pixel-map-i-to-i-size 3248)
+  (define gl:pixel-map-i-to-i-size gl:pixel-map-i-to-i-size)
+  (define-constant gl:pixel-map-s-to-s-size 3249)
+  (define gl:pixel-map-s-to-s-size gl:pixel-map-s-to-s-size)
+  (define-constant gl:pixel-map-i-to-r-size 3250)
+  (define gl:pixel-map-i-to-r-size gl:pixel-map-i-to-r-size)
+  (define-constant gl:pixel-map-i-to-g-size 3251)
+  (define gl:pixel-map-i-to-g-size gl:pixel-map-i-to-g-size)
+  (define-constant gl:pixel-map-i-to-b-size 3252)
+  (define gl:pixel-map-i-to-b-size gl:pixel-map-i-to-b-size)
+  (define-constant gl:pixel-map-i-to-a-size 3253)
+  (define gl:pixel-map-i-to-a-size gl:pixel-map-i-to-a-size)
+  (define-constant gl:pixel-map-r-to-r-size 3254)
+  (define gl:pixel-map-r-to-r-size gl:pixel-map-r-to-r-size)
+  (define-constant gl:pixel-map-g-to-g-size 3255)
+  (define gl:pixel-map-g-to-g-size gl:pixel-map-g-to-g-size)
+  (define-constant gl:pixel-map-b-to-b-size 3256)
+  (define gl:pixel-map-b-to-b-size gl:pixel-map-b-to-b-size)
+  (define-constant gl:pixel-map-a-to-a-size 3257)
+  (define gl:pixel-map-a-to-a-size gl:pixel-map-a-to-a-size)
+  (define-constant gl:unpack-swap-bytes 3312)
+  (define gl:unpack-swap-bytes gl:unpack-swap-bytes)
+  (define-constant gl:unpack-lsb-first 3313)
+  (define gl:unpack-lsb-first gl:unpack-lsb-first)
+  (define-constant gl:unpack-row-length 3314)
+  (define gl:unpack-row-length gl:unpack-row-length)
+  (define-constant gl:unpack-skip-rows 3315)
+  (define gl:unpack-skip-rows gl:unpack-skip-rows)
+  (define-constant gl:unpack-skip-pixels 3316)
+  (define gl:unpack-skip-pixels gl:unpack-skip-pixels)
+  (define-constant gl:unpack-alignment 3317)
+  (define gl:unpack-alignment gl:unpack-alignment)
+  (define-constant gl:pack-swap-bytes 3328)
+  (define gl:pack-swap-bytes gl:pack-swap-bytes)
+  (define-constant gl:pack-lsb-first 3329)
+  (define gl:pack-lsb-first gl:pack-lsb-first)
+  (define-constant gl:pack-row-length 3330)
+  (define gl:pack-row-length gl:pack-row-length)
+  (define-constant gl:pack-skip-rows 3331)
+  (define gl:pack-skip-rows gl:pack-skip-rows)
+  (define-constant gl:pack-skip-pixels 3332)
+  (define gl:pack-skip-pixels gl:pack-skip-pixels)
+  (define-constant gl:pack-alignment 3333)
+  (define gl:pack-alignment gl:pack-alignment)
+  (define-constant gl:map-color 3344)
+  (define gl:map-color gl:map-color)
+  (define-constant gl:map-stencil 3345)
+  (define gl:map-stencil gl:map-stencil)
+  (define-constant gl:index-shift 3346)
+  (define gl:index-shift gl:index-shift)
+  (define-constant gl:index-offset 3347)
+  (define gl:index-offset gl:index-offset)
+  (define-constant gl:red-scale 3348)
+  (define gl:red-scale gl:red-scale)
+  (define-constant gl:red-bias 3349)
+  (define gl:red-bias gl:red-bias)
+  (define-constant gl:zoom-x 3350)
+  (define gl:zoom-x gl:zoom-x)
+  (define-constant gl:zoom-y 3351)
+  (define gl:zoom-y gl:zoom-y)
+  (define-constant gl:green-scale 3352)
+  (define gl:green-scale gl:green-scale)
+  (define-constant gl:green-bias 3353)
+  (define gl:green-bias gl:green-bias)
+  (define-constant gl:blue-scale 3354)
+  (define gl:blue-scale gl:blue-scale)
+  (define-constant gl:blue-bias 3355)
+  (define gl:blue-bias gl:blue-bias)
+  (define-constant gl:alpha-scale 3356)
+  (define gl:alpha-scale gl:alpha-scale)
+  (define-constant gl:alpha-bias 3357)
+  (define gl:alpha-bias gl:alpha-bias)
+  (define-constant gl:depth-scale 3358)
+  (define gl:depth-scale gl:depth-scale)
+  (define-constant gl:depth-bias 3359)
+  (define gl:depth-bias gl:depth-bias)
+  (define-constant gl:max-eval-order 3376)
+  (define gl:max-eval-order gl:max-eval-order)
+  (define-constant gl:max-lights 3377)
+  (define gl:max-lights gl:max-lights)
+  (define-constant gl:max-clip-planes 3378)
+  (define gl:max-clip-planes gl:max-clip-planes)
+  (define-constant gl:max-texture-size 3379)
+  (define gl:max-texture-size gl:max-texture-size)
+  (define-constant gl:max-pixel-map-table 3380)
+  (define gl:max-pixel-map-table gl:max-pixel-map-table)
+  (define-constant gl:max-attrib-stack-depth 3381)
+  (define gl:max-attrib-stack-depth gl:max-attrib-stack-depth)
+  (define-constant gl:max-modelview-stack-depth 3382)
+  (define gl:max-modelview-stack-depth gl:max-modelview-stack-depth)
+  (define-constant gl:max-name-stack-depth 3383)
+  (define gl:max-name-stack-depth gl:max-name-stack-depth)
+  (define-constant gl:max-projection-stack-depth 3384)
+  (define gl:max-projection-stack-depth gl:max-projection-stack-depth)
+  (define-constant gl:max-texture-stack-depth 3385)
+  (define gl:max-texture-stack-depth gl:max-texture-stack-depth)
+  (define-constant gl:max-viewport-dims 3386)
+  (define gl:max-viewport-dims gl:max-viewport-dims)
+  (define-constant gl:max-client-attrib-stack-depth 3387)
+  (define gl:max-client-attrib-stack-depth gl:max-client-attrib-stack-depth)
+  (define-constant gl:subpixel-bits 3408)
+  (define gl:subpixel-bits gl:subpixel-bits)
+  (define-constant gl:index-bits 3409)
+  (define gl:index-bits gl:index-bits)
+  (define-constant gl:red-bits 3410)
+  (define gl:red-bits gl:red-bits)
+  (define-constant gl:green-bits 3411)
+  (define gl:green-bits gl:green-bits)
+  (define-constant gl:blue-bits 3412)
+  (define gl:blue-bits gl:blue-bits)
+  (define-constant gl:alpha-bits 3413)
+  (define gl:alpha-bits gl:alpha-bits)
+  (define-constant gl:depth-bits 3414)
+  (define gl:depth-bits gl:depth-bits)
+  (define-constant gl:stencil-bits 3415)
+  (define gl:stencil-bits gl:stencil-bits)
+  (define-constant gl:accum-red-bits 3416)
+  (define gl:accum-red-bits gl:accum-red-bits)
+  (define-constant gl:accum-green-bits 3417)
+  (define gl:accum-green-bits gl:accum-green-bits)
+  (define-constant gl:accum-blue-bits 3418)
+  (define gl:accum-blue-bits gl:accum-blue-bits)
+  (define-constant gl:accum-alpha-bits 3419)
+  (define gl:accum-alpha-bits gl:accum-alpha-bits)
+  (define-constant gl:name-stack-depth 3440)
+  (define gl:name-stack-depth gl:name-stack-depth)
+  (define-constant gl:auto-normal 3456)
+  (define gl:auto-normal gl:auto-normal)
+  (define-constant gl:map1-color-4 3472)
+  (define gl:map1-color-4 gl:map1-color-4)
+  (define-constant gl:map1-index 3473)
+  (define gl:map1-index gl:map1-index)
+  (define-constant gl:map1-normal 3474)
+  (define gl:map1-normal gl:map1-normal)
+  (define-constant gl:map1-texture-coord-1 3475)
+  (define gl:map1-texture-coord-1 gl:map1-texture-coord-1)
+  (define-constant gl:map1-texture-coord-2 3476)
+  (define gl:map1-texture-coord-2 gl:map1-texture-coord-2)
+  (define-constant gl:map1-texture-coord-3 3477)
+  (define gl:map1-texture-coord-3 gl:map1-texture-coord-3)
+  (define-constant gl:map1-texture-coord-4 3478)
+  (define gl:map1-texture-coord-4 gl:map1-texture-coord-4)
+  (define-constant gl:map1-vertex-3 3479)
+  (define gl:map1-vertex-3 gl:map1-vertex-3)
+  (define-constant gl:map1-vertex-4 3480)
+  (define gl:map1-vertex-4 gl:map1-vertex-4)
+  (define-constant gl:map2-color-4 3504)
+  (define gl:map2-color-4 gl:map2-color-4)
+  (define-constant gl:map2-index 3505)
+  (define gl:map2-index gl:map2-index)
+  (define-constant gl:map2-normal 3506)
+  (define gl:map2-normal gl:map2-normal)
+  (define-constant gl:map2-texture-coord-1 3507)
+  (define gl:map2-texture-coord-1 gl:map2-texture-coord-1)
+  (define-constant gl:map2-texture-coord-2 3508)
+  (define gl:map2-texture-coord-2 gl:map2-texture-coord-2)
+  (define-constant gl:map2-texture-coord-3 3509)
+  (define gl:map2-texture-coord-3 gl:map2-texture-coord-3)
+  (define-constant gl:map2-texture-coord-4 3510)
+  (define gl:map2-texture-coord-4 gl:map2-texture-coord-4)
+  (define-constant gl:map2-vertex-3 3511)
+  (define gl:map2-vertex-3 gl:map2-vertex-3)
+  (define-constant gl:map2-vertex-4 3512)
+  (define gl:map2-vertex-4 gl:map2-vertex-4)
+  (define-constant gl:map1-grid-domain 3536)
+  (define gl:map1-grid-domain gl:map1-grid-domain)
+  (define-constant gl:map1-grid-segments 3537)
+  (define gl:map1-grid-segments gl:map1-grid-segments)
+  (define-constant gl:map2-grid-domain 3538)
+  (define gl:map2-grid-domain gl:map2-grid-domain)
+  (define-constant gl:map2-grid-segments 3539)
+  (define gl:map2-grid-segments gl:map2-grid-segments)
+  (define-constant gl:texture-1d 3552)
+  (define gl:texture-1d gl:texture-1d)
+  (define-constant gl:texture-2d 3553)
+  (define gl:texture-2d gl:texture-2d)
+  (define-constant gl:feedback-buffer-pointer 3568)
+  (define gl:feedback-buffer-pointer gl:feedback-buffer-pointer)
+  (define-constant gl:feedback-buffer-size 3569)
+  (define gl:feedback-buffer-size gl:feedback-buffer-size)
+  (define-constant gl:feedback-buffer-type 3570)
+  (define gl:feedback-buffer-type gl:feedback-buffer-type)
+  (define-constant gl:selection-buffer-pointer 3571)
+  (define gl:selection-buffer-pointer gl:selection-buffer-pointer)
+  (define-constant gl:selection-buffer-size 3572)
+  (define gl:selection-buffer-size gl:selection-buffer-size)
+  (define-constant gl:texture-width 4096)
+  (define gl:texture-width gl:texture-width)
+  (define-constant gl:texture-height 4097)
+  (define gl:texture-height gl:texture-height)
+  (define-constant gl:texture-internal-format 4099)
+  (define gl:texture-internal-format gl:texture-internal-format)
+  (define-constant gl:texture-border-color 4100)
+  (define gl:texture-border-color gl:texture-border-color)
+  (define-constant gl:texture-border 4101)
+  (define gl:texture-border gl:texture-border)
+  (define-constant gl:dont-care 4352)
+  (define gl:dont-care gl:dont-care)
+  (define-constant gl:fastest 4353)
+  (define gl:fastest gl:fastest)
+  (define-constant gl:nicest 4354)
+  (define gl:nicest gl:nicest)
+  (define-constant gl:light0 16384)
+  (define gl:light0 gl:light0)
+  (define-constant gl:light1 16385)
+  (define gl:light1 gl:light1)
+  (define-constant gl:light2 16386)
+  (define gl:light2 gl:light2)
+  (define-constant gl:light3 16387)
+  (define gl:light3 gl:light3)
+  (define-constant gl:light4 16388)
+  (define gl:light4 gl:light4)
+  (define-constant gl:light5 16389)
+  (define gl:light5 gl:light5)
+  (define-constant gl:light6 16390)
+  (define gl:light6 gl:light6)
+  (define-constant gl:light7 16391)
+  (define gl:light7 gl:light7)
+  (define-constant gl:ambient 4608)
+  (define gl:ambient gl:ambient)
+  (define-constant gl:diffuse 4609)
+  (define gl:diffuse gl:diffuse)
+  (define-constant gl:specular 4610)
+  (define gl:specular gl:specular)
+  (define-constant gl:position 4611)
+  (define gl:position gl:position)
+  (define-constant gl:spot-direction 4612)
+  (define gl:spot-direction gl:spot-direction)
+  (define-constant gl:spot-exponent 4613)
+  (define gl:spot-exponent gl:spot-exponent)
+  (define-constant gl:spot-cutoff 4614)
+  (define gl:spot-cutoff gl:spot-cutoff)
+  (define-constant gl:constant-attenuation 4615)
+  (define gl:constant-attenuation gl:constant-attenuation)
+  (define-constant gl:linear-attenuation 4616)
+  (define gl:linear-attenuation gl:linear-attenuation)
+  (define-constant gl:quadratic-attenuation 4617)
+  (define gl:quadratic-attenuation gl:quadratic-attenuation)
+  (define-constant gl:compile 4864)
+  (define gl:compile gl:compile)
+  (define-constant gl:compile-and-execute 4865)
+  (define gl:compile-and-execute gl:compile-and-execute)
+  (define-constant gl:clear 5376)
+  (define gl:clear gl:clear)
+  (define-constant gl:and 5377)
+  (define gl:and gl:and)
+  (define-constant gl:and-reverse 5378)
+  (define gl:and-reverse gl:and-reverse)
+  (define-constant gl:copy 5379)
+  (define gl:copy gl:copy)
+  (define-constant gl:and-inverted 5380)
+  (define gl:and-inverted gl:and-inverted)
+  (define-constant gl:noop 5381)
+  (define gl:noop gl:noop)
+  (define-constant gl:xor 5382)
+  (define gl:xor gl:xor)
+  (define-constant gl:or 5383)
+  (define gl:or gl:or)
+  (define-constant gl:nor 5384)
+  (define gl:nor gl:nor)
+  (define-constant gl:equiv 5385)
+  (define gl:equiv gl:equiv)
+  (define-constant gl:invert 5386)
+  (define gl:invert gl:invert)
+  (define-constant gl:or-reverse 5387)
+  (define gl:or-reverse gl:or-reverse)
+  (define-constant gl:copy-inverted 5388)
+  (define gl:copy-inverted gl:copy-inverted)
+  (define-constant gl:or-inverted 5389)
+  (define gl:or-inverted gl:or-inverted)
+  (define-constant gl:nand 5390)
+  (define gl:nand gl:nand)
+  (define-constant gl:set 5391)
+  (define gl:set gl:set)
+  (define-constant gl:emission 5632)
+  (define gl:emission gl:emission)
+  (define-constant gl:shininess 5633)
+  (define gl:shininess gl:shininess)
+  (define-constant gl:ambient-and-diffuse 5634)
+  (define gl:ambient-and-diffuse gl:ambient-and-diffuse)
+  (define-constant gl:color-indexes 5635)
+  (define gl:color-indexes gl:color-indexes)
+  (define-constant gl:modelview 5888)
+  (define gl:modelview gl:modelview)
+  (define-constant gl:projection 5889)
+  (define gl:projection gl:projection)
+  (define-constant gl:texture 5890)
+  (define gl:texture gl:texture)
+  (define-constant gl:color 6144)
+  (define gl:color gl:color)
+  (define-constant gl:depth 6145)
+  (define gl:depth gl:depth)
+  (define-constant gl:stencil 6146)
+  (define gl:stencil gl:stencil)
+  (define-constant gl:color-index 6400)
+  (define gl:color-index gl:color-index)
+  (define-constant gl:stencil-index 6401)
+  (define gl:stencil-index gl:stencil-index)
+  (define-constant gl:depth-component 6402)
+  (define gl:depth-component gl:depth-component)
+  (define-constant gl:red 6403)
+  (define gl:red gl:red)
+  (define-constant gl:green 6404)
+  (define gl:green gl:green)
+  (define-constant gl:blue 6405)
+  (define gl:blue gl:blue)
+  (define-constant gl:alpha 6406)
+  (define gl:alpha gl:alpha)
+  (define-constant gl:rgb 6407)
+  (define gl:rgb gl:rgb)
+  (define-constant gl:rgba 6408)
+  (define gl:rgba gl:rgba)
+  (define-constant gl:luminance 6409)
+  (define gl:luminance gl:luminance)
+  (define-constant gl:luminance-alpha 6410)
+  (define gl:luminance-alpha gl:luminance-alpha)
+  (define-constant gl:bitmap 6656)
+  (define gl:bitmap gl:bitmap)
+  (define-constant gl:point 6912)
+  (define gl:point gl:point)
+  (define-constant gl:line 6913)
+  (define gl:line gl:line)
+  (define-constant gl:fill 6914)
+  (define gl:fill gl:fill)
+  (define-constant gl:render 7168)
+  (define gl:render gl:render)
+  (define-constant gl:feedback 7169)
+  (define gl:feedback gl:feedback)
+  (define-constant gl:select 7170)
+  (define gl:select gl:select)
+  (define-constant gl:flat 7424)
+  (define gl:flat gl:flat)
+  (define-constant gl:smooth 7425)
+  (define gl:smooth gl:smooth)
+  (define-constant gl:keep 7680)
+  (define gl:keep gl:keep)
+  (define-constant gl:replace 7681)
+  (define gl:replace gl:replace)
+  (define-constant gl:incr 7682)
+  (define gl:incr gl:incr)
+  (define-constant gl:decr 7683)
+  (define gl:decr gl:decr)
+  (define-constant gl:vendor 7936)
+  (define gl:vendor gl:vendor)
+  (define-constant gl:renderer 7937)
+  (define gl:renderer gl:renderer)
+  (define-constant gl:version 7938)
+  (define gl:version gl:version)
+  (define-constant gl:extensions 7939)
+  (define gl:extensions gl:extensions)
+  (define-constant gl:s 8192)
+  (define gl:s gl:s)
+  (define-constant gl:t 8193)
+  (define gl:t gl:t)
+  (define-constant gl:r 8194)
+  (define gl:r gl:r)
+  (define-constant gl:q 8195)
+  (define gl:q gl:q)
+  (define-constant gl:modulate 8448)
+  (define gl:modulate gl:modulate)
+  (define-constant gl:decal 8449)
+  (define gl:decal gl:decal)
+  (define-constant gl:texture-env-mode 8704)
+  (define gl:texture-env-mode gl:texture-env-mode)
+  (define-constant gl:texture-env-color 8705)
+  (define gl:texture-env-color gl:texture-env-color)
+  (define-constant gl:texture-env 8960)
+  (define gl:texture-env gl:texture-env)
+  (define-constant gl:eye-linear 9216)
+  (define gl:eye-linear gl:eye-linear)
+  (define-constant gl:object-linear 9217)
+  (define gl:object-linear gl:object-linear)
+  (define-constant gl:sphere-map 9218)
+  (define gl:sphere-map gl:sphere-map)
+  (define-constant gl:texture-gen-mode 9472)
+  (define gl:texture-gen-mode gl:texture-gen-mode)
+  (define-constant gl:object-plane 9473)
+  (define gl:object-plane gl:object-plane)
+  (define-constant gl:eye-plane 9474)
+  (define gl:eye-plane gl:eye-plane)
+  (define-constant gl:nearest 9728)
+  (define gl:nearest gl:nearest)
+  (define-constant gl:linear 9729)
+  (define gl:linear gl:linear)
+  (define-constant gl:nearest-mipmap-nearest 9984)
+  (define gl:nearest-mipmap-nearest gl:nearest-mipmap-nearest)
+  (define-constant gl:linear-mipmap-nearest 9985)
+  (define gl:linear-mipmap-nearest gl:linear-mipmap-nearest)
+  (define-constant gl:nearest-mipmap-linear 9986)
+  (define gl:nearest-mipmap-linear gl:nearest-mipmap-linear)
+  (define-constant gl:linear-mipmap-linear 9987)
+  (define gl:linear-mipmap-linear gl:linear-mipmap-linear)
+  (define-constant gl:texture-mag-filter 10240)
+  (define gl:texture-mag-filter gl:texture-mag-filter)
+  (define-constant gl:texture-min-filter 10241)
+  (define gl:texture-min-filter gl:texture-min-filter)
+  (define-constant gl:texture-wrap-s 10242)
+  (define gl:texture-wrap-s gl:texture-wrap-s)
+  (define-constant gl:texture-wrap-t 10243)
+  (define gl:texture-wrap-t gl:texture-wrap-t)
+  (define-constant gl:clamp 10496)
+  (define gl:clamp gl:clamp)
+  (define-constant gl:repeat 10497)
+  (define gl:repeat gl:repeat)
+  (define-constant gl:client-pixel-store-bit 1)
+  (define gl:client-pixel-store-bit gl:client-pixel-store-bit)
+  (define-constant gl:client-vertex-array-bit 2)
+  (define gl:client-vertex-array-bit gl:client-vertex-array-bit)
+  (define-constant gl:client-all-attrib-bits 4294967295)
+  (define gl:client-all-attrib-bits gl:client-all-attrib-bits)
+  (define-constant gl:polygon-offset-factor 32824)
+  (define gl:polygon-offset-factor gl:polygon-offset-factor)
+  (define-constant gl:polygon-offset-units 10752)
+  (define gl:polygon-offset-units gl:polygon-offset-units)
+  (define-constant gl:polygon-offset-point 10753)
+  (define gl:polygon-offset-point gl:polygon-offset-point)
+  (define-constant gl:polygon-offset-line 10754)
+  (define gl:polygon-offset-line gl:polygon-offset-line)
+  (define-constant gl:polygon-offset-fill 32823)
+  (define gl:polygon-offset-fill gl:polygon-offset-fill)
+  (define-constant gl:alpha4 32827)
+  (define gl:alpha4 gl:alpha4)
+  (define-constant gl:alpha8 32828)
+  (define gl:alpha8 gl:alpha8)
+  (define-constant gl:alpha12 32829)
+  (define gl:alpha12 gl:alpha12)
+  (define-constant gl:alpha16 32830)
+  (define gl:alpha16 gl:alpha16)
+  (define-constant gl:luminance4 32831)
+  (define gl:luminance4 gl:luminance4)
+  (define-constant gl:luminance8 32832)
+  (define gl:luminance8 gl:luminance8)
+  (define-constant gl:luminance12 32833)
+  (define gl:luminance12 gl:luminance12)
+  (define-constant gl:luminance16 32834)
+  (define gl:luminance16 gl:luminance16)
+  (define-constant gl:luminance4-alpha4 32835)
+  (define gl:luminance4-alpha4 gl:luminance4-alpha4)
+  (define-constant gl:luminance6-alpha2 32836)
+  (define gl:luminance6-alpha2 gl:luminance6-alpha2)
+  (define-constant gl:luminance8-alpha8 32837)
+  (define gl:luminance8-alpha8 gl:luminance8-alpha8)
+  (define-constant gl:luminance12-alpha4 32838)
+  (define gl:luminance12-alpha4 gl:luminance12-alpha4)
+  (define-constant gl:luminance12-alpha12 32839)
+  (define gl:luminance12-alpha12 gl:luminance12-alpha12)
+  (define-constant gl:luminance16-alpha16 32840)
+  (define gl:luminance16-alpha16 gl:luminance16-alpha16)
+  (define-constant gl:intensity 32841)
+  (define gl:intensity gl:intensity)
+  (define-constant gl:intensity4 32842)
+  (define gl:intensity4 gl:intensity4)
+  (define-constant gl:intensity8 32843)
+  (define gl:intensity8 gl:intensity8)
+  (define-constant gl:intensity12 32844)
+  (define gl:intensity12 gl:intensity12)
+  (define-constant gl:intensity16 32845)
+  (define gl:intensity16 gl:intensity16)
+  (define-constant gl:r3-g3-b2 10768)
+  (define gl:r3-g3-b2 gl:r3-g3-b2)
+  (define-constant gl:rgb4 32847)
+  (define gl:rgb4 gl:rgb4)
+  (define-constant gl:rgb5 32848)
+  (define gl:rgb5 gl:rgb5)
+  (define-constant gl:rgb8 32849)
+  (define gl:rgb8 gl:rgb8)
+  (define-constant gl:rgb10 32850)
+  (define gl:rgb10 gl:rgb10)
+  (define-constant gl:rgb12 32851)
+  (define gl:rgb12 gl:rgb12)
+  (define-constant gl:rgb16 32852)
+  (define gl:rgb16 gl:rgb16)
+  (define-constant gl:rgba2 32853)
+  (define gl:rgba2 gl:rgba2)
+  (define-constant gl:rgba4 32854)
+  (define gl:rgba4 gl:rgba4)
+  (define-constant gl:rgb5-a1 32855)
+  (define gl:rgb5-a1 gl:rgb5-a1)
+  (define-constant gl:rgba8 32856)
+  (define gl:rgba8 gl:rgba8)
+  (define-constant gl:rgb10-a2 32857)
+  (define gl:rgb10-a2 gl:rgb10-a2)
+  (define-constant gl:rgba12 32858)
+  (define gl:rgba12 gl:rgba12)
+  (define-constant gl:rgba16 32859)
+  (define gl:rgba16 gl:rgba16)
+  (define-constant gl:texture-red-size 32860)
+  (define gl:texture-red-size gl:texture-red-size)
+  (define-constant gl:texture-green-size 32861)
+  (define gl:texture-green-size gl:texture-green-size)
+  (define-constant gl:texture-blue-size 32862)
+  (define gl:texture-blue-size gl:texture-blue-size)
+  (define-constant gl:texture-alpha-size 32863)
+  (define gl:texture-alpha-size gl:texture-alpha-size)
+  (define-constant gl:texture-luminance-size 32864)
+  (define gl:texture-luminance-size gl:texture-luminance-size)
+  (define-constant gl:texture-intensity-size 32865)
+  (define gl:texture-intensity-size gl:texture-intensity-size)
+  (define-constant gl:proxy-texture-1d 32867)
+  (define gl:proxy-texture-1d gl:proxy-texture-1d)
+  (define-constant gl:proxy-texture-2d 32868)
+  (define gl:proxy-texture-2d gl:proxy-texture-2d)
+  (define-constant gl:texture-priority 32870)
+  (define gl:texture-priority gl:texture-priority)
+  (define-constant gl:texture-resident 32871)
+  (define gl:texture-resident gl:texture-resident)
+  (define-constant gl:texture-binding-1d 32872)
+  (define gl:texture-binding-1d gl:texture-binding-1d)
+  (define-constant gl:texture-binding-2d 32873)
+  (define gl:texture-binding-2d gl:texture-binding-2d)
+  (define-constant gl:vertex-array 32884)
+  (define gl:vertex-array gl:vertex-array)
+  (define-constant gl:normal-array 32885)
+  (define gl:normal-array gl:normal-array)
+  (define-constant gl:color-array 32886)
+  (define gl:color-array gl:color-array)
+  (define-constant gl:index-array 32887)
+  (define gl:index-array gl:index-array)
+  (define-constant gl:texture-coord-array 32888)
+  (define gl:texture-coord-array gl:texture-coord-array)
+  (define-constant gl:edge-flag-array 32889)
+  (define gl:edge-flag-array gl:edge-flag-array)
+  (define-constant gl:vertex-array-size 32890)
+  (define gl:vertex-array-size gl:vertex-array-size)
+  (define-constant gl:vertex-array-type 32891)
+  (define gl:vertex-array-type gl:vertex-array-type)
+  (define-constant gl:vertex-array-stride 32892)
+  (define gl:vertex-array-stride gl:vertex-array-stride)
+  (define-constant gl:normal-array-type 32894)
+  (define gl:normal-array-type gl:normal-array-type)
+  (define-constant gl:normal-array-stride 32895)
+  (define gl:normal-array-stride gl:normal-array-stride)
+  (define-constant gl:color-array-size 32897)
+  (define gl:color-array-size gl:color-array-size)
+  (define-constant gl:color-array-type 32898)
+  (define gl:color-array-type gl:color-array-type)
+  (define-constant gl:color-array-stride 32899)
+  (define gl:color-array-stride gl:color-array-stride)
+  (define-constant gl:index-array-type 32901)
+  (define gl:index-array-type gl:index-array-type)
+  (define-constant gl:index-array-stride 32902)
+  (define gl:index-array-stride gl:index-array-stride)
+  (define-constant gl:texture-coord-array-size 32904)
+  (define gl:texture-coord-array-size gl:texture-coord-array-size)
+  (define-constant gl:texture-coord-array-type 32905)
+  (define gl:texture-coord-array-type gl:texture-coord-array-type)
+  (define-constant gl:texture-coord-array-stride 32906)
+  (define gl:texture-coord-array-stride gl:texture-coord-array-stride)
+  (define-constant gl:edge-flag-array-stride 32908)
+  (define gl:edge-flag-array-stride gl:edge-flag-array-stride)
+  (define-constant gl:vertex-array-pointer 32910)
+  (define gl:vertex-array-pointer gl:vertex-array-pointer)
+  (define-constant gl:normal-array-pointer 32911)
+  (define gl:normal-array-pointer gl:normal-array-pointer)
+  (define-constant gl:color-array-pointer 32912)
+  (define gl:color-array-pointer gl:color-array-pointer)
+  (define-constant gl:index-array-pointer 32913)
+  (define gl:index-array-pointer gl:index-array-pointer)
+  (define-constant gl:texture-coord-array-pointer 32914)
+  (define gl:texture-coord-array-pointer gl:texture-coord-array-pointer)
+  (define-constant gl:edge-flag-array-pointer 32915)
+  (define gl:edge-flag-array-pointer gl:edge-flag-array-pointer)
+  (define-constant gl:v2f 10784)
+  (define gl:v2f gl:v2f)
+  (define-constant gl:v3f 10785)
+  (define gl:v3f gl:v3f)
+  (define-constant gl:c4ub-v2f 10786)
+  (define gl:c4ub-v2f gl:c4ub-v2f)
+  (define-constant gl:c4ub-v3f 10787)
+  (define gl:c4ub-v3f gl:c4ub-v3f)
+  (define-constant gl:c3f-v3f 10788)
+  (define gl:c3f-v3f gl:c3f-v3f)
+  (define-constant gl:n3f-v3f 10789)
+  (define gl:n3f-v3f gl:n3f-v3f)
+  (define-constant gl:c4f-n3f-v3f 10790)
+  (define gl:c4f-n3f-v3f gl:c4f-n3f-v3f)
+  (define-constant gl:t2f-v3f 10791)
+  (define gl:t2f-v3f gl:t2f-v3f)
+  (define-constant gl:t4f-v4f 10792)
+  (define gl:t4f-v4f gl:t4f-v4f)
+  (define-constant gl:t2f-c4ub-v3f 10793)
+  (define gl:t2f-c4ub-v3f gl:t2f-c4ub-v3f)
+  (define-constant gl:t2f-c3f-v3f 10794)
+  (define gl:t2f-c3f-v3f gl:t2f-c3f-v3f)
+  (define-constant gl:t2f-n3f-v3f 10795)
+  (define gl:t2f-n3f-v3f gl:t2f-n3f-v3f)
+  (define-constant gl:t2f-c4f-n3f-v3f 10796)
+  (define gl:t2f-c4f-n3f-v3f gl:t2f-c4f-n3f-v3f)
+  (define-constant gl:t4f-c4f-n3f-v4f 10797)
+  (define gl:t4f-c4f-n3f-v4f gl:t4f-c4f-n3f-v4f)
+  (define-constant gl:ext-vertex-array 1)
+  (define gl:ext-vertex-array gl:ext-vertex-array)
+  (define-constant gl:ext-bgra 1)
+  (define gl:ext-bgra gl:ext-bgra)
+  (define-constant gl:ext-paletted-texture 1)
+  (define gl:ext-paletted-texture gl:ext-paletted-texture)
+  (define-constant gl:win-swap-hint 1)
+  (define gl:win-swap-hint gl:win-swap-hint)
+  (define-constant gl:win-draw-range-elements 1)
+  (define gl:win-draw-range-elements gl:win-draw-range-elements)
+  (define-constant gl:vertex-array-ext 32884)
+  (define gl:vertex-array-ext gl:vertex-array-ext)
+  (define-constant gl:normal-array-ext 32885)
+  (define gl:normal-array-ext gl:normal-array-ext)
+  (define-constant gl:color-array-ext 32886)
+  (define gl:color-array-ext gl:color-array-ext)
+  (define-constant gl:index-array-ext 32887)
+  (define gl:index-array-ext gl:index-array-ext)
+  (define-constant gl:texture-coord-array-ext 32888)
+  (define gl:texture-coord-array-ext gl:texture-coord-array-ext)
+  (define-constant gl:edge-flag-array-ext 32889)
+  (define gl:edge-flag-array-ext gl:edge-flag-array-ext)
+  (define-constant gl:vertex-array-size-ext 32890)
+  (define gl:vertex-array-size-ext gl:vertex-array-size-ext)
+  (define-constant gl:vertex-array-type-ext 32891)
+  (define gl:vertex-array-type-ext gl:vertex-array-type-ext)
+  (define-constant gl:vertex-array-stride-ext 32892)
+  (define gl:vertex-array-stride-ext gl:vertex-array-stride-ext)
+  (define-constant gl:vertex-array-count-ext 32893)
+  (define gl:vertex-array-count-ext gl:vertex-array-count-ext)
+  (define-constant gl:normal-array-type-ext 32894)
+  (define gl:normal-array-type-ext gl:normal-array-type-ext)
+  (define-constant gl:normal-array-stride-ext 32895)
+  (define gl:normal-array-stride-ext gl:normal-array-stride-ext)
+  (define-constant gl:normal-array-count-ext 32896)
+  (define gl:normal-array-count-ext gl:normal-array-count-ext)
+  (define-constant gl:color-array-size-ext 32897)
+  (define gl:color-array-size-ext gl:color-array-size-ext)
+  (define-constant gl:color-array-type-ext 32898)
+  (define gl:color-array-type-ext gl:color-array-type-ext)
+  (define-constant gl:color-array-stride-ext 32899)
+  (define gl:color-array-stride-ext gl:color-array-stride-ext)
+  (define-constant gl:color-array-count-ext 32900)
+  (define gl:color-array-count-ext gl:color-array-count-ext)
+  (define-constant gl:index-array-type-ext 32901)
+  (define gl:index-array-type-ext gl:index-array-type-ext)
+  (define-constant gl:index-array-stride-ext 32902)
+  (define gl:index-array-stride-ext gl:index-array-stride-ext)
+  (define-constant gl:index-array-count-ext 32903)
+  (define gl:index-array-count-ext gl:index-array-count-ext)
+  (define-constant gl:texture-coord-array-size-ext 32904)
+  (define gl:texture-coord-array-size-ext gl:texture-coord-array-size-ext)
+  (define-constant gl:texture-coord-array-type-ext 32905)
+  (define gl:texture-coord-array-type-ext gl:texture-coord-array-type-ext)
+  (define-constant gl:texture-coord-array-stride-ext 32906)
+  (define gl:texture-coord-array-stride-ext gl:texture-coord-array-stride-ext)
+  (define-constant gl:texture-coord-array-count-ext 32907)
+  (define gl:texture-coord-array-count-ext gl:texture-coord-array-count-ext)
+  (define-constant gl:edge-flag-array-stride-ext 32908)
+  (define gl:edge-flag-array-stride-ext gl:edge-flag-array-stride-ext)
+  (define-constant gl:edge-flag-array-count-ext 32909)
+  (define gl:edge-flag-array-count-ext gl:edge-flag-array-count-ext)
+  (define-constant gl:vertex-array-pointer-ext 32910)
+  (define gl:vertex-array-pointer-ext gl:vertex-array-pointer-ext)
+  (define-constant gl:normal-array-pointer-ext 32911)
+  (define gl:normal-array-pointer-ext gl:normal-array-pointer-ext)
+  (define-constant gl:color-array-pointer-ext 32912)
+  (define gl:color-array-pointer-ext gl:color-array-pointer-ext)
+  (define-constant gl:index-array-pointer-ext 32913)
+  (define gl:index-array-pointer-ext gl:index-array-pointer-ext)
+  (define-constant gl:texture-coord-array-pointer-ext 32914)
+  (define gl:texture-coord-array-pointer-ext
+    gl:texture-coord-array-pointer-ext)
+  (define-constant gl:edge-flag-array-pointer-ext 32915)
+  (define gl:edge-flag-array-pointer-ext gl:edge-flag-array-pointer-ext)
+  (define-foreign-variable gl:double-ext integer "GL_DOUBLE_EXT")
+  (define gl:double-ext gl:double-ext)
+  (define-constant gl:bgr-ext 32992)
+  (define gl:bgr-ext gl:bgr-ext)
+  (define-constant gl:bgra-ext 32993)
+  (define gl:bgra-ext gl:bgra-ext)
+  (define-constant gl:color-table-format-ext 32984)
+  (define gl:color-table-format-ext gl:color-table-format-ext)
+  (define-constant gl:color-table-width-ext 32985)
+  (define gl:color-table-width-ext gl:color-table-width-ext)
+  (define-constant gl:color-table-red-size-ext 32986)
+  (define gl:color-table-red-size-ext gl:color-table-red-size-ext)
+  (define-constant gl:color-table-green-size-ext 32987)
+  (define gl:color-table-green-size-ext gl:color-table-green-size-ext)
+  (define-constant gl:color-table-blue-size-ext 32988)
+  (define gl:color-table-blue-size-ext gl:color-table-blue-size-ext)
+  (define-constant gl:color-table-alpha-size-ext 32989)
+  (define gl:color-table-alpha-size-ext gl:color-table-alpha-size-ext)
+  (define-constant gl:color-table-luminance-size-ext 32990)
+  (define gl:color-table-luminance-size-ext gl:color-table-luminance-size-ext)
+  (define-constant gl:color-table-intensity-size-ext 32991)
+  (define gl:color-table-intensity-size-ext gl:color-table-intensity-size-ext)
+  (define-constant gl:color-index1-ext 32994)
+  (define gl:color-index1-ext gl:color-index1-ext)
+  (define-constant gl:color-index2-ext 32995)
+  (define gl:color-index2-ext gl:color-index2-ext)
+  (define-constant gl:color-index4-ext 32996)
+  (define gl:color-index4-ext gl:color-index4-ext)
+  (define-constant gl:color-index8-ext 32997)
+  (define gl:color-index8-ext gl:color-index8-ext)
+  (define-constant gl:color-index12-ext 32998)
+  (define gl:color-index12-ext gl:color-index12-ext)
+  (define-constant gl:color-index16-ext 32999)
+  (define gl:color-index16-ext gl:color-index16-ext)
+  (define-constant gl:max-elements-vertices-win 33000)
+  (define gl:max-elements-vertices-win gl:max-elements-vertices-win)
+  (define-constant gl:max-elements-indices-win 33001)
+  (define gl:max-elements-indices-win gl:max-elements-indices-win)
+  (define-constant gl:phong-win 33002)
+  (define gl:phong-win gl:phong-win)
+  (define-constant gl:phong-hint-win 33003)
+  (define gl:phong-hint-win gl:phong-hint-win)
+  (define-constant gl:fog-specular-texture-win 33004)
+  (define gl:fog-specular-texture-win gl:fog-specular-texture-win)
+  (define-foreign-variable gl:logic-op integer "GL_LOGIC_OP")
+  (define gl:logic-op gl:logic-op)
+  (define-foreign-variable
+    gl:texture-components
+    integer
+    "GL_TEXTURE_COMPONENTS")
+  (define gl:texture-components gl:texture-components))
 
 ;;; END OF FILE

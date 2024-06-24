@@ -14,7 +14,7 @@
  (synopsis "Allegro")
  (components
   (extension allegro
-             (source-dependencies "acodec.scm" "altime.scm" "audio.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "opengl.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "transformations.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
+             (source-dependencies "acodec.scm" "altime.scm" "audio.scm" "base.scm" "bitmap_io.scm" "bitmap.scm" "color.scm" "config.scm" "constants.scm" "direct3d.scm" "display.scm" "enums.scm" "error.scm" "events.scm" "file.scm" "fixed.scm" "fmaths.scm" "font.scm" "fshook.scm" "image.scm" "joystick.scm" "keyboard.scm" "memfile.scm" "memory.scm" "mouse.scm" "path.scm" "physfs.scm" "primitives.scm" "system.scm" "threads.scm" "timer.scm" "tls.scm" "ttf.scm" "types.scm" "utf8.scm" "windows.scm")
              (custom-build "build"))
   (extension allegro-opengl
              (cond-expand
@@ -31,7 +31,7 @@
                                 "-L" "-lGLU"))
                 (else
                   (link-options "-LX11" "-L" "-lGL" "-L" "-lGLU")))
-             (source-dependencies "opengl.scm")
+             (source-dependencies "opengl.scm" "gen-opengl.scm" "transformations.scm")
              (custom-build "build")
              (component-dependencies allegro))
   (extension allegro-c-util
