@@ -36,5 +36,7 @@
     -export-constants \
     -rename-regex "^gl(.*)$":"gl:\1" \
     -rename-regex "^GL_?(.*)$":"gl:\1" \
+    -rename-regex "^AL_(.*)$":"al:\1" \
+    -rename-regex "^al_(.*)$":"al:\1" \
     -default-renaming "" \
 	  -

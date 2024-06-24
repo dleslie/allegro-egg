@@ -4243,32 +4243,32 @@
       ()
       "struct ALLEGRO_TRANSFORM *tmp_ =  (struct ALLEGRO_TRANSFORM *)C_malloc(sizeof(struct ALLEGRO_TRANSFORM));\nreturn(tmp_);;\n"))
   (begin
-    (define al-use-transform
+    (define al:use-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
         "al_use_transform(a0);")))
   (begin
-    (define al-use-projection-transform
+    (define al:use-projection-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
         "al_use_projection_transform(a0);")))
   (begin
-    (define al-copy-transform
+    (define al:copy-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
          ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
         "al_copy_transform(a0 , a1);")))
   (begin
-    (define al-identity-transform
+    (define al:identity-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
         "al_identity_transform(a0);")))
   (begin
-    (define al-build-transform
+    (define al:build-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4279,7 +4279,7 @@
          (float a5))
         "al_build_transform(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
-    (define al-build-camera-transform
+    (define al:build-camera-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4294,13 +4294,13 @@
          (float a9))
         "al_build_camera_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
-    (define al-translate-transform
+    (define al:translate-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1) (float a2))
         "al_translate_transform(a0 , a1 , a2);")))
   (begin
-    (define al-translate-transform-3d
+    (define al:translate-transform-3d
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4309,13 +4309,13 @@
          (float a3))
         "al_translate_transform_3d(a0 , a1 , a2 , a3);")))
   (begin
-    (define al-rotate-transform
+    (define al:rotate-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
         "al_rotate_transform(a0 , a1);")))
   (begin
-    (define al-rotate-transform-3d
+    (define al:rotate-transform-3d
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4325,13 +4325,13 @@
          (float a4))
         "al_rotate_transform_3d(a0 , a1 , a2 , a3 , a4);")))
   (begin
-    (define al-scale-transform
+    (define al:scale-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1) (float a2))
         "al_scale_transform(a0 , a1 , a2);")))
   (begin
-    (define al-scale-transform-3d
+    (define al:scale-transform-3d
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4340,7 +4340,7 @@
          (float a3))
         "al_scale_transform_3d(a0 , a1 , a2 , a3);")))
   (begin
-    (define al-transform-coordinates
+    (define al:transform-coordinates
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4348,7 +4348,7 @@
          (f32vector a2))
         "al_transform_coordinates(a0 , a1 , a2);")))
   (begin
-    (define al-transform-coordinates-3d
+    (define al:transform-coordinates-3d
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4357,7 +4357,7 @@
          (f32vector a3))
         "al_transform_coordinates_3d(a0 , a1 , a2 , a3);")))
   (begin
-    (define al-transform-coordinates-4d
+    (define al:transform-coordinates-4d
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4367,7 +4367,7 @@
          (f32vector a4))
         "al_transform_coordinates_4d(a0 , a1 , a2 , a3 , a4);")))
   (begin
-    (define al-transform-coordinates-3d-projective
+    (define al:transform-coordinates-3d-projective
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4376,50 +4376,50 @@
          (f32vector a3))
         "al_transform_coordinates_3d_projective(a0 , a1 , a2 , a3);")))
   (begin
-    (define al-compose-transform
+    (define al:compose-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
          ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
         "al_compose_transform(a0 , a1);")))
   (begin
-    (define al-get-current-transform
+    (define al:get-current-transform
       (foreign-lambda*
         (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
         ()
         "return(al_get_current_transform());")))
   (begin
-    (define al-get-current-inverse-transform
+    (define al:get-current-inverse-transform
       (foreign-lambda*
         (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
         ()
         "return(al_get_current_inverse_transform());")))
   (begin
-    (define al-get-current-projection-transform
+    (define al:get-current-projection-transform
       (foreign-lambda*
         (c-pointer (const (struct "ALLEGRO_TRANSFORM")))
         ()
         "return(al_get_current_projection_transform());")))
   (begin
-    (define al-invert-transform
+    (define al:invert-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
         "al_invert_transform(a0);")))
   (begin
-    (define al-transpose-transform
+    (define al:transpose-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0))
         "al_transpose_transform(a0);")))
   (begin
-    (define al-check-inverse
+    (define al:check-inverse
       (foreign-lambda*
         integer
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
         "return(al_check_inverse(a0 , a1));")))
   (begin
-    (define al-orthographic-transform
+    (define al:orthographic-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4431,7 +4431,7 @@
          (float a6))
         "al_orthographic_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
-    (define al-perspective-transform
+    (define al:perspective-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0)
@@ -4443,13 +4443,13 @@
          (float a6))
         "al_perspective_transform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
-    (define al-horizontal-shear-transform
+    (define al:horizontal-shear-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
         "al_horizontal_shear_transform(a0 , a1);")))
   (begin
-    (define al-vertical-shear-transform
+    (define al:vertical-shear-transform
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_TRANSFORM")) a0) (float a1))
@@ -4473,103 +4473,103 @@
   (define-constant allegro-shader-hlsl-sm-3-0 6)
   (define allegro-shader-hlsl-sm-3-0 allegro-shader-hlsl-sm-3-0)
   (begin
-    (define al-create-shader
+    (define al:create-shader
       (foreign-lambda*
         (c-pointer (struct "ALLEGRO_SHADER"))
         ((integer a0))
         "return(al_create_shader(a0));")))
   (begin
-    (define al-attach-shader-source
+    (define al:attach-shader-source
       (foreign-lambda*
         bool
         (((c-pointer (struct "ALLEGRO_SHADER")) a0) (integer a1) (c-string a2))
         "return(al_attach_shader_source(a0 , a1 , a2));")))
   (begin
-    (define al-attach-shader-source-file
+    (define al:attach-shader-source-file
       (foreign-lambda*
         bool
         (((c-pointer (struct "ALLEGRO_SHADER")) a0) (integer a1) (c-string a2))
         "return(al_attach_shader_source_file(a0 , a1 , a2));")))
   (begin
-    (define al-build-shader
+    (define al:build-shader
       (foreign-lambda*
         bool
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "return(al_build_shader(a0));")))
   (begin
-    (define al-get-shader-log
+    (define al:get-shader-log
       (foreign-lambda*
         c-string
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "return(al_get_shader_log(a0));")))
   (begin
-    (define al-get-shader-platform
+    (define al:get-shader-platform
       (foreign-lambda*
         integer
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "return(al_get_shader_platform(a0));")))
   (begin
-    (define al-use-shader
+    (define al:use-shader
       (foreign-lambda*
         bool
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "return(al_use_shader(a0));")))
   (begin
-    (define al-get-current-shader
+    (define al:get-current-shader
       (foreign-lambda*
         (c-pointer (struct "ALLEGRO_SHADER"))
         ()
         "return(al_get_current_shader());")))
   (begin
-    (define al-destroy-shader
+    (define al:destroy-shader
       (foreign-lambda*
         void
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "al_destroy_shader(a0);")))
   (begin
-    (define al-set-shader-sampler
+    (define al:set-shader-sampler
       (foreign-lambda*
         bool
         ((c-string a0) ((c-pointer "ALLEGRO_BITMAP") a1) (integer a2))
         "return(al_set_shader_sampler(a0 , a1 , a2));")))
   (begin
-    (define al-set-shader-matrix
+    (define al:set-shader-matrix
       (foreign-lambda*
         bool
         ((c-string a0) ((c-pointer (struct "ALLEGRO_TRANSFORM")) a1))
         "return(al_set_shader_matrix(a0 , a1));")))
   (begin
-    (define al-set-shader-int
+    (define al:set-shader-int
       (foreign-lambda*
         bool
         ((c-string a0) (integer a1))
         "return(al_set_shader_int(a0 , a1));")))
   (begin
-    (define al-set-shader-float
+    (define al:set-shader-float
       (foreign-lambda*
         bool
         ((c-string a0) (float a1))
         "return(al_set_shader_float(a0 , a1));")))
   (begin
-    (define al-set-shader-int-vector
+    (define al:set-shader-int-vector
       (foreign-lambda*
         bool
         ((c-string a0) (integer a1) (s32vector a2) (integer a3))
         "return(al_set_shader_int_vector(a0 , a1 , a2 , a3));")))
   (begin
-    (define al-set-shader-float-vector
+    (define al:set-shader-float-vector
       (foreign-lambda*
         bool
         ((c-string a0) (integer a1) (f32vector a2) (integer a3))
         "return(al_set_shader_float_vector(a0 , a1 , a2 , a3));")))
   (begin
-    (define al-set-shader-bool
+    (define al:set-shader-bool
       (foreign-lambda*
         bool
         ((c-string a0) (bool a1))
         "return(al_set_shader_bool(a0 , a1));")))
   (begin
-    (define al-get-default-shader-source
+    (define al:get-default-shader-source
       (foreign-lambda*
         (c-pointer (c-pointer (const char)))
         ((integer a0) (integer a1))
@@ -4579,73 +4579,73 @@
   (define-constant allegro-opengl-es 1)
   (define allegro-opengl-es allegro-opengl-es)
   (begin
-    (define al-get-opengl-version
+    (define al:get-opengl-version
       (foreign-lambda*
         unsigned-integer32
         ()
         "return(al_get_opengl_version());")))
   (begin
-    (define al-have-opengl-extension
+    (define al:have-opengl-extension
       (foreign-lambda*
         bool
         ((c-string a0))
         "return(al_have_opengl_extension(a0));")))
   (begin
-    (define al-get-opengl-proc-address
+    (define al:get-opengl-proc-address
       (foreign-lambda*
         (c-pointer void)
         ((c-string a0))
         "return(al_get_opengl_proc_address(a0));")))
   (begin
-    (define al-get-opengl-extension-list
+    (define al:get-opengl-extension-list
       (foreign-lambda*
         (c-pointer (struct "ALLEGRO_OGL_EXT_LIST"))
         ()
         "return(al_get_opengl_extension_list());")))
   (begin
-    (define al-get-opengl-texture
+    (define al:get-opengl-texture
       (foreign-lambda*
         unsigned-integer
         (((c-pointer "ALLEGRO_BITMAP") a0))
         "return(al_get_opengl_texture(a0));")))
   (begin
-    (define al-remove-opengl-fbo
+    (define al:remove-opengl-fbo
       (foreign-lambda*
         void
         (((c-pointer "ALLEGRO_BITMAP") a0))
         "al_remove_opengl_fbo(a0);")))
   (begin
-    (define al-get-opengl-fbo
+    (define al:get-opengl-fbo
       (foreign-lambda*
         unsigned-integer
         (((c-pointer "ALLEGRO_BITMAP") a0))
         "return(al_get_opengl_fbo(a0));")))
   (begin
-    (define al-get-opengl-texture-size
+    (define al:get-opengl-texture-size
       (foreign-lambda*
         bool
         (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
         "return(al_get_opengl_texture_size(a0 , a1 , a2));")))
   (begin
-    (define al-get-opengl-texture-position
+    (define al:get-opengl-texture-position
       (foreign-lambda*
         void
         (((c-pointer "ALLEGRO_BITMAP") a0) (s32vector a1) (s32vector a2))
         "al_get_opengl_texture_position(a0 , a1 , a2);")))
   (begin
-    (define al-get-opengl-program-object
+    (define al:get-opengl-program-object
       (foreign-lambda*
         unsigned-integer
         (((c-pointer (struct "ALLEGRO_SHADER")) a0))
         "return(al_get_opengl_program_object(a0));")))
   (begin
-    (define al-set-current-opengl-context
+    (define al:set-current-opengl-context
       (foreign-lambda*
         void
         (((c-pointer "ALLEGRO_DISPLAY") a0))
         "al_set_current_opengl_context(a0);")))
   (begin
-    (define al-get-opengl-variant
+    (define al:get-opengl-variant
       (foreign-lambda* integer () "return(al_get_opengl_variant());"))))
 
 ;;; END OF FILE
