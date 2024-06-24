@@ -1,5 +1,6 @@
 #! /bin/sh
 
+# gl
 (
 echo "typedef void* ptrdiff_t;";
  echo "#define AL_FUNC(ret, name, params) extern ret name params";
