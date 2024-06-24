@@ -10,11 +10,11 @@
 #include <allegro5/allegro_opengl.h>
 <#
 
-(module allegro-glext *
+(module allegro-opengl *
         (import
          scheme
          (chicken base)
          (chicken foreign)
          allegro)
 
-        (include "gl"))
+        (include "opengl"))

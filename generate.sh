@@ -32,7 +32,7 @@
 | sed -e "s#typedef enum ALLEGRO_OPENGL_VARIANT {#enum ALLEGRO_OPENGL_VARIANT {#g" \
 | sed -e "s#} ALLEGRO_OPENGL_VARIANT;#};#g" \
 | chicken-bind \
-    -o gl.scm \
+    -o gen-opengl.scm \
     -export-constants \
     -rename-regex "^gl(.*)$":"gl:\1" \
     -rename-regex "^GL_?(.*)$":"gl:\1" \

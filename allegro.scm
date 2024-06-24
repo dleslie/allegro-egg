@@ -61,7 +61,6 @@
         (include "bitmap")
         (include "font")
         (include "utf8")
-        (include "opengl")
         (include "primitives")
         (include "audio")
 	    )
