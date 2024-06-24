@@ -3,7 +3,7 @@
 CFLAGS=`pkg-config --cflags allegro-5 allegro_image-5 allegro_primitives-5 allegro_color-5 allegro_dialog-5 allegro_main-5 allegro_physfs-5 allegro_font-5 allegro_ttf-5 allegro_audio-5 allegro_memfile-5 allegro_acodec-5 allegro_image-5`
 LDFLAGS=`pkg-config --libs allegro-5 allegro_image-5 allegro_primitives-5 allegro_color-5 allegro_dialog-5 allegro_main-5 allegro_physfs-5 allegro_font-5 allegro_ttf-5 allegro_audio-5 allegro_memfile-5 allegro_acodec-5 allegro_image-5`
 
-if [ -z "$LDFLAGS"];
+if [ -z "$LDFLAGS" ];
 then
   LDFLAGS="-lallegro_primitives -lallegro_color -lallegro_dialog -lallegro_main -lallegro_physfs -lallegro_ttf -lallegro_font -lallegro_memfile -lallegro_acodec -lallegro_audio -lallegro_image -lallegro"
 fi
