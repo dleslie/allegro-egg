@@ -8,11 +8,12 @@
     echo "#define ALLEGRO_UNSTABLE";
     echo "#define APIENTRY";
     echo "#define WINGDIAPI";
+    echo "#define AGL_API(ret, name, args) ret _al_gl##name args;";
     cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h;
     cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/glu.h;
-    cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/gl_ext.h;
+    cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_defs.h;
+    cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_api.h;
 ) \
-    | grep -v "#include" \
     | sed -e "s#char const *#const char *#g" \
     | gcc -Istub -nostdinc -P -E -;
 )\
@@ -36,10 +37,12 @@
     -rename-regex "^ALLEGRO_(.*)$":"al:\1" \
     -rename-regex "^AL_(.*)$":"al:\1" \
     -rename-regex "^al_(.*)$":"al:\1" \
+    -rename-regex "_al_gl":"gl:" \
     -default-renaming "" \
 	  -
 
-cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h \
+(cat /c/Users/dan/OneDrive/bin/w64devkit/x86_64-w64-mingw32/include/GL/gl.h;
+ cat /c/Users/dan/OneDrive/bin/w64devkit/include/allegro5/opengl/GLext/gl_ext_defs.h) \
     | grep "#define GL_.* 0x.*" \
     | chicken-bind \
           -o gen-opengl-defs.scm \

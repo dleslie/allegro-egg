@@ -2098,2144 +2098,12897 @@
         void
         (((c-pointer (struct "GLUtesselator")) a0))
         "gluEndPolygon(a0);")))
-  (define al:ogl-ext-list-allegro-gl-arb-imaging
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_imaging);"))
-  (define al:ogl-ext-list-allegro-gl-arb-multitexture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_multitexture);"))
-  (define al:ogl-ext-list-allegro-gl-arb-transpose-matrix
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_transpose_matrix);"))
-  (define al:ogl-ext-list-allegro-gl-arb-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-env-add
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_env_add);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-cube-map
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_cube_map);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-compression
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_compression);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-border-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_border_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-arb-point-parameters
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_point_parameters);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-blend
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_blend);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-env-combine
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_env_combine);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-env-crossbar
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_env_crossbar);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-env-dot3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_env_dot3);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-mirrored-repeat
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_mirrored_repeat);"))
-  (define al:ogl-ext-list-allegro-gl-arb-depth-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_depth_texture);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shadow
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shadow);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shadow-ambient
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shadow_ambient);"))
-  (define al:ogl-ext-list-allegro-gl-arb-window-pos
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_window_pos);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-program
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_program);"))
-  (define al:ogl-ext-list-allegro-gl-arb-fragment-program
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_fragment_program);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-occlusion-query
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_occlusion_query);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shader-objects
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shader_objects);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_shader);"))
-  (define al:ogl-ext-list-allegro-gl-arb-fragment-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_fragment_shader);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shading-language-100
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shading_language_100);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-non-power-of-two
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_non_power_of_two);"))
-  (define al:ogl-ext-list-allegro-gl-arb-point-sprite
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_point_sprite);"))
-  (define al:ogl-ext-list-allegro-gl-arb-fragment-program-shadow
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_fragment_program_shadow);"))
-  (define al:ogl-ext-list-allegro-gl-arb-draw-buffers
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_draw_buffers);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-rectangle
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_rectangle);"))
-  (define al:ogl-ext-list-allegro-gl-arb-color-buffer-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_color_buffer_float);"))
-  (define al:ogl-ext-list-allegro-gl-arb-half-float-pixel
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_half_float_pixel);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_float);"))
-  (define al:ogl-ext-list-allegro-gl-arb-pixel-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_pixel_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-instanced-arrays
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_instanced_arrays);"))
-  (define al:ogl-ext-list-allegro-gl-arb-draw-instanced
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_draw_instanced);"))
-  (define al:ogl-ext-list-allegro-gl-arb-geometry-shader4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_geometry_shader4);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-depth-buffer-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_depth_buffer_float);"))
-  (define al:ogl-ext-list-allegro-gl-arb-framebuffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_framebuffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-framebuffer-s-rgb
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_framebuffer_sRGB);"))
-  (define al:ogl-ext-list-allegro-gl-arb-half-float-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_half_float_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-arb-map-buffer-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_map_buffer_range);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-compression-rgtc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_compression_rgtc);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-rg
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_rg);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-array-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_array_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-copy-buffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_copy_buffer);"))
-  (define al:ogl-ext-list-allegro-gl-arb-compatibility
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_compatibility);"))
-  (define al:ogl-ext-list-allegro-gl-arb-uniform-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_uniform_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shader-texture-lod
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shader_texture_lod);"))
-  (define al:ogl-ext-list-allegro-gl-arb-depth-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_depth_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-arb-draw-elements-base-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_draw_elements_base_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-arb-fragment-coord-conventions
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_fragment_coord_conventions);"))
-  (define al:ogl-ext-list-allegro-gl-arb-provoking-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_provoking_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-arb-seamless-cube-map
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_seamless_cube_map);"))
-  (define al:ogl-ext-list-allegro-gl-arb-sync
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_sync);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-array-bgra
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_array_bgra);"))
-  (define al:ogl-ext-list-allegro-gl-arb-draw-buffers-blend
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_draw_buffers_blend);"))
-  (define al:ogl-ext-list-allegro-gl-arb-sample-shading
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_sample_shading);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-cube-map-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_cube_map_array);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-gather
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_gather);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-query-lod
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_query_lod);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shading-language-include
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shading_language_include);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-compression-bptc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_compression_bptc);"))
-  (define al:ogl-ext-list-allegro-gl-arb-blend-func-extended
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_blend_func_extended);"))
-  (define al:ogl-ext-list-allegro-gl-arb-explicit-attrib-location
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_explicit_attrib_location);"))
-  (define al:ogl-ext-list-allegro-gl-arb-occlusion-query2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_occlusion_query2);"))
-  (define al:ogl-ext-list-allegro-gl-arb-sampler-objects
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_sampler_objects);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shader-bit-encoding
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shader_bit_encoding);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-rgb10-a2ui
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_rgb10_a2ui);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-swizzle
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_swizzle);"))
-  (define al:ogl-ext-list-allegro-gl-arb-timer-query
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_timer_query);"))
-  (define al:ogl-ext-list-allegro-gl-arb-vertex-type-2-10-10-10-rev
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev);"))
-  (define al:ogl-ext-list-allegro-gl-arb-draw-indirect
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_draw_indirect);"))
-  (define al:ogl-ext-list-allegro-gl-arb-gpu-shader5
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_gpu_shader5);"))
-  (define al:ogl-ext-list-allegro-gl-arb-gpu-shader-fp64
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_gpu_shader_fp64);"))
-  (define al:ogl-ext-list-allegro-gl-arb-shader-subroutine
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_shader_subroutine);"))
-  (define al:ogl-ext-list-allegro-gl-arb-tessellation-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_tessellation_shader);"))
-  (define al:ogl-ext-list-allegro-gl-arb-texture-buffer-object-rgb32
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_texture_buffer_object_rgb32);"))
-  (define al:ogl-ext-list-allegro-gl-arb-transform-feedback2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_transform_feedback2);"))
-  (define al:ogl-ext-list-allegro-gl-arb-transform-feedback3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ARB_transform_feedback3);"))
-  (define al:ogl-ext-list-allegro-gl-ext-abgr
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_abgr);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-color
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_color);"))
-  (define al:ogl-ext-list-allegro-gl-ext-polygon-offset
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_polygon_offset);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture3d
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture3D);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-filter4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_filter4);"))
-  (define al:ogl-ext-list-allegro-gl-ext-subtexture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_subtexture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-copy-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_copy_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-histogram
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_histogram);"))
-  (define al:ogl-ext-list-allegro-gl-ext-convolution
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_convolution);"))
-  (define al:ogl-ext-list-allegro-gl-sgi-color-matrix
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGI_color_matrix);"))
-  (define al:ogl-ext-list-allegro-gl-sgi-color-table
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGI_color_table);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-pixel-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_pixel_texture);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-pixel-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_pixel_texture);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture4d
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture4D);"))
-  (define al:ogl-ext-list-allegro-gl-sgi-texture-color-table
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGI_texture_color_table);"))
-  (define al:ogl-ext-list-allegro-gl-ext-cmyka
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_cmyka);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_object);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-detail-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_detail_texture);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-sharpen-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_sharpen_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-packed-pixels
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_packed_pixels);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-lod
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_lod);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-ext-rescale-normal
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_rescale_normal);"))
-  (define al:ogl-ext-list-allegro-gl-ext-vertex-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_vertex_array);"))
-  (define al:ogl-ext-list-allegro-gl-ext-misc-attribute
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_misc_attribute);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-generate-mipmap
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_generate_mipmap);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-clipmap
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_clipmap);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-shadow
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_shadow);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-edge-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_edge_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-border-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_border_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-minmax
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_minmax);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-subtract
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_subtract);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-logic-op
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_logic_op);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-interlace
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_interlace);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-select
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_select);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-sprite
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_sprite);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-multi-buffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_multi_buffer);"))
-  (define al:ogl-ext-list-allegro-gl-ext-point-parameters
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_point_parameters);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-instruments
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_instruments);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-scale-bias
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_scale_bias);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-framezoom
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_framezoom);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-tag-sample-buffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_tag_sample_buffer);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-reference-plane
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_reference_plane);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-flush-raster
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_flush_raster);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-depth-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_depth_texture);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-fog-function
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_fog_function);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-fog-offset
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_fog_offset);"))
-  (define al:ogl-ext-list-allegro-gl-hp-image-transform
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_HP_image_transform);"))
-  (define al:ogl-ext-list-allegro-gl-hp-convolution-border-modes
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_HP_convolution_border_modes);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-add-env
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_add_env);"))
-  (define al:ogl-ext-list-allegro-gl-ext-color-subtable
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_color_subtable);"))
-  (define al:ogl-ext-list-allegro-gl-pgi-vertex-hints
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_PGI_vertex_hints);"))
-  (define al:ogl-ext-list-allegro-gl-pgi-misc-hints
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_PGI_misc_hints);"))
-  (define al:ogl-ext-list-allegro-gl-ext-paletted-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_paletted_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-clip-volume-hint
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_clip_volume_hint);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-list-priority
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_list_priority);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-ir-instrument1
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_ir_instrument1);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-lod-bias
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_lod_bias);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-shadow-ambient
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_shadow_ambient);"))
-  (define al:ogl-ext-list-allegro-gl-ext-index-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_index_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-index-material
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_index_material);"))
-  (define al:ogl-ext-list-allegro-gl-ext-index-func
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_index_func);"))
-  (define al:ogl-ext-list-allegro-gl-ext-index-array-formats
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_index_array_formats);"))
-  (define al:ogl-ext-list-allegro-gl-ext-compiled-vertex-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_compiled_vertex_array);"))
-  (define al:ogl-ext-list-allegro-gl-ext-cull-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_cull_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-ycrcb
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_ycrcb);"))
-  (define al:ogl-ext-list-allegro-gl-ext-fragment-lighting
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_fragment_lighting);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-rasterpos-clip
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_rasterpos_clip);"))
-  (define al:ogl-ext-list-allegro-gl-hp-texture-lighting
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_HP_texture_lighting);"))
-  (define al:ogl-ext-list-allegro-gl-ext-draw-range-elements
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_draw_range_elements);"))
-  (define al:ogl-ext-list-allegro-gl-win-phong-shading
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_WIN_phong_shading);"))
-  (define al:ogl-ext-list-allegro-gl-win-specular-fog
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_WIN_specular_fog);"))
-  (define al:ogl-ext-list-allegro-gl-ext-light-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_light_texture);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-blend-alpha-minmax
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_blend_alpha_minmax);"))
-  (define al:ogl-ext-list-allegro-gl-ext-scene-marker
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_scene_marker);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-pixel-texture-bits
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_pixel_texture_bits);"))
-  (define al:ogl-ext-list-allegro-gl-ext-bgra
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_bgra);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-async
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_async);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-async-pixel
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_async_pixel);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-async-histogram
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_async_histogram);"))
-  (define al:ogl-ext-list-allegro-gl-intel-texture-scissor
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_INTEL_texture_scissor);"))
-  (define al:ogl-ext-list-allegro-gl-intel-parallel-arrays
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_INTEL_parallel_arrays);"))
-  (define al:ogl-ext-list-allegro-gl-hp-occlusion-test
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_HP_occlusion_test);"))
-  (define al:ogl-ext-list-allegro-gl-ext-pixel-transform
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_pixel_transform);"))
-  (define al:ogl-ext-list-allegro-gl-ext-pixel-transform-color-table
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_pixel_transform_color_table);"))
-  (define al:ogl-ext-list-allegro-gl-ext-shared-texture-palette
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_shared_texture_palette);"))
-  (define al:ogl-ext-list-allegro-gl-ext-separate-specular-color
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_separate_specular_color);"))
-  (define al:ogl-ext-list-allegro-gl-ext-secondary-color
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_secondary_color);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-env
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_env);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-perturb-normal
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_perturb_normal);"))
-  (define al:ogl-ext-list-allegro-gl-ext-multi-draw-arrays
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_multi_draw_arrays);"))
-  (define al:ogl-ext-list-allegro-gl-ext-fog-coord
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_fog_coord);"))
-  (define al:ogl-ext-list-allegro-gl-rend-screen-coordinates
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_REND_screen_coordinates);"))
-  (define al:ogl-ext-list-allegro-gl-ext-coordinate-frame
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_coordinate_frame);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-env-combine
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_env_combine);"))
-  (define al:ogl-ext-list-allegro-gl-apple-specular-vector
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_specular_vector);"))
-  (define al:ogl-ext-list-allegro-gl-apple-transform-hint
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_transform_hint);"))
-  (define al:ogl-ext-list-allegro-gl-sunx-constant-data
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUNX_constant_data);"))
-  (define al:ogl-ext-list-allegro-gl-sun-global-alpha
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_global_alpha);"))
-  (define al:ogl-ext-list-allegro-gl-sun-triangle-list
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_triangle_list);"))
-  (define al:ogl-ext-list-allegro-gl-sun-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-func-separate
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_func_separate);"))
-  (define al:ogl-ext-list-allegro-gl-ingr-color-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_INGR_color_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-ingr-interlace-read
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_INGR_interlace_read);"))
-  (define al:ogl-ext-list-allegro-gl-ext-stencil-wrap
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_stencil_wrap);"))
-  (define al:ogl-ext-list-allegro-gl-ext-422-pixels
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_422_pixels);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texgen-reflection
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texgen_reflection);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_range);"))
-  (define al:ogl-ext-list-allegro-gl-sun-convolution-border-modes
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_convolution_border_modes);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-env-add
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_env_add);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-lod-bias
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_lod_bias);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-filter-anisotropic
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_filter_anisotropic);"))
-  (define al:ogl-ext-list-allegro-gl-ext-vertex-weighting
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_vertex_weighting);"))
-  (define al:ogl-ext-list-allegro-gl-nv-light-max-exponent
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_light_max_exponent);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-array-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_array_range);"))
-  (define al:ogl-ext-list-allegro-gl-nv-register-combiners
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_register_combiners);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fog-distance
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fog_distance);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texgen-emboss
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texgen_emboss);"))
-  (define al:ogl-ext-list-allegro-gl-nv-blend-square
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_blend_square);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-env-combine4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_env_combine4);"))
-  (define al:ogl-ext-list-allegro-gl-mesa-resize-buffers
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_MESA_resize_buffers);"))
-  (define al:ogl-ext-list-allegro-gl-mesa-window-pos
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_MESA_window_pos);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-s3tc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_compression_s3tc);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-cull-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_cull_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-multimode-draw-arrays
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_multimode_draw_arrays);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-vertex-array-lists
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_vertex_array_lists);"))
-  (define al:ogl-ext-list-allegro-gl-3dfx-texture-compression-fxt1
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_3DFX_texture_compression_FXT1);"))
-  (define al:ogl-ext-list-allegro-gl-3dfx-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_3DFX_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-3dfx-tbuffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_3DFX_tbuffer);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-vertex-preclip
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_vertex_preclip);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-resample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_resample);"))
-  (define al:ogl-ext-list-allegro-gl-sgis-texture-color-mask
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIS_texture_color_mask);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-env-dot3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_env_dot3);"))
-  (define al:ogl-ext-list-allegro-gl-ati-texture-mirror-once
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_texture_mirror_once);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fence
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fence);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-static-data
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_static_data);"))
-  (define al:ogl-ext-list-allegro-gl-ibm-texture-mirrored-repeat
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_IBM_texture_mirrored_repeat);"))
-  (define al:ogl-ext-list-allegro-gl-nv-evaluators
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_evaluators);"))
-  (define al:ogl-ext-list-allegro-gl-nv-packed-depth-stencil
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_packed_depth_stencil);"))
-  (define al:ogl-ext-list-allegro-gl-nv-register-combiners2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_register_combiners2);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-compression-vtc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_compression_vtc);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-rectangle
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_rectangle);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_shader);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-shader2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_shader2);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-array-range2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_array_range2);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program);"))
-  (define al:ogl-ext-list-allegro-gl-sgix-texture-coordinate-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SGIX_texture_coordinate_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-oml-interlace
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OML_interlace);"))
-  (define al:ogl-ext-list-allegro-gl-oml-subsample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OML_subsample);"))
-  (define al:ogl-ext-list-allegro-gl-oml-resample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OML_resample);"))
-  (define al:ogl-ext-list-allegro-gl-nv-copy-depth-to-color
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_copy_depth_to_color);"))
-  (define al:ogl-ext-list-allegro-gl-ati-envmap-bumpmap
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_envmap_bumpmap);"))
-  (define al:ogl-ext-list-allegro-gl-ati-fragment-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_fragment_shader);"))
-  (define al:ogl-ext-list-allegro-gl-ati-pn-triangles
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_pn_triangles);"))
-  (define al:ogl-ext-list-allegro-gl-ati-vertex-array-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_vertex_array_object);"))
-  (define al:ogl-ext-list-allegro-gl-ext-vertex-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_vertex_shader);"))
-  (define al:ogl-ext-list-allegro-gl-ati-vertex-streams
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_vertex_streams);"))
-  (define al:ogl-ext-list-allegro-gl-ati-element-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_element_array);"))
-  (define al:ogl-ext-list-allegro-gl-sun-mesh-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_mesh_array);"))
-  (define al:ogl-ext-list-allegro-gl-sun-slice-accum
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_SUN_slice_accum);"))
-  (define al:ogl-ext-list-allegro-gl-nv-multisample-filter-hint
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_multisample_filter_hint);"))
-  (define al:ogl-ext-list-allegro-gl-nv-depth-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_depth_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-nv-occlusion-query
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_occlusion_query);"))
-  (define al:ogl-ext-list-allegro-gl-nv-point-sprite
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_point_sprite);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-shader3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_shader3);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program1-1
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program1_1);"))
-  (define al:ogl-ext-list-allegro-gl-ext-shadow-funcs
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_shadow_funcs);"))
-  (define al:ogl-ext-list-allegro-gl-ext-stencil-two-side
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_stencil_two_side);"))
-  (define al:ogl-ext-list-allegro-gl-ati-text-fragment-shader
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_text_fragment_shader);"))
-  (define al:ogl-ext-list-allegro-gl-apple-client-storage
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_client_storage);"))
-  (define al:ogl-ext-list-allegro-gl-apple-element-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_element_array);"))
-  (define al:ogl-ext-list-allegro-gl-apple-fence
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_fence);"))
-  (define al:ogl-ext-list-allegro-gl-apple-vertex-array-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_vertex_array_object);"))
-  (define al:ogl-ext-list-allegro-gl-apple-vertex-array-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_vertex_array_range);"))
-  (define al:ogl-ext-list-allegro-gl-apple-ycbcr-422
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_ycbcr_422);"))
-  (define al:ogl-ext-list-allegro-gl-s3-s3tc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_S3_s3tc);"))
-  (define al:ogl-ext-list-allegro-gl-ati-draw-buffers
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_draw_buffers);"))
-  (define al:ogl-ext-list-allegro-gl-ati-texture-env-combine3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_texture_env_combine3);"))
-  (define al:ogl-ext-list-allegro-gl-ati-texture-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_texture_float);"))
-  (define al:ogl-ext-list-allegro-gl-nv-float-buffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_float_buffer);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fragment-program
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fragment_program);"))
-  (define al:ogl-ext-list-allegro-gl-nv-half-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_half_float);"))
-  (define al:ogl-ext-list-allegro-gl-nv-pixel-data-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_pixel_data_range);"))
-  (define al:ogl-ext-list-allegro-gl-nv-primitive-restart
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_primitive_restart);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-expand-normal
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_expand_normal);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program2);"))
-  (define al:ogl-ext-list-allegro-gl-ati-map-object-buffer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_map_object_buffer);"))
-  (define al:ogl-ext-list-allegro-gl-ati-separate-stencil
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_separate_stencil);"))
-  (define al:ogl-ext-list-allegro-gl-ati-vertex-attrib-array-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_vertex_attrib_array_object);"))
-  (define al:ogl-ext-list-allegro-gl-oes-byte-coordinates
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_byte_coordinates);"))
-  (define al:ogl-ext-list-allegro-gl-oes-fixed-point
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_fixed_point);"))
-  (define al:ogl-ext-list-allegro-gl-oes-single-precision
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_single_precision);"))
-  (define al:ogl-ext-list-allegro-gl-oes-compressed-paletted-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_compressed_paletted_texture);"))
-  (define al:ogl-ext-list-allegro-gl-oes-read-format
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_read_format);"))
-  (define al:ogl-ext-list-allegro-gl-oes-query-matrix
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_query_matrix);"))
-  (define al:ogl-ext-list-allegro-gl-oes-framebuffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_framebuffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-oes-texture-npot
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_OES_texture_npot);"))
-  (define al:ogl-ext-list-allegro-gl-ext-depth-bounds-test
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_depth_bounds_test);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-mirror-clamp
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_mirror_clamp);"))
-  (define al:ogl-ext-list-allegro-gl-ext-blend-equation-separate
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_blend_equation_separate);"))
-  (define al:ogl-ext-list-allegro-gl-mesa-pack-invert
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_MESA_pack_invert);"))
-  (define al:ogl-ext-list-allegro-gl-mesa-ycbcr-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_MESA_ycbcr_texture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-pixel-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_pixel_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fragment-program-option
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fragment_program_option);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fragment-program2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fragment_program2);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program2-option
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program2_option);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program3
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program3);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-dxt1
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_compression_dxt1);"))
-  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_framebuffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-gremedy-string-marker
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_GREMEDY_string_marker);"))
-  (define al:ogl-ext-list-allegro-gl-ext-packed-depth-stencil
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_packed_depth_stencil);"))
-  (define al:ogl-ext-list-allegro-gl-ext-stencil-clear-tag
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_stencil_clear_tag);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-s-rgb
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_sRGB);"))
-  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-blit
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_framebuffer_blit);"))
-  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_framebuffer_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-mesax-texture-stack
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_MESAX_texture_stack);"))
-  (define al:ogl-ext-list-allegro-gl-ext-timer-query
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_timer_query);"))
-  (define al:ogl-ext-list-allegro-gl-ext-gpu-program-parameters
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_gpu_program_parameters);"))
-  (define al:ogl-ext-list-allegro-gl-apple-flush-buffer-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_flush_buffer_range);"))
-  (define al:ogl-ext-list-allegro-gl-ext-bindable-uniform
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_bindable_uniform);"))
-  (define al:ogl-ext-list-allegro-gl-ext-draw-buffers2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_draw_buffers2);"))
-  (define al:ogl-ext-list-allegro-gl-ext-draw-instanced
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_draw_instanced);"))
-  (define al:ogl-ext-list-allegro-gl-ext-framebuffer-s-rgb
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_framebuffer_sRGB);"))
-  (define al:ogl-ext-list-allegro-gl-ext-geometry-shader4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_geometry_shader4);"))
-  (define al:ogl-ext-list-allegro-gl-ext-gpu-shader4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_gpu_shader4);"))
-  (define al:ogl-ext-list-allegro-gl-ext-packed-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_packed_float);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-array
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_array);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-latc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_compression_latc);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-compression-rgtc
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_compression_rgtc);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-integer
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_integer);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-shared-exponent
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_shared_exponent);"))
-  (define al:ogl-ext-list-allegro-gl-nv-depth-buffer-float
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_depth_buffer_float);"))
-  (define al:ogl-ext-list-allegro-gl-nv-fragment-program4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_fragment_program4);"))
-  (define al:ogl-ext-list-allegro-gl-nv-framebuffer-multisample-coverage
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_framebuffer_multisample_coverage);"))
-  (define al:ogl-ext-list-allegro-gl-nv-geometry-program4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_geometry_program4);"))
-  (define al:ogl-ext-list-allegro-gl-nv-gpu-program4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_gpu_program4);"))
-  (define al:ogl-ext-list-allegro-gl-nv-parameter-buffer-object
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_parameter_buffer_object);"))
-  (define al:ogl-ext-list-allegro-gl-nv-transform-feedback
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_transform_feedback);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-program4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_program4);"))
-  (define al:ogl-ext-list-allegro-gl-gremedy-frame-terminator
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_GREMEDY_frame_terminator);"))
-  (define al:ogl-ext-list-allegro-gl-nv-conditional-render
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_conditional_render);"))
-  (define al:ogl-ext-list-allegro-gl-nv-present-video
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_present_video);"))
-  (define al:ogl-ext-list-allegro-gl-ext-direct-state-access
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_direct_state_access);"))
-  (define al:ogl-ext-list-allegro-gl-ext-transform-feedback
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_transform_feedback);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-swizzle
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_swizzle);"))
-  (define al:ogl-ext-list-allegro-gl-nv-explicit-multisample
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_explicit_multisample);"))
-  (define al:ogl-ext-list-allegro-gl-nv-transform-feedback2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_transform_feedback2);"))
-  (define al:ogl-ext-list-allegro-gl-ati-meminfo
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_ATI_meminfo);"))
-  (define al:ogl-ext-list-allegro-gl-amd-performance-monitor
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_performance_monitor);"))
-  (define al:ogl-ext-list-allegro-gl-amd-texture-texture4
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_texture_texture4);"))
-  (define al:ogl-ext-list-allegro-gl-amd-vertex-shader-tesselator
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_vertex_shader_tesselator);"))
-  (define al:ogl-ext-list-allegro-gl-ext-provoking-vertex
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_provoking_vertex);"))
-  (define al:ogl-ext-list-allegro-gl-ext-texture-snorm
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_texture_snorm);"))
-  (define al:ogl-ext-list-allegro-gl-amd-draw-buffers-blend
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_draw_buffers_blend);"))
-  (define al:ogl-ext-list-allegro-gl-apple-texture-range
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_texture_range);"))
-  (define al:ogl-ext-list-allegro-gl-apple-float-pixels
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_float_pixels);"))
-  (define al:ogl-ext-list-allegro-gl-apple-vertex-program-evaluators
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_vertex_program_evaluators);"))
-  (define al:ogl-ext-list-allegro-gl-apple-aux-depth-stencil
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_aux_depth_stencil);"))
-  (define al:ogl-ext-list-allegro-gl-apple-object-purgeable
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_object_purgeable);"))
-  (define al:ogl-ext-list-allegro-gl-apple-row-bytes
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_row_bytes);"))
-  (define al:ogl-ext-list-allegro-gl-apple-rgb-422
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_APPLE_rgb_422);"))
-  (define al:ogl-ext-list-allegro-gl-nv-video-capture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_video_capture);"))
-  (define al:ogl-ext-list-allegro-gl-ext-separate-shader-objects
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_EXT_separate_shader_objects);"))
-  (define al:ogl-ext-list-allegro-gl-nv-parameter-buffer-object2
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_parameter_buffer_object2);"))
-  (define al:ogl-ext-list-allegro-gl-nv-shader-buffer-load
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_shader_buffer_load);"))
-  (define al:ogl-ext-list-allegro-gl-nv-vertex-buffer-unified-memory
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_vertex_buffer_unified_memory);"))
-  (define al:ogl-ext-list-allegro-gl-nv-texture-barrier
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_NV_texture_barrier);"))
-  (define al:ogl-ext-list-allegro-gl-amd-shader-stencil-export
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_shader_stencil_export);"))
-  (define al:ogl-ext-list-allegro-gl-amd-seamless-cubemap-per-texture
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_seamless_cubemap_per_texture);"))
-  (define al:ogl-ext-list-allegro-gl-amd-conservative-depth
-    (foreign-lambda*
-      integer
-      (((c-pointer (struct "ALLEGRO_OGL_EXT_LIST")) s))
-      "return(s->ALLEGRO_GL_AMD_conservative_depth);"))
-  (define make-allegro-ogl-ext-list
-    (foreign-lambda*
-      (c-pointer (struct "ALLEGRO_OGL_EXT_LIST"))
-      ((integer ALLEGRO_GL_ARB_imaging)
-       (integer ALLEGRO_GL_ARB_multitexture)
-       (integer ALLEGRO_GL_ARB_transpose_matrix)
-       (integer ALLEGRO_GL_ARB_multisample)
-       (integer ALLEGRO_GL_ARB_texture_env_add)
-       (integer ALLEGRO_GL_ARB_texture_cube_map)
-       (integer ALLEGRO_GL_ARB_texture_compression)
-       (integer ALLEGRO_GL_ARB_texture_border_clamp)
-       (integer ALLEGRO_GL_ARB_point_parameters)
-       (integer ALLEGRO_GL_ARB_vertex_blend)
-       (integer ALLEGRO_GL_ARB_texture_env_combine)
-       (integer ALLEGRO_GL_ARB_texture_env_crossbar)
-       (integer ALLEGRO_GL_ARB_texture_env_dot3)
-       (integer ALLEGRO_GL_ARB_texture_mirrored_repeat)
-       (integer ALLEGRO_GL_ARB_depth_texture)
-       (integer ALLEGRO_GL_ARB_shadow)
-       (integer ALLEGRO_GL_ARB_shadow_ambient)
-       (integer ALLEGRO_GL_ARB_window_pos)
-       (integer ALLEGRO_GL_ARB_vertex_program)
-       (integer ALLEGRO_GL_ARB_fragment_program)
-       (integer ALLEGRO_GL_ARB_vertex_buffer_object)
-       (integer ALLEGRO_GL_ARB_occlusion_query)
-       (integer ALLEGRO_GL_ARB_shader_objects)
-       (integer ALLEGRO_GL_ARB_vertex_shader)
-       (integer ALLEGRO_GL_ARB_fragment_shader)
-       (integer ALLEGRO_GL_ARB_shading_language_100)
-       (integer ALLEGRO_GL_ARB_texture_non_power_of_two)
-       (integer ALLEGRO_GL_ARB_point_sprite)
-       (integer ALLEGRO_GL_ARB_fragment_program_shadow)
-       (integer ALLEGRO_GL_ARB_draw_buffers)
-       (integer ALLEGRO_GL_ARB_texture_rectangle)
-       (integer ALLEGRO_GL_ARB_color_buffer_float)
-       (integer ALLEGRO_GL_ARB_half_float_pixel)
-       (integer ALLEGRO_GL_ARB_texture_float)
-       (integer ALLEGRO_GL_ARB_pixel_buffer_object)
-       (integer ALLEGRO_GL_ARB_instanced_arrays)
-       (integer ALLEGRO_GL_ARB_draw_instanced)
-       (integer ALLEGRO_GL_ARB_geometry_shader4)
-       (integer ALLEGRO_GL_ARB_texture_buffer_object)
-       (integer ALLEGRO_GL_ARB_depth_buffer_float)
-       (integer ALLEGRO_GL_ARB_framebuffer_object)
-       (integer ALLEGRO_GL_ARB_framebuffer_sRGB)
-       (integer ALLEGRO_GL_ARB_half_float_vertex)
-       (integer ALLEGRO_GL_ARB_map_buffer_range)
-       (integer ALLEGRO_GL_ARB_texture_compression_rgtc)
-       (integer ALLEGRO_GL_ARB_texture_rg)
-       (integer ALLEGRO_GL_ARB_vertex_array_object)
-       (integer ALLEGRO_GL_ARB_copy_buffer)
-       (integer ALLEGRO_GL_ARB_compatibility)
-       (integer ALLEGRO_GL_ARB_uniform_buffer_object)
-       (integer ALLEGRO_GL_ARB_shader_texture_lod)
-       (integer ALLEGRO_GL_ARB_depth_clamp)
-       (integer ALLEGRO_GL_ARB_draw_elements_base_vertex)
-       (integer ALLEGRO_GL_ARB_fragment_coord_conventions)
-       (integer ALLEGRO_GL_ARB_provoking_vertex)
-       (integer ALLEGRO_GL_ARB_seamless_cube_map)
-       (integer ALLEGRO_GL_ARB_sync)
-       (integer ALLEGRO_GL_ARB_texture_multisample)
-       (integer ALLEGRO_GL_ARB_vertex_array_bgra)
-       (integer ALLEGRO_GL_ARB_draw_buffers_blend)
-       (integer ALLEGRO_GL_ARB_sample_shading)
-       (integer ALLEGRO_GL_ARB_texture_cube_map_array)
-       (integer ALLEGRO_GL_ARB_texture_gather)
-       (integer ALLEGRO_GL_ARB_texture_query_lod)
-       (integer ALLEGRO_GL_ARB_shading_language_include)
-       (integer ALLEGRO_GL_ARB_texture_compression_bptc)
-       (integer ALLEGRO_GL_ARB_blend_func_extended)
-       (integer ALLEGRO_GL_ARB_explicit_attrib_location)
-       (integer ALLEGRO_GL_ARB_occlusion_query2)
-       (integer ALLEGRO_GL_ARB_sampler_objects)
-       (integer ALLEGRO_GL_ARB_shader_bit_encoding)
-       (integer ALLEGRO_GL_ARB_texture_rgb10_a2ui)
-       (integer ALLEGRO_GL_ARB_texture_swizzle)
-       (integer ALLEGRO_GL_ARB_timer_query)
-       (integer ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev)
-       (integer ALLEGRO_GL_ARB_draw_indirect)
-       (integer ALLEGRO_GL_ARB_gpu_shader5)
-       (integer ALLEGRO_GL_ARB_gpu_shader_fp64)
-       (integer ALLEGRO_GL_ARB_shader_subroutine)
-       (integer ALLEGRO_GL_ARB_tessellation_shader)
-       (integer ALLEGRO_GL_ARB_texture_buffer_object_rgb32)
-       (integer ALLEGRO_GL_ARB_transform_feedback2)
-       (integer ALLEGRO_GL_ARB_transform_feedback3)
-       (integer ALLEGRO_GL_EXT_abgr)
-       (integer ALLEGRO_GL_EXT_blend_color)
-       (integer ALLEGRO_GL_EXT_polygon_offset)
-       (integer ALLEGRO_GL_EXT_texture)
-       (integer ALLEGRO_GL_EXT_texture3D)
-       (integer ALLEGRO_GL_SGIS_texture_filter4)
-       (integer ALLEGRO_GL_EXT_subtexture)
-       (integer ALLEGRO_GL_EXT_copy_texture)
-       (integer ALLEGRO_GL_EXT_histogram)
-       (integer ALLEGRO_GL_EXT_convolution)
-       (integer ALLEGRO_GL_SGI_color_matrix)
-       (integer ALLEGRO_GL_SGI_color_table)
-       (integer ALLEGRO_GL_SGIS_pixel_texture)
-       (integer ALLEGRO_GL_SGIX_pixel_texture)
-       (integer ALLEGRO_GL_SGIS_texture4D)
-       (integer ALLEGRO_GL_SGI_texture_color_table)
-       (integer ALLEGRO_GL_EXT_cmyka)
-       (integer ALLEGRO_GL_EXT_texture_object)
-       (integer ALLEGRO_GL_SGIS_detail_texture)
-       (integer ALLEGRO_GL_SGIS_sharpen_texture)
-       (integer ALLEGRO_GL_EXT_packed_pixels)
-       (integer ALLEGRO_GL_SGIS_texture_lod)
-       (integer ALLEGRO_GL_SGIS_multisample)
-       (integer ALLEGRO_GL_EXT_rescale_normal)
-       (integer ALLEGRO_GL_EXT_vertex_array)
-       (integer ALLEGRO_GL_EXT_misc_attribute)
-       (integer ALLEGRO_GL_SGIS_generate_mipmap)
-       (integer ALLEGRO_GL_SGIX_clipmap)
-       (integer ALLEGRO_GL_SGIX_shadow)
-       (integer ALLEGRO_GL_SGIS_texture_edge_clamp)
-       (integer ALLEGRO_GL_SGIS_texture_border_clamp)
-       (integer ALLEGRO_GL_EXT_blend_minmax)
-       (integer ALLEGRO_GL_EXT_blend_subtract)
-       (integer ALLEGRO_GL_EXT_blend_logic_op)
-       (integer ALLEGRO_GL_SGIX_interlace)
-       (integer ALLEGRO_GL_SGIS_texture_select)
-       (integer ALLEGRO_GL_SGIX_sprite)
-       (integer ALLEGRO_GL_SGIX_texture_multi_buffer)
-       (integer ALLEGRO_GL_EXT_point_parameters)
-       (integer ALLEGRO_GL_SGIX_instruments)
-       (integer ALLEGRO_GL_SGIX_texture_scale_bias)
-       (integer ALLEGRO_GL_SGIX_framezoom)
-       (integer ALLEGRO_GL_SGIX_tag_sample_buffer)
-       (integer ALLEGRO_GL_SGIX_reference_plane)
-       (integer ALLEGRO_GL_SGIX_flush_raster)
-       (integer ALLEGRO_GL_SGIX_depth_texture)
-       (integer ALLEGRO_GL_SGIS_fog_function)
-       (integer ALLEGRO_GL_SGIX_fog_offset)
-       (integer ALLEGRO_GL_HP_image_transform)
-       (integer ALLEGRO_GL_HP_convolution_border_modes)
-       (integer ALLEGRO_GL_SGIX_texture_add_env)
-       (integer ALLEGRO_GL_EXT_color_subtable)
-       (integer ALLEGRO_GL_PGI_vertex_hints)
-       (integer ALLEGRO_GL_PGI_misc_hints)
-       (integer ALLEGRO_GL_EXT_paletted_texture)
-       (integer ALLEGRO_GL_EXT_clip_volume_hint)
-       (integer ALLEGRO_GL_SGIX_list_priority)
-       (integer ALLEGRO_GL_SGIX_ir_instrument1)
-       (integer ALLEGRO_GL_SGIX_texture_lod_bias)
-       (integer ALLEGRO_GL_SGIX_shadow_ambient)
-       (integer ALLEGRO_GL_EXT_index_texture)
-       (integer ALLEGRO_GL_EXT_index_material)
-       (integer ALLEGRO_GL_EXT_index_func)
-       (integer ALLEGRO_GL_EXT_index_array_formats)
-       (integer ALLEGRO_GL_EXT_compiled_vertex_array)
-       (integer ALLEGRO_GL_EXT_cull_vertex)
-       (integer ALLEGRO_GL_SGIX_ycrcb)
-       (integer ALLEGRO_GL_EXT_fragment_lighting)
-       (integer ALLEGRO_GL_IBM_rasterpos_clip)
-       (integer ALLEGRO_GL_HP_texture_lighting)
-       (integer ALLEGRO_GL_EXT_draw_range_elements)
-       (integer ALLEGRO_GL_WIN_phong_shading)
-       (integer ALLEGRO_GL_WIN_specular_fog)
-       (integer ALLEGRO_GL_EXT_light_texture)
-       (integer ALLEGRO_GL_SGIX_blend_alpha_minmax)
-       (integer ALLEGRO_GL_EXT_scene_marker)
-       (integer ALLEGRO_GL_SGIX_pixel_texture_bits)
-       (integer ALLEGRO_GL_EXT_bgra)
-       (integer ALLEGRO_GL_SGIX_async)
-       (integer ALLEGRO_GL_SGIX_async_pixel)
-       (integer ALLEGRO_GL_SGIX_async_histogram)
-       (integer ALLEGRO_GL_INTEL_texture_scissor)
-       (integer ALLEGRO_GL_INTEL_parallel_arrays)
-       (integer ALLEGRO_GL_HP_occlusion_test)
-       (integer ALLEGRO_GL_EXT_pixel_transform)
-       (integer ALLEGRO_GL_EXT_pixel_transform_color_table)
-       (integer ALLEGRO_GL_EXT_shared_texture_palette)
-       (integer ALLEGRO_GL_EXT_separate_specular_color)
-       (integer ALLEGRO_GL_EXT_secondary_color)
-       (integer ALLEGRO_GL_EXT_texture_env)
-       (integer ALLEGRO_GL_EXT_texture_perturb_normal)
-       (integer ALLEGRO_GL_EXT_multi_draw_arrays)
-       (integer ALLEGRO_GL_EXT_fog_coord)
-       (integer ALLEGRO_GL_REND_screen_coordinates)
-       (integer ALLEGRO_GL_EXT_coordinate_frame)
-       (integer ALLEGRO_GL_EXT_texture_env_combine)
-       (integer ALLEGRO_GL_APPLE_specular_vector)
-       (integer ALLEGRO_GL_APPLE_transform_hint)
-       (integer ALLEGRO_GL_SUNX_constant_data)
-       (integer ALLEGRO_GL_SUN_global_alpha)
-       (integer ALLEGRO_GL_SUN_triangle_list)
-       (integer ALLEGRO_GL_SUN_vertex)
-       (integer ALLEGRO_GL_EXT_blend_func_separate)
-       (integer ALLEGRO_GL_INGR_color_clamp)
-       (integer ALLEGRO_GL_INGR_interlace_read)
-       (integer ALLEGRO_GL_EXT_stencil_wrap)
-       (integer ALLEGRO_GL_EXT_422_pixels)
-       (integer ALLEGRO_GL_NV_texgen_reflection)
-       (integer ALLEGRO_GL_SGIX_texture_range)
-       (integer ALLEGRO_GL_SUN_convolution_border_modes)
-       (integer ALLEGRO_GL_EXT_texture_env_add)
-       (integer ALLEGRO_GL_EXT_texture_lod_bias)
-       (integer ALLEGRO_GL_EXT_texture_filter_anisotropic)
-       (integer ALLEGRO_GL_EXT_vertex_weighting)
-       (integer ALLEGRO_GL_NV_light_max_exponent)
-       (integer ALLEGRO_GL_NV_vertex_array_range)
-       (integer ALLEGRO_GL_NV_register_combiners)
-       (integer ALLEGRO_GL_NV_fog_distance)
-       (integer ALLEGRO_GL_NV_texgen_emboss)
-       (integer ALLEGRO_GL_NV_blend_square)
-       (integer ALLEGRO_GL_NV_texture_env_combine4)
-       (integer ALLEGRO_GL_MESA_resize_buffers)
-       (integer ALLEGRO_GL_MESA_window_pos)
-       (integer ALLEGRO_GL_EXT_texture_compression_s3tc)
-       (integer ALLEGRO_GL_IBM_cull_vertex)
-       (integer ALLEGRO_GL_IBM_multimode_draw_arrays)
-       (integer ALLEGRO_GL_IBM_vertex_array_lists)
-       (integer ALLEGRO_GL_3DFX_texture_compression_FXT1)
-       (integer ALLEGRO_GL_3DFX_multisample)
-       (integer ALLEGRO_GL_3DFX_tbuffer)
-       (integer ALLEGRO_GL_SGIX_vertex_preclip)
-       (integer ALLEGRO_GL_SGIX_resample)
-       (integer ALLEGRO_GL_SGIS_texture_color_mask)
-       (integer ALLEGRO_GL_EXT_texture_env_dot3)
-       (integer ALLEGRO_GL_ATI_texture_mirror_once)
-       (integer ALLEGRO_GL_NV_fence)
-       (integer ALLEGRO_GL_IBM_static_data)
-       (integer ALLEGRO_GL_IBM_texture_mirrored_repeat)
-       (integer ALLEGRO_GL_NV_evaluators)
-       (integer ALLEGRO_GL_NV_packed_depth_stencil)
-       (integer ALLEGRO_GL_NV_register_combiners2)
-       (integer ALLEGRO_GL_NV_texture_compression_vtc)
-       (integer ALLEGRO_GL_NV_texture_rectangle)
-       (integer ALLEGRO_GL_NV_texture_shader)
-       (integer ALLEGRO_GL_NV_texture_shader2)
-       (integer ALLEGRO_GL_NV_vertex_array_range2)
-       (integer ALLEGRO_GL_NV_vertex_program)
-       (integer ALLEGRO_GL_SGIX_texture_coordinate_clamp)
-       (integer ALLEGRO_GL_OML_interlace)
-       (integer ALLEGRO_GL_OML_subsample)
-       (integer ALLEGRO_GL_OML_resample)
-       (integer ALLEGRO_GL_NV_copy_depth_to_color)
-       (integer ALLEGRO_GL_ATI_envmap_bumpmap)
-       (integer ALLEGRO_GL_ATI_fragment_shader)
-       (integer ALLEGRO_GL_ATI_pn_triangles)
-       (integer ALLEGRO_GL_ATI_vertex_array_object)
-       (integer ALLEGRO_GL_EXT_vertex_shader)
-       (integer ALLEGRO_GL_ATI_vertex_streams)
-       (integer ALLEGRO_GL_ATI_element_array)
-       (integer ALLEGRO_GL_SUN_mesh_array)
-       (integer ALLEGRO_GL_SUN_slice_accum)
-       (integer ALLEGRO_GL_NV_multisample_filter_hint)
-       (integer ALLEGRO_GL_NV_depth_clamp)
-       (integer ALLEGRO_GL_NV_occlusion_query)
-       (integer ALLEGRO_GL_NV_point_sprite)
-       (integer ALLEGRO_GL_NV_texture_shader3)
-       (integer ALLEGRO_GL_NV_vertex_program1_1)
-       (integer ALLEGRO_GL_EXT_shadow_funcs)
-       (integer ALLEGRO_GL_EXT_stencil_two_side)
-       (integer ALLEGRO_GL_ATI_text_fragment_shader)
-       (integer ALLEGRO_GL_APPLE_client_storage)
-       (integer ALLEGRO_GL_APPLE_element_array)
-       (integer ALLEGRO_GL_APPLE_fence)
-       (integer ALLEGRO_GL_APPLE_vertex_array_object)
-       (integer ALLEGRO_GL_APPLE_vertex_array_range)
-       (integer ALLEGRO_GL_APPLE_ycbcr_422)
-       (integer ALLEGRO_GL_S3_s3tc)
-       (integer ALLEGRO_GL_ATI_draw_buffers)
-       (integer ALLEGRO_GL_ATI_texture_env_combine3)
-       (integer ALLEGRO_GL_ATI_texture_float)
-       (integer ALLEGRO_GL_NV_float_buffer)
-       (integer ALLEGRO_GL_NV_fragment_program)
-       (integer ALLEGRO_GL_NV_half_float)
-       (integer ALLEGRO_GL_NV_pixel_data_range)
-       (integer ALLEGRO_GL_NV_primitive_restart)
-       (integer ALLEGRO_GL_NV_texture_expand_normal)
-       (integer ALLEGRO_GL_NV_vertex_program2)
-       (integer ALLEGRO_GL_ATI_map_object_buffer)
-       (integer ALLEGRO_GL_ATI_separate_stencil)
-       (integer ALLEGRO_GL_ATI_vertex_attrib_array_object)
-       (integer ALLEGRO_GL_OES_byte_coordinates)
-       (integer ALLEGRO_GL_OES_fixed_point)
-       (integer ALLEGRO_GL_OES_single_precision)
-       (integer ALLEGRO_GL_OES_compressed_paletted_texture)
-       (integer ALLEGRO_GL_OES_read_format)
-       (integer ALLEGRO_GL_OES_query_matrix)
-       (integer ALLEGRO_GL_OES_framebuffer_object)
-       (integer ALLEGRO_GL_OES_texture_npot)
-       (integer ALLEGRO_GL_EXT_depth_bounds_test)
-       (integer ALLEGRO_GL_EXT_texture_mirror_clamp)
-       (integer ALLEGRO_GL_EXT_blend_equation_separate)
-       (integer ALLEGRO_GL_MESA_pack_invert)
-       (integer ALLEGRO_GL_MESA_ycbcr_texture)
-       (integer ALLEGRO_GL_EXT_pixel_buffer_object)
-       (integer ALLEGRO_GL_NV_fragment_program_option)
-       (integer ALLEGRO_GL_NV_fragment_program2)
-       (integer ALLEGRO_GL_NV_vertex_program2_option)
-       (integer ALLEGRO_GL_NV_vertex_program3)
-       (integer ALLEGRO_GL_EXT_texture_compression_dxt1)
-       (integer ALLEGRO_GL_EXT_framebuffer_object)
-       (integer ALLEGRO_GL_GREMEDY_string_marker)
-       (integer ALLEGRO_GL_EXT_packed_depth_stencil)
-       (integer ALLEGRO_GL_EXT_stencil_clear_tag)
-       (integer ALLEGRO_GL_EXT_texture_sRGB)
-       (integer ALLEGRO_GL_EXT_framebuffer_blit)
-       (integer ALLEGRO_GL_EXT_framebuffer_multisample)
-       (integer ALLEGRO_GL_MESAX_texture_stack)
-       (integer ALLEGRO_GL_EXT_timer_query)
-       (integer ALLEGRO_GL_EXT_gpu_program_parameters)
-       (integer ALLEGRO_GL_APPLE_flush_buffer_range)
-       (integer ALLEGRO_GL_EXT_bindable_uniform)
-       (integer ALLEGRO_GL_EXT_draw_buffers2)
-       (integer ALLEGRO_GL_EXT_draw_instanced)
-       (integer ALLEGRO_GL_EXT_framebuffer_sRGB)
-       (integer ALLEGRO_GL_EXT_geometry_shader4)
-       (integer ALLEGRO_GL_EXT_gpu_shader4)
-       (integer ALLEGRO_GL_EXT_packed_float)
-       (integer ALLEGRO_GL_EXT_texture_array)
-       (integer ALLEGRO_GL_EXT_texture_buffer_object)
-       (integer ALLEGRO_GL_EXT_texture_compression_latc)
-       (integer ALLEGRO_GL_EXT_texture_compression_rgtc)
-       (integer ALLEGRO_GL_EXT_texture_integer)
-       (integer ALLEGRO_GL_EXT_texture_shared_exponent)
-       (integer ALLEGRO_GL_NV_depth_buffer_float)
-       (integer ALLEGRO_GL_NV_fragment_program4)
-       (integer ALLEGRO_GL_NV_framebuffer_multisample_coverage)
-       (integer ALLEGRO_GL_NV_geometry_program4)
-       (integer ALLEGRO_GL_NV_gpu_program4)
-       (integer ALLEGRO_GL_NV_parameter_buffer_object)
-       (integer ALLEGRO_GL_NV_transform_feedback)
-       (integer ALLEGRO_GL_NV_vertex_program4)
-       (integer ALLEGRO_GL_GREMEDY_frame_terminator)
-       (integer ALLEGRO_GL_NV_conditional_render)
-       (integer ALLEGRO_GL_NV_present_video)
-       (integer ALLEGRO_GL_EXT_direct_state_access)
-       (integer ALLEGRO_GL_EXT_transform_feedback)
-       (integer ALLEGRO_GL_EXT_texture_swizzle)
-       (integer ALLEGRO_GL_NV_explicit_multisample)
-       (integer ALLEGRO_GL_NV_transform_feedback2)
-       (integer ALLEGRO_GL_ATI_meminfo)
-       (integer ALLEGRO_GL_AMD_performance_monitor)
-       (integer ALLEGRO_GL_AMD_texture_texture4)
-       (integer ALLEGRO_GL_AMD_vertex_shader_tesselator)
-       (integer ALLEGRO_GL_EXT_provoking_vertex)
-       (integer ALLEGRO_GL_EXT_texture_snorm)
-       (integer ALLEGRO_GL_AMD_draw_buffers_blend)
-       (integer ALLEGRO_GL_APPLE_texture_range)
-       (integer ALLEGRO_GL_APPLE_float_pixels)
-       (integer ALLEGRO_GL_APPLE_vertex_program_evaluators)
-       (integer ALLEGRO_GL_APPLE_aux_depth_stencil)
-       (integer ALLEGRO_GL_APPLE_object_purgeable)
-       (integer ALLEGRO_GL_APPLE_row_bytes)
-       (integer ALLEGRO_GL_APPLE_rgb_422)
-       (integer ALLEGRO_GL_NV_video_capture)
-       (integer ALLEGRO_GL_EXT_separate_shader_objects)
-       (integer ALLEGRO_GL_NV_parameter_buffer_object2)
-       (integer ALLEGRO_GL_NV_shader_buffer_load)
-       (integer ALLEGRO_GL_NV_vertex_buffer_unified_memory)
-       (integer ALLEGRO_GL_NV_texture_barrier)
-       (integer ALLEGRO_GL_AMD_shader_stencil_export)
-       (integer ALLEGRO_GL_AMD_seamless_cubemap_per_texture)
-       (integer ALLEGRO_GL_AMD_conservative_depth))
-      "struct ALLEGRO_OGL_EXT_LIST *tmp_ =  (struct ALLEGRO_OGL_EXT_LIST *)C_malloc(sizeof(struct ALLEGRO_OGL_EXT_LIST));\ntmp_->ALLEGRO_GL_ARB_imaging = ALLEGRO_GL_ARB_imaging;\ntmp_->ALLEGRO_GL_ARB_multitexture = ALLEGRO_GL_ARB_multitexture;\ntmp_->ALLEGRO_GL_ARB_transpose_matrix = ALLEGRO_GL_ARB_transpose_matrix;\ntmp_->ALLEGRO_GL_ARB_multisample = ALLEGRO_GL_ARB_multisample;\ntmp_->ALLEGRO_GL_ARB_texture_env_add = ALLEGRO_GL_ARB_texture_env_add;\ntmp_->ALLEGRO_GL_ARB_texture_cube_map = ALLEGRO_GL_ARB_texture_cube_map;\ntmp_->ALLEGRO_GL_ARB_texture_compression = ALLEGRO_GL_ARB_texture_compression;\ntmp_->ALLEGRO_GL_ARB_texture_border_clamp = ALLEGRO_GL_ARB_texture_border_clamp;\ntmp_->ALLEGRO_GL_ARB_point_parameters = ALLEGRO_GL_ARB_point_parameters;\ntmp_->ALLEGRO_GL_ARB_vertex_blend = ALLEGRO_GL_ARB_vertex_blend;\ntmp_->ALLEGRO_GL_ARB_texture_env_combine = ALLEGRO_GL_ARB_texture_env_combine;\ntmp_->ALLEGRO_GL_ARB_texture_env_crossbar = ALLEGRO_GL_ARB_texture_env_crossbar;\ntmp_->ALLEGRO_GL_ARB_texture_env_dot3 = ALLEGRO_GL_ARB_texture_env_dot3;\ntmp_->ALLEGRO_GL_ARB_texture_mirrored_repeat = ALLEGRO_GL_ARB_texture_mirrored_repeat;\ntmp_->ALLEGRO_GL_ARB_depth_texture = ALLEGRO_GL_ARB_depth_texture;\ntmp_->ALLEGRO_GL_ARB_shadow = ALLEGRO_GL_ARB_shadow;\ntmp_->ALLEGRO_GL_ARB_shadow_ambient = ALLEGRO_GL_ARB_shadow_ambient;\ntmp_->ALLEGRO_GL_ARB_window_pos = ALLEGRO_GL_ARB_window_pos;\ntmp_->ALLEGRO_GL_ARB_vertex_program = ALLEGRO_GL_ARB_vertex_program;\ntmp_->ALLEGRO_GL_ARB_fragment_program = ALLEGRO_GL_ARB_fragment_program;\ntmp_->ALLEGRO_GL_ARB_vertex_buffer_object = ALLEGRO_GL_ARB_vertex_buffer_object;\ntmp_->ALLEGRO_GL_ARB_occlusion_query = ALLEGRO_GL_ARB_occlusion_query;\ntmp_->ALLEGRO_GL_ARB_shader_objects = ALLEGRO_GL_ARB_shader_objects;\ntmp_->ALLEGRO_GL_ARB_vertex_shader = ALLEGRO_GL_ARB_vertex_shader;\ntmp_->ALLEGRO_GL_ARB_fragment_shader = ALLEGRO_GL_ARB_fragment_shader;\ntmp_->ALLEGRO_GL_ARB_shading_language_100 = ALLEGRO_GL_ARB_shading_language_100;\ntmp_->ALLEGRO_GL_ARB_texture_non_power_of_two = ALLEGRO_GL_ARB_texture_non_power_of_two;\ntmp_->ALLEGRO_GL_ARB_point_sprite = ALLEGRO_GL_ARB_point_sprite;\ntmp_->ALLEGRO_GL_ARB_fragment_program_shadow = ALLEGRO_GL_ARB_fragment_program_shadow;\ntmp_->ALLEGRO_GL_ARB_draw_buffers = ALLEGRO_GL_ARB_draw_buffers;\ntmp_->ALLEGRO_GL_ARB_texture_rectangle = ALLEGRO_GL_ARB_texture_rectangle;\ntmp_->ALLEGRO_GL_ARB_color_buffer_float = ALLEGRO_GL_ARB_color_buffer_float;\ntmp_->ALLEGRO_GL_ARB_half_float_pixel = ALLEGRO_GL_ARB_half_float_pixel;\ntmp_->ALLEGRO_GL_ARB_texture_float = ALLEGRO_GL_ARB_texture_float;\ntmp_->ALLEGRO_GL_ARB_pixel_buffer_object = ALLEGRO_GL_ARB_pixel_buffer_object;\ntmp_->ALLEGRO_GL_ARB_instanced_arrays = ALLEGRO_GL_ARB_instanced_arrays;\ntmp_->ALLEGRO_GL_ARB_draw_instanced = ALLEGRO_GL_ARB_draw_instanced;\ntmp_->ALLEGRO_GL_ARB_geometry_shader4 = ALLEGRO_GL_ARB_geometry_shader4;\ntmp_->ALLEGRO_GL_ARB_texture_buffer_object = ALLEGRO_GL_ARB_texture_buffer_object;\ntmp_->ALLEGRO_GL_ARB_depth_buffer_float = ALLEGRO_GL_ARB_depth_buffer_float;\ntmp_->ALLEGRO_GL_ARB_framebuffer_object = ALLEGRO_GL_ARB_framebuffer_object;\ntmp_->ALLEGRO_GL_ARB_framebuffer_sRGB = ALLEGRO_GL_ARB_framebuffer_sRGB;\ntmp_->ALLEGRO_GL_ARB_half_float_vertex = ALLEGRO_GL_ARB_half_float_vertex;\ntmp_->ALLEGRO_GL_ARB_map_buffer_range = ALLEGRO_GL_ARB_map_buffer_range;\ntmp_->ALLEGRO_GL_ARB_texture_compression_rgtc = ALLEGRO_GL_ARB_texture_compression_rgtc;\ntmp_->ALLEGRO_GL_ARB_texture_rg = ALLEGRO_GL_ARB_texture_rg;\ntmp_->ALLEGRO_GL_ARB_vertex_array_object = ALLEGRO_GL_ARB_vertex_array_object;\ntmp_->ALLEGRO_GL_ARB_copy_buffer = ALLEGRO_GL_ARB_copy_buffer;\ntmp_->ALLEGRO_GL_ARB_compatibility = ALLEGRO_GL_ARB_compatibility;\ntmp_->ALLEGRO_GL_ARB_uniform_buffer_object = ALLEGRO_GL_ARB_uniform_buffer_object;\ntmp_->ALLEGRO_GL_ARB_shader_texture_lod = ALLEGRO_GL_ARB_shader_texture_lod;\ntmp_->ALLEGRO_GL_ARB_depth_clamp = ALLEGRO_GL_ARB_depth_clamp;\ntmp_->ALLEGRO_GL_ARB_draw_elements_base_vertex = ALLEGRO_GL_ARB_draw_elements_base_vertex;\ntmp_->ALLEGRO_GL_ARB_fragment_coord_conventions = ALLEGRO_GL_ARB_fragment_coord_conventions;\ntmp_->ALLEGRO_GL_ARB_provoking_vertex = ALLEGRO_GL_ARB_provoking_vertex;\ntmp_->ALLEGRO_GL_ARB_seamless_cube_map = ALLEGRO_GL_ARB_seamless_cube_map;\ntmp_->ALLEGRO_GL_ARB_sync = ALLEGRO_GL_ARB_sync;\ntmp_->ALLEGRO_GL_ARB_texture_multisample = ALLEGRO_GL_ARB_texture_multisample;\ntmp_->ALLEGRO_GL_ARB_vertex_array_bgra = ALLEGRO_GL_ARB_vertex_array_bgra;\ntmp_->ALLEGRO_GL_ARB_draw_buffers_blend = ALLEGRO_GL_ARB_draw_buffers_blend;\ntmp_->ALLEGRO_GL_ARB_sample_shading = ALLEGRO_GL_ARB_sample_shading;\ntmp_->ALLEGRO_GL_ARB_texture_cube_map_array = ALLEGRO_GL_ARB_texture_cube_map_array;\ntmp_->ALLEGRO_GL_ARB_texture_gather = ALLEGRO_GL_ARB_texture_gather;\ntmp_->ALLEGRO_GL_ARB_texture_query_lod = ALLEGRO_GL_ARB_texture_query_lod;\ntmp_->ALLEGRO_GL_ARB_shading_language_include = ALLEGRO_GL_ARB_shading_language_include;\ntmp_->ALLEGRO_GL_ARB_texture_compression_bptc = ALLEGRO_GL_ARB_texture_compression_bptc;\ntmp_->ALLEGRO_GL_ARB_blend_func_extended = ALLEGRO_GL_ARB_blend_func_extended;\ntmp_->ALLEGRO_GL_ARB_explicit_attrib_location = ALLEGRO_GL_ARB_explicit_attrib_location;\ntmp_->ALLEGRO_GL_ARB_occlusion_query2 = ALLEGRO_GL_ARB_occlusion_query2;\ntmp_->ALLEGRO_GL_ARB_sampler_objects = ALLEGRO_GL_ARB_sampler_objects;\ntmp_->ALLEGRO_GL_ARB_shader_bit_encoding = ALLEGRO_GL_ARB_shader_bit_encoding;\ntmp_->ALLEGRO_GL_ARB_texture_rgb10_a2ui = ALLEGRO_GL_ARB_texture_rgb10_a2ui;\ntmp_->ALLEGRO_GL_ARB_texture_swizzle = ALLEGRO_GL_ARB_texture_swizzle;\ntmp_->ALLEGRO_GL_ARB_timer_query = ALLEGRO_GL_ARB_timer_query;\ntmp_->ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev = ALLEGRO_GL_ARB_vertex_type_2_10_10_10_rev;\ntmp_->ALLEGRO_GL_ARB_draw_indirect = ALLEGRO_GL_ARB_draw_indirect;\ntmp_->ALLEGRO_GL_ARB_gpu_shader5 = ALLEGRO_GL_ARB_gpu_shader5;\ntmp_->ALLEGRO_GL_ARB_gpu_shader_fp64 = ALLEGRO_GL_ARB_gpu_shader_fp64;\ntmp_->ALLEGRO_GL_ARB_shader_subroutine = ALLEGRO_GL_ARB_shader_subroutine;\ntmp_->ALLEGRO_GL_ARB_tessellation_shader = ALLEGRO_GL_ARB_tessellation_shader;\ntmp_->ALLEGRO_GL_ARB_texture_buffer_object_rgb32 = ALLEGRO_GL_ARB_texture_buffer_object_rgb32;\ntmp_->ALLEGRO_GL_ARB_transform_feedback2 = ALLEGRO_GL_ARB_transform_feedback2;\ntmp_->ALLEGRO_GL_ARB_transform_feedback3 = ALLEGRO_GL_ARB_transform_feedback3;\ntmp_->ALLEGRO_GL_EXT_abgr = ALLEGRO_GL_EXT_abgr;\ntmp_->ALLEGRO_GL_EXT_blend_color = ALLEGRO_GL_EXT_blend_color;\ntmp_->ALLEGRO_GL_EXT_polygon_offset = ALLEGRO_GL_EXT_polygon_offset;\ntmp_->ALLEGRO_GL_EXT_texture = ALLEGRO_GL_EXT_texture;\ntmp_->ALLEGRO_GL_EXT_texture3D = ALLEGRO_GL_EXT_texture3D;\ntmp_->ALLEGRO_GL_SGIS_texture_filter4 = ALLEGRO_GL_SGIS_texture_filter4;\ntmp_->ALLEGRO_GL_EXT_subtexture = ALLEGRO_GL_EXT_subtexture;\ntmp_->ALLEGRO_GL_EXT_copy_texture = ALLEGRO_GL_EXT_copy_texture;\ntmp_->ALLEGRO_GL_EXT_histogram = ALLEGRO_GL_EXT_histogram;\ntmp_->ALLEGRO_GL_EXT_convolution = ALLEGRO_GL_EXT_convolution;\ntmp_->ALLEGRO_GL_SGI_color_matrix = ALLEGRO_GL_SGI_color_matrix;\ntmp_->ALLEGRO_GL_SGI_color_table = ALLEGRO_GL_SGI_color_table;\ntmp_->ALLEGRO_GL_SGIS_pixel_texture = ALLEGRO_GL_SGIS_pixel_texture;\ntmp_->ALLEGRO_GL_SGIX_pixel_texture = ALLEGRO_GL_SGIX_pixel_texture;\ntmp_->ALLEGRO_GL_SGIS_texture4D = ALLEGRO_GL_SGIS_texture4D;\ntmp_->ALLEGRO_GL_SGI_texture_color_table = ALLEGRO_GL_SGI_texture_color_table;\ntmp_->ALLEGRO_GL_EXT_cmyka = ALLEGRO_GL_EXT_cmyka;\ntmp_->ALLEGRO_GL_EXT_texture_object = ALLEGRO_GL_EXT_texture_object;\ntmp_->ALLEGRO_GL_SGIS_detail_texture = ALLEGRO_GL_SGIS_detail_texture;\ntmp_->ALLEGRO_GL_SGIS_sharpen_texture = ALLEGRO_GL_SGIS_sharpen_texture;\ntmp_->ALLEGRO_GL_EXT_packed_pixels = ALLEGRO_GL_EXT_packed_pixels;\ntmp_->ALLEGRO_GL_SGIS_texture_lod = ALLEGRO_GL_SGIS_texture_lod;\ntmp_->ALLEGRO_GL_SGIS_multisample = ALLEGRO_GL_SGIS_multisample;\ntmp_->ALLEGRO_GL_EXT_rescale_normal = ALLEGRO_GL_EXT_rescale_normal;\ntmp_->ALLEGRO_GL_EXT_vertex_array = ALLEGRO_GL_EXT_vertex_array;\ntmp_->ALLEGRO_GL_EXT_misc_attribute = ALLEGRO_GL_EXT_misc_attribute;\ntmp_->ALLEGRO_GL_SGIS_generate_mipmap = ALLEGRO_GL_SGIS_generate_mipmap;\ntmp_->ALLEGRO_GL_SGIX_clipmap = ALLEGRO_GL_SGIX_clipmap;\ntmp_->ALLEGRO_GL_SGIX_shadow = ALLEGRO_GL_SGIX_shadow;\ntmp_->ALLEGRO_GL_SGIS_texture_edge_clamp = ALLEGRO_GL_SGIS_texture_edge_clamp;\ntmp_->ALLEGRO_GL_SGIS_texture_border_clamp = ALLEGRO_GL_SGIS_texture_border_clamp;\ntmp_->ALLEGRO_GL_EXT_blend_minmax = ALLEGRO_GL_EXT_blend_minmax;\ntmp_->ALLEGRO_GL_EXT_blend_subtract = ALLEGRO_GL_EXT_blend_subtract;\ntmp_->ALLEGRO_GL_EXT_blend_logic_op = ALLEGRO_GL_EXT_blend_logic_op;\ntmp_->ALLEGRO_GL_SGIX_interlace = ALLEGRO_GL_SGIX_interlace;\ntmp_->ALLEGRO_GL_SGIS_texture_select = ALLEGRO_GL_SGIS_texture_select;\ntmp_->ALLEGRO_GL_SGIX_sprite = ALLEGRO_GL_SGIX_sprite;\ntmp_->ALLEGRO_GL_SGIX_texture_multi_buffer = ALLEGRO_GL_SGIX_texture_multi_buffer;\ntmp_->ALLEGRO_GL_EXT_point_parameters = ALLEGRO_GL_EXT_point_parameters;\ntmp_->ALLEGRO_GL_SGIX_instruments = ALLEGRO_GL_SGIX_instruments;\ntmp_->ALLEGRO_GL_SGIX_texture_scale_bias = ALLEGRO_GL_SGIX_texture_scale_bias;\ntmp_->ALLEGRO_GL_SGIX_framezoom = ALLEGRO_GL_SGIX_framezoom;\ntmp_->ALLEGRO_GL_SGIX_tag_sample_buffer = ALLEGRO_GL_SGIX_tag_sample_buffer;\ntmp_->ALLEGRO_GL_SGIX_reference_plane = ALLEGRO_GL_SGIX_reference_plane;\ntmp_->ALLEGRO_GL_SGIX_flush_raster = ALLEGRO_GL_SGIX_flush_raster;\ntmp_->ALLEGRO_GL_SGIX_depth_texture = ALLEGRO_GL_SGIX_depth_texture;\ntmp_->ALLEGRO_GL_SGIS_fog_function = ALLEGRO_GL_SGIS_fog_function;\ntmp_->ALLEGRO_GL_SGIX_fog_offset = ALLEGRO_GL_SGIX_fog_offset;\ntmp_->ALLEGRO_GL_HP_image_transform = ALLEGRO_GL_HP_image_transform;\ntmp_->ALLEGRO_GL_HP_convolution_border_modes = ALLEGRO_GL_HP_convolution_border_modes;\ntmp_->ALLEGRO_GL_SGIX_texture_add_env = ALLEGRO_GL_SGIX_texture_add_env;\ntmp_->ALLEGRO_GL_EXT_color_subtable = ALLEGRO_GL_EXT_color_subtable;\ntmp_->ALLEGRO_GL_PGI_vertex_hints = ALLEGRO_GL_PGI_vertex_hints;\ntmp_->ALLEGRO_GL_PGI_misc_hints = ALLEGRO_GL_PGI_misc_hints;\ntmp_->ALLEGRO_GL_EXT_paletted_texture = ALLEGRO_GL_EXT_paletted_texture;\ntmp_->ALLEGRO_GL_EXT_clip_volume_hint = ALLEGRO_GL_EXT_clip_volume_hint;\ntmp_->ALLEGRO_GL_SGIX_list_priority = ALLEGRO_GL_SGIX_list_priority;\ntmp_->ALLEGRO_GL_SGIX_ir_instrument1 = ALLEGRO_GL_SGIX_ir_instrument1;\ntmp_->ALLEGRO_GL_SGIX_texture_lod_bias = ALLEGRO_GL_SGIX_texture_lod_bias;\ntmp_->ALLEGRO_GL_SGIX_shadow_ambient = ALLEGRO_GL_SGIX_shadow_ambient;\ntmp_->ALLEGRO_GL_EXT_index_texture = ALLEGRO_GL_EXT_index_texture;\ntmp_->ALLEGRO_GL_EXT_index_material = ALLEGRO_GL_EXT_index_material;\ntmp_->ALLEGRO_GL_EXT_index_func = ALLEGRO_GL_EXT_index_func;\ntmp_->ALLEGRO_GL_EXT_index_array_formats = ALLEGRO_GL_EXT_index_array_formats;\ntmp_->ALLEGRO_GL_EXT_compiled_vertex_array = ALLEGRO_GL_EXT_compiled_vertex_array;\ntmp_->ALLEGRO_GL_EXT_cull_vertex = ALLEGRO_GL_EXT_cull_vertex;\ntmp_->ALLEGRO_GL_SGIX_ycrcb = ALLEGRO_GL_SGIX_ycrcb;\ntmp_->ALLEGRO_GL_EXT_fragment_lighting = ALLEGRO_GL_EXT_fragment_lighting;\ntmp_->ALLEGRO_GL_IBM_rasterpos_clip = ALLEGRO_GL_IBM_rasterpos_clip;\ntmp_->ALLEGRO_GL_HP_texture_lighting = ALLEGRO_GL_HP_texture_lighting;\ntmp_->ALLEGRO_GL_EXT_draw_range_elements = ALLEGRO_GL_EXT_draw_range_elements;\ntmp_->ALLEGRO_GL_WIN_phong_shading = ALLEGRO_GL_WIN_phong_shading;\ntmp_->ALLEGRO_GL_WIN_specular_fog = ALLEGRO_GL_WIN_specular_fog;\ntmp_->ALLEGRO_GL_EXT_light_texture = ALLEGRO_GL_EXT_light_texture;\ntmp_->ALLEGRO_GL_SGIX_blend_alpha_minmax = ALLEGRO_GL_SGIX_blend_alpha_minmax;\ntmp_->ALLEGRO_GL_EXT_scene_marker = ALLEGRO_GL_EXT_scene_marker;\ntmp_->ALLEGRO_GL_SGIX_pixel_texture_bits = ALLEGRO_GL_SGIX_pixel_texture_bits;\ntmp_->ALLEGRO_GL_EXT_bgra = ALLEGRO_GL_EXT_bgra;\ntmp_->ALLEGRO_GL_SGIX_async = ALLEGRO_GL_SGIX_async;\ntmp_->ALLEGRO_GL_SGIX_async_pixel = ALLEGRO_GL_SGIX_async_pixel;\ntmp_->ALLEGRO_GL_SGIX_async_histogram = ALLEGRO_GL_SGIX_async_histogram;\ntmp_->ALLEGRO_GL_INTEL_texture_scissor = ALLEGRO_GL_INTEL_texture_scissor;\ntmp_->ALLEGRO_GL_INTEL_parallel_arrays = ALLEGRO_GL_INTEL_parallel_arrays;\ntmp_->ALLEGRO_GL_HP_occlusion_test = ALLEGRO_GL_HP_occlusion_test;\ntmp_->ALLEGRO_GL_EXT_pixel_transform = ALLEGRO_GL_EXT_pixel_transform;\ntmp_->ALLEGRO_GL_EXT_pixel_transform_color_table = ALLEGRO_GL_EXT_pixel_transform_color_table;\ntmp_->ALLEGRO_GL_EXT_shared_texture_palette = ALLEGRO_GL_EXT_shared_texture_palette;\ntmp_->ALLEGRO_GL_EXT_separate_specular_color = ALLEGRO_GL_EXT_separate_specular_color;\ntmp_->ALLEGRO_GL_EXT_secondary_color = ALLEGRO_GL_EXT_secondary_color;\ntmp_->ALLEGRO_GL_EXT_texture_env = ALLEGRO_GL_EXT_texture_env;\ntmp_->ALLEGRO_GL_EXT_texture_perturb_normal = ALLEGRO_GL_EXT_texture_perturb_normal;\ntmp_->ALLEGRO_GL_EXT_multi_draw_arrays = ALLEGRO_GL_EXT_multi_draw_arrays;\ntmp_->ALLEGRO_GL_EXT_fog_coord = ALLEGRO_GL_EXT_fog_coord;\ntmp_->ALLEGRO_GL_REND_screen_coordinates = ALLEGRO_GL_REND_screen_coordinates;\ntmp_->ALLEGRO_GL_EXT_coordinate_frame = ALLEGRO_GL_EXT_coordinate_frame;\ntmp_->ALLEGRO_GL_EXT_texture_env_combine = ALLEGRO_GL_EXT_texture_env_combine;\ntmp_->ALLEGRO_GL_APPLE_specular_vector = ALLEGRO_GL_APPLE_specular_vector;\ntmp_->ALLEGRO_GL_APPLE_transform_hint = ALLEGRO_GL_APPLE_transform_hint;\ntmp_->ALLEGRO_GL_SUNX_constant_data = ALLEGRO_GL_SUNX_constant_data;\ntmp_->ALLEGRO_GL_SUN_global_alpha = ALLEGRO_GL_SUN_global_alpha;\ntmp_->ALLEGRO_GL_SUN_triangle_list = ALLEGRO_GL_SUN_triangle_list;\ntmp_->ALLEGRO_GL_SUN_vertex = ALLEGRO_GL_SUN_vertex;\ntmp_->ALLEGRO_GL_EXT_blend_func_separate = ALLEGRO_GL_EXT_blend_func_separate;\ntmp_->ALLEGRO_GL_INGR_color_clamp = ALLEGRO_GL_INGR_color_clamp;\ntmp_->ALLEGRO_GL_INGR_interlace_read = ALLEGRO_GL_INGR_interlace_read;\ntmp_->ALLEGRO_GL_EXT_stencil_wrap = ALLEGRO_GL_EXT_stencil_wrap;\ntmp_->ALLEGRO_GL_EXT_422_pixels = ALLEGRO_GL_EXT_422_pixels;\ntmp_->ALLEGRO_GL_NV_texgen_reflection = ALLEGRO_GL_NV_texgen_reflection;\ntmp_->ALLEGRO_GL_SGIX_texture_range = ALLEGRO_GL_SGIX_texture_range;\ntmp_->ALLEGRO_GL_SUN_convolution_border_modes = ALLEGRO_GL_SUN_convolution_border_modes;\ntmp_->ALLEGRO_GL_EXT_texture_env_add = ALLEGRO_GL_EXT_texture_env_add;\ntmp_->ALLEGRO_GL_EXT_texture_lod_bias = ALLEGRO_GL_EXT_texture_lod_bias;\ntmp_->ALLEGRO_GL_EXT_texture_filter_anisotropic = ALLEGRO_GL_EXT_texture_filter_anisotropic;\ntmp_->ALLEGRO_GL_EXT_vertex_weighting = ALLEGRO_GL_EXT_vertex_weighting;\ntmp_->ALLEGRO_GL_NV_light_max_exponent = ALLEGRO_GL_NV_light_max_exponent;\ntmp_->ALLEGRO_GL_NV_vertex_array_range = ALLEGRO_GL_NV_vertex_array_range;\ntmp_->ALLEGRO_GL_NV_register_combiners = ALLEGRO_GL_NV_register_combiners;\ntmp_->ALLEGRO_GL_NV_fog_distance = ALLEGRO_GL_NV_fog_distance;\ntmp_->ALLEGRO_GL_NV_texgen_emboss = ALLEGRO_GL_NV_texgen_emboss;\ntmp_->ALLEGRO_GL_NV_blend_square = ALLEGRO_GL_NV_blend_square;\ntmp_->ALLEGRO_GL_NV_texture_env_combine4 = ALLEGRO_GL_NV_texture_env_combine4;\ntmp_->ALLEGRO_GL_MESA_resize_buffers = ALLEGRO_GL_MESA_resize_buffers;\ntmp_->ALLEGRO_GL_MESA_window_pos = ALLEGRO_GL_MESA_window_pos;\ntmp_->ALLEGRO_GL_EXT_texture_compression_s3tc = ALLEGRO_GL_EXT_texture_compression_s3tc;\ntmp_->ALLEGRO_GL_IBM_cull_vertex = ALLEGRO_GL_IBM_cull_vertex;\ntmp_->ALLEGRO_GL_IBM_multimode_draw_arrays = ALLEGRO_GL_IBM_multimode_draw_arrays;\ntmp_->ALLEGRO_GL_IBM_vertex_array_lists = ALLEGRO_GL_IBM_vertex_array_lists;\ntmp_->ALLEGRO_GL_3DFX_texture_compression_FXT1 = ALLEGRO_GL_3DFX_texture_compression_FXT1;\ntmp_->ALLEGRO_GL_3DFX_multisample = ALLEGRO_GL_3DFX_multisample;\ntmp_->ALLEGRO_GL_3DFX_tbuffer = ALLEGRO_GL_3DFX_tbuffer;\ntmp_->ALLEGRO_GL_SGIX_vertex_preclip = ALLEGRO_GL_SGIX_vertex_preclip;\ntmp_->ALLEGRO_GL_SGIX_resample = ALLEGRO_GL_SGIX_resample;\ntmp_->ALLEGRO_GL_SGIS_texture_color_mask = ALLEGRO_GL_SGIS_texture_color_mask;\ntmp_->ALLEGRO_GL_EXT_texture_env_dot3 = ALLEGRO_GL_EXT_texture_env_dot3;\ntmp_->ALLEGRO_GL_ATI_texture_mirror_once = ALLEGRO_GL_ATI_texture_mirror_once;\ntmp_->ALLEGRO_GL_NV_fence = ALLEGRO_GL_NV_fence;\ntmp_->ALLEGRO_GL_IBM_static_data = ALLEGRO_GL_IBM_static_data;\ntmp_->ALLEGRO_GL_IBM_texture_mirrored_repeat = ALLEGRO_GL_IBM_texture_mirrored_repeat;\ntmp_->ALLEGRO_GL_NV_evaluators = ALLEGRO_GL_NV_evaluators;\ntmp_->ALLEGRO_GL_NV_packed_depth_stencil = ALLEGRO_GL_NV_packed_depth_stencil;\ntmp_->ALLEGRO_GL_NV_register_combiners2 = ALLEGRO_GL_NV_register_combiners2;\ntmp_->ALLEGRO_GL_NV_texture_compression_vtc = ALLEGRO_GL_NV_texture_compression_vtc;\ntmp_->ALLEGRO_GL_NV_texture_rectangle = ALLEGRO_GL_NV_texture_rectangle;\ntmp_->ALLEGRO_GL_NV_texture_shader = ALLEGRO_GL_NV_texture_shader;\ntmp_->ALLEGRO_GL_NV_texture_shader2 = ALLEGRO_GL_NV_texture_shader2;\ntmp_->ALLEGRO_GL_NV_vertex_array_range2 = ALLEGRO_GL_NV_vertex_array_range2;\ntmp_->ALLEGRO_GL_NV_vertex_program = ALLEGRO_GL_NV_vertex_program;\ntmp_->ALLEGRO_GL_SGIX_texture_coordinate_clamp = ALLEGRO_GL_SGIX_texture_coordinate_clamp;\ntmp_->ALLEGRO_GL_OML_interlace = ALLEGRO_GL_OML_interlace;\ntmp_->ALLEGRO_GL_OML_subsample = ALLEGRO_GL_OML_subsample;\ntmp_->ALLEGRO_GL_OML_resample = ALLEGRO_GL_OML_resample;\ntmp_->ALLEGRO_GL_NV_copy_depth_to_color = ALLEGRO_GL_NV_copy_depth_to_color;\ntmp_->ALLEGRO_GL_ATI_envmap_bumpmap = ALLEGRO_GL_ATI_envmap_bumpmap;\ntmp_->ALLEGRO_GL_ATI_fragment_shader = ALLEGRO_GL_ATI_fragment_shader;\ntmp_->ALLEGRO_GL_ATI_pn_triangles = ALLEGRO_GL_ATI_pn_triangles;\ntmp_->ALLEGRO_GL_ATI_vertex_array_object = ALLEGRO_GL_ATI_vertex_array_object;\ntmp_->ALLEGRO_GL_EXT_vertex_shader = ALLEGRO_GL_EXT_vertex_shader;\ntmp_->ALLEGRO_GL_ATI_vertex_streams = ALLEGRO_GL_ATI_vertex_streams;\ntmp_->ALLEGRO_GL_ATI_element_array = ALLEGRO_GL_ATI_element_array;\ntmp_->ALLEGRO_GL_SUN_mesh_array = ALLEGRO_GL_SUN_mesh_array;\ntmp_->ALLEGRO_GL_SUN_slice_accum = ALLEGRO_GL_SUN_slice_accum;\ntmp_->ALLEGRO_GL_NV_multisample_filter_hint = ALLEGRO_GL_NV_multisample_filter_hint;\ntmp_->ALLEGRO_GL_NV_depth_clamp = ALLEGRO_GL_NV_depth_clamp;\ntmp_->ALLEGRO_GL_NV_occlusion_query = ALLEGRO_GL_NV_occlusion_query;\ntmp_->ALLEGRO_GL_NV_point_sprite = ALLEGRO_GL_NV_point_sprite;\ntmp_->ALLEGRO_GL_NV_texture_shader3 = ALLEGRO_GL_NV_texture_shader3;\ntmp_->ALLEGRO_GL_NV_vertex_program1_1 = ALLEGRO_GL_NV_vertex_program1_1;\ntmp_->ALLEGRO_GL_EXT_shadow_funcs = ALLEGRO_GL_EXT_shadow_funcs;\ntmp_->ALLEGRO_GL_EXT_stencil_two_side = ALLEGRO_GL_EXT_stencil_two_side;\ntmp_->ALLEGRO_GL_ATI_text_fragment_shader = ALLEGRO_GL_ATI_text_fragment_shader;\ntmp_->ALLEGRO_GL_APPLE_client_storage = ALLEGRO_GL_APPLE_client_storage;\ntmp_->ALLEGRO_GL_APPLE_element_array = ALLEGRO_GL_APPLE_element_array;\ntmp_->ALLEGRO_GL_APPLE_fence = ALLEGRO_GL_APPLE_fence;\ntmp_->ALLEGRO_GL_APPLE_vertex_array_object = ALLEGRO_GL_APPLE_vertex_array_object;\ntmp_->ALLEGRO_GL_APPLE_vertex_array_range = ALLEGRO_GL_APPLE_vertex_array_range;\ntmp_->ALLEGRO_GL_APPLE_ycbcr_422 = ALLEGRO_GL_APPLE_ycbcr_422;\ntmp_->ALLEGRO_GL_S3_s3tc = ALLEGRO_GL_S3_s3tc;\ntmp_->ALLEGRO_GL_ATI_draw_buffers = ALLEGRO_GL_ATI_draw_buffers;\ntmp_->ALLEGRO_GL_ATI_texture_env_combine3 = ALLEGRO_GL_ATI_texture_env_combine3;\ntmp_->ALLEGRO_GL_ATI_texture_float = ALLEGRO_GL_ATI_texture_float;\ntmp_->ALLEGRO_GL_NV_float_buffer = ALLEGRO_GL_NV_float_buffer;\ntmp_->ALLEGRO_GL_NV_fragment_program = ALLEGRO_GL_NV_fragment_program;\ntmp_->ALLEGRO_GL_NV_half_float = ALLEGRO_GL_NV_half_float;\ntmp_->ALLEGRO_GL_NV_pixel_data_range = ALLEGRO_GL_NV_pixel_data_range;\ntmp_->ALLEGRO_GL_NV_primitive_restart = ALLEGRO_GL_NV_primitive_restart;\ntmp_->ALLEGRO_GL_NV_texture_expand_normal = ALLEGRO_GL_NV_texture_expand_normal;\ntmp_->ALLEGRO_GL_NV_vertex_program2 = ALLEGRO_GL_NV_vertex_program2;\ntmp_->ALLEGRO_GL_ATI_map_object_buffer = ALLEGRO_GL_ATI_map_object_buffer;\ntmp_->ALLEGRO_GL_ATI_separate_stencil = ALLEGRO_GL_ATI_separate_stencil;\ntmp_->ALLEGRO_GL_ATI_vertex_attrib_array_object = ALLEGRO_GL_ATI_vertex_attrib_array_object;\ntmp_->ALLEGRO_GL_OES_byte_coordinates = ALLEGRO_GL_OES_byte_coordinates;\ntmp_->ALLEGRO_GL_OES_fixed_point = ALLEGRO_GL_OES_fixed_point;\ntmp_->ALLEGRO_GL_OES_single_precision = ALLEGRO_GL_OES_single_precision;\ntmp_->ALLEGRO_GL_OES_compressed_paletted_texture = ALLEGRO_GL_OES_compressed_paletted_texture;\ntmp_->ALLEGRO_GL_OES_read_format = ALLEGRO_GL_OES_read_format;\ntmp_->ALLEGRO_GL_OES_query_matrix = ALLEGRO_GL_OES_query_matrix;\ntmp_->ALLEGRO_GL_OES_framebuffer_object = ALLEGRO_GL_OES_framebuffer_object;\ntmp_->ALLEGRO_GL_OES_texture_npot = ALLEGRO_GL_OES_texture_npot;\ntmp_->ALLEGRO_GL_EXT_depth_bounds_test = ALLEGRO_GL_EXT_depth_bounds_test;\ntmp_->ALLEGRO_GL_EXT_texture_mirror_clamp = ALLEGRO_GL_EXT_texture_mirror_clamp;\ntmp_->ALLEGRO_GL_EXT_blend_equation_separate = ALLEGRO_GL_EXT_blend_equation_separate;\ntmp_->ALLEGRO_GL_MESA_pack_invert = ALLEGRO_GL_MESA_pack_invert;\ntmp_->ALLEGRO_GL_MESA_ycbcr_texture = ALLEGRO_GL_MESA_ycbcr_texture;\ntmp_->ALLEGRO_GL_EXT_pixel_buffer_object = ALLEGRO_GL_EXT_pixel_buffer_object;\ntmp_->ALLEGRO_GL_NV_fragment_program_option = ALLEGRO_GL_NV_fragment_program_option;\ntmp_->ALLEGRO_GL_NV_fragment_program2 = ALLEGRO_GL_NV_fragment_program2;\ntmp_->ALLEGRO_GL_NV_vertex_program2_option = ALLEGRO_GL_NV_vertex_program2_option;\ntmp_->ALLEGRO_GL_NV_vertex_program3 = ALLEGRO_GL_NV_vertex_program3;\ntmp_->ALLEGRO_GL_EXT_texture_compression_dxt1 = ALLEGRO_GL_EXT_texture_compression_dxt1;\ntmp_->ALLEGRO_GL_EXT_framebuffer_object = ALLEGRO_GL_EXT_framebuffer_object;\ntmp_->ALLEGRO_GL_GREMEDY_string_marker = ALLEGRO_GL_GREMEDY_string_marker;\ntmp_->ALLEGRO_GL_EXT_packed_depth_stencil = ALLEGRO_GL_EXT_packed_depth_stencil;\ntmp_->ALLEGRO_GL_EXT_stencil_clear_tag = ALLEGRO_GL_EXT_stencil_clear_tag;\ntmp_->ALLEGRO_GL_EXT_texture_sRGB = ALLEGRO_GL_EXT_texture_sRGB;\ntmp_->ALLEGRO_GL_EXT_framebuffer_blit = ALLEGRO_GL_EXT_framebuffer_blit;\ntmp_->ALLEGRO_GL_EXT_framebuffer_multisample = ALLEGRO_GL_EXT_framebuffer_multisample;\ntmp_->ALLEGRO_GL_MESAX_texture_stack = ALLEGRO_GL_MESAX_texture_stack;\ntmp_->ALLEGRO_GL_EXT_timer_query = ALLEGRO_GL_EXT_timer_query;\ntmp_->ALLEGRO_GL_EXT_gpu_program_parameters = ALLEGRO_GL_EXT_gpu_program_parameters;\ntmp_->ALLEGRO_GL_APPLE_flush_buffer_range = ALLEGRO_GL_APPLE_flush_buffer_range;\ntmp_->ALLEGRO_GL_EXT_bindable_uniform = ALLEGRO_GL_EXT_bindable_uniform;\ntmp_->ALLEGRO_GL_EXT_draw_buffers2 = ALLEGRO_GL_EXT_draw_buffers2;\ntmp_->ALLEGRO_GL_EXT_draw_instanced = ALLEGRO_GL_EXT_draw_instanced;\ntmp_->ALLEGRO_GL_EXT_framebuffer_sRGB = ALLEGRO_GL_EXT_framebuffer_sRGB;\ntmp_->ALLEGRO_GL_EXT_geometry_shader4 = ALLEGRO_GL_EXT_geometry_shader4;\ntmp_->ALLEGRO_GL_EXT_gpu_shader4 = ALLEGRO_GL_EXT_gpu_shader4;\ntmp_->ALLEGRO_GL_EXT_packed_float = ALLEGRO_GL_EXT_packed_float;\ntmp_->ALLEGRO_GL_EXT_texture_array = ALLEGRO_GL_EXT_texture_array;\ntmp_->ALLEGRO_GL_EXT_texture_buffer_object = ALLEGRO_GL_EXT_texture_buffer_object;\ntmp_->ALLEGRO_GL_EXT_texture_compression_latc = ALLEGRO_GL_EXT_texture_compression_latc;\ntmp_->ALLEGRO_GL_EXT_texture_compression_rgtc = ALLEGRO_GL_EXT_texture_compression_rgtc;\ntmp_->ALLEGRO_GL_EXT_texture_integer = ALLEGRO_GL_EXT_texture_integer;\ntmp_->ALLEGRO_GL_EXT_texture_shared_exponent = ALLEGRO_GL_EXT_texture_shared_exponent;\ntmp_->ALLEGRO_GL_NV_depth_buffer_float = ALLEGRO_GL_NV_depth_buffer_float;\ntmp_->ALLEGRO_GL_NV_fragment_program4 = ALLEGRO_GL_NV_fragment_program4;\ntmp_->ALLEGRO_GL_NV_framebuffer_multisample_coverage = ALLEGRO_GL_NV_framebuffer_multisample_coverage;\ntmp_->ALLEGRO_GL_NV_geometry_program4 = ALLEGRO_GL_NV_geometry_program4;\ntmp_->ALLEGRO_GL_NV_gpu_program4 = ALLEGRO_GL_NV_gpu_program4;\ntmp_->ALLEGRO_GL_NV_parameter_buffer_object = ALLEGRO_GL_NV_parameter_buffer_object;\ntmp_->ALLEGRO_GL_NV_transform_feedback = ALLEGRO_GL_NV_transform_feedback;\ntmp_->ALLEGRO_GL_NV_vertex_program4 = ALLEGRO_GL_NV_vertex_program4;\ntmp_->ALLEGRO_GL_GREMEDY_frame_terminator = ALLEGRO_GL_GREMEDY_frame_terminator;\ntmp_->ALLEGRO_GL_NV_conditional_render = ALLEGRO_GL_NV_conditional_render;\ntmp_->ALLEGRO_GL_NV_present_video = ALLEGRO_GL_NV_present_video;\ntmp_->ALLEGRO_GL_EXT_direct_state_access = ALLEGRO_GL_EXT_direct_state_access;\ntmp_->ALLEGRO_GL_EXT_transform_feedback = ALLEGRO_GL_EXT_transform_feedback;\ntmp_->ALLEGRO_GL_EXT_texture_swizzle = ALLEGRO_GL_EXT_texture_swizzle;\ntmp_->ALLEGRO_GL_NV_explicit_multisample = ALLEGRO_GL_NV_explicit_multisample;\ntmp_->ALLEGRO_GL_NV_transform_feedback2 = ALLEGRO_GL_NV_transform_feedback2;\ntmp_->ALLEGRO_GL_ATI_meminfo = ALLEGRO_GL_ATI_meminfo;\ntmp_->ALLEGRO_GL_AMD_performance_monitor = ALLEGRO_GL_AMD_performance_monitor;\ntmp_->ALLEGRO_GL_AMD_texture_texture4 = ALLEGRO_GL_AMD_texture_texture4;\ntmp_->ALLEGRO_GL_AMD_vertex_shader_tesselator = ALLEGRO_GL_AMD_vertex_shader_tesselator;\ntmp_->ALLEGRO_GL_EXT_provoking_vertex = ALLEGRO_GL_EXT_provoking_vertex;\ntmp_->ALLEGRO_GL_EXT_texture_snorm = ALLEGRO_GL_EXT_texture_snorm;\ntmp_->ALLEGRO_GL_AMD_draw_buffers_blend = ALLEGRO_GL_AMD_draw_buffers_blend;\ntmp_->ALLEGRO_GL_APPLE_texture_range = ALLEGRO_GL_APPLE_texture_range;\ntmp_->ALLEGRO_GL_APPLE_float_pixels = ALLEGRO_GL_APPLE_float_pixels;\ntmp_->ALLEGRO_GL_APPLE_vertex_program_evaluators = ALLEGRO_GL_APPLE_vertex_program_evaluators;\ntmp_->ALLEGRO_GL_APPLE_aux_depth_stencil = ALLEGRO_GL_APPLE_aux_depth_stencil;\ntmp_->ALLEGRO_GL_APPLE_object_purgeable = ALLEGRO_GL_APPLE_object_purgeable;\ntmp_->ALLEGRO_GL_APPLE_row_bytes = ALLEGRO_GL_APPLE_row_bytes;\ntmp_->ALLEGRO_GL_APPLE_rgb_422 = ALLEGRO_GL_APPLE_rgb_422;\ntmp_->ALLEGRO_GL_NV_video_capture = ALLEGRO_GL_NV_video_capture;\ntmp_->ALLEGRO_GL_EXT_separate_shader_objects = ALLEGRO_GL_EXT_separate_shader_objects;\ntmp_->ALLEGRO_GL_NV_parameter_buffer_object2 = ALLEGRO_GL_NV_parameter_buffer_object2;\ntmp_->ALLEGRO_GL_NV_shader_buffer_load = ALLEGRO_GL_NV_shader_buffer_load;\ntmp_->ALLEGRO_GL_NV_vertex_buffer_unified_memory = ALLEGRO_GL_NV_vertex_buffer_unified_memory;\ntmp_->ALLEGRO_GL_NV_texture_barrier = ALLEGRO_GL_NV_texture_barrier;\ntmp_->ALLEGRO_GL_AMD_shader_stencil_export = ALLEGRO_GL_AMD_shader_stencil_export;\ntmp_->ALLEGRO_GL_AMD_seamless_cubemap_per_texture = ALLEGRO_GL_AMD_seamless_cubemap_per_texture;\ntmp_->ALLEGRO_GL_AMD_conservative_depth = ALLEGRO_GL_AMD_conservative_depth;\nreturn(tmp_);;\n"))
-  (define make-allegro-ogl-ext-api
-    (foreign-lambda*
-      (c-pointer (struct "ALLEGRO_OGL_EXT_API"))
-      ()
-      "struct ALLEGRO_OGL_EXT_API *tmp_ =  (struct ALLEGRO_OGL_EXT_API *)C_malloc(sizeof(struct ALLEGRO_OGL_EXT_API));\nreturn(tmp_);;\n")))
+  (begin
+    (define gl:blend-color
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3))
+        "_al_glBlendColor(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:blend-equation
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBlendEquation(a0);")))
+  (begin
+    (define gl:draw-range-elements
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glDrawRangeElements(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:color-table
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glColorTable(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:color-table-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glColorTableParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:color-table-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glColorTableParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-color-table
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyColorTable(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-color-table
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetColorTable(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-color-table-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetColorTableParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-color-table-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetColorTableParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:color-sub-table
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glColorSubTable(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:copy-color-sub-table
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyColorSubTable(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-image3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:tex-sub-image3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         ((c-pointer void) a10))
+        "_al_glTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:copy-tex-sub-image3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:convolution-filter1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glConvolutionFilter1D(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:convolution-filter2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
+        "_al_glConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:convolution-parameterf
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glConvolutionParameterf(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glConvolutionParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glConvolutionParameteri(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glConvolutionParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-convolution-filter1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyConvolutionFilter1D(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:copy-convolution-filter2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glCopyConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-convolution-filter
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetConvolutionFilter(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-convolution-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetConvolutionParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-convolution-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetConvolutionParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-separable-filter
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4)
+         ((c-pointer void) a5))
+        "_al_glGetSeparableFilter(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:separable-filter2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6)
+         ((c-pointer void) a7))
+        "_al_glSeparableFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:get-histogram
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
+        "_al_glGetHistogram(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-histogram-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetHistogramParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-histogram-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetHistogramParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-minmax
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
+        "_al_glGetMinmax(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-minmax-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetMinmaxParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-minmax-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetMinmaxParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:histogram
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3))
+        "_al_glHistogram(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:minmax
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-char a2))
+        "_al_glMinmax(a0 , a1 , a2);")))
+  (begin
+    (define gl:reset-histogram
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glResetHistogram(a0);")))
+  (begin
+    (define gl:reset-minmax
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glResetMinmax(a0);")))
+  (begin
+    (define gl:active-texture
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glActiveTexture(a0);")))
+  (begin
+    (define gl:client-active-texture
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glClientActiveTexture(a0);")))
+  (begin
+    (define gl:multi-tex-coord1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glMultiTexCoord1d(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord1dv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glMultiTexCoord1f(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord1fv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glMultiTexCoord1i(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord1iv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glMultiTexCoord1s(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord1sv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glMultiTexCoord2d(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord2dv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glMultiTexCoord2f(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord2fv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glMultiTexCoord2i(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord2iv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glMultiTexCoord2s(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord2sv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glMultiTexCoord3d(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord3dv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glMultiTexCoord3f(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord3fv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glMultiTexCoord3i(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord3iv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glMultiTexCoord3s(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord3sv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glMultiTexCoord4d(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord4dv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glMultiTexCoord4f(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord4fv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glMultiTexCoord4i(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord4iv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glMultiTexCoord4s(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord4sv(a0 , a1);")))
+  (begin
+    (define gl:load-transpose-matrixf
+      (foreign-lambda*
+        void
+        ((f32vector a0))
+        "_al_glLoadTransposeMatrixf(a0);")))
+  (begin
+    (define gl:load-transpose-matrixd
+      (foreign-lambda*
+        void
+        ((f64vector a0))
+        "_al_glLoadTransposeMatrixd(a0);")))
+  (begin
+    (define gl:mult-transpose-matrixf
+      (foreign-lambda*
+        void
+        ((f32vector a0))
+        "_al_glMultTransposeMatrixf(a0);")))
+  (begin
+    (define gl:mult-transpose-matrixd
+      (foreign-lambda*
+        void
+        ((f64vector a0))
+        "_al_glMultTransposeMatrixd(a0);")))
+  (begin
+    (define gl:sample-coverage
+      (foreign-lambda*
+        void
+        ((float a0) (unsigned-char a1))
+        "_al_glSampleCoverage(a0 , a1);")))
+  (begin
+    (define gl:compressed-tex-image3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-tex-image2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:compressed-tex-image1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         ((c-pointer void) a6))
+        "_al_glCompressedTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:compressed-tex-sub-image3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (integer a9)
+         ((c-pointer void) a10))
+        "_al_glCompressedTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:compressed-tex-sub-image2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-tex-sub-image1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (integer a5)
+         ((c-pointer void) a6))
+        "_al_glCompressedTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-compressed-tex-image
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glGetCompressedTexImage(a0 , a1 , a2);")))
+  (begin
+    (define gl:blend-func-separate
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glBlendFuncSeparate(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:fog-coordf
+      (foreign-lambda* void ((float a0)) "_al_glFogCoordf(a0);")))
+  (begin
+    (define gl:fog-coordfv
+      (foreign-lambda* void ((f32vector a0)) "_al_glFogCoordfv(a0);")))
+  (begin
+    (define gl:fog-coordd
+      (foreign-lambda* void ((double a0)) "_al_glFogCoordd(a0);")))
+  (begin
+    (define gl:fog-coorddv
+      (foreign-lambda* void ((f64vector a0)) "_al_glFogCoorddv(a0);")))
+  (begin
+    (define gl:fog-coord-pointer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glFogCoordPointer(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-draw-arrays
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
+        "_al_glMultiDrawArrays(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-draw-elements
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (s32vector a1)
+         (unsigned-integer a2)
+         ((c-pointer (c-pointer (const void))) a3)
+         (integer a4))
+        "_al_glMultiDrawElements(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:point-parameterf
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPointParameterf(a0 , a1);")))
+  (begin
+    (define gl:point-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPointParameterfv(a0 , a1);")))
+  (begin
+    (define gl:point-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPointParameteri(a0 , a1);")))
+  (begin
+    (define gl:point-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glPointParameteriv(a0 , a1);")))
+  (begin
+    (define gl:secondary-color3b
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glSecondaryColor3b(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3bv
+      (foreign-lambda* void ((c-string a0)) "_al_glSecondaryColor3bv(a0);")))
+  (begin
+    (define gl:secondary-color3d
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glSecondaryColor3d(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3dv
+      (foreign-lambda* void ((f64vector a0)) "_al_glSecondaryColor3dv(a0);")))
+  (begin
+    (define gl:secondary-color3f
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glSecondaryColor3f(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3fv
+      (foreign-lambda* void ((f32vector a0)) "_al_glSecondaryColor3fv(a0);")))
+  (begin
+    (define gl:secondary-color3i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glSecondaryColor3i(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3iv
+      (foreign-lambda* void ((s32vector a0)) "_al_glSecondaryColor3iv(a0);")))
+  (begin
+    (define gl:secondary-color3s
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glSecondaryColor3s(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3sv
+      (foreign-lambda* void ((s16vector a0)) "_al_glSecondaryColor3sv(a0);")))
+  (begin
+    (define gl:secondary-color3ub
+      (foreign-lambda*
+        void
+        ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
+        "_al_glSecondaryColor3ub(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3ubv
+      (foreign-lambda* void ((u8vector a0)) "_al_glSecondaryColor3ubv(a0);")))
+  (begin
+    (define gl:secondary-color3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glSecondaryColor3ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3uiv
+      (foreign-lambda* void ((u32vector a0)) "_al_glSecondaryColor3uiv(a0);")))
+  (begin
+    (define gl:secondary-color3us
+      (foreign-lambda*
+        void
+        ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
+        "_al_glSecondaryColor3us(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3usv
+      (foreign-lambda* void ((u16vector a0)) "_al_glSecondaryColor3usv(a0);")))
+  (begin
+    (define gl:secondary-color-pointer
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
+        "_al_glSecondaryColorPointer(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos2d
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glWindowPos2d(a0 , a1);")))
+  (begin
+    (define gl:window-pos2dv
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dv(a0);")))
+  (begin
+    (define gl:window-pos2f
+      (foreign-lambda*
+        void
+        ((float a0) (float a1))
+        "_al_glWindowPos2f(a0 , a1);")))
+  (begin
+    (define gl:window-pos2fv
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fv(a0);")))
+  (begin
+    (define gl:window-pos2i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glWindowPos2i(a0 , a1);")))
+  (begin
+    (define gl:window-pos2iv
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2iv(a0);")))
+  (begin
+    (define gl:window-pos2s
+      (foreign-lambda*
+        void
+        ((short a0) (short a1))
+        "_al_glWindowPos2s(a0 , a1);")))
+  (begin
+    (define gl:window-pos2sv
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2sv(a0);")))
+  (begin
+    (define gl:window-pos3d
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glWindowPos3d(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3dv
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dv(a0);")))
+  (begin
+    (define gl:window-pos3f
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glWindowPos3f(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3fv
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fv(a0);")))
+  (begin
+    (define gl:window-pos3i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glWindowPos3i(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3iv
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3iv(a0);")))
+  (begin
+    (define gl:window-pos3s
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glWindowPos3s(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3sv
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3sv(a0);")))
+  (begin
+    (define gl:bind-buffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindBuffer(a0 , a1);")))
+  (begin
+    (define gl:delete-buffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteBuffers(a0 , a1);")))
+  (begin
+    (define gl:gen-buffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenBuffers(a0 , a1);")))
+  (begin
+    (define gl:is-buffer
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsBuffer(a0));")))
+  (begin
+    (define gl:buffer-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         (unsigned-integer a3))
+        "_al_glBufferData(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:buffer-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glBufferSubData(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-buffer-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glGetBufferSubData(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:map-buffer
+      (foreign-lambda*
+        (c-pointer void)
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glMapBuffer(a0 , a1));")))
+  (begin
+    (define gl:unmap-buffer
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glUnmapBuffer(a0));")))
+  (begin
+    (define gl:get-buffer-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetBufferParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-buffer-pointerv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetBufferPointerv(a0 , a1 , a2);")))
+  (begin
+    (define gl:gen-queries
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenQueries(a0 , a1);")))
+  (begin
+    (define gl:delete-queries
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteQueries(a0 , a1);")))
+  (begin
+    (define gl:is-query
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsQuery(a0));")))
+  (begin
+    (define gl:begin-query
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBeginQuery(a0 , a1);")))
+  (begin
+    (define gl:end-query
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glEndQuery(a0);")))
+  (begin
+    (define gl:get-queryiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetQueryiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetQueryObjectiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetQueryObjectuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:blend-equation-separate
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBlendEquationSeparate(a0 , a1);")))
+  (begin
+    (define gl:create-program
+      (foreign-lambda* unsigned-integer () "return(_al_glCreateProgram());")))
+  (begin
+    (define gl:create-shader
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glCreateShader(a0));")))
+  (begin
+    (define gl:delete-program
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDeleteProgram(a0);")))
+  (begin
+    (define gl:delete-shader
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDeleteShader(a0);")))
+  (begin
+    (define gl:attach-shader
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glAttachShader(a0 , a1);")))
+  (begin
+    (define gl:detach-shader
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDetachShader(a0 , a1);")))
+  (begin
+    (define gl:shader-source
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         ((c-pointer (c-pointer (const char))) a2)
+         (s32vector a3))
+        "_al_glShaderSource(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:compile-shader
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glCompileShader(a0);")))
+  (begin
+    (define gl:is-program
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsProgram(a0));")))
+  (begin
+    (define gl:is-shader
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsShader(a0));")))
+  (begin
+    (define gl:link-program
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glLinkProgram(a0);")))
+  (begin
+    (define gl:use-program
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glUseProgram(a0);")))
+  (begin
+    (define gl:validate-program
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glValidateProgram(a0);")))
+  (begin
+    (define gl:uniform1f
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1))
+        "_al_glUniform1f(a0 , a1);")))
+  (begin
+    (define gl:uniform2f
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2))
+        "_al_glUniform2f(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3f
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2) (float a3))
+        "_al_glUniform3f(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4f
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glUniform4f(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glUniform1i(a0 , a1);")))
+  (begin
+    (define gl:uniform2i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glUniform2i(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glUniform3i(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4i
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
+        "_al_glUniform4i(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform1fv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform2fv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform3fv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform4fv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform1iv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform1iv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2iv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform2iv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3iv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform3iv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4iv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform4iv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform-matrix2fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix2fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix3fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix4fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-shaderfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetShaderfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-shaderiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetShaderiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-programfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetProgramfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-programiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetProgramiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-shader-info-log
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetShaderInfoLog(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-info-log
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetProgramInfoLog(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-attached-shaders
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2) (u32vector a3))
+        "_al_glGetAttachedShaders(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-uniform-location
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetUniformLocation(a0 , a1));")))
+  (begin
+    (define gl:get-active-uniform
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (u32vector a5)
+         (c-string a6))
+        "_al_glGetActiveUniform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-uniformfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glGetUniformfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniformiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2))
+        "_al_glGetUniformiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-shader-source
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetShaderSource(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib1f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glVertexAttrib1f(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glVertexAttrib1s(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glVertexAttrib1d(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glVertexAttrib2f(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glVertexAttrib2s(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glVertexAttrib2d(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib3f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glVertexAttrib3f(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glVertexAttrib3s(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glVertexAttrib3d(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib4f
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glVertexAttrib4f(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4s
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glVertexAttrib4s(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glVertexAttrib4d(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4nub
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4))
+        "_al_glVertexAttrib4Nub(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib1fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib1fv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib1sv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib1dv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib2fv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib2sv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib2dv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib3fv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib3sv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib3dv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4fv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib4fv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4sv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4dv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib4dv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttrib4iv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4bv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttrib4bv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4ubv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttrib4ubv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4usv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttrib4usv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttrib4uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nbv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttrib4Nbv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nsv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4Nsv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4niv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttrib4Niv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nubv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttrib4Nubv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nusv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttrib4Nusv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttrib4Nuiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-pointer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3)
+         (integer a4)
+         ((c-pointer void) a5))
+        "_al_glVertexAttribPointer(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:enable-vertex-attrib-array
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glEnableVertexAttribArray(a0);")))
+  (begin
+    (define gl:disable-vertex-attrib-array
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDisableVertexAttribArray(a0);")))
+  (begin
+    (define gl:bind-attrib-location
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "_al_glBindAttribLocation(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-active-attrib
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (u32vector a5)
+         (c-string a6))
+        "_al_glGetActiveAttrib(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-attrib-location
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetAttribLocation(a0 , a1));")))
+  (begin
+    (define gl:get-vertex-attribdv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetVertexAttribdv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVertexAttribfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-pointerv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetVertexAttribPointerv(a0 , a1 , a2);")))
+  (begin
+    (define gl:draw-buffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDrawBuffers(a0 , a1);")))
+  (begin
+    (define gl:stencil-op-separate
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glStencilOpSeparate(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:stencil-func-separate
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3))
+        "_al_glStencilFuncSeparate(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:stencil-mask-separate
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glStencilMaskSeparate(a0 , a1);")))
+  (begin
+    (define gl:uniform-matrix2x3fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix2x3fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3x2fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix3x2fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix2x4fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix2x4fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4x2fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix4x2fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3x4fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix3x4fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4x3fv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix4x3fv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:color-maski
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4))
+        "_al_glColorMaski(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-booleani-v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetBooleani_v(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-integeri-v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetIntegeri_v(a0 , a1 , a2);")))
+  (begin
+    (define gl:enablei
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEnablei(a0 , a1);")))
+  (begin
+    (define gl:disablei
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDisablei(a0 , a1);")))
+  (begin
+    (define gl:is-enabledi
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glIsEnabledi(a0 , a1));")))
+  (begin
+    (define gl:begin-transform-feedback
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginTransformFeedback(a0);")))
+  (begin
+    (define gl:end-transform-feedback
+      (foreign-lambda* void () "_al_glEndTransformFeedback();")))
+  (begin
+    (define gl:bind-buffer-range
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4))
+        "_al_glBindBufferRange(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:bind-buffer-base
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBindBufferBase(a0 , a1 , a2);")))
+  (begin
+    (define gl:transform-feedback-varyings
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (s32vector a2)
+         (unsigned-integer a3))
+        "_al_glTransformFeedbackVaryings(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-transform-feedback-varying
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTransformFeedbackVarying(a0 , a1 , a2);")))
+  (begin
+    (define gl:clamp-color
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glClampColor(a0 , a1);")))
+  (begin
+    (define gl:begin-conditional-render
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBeginConditionalRender(a0 , a1);")))
+  (begin
+    (define gl:end-conditional-render
+      (foreign-lambda* void () "_al_glEndConditionalRender();")))
+  (begin
+    (define gl:vertex-attrib-i1i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glVertexAttribI1i(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glVertexAttribI2i(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib-i3i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glVertexAttribI3i(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-i4i
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glVertexAttribI4i(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-i1ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexAttribI1ui(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glVertexAttribI2ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib-i3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribI3ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-i4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glVertexAttribI4ui(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-i1iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI1iv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI2iv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i3iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI3iv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4iv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI4iv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i1uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI1uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI2uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI3uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI4uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4bv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttribI4bv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4sv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttribI4sv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4ubv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttribI4ubv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4usv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttribI4usv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-ipointer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer void) a4))
+        "_al_glVertexAttribIPointer(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-vertex-attrib-iiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribIiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-iuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetVertexAttribIuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniformuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glGetUniformuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:bind-frag-data-location
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "_al_glBindFragDataLocation(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-frag-data-location
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetFragDataLocation(a0 , a1));")))
+  (begin
+    (define gl:uniform1ui
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1))
+        "_al_glUniform1ui(a0 , a1);")))
+  (begin
+    (define gl:uniform2ui
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glUniform2ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3ui
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glUniform3ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4ui
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glUniform4ui(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1uiv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform1uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2uiv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform2uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3uiv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform3uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4uiv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform4uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-parameter-iiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glTexParameterIiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-parameter-iuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glTexParameterIuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-parameter-iiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTexParameterIiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-parameter-iuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetTexParameterIuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:clear-bufferiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2))
+        "_al_glClearBufferiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:clear-bufferuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glClearBufferuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:clear-bufferfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glClearBufferfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:clear-bufferfi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (float a2) (integer a3))
+        "_al_glClearBufferfi(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-stringi
+      (foreign-lambda*
+        (c-pointer (const unsigned-char))
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glGetStringi(a0 , a1));")))
+  (begin
+    (define gl:draw-arrays-instanced
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glDrawArraysInstanced(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:draw-elements-instanced
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         (integer a4))
+        "_al_glDrawElementsInstanced(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-buffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glTexBuffer(a0 , a1 , a2);")))
+  (begin
+    (define gl:primitive-restart-index
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glPrimitiveRestartIndex(a0);")))
+  (begin
+    (define gl:get-integer64i-v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer integer64) a2))
+        "_al_glGetInteger64i_v(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-buffer-parameteri64v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer integer64) a2))
+        "_al_glGetBufferParameteri64v(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glProgramParameteri(a0 , a1 , a2);")))
+  (begin
+    (define gl:framebuffer-texture
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glFramebufferTexture(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:clear-buffer-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
+        "_al_glClearBufferData(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:clear-buffer-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
+        "_al_glClearBufferSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:dispatch-compute
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glDispatchCompute(a0 , a1 , a2);")))
+  (begin
+    (define gl:dispatch-compute-indirect
+      (foreign-lambda*
+        void
+        (((c-pointer void) a0))
+        "_al_glDispatchComputeIndirect(a0);")))
+  (begin
+    (define gl:copy-image-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         (integer a8)
+         (integer a9)
+         (integer a10)
+         (integer a11)
+         (integer a12)
+         (integer a13)
+         (integer a14))
+        "_al_glCopyImageSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
+  (begin
+    (define gl:framebuffer-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glFramebufferParameteri(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-framebuffer-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFramebufferParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-internalformati64v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer integer64) a4))
+        "_al_glGetInternalformati64v(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:invalidate-tex-sub-image
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
+        "_al_glInvalidateTexSubImage(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:invalidate-tex-image
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glInvalidateTexImage(a0 , a1);")))
+  (begin
+    (define gl:invalidate-buffer-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
+        "_al_glInvalidateBufferSubData(a0 , a1 , a2);")))
+  (begin
+    (define gl:invalidate-buffer-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glInvalidateBufferData(a0);")))
+  (begin
+    (define gl:invalidate-framebuffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glInvalidateFramebuffer(a0 , a1 , a2);")))
+  (begin
+    (define gl:invalidate-sub-framebuffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (u32vector a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
+        "_al_glInvalidateSubFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:multi-draw-arrays-indirect
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1) (integer a2) (integer a3))
+        "_al_glMultiDrawArraysIndirect(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-draw-elements-indirect
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer void) a2)
+         (integer a3)
+         (integer a4))
+        "_al_glMultiDrawElementsIndirect(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-program-interfaceiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetProgramInterfaceiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-resource-index
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "return(_al_glGetProgramResourceIndex(a0 , a1 , a2));")))
+  (begin
+    (define gl:get-program-resource-name
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (s32vector a4)
+         (c-string a5))
+        "_al_glGetProgramResourceName(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-program-resourceiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (u32vector a4)
+         (integer a5)
+         (s32vector a6)
+         (s32vector a7))
+        "_al_glGetProgramResourceiv(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:get-program-resource-location
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "return(_al_glGetProgramResourceLocation(a0 , a1 , a2));")))
+  (begin
+    (define gl:get-program-resource-location-index
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "return(_al_glGetProgramResourceLocationIndex(a0 , a1 , a2));")))
+  (begin
+    (define gl:shader-storage-block-binding
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glShaderStorageBlockBinding(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-buffer-range
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4))
+        "_al_glTexBufferRange(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-storage2dmultisample
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-char a5))
+        "_al_glTexStorage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:tex-storage3dmultisample
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-char a6))
+        "_al_glTexStorage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:texture-view
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7))
+        "_al_glTextureView(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:bind-vertex-buffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer void) a2)
+         (integer a3))
+        "_al_glBindVertexBuffer(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-format
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3)
+         (unsigned-integer a4))
+        "_al_glVertexAttribFormat(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-iformat
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribIFormat(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-lformat
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribLFormat(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-binding
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexAttribBinding(a0 , a1);")))
+  (begin
+    (define gl:vertex-binding-divisor
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexBindingDivisor(a0 , a1);")))
+  (begin
+    (define gl:debug-message-control
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (u32vector a4)
+         (unsigned-char a5))
+        "_al_glDebugMessageControl(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:debug-message-insert
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (c-string a5))
+        "_al_glDebugMessageInsert(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-debug-message-log
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0)
+         (integer a1)
+         (u32vector a2)
+         (u32vector a3)
+         (u32vector a4)
+         (u32vector a5)
+         (s32vector a6)
+         (c-string a7))
+        "return(_al_glGetDebugMessageLog(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7));")))
+  (begin
+    (define gl:push-debug-group
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (c-string a3))
+        "_al_glPushDebugGroup(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:pop-debug-group
+      (foreign-lambda* void () "_al_glPopDebugGroup();")))
+  (begin
+    (define gl:object-label
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (c-string a3))
+        "_al_glObjectLabel(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-object-label
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (c-string a4))
+        "_al_glGetObjectLabel(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:object-ptr-label
+      (foreign-lambda*
+        void
+        (((c-pointer void) a0) (integer a1) (c-string a2))
+        "_al_glObjectPtrLabel(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-object-ptr-label
+      (foreign-lambda*
+        void
+        (((c-pointer void) a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetObjectPtrLabel(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:active-texture-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glActiveTextureARB(a0);")))
+  (begin
+    (define gl:client-active-texture-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glClientActiveTextureARB(a0);")))
+  (begin
+    (define gl:multi-tex-coord1d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glMultiTexCoord1dARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord1dvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glMultiTexCoord1fARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord1fvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1i-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glMultiTexCoord1iARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1iv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord1ivARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glMultiTexCoord1sARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord1svARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glMultiTexCoord2dARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord2dvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glMultiTexCoord2fARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord2fvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2i-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glMultiTexCoord2iARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2iv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord2ivARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glMultiTexCoord2sARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord2svARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glMultiTexCoord3dARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord3dvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glMultiTexCoord3fARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord3fvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3i-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glMultiTexCoord3iARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3iv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord3ivARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glMultiTexCoord3sARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord3svARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glMultiTexCoord4dARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMultiTexCoord4dvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glMultiTexCoord4fARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMultiTexCoord4fvARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4i-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glMultiTexCoord4iARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4iv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord4ivARB(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glMultiTexCoord4sARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord4svARB(a0 , a1);")))
+  (begin
+    (define gl:load-transpose-matrixf-arb
+      (foreign-lambda*
+        void
+        ((f32vector a0))
+        "_al_glLoadTransposeMatrixfARB(a0);")))
+  (begin
+    (define gl:load-transpose-matrixd-arb
+      (foreign-lambda*
+        void
+        ((f64vector a0))
+        "_al_glLoadTransposeMatrixdARB(a0);")))
+  (begin
+    (define gl:mult-transpose-matrixf-arb
+      (foreign-lambda*
+        void
+        ((f32vector a0))
+        "_al_glMultTransposeMatrixfARB(a0);")))
+  (begin
+    (define gl:mult-transpose-matrixd-arb
+      (foreign-lambda*
+        void
+        ((f64vector a0))
+        "_al_glMultTransposeMatrixdARB(a0);")))
+  (begin
+    (define gl:sample-coverage-arb
+      (foreign-lambda*
+        void
+        ((float a0) (unsigned-char a1))
+        "_al_glSampleCoverageARB(a0 , a1);")))
+  (begin
+    (define gl:compressed-tex-image3darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedTexImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-tex-image2darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedTexImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:compressed-tex-image1darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         ((c-pointer void) a6))
+        "_al_glCompressedTexImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:compressed-tex-sub-image3darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (integer a9)
+         ((c-pointer void) a10))
+        "_al_glCompressedTexSubImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:compressed-tex-sub-image2darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedTexSubImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-tex-sub-image1darb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (integer a5)
+         ((c-pointer void) a6))
+        "_al_glCompressedTexSubImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-compressed-tex-image-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glGetCompressedTexImageARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:point-parameterf-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPointParameterfARB(a0 , a1);")))
+  (begin
+    (define gl:point-parameterfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPointParameterfvARB(a0 , a1);")))
+  (begin
+    (define gl:weightbv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (c-string a1))
+        "_al_glWeightbvARB(a0 , a1);")))
+  (begin
+    (define gl:weightsv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (s16vector a1))
+        "_al_glWeightsvARB(a0 , a1);")))
+  (begin
+    (define gl:weightiv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (s32vector a1))
+        "_al_glWeightivARB(a0 , a1);")))
+  (begin
+    (define gl:weightfv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (f32vector a1))
+        "_al_glWeightfvARB(a0 , a1);")))
+  (begin
+    (define gl:weightdv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (f64vector a1))
+        "_al_glWeightdvARB(a0 , a1);")))
+  (begin
+    (define gl:weightubv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u8vector a1))
+        "_al_glWeightubvARB(a0 , a1);")))
+  (begin
+    (define gl:weightusv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u16vector a1))
+        "_al_glWeightusvARB(a0 , a1);")))
+  (begin
+    (define gl:weightuiv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glWeightuivARB(a0 , a1);")))
+  (begin
+    (define gl:weight-pointer-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
+        "_al_glWeightPointerARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-blend-arb
+      (foreign-lambda* void ((integer a0)) "_al_glVertexBlendARB(a0);")))
+  (begin
+    (define gl:current-palette-matrix-arb
+      (foreign-lambda*
+        void
+        ((integer a0))
+        "_al_glCurrentPaletteMatrixARB(a0);")))
+  (begin
+    (define gl:matrix-indexubv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u8vector a1))
+        "_al_glMatrixIndexubvARB(a0 , a1);")))
+  (begin
+    (define gl:matrix-indexusv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u16vector a1))
+        "_al_glMatrixIndexusvARB(a0 , a1);")))
+  (begin
+    (define gl:matrix-indexuiv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glMatrixIndexuivARB(a0 , a1);")))
+  (begin
+    (define gl:matrix-index-pointer-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
+        "_al_glMatrixIndexPointerARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos2d-arb
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glWindowPos2dARB(a0 , a1);")))
+  (begin
+    (define gl:window-pos2dv-arb
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dvARB(a0);")))
+  (begin
+    (define gl:window-pos2f-arb
+      (foreign-lambda*
+        void
+        ((float a0) (float a1))
+        "_al_glWindowPos2fARB(a0 , a1);")))
+  (begin
+    (define gl:window-pos2fv-arb
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fvARB(a0);")))
+  (begin
+    (define gl:window-pos2i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glWindowPos2iARB(a0 , a1);")))
+  (begin
+    (define gl:window-pos2iv-arb
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2ivARB(a0);")))
+  (begin
+    (define gl:window-pos2s-arb
+      (foreign-lambda*
+        void
+        ((short a0) (short a1))
+        "_al_glWindowPos2sARB(a0 , a1);")))
+  (begin
+    (define gl:window-pos2sv-arb
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2svARB(a0);")))
+  (begin
+    (define gl:window-pos3d-arb
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glWindowPos3dARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3dv-arb
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dvARB(a0);")))
+  (begin
+    (define gl:window-pos3f-arb
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glWindowPos3fARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3fv-arb
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fvARB(a0);")))
+  (begin
+    (define gl:window-pos3i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glWindowPos3iARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3iv-arb
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3ivARB(a0);")))
+  (begin
+    (define gl:window-pos3s-arb
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glWindowPos3sARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3sv-arb
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3svARB(a0);")))
+  (begin
+    (define gl:vertex-attrib1d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glVertexAttrib1dARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib1dvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glVertexAttrib1fARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib1fvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glVertexAttrib1sARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib1svARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glVertexAttrib2dARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib2dvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glVertexAttrib2fARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib2fvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glVertexAttrib2sARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib2svARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glVertexAttrib3dARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib3dvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glVertexAttrib3fARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib3fvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glVertexAttrib3sARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib3svARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nbv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttrib4NbvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4niv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttrib4NivARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nsv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4NsvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nub-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4))
+        "_al_glVertexAttrib4NubARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4nubv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttrib4NubvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nuiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttrib4NuivARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4nusv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttrib4NusvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4bv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttrib4bvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glVertexAttrib4dARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib4dvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glVertexAttrib4fARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib4fvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4iv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttrib4ivARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4s-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glVertexAttrib4sARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4sv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4svARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4ubv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttrib4ubvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4uiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttrib4uivARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4usv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttrib4usvARB(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-pointer-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3)
+         (integer a4)
+         ((c-pointer void) a5))
+        "_al_glVertexAttribPointerARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:enable-vertex-attrib-array-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glEnableVertexAttribArrayARB(a0);")))
+  (begin
+    (define gl:disable-vertex-attrib-array-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDisableVertexAttribArrayARB(a0);")))
+  (begin
+    (define gl:program-string-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         ((c-pointer void) a3))
+        "_al_glProgramStringARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-program-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindProgramARB(a0 , a1);")))
+  (begin
+    (define gl:delete-programs-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteProgramsARB(a0 , a1);")))
+  (begin
+    (define gl:gen-programs-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenProgramsARB(a0 , a1);")))
+  (begin
+    (define gl:program-env-parameter4d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
+        "_al_glProgramEnvParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-env-parameter4dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glProgramEnvParameter4dvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-env-parameter4f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5))
+        "_al_glProgramEnvParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-env-parameter4fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glProgramEnvParameter4fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-local-parameter4d-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
+        "_al_glProgramLocalParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-local-parameter4dv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glProgramLocalParameter4dvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-local-parameter4f-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5))
+        "_al_glProgramLocalParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-local-parameter4fv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glProgramLocalParameter4fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-env-parameterdv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetProgramEnvParameterdvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-env-parameterfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetProgramEnvParameterfvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-local-parameterdv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetProgramLocalParameterdvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-local-parameterfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetProgramLocalParameterfvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-programiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetProgramivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-string-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
+        "_al_glGetProgramStringARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribdv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetVertexAttribdvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVertexAttribfvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-pointerv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetVertexAttribPointervARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:is-program-arb
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsProgramARB(a0));")))
+  (begin
+    (define gl:bind-buffer-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindBufferARB(a0 , a1);")))
+  (begin
+    (define gl:delete-buffers-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteBuffersARB(a0 , a1);")))
+  (begin
+    (define gl:gen-buffers-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenBuffersARB(a0 , a1);")))
+  (begin
+    (define gl:is-buffer-arb
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsBufferARB(a0));")))
+  (begin
+    (define gl:buffer-data-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         (unsigned-integer a3))
+        "_al_glBufferDataARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:buffer-sub-data-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glBufferSubDataARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-buffer-sub-data-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glGetBufferSubDataARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:map-buffer-arb
+      (foreign-lambda*
+        (c-pointer void)
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glMapBufferARB(a0 , a1));")))
+  (begin
+    (define gl:unmap-buffer-arb
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glUnmapBufferARB(a0));")))
+  (begin
+    (define gl:get-buffer-parameteriv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetBufferParameterivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-buffer-pointerv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetBufferPointervARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:gen-queries-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenQueriesARB(a0 , a1);")))
+  (begin
+    (define gl:delete-queries-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteQueriesARB(a0 , a1);")))
+  (begin
+    (define gl:is-query-arb
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsQueryARB(a0));")))
+  (begin
+    (define gl:begin-query-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBeginQueryARB(a0 , a1);")))
+  (begin
+    (define gl:end-query-arb
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glEndQueryARB(a0);")))
+  (begin
+    (define gl:get-queryiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetQueryivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetQueryObjectivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectuiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetQueryObjectuivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:delete-object-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0))
+        "_al_glDeleteObjectARB(a0);")))
+  (begin
+    (define gl:get-handle-arb
+      (foreign-lambda*
+        unsigned-long
+        ((unsigned-integer a0))
+        "return(_al_glGetHandleARB(a0));")))
+  (begin
+    (define gl:detach-object-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (unsigned-long a1))
+        "_al_glDetachObjectARB(a0 , a1);")))
+  (begin
+    (define gl:create-shader-object-arb
+      (foreign-lambda*
+        unsigned-long
+        ((unsigned-integer a0))
+        "return(_al_glCreateShaderObjectARB(a0));")))
+  (begin
+    (define gl:shader-source-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0)
+         (integer a1)
+         ((c-pointer (c-pointer (const char))) a2)
+         (s32vector a3))
+        "_al_glShaderSourceARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:compile-shader-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0))
+        "_al_glCompileShaderARB(a0);")))
+  (begin
+    (define gl:create-program-object-arb
+      (foreign-lambda*
+        unsigned-long
+        ()
+        "return(_al_glCreateProgramObjectARB());")))
+  (begin
+    (define gl:attach-object-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (unsigned-long a1))
+        "_al_glAttachObjectARB(a0 , a1);")))
+  (begin
+    (define gl:link-program-arb
+      (foreign-lambda* void ((unsigned-long a0)) "_al_glLinkProgramARB(a0);")))
+  (begin
+    (define gl:use-program-object-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0))
+        "_al_glUseProgramObjectARB(a0);")))
+  (begin
+    (define gl:validate-program-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0))
+        "_al_glValidateProgramARB(a0);")))
+  (begin
+    (define gl:uniform1f-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1))
+        "_al_glUniform1fARB(a0 , a1);")))
+  (begin
+    (define gl:uniform2f-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2))
+        "_al_glUniform2fARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3f-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2) (float a3))
+        "_al_glUniform3fARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4f-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glUniform4fARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glUniform1iARB(a0 , a1);")))
+  (begin
+    (define gl:uniform2i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glUniform2iARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glUniform3iARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4i-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
+        "_al_glUniform4iARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform1fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform2fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform3fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f32vector a2))
+        "_al_glUniform4fvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform1iv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform1ivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2iv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform2ivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3iv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform3ivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4iv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (s32vector a2))
+        "_al_glUniform4ivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform-matrix2fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix2fvARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix3fvARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4fv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
+        "_al_glUniformMatrix4fvARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-object-parameterfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetObjectParameterfvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-object-parameteriv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetObjectParameterivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-info-log-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetInfoLogARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-attached-objects-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (integer a1) (s32vector a2) (u32vector a3))
+        "_al_glGetAttachedObjectsARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-uniform-location-arb
+      (foreign-lambda*
+        integer
+        ((unsigned-long a0) (c-string a1))
+        "return(_al_glGetUniformLocationARB(a0 , a1));")))
+  (begin
+    (define gl:get-active-uniform-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (u32vector a5)
+         (c-string a6))
+        "_al_glGetActiveUniformARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-uniformfv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (integer a1) (f32vector a2))
+        "_al_glGetUniformfvARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniformiv-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (integer a1) (s32vector a2))
+        "_al_glGetUniformivARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-shader-source-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetShaderSourceARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-attrib-location-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0) (unsigned-integer a1) (c-string a2))
+        "_al_glBindAttribLocationARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-active-attrib-arb
+      (foreign-lambda*
+        void
+        ((unsigned-long a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (u32vector a5)
+         (c-string a6))
+        "_al_glGetActiveAttribARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-attrib-location-arb
+      (foreign-lambda*
+        integer
+        ((unsigned-long a0) (c-string a1))
+        "return(_al_glGetAttribLocationARB(a0 , a1));")))
+  (begin
+    (define gl:draw-buffers-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDrawBuffersARB(a0 , a1);")))
+  (begin
+    (define gl:clamp-color-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glClampColorARB(a0 , a1);")))
+  (begin
+    (define gl:draw-arrays-instanced-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glDrawArraysInstancedARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:draw-elements-instanced-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         (integer a4))
+        "_al_glDrawElementsInstancedARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:is-renderbuffer
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsRenderbuffer(a0));")))
+  (begin
+    (define gl:bind-renderbuffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindRenderbuffer(a0 , a1);")))
+  (begin
+    (define gl:delete-renderbuffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteRenderbuffers(a0 , a1);")))
+  (begin
+    (define gl:gen-renderbuffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenRenderbuffers(a0 , a1);")))
+  (begin
+    (define gl:renderbuffer-storage
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
+        "_al_glRenderbufferStorage(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-renderbuffer-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetRenderbufferParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:is-framebuffer
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsFramebuffer(a0));")))
+  (begin
+    (define gl:bind-framebuffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindFramebuffer(a0 , a1);")))
+  (begin
+    (define gl:delete-framebuffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteFramebuffers(a0 , a1);")))
+  (begin
+    (define gl:gen-framebuffers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenFramebuffers(a0 , a1);")))
+  (begin
+    (define gl:check-framebuffer-status
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glCheckFramebufferStatus(a0));")))
+  (begin
+    (define gl:framebuffer-texture1d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glFramebufferTexture1D(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture2d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glFramebufferTexture2D(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture3d
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glFramebufferTexture3D(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:framebuffer-renderbuffer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glFramebufferRenderbuffer(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-framebuffer-attachment-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetFramebufferAttachmentParameteriv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:generate-mipmap
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glGenerateMipmap(a0);")))
+  (begin
+    (define gl:blit-framebuffer
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9))
+        "_al_glBlitFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:renderbuffer-storage-multisample
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glRenderbufferStorageMultisample(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture-layer
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glFramebufferTextureLayer(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-parameteri-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glProgramParameteriARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:framebuffer-texture-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glFramebufferTextureARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:framebuffer-texture-layer-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glFramebufferTextureLayerARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture-face-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4))
+        "_al_glFramebufferTextureFaceARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-divisor
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexAttribDivisor(a0 , a1);")))
+  (begin
+    (define gl:map-buffer-range
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         (unsigned-integer a3))
+        "_al_glMapBufferRange(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:flush-mapped-buffer-range
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
+        "_al_glFlushMappedBufferRange(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-buffer-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glTexBufferARB(a0 , a1 , a2);")))
+  (begin
+    (define gl:bind-vertex-array
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBindVertexArray(a0);")))
+  (begin
+    (define gl:delete-vertex-arrays
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteVertexArrays(a0 , a1);")))
+  (begin
+    (define gl:gen-vertex-arrays
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenVertexArrays(a0 , a1);")))
+  (begin
+    (define gl:is-vertex-array
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsVertexArray(a0));")))
+  (begin
+    (define gl:get-uniform-indices
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         ((c-pointer (c-pointer (const char))) a2)
+         (u32vector a3))
+        "_al_glGetUniformIndices(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-active-uniformsiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (u32vector a2)
+         (unsigned-integer a3)
+         (s32vector a4))
+        "_al_glGetActiveUniformsiv(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-active-uniform-name
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (c-string a4))
+        "_al_glGetActiveUniformName(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-uniform-block-index
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetUniformBlockIndex(a0 , a1));")))
+  (begin
+    (define gl:get-active-uniform-blockiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetActiveUniformBlockiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-active-uniform-block-name
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (c-string a4))
+        "_al_glGetActiveUniformBlockName(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform-block-binding
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glUniformBlockBinding(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-buffer-sub-data
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4))
+        "_al_glCopyBufferSubData(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:draw-elements-base-vertex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         (integer a4))
+        "_al_glDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:draw-range-elements-base-vertex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5)
+         (integer a6))
+        "_al_glDrawRangeElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:draw-elements-instanced-base-vertex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         (integer a4)
+         (integer a5))
+        "_al_glDrawElementsInstancedBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:multi-draw-elements-base-vertex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (s32vector a1)
+         (unsigned-integer a2)
+         ((c-pointer (c-pointer (const void))) a3)
+         (integer a4)
+         (s32vector a5))
+        "_al_glMultiDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:provoking-vertex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glProvokingVertex(a0);")))
+  (begin
+    (define gl:fence-sync
+      (foreign-lambda*
+        (c-pointer (struct "__GLsync"))
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glFenceSync(a0 , a1));")))
+  (begin
+    (define gl:is-sync
+      (foreign-lambda*
+        unsigned-char
+        (((c-pointer (struct "__GLsync")) a0))
+        "return(_al_glIsSync(a0));")))
+  (begin
+    (define gl:delete-sync
+      (foreign-lambda*
+        void
+        (((c-pointer (struct "__GLsync")) a0))
+        "_al_glDeleteSync(a0);")))
+  (begin
+    (define gl:client-wait-sync
+      (foreign-lambda*
+        unsigned-integer
+        (((c-pointer (struct "__GLsync")) a0)
+         (unsigned-integer a1)
+         (unsigned-integer64 a2))
+        "return(_al_glClientWaitSync(a0 , a1 , a2));")))
+  (begin
+    (define gl:wait-sync
+      (foreign-lambda*
+        void
+        (((c-pointer (struct "__GLsync")) a0)
+         (unsigned-integer a1)
+         (unsigned-integer64 a2))
+        "_al_glWaitSync(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-integer64v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer integer64) a1))
+        "_al_glGetInteger64v(a0 , a1);")))
+  (begin
+    (define gl:get-synciv
+      (foreign-lambda*
+        void
+        (((c-pointer (struct "__GLsync")) a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4))
+        "_al_glGetSynciv(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-image2dmultisample
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-char a5))
+        "_al_glTexImage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:tex-image3dmultisample
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-char a6))
+        "_al_glTexImage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-multisamplefv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetMultisamplefv(a0 , a1 , a2);")))
+  (begin
+    (define gl:sample-maski
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glSampleMaski(a0 , a1);")))
+  (begin
+    (define gl:blend-equationi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBlendEquationi(a0 , a1);")))
+  (begin
+    (define gl:blend-equation-separatei
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBlendEquationSeparatei(a0 , a1 , a2);")))
+  (begin
+    (define gl:blend-funci
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBlendFunci(a0 , a1 , a2);")))
+  (begin
+    (define gl:blend-func-separatei
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glBlendFuncSeparatei(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:min-sample-shading
+      (foreign-lambda* void ((float a0)) "_al_glMinSampleShading(a0);")))
+  (begin
+    (define gl:named-string-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (c-string a2)
+         (integer a3)
+         (c-string a4))
+        "_al_glNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:delete-named-string-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (c-string a1))
+        "_al_glDeleteNamedStringARB(a0 , a1);")))
+  (begin
+    (define gl:compile-shader-include-arb
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         ((c-pointer (c-pointer (const char))) a2)
+         (s32vector a3))
+        "_al_glCompileShaderIncludeARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:is-named-string-arb
+      (foreign-lambda*
+        unsigned-char
+        ((integer a0) (c-string a1))
+        "return(_al_glIsNamedStringARB(a0 , a1));")))
+  (begin
+    (define gl:get-named-string-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (c-string a1) (integer a2) (s32vector a3) (c-string a4))
+        "_al_glGetNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-named-stringiv-arb
+      (foreign-lambda*
+        void
+        ((integer a0) (c-string a1) (unsigned-integer a2) (s32vector a3))
+        "_al_glGetNamedStringivARB(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-frag-data-location-indexed
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (c-string a3))
+        "_al_glBindFragDataLocationIndexed(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-frag-data-index
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetFragDataIndex(a0 , a1));")))
+  (begin
+    (define gl:gen-samplers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenSamplers(a0 , a1);")))
+  (begin
+    (define gl:delete-samplers
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteSamplers(a0 , a1);")))
+  (begin
+    (define gl:is-sampler
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsSampler(a0));")))
+  (begin
+    (define gl:bind-sampler
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindSampler(a0 , a1);")))
+  (begin
+    (define gl:sampler-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glSamplerParameteri(a0 , a1 , a2);")))
+  (begin
+    (define gl:sampler-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glSamplerParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:sampler-parameterf
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glSamplerParameterf(a0 , a1 , a2);")))
+  (begin
+    (define gl:sampler-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glSamplerParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:sampler-parameter-iiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glSamplerParameterIiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:sampler-parameter-iuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glSamplerParameterIuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-sampler-parameteriv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetSamplerParameteriv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-sampler-parameter-iiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetSamplerParameterIiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-sampler-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetSamplerParameterfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-sampler-parameter-ifv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetSamplerParameterIfv(a0 , a1 , a2);")))
+  (begin
+    (define gl:query-counter
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glQueryCounter(a0 , a1);")))
+  (begin
+    (define gl:get-query-objecti64v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer integer64) a2))
+        "_al_glGetQueryObjecti64v(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectui64v
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetQueryObjectui64v(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-p2ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexP2ui(a0 , a1);")))
+  (begin
+    (define gl:vertex-p2uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexP2uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexP3ui(a0 , a1);")))
+  (begin
+    (define gl:vertex-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexP3uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-p4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexP4ui(a0 , a1);")))
+  (begin
+    (define gl:vertex-p4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexP4uiv(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p1ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTexCoordP1ui(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p1uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glTexCoordP1uiv(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p2ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTexCoordP2ui(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p2uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glTexCoordP2uiv(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTexCoordP3ui(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glTexCoordP3uiv(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTexCoordP4ui(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-p4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glTexCoordP4uiv(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord-p1ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glMultiTexCoordP1ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p1uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glMultiTexCoordP1uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p2ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glMultiTexCoordP2ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p2uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glMultiTexCoordP2uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glMultiTexCoordP3ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glMultiTexCoordP3uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glMultiTexCoordP4ui(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord-p4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glMultiTexCoordP4uiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:normal-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glNormalP3ui(a0 , a1);")))
+  (begin
+    (define gl:normal-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glNormalP3uiv(a0 , a1);")))
+  (begin
+    (define gl:color-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glColorP3ui(a0 , a1);")))
+  (begin
+    (define gl:color-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glColorP3uiv(a0 , a1);")))
+  (begin
+    (define gl:color-p4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glColorP4ui(a0 , a1);")))
+  (begin
+    (define gl:color-p4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glColorP4uiv(a0 , a1);")))
+  (begin
+    (define gl:secondary-color-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glSecondaryColorP3ui(a0 , a1);")))
+  (begin
+    (define gl:secondary-color-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glSecondaryColorP3uiv(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-p1ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribP1ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p1uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (u32vector a3))
+        "_al_glVertexAttribP1uiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p2ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribP2ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p2uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (u32vector a3))
+        "_al_glVertexAttribP2uiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p3ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribP3ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p3uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (u32vector a3))
+        "_al_glVertexAttribP3uiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p4ui
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribP4ui(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-p4uiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-char a2)
+         (u32vector a3))
+        "_al_glVertexAttribP4uiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:draw-arrays-indirect
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1))
+        "_al_glDrawArraysIndirect(a0 , a1);")))
+  (begin
+    (define gl:draw-elements-indirect
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
+        "_al_glDrawElementsIndirect(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform1d
+      (foreign-lambda*
+        void
+        ((integer a0) (double a1))
+        "_al_glUniform1d(a0 , a1);")))
+  (begin
+    (define gl:uniform2d
+      (foreign-lambda*
+        void
+        ((integer a0) (double a1) (double a2))
+        "_al_glUniform2d(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3d
+      (foreign-lambda*
+        void
+        ((integer a0) (double a1) (double a2) (double a3))
+        "_al_glUniform3d(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4d
+      (foreign-lambda*
+        void
+        ((integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glUniform4d(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f64vector a2))
+        "_al_glUniform1dv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f64vector a2))
+        "_al_glUniform2dv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f64vector a2))
+        "_al_glUniform3dv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (f64vector a2))
+        "_al_glUniform4dv(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform-matrix2dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix2dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix3dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix4dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix2x3dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix2x3dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix2x4dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix2x4dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3x2dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix3x2dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix3x4dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix3x4dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4x2dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix4x2dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform-matrix4x3dv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
+        "_al_glUniformMatrix4x3dv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-uniformdv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f64vector a2))
+        "_al_glGetUniformdv(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniform1d-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (double a2))
+        "_al_glProgramUniform1dEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniform2d-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (double a2) (double a3))
+        "_al_glProgramUniform2dEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3d-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (double a2)
+         (double a3)
+         (double a4))
+        "_al_glProgramUniform3dEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform4d-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
+        "_al_glProgramUniform4dEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-uniform1dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
+        "_al_glProgramUniform1dvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform2dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
+        "_al_glProgramUniform2dvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
+        "_al_glProgramUniform3dvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform4dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
+        "_al_glProgramUniform4dvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform-matrix2dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix2x3dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix2x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix2x4dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix2x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3x2dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix3x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3x4dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix3x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4x2dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix4x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4x3dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f64vector a4))
+        "_al_glProgramUniformMatrix4x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-subroutine-uniform-location
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "return(_al_glGetSubroutineUniformLocation(a0 , a1 , a2));")))
+  (begin
+    (define gl:get-subroutine-index
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "return(_al_glGetSubroutineIndex(a0 , a1 , a2));")))
+  (begin
+    (define gl:get-active-subroutine-uniformiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (s32vector a4))
+        "_al_glGetActiveSubroutineUniformiv(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-active-subroutine-uniform-name
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (s32vector a4)
+         (c-string a5))
+        "_al_glGetActiveSubroutineUniformName(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-active-subroutine-name
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (s32vector a4)
+         (c-string a5))
+        "_al_glGetActiveSubroutineName(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:uniform-subroutinesuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glUniformSubroutinesuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniform-subroutineuiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glGetUniformSubroutineuiv(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-stageiv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetProgramStageiv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:patch-parameteri
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPatchParameteri(a0 , a1);")))
+  (begin
+    (define gl:patch-parameterfv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPatchParameterfv(a0 , a1);")))
+  (begin
+    (define gl:bind-transform-feedback
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindTransformFeedback(a0 , a1);")))
+  (begin
+    (define gl:delete-transform-feedbacks
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteTransformFeedbacks(a0 , a1);")))
+  (begin
+    (define gl:gen-transform-feedbacks
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenTransformFeedbacks(a0 , a1);")))
+  (begin
+    (define gl:is-transform-feedback
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsTransformFeedback(a0));")))
+  (begin
+    (define gl:pause-transform-feedback
+      (foreign-lambda* void () "_al_glPauseTransformFeedback();")))
+  (begin
+    (define gl:resume-transform-feedback
+      (foreign-lambda* void () "_al_glResumeTransformFeedback();")))
+  (begin
+    (define gl:draw-transform-feedback
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDrawTransformFeedback(a0 , a1);")))
+  (begin
+    (define gl:draw-transform-feedback-stream
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glDrawTransformFeedbackStream(a0 , a1 , a2);")))
+  (begin
+    (define gl:begin-query-indexed
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBeginQueryIndexed(a0 , a1 , a2);")))
+  (begin
+    (define gl:end-query-indexed
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEndQueryIndexed(a0 , a1);")))
+  (begin
+    (define gl:get-query-indexediv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetQueryIndexediv(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:blend-color-ext
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3))
+        "_al_glBlendColorEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:polygon-offset-ext
+      (foreign-lambda*
+        void
+        ((float a0) (float a1))
+        "_al_glPolygonOffsetEXT(a0 , a1);")))
+  (begin
+    (define gl:tex-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:tex-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         ((c-pointer void) a10))
+        "_al_glTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:get-tex-filter-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetTexFilterFuncSGIS(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-filter-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (f32vector a3))
+        "_al_glTexFilterFuncSGIS(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:tex-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
+        "_al_glTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:tex-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         ((c-pointer void) a8))
+        "_al_glTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:copy-tex-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
+        "_al_glCopyTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:copy-tex-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
+        "_al_glCopyTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:copy-tex-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glCopyTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:copy-tex-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
+        "_al_glCopyTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:copy-tex-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:get-histogram-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
+        "_al_glGetHistogramEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-histogram-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetHistogramParameterfvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-histogram-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetHistogramParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-minmax-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         ((c-pointer void) a4))
+        "_al_glGetMinmaxEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-minmax-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetMinmaxParameterfvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-minmax-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetMinmaxParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:histogram-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3))
+        "_al_glHistogramEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:minmax-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-char a2))
+        "_al_glMinmaxEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:reset-histogram-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glResetHistogramEXT(a0);")))
+  (begin
+    (define gl:reset-minmax-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glResetMinmaxEXT(a0);")))
+  (begin
+    (define gl:convolution-filter1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:convolution-filter2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6))
+        "_al_glConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:convolution-parameterf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glConvolutionParameterfEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glConvolutionParameterfvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameteri-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glConvolutionParameteriEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glConvolutionParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-convolution-filter1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:copy-convolution-filter2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glCopyConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-convolution-filter-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetConvolutionFilterEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-convolution-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetConvolutionParameterfvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-convolution-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetConvolutionParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-separable-filter-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4)
+         ((c-pointer void) a5))
+        "_al_glGetSeparableFilterEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:separable-filter2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         ((c-pointer void) a6)
+         ((c-pointer void) a7))
+        "_al_glSeparableFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:color-table-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glColorTableSGI(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:color-table-parameterfv-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glColorTableParameterfvSGI(a0 , a1 , a2);")))
+  (begin
+    (define gl:color-table-parameteriv-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glColorTableParameterivSGI(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-color-table-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyColorTableSGI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-color-table-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetColorTableSGI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-color-table-parameterfv-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetColorTableParameterfvSGI(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-color-table-parameteriv-sgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetColorTableParameterivSGI(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-tex-gen-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glPixelTexGenSGIX(a0);")))
+  (begin
+    (define gl:pixel-tex-gen-parameteri-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPixelTexGenParameteriSGIS(a0 , a1);")))
+  (begin
+    (define gl:pixel-tex-gen-parameteriv-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glPixelTexGenParameterivSGIS(a0 , a1);")))
+  (begin
+    (define gl:pixel-tex-gen-parameterf-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPixelTexGenParameterfSGIS(a0 , a1);")))
+  (begin
+    (define gl:pixel-tex-gen-parameterfv-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPixelTexGenParameterfvSGIS(a0 , a1);")))
+  (begin
+    (define gl:get-pixel-tex-gen-parameteriv-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glGetPixelTexGenParameterivSGIS(a0 , a1);")))
+  (begin
+    (define gl:get-pixel-tex-gen-parameterfv-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glGetPixelTexGenParameterfvSGIS(a0 , a1);")))
+  (begin
+    (define gl:tex-image4dsgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         ((c-pointer void) a10))
+        "_al_glTexImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:tex-sub-image4dsgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (integer a9)
+         (unsigned-integer a10)
+         (unsigned-integer a11)
+         ((c-pointer void) a12))
+        "_al_glTexSubImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+  (begin
+    (define gl:are-textures-resident-ext
+      (foreign-lambda*
+        unsigned-char
+        ((integer a0) (u32vector a1) (u8vector a2))
+        "return(_al_glAreTexturesResidentEXT(a0 , a1 , a2));")))
+  (begin
+    (define gl:bind-texture-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindTextureEXT(a0 , a1);")))
+  (begin
+    (define gl:delete-textures-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteTexturesEXT(a0 , a1);")))
+  (begin
+    (define gl:gen-textures-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenTexturesEXT(a0 , a1);")))
+  (begin
+    (define gl:is-texture-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsTextureEXT(a0));")))
+  (begin
+    (define gl:prioritize-textures-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1) (f32vector a2))
+        "_al_glPrioritizeTexturesEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:detail-tex-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glDetailTexFuncSGIS(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-detail-tex-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glGetDetailTexFuncSGIS(a0 , a1);")))
+  (begin
+    (define gl:sharpen-tex-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glSharpenTexFuncSGIS(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-sharpen-tex-func-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glGetSharpenTexFuncSGIS(a0 , a1);")))
+  (begin
+    (define gl:sample-mask-sgis
+      (foreign-lambda*
+        void
+        ((float a0) (unsigned-char a1))
+        "_al_glSampleMaskSGIS(a0 , a1);")))
+  (begin
+    (define gl:sample-pattern-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glSamplePatternSGIS(a0);")))
+  (begin
+    (define gl:blend-equation-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBlendEquationEXT(a0);")))
+  (begin
+    (define gl:sprite-parameterf-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glSpriteParameterfSGIX(a0 , a1);")))
+  (begin
+    (define gl:sprite-parameterfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glSpriteParameterfvSGIX(a0 , a1);")))
+  (begin
+    (define gl:sprite-parameteri-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glSpriteParameteriSGIX(a0 , a1);")))
+  (begin
+    (define gl:sprite-parameteriv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glSpriteParameterivSGIX(a0 , a1);")))
+  (begin
+    (define gl:point-parameterf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPointParameterfEXT(a0 , a1);")))
+  (begin
+    (define gl:point-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPointParameterfvEXT(a0 , a1);")))
+  (begin
+    (define gl:point-parameterf-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPointParameterfSGIS(a0 , a1);")))
+  (begin
+    (define gl:point-parameterfv-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glPointParameterfvSGIS(a0 , a1);")))
+  (begin
+    (define gl:get-instruments-sgix
+      (foreign-lambda* integer () "return(_al_glGetInstrumentsSGIX());")))
+  (begin
+    (define gl:instruments-buffer-sgix
+      (foreign-lambda*
+        void
+        ((integer a0) (s32vector a1))
+        "_al_glInstrumentsBufferSGIX(a0 , a1);")))
+  (begin
+    (define gl:poll-instruments-sgix
+      (foreign-lambda*
+        integer
+        ((s32vector a0))
+        "return(_al_glPollInstrumentsSGIX(a0));")))
+  (begin
+    (define gl:read-instruments-sgix
+      (foreign-lambda* void ((integer a0)) "_al_glReadInstrumentsSGIX(a0);")))
+  (begin
+    (define gl:start-instruments-sgix
+      (foreign-lambda* void () "_al_glStartInstrumentsSGIX();")))
+  (begin
+    (define gl:stop-instruments-sgix
+      (foreign-lambda* void ((integer a0)) "_al_glStopInstrumentsSGIX(a0);")))
+  (begin
+    (define gl:frame-zoom-sgix
+      (foreign-lambda* void ((integer a0)) "_al_glFrameZoomSGIX(a0);")))
+  (begin
+    (define gl:tag-sample-buffer-sgix
+      (foreign-lambda* void () "_al_glTagSampleBufferSGIX();")))
+  (begin
+    (define gl:deformation-map3d-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (double a1)
+         (double a2)
+         (integer a3)
+         (integer a4)
+         (double a5)
+         (double a6)
+         (integer a7)
+         (integer a8)
+         (double a9)
+         (double a10)
+         (integer a11)
+         (integer a12)
+         (f64vector a13))
+        "_al_glDeformationMap3dSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
+  (begin
+    (define gl:deformation-map3f-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (integer a3)
+         (integer a4)
+         (float a5)
+         (float a6)
+         (integer a7)
+         (integer a8)
+         (float a9)
+         (float a10)
+         (integer a11)
+         (integer a12)
+         (f32vector a13))
+        "_al_glDeformationMap3fSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
+  (begin
+    (define gl:deform-sgix
+      (foreign-lambda* void ((unsigned-integer a0)) "_al_glDeformSGIX(a0);")))
+  (begin
+    (define gl:load-identity-deformation-map-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glLoadIdentityDeformationMapSGIX(a0);")))
+  (begin
+    (define gl:reference-plane-sgix
+      (foreign-lambda* void ((f64vector a0)) "_al_glReferencePlaneSGIX(a0);")))
+  (begin
+    (define gl:flush-raster-sgix
+      (foreign-lambda* void () "_al_glFlushRasterSGIX();")))
+  (begin
+    (define gl:fog-func-sgis
+      (foreign-lambda*
+        void
+        ((integer a0) (f32vector a1))
+        "_al_glFogFuncSGIS(a0 , a1);")))
+  (begin
+    (define gl:get-fog-func-sgis
+      (foreign-lambda* void ((f32vector a0)) "_al_glGetFogFuncSGIS(a0);")))
+  (begin
+    (define gl:image-transform-parameteri-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glImageTransformParameteriHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:image-transform-parameterf-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glImageTransformParameterfHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:image-transform-parameteriv-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glImageTransformParameterivHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:image-transform-parameterfv-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glImageTransformParameterfvHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-image-transform-parameteriv-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetImageTransformParameterivHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-image-transform-parameterfv-hp
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetImageTransformParameterfvHP(a0 , a1 , a2);")))
+  (begin
+    (define gl:copy-color-sub-table-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glCopyColorSubTableEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:hint-pgi
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glHintPGI(a0 , a1);")))
+  (begin
+    (define gl:get-list-parameterfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetListParameterfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-list-parameteriv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetListParameterivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:list-parameterf-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glListParameterfSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:list-parameterfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glListParameterfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:list-parameteri-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glListParameteriSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:list-parameteriv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glListParameterivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:index-material-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glIndexMaterialEXT(a0 , a1);")))
+  (begin
+    (define gl:index-func-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glIndexFuncEXT(a0 , a1);")))
+  (begin
+    (define gl:lock-arrays-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glLockArraysEXT(a0 , a1);")))
+  (begin
+    (define gl:unlock-arrays-ext
+      (foreign-lambda* void () "_al_glUnlockArraysEXT();")))
+  (begin
+    (define gl:cull-parameterdv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glCullParameterdvEXT(a0 , a1);")))
+  (begin
+    (define gl:cull-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glCullParameterfvEXT(a0 , a1);")))
+  (begin
+    (define gl:fragment-color-material-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glFragmentColorMaterialSGIX(a0 , a1);")))
+  (begin
+    (define gl:fragment-lightf-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glFragmentLightfSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-lightfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glFragmentLightfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-lighti-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glFragmentLightiSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-lightiv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glFragmentLightivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-light-modelf-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glFragmentLightModelfSGIX(a0 , a1);")))
+  (begin
+    (define gl:fragment-light-modelfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glFragmentLightModelfvSGIX(a0 , a1);")))
+  (begin
+    (define gl:fragment-light-modeli-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glFragmentLightModeliSGIX(a0 , a1);")))
+  (begin
+    (define gl:fragment-light-modeliv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glFragmentLightModelivSGIX(a0 , a1);")))
+  (begin
+    (define gl:fragment-materialf-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glFragmentMaterialfSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-materialfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glFragmentMaterialfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-materiali-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glFragmentMaterialiSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:fragment-materialiv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glFragmentMaterialivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-fragment-lightfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetFragmentLightfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-fragment-lightiv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFragmentLightivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-fragment-materialfv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetFragmentMaterialfvSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-fragment-materialiv-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFragmentMaterialivSGIX(a0 , a1 , a2);")))
+  (begin
+    (define gl:light-envi-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glLightEnviSGIX(a0 , a1);")))
+  (begin
+    (define gl:draw-range-elements-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glDrawRangeElementsEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:apply-texture-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glApplyTextureEXT(a0);")))
+  (begin
+    (define gl:texture-light-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glTextureLightEXT(a0);")))
+  (begin
+    (define gl:texture-material-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTextureMaterialEXT(a0 , a1);")))
+  (begin
+    (define gl:async-marker-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glAsyncMarkerSGIX(a0);")))
+  (begin
+    (define gl:finish-async-sgix
+      (foreign-lambda*
+        integer
+        ((u32vector a0))
+        "return(_al_glFinishAsyncSGIX(a0));")))
+  (begin
+    (define gl:poll-async-sgix
+      (foreign-lambda*
+        integer
+        ((u32vector a0))
+        "return(_al_glPollAsyncSGIX(a0));")))
+  (begin
+    (define gl:gen-async-markers-sgix
+      (foreign-lambda*
+        unsigned-integer
+        ((integer a0))
+        "return(_al_glGenAsyncMarkersSGIX(a0));")))
+  (begin
+    (define gl:delete-async-markers-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glDeleteAsyncMarkersSGIX(a0 , a1);")))
+  (begin
+    (define gl:is-async-marker-sgix
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsAsyncMarkerSGIX(a0));")))
+  (begin
+    (define gl:vertex-pointerv-intel
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer (const void))) a2))
+        "_al_glVertexPointervINTEL(a0 , a1 , a2);")))
+  (begin
+    (define gl:normal-pointerv-intel
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer (c-pointer (const void))) a1))
+        "_al_glNormalPointervINTEL(a0 , a1);")))
+  (begin
+    (define gl:color-pointerv-intel
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer (const void))) a2))
+        "_al_glColorPointervINTEL(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord-pointerv-intel
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer (const void))) a2))
+        "_al_glTexCoordPointervINTEL(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-transform-parameteri-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glPixelTransformParameteriEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-transform-parameterf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (float a2))
+        "_al_glPixelTransformParameterfEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-transform-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glPixelTransformParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-transform-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glPixelTransformParameterfvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3b-ext
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glSecondaryColor3bEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3bv-ext
+      (foreign-lambda*
+        void
+        ((c-string a0))
+        "_al_glSecondaryColor3bvEXT(a0);")))
+  (begin
+    (define gl:secondary-color3d-ext
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glSecondaryColor3dEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3dv-ext
+      (foreign-lambda*
+        void
+        ((f64vector a0))
+        "_al_glSecondaryColor3dvEXT(a0);")))
+  (begin
+    (define gl:secondary-color3f-ext
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glSecondaryColor3fEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3fv-ext
+      (foreign-lambda*
+        void
+        ((f32vector a0))
+        "_al_glSecondaryColor3fvEXT(a0);")))
+  (begin
+    (define gl:secondary-color3i-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glSecondaryColor3iEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3iv-ext
+      (foreign-lambda*
+        void
+        ((s32vector a0))
+        "_al_glSecondaryColor3ivEXT(a0);")))
+  (begin
+    (define gl:secondary-color3s-ext
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glSecondaryColor3sEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3sv-ext
+      (foreign-lambda*
+        void
+        ((s16vector a0))
+        "_al_glSecondaryColor3svEXT(a0);")))
+  (begin
+    (define gl:secondary-color3ub-ext
+      (foreign-lambda*
+        void
+        ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
+        "_al_glSecondaryColor3ubEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3ubv-ext
+      (foreign-lambda*
+        void
+        ((u8vector a0))
+        "_al_glSecondaryColor3ubvEXT(a0);")))
+  (begin
+    (define gl:secondary-color3ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glSecondaryColor3uiEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3uiv-ext
+      (foreign-lambda*
+        void
+        ((u32vector a0))
+        "_al_glSecondaryColor3uivEXT(a0);")))
+  (begin
+    (define gl:secondary-color3us-ext
+      (foreign-lambda*
+        void
+        ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
+        "_al_glSecondaryColor3usEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3usv-ext
+      (foreign-lambda*
+        void
+        ((u16vector a0))
+        "_al_glSecondaryColor3usvEXT(a0);")))
+  (begin
+    (define gl:secondary-color-pointer-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
+        "_al_glSecondaryColorPointerEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-normal-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glTextureNormalEXT(a0);")))
+  (begin
+    (define gl:multi-draw-arrays-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
+        "_al_glMultiDrawArraysEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-draw-elements-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (s32vector a1)
+         (unsigned-integer a2)
+         ((c-pointer (c-pointer (const void))) a3)
+         (integer a4))
+        "_al_glMultiDrawElementsEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:fog-coordf-ext
+      (foreign-lambda* void ((float a0)) "_al_glFogCoordfEXT(a0);")))
+  (begin
+    (define gl:fog-coordfv-ext
+      (foreign-lambda* void ((f32vector a0)) "_al_glFogCoordfvEXT(a0);")))
+  (begin
+    (define gl:fog-coordd-ext
+      (foreign-lambda* void ((double a0)) "_al_glFogCoorddEXT(a0);")))
+  (begin
+    (define gl:fog-coorddv-ext
+      (foreign-lambda* void ((f64vector a0)) "_al_glFogCoorddvEXT(a0);")))
+  (begin
+    (define gl:fog-coord-pointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glFogCoordPointerEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3b-ext
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glTangent3bEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3bv-ext
+      (foreign-lambda* void ((c-string a0)) "_al_glTangent3bvEXT(a0);")))
+  (begin
+    (define gl:tangent3d-ext
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glTangent3dEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3dv-ext
+      (foreign-lambda* void ((f64vector a0)) "_al_glTangent3dvEXT(a0);")))
+  (begin
+    (define gl:tangent3f-ext
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glTangent3fEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3fv-ext
+      (foreign-lambda* void ((f32vector a0)) "_al_glTangent3fvEXT(a0);")))
+  (begin
+    (define gl:tangent3i-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glTangent3iEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3iv-ext
+      (foreign-lambda* void ((s32vector a0)) "_al_glTangent3ivEXT(a0);")))
+  (begin
+    (define gl:tangent3s-ext
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glTangent3sEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:tangent3sv-ext
+      (foreign-lambda* void ((s16vector a0)) "_al_glTangent3svEXT(a0);")))
+  (begin
+    (define gl:binormal3b-ext
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glBinormal3bEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal3bv-ext
+      (foreign-lambda* void ((c-string a0)) "_al_glBinormal3bvEXT(a0);")))
+  (begin
+    (define gl:binormal3d-ext
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glBinormal3dEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal3dv-ext
+      (foreign-lambda* void ((f64vector a0)) "_al_glBinormal3dvEXT(a0);")))
+  (begin
+    (define gl:binormal3f-ext
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glBinormal3fEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal3fv-ext
+      (foreign-lambda* void ((f32vector a0)) "_al_glBinormal3fvEXT(a0);")))
+  (begin
+    (define gl:binormal3i-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glBinormal3iEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal3iv-ext
+      (foreign-lambda* void ((s32vector a0)) "_al_glBinormal3ivEXT(a0);")))
+  (begin
+    (define gl:binormal3s-ext
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glBinormal3sEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal3sv-ext
+      (foreign-lambda* void ((s16vector a0)) "_al_glBinormal3svEXT(a0);")))
+  (begin
+    (define gl:tangent-pointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glTangentPointerEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:binormal-pointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glBinormalPointerEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:finish-texture-sunx
+      (foreign-lambda* void () "_al_glFinishTextureSUNX();")))
+  (begin
+    (define gl:global-alpha-factorb-sun
+      (foreign-lambda* void ((char a0)) "_al_glGlobalAlphaFactorbSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factors-sun
+      (foreign-lambda* void ((short a0)) "_al_glGlobalAlphaFactorsSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factori-sun
+      (foreign-lambda*
+        void
+        ((integer a0))
+        "_al_glGlobalAlphaFactoriSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factorf-sun
+      (foreign-lambda* void ((float a0)) "_al_glGlobalAlphaFactorfSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factord-sun
+      (foreign-lambda* void ((double a0)) "_al_glGlobalAlphaFactordSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factorub-sun
+      (foreign-lambda*
+        void
+        ((unsigned-char a0))
+        "_al_glGlobalAlphaFactorubSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factorus-sun
+      (foreign-lambda*
+        void
+        ((unsigned-short a0))
+        "_al_glGlobalAlphaFactorusSUN(a0);")))
+  (begin
+    (define gl:global-alpha-factorui-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glGlobalAlphaFactoruiSUN(a0);")))
+  (begin
+    (define gl:replacement-codeui-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glReplacementCodeuiSUN(a0);")))
+  (begin
+    (define gl:replacement-codeus-sun
+      (foreign-lambda*
+        void
+        ((unsigned-short a0))
+        "_al_glReplacementCodeusSUN(a0);")))
+  (begin
+    (define gl:replacement-codeub-sun
+      (foreign-lambda*
+        void
+        ((unsigned-char a0))
+        "_al_glReplacementCodeubSUN(a0);")))
+  (begin
+    (define gl:replacement-codeuiv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0))
+        "_al_glReplacementCodeuivSUN(a0);")))
+  (begin
+    (define gl:replacement-codeusv-sun
+      (foreign-lambda*
+        void
+        ((u16vector a0))
+        "_al_glReplacementCodeusvSUN(a0);")))
+  (begin
+    (define gl:replacement-codeubv-sun
+      (foreign-lambda*
+        void
+        ((u8vector a0))
+        "_al_glReplacementCodeubvSUN(a0);")))
+  (begin
+    (define gl:replacement-code-pointer-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         ((c-pointer (c-pointer (const void))) a2))
+        "_al_glReplacementCodePointerSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:color4ub-vertex2f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-char a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (float a4)
+         (float a5))
+        "_al_glColor4ubVertex2fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:color4ub-vertex2fv-sun
+      (foreign-lambda*
+        void
+        ((u8vector a0) (f32vector a1))
+        "_al_glColor4ubVertex2fvSUN(a0 , a1);")))
+  (begin
+    (define gl:color4ub-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-char a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (float a4)
+         (float a5)
+         (float a6))
+        "_al_glColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:color4ub-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u8vector a0) (f32vector a1))
+        "_al_glColor4ubVertex3fvSUN(a0 , a1);")))
+  (begin
+    (define gl:color3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
+        "_al_glColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:color3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1))
+        "_al_glColor3fVertex3fvSUN(a0 , a1);")))
+  (begin
+    (define gl:normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
+        "_al_glNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1))
+        "_al_glNormal3fVertex3fvSUN(a0 , a1);")))
+  (begin
+    (define gl:color4f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8)
+         (float a9))
+        "_al_glColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:color4f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glColor4fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord2f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-coord2f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1))
+        "_al_glTexCoord2fVertex3fvSUN(a0 , a1);")))
+  (begin
+    (define gl:tex-coord4f-vertex4f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7))
+        "_al_glTexCoord4fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:tex-coord4f-vertex4fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1))
+        "_al_glTexCoord4fVertex4fvSUN(a0 , a1);")))
+  (begin
+    (define gl:tex-coord2f-color4ub-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4)
+         (unsigned-char a5)
+         (float a6)
+         (float a7)
+         (float a8))
+        "_al_glTexCoord2fColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:tex-coord2f-color4ub-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (u8vector a1) (f32vector a2))
+        "_al_glTexCoord2fColor4ubVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord2f-color3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7))
+        "_al_glTexCoord2fColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:tex-coord2f-color3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glTexCoord2fColor3fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord2f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7))
+        "_al_glTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:tex-coord2f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord2f-color4f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8)
+         (float a9)
+         (float a10)
+         (float a11))
+        "_al_glTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:tex-coord2f-color4f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
+        "_al_glTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:tex-coord4f-color4f-normal3f-vertex4f-sun
+      (foreign-lambda*
+        void
+        ((float a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8)
+         (float a9)
+         (float a10)
+         (float a11)
+         (float a12)
+         (float a13)
+         (float a14))
+        "_al_glTexCoord4fColor4fNormal3fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
+  (begin
+    (define gl:tex-coord4f-color4f-normal3f-vertex4fv-sun
+      (foreign-lambda*
+        void
+        ((f32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
+        "_al_glTexCoord4fColor4fNormal3fVertex4fvSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:replacement-codeui-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glReplacementCodeuiVertex3fSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:replacement-codeui-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1))
+        "_al_glReplacementCodeuiVertex3fvSUN(a0 , a1);")))
+  (begin
+    (define gl:replacement-codeui-color4ub-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4)
+         (float a5)
+         (float a6)
+         (float a7))
+        "_al_glReplacementCodeuiColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:replacement-codeui-color4ub-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (u8vector a1) (f32vector a2))
+        "_al_glReplacementCodeuiColor4ubVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:replacement-codeui-color3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6))
+        "_al_glReplacementCodeuiColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:replacement-codeui-color3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glReplacementCodeuiColor3fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:replacement-codeui-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6))
+        "_al_glReplacementCodeuiNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:replacement-codeui-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glReplacementCodeuiNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:replacement-codeui-color4f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8)
+         (float a9)
+         (float a10))
+        "_al_glReplacementCodeuiColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:replacement-codeui-color4f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
+        "_al_glReplacementCodeuiColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5))
+        "_al_glReplacementCodeuiTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1) (f32vector a2))
+        "_al_glReplacementCodeuiTexCoord2fVertex3fvSUN(a0 , a1 , a2);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8))
+        "_al_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
+        "_al_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-color4f-normal3f-vertex3f-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (float a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6)
+         (float a7)
+         (float a8)
+         (float a9)
+         (float a10)
+         (float a11)
+         (float a12))
+        "_al_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+  (begin
+    (define gl:replacement-codeui-tex-coord2f-color4f-normal3f-vertex3fv-sun
+      (foreign-lambda*
+        void
+        ((u32vector a0)
+         (f32vector a1)
+         (f32vector a2)
+         (f32vector a3)
+         (f32vector a4))
+        "_al_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:blend-func-separate-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glBlendFuncSeparateEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:blend-func-separate-ingr
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glBlendFuncSeparateINGR(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-weightf-ext
+      (foreign-lambda* void ((float a0)) "_al_glVertexWeightfEXT(a0);")))
+  (begin
+    (define gl:vertex-weightfv-ext
+      (foreign-lambda* void ((f32vector a0)) "_al_glVertexWeightfvEXT(a0);")))
+  (begin
+    (define gl:vertex-weight-pointer-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
+        "_al_glVertexWeightPointerEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:flush-vertex-array-range-nv
+      (foreign-lambda* void () "_al_glFlushVertexArrayRangeNV();")))
+  (begin
+    (define gl:vertex-array-range-nv
+      (foreign-lambda*
+        void
+        ((integer a0) ((c-pointer void) a1))
+        "_al_glVertexArrayRangeNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glCombinerParameterfvNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-parameterf-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glCombinerParameterfNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glCombinerParameterivNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-parameteri-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glCombinerParameteriNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-input-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glCombinerInputNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:combiner-output-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-char a7)
+         (unsigned-char a8)
+         (unsigned-char a9))
+        "_al_glCombinerOutputNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:final-combiner-input-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glFinalCombinerInputNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-combiner-input-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (f32vector a4))
+        "_al_glGetCombinerInputParameterfvNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-combiner-input-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (s32vector a4))
+        "_al_glGetCombinerInputParameterivNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-combiner-output-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetCombinerOutputParameterfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-combiner-output-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetCombinerOutputParameterivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-final-combiner-input-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetFinalCombinerInputParameterfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-final-combiner-input-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFinalCombinerInputParameterivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:resize-buffers-mesa
+      (foreign-lambda* void () "_al_glResizeBuffersMESA();")))
+  (begin
+    (define gl:window-pos2d-mesa
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glWindowPos2dMESA(a0 , a1);")))
+  (begin
+    (define gl:window-pos2dv-mesa
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dvMESA(a0);")))
+  (begin
+    (define gl:window-pos2f-mesa
+      (foreign-lambda*
+        void
+        ((float a0) (float a1))
+        "_al_glWindowPos2fMESA(a0 , a1);")))
+  (begin
+    (define gl:window-pos2fv-mesa
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fvMESA(a0);")))
+  (begin
+    (define gl:window-pos2i-mesa
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glWindowPos2iMESA(a0 , a1);")))
+  (begin
+    (define gl:window-pos2iv-mesa
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2ivMESA(a0);")))
+  (begin
+    (define gl:window-pos2s-mesa
+      (foreign-lambda*
+        void
+        ((short a0) (short a1))
+        "_al_glWindowPos2sMESA(a0 , a1);")))
+  (begin
+    (define gl:window-pos2sv-mesa
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2svMESA(a0);")))
+  (begin
+    (define gl:window-pos3d-mesa
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2))
+        "_al_glWindowPos3dMESA(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3dv-mesa
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dvMESA(a0);")))
+  (begin
+    (define gl:window-pos3f-mesa
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2))
+        "_al_glWindowPos3fMESA(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3fv-mesa
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fvMESA(a0);")))
+  (begin
+    (define gl:window-pos3i-mesa
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glWindowPos3iMESA(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3iv-mesa
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3ivMESA(a0);")))
+  (begin
+    (define gl:window-pos3s-mesa
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glWindowPos3sMESA(a0 , a1 , a2);")))
+  (begin
+    (define gl:window-pos3sv-mesa
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3svMESA(a0);")))
+  (begin
+    (define gl:window-pos4d-mesa
+      (foreign-lambda*
+        void
+        ((double a0) (double a1) (double a2) (double a3))
+        "_al_glWindowPos4dMESA(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos4dv-mesa
+      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos4dvMESA(a0);")))
+  (begin
+    (define gl:window-pos4f-mesa
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3))
+        "_al_glWindowPos4fMESA(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos4fv-mesa
+      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos4fvMESA(a0);")))
+  (begin
+    (define gl:window-pos4i-mesa
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glWindowPos4iMESA(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos4iv-mesa
+      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos4ivMESA(a0);")))
+  (begin
+    (define gl:window-pos4s-mesa
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2) (short a3))
+        "_al_glWindowPos4sMESA(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:window-pos4sv-mesa
+      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos4svMESA(a0);")))
+  (begin
+    (define gl:multi-mode-draw-arrays-ibm
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (s32vector a1)
+         (s32vector a2)
+         (integer a3)
+         (integer a4))
+        "_al_glMultiModeDrawArraysIBM(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-mode-draw-elements-ibm
+      (foreign-lambda*
+        void
+        ((u32vector a0)
+         (s32vector a1)
+         (unsigned-integer a2)
+         ((c-pointer (c-pointer (const void))) a3)
+         (integer a4)
+         (integer a5))
+        "_al_glMultiModeDrawElementsIBM(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:tbuffer-mask3dfx
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glTbufferMask3DFX(a0);")))
+  (begin
+    (define gl:sample-mask-ext
+      (foreign-lambda*
+        void
+        ((float a0) (unsigned-char a1))
+        "_al_glSampleMaskEXT(a0 , a1);")))
+  (begin
+    (define gl:sample-pattern-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glSamplePatternEXT(a0);")))
+  (begin
+    (define gl:texture-color-mask-sgis
+      (foreign-lambda*
+        void
+        ((unsigned-char a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3))
+        "_al_glTextureColorMaskSGIS(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:igloo-interface-sgix
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1))
+        "_al_glIglooInterfaceSGIX(a0 , a1);")))
+  (begin
+    (define gl:delete-fences-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteFencesNV(a0 , a1);")))
+  (begin
+    (define gl:gen-fences-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenFencesNV(a0 , a1);")))
+  (begin
+    (define gl:is-fence-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsFenceNV(a0));")))
+  (begin
+    (define gl:test-fence-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glTestFenceNV(a0));")))
+  (begin
+    (define gl:get-fenceiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFenceivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:finish-fence-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glFinishFenceNV(a0);")))
+  (begin
+    (define gl:set-fence-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glSetFenceNV(a0 , a1);")))
+  (begin
+    (define gl:map-control-points-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-char a7)
+         ((c-pointer void) a8))
+        "_al_glMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:map-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glMapParameterivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:map-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glMapParameterfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-map-control-points-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-char a5)
+         ((c-pointer void) a6))
+        "_al_glGetMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-map-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetMapParameterivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-map-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetMapParameterfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-map-attrib-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetMapAttribParameterivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-map-attrib-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetMapAttribParameterfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:eval-maps-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEvalMapsNV(a0 , a1);")))
+  (begin
+    (define gl:combiner-stage-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glCombinerStageParameterfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-combiner-stage-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetCombinerStageParameterfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:are-programs-resident-nv
+      (foreign-lambda*
+        unsigned-char
+        ((integer a0) (u32vector a1) (u8vector a2))
+        "return(_al_glAreProgramsResidentNV(a0 , a1 , a2));")))
+  (begin
+    (define gl:bind-program-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindProgramNV(a0 , a1);")))
+  (begin
+    (define gl:delete-programs-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteProgramsNV(a0 , a1);")))
+  (begin
+    (define gl:execute-program-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glExecuteProgramNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:gen-programs-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenProgramsNV(a0 , a1);")))
+  (begin
+    (define gl:get-program-parameterdv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glGetProgramParameterdvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetProgramParameterfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-programiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetProgramivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-string-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetProgramStringNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-track-matrixiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetTrackMatrixivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-vertex-attribdv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetVertexAttribdvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVertexAttribfvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attribiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-pointerv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetVertexAttribPointervNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:is-program-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsProgramNV(a0));")))
+  (begin
+    (define gl:load-program-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (u8vector a3))
+        "_al_glLoadProgramNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-parameter4d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5))
+        "_al_glProgramParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-parameter4dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glProgramParameter4dvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-parameter4f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5))
+        "_al_glProgramParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-parameter4fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glProgramParameter4fvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-parameters4dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glProgramParameters4dvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-parameters4fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glProgramParameters4fvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:request-resident-programs-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glRequestResidentProgramsNV(a0 , a1);")))
+  (begin
+    (define gl:track-matrix-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glTrackMatrixNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-pointer-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer void) a4))
+        "_al_glVertexAttribPointerNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib1d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glVertexAttrib1dNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib1dvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glVertexAttrib1fNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib1fvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1s-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glVertexAttrib1sNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib1svNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glVertexAttrib2dNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib2dvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glVertexAttrib2fNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib2fvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2s-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glVertexAttrib2sNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib2svNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glVertexAttrib3dNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib3dvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glVertexAttrib3fNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib3fvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3s-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glVertexAttrib3sNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib3svNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glVertexAttrib4dNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexAttrib4dvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glVertexAttrib4fNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexAttrib4fvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4s-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glVertexAttrib4sNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4svNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4ub-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4))
+        "_al_glVertexAttrib4ubNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4ubv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttrib4ubvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attribs1dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f64vector a2))
+        "_al_glVertexAttribs1dvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs1fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glVertexAttribs1fvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs1sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs1svNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs2dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f64vector a2))
+        "_al_glVertexAttribs2dvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs2fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glVertexAttribs2fvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs2sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs2svNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs3dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f64vector a2))
+        "_al_glVertexAttribs3dvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs3fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glVertexAttribs3fvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs3sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs3svNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs4dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f64vector a2))
+        "_al_glVertexAttribs4dvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs4fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (f32vector a2))
+        "_al_glVertexAttribs4fvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs4sv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs4svNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs4ubv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u8vector a2))
+        "_al_glVertexAttribs4ubvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-bump-parameteriv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glTexBumpParameterivATI(a0 , a1);")))
+  (begin
+    (define gl:tex-bump-parameterfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glTexBumpParameterfvATI(a0 , a1);")))
+  (begin
+    (define gl:get-tex-bump-parameteriv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glGetTexBumpParameterivATI(a0 , a1);")))
+  (begin
+    (define gl:get-tex-bump-parameterfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glGetTexBumpParameterfvATI(a0 , a1);")))
+  (begin
+    (define gl:gen-fragment-shaders-ati
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glGenFragmentShadersATI(a0));")))
+  (begin
+    (define gl:bind-fragment-shader-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBindFragmentShaderATI(a0);")))
+  (begin
+    (define gl:delete-fragment-shader-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDeleteFragmentShaderATI(a0);")))
+  (begin
+    (define gl:begin-fragment-shader-ati
+      (foreign-lambda* void () "_al_glBeginFragmentShaderATI();")))
+  (begin
+    (define gl:end-fragment-shader-ati
+      (foreign-lambda* void () "_al_glEndFragmentShaderATI();")))
+  (begin
+    (define gl:pass-tex-coord-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glPassTexCoordATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:sample-map-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glSampleMapATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:color-fragment-op1ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6))
+        "_al_glColorFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:color-fragment-op2ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9))
+        "_al_glColorFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:color-fragment-op3ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         (unsigned-integer a10)
+         (unsigned-integer a11)
+         (unsigned-integer a12))
+        "_al_glColorFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+  (begin
+    (define gl:alpha-fragment-op1ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glAlphaFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:alpha-fragment-op2ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8))
+        "_al_glAlphaFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:alpha-fragment-op3ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         (unsigned-integer a10)
+         (unsigned-integer a11))
+        "_al_glAlphaFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:set-fragment-shader-constant-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glSetFragmentShaderConstantATI(a0 , a1);")))
+  (begin
+    (define gl:pntrianglesi-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPNTrianglesiATI(a0 , a1);")))
+  (begin
+    (define gl:pntrianglesf-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glPNTrianglesfATI(a0 , a1);")))
+  (begin
+    (define gl:new-object-buffer-ati
+      (foreign-lambda*
+        unsigned-integer
+        ((integer a0) ((c-pointer void) a1) (unsigned-integer a2))
+        "return(_al_glNewObjectBufferATI(a0 , a1 , a2));")))
+  (begin
+    (define gl:is-object-buffer-ati
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsObjectBufferATI(a0));")))
+  (begin
+    (define gl:update-object-buffer-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         ((c-pointer void) a3)
+         (unsigned-integer a4))
+        "_al_glUpdateObjectBufferATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-object-bufferfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetObjectBufferfvATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-object-bufferiv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetObjectBufferivATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:free-object-buffer-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glFreeObjectBufferATI(a0);")))
+  (begin
+    (define gl:array-object-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-array-objectfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetArrayObjectfvATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-array-objectiv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetArrayObjectivATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:variant-array-object-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glVariantArrayObjectATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-variant-array-objectfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVariantArrayObjectfvATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-variant-array-objectiv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVariantArrayObjectivATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:begin-vertex-shader-ext
+      (foreign-lambda* void () "_al_glBeginVertexShaderEXT();")))
+  (begin
+    (define gl:end-vertex-shader-ext
+      (foreign-lambda* void () "_al_glEndVertexShaderEXT();")))
+  (begin
+    (define gl:bind-vertex-shader-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBindVertexShaderEXT(a0);")))
+  (begin
+    (define gl:gen-vertex-shaders-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glGenVertexShadersEXT(a0));")))
+  (begin
+    (define gl:delete-vertex-shader-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDeleteVertexShaderEXT(a0);")))
+  (begin
+    (define gl:shader-op1ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glShaderOp1EXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:shader-op2ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glShaderOp2EXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:shader-op3ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glShaderOp3EXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:swizzle-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glSwizzleEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:write-mask-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glWriteMaskEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:insert-component-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glInsertComponentEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:extract-component-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glExtractComponentEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:gen-symbols-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "return(_al_glGenSymbolsEXT(a0 , a1 , a2 , a3));")))
+  (begin
+    (define gl:set-invariant-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
+        "_al_glSetInvariantEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:set-local-constant-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
+        "_al_glSetLocalConstantEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:variantbv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVariantbvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantsv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVariantsvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVariantivEXT(a0 , a1);")))
+  (begin
+    (define gl:variantfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVariantfvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantdv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVariantdvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantubv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVariantubvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantusv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVariantusvEXT(a0 , a1);")))
+  (begin
+    (define gl:variantuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVariantuivEXT(a0 , a1);")))
+  (begin
+    (define gl:variant-pointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glVariantPointerEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:enable-variant-client-state-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glEnableVariantClientStateEXT(a0);")))
+  (begin
+    (define gl:disable-variant-client-state-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glDisableVariantClientStateEXT(a0);")))
+  (begin
+    (define gl:bind-light-parameter-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glBindLightParameterEXT(a0 , a1));")))
+  (begin
+    (define gl:bind-material-parameter-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glBindMaterialParameterEXT(a0 , a1));")))
+  (begin
+    (define gl:bind-tex-gen-parameter-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "return(_al_glBindTexGenParameterEXT(a0 , a1 , a2));")))
+  (begin
+    (define gl:bind-texture-unit-parameter-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glBindTextureUnitParameterEXT(a0 , a1));")))
+  (begin
+    (define gl:bind-parameter-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glBindParameterEXT(a0));")))
+  (begin
+    (define gl:is-variant-enabled-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glIsVariantEnabledEXT(a0 , a1));")))
+  (begin
+    (define gl:get-variant-booleanv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetVariantBooleanvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-variant-integerv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVariantIntegervEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-variant-floatv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVariantFloatvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-variant-pointerv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetVariantPointervEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-invariant-booleanv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetInvariantBooleanvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-invariant-integerv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetInvariantIntegervEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-invariant-floatv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetInvariantFloatvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-local-constant-booleanv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetLocalConstantBooleanvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-local-constant-integerv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetLocalConstantIntegervEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-local-constant-floatv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetLocalConstantFloatvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-stream1s-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glVertexStream1sATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1sv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexStream1svATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1i-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glVertexStream1iATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1iv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexStream1ivATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1f-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glVertexStream1fATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1fv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexStream1fvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1d-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1))
+        "_al_glVertexStream1dATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream1dv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexStream1dvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream2s-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glVertexStream2sATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-stream2sv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexStream2svATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream2i-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glVertexStream2iATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-stream2iv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexStream2ivATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream2f-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2))
+        "_al_glVertexStream2fATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-stream2fv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexStream2fvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream2d-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2))
+        "_al_glVertexStream2dATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-stream2dv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexStream2dvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream3s-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glVertexStream3sATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-stream3sv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexStream3svATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream3i-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glVertexStream3iATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-stream3iv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexStream3ivATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream3f-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glVertexStream3fATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-stream3fv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexStream3fvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream3d-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glVertexStream3dATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-stream3dv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexStream3dvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream4s-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glVertexStream4sATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-stream4sv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexStream4svATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream4i-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glVertexStream4iATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-stream4iv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexStream4ivATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream4f-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glVertexStream4fATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-stream4fv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glVertexStream4fvATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-stream4d-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glVertexStream4dATI(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-stream4dv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glVertexStream4dvATI(a0 , a1);")))
+  (begin
+    (define gl:normal-stream3b-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (char a1) (char a2) (char a3))
+        "_al_glNormalStream3bATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:normal-stream3bv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glNormalStream3bvATI(a0 , a1);")))
+  (begin
+    (define gl:normal-stream3s-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glNormalStream3sATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:normal-stream3sv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glNormalStream3svATI(a0 , a1);")))
+  (begin
+    (define gl:normal-stream3i-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glNormalStream3iATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:normal-stream3iv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glNormalStream3ivATI(a0 , a1);")))
+  (begin
+    (define gl:normal-stream3f-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glNormalStream3fATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:normal-stream3fv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glNormalStream3fvATI(a0 , a1);")))
+  (begin
+    (define gl:normal-stream3d-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glNormalStream3dATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:normal-stream3dv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glNormalStream3dvATI(a0 , a1);")))
+  (begin
+    (define gl:client-active-vertex-stream-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glClientActiveVertexStreamATI(a0);")))
+  (begin
+    (define gl:vertex-blend-envi-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glVertexBlendEnviATI(a0 , a1);")))
+  (begin
+    (define gl:vertex-blend-envf-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1))
+        "_al_glVertexBlendEnvfATI(a0 , a1);")))
+  (begin
+    (define gl:element-pointer-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1))
+        "_al_glElementPointerATI(a0 , a1);")))
+  (begin
+    (define gl:draw-element-array-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glDrawElementArrayATI(a0 , a1);")))
+  (begin
+    (define gl:draw-range-element-array-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glDrawRangeElementArrayATI(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:draw-mesh-arrays-sun
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glDrawMeshArraysSUN(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:gen-occlusion-queries-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenOcclusionQueriesNV(a0 , a1);")))
+  (begin
+    (define gl:delete-occlusion-queries-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteOcclusionQueriesNV(a0 , a1);")))
+  (begin
+    (define gl:is-occlusion-query-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsOcclusionQueryNV(a0));")))
+  (begin
+    (define gl:begin-occlusion-query-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginOcclusionQueryNV(a0);")))
+  (begin
+    (define gl:end-occlusion-query-nv
+      (foreign-lambda* void () "_al_glEndOcclusionQueryNV();")))
+  (begin
+    (define gl:get-occlusion-queryiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetOcclusionQueryivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-occlusion-queryuiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetOcclusionQueryuivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:point-parameteri-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPointParameteriNV(a0 , a1);")))
+  (begin
+    (define gl:point-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glPointParameterivNV(a0 , a1);")))
+  (begin
+    (define gl:active-stencil-face-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glActiveStencilFaceEXT(a0);")))
+  (begin
+    (define gl:element-pointer-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1))
+        "_al_glElementPointerAPPLE(a0 , a1);")))
+  (begin
+    (define gl:draw-element-array-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glDrawElementArrayAPPLE(a0 , a1 , a2);")))
+  (begin
+    (define gl:draw-range-element-array-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-draw-element-array-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
+        "_al_glMultiDrawElementArrayAPPLE(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-draw-range-element-array-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (integer a5))
+        "_al_glMultiDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:gen-fences-apple
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenFencesAPPLE(a0 , a1);")))
+  (begin
+    (define gl:delete-fences-apple
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteFencesAPPLE(a0 , a1);")))
+  (begin
+    (define gl:set-fence-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glSetFenceAPPLE(a0);")))
+  (begin
+    (define gl:is-fence-apple
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsFenceAPPLE(a0));")))
+  (begin
+    (define gl:test-fence-apple
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glTestFenceAPPLE(a0));")))
+  (begin
+    (define gl:finish-fence-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glFinishFenceAPPLE(a0);")))
+  (begin
+    (define gl:test-object-apple
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glTestObjectAPPLE(a0 , a1));")))
+  (begin
+    (define gl:finish-object-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glFinishObjectAPPLE(a0 , a1);")))
+  (begin
+    (define gl:bind-vertex-array-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBindVertexArrayAPPLE(a0);")))
+  (begin
+    (define gl:delete-vertex-arrays-apple
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteVertexArraysAPPLE(a0 , a1);")))
+  (begin
+    (define gl:gen-vertex-arrays-apple
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenVertexArraysAPPLE(a0 , a1);")))
+  (begin
+    (define gl:is-vertex-array-apple
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsVertexArrayAPPLE(a0));")))
+  (begin
+    (define gl:vertex-array-range-apple
+      (foreign-lambda*
+        void
+        ((integer a0) ((c-pointer void) a1))
+        "_al_glVertexArrayRangeAPPLE(a0 , a1);")))
+  (begin
+    (define gl:flush-vertex-array-range-apple
+      (foreign-lambda*
+        void
+        ((integer a0) ((c-pointer void) a1))
+        "_al_glFlushVertexArrayRangeAPPLE(a0 , a1);")))
+  (begin
+    (define gl:vertex-array-parameteri-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glVertexArrayParameteriAPPLE(a0 , a1);")))
+  (begin
+    (define gl:draw-buffers-ati
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDrawBuffersATI(a0 , a1);")))
+  (begin
+    (define gl:program-named-parameter4f-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (u8vector a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6))
+        "_al_glProgramNamedParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:program-named-parameter4d-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (u8vector a2)
+         (double a3)
+         (double a4)
+         (double a5)
+         (double a6))
+        "_al_glProgramNamedParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:program-named-parameter4fv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u8vector a2) (f32vector a3))
+        "_al_glProgramNamedParameter4fvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-named-parameter4dv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u8vector a2) (f64vector a3))
+        "_al_glProgramNamedParameter4dvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-named-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u8vector a2) (f32vector a3))
+        "_al_glGetProgramNamedParameterfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-named-parameterdv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u8vector a2) (f64vector a3))
+        "_al_glGetProgramNamedParameterdvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex2h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1))
+        "_al_glVertex2hNV(a0 , a1);")))
+  (begin
+    (define gl:vertex2hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glVertex2hvNV(a0);")))
+  (begin
+    (define gl:vertex3h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glVertex3hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex3hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glVertex3hvNV(a0);")))
+  (begin
+    (define gl:vertex4h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2) (short a3))
+        "_al_glVertex4hNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex4hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glVertex4hvNV(a0);")))
+  (begin
+    (define gl:normal3h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glNormal3hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:normal3hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glNormal3hvNV(a0);")))
+  (begin
+    (define gl:color3h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glColor3hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:color3hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glColor3hvNV(a0);")))
+  (begin
+    (define gl:color4h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2) (short a3))
+        "_al_glColor4hNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:color4hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glColor4hvNV(a0);")))
+  (begin
+    (define gl:tex-coord1h-nv
+      (foreign-lambda* void ((short a0)) "_al_glTexCoord1hNV(a0);")))
+  (begin
+    (define gl:tex-coord1hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord1hvNV(a0);")))
+  (begin
+    (define gl:tex-coord2h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1))
+        "_al_glTexCoord2hNV(a0 , a1);")))
+  (begin
+    (define gl:tex-coord2hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord2hvNV(a0);")))
+  (begin
+    (define gl:tex-coord3h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glTexCoord3hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord3hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord3hvNV(a0);")))
+  (begin
+    (define gl:tex-coord4h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2) (short a3))
+        "_al_glTexCoord4hNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:tex-coord4hv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord4hvNV(a0);")))
+  (begin
+    (define gl:multi-tex-coord1h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glMultiTexCoord1hNV(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord1hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord1hvNV(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glMultiTexCoord2hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord2hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord2hvNV(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glMultiTexCoord3hNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord3hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord3hvNV(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glMultiTexCoord4hNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord4hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glMultiTexCoord4hvNV(a0 , a1);")))
+  (begin
+    (define gl:fog-coordh-nv
+      (foreign-lambda* void ((short a0)) "_al_glFogCoordhNV(a0);")))
+  (begin
+    (define gl:fog-coordhv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glFogCoordhvNV(a0);")))
+  (begin
+    (define gl:secondary-color3h-nv
+      (foreign-lambda*
+        void
+        ((short a0) (short a1) (short a2))
+        "_al_glSecondaryColor3hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:secondary-color3hv-nv
+      (foreign-lambda*
+        void
+        ((s16vector a0))
+        "_al_glSecondaryColor3hvNV(a0);")))
+  (begin
+    (define gl:vertex-weighth-nv
+      (foreign-lambda* void ((short a0)) "_al_glVertexWeighthNV(a0);")))
+  (begin
+    (define gl:vertex-weighthv-nv
+      (foreign-lambda* void ((s16vector a0)) "_al_glVertexWeighthvNV(a0);")))
+  (begin
+    (define gl:vertex-attrib1h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1))
+        "_al_glVertexAttrib1hNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib1hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib1hvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib2h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2))
+        "_al_glVertexAttrib2hNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib2hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib2hvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib3h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3))
+        "_al_glVertexAttrib3hNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib3hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib3hvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib4h-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
+        "_al_glVertexAttrib4hNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib4hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttrib4hvNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attribs1hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs1hvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs2hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs2hvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs3hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs3hvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attribs4hv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s16vector a2))
+        "_al_glVertexAttribs4hvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-data-range-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glPixelDataRangeNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:flush-pixel-data-range-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glFlushPixelDataRangeNV(a0);")))
+  (begin
+    (define gl:primitive-restart-nv
+      (foreign-lambda* void () "_al_glPrimitiveRestartNV();")))
+  (begin
+    (define gl:primitive-restart-index-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glPrimitiveRestartIndexNV(a0);")))
+  (begin
+    (define gl:map-object-buffer-ati
+      (foreign-lambda*
+        (c-pointer void)
+        ((unsigned-integer a0))
+        "return(_al_glMapObjectBufferATI(a0));")))
+  (begin
+    (define gl:unmap-object-buffer-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glUnmapObjectBufferATI(a0);")))
+  (begin
+    (define gl:vertex-attrib-array-object-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6))
+        "_al_glVertexAttribArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:get-vertex-attrib-array-objectfv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetVertexAttribArrayObjectfvATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-array-objectiv-ati
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribArrayObjectivATI(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex2b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1))
+        "_al_glVertex2bOES(a0 , a1);")))
+  (begin
+    (define gl:vertex3b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glVertex3bOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex4b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2) (char a3))
+        "_al_glVertex4bOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex2bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glVertex2bvOES(a0);")))
+  (begin
+    (define gl:vertex3bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glVertex3bvOES(a0);")))
+  (begin
+    (define gl:vertex4bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glVertex4bvOES(a0);")))
+  (begin
+    (define gl:tex-coord1b-oes
+      (foreign-lambda* void ((char a0)) "_al_glTexCoord1bOES(a0);")))
+  (begin
+    (define gl:tex-coord2b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1))
+        "_al_glTexCoord2bOES(a0 , a1);")))
+  (begin
+    (define gl:tex-coord3b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2))
+        "_al_glTexCoord3bOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord4b-oes
+      (foreign-lambda*
+        void
+        ((char a0) (char a1) (char a2) (char a3))
+        "_al_glTexCoord4bOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:tex-coord1bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord1bvOES(a0);")))
+  (begin
+    (define gl:tex-coord2bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord2bvOES(a0);")))
+  (begin
+    (define gl:tex-coord3bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord3bvOES(a0);")))
+  (begin
+    (define gl:tex-coord4bv-oes
+      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord4bvOES(a0);")))
+  (begin
+    (define gl:multi-tex-coord1b-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (char a1))
+        "_al_glMultiTexCoord1bOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2b-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (char a1) (char a2))
+        "_al_glMultiTexCoord2bOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord3b-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (char a1) (char a2) (char a3))
+        "_al_glMultiTexCoord3bOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord4b-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (char a1) (char a2) (char a3) (char a4))
+        "_al_glMultiTexCoord4bOES(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord1bv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glMultiTexCoord1bvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2bv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glMultiTexCoord2bvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3bv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glMultiTexCoord3bvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4bv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glMultiTexCoord4bvOES(a0 , a1);")))
+  (begin
+    (define gl:vertex2x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glVertex2xOES(a0 , a1);")))
+  (begin
+    (define gl:vertex3x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glVertex3xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex4x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glVertex4xOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex2xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glVertex2xvOES(a0);")))
+  (begin
+    (define gl:vertex3xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glVertex3xvOES(a0);")))
+  (begin
+    (define gl:vertex4xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glVertex4xvOES(a0);")))
+  (begin
+    (define gl:normal3x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glNormal3xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:normal3xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glNormal3xvOES(a0);")))
+  (begin
+    (define gl:tex-coord1x-oes
+      (foreign-lambda* void ((integer a0)) "_al_glTexCoord1xOES(a0);")))
+  (begin
+    (define gl:tex-coord2x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glTexCoord2xOES(a0 , a1);")))
+  (begin
+    (define gl:tex-coord3x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glTexCoord3xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-coord4x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glTexCoord4xOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:tex-coord1xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord1xvOES(a0);")))
+  (begin
+    (define gl:tex-coord2xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord2xvOES(a0);")))
+  (begin
+    (define gl:tex-coord3xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord3xvOES(a0);")))
+  (begin
+    (define gl:tex-coord4xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord4xvOES(a0);")))
+  (begin
+    (define gl:multi-tex-coord1x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glMultiTexCoord1xOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glMultiTexCoord2xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-coord3x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glMultiTexCoord3xOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-coord4x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glMultiTexCoord4xOES(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-coord1xv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord1xvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord2xv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord2xvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord3xv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord3xvOES(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord4xv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glMultiTexCoord4xvOES(a0 , a1);")))
+  (begin
+    (define gl:color3x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glColor3xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:color4x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glColor4xOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:color3xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glColor3xvOES(a0);")))
+  (begin
+    (define gl:color4xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glColor4xvOES(a0);")))
+  (begin
+    (define gl:indexx-oes
+      (foreign-lambda* void ((integer a0)) "_al_glIndexxOES(a0);")))
+  (begin
+    (define gl:indexxv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glIndexxvOES(a0);")))
+  (begin
+    (define gl:rectx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glRectxOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:depth-rangex-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glDepthRangexOES(a0 , a1);")))
+  (begin
+    (define gl:rotatex-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glRotatexOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:scalex-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glScalexOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:translatex-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glTranslatexOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:frustumx-oes
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glFrustumxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:orthox-oes
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glOrthoxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:tex-genx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glTexGenxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-genxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glTexGenxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-genxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTexGenxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:clip-planex-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glClipPlanexOES(a0 , a1);")))
+  (begin
+    (define gl:get-clip-planex-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glGetClipPlanexOES(a0 , a1);")))
+  (begin
+    (define gl:raster-pos2x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glRasterPos2xOES(a0 , a1);")))
+  (begin
+    (define gl:raster-pos3x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glRasterPos3xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:raster-pos4x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glRasterPos4xOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:raster-pos2xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos2xvOES(a0);")))
+  (begin
+    (define gl:raster-pos3xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos3xvOES(a0);")))
+  (begin
+    (define gl:raster-pos4xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos4xvOES(a0);")))
+  (begin
+    (define gl:materialx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glMaterialxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:materialxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glMaterialxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-materialx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetMaterialxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:lightx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glLightxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:lightxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glLightxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-lightx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetLightxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:light-modelx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glLightModelxOES(a0 , a1);")))
+  (begin
+    (define gl:light-modelxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glLightModelxvOES(a0 , a1);")))
+  (begin
+    (define gl:point-sizex-oes
+      (foreign-lambda* void ((integer a0)) "_al_glPointSizexOES(a0);")))
+  (begin
+    (define gl:line-widthx-oes
+      (foreign-lambda* void ((integer a0)) "_al_glLineWidthxOES(a0);")))
+  (begin
+    (define gl:polygon-offsetx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glPolygonOffsetxOES(a0 , a1);")))
+  (begin
+    (define gl:pixel-storex
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPixelStorex(a0 , a1);")))
+  (begin
+    (define gl:pixel-transferx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glPixelTransferxOES(a0 , a1);")))
+  (begin
+    (define gl:pixel-mapx
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2))
+        "_al_glPixelMapx(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-pixel-mapxv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2))
+        "_al_glGetPixelMapxv(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameterx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glConvolutionParameterxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:convolution-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glConvolutionParameterxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-convolution-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetConvolutionParameterxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-histogram-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetHistogramParameterxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:pixel-zoomx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glPixelZoomxOES(a0 , a1);")))
+  (begin
+    (define gl:bitmapx-oes
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (u8vector a6))
+        "_al_glBitmapxOES(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:tex-parameterx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glTexParameterxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glTexParameterxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTexParameterxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-level-parameterxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetTexLevelParameterxvOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:prioritize-texturesx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1) (s32vector a2))
+        "_al_glPrioritizeTexturesxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-envx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glTexEnvxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:tex-envxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glTexEnvxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-envxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTexEnvxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:fogx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glFogxOES(a0 , a1);")))
+  (begin
+    (define gl:fogxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glFogxvOES(a0 , a1);")))
+  (begin
+    (define gl:sample-coverage-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-char a1))
+        "_al_glSampleCoverageOES(a0 , a1);")))
+  (begin
+    (define gl:alpha-funcx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glAlphaFuncxOES(a0 , a1);")))
+  (begin
+    (define gl:blend-colorx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glBlendColorxOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:clear-colorx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glClearColorxOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:clear-depthx-oes
+      (foreign-lambda* void ((integer a0)) "_al_glClearDepthxOES(a0);")))
+  (begin
+    (define gl:clear-accumx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glClearAccumxOES(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:accumx-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glAccumxOES(a0 , a1);")))
+  (begin
+    (define gl:map1x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (s32vector a5))
+        "_al_glMap1xOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:map2x-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (s32vector a9))
+        "_al_glMap2xOES(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:map-grid1x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2))
+        "_al_glMapGrid1xOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:map-grid2x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
+        "_al_glMapGrid2xOES(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-mapxv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetMapxvOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:eval-coord1x-oes
+      (foreign-lambda* void ((integer a0)) "_al_glEvalCoord1xOES(a0);")))
+  (begin
+    (define gl:eval-coord2x-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1))
+        "_al_glEvalCoord2xOES(a0 , a1);")))
+  (begin
+    (define gl:eval-coord1xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glEvalCoord1xvOES(a0);")))
+  (begin
+    (define gl:eval-coord2xv-oes
+      (foreign-lambda* void ((s32vector a0)) "_al_glEvalCoord2xvOES(a0);")))
+  (begin
+    (define gl:feedback-bufferx-oes
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glFeedbackBufferxOES(a0 , a1 , a2);")))
+  (begin
+    (define gl:pass-throughx-oes
+      (foreign-lambda* void ((integer a0)) "_al_glPassThroughxOES(a0);")))
+  (begin
+    (define gl:get-fixedv-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glGetFixedvOES(a0 , a1);")))
+  (begin
+    (define gl:depth-rangef-oes
+      (foreign-lambda*
+        void
+        ((float a0) (float a1))
+        "_al_glDepthRangefOES(a0 , a1);")))
+  (begin
+    (define gl:frustumf-oes
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
+        "_al_glFrustumfOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:orthof-oes
+      (foreign-lambda*
+        void
+        ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
+        "_al_glOrthofOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:clip-planef-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glClipPlanefOES(a0 , a1);")))
+  (begin
+    (define gl:get-clip-planef-oes
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glGetClipPlanefOES(a0 , a1);")))
+  (begin
+    (define gl:clear-depthf-oes
+      (foreign-lambda* void ((double a0)) "_al_glClearDepthfOES(a0);")))
+  (begin
+    (define gl:depth-bounds-ext
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glDepthBoundsEXT(a0 , a1);")))
+  (begin
+    (define gl:blend-equation-separate-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBlendEquationSeparateEXT(a0 , a1);")))
+  (begin
+    (define gl:is-renderbuffer-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsRenderbufferEXT(a0));")))
+  (begin
+    (define gl:bind-renderbuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindRenderbufferEXT(a0 , a1);")))
+  (begin
+    (define gl:delete-renderbuffers-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteRenderbuffersEXT(a0 , a1);")))
+  (begin
+    (define gl:gen-renderbuffers-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenRenderbuffersEXT(a0 , a1);")))
+  (begin
+    (define gl:renderbuffer-storage-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
+        "_al_glRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-renderbuffer-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetRenderbufferParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:is-framebuffer-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsFramebufferEXT(a0));")))
+  (begin
+    (define gl:bind-framebuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindFramebufferEXT(a0 , a1);")))
+  (begin
+    (define gl:delete-framebuffers-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteFramebuffersEXT(a0 , a1);")))
+  (begin
+    (define gl:gen-framebuffers-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenFramebuffersEXT(a0 , a1);")))
+  (begin
+    (define gl:check-framebuffer-status-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0))
+        "return(_al_glCheckFramebufferStatusEXT(a0));")))
+  (begin
+    (define gl:framebuffer-texture1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:framebuffer-texture3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:framebuffer-renderbuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-framebuffer-attachment-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:generate-mipmap-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glGenerateMipmapEXT(a0);")))
+  (begin
+    (define gl:string-marker-gremedy
+      (foreign-lambda*
+        void
+        ((integer a0) ((c-pointer void) a1))
+        "_al_glStringMarkerGREMEDY(a0 , a1);")))
+  (begin
+    (define gl:stencil-clear-tag-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1))
+        "_al_glStencilClearTagEXT(a0 , a1);")))
+  (begin
+    (define gl:blit-framebuffer-ext
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9))
+        "_al_glBlitFramebufferEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:renderbuffer-storage-multisample-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-query-objecti64v-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer integer64) a2))
+        "_al_glGetQueryObjecti64vEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-query-objectui64v-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetQueryObjectui64vEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-env-parameters4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (f32vector a3))
+        "_al_glProgramEnvParameters4fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-local-parameters4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (f32vector a3))
+        "_al_glProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:buffer-parameteri-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glBufferParameteriAPPLE(a0 , a1 , a2);")))
+  (begin
+    (define gl:flush-mapped-buffer-range-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
+        "_al_glFlushMappedBufferRangeAPPLE(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
+        "_al_glUniformBufferEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniform-buffer-size-ext
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (integer a1))
+        "return(_al_glGetUniformBufferSizeEXT(a0 , a1));")))
+  (begin
+    (define gl:get-uniform-offset-ext
+      (foreign-lambda*
+        (c-pointer void)
+        ((unsigned-integer a0) (integer a1))
+        "return(_al_glGetUniformOffsetEXT(a0 , a1));")))
+  (begin
+    (define gl:color-mask-indexed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-char a2)
+         (unsigned-char a3)
+         (unsigned-char a4))
+        "_al_glColorMaskIndexedEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-boolean-indexedv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
+        "_al_glGetBooleanIndexedvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-integer-indexedv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetIntegerIndexedvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:enable-indexed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEnableIndexedEXT(a0 , a1);")))
+  (begin
+    (define gl:disable-indexed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDisableIndexedEXT(a0 , a1);")))
+  (begin
+    (define gl:is-enabled-indexed-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glIsEnabledIndexedEXT(a0 , a1));")))
+  (begin
+    (define gl:draw-arrays-instanced-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glDrawArraysInstancedEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:draw-elements-instanced-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         (integer a4))
+        "_al_glDrawElementsInstancedEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-parameteri-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glProgramParameteriEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:framebuffer-texture-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:framebuffer-texture-face-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4))
+        "_al_glFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-i1i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glVertexAttribI1iEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glVertexAttribI2iEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib-i3i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glVertexAttribI3iEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-i4i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glVertexAttribI4iEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-i1ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glVertexAttribI1uiEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glVertexAttribI2uiEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:vertex-attrib-i3ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glVertexAttribI3uiEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-attrib-i4ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glVertexAttribI4uiEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-i1iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI1ivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI2ivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i3iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI3ivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s32vector a1))
+        "_al_glVertexAttribI4ivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i1uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI1uivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i2uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI2uivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i3uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI3uivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u32vector a1))
+        "_al_glVertexAttribI4uivEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4bv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glVertexAttribI4bvEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4sv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (s16vector a1))
+        "_al_glVertexAttribI4svEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4ubv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u8vector a1))
+        "_al_glVertexAttribI4ubvEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-i4usv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (u16vector a1))
+        "_al_glVertexAttribI4usvEXT(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-ipointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer void) a4))
+        "_al_glVertexAttribIPointerEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-vertex-attrib-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribIivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-vertex-attrib-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVertexAttribIuivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform1ui-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1))
+        "_al_glUniform1uiEXT(a0 , a1);")))
+  (begin
+    (define gl:uniform2ui-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glUniform2uiEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3ui-ext
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glUniform3uiEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:uniform4ui-ext
+      (foreign-lambda*
+        void
+        ((integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glUniform4uiEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:uniform1uiv-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform1uivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform2uiv-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform2uivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform3uiv-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform3uivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:uniform4uiv-ext
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) (u32vector a2))
+        "_al_glUniform4uivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniformuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2))
+        "_al_glGetUniformuivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:bind-frag-data-location-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
+        "_al_glBindFragDataLocationEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-frag-data-location-ext
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetFragDataLocationEXT(a0 , a1));")))
+  (begin
+    (define gl:framebuffer-texture-layer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tex-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glTexBufferEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:depth-ranged-nv
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glDepthRangedNV(a0 , a1);")))
+  (begin
+    (define gl:clear-depthd-nv
+      (foreign-lambda* void ((double a0)) "_al_glClearDepthdNV(a0);")))
+  (begin
+    (define gl:depth-boundsd-nv
+      (foreign-lambda*
+        void
+        ((double a0) (double a1))
+        "_al_glDepthBoundsdNV(a0 , a1);")))
+  (begin
+    (define gl:renderbuffer-storage-multsample-coverage-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glRenderbufferStorageMultsampleCoverageNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-vertex-limit-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glProgramVertexLimitNV(a0 , a1);")))
+  (begin
+    (define gl:program-local-parameter-i4i-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glProgramLocalParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-local-parameter-i4iv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glProgramLocalParameterI4ivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-local-parameters-i4iv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3))
+        "_al_glProgramLocalParametersI4ivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-local-parameter-i4ui-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glProgramLocalParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-local-parameter-i4uiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glProgramLocalParameterI4uivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-local-parameters-i4uiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (u32vector a3))
+        "_al_glProgramLocalParametersI4uivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-env-parameter-i4i-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glProgramEnvParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-env-parameter-i4iv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glProgramEnvParameterI4ivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-env-parameters-i4iv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3))
+        "_al_glProgramEnvParametersI4ivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-env-parameter-i4ui-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glProgramEnvParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-env-parameter-i4uiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glProgramEnvParameterI4uivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-env-parameters-i4uiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (u32vector a3))
+        "_al_glProgramEnvParametersI4uivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-program-local-parameter-iiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetProgramLocalParameterIivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-local-parameter-iuiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetProgramLocalParameterIuivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-env-parameter-iiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetProgramEnvParameterIivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-program-env-parameter-iuiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
+        "_al_glGetProgramEnvParameterIuivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-buffer-parametersfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (f32vector a4))
+        "_al_glProgramBufferParametersfvNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-buffer-parameters-iiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (s32vector a4))
+        "_al_glProgramBufferParametersIivNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-buffer-parameters-iuiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (u32vector a4))
+        "_al_glProgramBufferParametersIuivNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:bind-buffer-range-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4))
+        "_al_glBindBufferRangeNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:bind-buffer-offset-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glBindBufferOffsetNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-buffer-base-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBindBufferBaseNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:transform-feedback-attribs-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (s32vector a1) (unsigned-integer a2))
+        "_al_glTransformFeedbackAttribsNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:transform-feedback-varyings-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (s32vector a2)
+         (unsigned-integer a3))
+        "_al_glTransformFeedbackVaryingsNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:begin-transform-feedback-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginTransformFeedbackNV(a0);")))
+  (begin
+    (define gl:end-transform-feedback-nv
+      (foreign-lambda* void () "_al_glEndTransformFeedbackNV();")))
+  (begin
+    (define gl:get-varying-location-nv
+      (foreign-lambda*
+        integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glGetVaryingLocationNV(a0 , a1));")))
+  (begin
+    (define gl:get-active-varying-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (s32vector a4)
+         (u32vector a5)
+         (c-string a6))
+        "_al_glGetActiveVaryingNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:active-varying-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (c-string a1))
+        "_al_glActiveVaryingNV(a0 , a1);")))
+  (begin
+    (define gl:get-transform-feedback-varying-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTransformFeedbackVaryingNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:frame-terminator-gremedy
+      (foreign-lambda* void () "_al_glFrameTerminatorGREMEDY();")))
+  (begin
+    (define gl:begin-conditional-render-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBeginConditionalRenderNV(a0 , a1);")))
+  (begin
+    (define gl:end-conditional-render-nv
+      (foreign-lambda* void () "_al_glEndConditionalRenderNV();")))
+  (begin
+    (define gl:begin-transform-feedback-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginTransformFeedbackEXT(a0);")))
+  (begin
+    (define gl:end-transform-feedback-ext
+      (foreign-lambda* void () "_al_glEndTransformFeedbackEXT();")))
+  (begin
+    (define gl:bind-buffer-range-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3)
+         ((c-pointer void) a4))
+        "_al_glBindBufferRangeEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:bind-buffer-offset-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glBindBufferOffsetEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-buffer-base-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBindBufferBaseEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:transform-feedback-varyings-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (s32vector a2)
+         (unsigned-integer a3))
+        "_al_glTransformFeedbackVaryingsEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-transform-feedback-varying-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetTransformFeedbackVaryingEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:client-attrib-default-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glClientAttribDefaultEXT(a0);")))
+  (begin
+    (define gl:push-client-attrib-default-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glPushClientAttribDefaultEXT(a0);")))
+  (begin
+    (define gl:matrix-loadf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMatrixLoadfEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-loadd-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMatrixLoaddEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-multf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMatrixMultfEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-multd-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMatrixMultdEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-load-identity-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glMatrixLoadIdentityEXT(a0);")))
+  (begin
+    (define gl:matrix-rotatef-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
+        "_al_glMatrixRotatefEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:matrix-rotated-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
+        "_al_glMatrixRotatedEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:matrix-scalef-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glMatrixScalefEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:matrix-scaled-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glMatrixScaledEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:matrix-translatef-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (float a1) (float a2) (float a3))
+        "_al_glMatrixTranslatefEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:matrix-translated-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (double a1) (double a2) (double a3))
+        "_al_glMatrixTranslatedEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:matrix-frustum-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (double a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5)
+         (double a6))
+        "_al_glMatrixFrustumEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:matrix-ortho-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (double a1)
+         (double a2)
+         (double a3)
+         (double a4)
+         (double a5)
+         (double a6))
+        "_al_glMatrixOrthoEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:matrix-pop-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glMatrixPopEXT(a0);")))
+  (begin
+    (define gl:matrix-push-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glMatrixPushEXT(a0);")))
+  (begin
+    (define gl:matrix-load-transposef-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMatrixLoadTransposefEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-load-transposed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMatrixLoadTransposedEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-mult-transposef-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f32vector a1))
+        "_al_glMatrixMultTransposefEXT(a0 , a1);")))
+  (begin
+    (define gl:matrix-mult-transposed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (f64vector a1))
+        "_al_glMatrixMultTransposedEXT(a0 , a1);")))
+  (begin
+    (define gl:texture-parameterf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (float a3))
+        "_al_glTextureParameterfEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-parameteri-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glTextureParameteriEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glTextureParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         ((c-pointer void) a8))
+        "_al_glTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:texture-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:texture-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         ((c-pointer void) a7))
+        "_al_glTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:texture-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:copy-texture-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
+        "_al_glCopyTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:copy-texture-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:copy-texture-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
+        "_al_glCopyTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:copy-texture-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:get-texture-image-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glGetTextureImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-texture-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-texture-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetTextureParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-texture-level-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (f32vector a4))
+        "_al_glGetTextureLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-texture-level-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (s32vector a4))
+        "_al_glGetTextureLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:texture-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         ((c-pointer void) a10))
+        "_al_glTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:texture-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (unsigned-integer a9)
+         (unsigned-integer a10)
+         ((c-pointer void) a11))
+        "_al_glTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:copy-texture-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (integer a9))
+        "_al_glCopyTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:multi-tex-parameterf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (float a3))
+        "_al_glMultiTexParameterfEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-parameteri-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glMultiTexParameteriEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (unsigned-integer a6)
+         (unsigned-integer a7)
+         ((c-pointer void) a8))
+        "_al_glMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:multi-tex-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:multi-tex-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6)
+         ((c-pointer void) a7))
+        "_al_glMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:multi-tex-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (unsigned-integer a8)
+         ((c-pointer void) a9))
+        "_al_glMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:copy-multi-tex-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7))
+        "_al_glCopyMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:copy-multi-tex-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:copy-multi-tex-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
+        "_al_glCopyMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:copy-multi-tex-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8))
+        "_al_glCopyMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:get-multi-tex-image-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         ((c-pointer void) a5))
+        "_al_glGetMultiTexImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:get-multi-tex-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-level-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (f32vector a4))
+        "_al_glGetMultiTexLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-multi-tex-level-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (s32vector a4))
+        "_al_glGetMultiTexLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (unsigned-integer a8)
+         (unsigned-integer a9)
+         ((c-pointer void) a10))
+        "_al_glMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:multi-tex-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (unsigned-integer a9)
+         (unsigned-integer a10)
+         ((c-pointer void) a11))
+        "_al_glMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:copy-multi-tex-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (integer a9))
+        "_al_glCopyMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:bind-multi-texture-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBindMultiTextureEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:enable-client-state-indexed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEnableClientStateIndexedEXT(a0 , a1);")))
+  (begin
+    (define gl:disable-client-state-indexed-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDisableClientStateIndexedEXT(a0 , a1);")))
+  (begin
+    (define gl:multi-tex-coord-pointer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer void) a4))
+        "_al_glMultiTexCoordPointerEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:multi-tex-envf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (float a3))
+        "_al_glMultiTexEnvfEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-envfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-envi-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glMultiTexEnviEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-enviv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-gend-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (double a3))
+        "_al_glMultiTexGendEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-gendv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-genf-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (float a3))
+        "_al_glMultiTexGenfEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-genfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-geni-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glMultiTexGeniEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-geniv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-envfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-enviv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-gendv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glGetMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-genfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-geniv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-float-indexedv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetFloatIndexedvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-double-indexedv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
+        "_al_glGetDoubleIndexedvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-pointer-indexedv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetPointerIndexedvEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:compressed-texture-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         ((c-pointer void) a9))
+        "_al_glCompressedTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:compressed-texture-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-texture-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:compressed-texture-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (unsigned-integer a9)
+         (integer a10)
+         ((c-pointer void) a11))
+        "_al_glCompressedTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:compressed-texture-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (integer a8)
+         ((c-pointer void) a9))
+        "_al_glCompressedTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:compressed-texture-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:get-compressed-texture-image-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetCompressedTextureImageEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:compressed-multi-tex-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         ((c-pointer void) a9))
+        "_al_glCompressedMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:compressed-multi-tex-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         ((c-pointer void) a8))
+        "_al_glCompressedMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+  (begin
+    (define gl:compressed-multi-tex-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:compressed-multi-tex-sub-image3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (integer a7)
+         (integer a8)
+         (unsigned-integer a9)
+         (integer a10)
+         ((c-pointer void) a11))
+        "_al_glCompressedMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+  (begin
+    (define gl:compressed-multi-tex-sub-image2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6)
+         (unsigned-integer a7)
+         (integer a8)
+         ((c-pointer void) a9))
+        "_al_glCompressedMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+  (begin
+    (define gl:compressed-multi-tex-sub-image1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (unsigned-integer a5)
+         (integer a6)
+         ((c-pointer void) a7))
+        "_al_glCompressedMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+  (begin
+    (define gl:get-compressed-multi-tex-image-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetCompressedMultiTexImageEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-program-string-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         ((c-pointer void) a4))
+        "_al_glNamedProgramStringEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-program-local-parameter4d-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (double a3)
+         (double a4)
+         (double a5)
+         (double a6))
+        "_al_glNamedProgramLocalParameter4dEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:named-program-local-parameter4dv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glNamedProgramLocalParameter4dvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-program-local-parameter4f-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (float a3)
+         (float a4)
+         (float a5)
+         (float a6))
+        "_al_glNamedProgramLocalParameter4fEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:named-program-local-parameter4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glNamedProgramLocalParameter4fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-program-local-parameterdv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glGetNamedProgramLocalParameterdvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-program-local-parameterfv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetNamedProgramLocalParameterfvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-programiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetNamedProgramivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-program-string-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetNamedProgramStringEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-program-local-parameters4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (f32vector a4))
+        "_al_glNamedProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-program-local-parameter-i4i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5)
+         (integer a6))
+        "_al_glNamedProgramLocalParameterI4iEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:named-program-local-parameter-i4iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glNamedProgramLocalParameterI4ivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-program-local-parameters-i4iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (s32vector a4))
+        "_al_glNamedProgramLocalParametersI4ivEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-program-local-parameter-i4ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5)
+         (unsigned-integer a6))
+        "_al_glNamedProgramLocalParameterI4uiEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:named-program-local-parameter-i4uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glNamedProgramLocalParameterI4uivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-program-local-parameters-i4uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (u32vector a4))
+        "_al_glNamedProgramLocalParametersI4uivEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-named-program-local-parameter-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetNamedProgramLocalParameterIivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-program-local-parameter-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glGetNamedProgramLocalParameterIuivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-parameter-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-parameter-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-texture-parameter-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-texture-parameter-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glGetTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-parameter-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-parameter-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-parameter-iiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-multi-tex-parameter-iuiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (u32vector a3))
+        "_al_glGetMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform1f-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (float a2))
+        "_al_glProgramUniform1fEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniform2f-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (float a2) (float a3))
+        "_al_glProgramUniform2fEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3f-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (float a2) (float a3) (float a4))
+        "_al_glProgramUniform3fEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform4f-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (float a2)
+         (float a3)
+         (float a4)
+         (float a5))
+        "_al_glProgramUniform4fEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-uniform1i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2))
+        "_al_glProgramUniform1iEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniform2i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
+        "_al_glProgramUniform2iEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glProgramUniform3iEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform4i-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glProgramUniform4iEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-uniform1fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
+        "_al_glProgramUniform1fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform2fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
+        "_al_glProgramUniform2fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
+        "_al_glProgramUniform3fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
+        "_al_glProgramUniform4fvEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform1iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
+        "_al_glProgramUniform1ivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform2iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
+        "_al_glProgramUniform2ivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
+        "_al_glProgramUniform3ivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform4iv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
+        "_al_glProgramUniform4ivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform-matrix2fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix2x3fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix2x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3x2fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix3x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix2x4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix2x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4x2fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix4x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix3x4fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix3x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform-matrix4x3fv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-char a3)
+         (f32vector a4))
+        "_al_glProgramUniformMatrix4x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform1ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
+        "_al_glProgramUniform1uiEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniform2ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glProgramUniform2uiEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glProgramUniform3uiEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:program-uniform4ui-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4)
+         (unsigned-integer a5))
+        "_al_glProgramUniform4uiEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:program-uniform1uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
+        "_al_glProgramUniform1uivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform2uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
+        "_al_glProgramUniform2uivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform3uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
+        "_al_glProgramUniform3uivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:program-uniform4uiv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
+        "_al_glProgramUniform4uivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-buffer-data-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         (unsigned-integer a3))
+        "_al_glNamedBufferDataEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-buffer-sub-data-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:map-named-buffer-ext
+      (foreign-lambda*
+        (c-pointer void)
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glMapNamedBufferEXT(a0 , a1));")))
+  (begin
+    (define gl:unmap-named-buffer-ext
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glUnmapNamedBufferEXT(a0));")))
+  (begin
+    (define gl:get-named-buffer-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetNamedBufferParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-named-buffer-pointerv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetNamedBufferPointervEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-named-buffer-sub-data-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         ((c-pointer void) a1)
+         ((c-pointer void) a2)
+         ((c-pointer void) a3))
+        "_al_glGetNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:texture-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glTextureBufferEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:multi-tex-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glMultiTexBufferEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-renderbuffer-storage-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
+        "_al_glNamedRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-renderbuffer-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetNamedRenderbufferParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:check-named-framebuffer-status-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glCheckNamedFramebufferStatusEXT(a0 , a1));")))
+  (begin
+    (define gl:named-framebuffer-texture1dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glNamedFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-framebuffer-texture2dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4))
+        "_al_glNamedFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-framebuffer-texture3dext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glNamedFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:named-framebuffer-renderbuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3))
+        "_al_glNamedFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-named-framebuffer-attachment-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetNamedFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:generate-texture-mipmap-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glGenerateTextureMipmapEXT(a0 , a1);")))
+  (begin
+    (define gl:generate-multi-tex-mipmap-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glGenerateMultiTexMipmapEXT(a0 , a1);")))
+  (begin
+    (define gl:framebuffer-draw-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glFramebufferDrawBufferEXT(a0 , a1);")))
+  (begin
+    (define gl:framebuffer-draw-buffers-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (u32vector a2))
+        "_al_glFramebufferDrawBuffersEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:framebuffer-read-buffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glFramebufferReadBufferEXT(a0 , a1);")))
+  (begin
+    (define gl:get-framebuffer-parameteriv-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetFramebufferParameterivEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:named-renderbuffer-storage-multisample-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glNamedRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-renderbuffer-storage-multisample-coverage-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         (unsigned-integer a3)
+         (integer a4)
+         (integer a5))
+        "_al_glNamedRenderbufferStorageMultisampleCoverageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+  (begin
+    (define gl:named-framebuffer-texture-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3))
+        "_al_glNamedFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:named-framebuffer-texture-layer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (integer a4))
+        "_al_glNamedFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:named-framebuffer-texture-face-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (unsigned-integer a4))
+        "_al_glNamedFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:texture-renderbuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glTextureRenderbufferEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:multi-tex-renderbuffer-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glMultiTexRenderbufferEXT(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-multisamplefv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
+        "_al_glGetMultisamplefvNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:sample-mask-indexed-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glSampleMaskIndexedNV(a0 , a1);")))
+  (begin
+    (define gl:tex-renderbuffer-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glTexRenderbufferNV(a0 , a1);")))
+  (begin
+    (define gl:bind-transform-feedback-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBindTransformFeedbackNV(a0 , a1);")))
+  (begin
+    (define gl:delete-transform-feedbacks-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeleteTransformFeedbacksNV(a0 , a1);")))
+  (begin
+    (define gl:gen-transform-feedbacks-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenTransformFeedbacksNV(a0 , a1);")))
+  (begin
+    (define gl:is-transform-feedback-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsTransformFeedbackNV(a0));")))
+  (begin
+    (define gl:pause-transform-feedback-nv
+      (foreign-lambda* void () "_al_glPauseTransformFeedbackNV();")))
+  (begin
+    (define gl:resume-transform-feedback-nv
+      (foreign-lambda* void () "_al_glResumeTransformFeedbackNV();")))
+  (begin
+    (define gl:draw-transform-feedback-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDrawTransformFeedbackNV(a0 , a1);")))
+  (begin
+    (define gl:get-perf-monitor-groups-amd
+      (foreign-lambda*
+        void
+        ((s32vector a0) (integer a1) (u32vector a2))
+        "_al_glGetPerfMonitorGroupsAMD(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-perf-monitor-counters-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (s32vector a1)
+         (s32vector a2)
+         (integer a3)
+         (u32vector a4))
+        "_al_glGetPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-perf-monitor-group-string-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
+        "_al_glGetPerfMonitorGroupStringAMD(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-perf-monitor-counter-string-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (s32vector a3)
+         (c-string a4))
+        "_al_glGetPerfMonitorCounterStringAMD(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:get-perf-monitor-counter-info-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glGetPerfMonitorCounterInfoAMD(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:gen-perf-monitors-amd
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glGenPerfMonitorsAMD(a0 , a1);")))
+  (begin
+    (define gl:delete-perf-monitors-amd
+      (foreign-lambda*
+        void
+        ((integer a0) (u32vector a1))
+        "_al_glDeletePerfMonitorsAMD(a0 , a1);")))
+  (begin
+    (define gl:select-perf-monitor-counters-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-char a1)
+         (unsigned-integer a2)
+         (integer a3)
+         (u32vector a4))
+        "_al_glSelectPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:begin-perf-monitor-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginPerfMonitorAMD(a0);")))
+  (begin
+    (define gl:end-perf-monitor-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glEndPerfMonitorAMD(a0);")))
+  (begin
+    (define gl:get-perf-monitor-counter-data-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (integer a2)
+         (u32vector a3)
+         (s32vector a4))
+        "_al_glGetPerfMonitorCounterDataAMD(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:tessellation-factor-amd
+      (foreign-lambda* void ((float a0)) "_al_glTessellationFactorAMD(a0);")))
+  (begin
+    (define gl:tessellation-mode-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glTessellationModeAMD(a0);")))
+  (begin
+    (define gl:provoking-vertex-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glProvokingVertexEXT(a0);")))
+  (begin
+    (define gl:blend-func-indexed-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBlendFuncIndexedAMD(a0 , a1 , a2);")))
+  (begin
+    (define gl:blend-func-separate-indexed-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glBlendFuncSeparateIndexedAMD(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:blend-equation-indexed-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glBlendEquationIndexedAMD(a0 , a1);")))
+  (begin
+    (define gl:blend-equation-separate-indexed-amd
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "_al_glBlendEquationSeparateIndexedAMD(a0 , a1 , a2);")))
+  (begin
+    (define gl:texture-range-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
+        "_al_glTextureRangeAPPLE(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-tex-parameter-pointerv-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer (c-pointer void)) a2))
+        "_al_glGetTexParameterPointervAPPLE(a0 , a1 , a2);")))
+  (begin
+    (define gl:enable-vertex-attrib-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glEnableVertexAttribAPPLE(a0 , a1);")))
+  (begin
+    (define gl:disable-vertex-attrib-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glDisableVertexAttribAPPLE(a0 , a1);")))
+  (begin
+    (define gl:is-vertex-attrib-enabled-apple
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "return(_al_glIsVertexAttribEnabledAPPLE(a0 , a1));")))
+  (begin
+    (define gl:map-vertex-attrib1d-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (double a2)
+         (double a3)
+         (integer a4)
+         (integer a5)
+         (f64vector a6))
+        "_al_glMapVertexAttrib1dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:map-vertex-attrib1f-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (float a2)
+         (float a3)
+         (integer a4)
+         (integer a5)
+         (f32vector a6))
+        "_al_glMapVertexAttrib1fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+  (begin
+    (define gl:map-vertex-attrib2d-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (double a2)
+         (double a3)
+         (integer a4)
+         (integer a5)
+         (double a6)
+         (double a7)
+         (integer a8)
+         (integer a9)
+         (f64vector a10))
+        "_al_glMapVertexAttrib2dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:map-vertex-attrib2f-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (float a2)
+         (float a3)
+         (integer a4)
+         (integer a5)
+         (float a6)
+         (float a7)
+         (integer a8)
+         (integer a9)
+         (f32vector a10))
+        "_al_glMapVertexAttrib2fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+  (begin
+    (define gl:object-purgeable-apple
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "return(_al_glObjectPurgeableAPPLE(a0 , a1 , a2));")))
+  (begin
+    (define gl:object-unpurgeable-apple
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
+        "return(_al_glObjectUnpurgeableAPPLE(a0 , a1 , a2));")))
+  (begin
+    (define gl:get-object-parameteriv-apple
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetObjectParameterivAPPLE(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:begin-video-capture-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glBeginVideoCaptureNV(a0);")))
+  (begin
+    (define gl:bind-video-capture-stream-buffer-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         ((c-pointer void) a3))
+        "_al_glBindVideoCaptureStreamBufferNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:bind-video-capture-stream-texture-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (unsigned-integer a3)
+         (unsigned-integer a4))
+        "_al_glBindVideoCaptureStreamTextureNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:end-video-capture-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glEndVideoCaptureNV(a0);")))
+  (begin
+    (define gl:get-video-captureiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
+        "_al_glGetVideoCaptureivNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-video-capture-streamiv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glGetVideoCaptureStreamivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-video-capture-streamfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glGetVideoCaptureStreamfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-video-capture-streamdv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glGetVideoCaptureStreamdvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:video-capture-nv
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0)
+         (u32vector a1)
+         ((c-pointer unsigned-integer64) a2))
+        "return(_al_glVideoCaptureNV(a0 , a1 , a2));")))
+  (begin
+    (define gl:video-capture-stream-parameteriv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (s32vector a3))
+        "_al_glVideoCaptureStreamParameterivNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:video-capture-stream-parameterfv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f32vector a3))
+        "_al_glVideoCaptureStreamParameterfvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:video-capture-stream-parameterdv-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer a2)
+         (f64vector a3))
+        "_al_glVideoCaptureStreamParameterdvNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:use-shader-program-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glUseShaderProgramEXT(a0 , a1);")))
+  (begin
+    (define gl:active-program-ext
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glActiveProgramEXT(a0);")))
+  (begin
+    (define gl:create-shader-program-ext
+      (foreign-lambda*
+        unsigned-integer
+        ((unsigned-integer a0) (c-string a1))
+        "return(_al_glCreateShaderProgramEXT(a0 , a1));")))
+  (begin
+    (define gl:make-buffer-resident-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glMakeBufferResidentNV(a0 , a1);")))
+  (begin
+    (define gl:make-buffer-non-resident-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glMakeBufferNonResidentNV(a0);")))
+  (begin
+    (define gl:is-buffer-resident-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsBufferResidentNV(a0));")))
+  (begin
+    (define gl:make-named-buffer-resident-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (unsigned-integer a1))
+        "_al_glMakeNamedBufferResidentNV(a0 , a1);")))
+  (begin
+    (define gl:make-named-buffer-non-resident-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0))
+        "_al_glMakeNamedBufferNonResidentNV(a0);")))
+  (begin
+    (define gl:is-named-buffer-resident-nv
+      (foreign-lambda*
+        unsigned-char
+        ((unsigned-integer a0))
+        "return(_al_glIsNamedBufferResidentNV(a0));")))
+  (begin
+    (define gl:get-buffer-parameterui64v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetBufferParameterui64vNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-named-buffer-parameterui64v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetNamedBufferParameterui64vNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-integerui64v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) ((c-pointer unsigned-integer64) a1))
+        "_al_glGetIntegerui64vNV(a0 , a1);")))
+  (begin
+    (define gl:uniformui64nv
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer64 a1))
+        "_al_glUniformui64NV(a0 , a1);")))
+  (begin
+    (define gl:uniformui64v-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (integer a1) ((c-pointer unsigned-integer64) a2))
+        "_al_glUniformui64vNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:get-uniformui64v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetUniformui64vNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniformui64nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (unsigned-integer64 a2))
+        "_al_glProgramUniformui64NV(a0 , a1 , a2);")))
+  (begin
+    (define gl:program-uniformui64v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (integer a2)
+         ((c-pointer unsigned-integer64) a3))
+        "_al_glProgramUniformui64vNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:buffer-address-range-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         (unsigned-integer64 a2)
+         ((c-pointer void) a3))
+        "_al_glBufferAddressRangeNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:vertex-format-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glVertexFormatNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:normal-format-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glNormalFormatNV(a0 , a1);")))
+  (begin
+    (define gl:color-format-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glColorFormatNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:index-format-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glIndexFormatNV(a0 , a1);")))
+  (begin
+    (define gl:tex-coord-format-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glTexCoordFormatNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:edge-flag-format-nv
+      (foreign-lambda* void ((integer a0)) "_al_glEdgeFlagFormatNV(a0);")))
+  (begin
+    (define gl:secondary-color-format-nv
+      (foreign-lambda*
+        void
+        ((integer a0) (unsigned-integer a1) (integer a2))
+        "_al_glSecondaryColorFormatNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:fog-coord-format-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1))
+        "_al_glFogCoordFormatNV(a0 , a1);")))
+  (begin
+    (define gl:vertex-attrib-format-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (integer a1)
+         (unsigned-integer a2)
+         (unsigned-char a3)
+         (integer a4))
+        "_al_glVertexAttribFormatNV(a0 , a1 , a2 , a3 , a4);")))
+  (begin
+    (define gl:vertex-attrib-iformat-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0) (integer a1) (unsigned-integer a2) (integer a3))
+        "_al_glVertexAttribIFormatNV(a0 , a1 , a2 , a3);")))
+  (begin
+    (define gl:get-integerui64i-v-nv
+      (foreign-lambda*
+        void
+        ((unsigned-integer a0)
+         (unsigned-integer a1)
+         ((c-pointer unsigned-integer64) a2))
+        "_al_glGetIntegerui64i_vNV(a0 , a1 , a2);")))
+  (begin
+    (define gl:texture-barrier-nv
+      (foreign-lambda* void () "_al_glTextureBarrierNV();"))))
 
 ;;; END OF FILE
