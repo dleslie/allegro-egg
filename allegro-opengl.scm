@@ -17,4 +17,4 @@
          (chicken foreign)
          allegro)
 
-        (include "opengl"))
+        (include "gen-opengl"))
