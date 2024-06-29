@@ -65,4 +65,5 @@
         (include "transformations")
         (include "opengl")
         (include "shader")
+        (include "c-util")
 	    )

@@ -29,6 +29,7 @@
 | sed -e "s#^typedef enum .* \(.*\);#typedef int \1;#g" \
 | sed -e "s#typedef enum ALLEGRO_OPENGL_VARIANT {#enum ALLEGRO_OPENGL_VARIANT {#g" \
 | sed -e "s#} ALLEGRO_OPENGL_VARIANT;#};#g" \
+| sed -e "s#_al_gl#gl#g" \
 | chicken-bind \
     -o gen-opengl.scm \
     -export-constants \
