@@ -2103,13 +2103,10 @@
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3))
-        "_al_glBlendColor(a0 , a1 , a2 , a3);")))
+        "glBlendColor(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:blend-equation
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glBlendEquation(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glBlendEquation(a0);")))
   (begin
     (define gl:draw-range-elements
       (foreign-lambda*
@@ -2120,7 +2117,7 @@
          (integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glDrawRangeElements(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glDrawRangeElements(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:color-table
       (foreign-lambda*
@@ -2131,19 +2128,19 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glColorTable(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glColorTable(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:color-table-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glColorTableParameterfv(a0 , a1 , a2);")))
+        "glColorTableParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:color-table-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glColorTableParameteriv(a0 , a1 , a2);")))
+        "glColorTableParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:copy-color-table
       (foreign-lambda*
@@ -2153,7 +2150,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyColorTable(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyColorTable(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-color-table
       (foreign-lambda*
@@ -2162,19 +2159,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetColorTable(a0 , a1 , a2 , a3);")))
+        "glGetColorTable(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-color-table-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetColorTableParameterfv(a0 , a1 , a2);")))
+        "glGetColorTableParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-color-table-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetColorTableParameteriv(a0 , a1 , a2);")))
+        "glGetColorTableParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:color-sub-table
       (foreign-lambda*
@@ -2185,7 +2182,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glColorSubTable(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glColorSubTable(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:copy-color-sub-table
       (foreign-lambda*
@@ -2195,7 +2192,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyColorSubTable(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyColorSubTable(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-image3d
       (foreign-lambda*
@@ -2210,7 +2207,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:tex-sub-image3d
       (foreign-lambda*
@@ -2226,7 +2223,7 @@
          (unsigned-integer a8)
          (unsigned-integer a9)
          ((c-pointer void) a10))
-        "_al_glTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:copy-tex-sub-image3d
       (foreign-lambda*
@@ -2240,7 +2237,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:convolution-filter1d
       (foreign-lambda*
@@ -2251,7 +2248,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glConvolutionFilter1D(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glConvolutionFilter1D(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:convolution-filter2d
       (foreign-lambda*
@@ -2263,31 +2260,31 @@
          (unsigned-integer a4)
          (unsigned-integer a5)
          ((c-pointer void) a6))
-        "_al_glConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:convolution-parameterf
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glConvolutionParameterf(a0 , a1 , a2);")))
+        "glConvolutionParameterf(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glConvolutionParameterfv(a0 , a1 , a2);")))
+        "glConvolutionParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glConvolutionParameteri(a0 , a1 , a2);")))
+        "glConvolutionParameteri(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glConvolutionParameteriv(a0 , a1 , a2);")))
+        "glConvolutionParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:copy-convolution-filter1d
       (foreign-lambda*
@@ -2297,7 +2294,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyConvolutionFilter1D(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyConvolutionFilter1D(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:copy-convolution-filter2d
       (foreign-lambda*
@@ -2308,7 +2305,7 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glCopyConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glCopyConvolutionFilter2D(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-convolution-filter
       (foreign-lambda*
@@ -2317,19 +2314,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetConvolutionFilter(a0 , a1 , a2 , a3);")))
+        "glGetConvolutionFilter(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-convolution-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetConvolutionParameterfv(a0 , a1 , a2);")))
+        "glGetConvolutionParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-convolution-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetConvolutionParameteriv(a0 , a1 , a2);")))
+        "glGetConvolutionParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:get-separable-filter
       (foreign-lambda*
@@ -2340,7 +2337,7 @@
          ((c-pointer void) a3)
          ((c-pointer void) a4)
          ((c-pointer void) a5))
-        "_al_glGetSeparableFilter(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetSeparableFilter(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:separable-filter2d
       (foreign-lambda*
@@ -2353,7 +2350,7 @@
          (unsigned-integer a5)
          ((c-pointer void) a6)
          ((c-pointer void) a7))
-        "_al_glSeparableFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glSeparableFilter2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:get-histogram
       (foreign-lambda*
@@ -2363,19 +2360,19 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          ((c-pointer void) a4))
-        "_al_glGetHistogram(a0 , a1 , a2 , a3 , a4);")))
+        "glGetHistogram(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-histogram-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetHistogramParameterfv(a0 , a1 , a2);")))
+        "glGetHistogramParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-histogram-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetHistogramParameteriv(a0 , a1 , a2);")))
+        "glGetHistogramParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:get-minmax
       (foreign-lambda*
@@ -2385,19 +2382,19 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          ((c-pointer void) a4))
-        "_al_glGetMinmax(a0 , a1 , a2 , a3 , a4);")))
+        "glGetMinmax(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-minmax-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetMinmaxParameterfv(a0 , a1 , a2);")))
+        "glGetMinmaxParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-minmax-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetMinmaxParameteriv(a0 , a1 , a2);")))
+        "glGetMinmaxParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:histogram
       (foreign-lambda*
@@ -2406,202 +2403,196 @@
          (integer a1)
          (unsigned-integer a2)
          (unsigned-char a3))
-        "_al_glHistogram(a0 , a1 , a2 , a3);")))
+        "glHistogram(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:minmax
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-char a2))
-        "_al_glMinmax(a0 , a1 , a2);")))
+        "glMinmax(a0 , a1 , a2);")))
   (begin
     (define gl:reset-histogram
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glResetHistogram(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glResetHistogram(a0);")))
   (begin
     (define gl:reset-minmax
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glResetMinmax(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glResetMinmax(a0);")))
   (begin
     (define gl:active-texture
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glActiveTexture(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glActiveTexture(a0);")))
   (begin
     (define gl:client-active-texture
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glClientActiveTexture(a0);")))
+        "glClientActiveTexture(a0);")))
   (begin
     (define gl:multi-tex-coord1d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glMultiTexCoord1d(a0 , a1);")))
+        "glMultiTexCoord1d(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord1dv(a0 , a1);")))
+        "glMultiTexCoord1dv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glMultiTexCoord1f(a0 , a1);")))
+        "glMultiTexCoord1f(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord1fv(a0 , a1);")))
+        "glMultiTexCoord1fv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glMultiTexCoord1i(a0 , a1);")))
+        "glMultiTexCoord1i(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord1iv(a0 , a1);")))
+        "glMultiTexCoord1iv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glMultiTexCoord1s(a0 , a1);")))
+        "glMultiTexCoord1s(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord1sv(a0 , a1);")))
+        "glMultiTexCoord1sv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glMultiTexCoord2d(a0 , a1 , a2);")))
+        "glMultiTexCoord2d(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord2dv(a0 , a1);")))
+        "glMultiTexCoord2dv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glMultiTexCoord2f(a0 , a1 , a2);")))
+        "glMultiTexCoord2f(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord2fv(a0 , a1);")))
+        "glMultiTexCoord2fv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glMultiTexCoord2i(a0 , a1 , a2);")))
+        "glMultiTexCoord2i(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord2iv(a0 , a1);")))
+        "glMultiTexCoord2iv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glMultiTexCoord2s(a0 , a1 , a2);")))
+        "glMultiTexCoord2s(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord2sv(a0 , a1);")))
+        "glMultiTexCoord2sv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glMultiTexCoord3d(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord3dv(a0 , a1);")))
+        "glMultiTexCoord3dv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glMultiTexCoord3f(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord3fv(a0 , a1);")))
+        "glMultiTexCoord3fv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glMultiTexCoord3i(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord3iv(a0 , a1);")))
+        "glMultiTexCoord3iv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glMultiTexCoord3s(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord3sv(a0 , a1);")))
+        "glMultiTexCoord3sv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glMultiTexCoord4d(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4d(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord4dv(a0 , a1);")))
+        "glMultiTexCoord4dv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glMultiTexCoord4f(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4f(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord4fv(a0 , a1);")))
+        "glMultiTexCoord4fv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4i
       (foreign-lambda*
@@ -2611,55 +2602,43 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glMultiTexCoord4i(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4i(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord4iv(a0 , a1);")))
+        "glMultiTexCoord4iv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glMultiTexCoord4s(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4s(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord4sv(a0 , a1);")))
+        "glMultiTexCoord4sv(a0 , a1);")))
   (begin
     (define gl:load-transpose-matrixf
-      (foreign-lambda*
-        void
-        ((f32vector a0))
-        "_al_glLoadTransposeMatrixf(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glLoadTransposeMatrixf(a0);")))
   (begin
     (define gl:load-transpose-matrixd
-      (foreign-lambda*
-        void
-        ((f64vector a0))
-        "_al_glLoadTransposeMatrixd(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glLoadTransposeMatrixd(a0);")))
   (begin
     (define gl:mult-transpose-matrixf
-      (foreign-lambda*
-        void
-        ((f32vector a0))
-        "_al_glMultTransposeMatrixf(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glMultTransposeMatrixf(a0);")))
   (begin
     (define gl:mult-transpose-matrixd
-      (foreign-lambda*
-        void
-        ((f64vector a0))
-        "_al_glMultTransposeMatrixd(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glMultTransposeMatrixd(a0);")))
   (begin
     (define gl:sample-coverage
       (foreign-lambda*
         void
         ((float a0) (unsigned-char a1))
-        "_al_glSampleCoverage(a0 , a1);")))
+        "glSampleCoverage(a0 , a1);")))
   (begin
     (define gl:compressed-tex-image3d
       (foreign-lambda*
@@ -2673,7 +2652,7 @@
          (integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedTexImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-tex-image2d
       (foreign-lambda*
@@ -2686,7 +2665,7 @@
          (integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedTexImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:compressed-tex-image1d
       (foreign-lambda*
@@ -2698,7 +2677,7 @@
          (integer a4)
          (integer a5)
          ((c-pointer void) a6))
-        "_al_glCompressedTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCompressedTexImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:compressed-tex-sub-image3d
       (foreign-lambda*
@@ -2714,7 +2693,7 @@
          (unsigned-integer a8)
          (integer a9)
          ((c-pointer void) a10))
-        "_al_glCompressedTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glCompressedTexSubImage3D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:compressed-tex-sub-image2d
       (foreign-lambda*
@@ -2728,7 +2707,7 @@
          (unsigned-integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedTexSubImage2D(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-tex-sub-image1d
       (foreign-lambda*
@@ -2740,13 +2719,13 @@
          (unsigned-integer a4)
          (integer a5)
          ((c-pointer void) a6))
-        "_al_glCompressedTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCompressedTexSubImage1D(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-compressed-tex-image
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glGetCompressedTexImage(a0 , a1 , a2);")))
+        "glGetCompressedTexImage(a0 , a1 , a2);")))
   (begin
     (define gl:blend-func-separate
       (foreign-lambda*
@@ -2755,31 +2734,31 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glBlendFuncSeparate(a0 , a1 , a2 , a3);")))
+        "glBlendFuncSeparate(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:fog-coordf
-      (foreign-lambda* void ((float a0)) "_al_glFogCoordf(a0);")))
+      (foreign-lambda* void ((float a0)) "glFogCoordf(a0);")))
   (begin
     (define gl:fog-coordfv
-      (foreign-lambda* void ((f32vector a0)) "_al_glFogCoordfv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glFogCoordfv(a0);")))
   (begin
     (define gl:fog-coordd
-      (foreign-lambda* void ((double a0)) "_al_glFogCoordd(a0);")))
+      (foreign-lambda* void ((double a0)) "glFogCoordd(a0);")))
   (begin
     (define gl:fog-coorddv
-      (foreign-lambda* void ((f64vector a0)) "_al_glFogCoorddv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glFogCoorddv(a0);")))
   (begin
     (define gl:fog-coord-pointer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glFogCoordPointer(a0 , a1 , a2);")))
+        "glFogCoordPointer(a0 , a1 , a2);")))
   (begin
     (define gl:multi-draw-arrays
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
-        "_al_glMultiDrawArrays(a0 , a1 , a2 , a3);")))
+        "glMultiDrawArrays(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-draw-elements
       (foreign-lambda*
@@ -2789,250 +2768,244 @@
          (unsigned-integer a2)
          ((c-pointer (c-pointer (const void))) a3)
          (integer a4))
-        "_al_glMultiDrawElements(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiDrawElements(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:point-parameterf
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPointParameterf(a0 , a1);")))
+        "glPointParameterf(a0 , a1);")))
   (begin
     (define gl:point-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPointParameterfv(a0 , a1);")))
+        "glPointParameterfv(a0 , a1);")))
   (begin
     (define gl:point-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPointParameteri(a0 , a1);")))
+        "glPointParameteri(a0 , a1);")))
   (begin
     (define gl:point-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glPointParameteriv(a0 , a1);")))
+        "glPointParameteriv(a0 , a1);")))
   (begin
     (define gl:secondary-color3b
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glSecondaryColor3b(a0 , a1 , a2);")))
+        "glSecondaryColor3b(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3bv
-      (foreign-lambda* void ((c-string a0)) "_al_glSecondaryColor3bv(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glSecondaryColor3bv(a0);")))
   (begin
     (define gl:secondary-color3d
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glSecondaryColor3d(a0 , a1 , a2);")))
+        "glSecondaryColor3d(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3dv
-      (foreign-lambda* void ((f64vector a0)) "_al_glSecondaryColor3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glSecondaryColor3dv(a0);")))
   (begin
     (define gl:secondary-color3f
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glSecondaryColor3f(a0 , a1 , a2);")))
+        "glSecondaryColor3f(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3fv
-      (foreign-lambda* void ((f32vector a0)) "_al_glSecondaryColor3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glSecondaryColor3fv(a0);")))
   (begin
     (define gl:secondary-color3i
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glSecondaryColor3i(a0 , a1 , a2);")))
+        "glSecondaryColor3i(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3iv
-      (foreign-lambda* void ((s32vector a0)) "_al_glSecondaryColor3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glSecondaryColor3iv(a0);")))
   (begin
     (define gl:secondary-color3s
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glSecondaryColor3s(a0 , a1 , a2);")))
+        "glSecondaryColor3s(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3sv
-      (foreign-lambda* void ((s16vector a0)) "_al_glSecondaryColor3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glSecondaryColor3sv(a0);")))
   (begin
     (define gl:secondary-color3ub
       (foreign-lambda*
         void
         ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
-        "_al_glSecondaryColor3ub(a0 , a1 , a2);")))
+        "glSecondaryColor3ub(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3ubv
-      (foreign-lambda* void ((u8vector a0)) "_al_glSecondaryColor3ubv(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glSecondaryColor3ubv(a0);")))
   (begin
     (define gl:secondary-color3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glSecondaryColor3ui(a0 , a1 , a2);")))
+        "glSecondaryColor3ui(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3uiv
-      (foreign-lambda* void ((u32vector a0)) "_al_glSecondaryColor3uiv(a0);")))
+      (foreign-lambda* void ((u32vector a0)) "glSecondaryColor3uiv(a0);")))
   (begin
     (define gl:secondary-color3us
       (foreign-lambda*
         void
         ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
-        "_al_glSecondaryColor3us(a0 , a1 , a2);")))
+        "glSecondaryColor3us(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3usv
-      (foreign-lambda* void ((u16vector a0)) "_al_glSecondaryColor3usv(a0);")))
+      (foreign-lambda* void ((u16vector a0)) "glSecondaryColor3usv(a0);")))
   (begin
     (define gl:secondary-color-pointer
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "_al_glSecondaryColorPointer(a0 , a1 , a2 , a3);")))
+        "glSecondaryColorPointer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos2d
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glWindowPos2d(a0 , a1);")))
+        "glWindowPos2d(a0 , a1);")))
   (begin
     (define gl:window-pos2dv
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos2dv(a0);")))
   (begin
     (define gl:window-pos2f
       (foreign-lambda*
         void
         ((float a0) (float a1))
-        "_al_glWindowPos2f(a0 , a1);")))
+        "glWindowPos2f(a0 , a1);")))
   (begin
     (define gl:window-pos2fv
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos2fv(a0);")))
   (begin
     (define gl:window-pos2i
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glWindowPos2i(a0 , a1);")))
+        "glWindowPos2i(a0 , a1);")))
   (begin
     (define gl:window-pos2iv
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos2iv(a0);")))
   (begin
     (define gl:window-pos2s
       (foreign-lambda*
         void
         ((short a0) (short a1))
-        "_al_glWindowPos2s(a0 , a1);")))
+        "glWindowPos2s(a0 , a1);")))
   (begin
     (define gl:window-pos2sv
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos2sv(a0);")))
   (begin
     (define gl:window-pos3d
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glWindowPos3d(a0 , a1 , a2);")))
+        "glWindowPos3d(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3dv
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dv(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos3dv(a0);")))
   (begin
     (define gl:window-pos3f
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glWindowPos3f(a0 , a1 , a2);")))
+        "glWindowPos3f(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3fv
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fv(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos3fv(a0);")))
   (begin
     (define gl:window-pos3i
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glWindowPos3i(a0 , a1 , a2);")))
+        "glWindowPos3i(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3iv
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3iv(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos3iv(a0);")))
   (begin
     (define gl:window-pos3s
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glWindowPos3s(a0 , a1 , a2);")))
+        "glWindowPos3s(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3sv
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3sv(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos3sv(a0);")))
   (begin
     (define gl:bind-buffer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindBuffer(a0 , a1);")))
+        "glBindBuffer(a0 , a1);")))
   (begin
     (define gl:delete-buffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteBuffers(a0 , a1);")))
+        "glDeleteBuffers(a0 , a1);")))
   (begin
     (define gl:gen-buffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenBuffers(a0 , a1);")))
+        "glGenBuffers(a0 , a1);")))
   (begin
     (define gl:is-buffer
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsBuffer(a0));")))
+        "return(glIsBuffer(a0));")))
   (begin
     (define gl:buffer-data
       (foreign-lambda*
         void
         ((unsigned-integer a0)
-         ((c-pointer void) a1)
+         (long a1)
          ((c-pointer void) a2)
          (unsigned-integer a3))
-        "_al_glBufferData(a0 , a1 , a2 , a3);")))
+        "glBufferData(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:buffer-sub-data
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glBufferSubData(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glBufferSubData(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-buffer-sub-data
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glGetBufferSubData(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glGetBufferSubData(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:map-buffer
       (foreign-lambda*
         (c-pointer void)
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glMapBuffer(a0 , a1));")))
+        "return(glMapBuffer(a0 , a1));")))
   (begin
     (define gl:unmap-buffer
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glUnmapBuffer(a0));")))
+        "return(glUnmapBuffer(a0));")))
   (begin
     (define gl:get-buffer-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetBufferParameteriv(a0 , a1 , a2);")))
+        "glGetBufferParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:get-buffer-pointerv
       (foreign-lambda*
@@ -3040,91 +3013,85 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetBufferPointerv(a0 , a1 , a2);")))
+        "glGetBufferPointerv(a0 , a1 , a2);")))
   (begin
     (define gl:gen-queries
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenQueries(a0 , a1);")))
+        "glGenQueries(a0 , a1);")))
   (begin
     (define gl:delete-queries
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteQueries(a0 , a1);")))
+        "glDeleteQueries(a0 , a1);")))
   (begin
     (define gl:is-query
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsQuery(a0));")))
+        "return(glIsQuery(a0));")))
   (begin
     (define gl:begin-query
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBeginQuery(a0 , a1);")))
+        "glBeginQuery(a0 , a1);")))
   (begin
     (define gl:end-query
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glEndQuery(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glEndQuery(a0);")))
   (begin
     (define gl:get-queryiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetQueryiv(a0 , a1 , a2);")))
+        "glGetQueryiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetQueryObjectiv(a0 , a1 , a2);")))
+        "glGetQueryObjectiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetQueryObjectuiv(a0 , a1 , a2);")))
+        "glGetQueryObjectuiv(a0 , a1 , a2);")))
   (begin
     (define gl:blend-equation-separate
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBlendEquationSeparate(a0 , a1);")))
+        "glBlendEquationSeparate(a0 , a1);")))
   (begin
     (define gl:create-program
-      (foreign-lambda* unsigned-integer () "return(_al_glCreateProgram());")))
+      (foreign-lambda* unsigned-integer () "return(glCreateProgram());")))
   (begin
     (define gl:create-shader
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glCreateShader(a0));")))
+        "return(glCreateShader(a0));")))
   (begin
     (define gl:delete-program
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glDeleteProgram(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDeleteProgram(a0);")))
   (begin
     (define gl:delete-shader
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glDeleteShader(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDeleteShader(a0);")))
   (begin
     (define gl:attach-shader
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glAttachShader(a0 , a1);")))
+        "glAttachShader(a0 , a1);")))
   (begin
     (define gl:detach-shader
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDetachShader(a0 , a1);")))
+        "glDetachShader(a0 , a1);")))
   (begin
     (define gl:shader-source
       (foreign-lambda*
@@ -3133,199 +3100,193 @@
          (integer a1)
          ((c-pointer (c-pointer (const char))) a2)
          (s32vector a3))
-        "_al_glShaderSource(a0 , a1 , a2 , a3);")))
+        "glShaderSource(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:compile-shader
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glCompileShader(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glCompileShader(a0);")))
   (begin
     (define gl:is-program
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsProgram(a0));")))
+        "return(glIsProgram(a0));")))
   (begin
     (define gl:is-shader
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsShader(a0));")))
+        "return(glIsShader(a0));")))
   (begin
     (define gl:link-program
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glLinkProgram(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glLinkProgram(a0);")))
   (begin
     (define gl:use-program
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glUseProgram(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glUseProgram(a0);")))
   (begin
     (define gl:validate-program
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glValidateProgram(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glValidateProgram(a0);")))
   (begin
     (define gl:uniform1f
       (foreign-lambda*
         void
         ((integer a0) (float a1))
-        "_al_glUniform1f(a0 , a1);")))
+        "glUniform1f(a0 , a1);")))
   (begin
     (define gl:uniform2f
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2))
-        "_al_glUniform2f(a0 , a1 , a2);")))
+        "glUniform2f(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3f
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2) (float a3))
-        "_al_glUniform3f(a0 , a1 , a2 , a3);")))
+        "glUniform3f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4f
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glUniform4f(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4f(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1i
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glUniform1i(a0 , a1);")))
+        "glUniform1i(a0 , a1);")))
   (begin
     (define gl:uniform2i
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glUniform2i(a0 , a1 , a2);")))
+        "glUniform2i(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3i
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glUniform3i(a0 , a1 , a2 , a3);")))
+        "glUniform3i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4i
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
-        "_al_glUniform4i(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4i(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform1fv(a0 , a1 , a2);")))
+        "glUniform1fv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform2fv(a0 , a1 , a2);")))
+        "glUniform2fv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform3fv(a0 , a1 , a2);")))
+        "glUniform3fv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform4fv(a0 , a1 , a2);")))
+        "glUniform4fv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform1iv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform1iv(a0 , a1 , a2);")))
+        "glUniform1iv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2iv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform2iv(a0 , a1 , a2);")))
+        "glUniform2iv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3iv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform3iv(a0 , a1 , a2);")))
+        "glUniform3iv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4iv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform4iv(a0 , a1 , a2);")))
+        "glUniform4iv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform-matrix2fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix2fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix3fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix4fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-shaderfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetShaderfv(a0 , a1 , a2);")))
+        "glGetShaderfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-shaderiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetShaderiv(a0 , a1 , a2);")))
+        "glGetShaderiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-programfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetProgramfv(a0 , a1 , a2);")))
+        "glGetProgramfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-programiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetProgramiv(a0 , a1 , a2);")))
+        "glGetProgramiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-shader-info-log
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetShaderInfoLog(a0 , a1 , a2 , a3);")))
+        "glGetShaderInfoLog(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-info-log
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetProgramInfoLog(a0 , a1 , a2 , a3);")))
+        "glGetProgramInfoLog(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-attached-shaders
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2) (u32vector a3))
-        "_al_glGetAttachedShaders(a0 , a1 , a2 , a3);")))
+        "glGetAttachedShaders(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-uniform-location
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetUniformLocation(a0 , a1));")))
+        "return(glGetUniformLocation(a0 , a1));")))
   (begin
     (define gl:get-active-uniform
       (foreign-lambda*
@@ -3337,97 +3298,97 @@
          (s32vector a4)
          (u32vector a5)
          (c-string a6))
-        "_al_glGetActiveUniform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetActiveUniform(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-uniformfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glGetUniformfv(a0 , a1 , a2);")))
+        "glGetUniformfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniformiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2))
-        "_al_glGetUniformiv(a0 , a1 , a2);")))
+        "glGetUniformiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-shader-source
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetShaderSource(a0 , a1 , a2 , a3);")))
+        "glGetShaderSource(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib1f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glVertexAttrib1f(a0 , a1);")))
+        "glVertexAttrib1f(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glVertexAttrib1s(a0 , a1);")))
+        "glVertexAttrib1s(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glVertexAttrib1d(a0 , a1);")))
+        "glVertexAttrib1d(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glVertexAttrib2f(a0 , a1 , a2);")))
+        "glVertexAttrib2f(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glVertexAttrib2s(a0 , a1 , a2);")))
+        "glVertexAttrib2s(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glVertexAttrib2d(a0 , a1 , a2);")))
+        "glVertexAttrib2d(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib3f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glVertexAttrib3f(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3f(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glVertexAttrib3s(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3s(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glVertexAttrib3d(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib4f
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glVertexAttrib4f(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4f(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4s
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glVertexAttrib4s(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4s(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4d
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glVertexAttrib4d(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4d(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4nub
       (foreign-lambda*
@@ -3437,145 +3398,145 @@
          (unsigned-char a2)
          (unsigned-char a3)
          (unsigned-char a4))
-        "_al_glVertexAttrib4Nub(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4Nub(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib1fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib1fv(a0 , a1);")))
+        "glVertexAttrib1fv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib1sv(a0 , a1);")))
+        "glVertexAttrib1sv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib1dv(a0 , a1);")))
+        "glVertexAttrib1dv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib2fv(a0 , a1);")))
+        "glVertexAttrib2fv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib2sv(a0 , a1);")))
+        "glVertexAttrib2sv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib2dv(a0 , a1);")))
+        "glVertexAttrib2dv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib3fv(a0 , a1);")))
+        "glVertexAttrib3fv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib3sv(a0 , a1);")))
+        "glVertexAttrib3sv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib3dv(a0 , a1);")))
+        "glVertexAttrib3dv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4fv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib4fv(a0 , a1);")))
+        "glVertexAttrib4fv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4sv(a0 , a1);")))
+        "glVertexAttrib4sv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4dv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib4dv(a0 , a1);")))
+        "glVertexAttrib4dv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttrib4iv(a0 , a1);")))
+        "glVertexAttrib4iv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4bv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttrib4bv(a0 , a1);")))
+        "glVertexAttrib4bv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4ubv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttrib4ubv(a0 , a1);")))
+        "glVertexAttrib4ubv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4usv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttrib4usv(a0 , a1);")))
+        "glVertexAttrib4usv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttrib4uiv(a0 , a1);")))
+        "glVertexAttrib4uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nbv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttrib4Nbv(a0 , a1);")))
+        "glVertexAttrib4Nbv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nsv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4Nsv(a0 , a1);")))
+        "glVertexAttrib4Nsv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4niv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttrib4Niv(a0 , a1);")))
+        "glVertexAttrib4Niv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nubv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttrib4Nubv(a0 , a1);")))
+        "glVertexAttrib4Nubv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nusv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttrib4Nusv(a0 , a1);")))
+        "glVertexAttrib4Nusv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttrib4Nuiv(a0 , a1);")))
+        "glVertexAttrib4Nuiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-pointer
       (foreign-lambda*
@@ -3586,25 +3547,25 @@
          (unsigned-char a3)
          (integer a4)
          ((c-pointer void) a5))
-        "_al_glVertexAttribPointer(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glVertexAttribPointer(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:enable-vertex-attrib-array
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glEnableVertexAttribArray(a0);")))
+        "glEnableVertexAttribArray(a0);")))
   (begin
     (define gl:disable-vertex-attrib-array
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glDisableVertexAttribArray(a0);")))
+        "glDisableVertexAttribArray(a0);")))
   (begin
     (define gl:bind-attrib-location
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "_al_glBindAttribLocation(a0 , a1 , a2);")))
+        "glBindAttribLocation(a0 , a1 , a2);")))
   (begin
     (define gl:get-active-attrib
       (foreign-lambda*
@@ -3616,31 +3577,31 @@
          (s32vector a4)
          (u32vector a5)
          (c-string a6))
-        "_al_glGetActiveAttrib(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetActiveAttrib(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-attrib-location
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetAttribLocation(a0 , a1));")))
+        "return(glGetAttribLocation(a0 , a1));")))
   (begin
     (define gl:get-vertex-attribdv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetVertexAttribdv(a0 , a1 , a2);")))
+        "glGetVertexAttribdv(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVertexAttribfv(a0 , a1 , a2);")))
+        "glGetVertexAttribfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribiv(a0 , a1 , a2);")))
+        "glGetVertexAttribiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-pointerv
       (foreign-lambda*
@@ -3648,13 +3609,13 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetVertexAttribPointerv(a0 , a1 , a2);")))
+        "glGetVertexAttribPointerv(a0 , a1 , a2);")))
   (begin
     (define gl:draw-buffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDrawBuffers(a0 , a1);")))
+        "glDrawBuffers(a0 , a1);")))
   (begin
     (define gl:stencil-op-separate
       (foreign-lambda*
@@ -3663,7 +3624,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glStencilOpSeparate(a0 , a1 , a2 , a3);")))
+        "glStencilOpSeparate(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:stencil-func-separate
       (foreign-lambda*
@@ -3672,49 +3633,49 @@
          (unsigned-integer a1)
          (integer a2)
          (unsigned-integer a3))
-        "_al_glStencilFuncSeparate(a0 , a1 , a2 , a3);")))
+        "glStencilFuncSeparate(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:stencil-mask-separate
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glStencilMaskSeparate(a0 , a1);")))
+        "glStencilMaskSeparate(a0 , a1);")))
   (begin
     (define gl:uniform-matrix2x3fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix2x3fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2x3fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3x2fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix3x2fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3x2fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix2x4fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix2x4fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2x4fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4x2fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix4x2fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4x2fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3x4fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix3x4fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3x4fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4x3fv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix4x3fv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4x3fv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color-maski
       (foreign-lambda*
@@ -3724,46 +3685,46 @@
          (unsigned-char a2)
          (unsigned-char a3)
          (unsigned-char a4))
-        "_al_glColorMaski(a0 , a1 , a2 , a3 , a4);")))
+        "glColorMaski(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-booleani-v
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetBooleani_v(a0 , a1 , a2);")))
+        "glGetBooleani_v(a0 , a1 , a2);")))
   (begin
     (define gl:get-integeri-v
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetIntegeri_v(a0 , a1 , a2);")))
+        "glGetIntegeri_v(a0 , a1 , a2);")))
   (begin
     (define gl:enablei
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEnablei(a0 , a1);")))
+        "glEnablei(a0 , a1);")))
   (begin
     (define gl:disablei
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDisablei(a0 , a1);")))
+        "glDisablei(a0 , a1);")))
   (begin
     (define gl:is-enabledi
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glIsEnabledi(a0 , a1));")))
+        "return(glIsEnabledi(a0 , a1));")))
   (begin
     (define gl:begin-transform-feedback
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginTransformFeedback(a0);")))
+        "glBeginTransformFeedback(a0);")))
   (begin
     (define gl:end-transform-feedback
-      (foreign-lambda* void () "_al_glEndTransformFeedback();")))
+      (foreign-lambda* void () "glEndTransformFeedback();")))
   (begin
     (define gl:bind-buffer-range
       (foreign-lambda*
@@ -3771,15 +3732,15 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3)
-         ((c-pointer void) a4))
-        "_al_glBindBufferRange(a0 , a1 , a2 , a3 , a4);")))
+         (long a3)
+         (long a4))
+        "glBindBufferRange(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:bind-buffer-base
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBindBufferBase(a0 , a1 , a2);")))
+        "glBindBufferBase(a0 , a1 , a2);")))
   (begin
     (define gl:transform-feedback-varyings
       (foreign-lambda*
@@ -3788,46 +3749,46 @@
          (integer a1)
          (s32vector a2)
          (unsigned-integer a3))
-        "_al_glTransformFeedbackVaryings(a0 , a1 , a2 , a3);")))
+        "glTransformFeedbackVaryings(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-transform-feedback-varying
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTransformFeedbackVarying(a0 , a1 , a2);")))
+        "glGetTransformFeedbackVarying(a0 , a1 , a2);")))
   (begin
     (define gl:clamp-color
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glClampColor(a0 , a1);")))
+        "glClampColor(a0 , a1);")))
   (begin
     (define gl:begin-conditional-render
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBeginConditionalRender(a0 , a1);")))
+        "glBeginConditionalRender(a0 , a1);")))
   (begin
     (define gl:end-conditional-render
-      (foreign-lambda* void () "_al_glEndConditionalRender();")))
+      (foreign-lambda* void () "glEndConditionalRender();")))
   (begin
     (define gl:vertex-attrib-i1i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glVertexAttribI1i(a0 , a1);")))
+        "glVertexAttribI1i(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glVertexAttribI2i(a0 , a1 , a2);")))
+        "glVertexAttribI2i(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib-i3i
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glVertexAttribI3i(a0 , a1 , a2 , a3);")))
+        "glVertexAttribI3i(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-i4i
       (foreign-lambda*
@@ -3837,19 +3798,19 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glVertexAttribI4i(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribI4i(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-i1ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexAttribI1ui(a0 , a1);")))
+        "glVertexAttribI1ui(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glVertexAttribI2ui(a0 , a1 , a2);")))
+        "glVertexAttribI2ui(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib-i3ui
       (foreign-lambda*
@@ -3858,7 +3819,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribI3ui(a0 , a1 , a2 , a3);")))
+        "glVertexAttribI3ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-i4ui
       (foreign-lambda*
@@ -3868,79 +3829,79 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glVertexAttribI4ui(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribI4ui(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-i1iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI1iv(a0 , a1);")))
+        "glVertexAttribI1iv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI2iv(a0 , a1);")))
+        "glVertexAttribI2iv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i3iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI3iv(a0 , a1);")))
+        "glVertexAttribI3iv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4iv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI4iv(a0 , a1);")))
+        "glVertexAttribI4iv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i1uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI1uiv(a0 , a1);")))
+        "glVertexAttribI1uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI2uiv(a0 , a1);")))
+        "glVertexAttribI2uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI3uiv(a0 , a1);")))
+        "glVertexAttribI3uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI4uiv(a0 , a1);")))
+        "glVertexAttribI4uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4bv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttribI4bv(a0 , a1);")))
+        "glVertexAttribI4bv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4sv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttribI4sv(a0 , a1);")))
+        "glVertexAttribI4sv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4ubv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttribI4ubv(a0 , a1);")))
+        "glVertexAttribI4ubv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4usv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttribI4usv(a0 , a1);")))
+        "glVertexAttribI4usv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-ipointer
       (foreign-lambda*
@@ -3950,49 +3911,49 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer void) a4))
-        "_al_glVertexAttribIPointer(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribIPointer(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-vertex-attrib-iiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribIiv(a0 , a1 , a2);")))
+        "glGetVertexAttribIiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-iuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetVertexAttribIuiv(a0 , a1 , a2);")))
+        "glGetVertexAttribIuiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniformuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glGetUniformuiv(a0 , a1 , a2);")))
+        "glGetUniformuiv(a0 , a1 , a2);")))
   (begin
     (define gl:bind-frag-data-location
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "_al_glBindFragDataLocation(a0 , a1 , a2);")))
+        "glBindFragDataLocation(a0 , a1 , a2);")))
   (begin
     (define gl:get-frag-data-location
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetFragDataLocation(a0 , a1));")))
+        "return(glGetFragDataLocation(a0 , a1));")))
   (begin
     (define gl:uniform1ui
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1))
-        "_al_glUniform1ui(a0 , a1);")))
+        "glUniform1ui(a0 , a1);")))
   (begin
     (define gl:uniform2ui
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glUniform2ui(a0 , a1 , a2);")))
+        "glUniform2ui(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3ui
       (foreign-lambda*
@@ -4001,7 +3962,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glUniform3ui(a0 , a1 , a2 , a3);")))
+        "glUniform3ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4ui
       (foreign-lambda*
@@ -4011,91 +3972,91 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glUniform4ui(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4ui(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1uiv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform1uiv(a0 , a1 , a2);")))
+        "glUniform1uiv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2uiv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform2uiv(a0 , a1 , a2);")))
+        "glUniform2uiv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3uiv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform3uiv(a0 , a1 , a2);")))
+        "glUniform3uiv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4uiv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform4uiv(a0 , a1 , a2);")))
+        "glUniform4uiv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameter-iiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glTexParameterIiv(a0 , a1 , a2);")))
+        "glTexParameterIiv(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameter-iuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glTexParameterIuiv(a0 , a1 , a2);")))
+        "glTexParameterIuiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-parameter-iiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTexParameterIiv(a0 , a1 , a2);")))
+        "glGetTexParameterIiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-parameter-iuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetTexParameterIuiv(a0 , a1 , a2);")))
+        "glGetTexParameterIuiv(a0 , a1 , a2);")))
   (begin
     (define gl:clear-bufferiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2))
-        "_al_glClearBufferiv(a0 , a1 , a2);")))
+        "glClearBufferiv(a0 , a1 , a2);")))
   (begin
     (define gl:clear-bufferuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glClearBufferuiv(a0 , a1 , a2);")))
+        "glClearBufferuiv(a0 , a1 , a2);")))
   (begin
     (define gl:clear-bufferfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glClearBufferfv(a0 , a1 , a2);")))
+        "glClearBufferfv(a0 , a1 , a2);")))
   (begin
     (define gl:clear-bufferfi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (float a2) (integer a3))
-        "_al_glClearBufferfi(a0 , a1 , a2 , a3);")))
+        "glClearBufferfi(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-stringi
       (foreign-lambda*
         (c-pointer (const unsigned-char))
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glGetStringi(a0 , a1));")))
+        "return(glGetStringi(a0 , a1));")))
   (begin
     (define gl:draw-arrays-instanced
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glDrawArraysInstanced(a0 , a1 , a2 , a3);")))
+        "glDrawArraysInstanced(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-elements-instanced
       (foreign-lambda*
@@ -4105,19 +4066,19 @@
          (unsigned-integer a2)
          ((c-pointer void) a3)
          (integer a4))
-        "_al_glDrawElementsInstanced(a0 , a1 , a2 , a3 , a4);")))
+        "glDrawElementsInstanced(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-buffer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glTexBuffer(a0 , a1 , a2);")))
+        "glTexBuffer(a0 , a1 , a2);")))
   (begin
     (define gl:primitive-restart-index
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glPrimitiveRestartIndex(a0);")))
+        "glPrimitiveRestartIndex(a0);")))
   (begin
     (define gl:get-integer64i-v
       (foreign-lambda*
@@ -4125,7 +4086,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer integer64) a2))
-        "_al_glGetInteger64i_v(a0 , a1 , a2);")))
+        "glGetInteger64i_v(a0 , a1 , a2);")))
   (begin
     (define gl:get-buffer-parameteri64v
       (foreign-lambda*
@@ -4133,13 +4094,13 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer integer64) a2))
-        "_al_glGetBufferParameteri64v(a0 , a1 , a2);")))
+        "glGetBufferParameteri64v(a0 , a1 , a2);")))
   (begin
     (define gl:program-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glProgramParameteri(a0 , a1 , a2);")))
+        "glProgramParameteri(a0 , a1 , a2);")))
   (begin
     (define gl:framebuffer-texture
       (foreign-lambda*
@@ -4148,7 +4109,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glFramebufferTexture(a0 , a1 , a2 , a3);")))
+        "glFramebufferTexture(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:clear-buffer-data
       (foreign-lambda*
@@ -4158,31 +4119,28 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          ((c-pointer void) a4))
-        "_al_glClearBufferData(a0 , a1 , a2 , a3 , a4);")))
+        "glClearBufferData(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:clear-buffer-sub-data
       (foreign-lambda*
         void
         ((unsigned-integer a0)
          (unsigned-integer a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3)
+         (long a2)
+         (long a3)
          (unsigned-integer a4)
          (unsigned-integer a5)
          ((c-pointer void) a6))
-        "_al_glClearBufferSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glClearBufferSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:dispatch-compute
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glDispatchCompute(a0 , a1 , a2);")))
+        "glDispatchCompute(a0 , a1 , a2);")))
   (begin
     (define gl:dispatch-compute-indirect
-      (foreign-lambda*
-        void
-        (((c-pointer void) a0))
-        "_al_glDispatchComputeIndirect(a0);")))
+      (foreign-lambda* void ((long a0)) "glDispatchComputeIndirect(a0);")))
   (begin
     (define gl:copy-image-sub-data
       (foreign-lambda*
@@ -4202,19 +4160,19 @@
          (integer a12)
          (integer a13)
          (integer a14))
-        "_al_glCopyImageSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
+        "glCopyImageSubData(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
   (begin
     (define gl:framebuffer-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glFramebufferParameteri(a0 , a1 , a2);")))
+        "glFramebufferParameteri(a0 , a1 , a2);")))
   (begin
     (define gl:get-framebuffer-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFramebufferParameteriv(a0 , a1 , a2);")))
+        "glGetFramebufferParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:get-internalformati64v
       (foreign-lambda*
@@ -4224,7 +4182,7 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer integer64) a4))
-        "_al_glGetInternalformati64v(a0 , a1 , a2 , a3 , a4);")))
+        "glGetInternalformati64v(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:invalidate-tex-sub-image
       (foreign-lambda*
@@ -4237,31 +4195,31 @@
          (integer a5)
          (integer a6)
          (integer a7))
-        "_al_glInvalidateTexSubImage(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glInvalidateTexSubImage(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:invalidate-tex-image
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glInvalidateTexImage(a0 , a1);")))
+        "glInvalidateTexImage(a0 , a1);")))
   (begin
     (define gl:invalidate-buffer-sub-data
       (foreign-lambda*
         void
-        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
-        "_al_glInvalidateBufferSubData(a0 , a1 , a2);")))
+        ((unsigned-integer a0) (long a1) (long a2))
+        "glInvalidateBufferSubData(a0 , a1 , a2);")))
   (begin
     (define gl:invalidate-buffer-data
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glInvalidateBufferData(a0);")))
+        "glInvalidateBufferData(a0);")))
   (begin
     (define gl:invalidate-framebuffer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glInvalidateFramebuffer(a0 , a1 , a2);")))
+        "glInvalidateFramebuffer(a0 , a1 , a2);")))
   (begin
     (define gl:invalidate-sub-framebuffer
       (foreign-lambda*
@@ -4273,13 +4231,13 @@
          (integer a4)
          (integer a5)
          (integer a6))
-        "_al_glInvalidateSubFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glInvalidateSubFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:multi-draw-arrays-indirect
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer void) a1) (integer a2) (integer a3))
-        "_al_glMultiDrawArraysIndirect(a0 , a1 , a2 , a3);")))
+        "glMultiDrawArraysIndirect(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-draw-elements-indirect
       (foreign-lambda*
@@ -4289,7 +4247,7 @@
          ((c-pointer void) a2)
          (integer a3)
          (integer a4))
-        "_al_glMultiDrawElementsIndirect(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiDrawElementsIndirect(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-program-interfaceiv
       (foreign-lambda*
@@ -4298,13 +4256,13 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetProgramInterfaceiv(a0 , a1 , a2 , a3);")))
+        "glGetProgramInterfaceiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-resource-index
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "return(_al_glGetProgramResourceIndex(a0 , a1 , a2));")))
+        "return(glGetProgramResourceIndex(a0 , a1 , a2));")))
   (begin
     (define gl:get-program-resource-name
       (foreign-lambda*
@@ -4315,7 +4273,7 @@
          (integer a3)
          (s32vector a4)
          (c-string a5))
-        "_al_glGetProgramResourceName(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetProgramResourceName(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-program-resourceiv
       (foreign-lambda*
@@ -4328,25 +4286,25 @@
          (integer a5)
          (s32vector a6)
          (s32vector a7))
-        "_al_glGetProgramResourceiv(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glGetProgramResourceiv(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:get-program-resource-location
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "return(_al_glGetProgramResourceLocation(a0 , a1 , a2));")))
+        "return(glGetProgramResourceLocation(a0 , a1 , a2));")))
   (begin
     (define gl:get-program-resource-location-index
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "return(_al_glGetProgramResourceLocationIndex(a0 , a1 , a2));")))
+        "return(glGetProgramResourceLocationIndex(a0 , a1 , a2));")))
   (begin
     (define gl:shader-storage-block-binding
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glShaderStorageBlockBinding(a0 , a1 , a2);")))
+        "glShaderStorageBlockBinding(a0 , a1 , a2);")))
   (begin
     (define gl:tex-buffer-range
       (foreign-lambda*
@@ -4354,9 +4312,9 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3)
-         ((c-pointer void) a4))
-        "_al_glTexBufferRange(a0 , a1 , a2 , a3 , a4);")))
+         (long a3)
+         (long a4))
+        "glTexBufferRange(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-storage2dmultisample
       (foreign-lambda*
@@ -4367,7 +4325,7 @@
          (integer a3)
          (integer a4)
          (unsigned-char a5))
-        "_al_glTexStorage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glTexStorage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:tex-storage3dmultisample
       (foreign-lambda*
@@ -4379,7 +4337,7 @@
          (integer a4)
          (integer a5)
          (unsigned-char a6))
-        "_al_glTexStorage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glTexStorage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:texture-view
       (foreign-lambda*
@@ -4392,16 +4350,13 @@
          (unsigned-integer a5)
          (unsigned-integer a6)
          (unsigned-integer a7))
-        "_al_glTextureView(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glTextureView(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:bind-vertex-buffer
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         (unsigned-integer a1)
-         ((c-pointer void) a2)
-         (integer a3))
-        "_al_glBindVertexBuffer(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (unsigned-integer a1) (long a2) (integer a3))
+        "glBindVertexBuffer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-format
       (foreign-lambda*
@@ -4411,7 +4366,7 @@
          (unsigned-integer a2)
          (unsigned-char a3)
          (unsigned-integer a4))
-        "_al_glVertexAttribFormat(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribFormat(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-iformat
       (foreign-lambda*
@@ -4420,7 +4375,7 @@
          (integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribIFormat(a0 , a1 , a2 , a3);")))
+        "glVertexAttribIFormat(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-lformat
       (foreign-lambda*
@@ -4429,19 +4384,19 @@
          (integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribLFormat(a0 , a1 , a2 , a3);")))
+        "glVertexAttribLFormat(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-binding
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexAttribBinding(a0 , a1);")))
+        "glVertexAttribBinding(a0 , a1);")))
   (begin
     (define gl:vertex-binding-divisor
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexBindingDivisor(a0 , a1);")))
+        "glVertexBindingDivisor(a0 , a1);")))
   (begin
     (define gl:debug-message-control
       (foreign-lambda*
@@ -4452,7 +4407,7 @@
          (integer a3)
          (u32vector a4)
          (unsigned-char a5))
-        "_al_glDebugMessageControl(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glDebugMessageControl(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:debug-message-insert
       (foreign-lambda*
@@ -4463,7 +4418,7 @@
          (unsigned-integer a3)
          (integer a4)
          (c-string a5))
-        "_al_glDebugMessageInsert(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glDebugMessageInsert(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-debug-message-log
       (foreign-lambda*
@@ -4476,7 +4431,7 @@
          (u32vector a5)
          (s32vector a6)
          (c-string a7))
-        "return(_al_glGetDebugMessageLog(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7));")))
+        "return(glGetDebugMessageLog(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7));")))
   (begin
     (define gl:push-debug-group
       (foreign-lambda*
@@ -4485,10 +4440,9 @@
          (unsigned-integer a1)
          (integer a2)
          (c-string a3))
-        "_al_glPushDebugGroup(a0 , a1 , a2 , a3);")))
+        "glPushDebugGroup(a0 , a1 , a2 , a3);")))
   (begin
-    (define gl:pop-debug-group
-      (foreign-lambda* void () "_al_glPopDebugGroup();")))
+    (define gl:pop-debug-group (foreign-lambda* void () "glPopDebugGroup();")))
   (begin
     (define gl:object-label
       (foreign-lambda*
@@ -4497,7 +4451,7 @@
          (unsigned-integer a1)
          (integer a2)
          (c-string a3))
-        "_al_glObjectLabel(a0 , a1 , a2 , a3);")))
+        "glObjectLabel(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-object-label
       (foreign-lambda*
@@ -4507,199 +4461,199 @@
          (integer a2)
          (s32vector a3)
          (c-string a4))
-        "_al_glGetObjectLabel(a0 , a1 , a2 , a3 , a4);")))
+        "glGetObjectLabel(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:object-ptr-label
       (foreign-lambda*
         void
         (((c-pointer void) a0) (integer a1) (c-string a2))
-        "_al_glObjectPtrLabel(a0 , a1 , a2);")))
+        "glObjectPtrLabel(a0 , a1 , a2);")))
   (begin
     (define gl:get-object-ptr-label
       (foreign-lambda*
         void
         (((c-pointer void) a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetObjectPtrLabel(a0 , a1 , a2 , a3);")))
+        "glGetObjectPtrLabel(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:active-texture-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glActiveTextureARB(a0);")))
+        "glActiveTextureARB(a0);")))
   (begin
     (define gl:client-active-texture-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glClientActiveTextureARB(a0);")))
+        "glClientActiveTextureARB(a0);")))
   (begin
     (define gl:multi-tex-coord1d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glMultiTexCoord1dARB(a0 , a1);")))
+        "glMultiTexCoord1dARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord1dvARB(a0 , a1);")))
+        "glMultiTexCoord1dvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glMultiTexCoord1fARB(a0 , a1);")))
+        "glMultiTexCoord1fARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord1fvARB(a0 , a1);")))
+        "glMultiTexCoord1fvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1i-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glMultiTexCoord1iARB(a0 , a1);")))
+        "glMultiTexCoord1iARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1iv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord1ivARB(a0 , a1);")))
+        "glMultiTexCoord1ivARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glMultiTexCoord1sARB(a0 , a1);")))
+        "glMultiTexCoord1sARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord1svARB(a0 , a1);")))
+        "glMultiTexCoord1svARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glMultiTexCoord2dARB(a0 , a1 , a2);")))
+        "glMultiTexCoord2dARB(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord2dvARB(a0 , a1);")))
+        "glMultiTexCoord2dvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glMultiTexCoord2fARB(a0 , a1 , a2);")))
+        "glMultiTexCoord2fARB(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord2fvARB(a0 , a1);")))
+        "glMultiTexCoord2fvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2i-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glMultiTexCoord2iARB(a0 , a1 , a2);")))
+        "glMultiTexCoord2iARB(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2iv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord2ivARB(a0 , a1);")))
+        "glMultiTexCoord2ivARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glMultiTexCoord2sARB(a0 , a1 , a2);")))
+        "glMultiTexCoord2sARB(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord2svARB(a0 , a1);")))
+        "glMultiTexCoord2svARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glMultiTexCoord3dARB(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3dARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord3dvARB(a0 , a1);")))
+        "glMultiTexCoord3dvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glMultiTexCoord3fARB(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3fARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord3fvARB(a0 , a1);")))
+        "glMultiTexCoord3fvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3i-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glMultiTexCoord3iARB(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3iARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3iv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord3ivARB(a0 , a1);")))
+        "glMultiTexCoord3ivARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glMultiTexCoord3sARB(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3sARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord3svARB(a0 , a1);")))
+        "glMultiTexCoord3svARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glMultiTexCoord4dARB(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4dARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMultiTexCoord4dvARB(a0 , a1);")))
+        "glMultiTexCoord4dvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glMultiTexCoord4fARB(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4fARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMultiTexCoord4fvARB(a0 , a1);")))
+        "glMultiTexCoord4fvARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4i-arb
       (foreign-lambda*
@@ -4709,55 +4663,55 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glMultiTexCoord4iARB(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4iARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4iv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord4ivARB(a0 , a1);")))
+        "glMultiTexCoord4ivARB(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glMultiTexCoord4sARB(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4sARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord4svARB(a0 , a1);")))
+        "glMultiTexCoord4svARB(a0 , a1);")))
   (begin
     (define gl:load-transpose-matrixf-arb
       (foreign-lambda*
         void
         ((f32vector a0))
-        "_al_glLoadTransposeMatrixfARB(a0);")))
+        "glLoadTransposeMatrixfARB(a0);")))
   (begin
     (define gl:load-transpose-matrixd-arb
       (foreign-lambda*
         void
         ((f64vector a0))
-        "_al_glLoadTransposeMatrixdARB(a0);")))
+        "glLoadTransposeMatrixdARB(a0);")))
   (begin
     (define gl:mult-transpose-matrixf-arb
       (foreign-lambda*
         void
         ((f32vector a0))
-        "_al_glMultTransposeMatrixfARB(a0);")))
+        "glMultTransposeMatrixfARB(a0);")))
   (begin
     (define gl:mult-transpose-matrixd-arb
       (foreign-lambda*
         void
         ((f64vector a0))
-        "_al_glMultTransposeMatrixdARB(a0);")))
+        "glMultTransposeMatrixdARB(a0);")))
   (begin
     (define gl:sample-coverage-arb
       (foreign-lambda*
         void
         ((float a0) (unsigned-char a1))
-        "_al_glSampleCoverageARB(a0 , a1);")))
+        "glSampleCoverageARB(a0 , a1);")))
   (begin
     (define gl:compressed-tex-image3darb
       (foreign-lambda*
@@ -4771,7 +4725,7 @@
          (integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedTexImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedTexImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-tex-image2darb
       (foreign-lambda*
@@ -4784,7 +4738,7 @@
          (integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedTexImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedTexImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:compressed-tex-image1darb
       (foreign-lambda*
@@ -4796,7 +4750,7 @@
          (integer a4)
          (integer a5)
          ((c-pointer void) a6))
-        "_al_glCompressedTexImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCompressedTexImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:compressed-tex-sub-image3darb
       (foreign-lambda*
@@ -4812,7 +4766,7 @@
          (unsigned-integer a8)
          (integer a9)
          ((c-pointer void) a10))
-        "_al_glCompressedTexSubImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glCompressedTexSubImage3DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:compressed-tex-sub-image2darb
       (foreign-lambda*
@@ -4826,7 +4780,7 @@
          (unsigned-integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedTexSubImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedTexSubImage2DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-tex-sub-image1darb
       (foreign-lambda*
@@ -4838,310 +4792,307 @@
          (unsigned-integer a4)
          (integer a5)
          ((c-pointer void) a6))
-        "_al_glCompressedTexSubImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCompressedTexSubImage1DARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-compressed-tex-image-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glGetCompressedTexImageARB(a0 , a1 , a2);")))
+        "glGetCompressedTexImageARB(a0 , a1 , a2);")))
   (begin
     (define gl:point-parameterf-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPointParameterfARB(a0 , a1);")))
+        "glPointParameterfARB(a0 , a1);")))
   (begin
     (define gl:point-parameterfv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPointParameterfvARB(a0 , a1);")))
+        "glPointParameterfvARB(a0 , a1);")))
   (begin
     (define gl:weightbv-arb
       (foreign-lambda*
         void
         ((integer a0) (c-string a1))
-        "_al_glWeightbvARB(a0 , a1);")))
+        "glWeightbvARB(a0 , a1);")))
   (begin
     (define gl:weightsv-arb
       (foreign-lambda*
         void
         ((integer a0) (s16vector a1))
-        "_al_glWeightsvARB(a0 , a1);")))
+        "glWeightsvARB(a0 , a1);")))
   (begin
     (define gl:weightiv-arb
       (foreign-lambda*
         void
         ((integer a0) (s32vector a1))
-        "_al_glWeightivARB(a0 , a1);")))
+        "glWeightivARB(a0 , a1);")))
   (begin
     (define gl:weightfv-arb
       (foreign-lambda*
         void
         ((integer a0) (f32vector a1))
-        "_al_glWeightfvARB(a0 , a1);")))
+        "glWeightfvARB(a0 , a1);")))
   (begin
     (define gl:weightdv-arb
       (foreign-lambda*
         void
         ((integer a0) (f64vector a1))
-        "_al_glWeightdvARB(a0 , a1);")))
+        "glWeightdvARB(a0 , a1);")))
   (begin
     (define gl:weightubv-arb
       (foreign-lambda*
         void
         ((integer a0) (u8vector a1))
-        "_al_glWeightubvARB(a0 , a1);")))
+        "glWeightubvARB(a0 , a1);")))
   (begin
     (define gl:weightusv-arb
       (foreign-lambda*
         void
         ((integer a0) (u16vector a1))
-        "_al_glWeightusvARB(a0 , a1);")))
+        "glWeightusvARB(a0 , a1);")))
   (begin
     (define gl:weightuiv-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glWeightuivARB(a0 , a1);")))
+        "glWeightuivARB(a0 , a1);")))
   (begin
     (define gl:weight-pointer-arb
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "_al_glWeightPointerARB(a0 , a1 , a2 , a3);")))
+        "glWeightPointerARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-blend-arb
-      (foreign-lambda* void ((integer a0)) "_al_glVertexBlendARB(a0);")))
+      (foreign-lambda* void ((integer a0)) "glVertexBlendARB(a0);")))
   (begin
     (define gl:current-palette-matrix-arb
-      (foreign-lambda*
-        void
-        ((integer a0))
-        "_al_glCurrentPaletteMatrixARB(a0);")))
+      (foreign-lambda* void ((integer a0)) "glCurrentPaletteMatrixARB(a0);")))
   (begin
     (define gl:matrix-indexubv-arb
       (foreign-lambda*
         void
         ((integer a0) (u8vector a1))
-        "_al_glMatrixIndexubvARB(a0 , a1);")))
+        "glMatrixIndexubvARB(a0 , a1);")))
   (begin
     (define gl:matrix-indexusv-arb
       (foreign-lambda*
         void
         ((integer a0) (u16vector a1))
-        "_al_glMatrixIndexusvARB(a0 , a1);")))
+        "glMatrixIndexusvARB(a0 , a1);")))
   (begin
     (define gl:matrix-indexuiv-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glMatrixIndexuivARB(a0 , a1);")))
+        "glMatrixIndexuivARB(a0 , a1);")))
   (begin
     (define gl:matrix-index-pointer-arb
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "_al_glMatrixIndexPointerARB(a0 , a1 , a2 , a3);")))
+        "glMatrixIndexPointerARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos2d-arb
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glWindowPos2dARB(a0 , a1);")))
+        "glWindowPos2dARB(a0 , a1);")))
   (begin
     (define gl:window-pos2dv-arb
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dvARB(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos2dvARB(a0);")))
   (begin
     (define gl:window-pos2f-arb
       (foreign-lambda*
         void
         ((float a0) (float a1))
-        "_al_glWindowPos2fARB(a0 , a1);")))
+        "glWindowPos2fARB(a0 , a1);")))
   (begin
     (define gl:window-pos2fv-arb
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fvARB(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos2fvARB(a0);")))
   (begin
     (define gl:window-pos2i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glWindowPos2iARB(a0 , a1);")))
+        "glWindowPos2iARB(a0 , a1);")))
   (begin
     (define gl:window-pos2iv-arb
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2ivARB(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos2ivARB(a0);")))
   (begin
     (define gl:window-pos2s-arb
       (foreign-lambda*
         void
         ((short a0) (short a1))
-        "_al_glWindowPos2sARB(a0 , a1);")))
+        "glWindowPos2sARB(a0 , a1);")))
   (begin
     (define gl:window-pos2sv-arb
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2svARB(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos2svARB(a0);")))
   (begin
     (define gl:window-pos3d-arb
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glWindowPos3dARB(a0 , a1 , a2);")))
+        "glWindowPos3dARB(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3dv-arb
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dvARB(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos3dvARB(a0);")))
   (begin
     (define gl:window-pos3f-arb
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glWindowPos3fARB(a0 , a1 , a2);")))
+        "glWindowPos3fARB(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3fv-arb
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fvARB(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos3fvARB(a0);")))
   (begin
     (define gl:window-pos3i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glWindowPos3iARB(a0 , a1 , a2);")))
+        "glWindowPos3iARB(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3iv-arb
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3ivARB(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos3ivARB(a0);")))
   (begin
     (define gl:window-pos3s-arb
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glWindowPos3sARB(a0 , a1 , a2);")))
+        "glWindowPos3sARB(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3sv-arb
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3svARB(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos3svARB(a0);")))
   (begin
     (define gl:vertex-attrib1d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glVertexAttrib1dARB(a0 , a1);")))
+        "glVertexAttrib1dARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib1dvARB(a0 , a1);")))
+        "glVertexAttrib1dvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glVertexAttrib1fARB(a0 , a1);")))
+        "glVertexAttrib1fARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib1fvARB(a0 , a1);")))
+        "glVertexAttrib1fvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glVertexAttrib1sARB(a0 , a1);")))
+        "glVertexAttrib1sARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib1svARB(a0 , a1);")))
+        "glVertexAttrib1svARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glVertexAttrib2dARB(a0 , a1 , a2);")))
+        "glVertexAttrib2dARB(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib2dvARB(a0 , a1);")))
+        "glVertexAttrib2dvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glVertexAttrib2fARB(a0 , a1 , a2);")))
+        "glVertexAttrib2fARB(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib2fvARB(a0 , a1);")))
+        "glVertexAttrib2fvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glVertexAttrib2sARB(a0 , a1 , a2);")))
+        "glVertexAttrib2sARB(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib2svARB(a0 , a1);")))
+        "glVertexAttrib2svARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glVertexAttrib3dARB(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3dARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib3dvARB(a0 , a1);")))
+        "glVertexAttrib3dvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glVertexAttrib3fARB(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3fARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib3fvARB(a0 , a1);")))
+        "glVertexAttrib3fvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glVertexAttrib3sARB(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3sARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib3svARB(a0 , a1);")))
+        "glVertexAttrib3svARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nbv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttrib4NbvARB(a0 , a1);")))
+        "glVertexAttrib4NbvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4niv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttrib4NivARB(a0 , a1);")))
+        "glVertexAttrib4NivARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nsv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4NsvARB(a0 , a1);")))
+        "glVertexAttrib4NsvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nub-arb
       (foreign-lambda*
@@ -5151,91 +5102,91 @@
          (unsigned-char a2)
          (unsigned-char a3)
          (unsigned-char a4))
-        "_al_glVertexAttrib4NubARB(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4NubARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4nubv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttrib4NubvARB(a0 , a1);")))
+        "glVertexAttrib4NubvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nuiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttrib4NuivARB(a0 , a1);")))
+        "glVertexAttrib4NuivARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4nusv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttrib4NusvARB(a0 , a1);")))
+        "glVertexAttrib4NusvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4bv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttrib4bvARB(a0 , a1);")))
+        "glVertexAttrib4bvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4d-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glVertexAttrib4dARB(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4dARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib4dvARB(a0 , a1);")))
+        "glVertexAttrib4dvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4f-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glVertexAttrib4fARB(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4fARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib4fvARB(a0 , a1);")))
+        "glVertexAttrib4fvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4iv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttrib4ivARB(a0 , a1);")))
+        "glVertexAttrib4ivARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4s-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glVertexAttrib4sARB(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4sARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4sv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4svARB(a0 , a1);")))
+        "glVertexAttrib4svARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4ubv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttrib4ubvARB(a0 , a1);")))
+        "glVertexAttrib4ubvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4uiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttrib4uivARB(a0 , a1);")))
+        "glVertexAttrib4uivARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4usv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttrib4usvARB(a0 , a1);")))
+        "glVertexAttrib4usvARB(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-pointer-arb
       (foreign-lambda*
@@ -5246,19 +5197,19 @@
          (unsigned-char a3)
          (integer a4)
          ((c-pointer void) a5))
-        "_al_glVertexAttribPointerARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glVertexAttribPointerARB(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:enable-vertex-attrib-array-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glEnableVertexAttribArrayARB(a0);")))
+        "glEnableVertexAttribArrayARB(a0);")))
   (begin
     (define gl:disable-vertex-attrib-array-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glDisableVertexAttribArrayARB(a0);")))
+        "glDisableVertexAttribArrayARB(a0);")))
   (begin
     (define gl:program-string-arb
       (foreign-lambda*
@@ -5267,25 +5218,25 @@
          (unsigned-integer a1)
          (integer a2)
          ((c-pointer void) a3))
-        "_al_glProgramStringARB(a0 , a1 , a2 , a3);")))
+        "glProgramStringARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-program-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindProgramARB(a0 , a1);")))
+        "glBindProgramARB(a0 , a1);")))
   (begin
     (define gl:delete-programs-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteProgramsARB(a0 , a1);")))
+        "glDeleteProgramsARB(a0 , a1);")))
   (begin
     (define gl:gen-programs-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenProgramsARB(a0 , a1);")))
+        "glGenProgramsARB(a0 , a1);")))
   (begin
     (define gl:program-env-parameter4d-arb
       (foreign-lambda*
@@ -5296,13 +5247,13 @@
          (double a3)
          (double a4)
          (double a5))
-        "_al_glProgramEnvParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramEnvParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-env-parameter4dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glProgramEnvParameter4dvARB(a0 , a1 , a2);")))
+        "glProgramEnvParameter4dvARB(a0 , a1 , a2);")))
   (begin
     (define gl:program-env-parameter4f-arb
       (foreign-lambda*
@@ -5313,13 +5264,13 @@
          (float a3)
          (float a4)
          (float a5))
-        "_al_glProgramEnvParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramEnvParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-env-parameter4fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glProgramEnvParameter4fvARB(a0 , a1 , a2);")))
+        "glProgramEnvParameter4fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:program-local-parameter4d-arb
       (foreign-lambda*
@@ -5330,13 +5281,13 @@
          (double a3)
          (double a4)
          (double a5))
-        "_al_glProgramLocalParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramLocalParameter4dARB(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-local-parameter4dv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glProgramLocalParameter4dvARB(a0 , a1 , a2);")))
+        "glProgramLocalParameter4dvARB(a0 , a1 , a2);")))
   (begin
     (define gl:program-local-parameter4f-arb
       (foreign-lambda*
@@ -5347,67 +5298,67 @@
          (float a3)
          (float a4)
          (float a5))
-        "_al_glProgramLocalParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramLocalParameter4fARB(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-local-parameter4fv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glProgramLocalParameter4fvARB(a0 , a1 , a2);")))
+        "glProgramLocalParameter4fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-env-parameterdv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetProgramEnvParameterdvARB(a0 , a1 , a2);")))
+        "glGetProgramEnvParameterdvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-env-parameterfv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetProgramEnvParameterfvARB(a0 , a1 , a2);")))
+        "glGetProgramEnvParameterfvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-local-parameterdv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetProgramLocalParameterdvARB(a0 , a1 , a2);")))
+        "glGetProgramLocalParameterdvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-local-parameterfv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetProgramLocalParameterfvARB(a0 , a1 , a2);")))
+        "glGetProgramLocalParameterfvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-programiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetProgramivARB(a0 , a1 , a2);")))
+        "glGetProgramivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-string-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
-        "_al_glGetProgramStringARB(a0 , a1 , a2);")))
+        "glGetProgramStringARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribdv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetVertexAttribdvARB(a0 , a1 , a2);")))
+        "glGetVertexAttribdvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribfv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVertexAttribfvARB(a0 , a1 , a2);")))
+        "glGetVertexAttribfvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribivARB(a0 , a1 , a2);")))
+        "glGetVertexAttribivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-pointerv-arb
       (foreign-lambda*
@@ -5415,82 +5366,76 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetVertexAttribPointervARB(a0 , a1 , a2);")))
+        "glGetVertexAttribPointervARB(a0 , a1 , a2);")))
   (begin
     (define gl:is-program-arb
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsProgramARB(a0));")))
+        "return(glIsProgramARB(a0));")))
   (begin
     (define gl:bind-buffer-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindBufferARB(a0 , a1);")))
+        "glBindBufferARB(a0 , a1);")))
   (begin
     (define gl:delete-buffers-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteBuffersARB(a0 , a1);")))
+        "glDeleteBuffersARB(a0 , a1);")))
   (begin
     (define gl:gen-buffers-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenBuffersARB(a0 , a1);")))
+        "glGenBuffersARB(a0 , a1);")))
   (begin
     (define gl:is-buffer-arb
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsBufferARB(a0));")))
+        "return(glIsBufferARB(a0));")))
   (begin
     (define gl:buffer-data-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0)
-         ((c-pointer void) a1)
+         (long a1)
          ((c-pointer void) a2)
          (unsigned-integer a3))
-        "_al_glBufferDataARB(a0 , a1 , a2 , a3);")))
+        "glBufferDataARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:buffer-sub-data-arb
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glBufferSubDataARB(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glBufferSubDataARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-buffer-sub-data-arb
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glGetBufferSubDataARB(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glGetBufferSubDataARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:map-buffer-arb
       (foreign-lambda*
         (c-pointer void)
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glMapBufferARB(a0 , a1));")))
+        "return(glMapBufferARB(a0 , a1));")))
   (begin
     (define gl:unmap-buffer-arb
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glUnmapBufferARB(a0));")))
+        "return(glUnmapBufferARB(a0));")))
   (begin
     (define gl:get-buffer-parameteriv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetBufferParameterivARB(a0 , a1 , a2);")))
+        "glGetBufferParameterivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-buffer-pointerv-arb
       (foreign-lambda*
@@ -5498,76 +5443,73 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetBufferPointervARB(a0 , a1 , a2);")))
+        "glGetBufferPointervARB(a0 , a1 , a2);")))
   (begin
     (define gl:gen-queries-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenQueriesARB(a0 , a1);")))
+        "glGenQueriesARB(a0 , a1);")))
   (begin
     (define gl:delete-queries-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteQueriesARB(a0 , a1);")))
+        "glDeleteQueriesARB(a0 , a1);")))
   (begin
     (define gl:is-query-arb
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsQueryARB(a0));")))
+        "return(glIsQueryARB(a0));")))
   (begin
     (define gl:begin-query-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBeginQueryARB(a0 , a1);")))
+        "glBeginQueryARB(a0 , a1);")))
   (begin
     (define gl:end-query-arb
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glEndQueryARB(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glEndQueryARB(a0);")))
   (begin
     (define gl:get-queryiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetQueryivARB(a0 , a1 , a2);")))
+        "glGetQueryivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetQueryObjectivARB(a0 , a1 , a2);")))
+        "glGetQueryObjectivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectuiv-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetQueryObjectuivARB(a0 , a1 , a2);")))
+        "glGetQueryObjectuivARB(a0 , a1 , a2);")))
   (begin
     (define gl:delete-object-arb
-      (foreign-lambda*
-        void
-        ((unsigned-long a0))
-        "_al_glDeleteObjectARB(a0);")))
+      (foreign-lambda* void ((unsigned-long a0)) "glDeleteObjectARB(a0);")))
   (begin
     (define gl:get-handle-arb
       (foreign-lambda*
         unsigned-long
         ((unsigned-integer a0))
-        "return(_al_glGetHandleARB(a0));")))
+        "return(glGetHandleARB(a0));")))
   (begin
     (define gl:detach-object-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (unsigned-long a1))
-        "_al_glDetachObjectARB(a0 , a1);")))
+        "glDetachObjectARB(a0 , a1);")))
   (begin
     (define gl:create-shader-object-arb
       (foreign-lambda*
         unsigned-long
         ((unsigned-integer a0))
-        "return(_al_glCreateShaderObjectARB(a0));")))
+        "return(glCreateShaderObjectARB(a0));")))
   (begin
     (define gl:shader-source-arb
       (foreign-lambda*
@@ -5576,184 +5518,178 @@
          (integer a1)
          ((c-pointer (c-pointer (const char))) a2)
          (s32vector a3))
-        "_al_glShaderSourceARB(a0 , a1 , a2 , a3);")))
+        "glShaderSourceARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:compile-shader-arb
-      (foreign-lambda*
-        void
-        ((unsigned-long a0))
-        "_al_glCompileShaderARB(a0);")))
+      (foreign-lambda* void ((unsigned-long a0)) "glCompileShaderARB(a0);")))
   (begin
     (define gl:create-program-object-arb
       (foreign-lambda*
         unsigned-long
         ()
-        "return(_al_glCreateProgramObjectARB());")))
+        "return(glCreateProgramObjectARB());")))
   (begin
     (define gl:attach-object-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (unsigned-long a1))
-        "_al_glAttachObjectARB(a0 , a1);")))
+        "glAttachObjectARB(a0 , a1);")))
   (begin
     (define gl:link-program-arb
-      (foreign-lambda* void ((unsigned-long a0)) "_al_glLinkProgramARB(a0);")))
+      (foreign-lambda* void ((unsigned-long a0)) "glLinkProgramARB(a0);")))
   (begin
     (define gl:use-program-object-arb
       (foreign-lambda*
         void
         ((unsigned-long a0))
-        "_al_glUseProgramObjectARB(a0);")))
+        "glUseProgramObjectARB(a0);")))
   (begin
     (define gl:validate-program-arb
-      (foreign-lambda*
-        void
-        ((unsigned-long a0))
-        "_al_glValidateProgramARB(a0);")))
+      (foreign-lambda* void ((unsigned-long a0)) "glValidateProgramARB(a0);")))
   (begin
     (define gl:uniform1f-arb
       (foreign-lambda*
         void
         ((integer a0) (float a1))
-        "_al_glUniform1fARB(a0 , a1);")))
+        "glUniform1fARB(a0 , a1);")))
   (begin
     (define gl:uniform2f-arb
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2))
-        "_al_glUniform2fARB(a0 , a1 , a2);")))
+        "glUniform2fARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3f-arb
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2) (float a3))
-        "_al_glUniform3fARB(a0 , a1 , a2 , a3);")))
+        "glUniform3fARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4f-arb
       (foreign-lambda*
         void
         ((integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glUniform4fARB(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4fARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glUniform1iARB(a0 , a1);")))
+        "glUniform1iARB(a0 , a1);")))
   (begin
     (define gl:uniform2i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glUniform2iARB(a0 , a1 , a2);")))
+        "glUniform2iARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glUniform3iARB(a0 , a1 , a2 , a3);")))
+        "glUniform3iARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4i-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
-        "_al_glUniform4iARB(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4iARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform1fvARB(a0 , a1 , a2);")))
+        "glUniform1fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform2fvARB(a0 , a1 , a2);")))
+        "glUniform2fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform3fvARB(a0 , a1 , a2);")))
+        "glUniform3fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f32vector a2))
-        "_al_glUniform4fvARB(a0 , a1 , a2);")))
+        "glUniform4fvARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform1iv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform1ivARB(a0 , a1 , a2);")))
+        "glUniform1ivARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2iv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform2ivARB(a0 , a1 , a2);")))
+        "glUniform2ivARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3iv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform3ivARB(a0 , a1 , a2);")))
+        "glUniform3ivARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4iv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (s32vector a2))
-        "_al_glUniform4ivARB(a0 , a1 , a2);")))
+        "glUniform4ivARB(a0 , a1 , a2);")))
   (begin
     (define gl:uniform-matrix2fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix2fvARB(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2fvARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix3fvARB(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3fvARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4fv-arb
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f32vector a3))
-        "_al_glUniformMatrix4fvARB(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4fvARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-object-parameterfv-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetObjectParameterfvARB(a0 , a1 , a2);")))
+        "glGetObjectParameterfvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-object-parameteriv-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetObjectParameterivARB(a0 , a1 , a2);")))
+        "glGetObjectParameterivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-info-log-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetInfoLogARB(a0 , a1 , a2 , a3);")))
+        "glGetInfoLogARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-attached-objects-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (integer a1) (s32vector a2) (u32vector a3))
-        "_al_glGetAttachedObjectsARB(a0 , a1 , a2 , a3);")))
+        "glGetAttachedObjectsARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-uniform-location-arb
       (foreign-lambda*
         integer
         ((unsigned-long a0) (c-string a1))
-        "return(_al_glGetUniformLocationARB(a0 , a1));")))
+        "return(glGetUniformLocationARB(a0 , a1));")))
   (begin
     (define gl:get-active-uniform-arb
       (foreign-lambda*
@@ -5765,31 +5701,31 @@
          (s32vector a4)
          (u32vector a5)
          (c-string a6))
-        "_al_glGetActiveUniformARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetActiveUniformARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-uniformfv-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (integer a1) (f32vector a2))
-        "_al_glGetUniformfvARB(a0 , a1 , a2);")))
+        "glGetUniformfvARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniformiv-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (integer a1) (s32vector a2))
-        "_al_glGetUniformivARB(a0 , a1 , a2);")))
+        "glGetUniformivARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-shader-source-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetShaderSourceARB(a0 , a1 , a2 , a3);")))
+        "glGetShaderSourceARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-attrib-location-arb
       (foreign-lambda*
         void
         ((unsigned-long a0) (unsigned-integer a1) (c-string a2))
-        "_al_glBindAttribLocationARB(a0 , a1 , a2);")))
+        "glBindAttribLocationARB(a0 , a1 , a2);")))
   (begin
     (define gl:get-active-attrib-arb
       (foreign-lambda*
@@ -5801,31 +5737,31 @@
          (s32vector a4)
          (u32vector a5)
          (c-string a6))
-        "_al_glGetActiveAttribARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetActiveAttribARB(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-attrib-location-arb
       (foreign-lambda*
         integer
         ((unsigned-long a0) (c-string a1))
-        "return(_al_glGetAttribLocationARB(a0 , a1));")))
+        "return(glGetAttribLocationARB(a0 , a1));")))
   (begin
     (define gl:draw-buffers-arb
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDrawBuffersARB(a0 , a1);")))
+        "glDrawBuffersARB(a0 , a1);")))
   (begin
     (define gl:clamp-color-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glClampColorARB(a0 , a1);")))
+        "glClampColorARB(a0 , a1);")))
   (begin
     (define gl:draw-arrays-instanced-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glDrawArraysInstancedARB(a0 , a1 , a2 , a3);")))
+        "glDrawArraysInstancedARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-elements-instanced-arb
       (foreign-lambda*
@@ -5835,73 +5771,73 @@
          (unsigned-integer a2)
          ((c-pointer void) a3)
          (integer a4))
-        "_al_glDrawElementsInstancedARB(a0 , a1 , a2 , a3 , a4);")))
+        "glDrawElementsInstancedARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:is-renderbuffer
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsRenderbuffer(a0));")))
+        "return(glIsRenderbuffer(a0));")))
   (begin
     (define gl:bind-renderbuffer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindRenderbuffer(a0 , a1);")))
+        "glBindRenderbuffer(a0 , a1);")))
   (begin
     (define gl:delete-renderbuffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteRenderbuffers(a0 , a1);")))
+        "glDeleteRenderbuffers(a0 , a1);")))
   (begin
     (define gl:gen-renderbuffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenRenderbuffers(a0 , a1);")))
+        "glGenRenderbuffers(a0 , a1);")))
   (begin
     (define gl:renderbuffer-storage
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
-        "_al_glRenderbufferStorage(a0 , a1 , a2 , a3);")))
+        "glRenderbufferStorage(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-renderbuffer-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetRenderbufferParameteriv(a0 , a1 , a2);")))
+        "glGetRenderbufferParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:is-framebuffer
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsFramebuffer(a0));")))
+        "return(glIsFramebuffer(a0));")))
   (begin
     (define gl:bind-framebuffer
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindFramebuffer(a0 , a1);")))
+        "glBindFramebuffer(a0 , a1);")))
   (begin
     (define gl:delete-framebuffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteFramebuffers(a0 , a1);")))
+        "glDeleteFramebuffers(a0 , a1);")))
   (begin
     (define gl:gen-framebuffers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenFramebuffers(a0 , a1);")))
+        "glGenFramebuffers(a0 , a1);")))
   (begin
     (define gl:check-framebuffer-status
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glCheckFramebufferStatus(a0));")))
+        "return(glCheckFramebufferStatus(a0));")))
   (begin
     (define gl:framebuffer-texture1d
       (foreign-lambda*
@@ -5911,7 +5847,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glFramebufferTexture1D(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTexture1D(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture2d
       (foreign-lambda*
@@ -5921,7 +5857,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glFramebufferTexture2D(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTexture2D(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture3d
       (foreign-lambda*
@@ -5932,7 +5868,7 @@
          (unsigned-integer a3)
          (integer a4)
          (integer a5))
-        "_al_glFramebufferTexture3D(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glFramebufferTexture3D(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:framebuffer-renderbuffer
       (foreign-lambda*
@@ -5941,7 +5877,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glFramebufferRenderbuffer(a0 , a1 , a2 , a3);")))
+        "glFramebufferRenderbuffer(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-framebuffer-attachment-parameteriv
       (foreign-lambda*
@@ -5950,13 +5886,10 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetFramebufferAttachmentParameteriv(a0 , a1 , a2 , a3);")))
+        "glGetFramebufferAttachmentParameteriv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:generate-mipmap
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glGenerateMipmap(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glGenerateMipmap(a0);")))
   (begin
     (define gl:blit-framebuffer
       (foreign-lambda*
@@ -5971,7 +5904,7 @@
          (integer a7)
          (unsigned-integer a8)
          (unsigned-integer a9))
-        "_al_glBlitFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glBlitFramebuffer(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:renderbuffer-storage-multisample
       (foreign-lambda*
@@ -5981,7 +5914,7 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glRenderbufferStorageMultisample(a0 , a1 , a2 , a3 , a4);")))
+        "glRenderbufferStorageMultisample(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture-layer
       (foreign-lambda*
@@ -5991,13 +5924,13 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glFramebufferTextureLayer(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTextureLayer(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-parameteri-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glProgramParameteriARB(a0 , a1 , a2);")))
+        "glProgramParameteriARB(a0 , a1 , a2);")))
   (begin
     (define gl:framebuffer-texture-arb
       (foreign-lambda*
@@ -6006,7 +5939,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glFramebufferTextureARB(a0 , a1 , a2 , a3);")))
+        "glFramebufferTextureARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:framebuffer-texture-layer-arb
       (foreign-lambda*
@@ -6016,7 +5949,7 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glFramebufferTextureLayerARB(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTextureLayerARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture-face-arb
       (foreign-lambda*
@@ -6026,58 +5959,52 @@
          (unsigned-integer a2)
          (integer a3)
          (unsigned-integer a4))
-        "_al_glFramebufferTextureFaceARB(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTextureFaceARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-divisor
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexAttribDivisor(a0 , a1);")))
+        "glVertexAttribDivisor(a0 , a1);")))
   (begin
     (define gl:map-buffer-range
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         (unsigned-integer a3))
-        "_al_glMapBufferRange(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) (unsigned-integer a3))
+        "glMapBufferRange(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:flush-mapped-buffer-range
       (foreign-lambda*
         void
-        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
-        "_al_glFlushMappedBufferRange(a0 , a1 , a2);")))
+        ((unsigned-integer a0) (long a1) (long a2))
+        "glFlushMappedBufferRange(a0 , a1 , a2);")))
   (begin
     (define gl:tex-buffer-arb
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glTexBufferARB(a0 , a1 , a2);")))
+        "glTexBufferARB(a0 , a1 , a2);")))
   (begin
     (define gl:bind-vertex-array
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glBindVertexArray(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glBindVertexArray(a0);")))
   (begin
     (define gl:delete-vertex-arrays
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteVertexArrays(a0 , a1);")))
+        "glDeleteVertexArrays(a0 , a1);")))
   (begin
     (define gl:gen-vertex-arrays
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenVertexArrays(a0 , a1);")))
+        "glGenVertexArrays(a0 , a1);")))
   (begin
     (define gl:is-vertex-array
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsVertexArray(a0));")))
+        "return(glIsVertexArray(a0));")))
   (begin
     (define gl:get-uniform-indices
       (foreign-lambda*
@@ -6086,7 +6013,7 @@
          (integer a1)
          ((c-pointer (c-pointer (const char))) a2)
          (u32vector a3))
-        "_al_glGetUniformIndices(a0 , a1 , a2 , a3);")))
+        "glGetUniformIndices(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-active-uniformsiv
       (foreign-lambda*
@@ -6096,7 +6023,7 @@
          (u32vector a2)
          (unsigned-integer a3)
          (s32vector a4))
-        "_al_glGetActiveUniformsiv(a0 , a1 , a2 , a3 , a4);")))
+        "glGetActiveUniformsiv(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-active-uniform-name
       (foreign-lambda*
@@ -6106,13 +6033,13 @@
          (integer a2)
          (s32vector a3)
          (c-string a4))
-        "_al_glGetActiveUniformName(a0 , a1 , a2 , a3 , a4);")))
+        "glGetActiveUniformName(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-uniform-block-index
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetUniformBlockIndex(a0 , a1));")))
+        "return(glGetUniformBlockIndex(a0 , a1));")))
   (begin
     (define gl:get-active-uniform-blockiv
       (foreign-lambda*
@@ -6121,7 +6048,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetActiveUniformBlockiv(a0 , a1 , a2 , a3);")))
+        "glGetActiveUniformBlockiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-active-uniform-block-name
       (foreign-lambda*
@@ -6131,23 +6058,23 @@
          (integer a2)
          (s32vector a3)
          (c-string a4))
-        "_al_glGetActiveUniformBlockName(a0 , a1 , a2 , a3 , a4);")))
+        "glGetActiveUniformBlockName(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform-block-binding
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glUniformBlockBinding(a0 , a1 , a2);")))
+        "glUniformBlockBinding(a0 , a1 , a2);")))
   (begin
     (define gl:copy-buffer-sub-data
       (foreign-lambda*
         void
         ((unsigned-integer a0)
          (unsigned-integer a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3)
-         ((c-pointer void) a4))
-        "_al_glCopyBufferSubData(a0 , a1 , a2 , a3 , a4);")))
+         (long a2)
+         (long a3)
+         (long a4))
+        "glCopyBufferSubData(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:draw-elements-base-vertex
       (foreign-lambda*
@@ -6157,7 +6084,7 @@
          (unsigned-integer a2)
          ((c-pointer void) a3)
          (integer a4))
-        "_al_glDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4);")))
+        "glDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:draw-range-elements-base-vertex
       (foreign-lambda*
@@ -6169,7 +6096,7 @@
          (unsigned-integer a4)
          ((c-pointer void) a5)
          (integer a6))
-        "_al_glDrawRangeElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glDrawRangeElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:draw-elements-instanced-base-vertex
       (foreign-lambda*
@@ -6180,7 +6107,7 @@
          ((c-pointer void) a3)
          (integer a4)
          (integer a5))
-        "_al_glDrawElementsInstancedBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glDrawElementsInstancedBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:multi-draw-elements-base-vertex
       (foreign-lambda*
@@ -6191,31 +6118,28 @@
          ((c-pointer (c-pointer (const void))) a3)
          (integer a4)
          (s32vector a5))
-        "_al_glMultiDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glMultiDrawElementsBaseVertex(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:provoking-vertex
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glProvokingVertex(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glProvokingVertex(a0);")))
   (begin
     (define gl:fence-sync
       (foreign-lambda*
         (c-pointer (struct "__GLsync"))
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glFenceSync(a0 , a1));")))
+        "return(glFenceSync(a0 , a1));")))
   (begin
     (define gl:is-sync
       (foreign-lambda*
         unsigned-char
         (((c-pointer (struct "__GLsync")) a0))
-        "return(_al_glIsSync(a0));")))
+        "return(glIsSync(a0));")))
   (begin
     (define gl:delete-sync
       (foreign-lambda*
         void
         (((c-pointer (struct "__GLsync")) a0))
-        "_al_glDeleteSync(a0);")))
+        "glDeleteSync(a0);")))
   (begin
     (define gl:client-wait-sync
       (foreign-lambda*
@@ -6223,7 +6147,7 @@
         (((c-pointer (struct "__GLsync")) a0)
          (unsigned-integer a1)
          (unsigned-integer64 a2))
-        "return(_al_glClientWaitSync(a0 , a1 , a2));")))
+        "return(glClientWaitSync(a0 , a1 , a2));")))
   (begin
     (define gl:wait-sync
       (foreign-lambda*
@@ -6231,13 +6155,13 @@
         (((c-pointer (struct "__GLsync")) a0)
          (unsigned-integer a1)
          (unsigned-integer64 a2))
-        "_al_glWaitSync(a0 , a1 , a2);")))
+        "glWaitSync(a0 , a1 , a2);")))
   (begin
     (define gl:get-integer64v
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer integer64) a1))
-        "_al_glGetInteger64v(a0 , a1);")))
+        "glGetInteger64v(a0 , a1);")))
   (begin
     (define gl:get-synciv
       (foreign-lambda*
@@ -6247,7 +6171,7 @@
          (integer a2)
          (s32vector a3)
          (s32vector a4))
-        "_al_glGetSynciv(a0 , a1 , a2 , a3 , a4);")))
+        "glGetSynciv(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-image2dmultisample
       (foreign-lambda*
@@ -6258,7 +6182,7 @@
          (integer a3)
          (integer a4)
          (unsigned-char a5))
-        "_al_glTexImage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glTexImage2DMultisample(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:tex-image3dmultisample
       (foreign-lambda*
@@ -6270,37 +6194,37 @@
          (integer a4)
          (integer a5)
          (unsigned-char a6))
-        "_al_glTexImage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glTexImage3DMultisample(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-multisamplefv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetMultisamplefv(a0 , a1 , a2);")))
+        "glGetMultisamplefv(a0 , a1 , a2);")))
   (begin
     (define gl:sample-maski
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glSampleMaski(a0 , a1);")))
+        "glSampleMaski(a0 , a1);")))
   (begin
     (define gl:blend-equationi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBlendEquationi(a0 , a1);")))
+        "glBlendEquationi(a0 , a1);")))
   (begin
     (define gl:blend-equation-separatei
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBlendEquationSeparatei(a0 , a1 , a2);")))
+        "glBlendEquationSeparatei(a0 , a1 , a2);")))
   (begin
     (define gl:blend-funci
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBlendFunci(a0 , a1 , a2);")))
+        "glBlendFunci(a0 , a1 , a2);")))
   (begin
     (define gl:blend-func-separatei
       (foreign-lambda*
@@ -6310,10 +6234,10 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glBlendFuncSeparatei(a0 , a1 , a2 , a3 , a4);")))
+        "glBlendFuncSeparatei(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:min-sample-shading
-      (foreign-lambda* void ((float a0)) "_al_glMinSampleShading(a0);")))
+      (foreign-lambda* void ((float a0)) "glMinSampleShading(a0);")))
   (begin
     (define gl:named-string-arb
       (foreign-lambda*
@@ -6323,13 +6247,13 @@
          (c-string a2)
          (integer a3)
          (c-string a4))
-        "_al_glNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:delete-named-string-arb
       (foreign-lambda*
         void
         ((integer a0) (c-string a1))
-        "_al_glDeleteNamedStringARB(a0 , a1);")))
+        "glDeleteNamedStringARB(a0 , a1);")))
   (begin
     (define gl:compile-shader-include-arb
       (foreign-lambda*
@@ -6338,25 +6262,25 @@
          (integer a1)
          ((c-pointer (c-pointer (const char))) a2)
          (s32vector a3))
-        "_al_glCompileShaderIncludeARB(a0 , a1 , a2 , a3);")))
+        "glCompileShaderIncludeARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:is-named-string-arb
       (foreign-lambda*
         unsigned-char
         ((integer a0) (c-string a1))
-        "return(_al_glIsNamedStringARB(a0 , a1));")))
+        "return(glIsNamedStringARB(a0 , a1));")))
   (begin
     (define gl:get-named-string-arb
       (foreign-lambda*
         void
         ((integer a0) (c-string a1) (integer a2) (s32vector a3) (c-string a4))
-        "_al_glGetNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
+        "glGetNamedStringARB(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-named-stringiv-arb
       (foreign-lambda*
         void
         ((integer a0) (c-string a1) (unsigned-integer a2) (s32vector a3))
-        "_al_glGetNamedStringivARB(a0 , a1 , a2 , a3);")))
+        "glGetNamedStringivARB(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-frag-data-location-indexed
       (foreign-lambda*
@@ -6365,103 +6289,103 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (c-string a3))
-        "_al_glBindFragDataLocationIndexed(a0 , a1 , a2 , a3);")))
+        "glBindFragDataLocationIndexed(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-frag-data-index
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetFragDataIndex(a0 , a1));")))
+        "return(glGetFragDataIndex(a0 , a1));")))
   (begin
     (define gl:gen-samplers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenSamplers(a0 , a1);")))
+        "glGenSamplers(a0 , a1);")))
   (begin
     (define gl:delete-samplers
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteSamplers(a0 , a1);")))
+        "glDeleteSamplers(a0 , a1);")))
   (begin
     (define gl:is-sampler
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsSampler(a0));")))
+        "return(glIsSampler(a0));")))
   (begin
     (define gl:bind-sampler
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindSampler(a0 , a1);")))
+        "glBindSampler(a0 , a1);")))
   (begin
     (define gl:sampler-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glSamplerParameteri(a0 , a1 , a2);")))
+        "glSamplerParameteri(a0 , a1 , a2);")))
   (begin
     (define gl:sampler-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glSamplerParameteriv(a0 , a1 , a2);")))
+        "glSamplerParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:sampler-parameterf
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glSamplerParameterf(a0 , a1 , a2);")))
+        "glSamplerParameterf(a0 , a1 , a2);")))
   (begin
     (define gl:sampler-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glSamplerParameterfv(a0 , a1 , a2);")))
+        "glSamplerParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:sampler-parameter-iiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glSamplerParameterIiv(a0 , a1 , a2);")))
+        "glSamplerParameterIiv(a0 , a1 , a2);")))
   (begin
     (define gl:sampler-parameter-iuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glSamplerParameterIuiv(a0 , a1 , a2);")))
+        "glSamplerParameterIuiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-sampler-parameteriv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetSamplerParameteriv(a0 , a1 , a2);")))
+        "glGetSamplerParameteriv(a0 , a1 , a2);")))
   (begin
     (define gl:get-sampler-parameter-iiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetSamplerParameterIiv(a0 , a1 , a2);")))
+        "glGetSamplerParameterIiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-sampler-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetSamplerParameterfv(a0 , a1 , a2);")))
+        "glGetSamplerParameterfv(a0 , a1 , a2);")))
   (begin
     (define gl:get-sampler-parameter-ifv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetSamplerParameterIfv(a0 , a1 , a2);")))
+        "glGetSamplerParameterIfv(a0 , a1 , a2);")))
   (begin
     (define gl:query-counter
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glQueryCounter(a0 , a1);")))
+        "glQueryCounter(a0 , a1);")))
   (begin
     (define gl:get-query-objecti64v
       (foreign-lambda*
@@ -6469,7 +6393,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer integer64) a2))
-        "_al_glGetQueryObjecti64v(a0 , a1 , a2);")))
+        "glGetQueryObjecti64v(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectui64v
       (foreign-lambda*
@@ -6477,187 +6401,187 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetQueryObjectui64v(a0 , a1 , a2);")))
+        "glGetQueryObjectui64v(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-p2ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexP2ui(a0 , a1);")))
+        "glVertexP2ui(a0 , a1);")))
   (begin
     (define gl:vertex-p2uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexP2uiv(a0 , a1);")))
+        "glVertexP2uiv(a0 , a1);")))
   (begin
     (define gl:vertex-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexP3ui(a0 , a1);")))
+        "glVertexP3ui(a0 , a1);")))
   (begin
     (define gl:vertex-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexP3uiv(a0 , a1);")))
+        "glVertexP3uiv(a0 , a1);")))
   (begin
     (define gl:vertex-p4ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexP4ui(a0 , a1);")))
+        "glVertexP4ui(a0 , a1);")))
   (begin
     (define gl:vertex-p4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexP4uiv(a0 , a1);")))
+        "glVertexP4uiv(a0 , a1);")))
   (begin
     (define gl:tex-coord-p1ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTexCoordP1ui(a0 , a1);")))
+        "glTexCoordP1ui(a0 , a1);")))
   (begin
     (define gl:tex-coord-p1uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glTexCoordP1uiv(a0 , a1);")))
+        "glTexCoordP1uiv(a0 , a1);")))
   (begin
     (define gl:tex-coord-p2ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTexCoordP2ui(a0 , a1);")))
+        "glTexCoordP2ui(a0 , a1);")))
   (begin
     (define gl:tex-coord-p2uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glTexCoordP2uiv(a0 , a1);")))
+        "glTexCoordP2uiv(a0 , a1);")))
   (begin
     (define gl:tex-coord-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTexCoordP3ui(a0 , a1);")))
+        "glTexCoordP3ui(a0 , a1);")))
   (begin
     (define gl:tex-coord-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glTexCoordP3uiv(a0 , a1);")))
+        "glTexCoordP3uiv(a0 , a1);")))
   (begin
     (define gl:tex-coord-p4ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTexCoordP4ui(a0 , a1);")))
+        "glTexCoordP4ui(a0 , a1);")))
   (begin
     (define gl:tex-coord-p4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glTexCoordP4uiv(a0 , a1);")))
+        "glTexCoordP4uiv(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord-p1ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glMultiTexCoordP1ui(a0 , a1 , a2);")))
+        "glMultiTexCoordP1ui(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p1uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glMultiTexCoordP1uiv(a0 , a1 , a2);")))
+        "glMultiTexCoordP1uiv(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p2ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glMultiTexCoordP2ui(a0 , a1 , a2);")))
+        "glMultiTexCoordP2ui(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p2uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glMultiTexCoordP2uiv(a0 , a1 , a2);")))
+        "glMultiTexCoordP2uiv(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glMultiTexCoordP3ui(a0 , a1 , a2);")))
+        "glMultiTexCoordP3ui(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glMultiTexCoordP3uiv(a0 , a1 , a2);")))
+        "glMultiTexCoordP3uiv(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p4ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glMultiTexCoordP4ui(a0 , a1 , a2);")))
+        "glMultiTexCoordP4ui(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord-p4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glMultiTexCoordP4uiv(a0 , a1 , a2);")))
+        "glMultiTexCoordP4uiv(a0 , a1 , a2);")))
   (begin
     (define gl:normal-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glNormalP3ui(a0 , a1);")))
+        "glNormalP3ui(a0 , a1);")))
   (begin
     (define gl:normal-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glNormalP3uiv(a0 , a1);")))
+        "glNormalP3uiv(a0 , a1);")))
   (begin
     (define gl:color-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glColorP3ui(a0 , a1);")))
+        "glColorP3ui(a0 , a1);")))
   (begin
     (define gl:color-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glColorP3uiv(a0 , a1);")))
+        "glColorP3uiv(a0 , a1);")))
   (begin
     (define gl:color-p4ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glColorP4ui(a0 , a1);")))
+        "glColorP4ui(a0 , a1);")))
   (begin
     (define gl:color-p4uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glColorP4uiv(a0 , a1);")))
+        "glColorP4uiv(a0 , a1);")))
   (begin
     (define gl:secondary-color-p3ui
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glSecondaryColorP3ui(a0 , a1);")))
+        "glSecondaryColorP3ui(a0 , a1);")))
   (begin
     (define gl:secondary-color-p3uiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glSecondaryColorP3uiv(a0 , a1);")))
+        "glSecondaryColorP3uiv(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-p1ui
       (foreign-lambda*
@@ -6666,7 +6590,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribP1ui(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP1ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p1uiv
       (foreign-lambda*
@@ -6675,7 +6599,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (u32vector a3))
-        "_al_glVertexAttribP1uiv(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP1uiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p2ui
       (foreign-lambda*
@@ -6684,7 +6608,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribP2ui(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP2ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p2uiv
       (foreign-lambda*
@@ -6693,7 +6617,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (u32vector a3))
-        "_al_glVertexAttribP2uiv(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP2uiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p3ui
       (foreign-lambda*
@@ -6702,7 +6626,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribP3ui(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP3ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p3uiv
       (foreign-lambda*
@@ -6711,7 +6635,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (u32vector a3))
-        "_al_glVertexAttribP3uiv(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP3uiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p4ui
       (foreign-lambda*
@@ -6720,7 +6644,7 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribP4ui(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP4ui(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-p4uiv
       (foreign-lambda*
@@ -6729,139 +6653,139 @@
          (unsigned-integer a1)
          (unsigned-char a2)
          (u32vector a3))
-        "_al_glVertexAttribP4uiv(a0 , a1 , a2 , a3);")))
+        "glVertexAttribP4uiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-arrays-indirect
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer void) a1))
-        "_al_glDrawArraysIndirect(a0 , a1);")))
+        "glDrawArraysIndirect(a0 , a1);")))
   (begin
     (define gl:draw-elements-indirect
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
-        "_al_glDrawElementsIndirect(a0 , a1 , a2);")))
+        "glDrawElementsIndirect(a0 , a1 , a2);")))
   (begin
     (define gl:uniform1d
       (foreign-lambda*
         void
         ((integer a0) (double a1))
-        "_al_glUniform1d(a0 , a1);")))
+        "glUniform1d(a0 , a1);")))
   (begin
     (define gl:uniform2d
       (foreign-lambda*
         void
         ((integer a0) (double a1) (double a2))
-        "_al_glUniform2d(a0 , a1 , a2);")))
+        "glUniform2d(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3d
       (foreign-lambda*
         void
         ((integer a0) (double a1) (double a2) (double a3))
-        "_al_glUniform3d(a0 , a1 , a2 , a3);")))
+        "glUniform3d(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4d
       (foreign-lambda*
         void
         ((integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glUniform4d(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4d(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f64vector a2))
-        "_al_glUniform1dv(a0 , a1 , a2);")))
+        "glUniform1dv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f64vector a2))
-        "_al_glUniform2dv(a0 , a1 , a2);")))
+        "glUniform2dv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f64vector a2))
-        "_al_glUniform3dv(a0 , a1 , a2);")))
+        "glUniform3dv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (f64vector a2))
-        "_al_glUniform4dv(a0 , a1 , a2);")))
+        "glUniform4dv(a0 , a1 , a2);")))
   (begin
     (define gl:uniform-matrix2dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix2dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix3dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix4dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix2x3dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix2x3dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2x3dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix2x4dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix2x4dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix2x4dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3x2dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix3x2dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3x2dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix3x4dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix3x4dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix3x4dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4x2dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix4x2dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4x2dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform-matrix4x3dv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (unsigned-char a2) (f64vector a3))
-        "_al_glUniformMatrix4x3dv(a0 , a1 , a2 , a3);")))
+        "glUniformMatrix4x3dv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-uniformdv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f64vector a2))
-        "_al_glGetUniformdv(a0 , a1 , a2);")))
+        "glGetUniformdv(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniform1d-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (double a2))
-        "_al_glProgramUniform1dEXT(a0 , a1 , a2);")))
+        "glProgramUniform1dEXT(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniform2d-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (double a2) (double a3))
-        "_al_glProgramUniform2dEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2dEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3d-ext
       (foreign-lambda*
@@ -6871,7 +6795,7 @@
          (double a2)
          (double a3)
          (double a4))
-        "_al_glProgramUniform3dEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniform3dEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform4d-ext
       (foreign-lambda*
@@ -6882,31 +6806,31 @@
          (double a3)
          (double a4)
          (double a5))
-        "_al_glProgramUniform4dEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramUniform4dEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-uniform1dv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
-        "_al_glProgramUniform1dvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform1dvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform2dv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
-        "_al_glProgramUniform2dvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2dvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3dv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
-        "_al_glProgramUniform3dvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform3dvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform4dv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f64vector a3))
-        "_al_glProgramUniform4dvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform4dvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform-matrix2dv-ext
       (foreign-lambda*
@@ -6916,7 +6840,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3dv-ext
       (foreign-lambda*
@@ -6926,7 +6850,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4dv-ext
       (foreign-lambda*
@@ -6936,7 +6860,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix2x3dv-ext
       (foreign-lambda*
@@ -6946,7 +6870,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix2x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix2x4dv-ext
       (foreign-lambda*
@@ -6956,7 +6880,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix2x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3x2dv-ext
       (foreign-lambda*
@@ -6966,7 +6890,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix3x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3x4dv-ext
       (foreign-lambda*
@@ -6976,7 +6900,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix3x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3x4dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4x2dv-ext
       (foreign-lambda*
@@ -6986,7 +6910,7 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix4x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4x2dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4x3dv-ext
       (foreign-lambda*
@@ -6996,19 +6920,19 @@
          (integer a2)
          (unsigned-char a3)
          (f64vector a4))
-        "_al_glProgramUniformMatrix4x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4x3dvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-subroutine-uniform-location
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "return(_al_glGetSubroutineUniformLocation(a0 , a1 , a2));")))
+        "return(glGetSubroutineUniformLocation(a0 , a1 , a2));")))
   (begin
     (define gl:get-subroutine-index
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "return(_al_glGetSubroutineIndex(a0 , a1 , a2));")))
+        "return(glGetSubroutineIndex(a0 , a1 , a2));")))
   (begin
     (define gl:get-active-subroutine-uniformiv
       (foreign-lambda*
@@ -7018,7 +6942,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (s32vector a4))
-        "_al_glGetActiveSubroutineUniformiv(a0 , a1 , a2 , a3 , a4);")))
+        "glGetActiveSubroutineUniformiv(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-active-subroutine-uniform-name
       (foreign-lambda*
@@ -7029,7 +6953,7 @@
          (integer a3)
          (s32vector a4)
          (c-string a5))
-        "_al_glGetActiveSubroutineUniformName(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetActiveSubroutineUniformName(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-active-subroutine-name
       (foreign-lambda*
@@ -7040,19 +6964,19 @@
          (integer a3)
          (s32vector a4)
          (c-string a5))
-        "_al_glGetActiveSubroutineName(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetActiveSubroutineName(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:uniform-subroutinesuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glUniformSubroutinesuiv(a0 , a1 , a2);")))
+        "glUniformSubroutinesuiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniform-subroutineuiv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glGetUniformSubroutineuiv(a0 , a1 , a2);")))
+        "glGetUniformSubroutineuiv(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-stageiv
       (foreign-lambda*
@@ -7061,73 +6985,73 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetProgramStageiv(a0 , a1 , a2 , a3);")))
+        "glGetProgramStageiv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:patch-parameteri
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPatchParameteri(a0 , a1);")))
+        "glPatchParameteri(a0 , a1);")))
   (begin
     (define gl:patch-parameterfv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPatchParameterfv(a0 , a1);")))
+        "glPatchParameterfv(a0 , a1);")))
   (begin
     (define gl:bind-transform-feedback
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindTransformFeedback(a0 , a1);")))
+        "glBindTransformFeedback(a0 , a1);")))
   (begin
     (define gl:delete-transform-feedbacks
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteTransformFeedbacks(a0 , a1);")))
+        "glDeleteTransformFeedbacks(a0 , a1);")))
   (begin
     (define gl:gen-transform-feedbacks
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenTransformFeedbacks(a0 , a1);")))
+        "glGenTransformFeedbacks(a0 , a1);")))
   (begin
     (define gl:is-transform-feedback
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsTransformFeedback(a0));")))
+        "return(glIsTransformFeedback(a0));")))
   (begin
     (define gl:pause-transform-feedback
-      (foreign-lambda* void () "_al_glPauseTransformFeedback();")))
+      (foreign-lambda* void () "glPauseTransformFeedback();")))
   (begin
     (define gl:resume-transform-feedback
-      (foreign-lambda* void () "_al_glResumeTransformFeedback();")))
+      (foreign-lambda* void () "glResumeTransformFeedback();")))
   (begin
     (define gl:draw-transform-feedback
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDrawTransformFeedback(a0 , a1);")))
+        "glDrawTransformFeedback(a0 , a1);")))
   (begin
     (define gl:draw-transform-feedback-stream
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glDrawTransformFeedbackStream(a0 , a1 , a2);")))
+        "glDrawTransformFeedbackStream(a0 , a1 , a2);")))
   (begin
     (define gl:begin-query-indexed
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBeginQueryIndexed(a0 , a1 , a2);")))
+        "glBeginQueryIndexed(a0 , a1 , a2);")))
   (begin
     (define gl:end-query-indexed
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEndQueryIndexed(a0 , a1);")))
+        "glEndQueryIndexed(a0 , a1);")))
   (begin
     (define gl:get-query-indexediv
       (foreign-lambda*
@@ -7136,19 +7060,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetQueryIndexediv(a0 , a1 , a2 , a3);")))
+        "glGetQueryIndexediv(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:blend-color-ext
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3))
-        "_al_glBlendColorEXT(a0 , a1 , a2 , a3);")))
+        "glBlendColorEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:polygon-offset-ext
       (foreign-lambda*
         void
         ((float a0) (float a1))
-        "_al_glPolygonOffsetEXT(a0 , a1);")))
+        "glPolygonOffsetEXT(a0 , a1);")))
   (begin
     (define gl:tex-image3dext
       (foreign-lambda*
@@ -7163,7 +7087,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:tex-sub-image3dext
       (foreign-lambda*
@@ -7179,13 +7103,13 @@
          (unsigned-integer a8)
          (unsigned-integer a9)
          ((c-pointer void) a10))
-        "_al_glTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:get-tex-filter-func-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetTexFilterFuncSGIS(a0 , a1 , a2);")))
+        "glGetTexFilterFuncSGIS(a0 , a1 , a2);")))
   (begin
     (define gl:tex-filter-func-sgis
       (foreign-lambda*
@@ -7194,7 +7118,7 @@
          (unsigned-integer a1)
          (integer a2)
          (f32vector a3))
-        "_al_glTexFilterFuncSGIS(a0 , a1 , a2 , a3);")))
+        "glTexFilterFuncSGIS(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-sub-image1dext
       (foreign-lambda*
@@ -7206,7 +7130,7 @@
          (unsigned-integer a4)
          (unsigned-integer a5)
          ((c-pointer void) a6))
-        "_al_glTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:tex-sub-image2dext
       (foreign-lambda*
@@ -7220,7 +7144,7 @@
          (unsigned-integer a6)
          (unsigned-integer a7)
          ((c-pointer void) a8))
-        "_al_glTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:copy-tex-image1dext
       (foreign-lambda*
@@ -7232,7 +7156,7 @@
          (integer a4)
          (integer a5)
          (integer a6))
-        "_al_glCopyTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCopyTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:copy-tex-image2dext
       (foreign-lambda*
@@ -7245,7 +7169,7 @@
          (integer a5)
          (integer a6)
          (integer a7))
-        "_al_glCopyTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCopyTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:copy-tex-sub-image1dext
       (foreign-lambda*
@@ -7256,7 +7180,7 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glCopyTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glCopyTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:copy-tex-sub-image2dext
       (foreign-lambda*
@@ -7269,7 +7193,7 @@
          (integer a5)
          (integer a6)
          (integer a7))
-        "_al_glCopyTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCopyTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:copy-tex-sub-image3dext
       (foreign-lambda*
@@ -7283,7 +7207,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:get-histogram-ext
       (foreign-lambda*
@@ -7293,19 +7217,19 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          ((c-pointer void) a4))
-        "_al_glGetHistogramEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetHistogramEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-histogram-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetHistogramParameterfvEXT(a0 , a1 , a2);")))
+        "glGetHistogramParameterfvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-histogram-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetHistogramParameterivEXT(a0 , a1 , a2);")))
+        "glGetHistogramParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-minmax-ext
       (foreign-lambda*
@@ -7315,19 +7239,19 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          ((c-pointer void) a4))
-        "_al_glGetMinmaxEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetMinmaxEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-minmax-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetMinmaxParameterfvEXT(a0 , a1 , a2);")))
+        "glGetMinmaxParameterfvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-minmax-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetMinmaxParameterivEXT(a0 , a1 , a2);")))
+        "glGetMinmaxParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:histogram-ext
       (foreign-lambda*
@@ -7336,25 +7260,22 @@
          (integer a1)
          (unsigned-integer a2)
          (unsigned-char a3))
-        "_al_glHistogramEXT(a0 , a1 , a2 , a3);")))
+        "glHistogramEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:minmax-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-char a2))
-        "_al_glMinmaxEXT(a0 , a1 , a2);")))
+        "glMinmaxEXT(a0 , a1 , a2);")))
   (begin
     (define gl:reset-histogram-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glResetHistogramEXT(a0);")))
+        "glResetHistogramEXT(a0);")))
   (begin
     (define gl:reset-minmax-ext
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glResetMinmaxEXT(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glResetMinmaxEXT(a0);")))
   (begin
     (define gl:convolution-filter1dext
       (foreign-lambda*
@@ -7365,7 +7286,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:convolution-filter2dext
       (foreign-lambda*
@@ -7377,31 +7298,31 @@
          (unsigned-integer a4)
          (unsigned-integer a5)
          ((c-pointer void) a6))
-        "_al_glConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:convolution-parameterf-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glConvolutionParameterfEXT(a0 , a1 , a2);")))
+        "glConvolutionParameterfEXT(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glConvolutionParameterfvEXT(a0 , a1 , a2);")))
+        "glConvolutionParameterfvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameteri-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glConvolutionParameteriEXT(a0 , a1 , a2);")))
+        "glConvolutionParameteriEXT(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glConvolutionParameterivEXT(a0 , a1 , a2);")))
+        "glConvolutionParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:copy-convolution-filter1dext
       (foreign-lambda*
@@ -7411,7 +7332,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyConvolutionFilter1DEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:copy-convolution-filter2dext
       (foreign-lambda*
@@ -7422,7 +7343,7 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glCopyConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glCopyConvolutionFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-convolution-filter-ext
       (foreign-lambda*
@@ -7431,19 +7352,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetConvolutionFilterEXT(a0 , a1 , a2 , a3);")))
+        "glGetConvolutionFilterEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-convolution-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetConvolutionParameterfvEXT(a0 , a1 , a2);")))
+        "glGetConvolutionParameterfvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-convolution-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetConvolutionParameterivEXT(a0 , a1 , a2);")))
+        "glGetConvolutionParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-separable-filter-ext
       (foreign-lambda*
@@ -7454,7 +7375,7 @@
          ((c-pointer void) a3)
          ((c-pointer void) a4)
          ((c-pointer void) a5))
-        "_al_glGetSeparableFilterEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetSeparableFilterEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:separable-filter2dext
       (foreign-lambda*
@@ -7467,7 +7388,7 @@
          (unsigned-integer a5)
          ((c-pointer void) a6)
          ((c-pointer void) a7))
-        "_al_glSeparableFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glSeparableFilter2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:color-table-sgi
       (foreign-lambda*
@@ -7478,19 +7399,19 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glColorTableSGI(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glColorTableSGI(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:color-table-parameterfv-sgi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glColorTableParameterfvSGI(a0 , a1 , a2);")))
+        "glColorTableParameterfvSGI(a0 , a1 , a2);")))
   (begin
     (define gl:color-table-parameteriv-sgi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glColorTableParameterivSGI(a0 , a1 , a2);")))
+        "glColorTableParameterivSGI(a0 , a1 , a2);")))
   (begin
     (define gl:copy-color-table-sgi
       (foreign-lambda*
@@ -7500,7 +7421,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyColorTableSGI(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyColorTableSGI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-color-table-sgi
       (foreign-lambda*
@@ -7509,61 +7430,58 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetColorTableSGI(a0 , a1 , a2 , a3);")))
+        "glGetColorTableSGI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-color-table-parameterfv-sgi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetColorTableParameterfvSGI(a0 , a1 , a2);")))
+        "glGetColorTableParameterfvSGI(a0 , a1 , a2);")))
   (begin
     (define gl:get-color-table-parameteriv-sgi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetColorTableParameterivSGI(a0 , a1 , a2);")))
+        "glGetColorTableParameterivSGI(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-tex-gen-sgix
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glPixelTexGenSGIX(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glPixelTexGenSGIX(a0);")))
   (begin
     (define gl:pixel-tex-gen-parameteri-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPixelTexGenParameteriSGIS(a0 , a1);")))
+        "glPixelTexGenParameteriSGIS(a0 , a1);")))
   (begin
     (define gl:pixel-tex-gen-parameteriv-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glPixelTexGenParameterivSGIS(a0 , a1);")))
+        "glPixelTexGenParameterivSGIS(a0 , a1);")))
   (begin
     (define gl:pixel-tex-gen-parameterf-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPixelTexGenParameterfSGIS(a0 , a1);")))
+        "glPixelTexGenParameterfSGIS(a0 , a1);")))
   (begin
     (define gl:pixel-tex-gen-parameterfv-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPixelTexGenParameterfvSGIS(a0 , a1);")))
+        "glPixelTexGenParameterfvSGIS(a0 , a1);")))
   (begin
     (define gl:get-pixel-tex-gen-parameteriv-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glGetPixelTexGenParameterivSGIS(a0 , a1);")))
+        "glGetPixelTexGenParameterivSGIS(a0 , a1);")))
   (begin
     (define gl:get-pixel-tex-gen-parameterfv-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glGetPixelTexGenParameterfvSGIS(a0 , a1);")))
+        "glGetPixelTexGenParameterfvSGIS(a0 , a1);")))
   (begin
     (define gl:tex-image4dsgis
       (foreign-lambda*
@@ -7579,7 +7497,7 @@
          (unsigned-integer a8)
          (unsigned-integer a9)
          ((c-pointer void) a10))
-        "_al_glTexImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glTexImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:tex-sub-image4dsgis
       (foreign-lambda*
@@ -7597,163 +7515,163 @@
          (unsigned-integer a10)
          (unsigned-integer a11)
          ((c-pointer void) a12))
-        "_al_glTexSubImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+        "glTexSubImage4DSGIS(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
   (begin
     (define gl:are-textures-resident-ext
       (foreign-lambda*
         unsigned-char
         ((integer a0) (u32vector a1) (u8vector a2))
-        "return(_al_glAreTexturesResidentEXT(a0 , a1 , a2));")))
+        "return(glAreTexturesResidentEXT(a0 , a1 , a2));")))
   (begin
     (define gl:bind-texture-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindTextureEXT(a0 , a1);")))
+        "glBindTextureEXT(a0 , a1);")))
   (begin
     (define gl:delete-textures-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteTexturesEXT(a0 , a1);")))
+        "glDeleteTexturesEXT(a0 , a1);")))
   (begin
     (define gl:gen-textures-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenTexturesEXT(a0 , a1);")))
+        "glGenTexturesEXT(a0 , a1);")))
   (begin
     (define gl:is-texture-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsTextureEXT(a0));")))
+        "return(glIsTextureEXT(a0));")))
   (begin
     (define gl:prioritize-textures-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1) (f32vector a2))
-        "_al_glPrioritizeTexturesEXT(a0 , a1 , a2);")))
+        "glPrioritizeTexturesEXT(a0 , a1 , a2);")))
   (begin
     (define gl:detail-tex-func-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glDetailTexFuncSGIS(a0 , a1 , a2);")))
+        "glDetailTexFuncSGIS(a0 , a1 , a2);")))
   (begin
     (define gl:get-detail-tex-func-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glGetDetailTexFuncSGIS(a0 , a1);")))
+        "glGetDetailTexFuncSGIS(a0 , a1);")))
   (begin
     (define gl:sharpen-tex-func-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glSharpenTexFuncSGIS(a0 , a1 , a2);")))
+        "glSharpenTexFuncSGIS(a0 , a1 , a2);")))
   (begin
     (define gl:get-sharpen-tex-func-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glGetSharpenTexFuncSGIS(a0 , a1);")))
+        "glGetSharpenTexFuncSGIS(a0 , a1);")))
   (begin
     (define gl:sample-mask-sgis
       (foreign-lambda*
         void
         ((float a0) (unsigned-char a1))
-        "_al_glSampleMaskSGIS(a0 , a1);")))
+        "glSampleMaskSGIS(a0 , a1);")))
   (begin
     (define gl:sample-pattern-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glSamplePatternSGIS(a0);")))
+        "glSamplePatternSGIS(a0);")))
   (begin
     (define gl:blend-equation-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBlendEquationEXT(a0);")))
+        "glBlendEquationEXT(a0);")))
   (begin
     (define gl:sprite-parameterf-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glSpriteParameterfSGIX(a0 , a1);")))
+        "glSpriteParameterfSGIX(a0 , a1);")))
   (begin
     (define gl:sprite-parameterfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glSpriteParameterfvSGIX(a0 , a1);")))
+        "glSpriteParameterfvSGIX(a0 , a1);")))
   (begin
     (define gl:sprite-parameteri-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glSpriteParameteriSGIX(a0 , a1);")))
+        "glSpriteParameteriSGIX(a0 , a1);")))
   (begin
     (define gl:sprite-parameteriv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glSpriteParameterivSGIX(a0 , a1);")))
+        "glSpriteParameterivSGIX(a0 , a1);")))
   (begin
     (define gl:point-parameterf-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPointParameterfEXT(a0 , a1);")))
+        "glPointParameterfEXT(a0 , a1);")))
   (begin
     (define gl:point-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPointParameterfvEXT(a0 , a1);")))
+        "glPointParameterfvEXT(a0 , a1);")))
   (begin
     (define gl:point-parameterf-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPointParameterfSGIS(a0 , a1);")))
+        "glPointParameterfSGIS(a0 , a1);")))
   (begin
     (define gl:point-parameterfv-sgis
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glPointParameterfvSGIS(a0 , a1);")))
+        "glPointParameterfvSGIS(a0 , a1);")))
   (begin
     (define gl:get-instruments-sgix
-      (foreign-lambda* integer () "return(_al_glGetInstrumentsSGIX());")))
+      (foreign-lambda* integer () "return(glGetInstrumentsSGIX());")))
   (begin
     (define gl:instruments-buffer-sgix
       (foreign-lambda*
         void
         ((integer a0) (s32vector a1))
-        "_al_glInstrumentsBufferSGIX(a0 , a1);")))
+        "glInstrumentsBufferSGIX(a0 , a1);")))
   (begin
     (define gl:poll-instruments-sgix
       (foreign-lambda*
         integer
         ((s32vector a0))
-        "return(_al_glPollInstrumentsSGIX(a0));")))
+        "return(glPollInstrumentsSGIX(a0));")))
   (begin
     (define gl:read-instruments-sgix
-      (foreign-lambda* void ((integer a0)) "_al_glReadInstrumentsSGIX(a0);")))
+      (foreign-lambda* void ((integer a0)) "glReadInstrumentsSGIX(a0);")))
   (begin
     (define gl:start-instruments-sgix
-      (foreign-lambda* void () "_al_glStartInstrumentsSGIX();")))
+      (foreign-lambda* void () "glStartInstrumentsSGIX();")))
   (begin
     (define gl:stop-instruments-sgix
-      (foreign-lambda* void ((integer a0)) "_al_glStopInstrumentsSGIX(a0);")))
+      (foreign-lambda* void ((integer a0)) "glStopInstrumentsSGIX(a0);")))
   (begin
     (define gl:frame-zoom-sgix
-      (foreign-lambda* void ((integer a0)) "_al_glFrameZoomSGIX(a0);")))
+      (foreign-lambda* void ((integer a0)) "glFrameZoomSGIX(a0);")))
   (begin
     (define gl:tag-sample-buffer-sgix
-      (foreign-lambda* void () "_al_glTagSampleBufferSGIX();")))
+      (foreign-lambda* void () "glTagSampleBufferSGIX();")))
   (begin
     (define gl:deformation-map3d-sgix
       (foreign-lambda*
@@ -7772,7 +7690,7 @@
          (integer a11)
          (integer a12)
          (f64vector a13))
-        "_al_glDeformationMap3dSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
+        "glDeformationMap3dSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
   (begin
     (define gl:deformation-map3f-sgix
       (foreign-lambda*
@@ -7791,67 +7709,67 @@
          (integer a11)
          (integer a12)
          (f32vector a13))
-        "_al_glDeformationMap3fSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
+        "glDeformationMap3fSGIX(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13);")))
   (begin
     (define gl:deform-sgix
-      (foreign-lambda* void ((unsigned-integer a0)) "_al_glDeformSGIX(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glDeformSGIX(a0);")))
   (begin
     (define gl:load-identity-deformation-map-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glLoadIdentityDeformationMapSGIX(a0);")))
+        "glLoadIdentityDeformationMapSGIX(a0);")))
   (begin
     (define gl:reference-plane-sgix
-      (foreign-lambda* void ((f64vector a0)) "_al_glReferencePlaneSGIX(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glReferencePlaneSGIX(a0);")))
   (begin
     (define gl:flush-raster-sgix
-      (foreign-lambda* void () "_al_glFlushRasterSGIX();")))
+      (foreign-lambda* void () "glFlushRasterSGIX();")))
   (begin
     (define gl:fog-func-sgis
       (foreign-lambda*
         void
         ((integer a0) (f32vector a1))
-        "_al_glFogFuncSGIS(a0 , a1);")))
+        "glFogFuncSGIS(a0 , a1);")))
   (begin
     (define gl:get-fog-func-sgis
-      (foreign-lambda* void ((f32vector a0)) "_al_glGetFogFuncSGIS(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glGetFogFuncSGIS(a0);")))
   (begin
     (define gl:image-transform-parameteri-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glImageTransformParameteriHP(a0 , a1 , a2);")))
+        "glImageTransformParameteriHP(a0 , a1 , a2);")))
   (begin
     (define gl:image-transform-parameterf-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glImageTransformParameterfHP(a0 , a1 , a2);")))
+        "glImageTransformParameterfHP(a0 , a1 , a2);")))
   (begin
     (define gl:image-transform-parameteriv-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glImageTransformParameterivHP(a0 , a1 , a2);")))
+        "glImageTransformParameterivHP(a0 , a1 , a2);")))
   (begin
     (define gl:image-transform-parameterfv-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glImageTransformParameterfvHP(a0 , a1 , a2);")))
+        "glImageTransformParameterfvHP(a0 , a1 , a2);")))
   (begin
     (define gl:get-image-transform-parameteriv-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetImageTransformParameterivHP(a0 , a1 , a2);")))
+        "glGetImageTransformParameterivHP(a0 , a1 , a2);")))
   (begin
     (define gl:get-image-transform-parameterfv-hp
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetImageTransformParameterfvHP(a0 , a1 , a2);")))
+        "glGetImageTransformParameterfvHP(a0 , a1 , a2);")))
   (begin
     (define gl:copy-color-sub-table-ext
       (foreign-lambda*
@@ -7861,190 +7779,190 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glCopyColorSubTableEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glCopyColorSubTableEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:hint-pgi
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glHintPGI(a0 , a1);")))
+        "glHintPGI(a0 , a1);")))
   (begin
     (define gl:get-list-parameterfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetListParameterfvSGIX(a0 , a1 , a2);")))
+        "glGetListParameterfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:get-list-parameteriv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetListParameterivSGIX(a0 , a1 , a2);")))
+        "glGetListParameterivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:list-parameterf-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glListParameterfSGIX(a0 , a1 , a2);")))
+        "glListParameterfSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:list-parameterfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glListParameterfvSGIX(a0 , a1 , a2);")))
+        "glListParameterfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:list-parameteri-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glListParameteriSGIX(a0 , a1 , a2);")))
+        "glListParameteriSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:list-parameteriv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glListParameterivSGIX(a0 , a1 , a2);")))
+        "glListParameterivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:index-material-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glIndexMaterialEXT(a0 , a1);")))
+        "glIndexMaterialEXT(a0 , a1);")))
   (begin
     (define gl:index-func-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glIndexFuncEXT(a0 , a1);")))
+        "glIndexFuncEXT(a0 , a1);")))
   (begin
     (define gl:lock-arrays-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glLockArraysEXT(a0 , a1);")))
+        "glLockArraysEXT(a0 , a1);")))
   (begin
     (define gl:unlock-arrays-ext
-      (foreign-lambda* void () "_al_glUnlockArraysEXT();")))
+      (foreign-lambda* void () "glUnlockArraysEXT();")))
   (begin
     (define gl:cull-parameterdv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glCullParameterdvEXT(a0 , a1);")))
+        "glCullParameterdvEXT(a0 , a1);")))
   (begin
     (define gl:cull-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glCullParameterfvEXT(a0 , a1);")))
+        "glCullParameterfvEXT(a0 , a1);")))
   (begin
     (define gl:fragment-color-material-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glFragmentColorMaterialSGIX(a0 , a1);")))
+        "glFragmentColorMaterialSGIX(a0 , a1);")))
   (begin
     (define gl:fragment-lightf-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glFragmentLightfSGIX(a0 , a1 , a2);")))
+        "glFragmentLightfSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-lightfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glFragmentLightfvSGIX(a0 , a1 , a2);")))
+        "glFragmentLightfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-lighti-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glFragmentLightiSGIX(a0 , a1 , a2);")))
+        "glFragmentLightiSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-lightiv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glFragmentLightivSGIX(a0 , a1 , a2);")))
+        "glFragmentLightivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-light-modelf-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glFragmentLightModelfSGIX(a0 , a1);")))
+        "glFragmentLightModelfSGIX(a0 , a1);")))
   (begin
     (define gl:fragment-light-modelfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glFragmentLightModelfvSGIX(a0 , a1);")))
+        "glFragmentLightModelfvSGIX(a0 , a1);")))
   (begin
     (define gl:fragment-light-modeli-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glFragmentLightModeliSGIX(a0 , a1);")))
+        "glFragmentLightModeliSGIX(a0 , a1);")))
   (begin
     (define gl:fragment-light-modeliv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glFragmentLightModelivSGIX(a0 , a1);")))
+        "glFragmentLightModelivSGIX(a0 , a1);")))
   (begin
     (define gl:fragment-materialf-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glFragmentMaterialfSGIX(a0 , a1 , a2);")))
+        "glFragmentMaterialfSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-materialfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glFragmentMaterialfvSGIX(a0 , a1 , a2);")))
+        "glFragmentMaterialfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-materiali-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glFragmentMaterialiSGIX(a0 , a1 , a2);")))
+        "glFragmentMaterialiSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:fragment-materialiv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glFragmentMaterialivSGIX(a0 , a1 , a2);")))
+        "glFragmentMaterialivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:get-fragment-lightfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetFragmentLightfvSGIX(a0 , a1 , a2);")))
+        "glGetFragmentLightfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:get-fragment-lightiv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFragmentLightivSGIX(a0 , a1 , a2);")))
+        "glGetFragmentLightivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:get-fragment-materialfv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetFragmentMaterialfvSGIX(a0 , a1 , a2);")))
+        "glGetFragmentMaterialfvSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:get-fragment-materialiv-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFragmentMaterialivSGIX(a0 , a1 , a2);")))
+        "glGetFragmentMaterialivSGIX(a0 , a1 , a2);")))
   (begin
     (define gl:light-envi-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glLightEnviSGIX(a0 , a1);")))
+        "glLightEnviSGIX(a0 , a1);")))
   (begin
     (define gl:draw-range-elements-ext
       (foreign-lambda*
@@ -8055,61 +7973,52 @@
          (integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glDrawRangeElementsEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glDrawRangeElementsEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:apply-texture-ext
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glApplyTextureEXT(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glApplyTextureEXT(a0);")))
   (begin
     (define gl:texture-light-ext
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glTextureLightEXT(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glTextureLightEXT(a0);")))
   (begin
     (define gl:texture-material-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTextureMaterialEXT(a0 , a1);")))
+        "glTextureMaterialEXT(a0 , a1);")))
   (begin
     (define gl:async-marker-sgix
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glAsyncMarkerSGIX(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glAsyncMarkerSGIX(a0);")))
   (begin
     (define gl:finish-async-sgix
       (foreign-lambda*
         integer
         ((u32vector a0))
-        "return(_al_glFinishAsyncSGIX(a0));")))
+        "return(glFinishAsyncSGIX(a0));")))
   (begin
     (define gl:poll-async-sgix
       (foreign-lambda*
         integer
         ((u32vector a0))
-        "return(_al_glPollAsyncSGIX(a0));")))
+        "return(glPollAsyncSGIX(a0));")))
   (begin
     (define gl:gen-async-markers-sgix
       (foreign-lambda*
         unsigned-integer
         ((integer a0))
-        "return(_al_glGenAsyncMarkersSGIX(a0));")))
+        "return(glGenAsyncMarkersSGIX(a0));")))
   (begin
     (define gl:delete-async-markers-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glDeleteAsyncMarkersSGIX(a0 , a1);")))
+        "glDeleteAsyncMarkersSGIX(a0 , a1);")))
   (begin
     (define gl:is-async-marker-sgix
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsAsyncMarkerSGIX(a0));")))
+        "return(glIsAsyncMarkerSGIX(a0));")))
   (begin
     (define gl:vertex-pointerv-intel
       (foreign-lambda*
@@ -8117,13 +8026,13 @@
         ((integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer (const void))) a2))
-        "_al_glVertexPointervINTEL(a0 , a1 , a2);")))
+        "glVertexPointervINTEL(a0 , a1 , a2);")))
   (begin
     (define gl:normal-pointerv-intel
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer (c-pointer (const void))) a1))
-        "_al_glNormalPointervINTEL(a0 , a1);")))
+        "glNormalPointervINTEL(a0 , a1);")))
   (begin
     (define gl:color-pointerv-intel
       (foreign-lambda*
@@ -8131,7 +8040,7 @@
         ((integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer (const void))) a2))
-        "_al_glColorPointervINTEL(a0 , a1 , a2);")))
+        "glColorPointervINTEL(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord-pointerv-intel
       (foreign-lambda*
@@ -8139,145 +8048,121 @@
         ((integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer (const void))) a2))
-        "_al_glTexCoordPointervINTEL(a0 , a1 , a2);")))
+        "glTexCoordPointervINTEL(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-transform-parameteri-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glPixelTransformParameteriEXT(a0 , a1 , a2);")))
+        "glPixelTransformParameteriEXT(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-transform-parameterf-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (float a2))
-        "_al_glPixelTransformParameterfEXT(a0 , a1 , a2);")))
+        "glPixelTransformParameterfEXT(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-transform-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glPixelTransformParameterivEXT(a0 , a1 , a2);")))
+        "glPixelTransformParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-transform-parameterfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glPixelTransformParameterfvEXT(a0 , a1 , a2);")))
+        "glPixelTransformParameterfvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3b-ext
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glSecondaryColor3bEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3bEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3bv-ext
-      (foreign-lambda*
-        void
-        ((c-string a0))
-        "_al_glSecondaryColor3bvEXT(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glSecondaryColor3bvEXT(a0);")))
   (begin
     (define gl:secondary-color3d-ext
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glSecondaryColor3dEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3dEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3dv-ext
-      (foreign-lambda*
-        void
-        ((f64vector a0))
-        "_al_glSecondaryColor3dvEXT(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glSecondaryColor3dvEXT(a0);")))
   (begin
     (define gl:secondary-color3f-ext
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glSecondaryColor3fEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3fEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3fv-ext
-      (foreign-lambda*
-        void
-        ((f32vector a0))
-        "_al_glSecondaryColor3fvEXT(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glSecondaryColor3fvEXT(a0);")))
   (begin
     (define gl:secondary-color3i-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glSecondaryColor3iEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3iEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3iv-ext
-      (foreign-lambda*
-        void
-        ((s32vector a0))
-        "_al_glSecondaryColor3ivEXT(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glSecondaryColor3ivEXT(a0);")))
   (begin
     (define gl:secondary-color3s-ext
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glSecondaryColor3sEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3sEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3sv-ext
-      (foreign-lambda*
-        void
-        ((s16vector a0))
-        "_al_glSecondaryColor3svEXT(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glSecondaryColor3svEXT(a0);")))
   (begin
     (define gl:secondary-color3ub-ext
       (foreign-lambda*
         void
         ((unsigned-char a0) (unsigned-char a1) (unsigned-char a2))
-        "_al_glSecondaryColor3ubEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3ubEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3ubv-ext
-      (foreign-lambda*
-        void
-        ((u8vector a0))
-        "_al_glSecondaryColor3ubvEXT(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glSecondaryColor3ubvEXT(a0);")))
   (begin
     (define gl:secondary-color3ui-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glSecondaryColor3uiEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3uiEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3uiv-ext
-      (foreign-lambda*
-        void
-        ((u32vector a0))
-        "_al_glSecondaryColor3uivEXT(a0);")))
+      (foreign-lambda* void ((u32vector a0)) "glSecondaryColor3uivEXT(a0);")))
   (begin
     (define gl:secondary-color3us-ext
       (foreign-lambda*
         void
         ((unsigned-short a0) (unsigned-short a1) (unsigned-short a2))
-        "_al_glSecondaryColor3usEXT(a0 , a1 , a2);")))
+        "glSecondaryColor3usEXT(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3usv-ext
-      (foreign-lambda*
-        void
-        ((u16vector a0))
-        "_al_glSecondaryColor3usvEXT(a0);")))
+      (foreign-lambda* void ((u16vector a0)) "glSecondaryColor3usvEXT(a0);")))
   (begin
     (define gl:secondary-color-pointer-ext
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "_al_glSecondaryColorPointerEXT(a0 , a1 , a2 , a3);")))
+        "glSecondaryColorPointerEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-normal-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glTextureNormalEXT(a0);")))
+        "glTextureNormalEXT(a0);")))
   (begin
     (define gl:multi-draw-arrays-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
-        "_al_glMultiDrawArraysEXT(a0 , a1 , a2 , a3);")))
+        "glMultiDrawArraysEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-draw-elements-ext
       (foreign-lambda*
@@ -8287,202 +8172,190 @@
          (unsigned-integer a2)
          ((c-pointer (c-pointer (const void))) a3)
          (integer a4))
-        "_al_glMultiDrawElementsEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiDrawElementsEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:fog-coordf-ext
-      (foreign-lambda* void ((float a0)) "_al_glFogCoordfEXT(a0);")))
+      (foreign-lambda* void ((float a0)) "glFogCoordfEXT(a0);")))
   (begin
     (define gl:fog-coordfv-ext
-      (foreign-lambda* void ((f32vector a0)) "_al_glFogCoordfvEXT(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glFogCoordfvEXT(a0);")))
   (begin
     (define gl:fog-coordd-ext
-      (foreign-lambda* void ((double a0)) "_al_glFogCoorddEXT(a0);")))
+      (foreign-lambda* void ((double a0)) "glFogCoorddEXT(a0);")))
   (begin
     (define gl:fog-coorddv-ext
-      (foreign-lambda* void ((f64vector a0)) "_al_glFogCoorddvEXT(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glFogCoorddvEXT(a0);")))
   (begin
     (define gl:fog-coord-pointer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glFogCoordPointerEXT(a0 , a1 , a2);")))
+        "glFogCoordPointerEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3b-ext
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glTangent3bEXT(a0 , a1 , a2);")))
+        "glTangent3bEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3bv-ext
-      (foreign-lambda* void ((c-string a0)) "_al_glTangent3bvEXT(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glTangent3bvEXT(a0);")))
   (begin
     (define gl:tangent3d-ext
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glTangent3dEXT(a0 , a1 , a2);")))
+        "glTangent3dEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3dv-ext
-      (foreign-lambda* void ((f64vector a0)) "_al_glTangent3dvEXT(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glTangent3dvEXT(a0);")))
   (begin
     (define gl:tangent3f-ext
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glTangent3fEXT(a0 , a1 , a2);")))
+        "glTangent3fEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3fv-ext
-      (foreign-lambda* void ((f32vector a0)) "_al_glTangent3fvEXT(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glTangent3fvEXT(a0);")))
   (begin
     (define gl:tangent3i-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glTangent3iEXT(a0 , a1 , a2);")))
+        "glTangent3iEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3iv-ext
-      (foreign-lambda* void ((s32vector a0)) "_al_glTangent3ivEXT(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTangent3ivEXT(a0);")))
   (begin
     (define gl:tangent3s-ext
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glTangent3sEXT(a0 , a1 , a2);")))
+        "glTangent3sEXT(a0 , a1 , a2);")))
   (begin
     (define gl:tangent3sv-ext
-      (foreign-lambda* void ((s16vector a0)) "_al_glTangent3svEXT(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTangent3svEXT(a0);")))
   (begin
     (define gl:binormal3b-ext
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glBinormal3bEXT(a0 , a1 , a2);")))
+        "glBinormal3bEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal3bv-ext
-      (foreign-lambda* void ((c-string a0)) "_al_glBinormal3bvEXT(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glBinormal3bvEXT(a0);")))
   (begin
     (define gl:binormal3d-ext
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glBinormal3dEXT(a0 , a1 , a2);")))
+        "glBinormal3dEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal3dv-ext
-      (foreign-lambda* void ((f64vector a0)) "_al_glBinormal3dvEXT(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glBinormal3dvEXT(a0);")))
   (begin
     (define gl:binormal3f-ext
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glBinormal3fEXT(a0 , a1 , a2);")))
+        "glBinormal3fEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal3fv-ext
-      (foreign-lambda* void ((f32vector a0)) "_al_glBinormal3fvEXT(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glBinormal3fvEXT(a0);")))
   (begin
     (define gl:binormal3i-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glBinormal3iEXT(a0 , a1 , a2);")))
+        "glBinormal3iEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal3iv-ext
-      (foreign-lambda* void ((s32vector a0)) "_al_glBinormal3ivEXT(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glBinormal3ivEXT(a0);")))
   (begin
     (define gl:binormal3s-ext
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glBinormal3sEXT(a0 , a1 , a2);")))
+        "glBinormal3sEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal3sv-ext
-      (foreign-lambda* void ((s16vector a0)) "_al_glBinormal3svEXT(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glBinormal3svEXT(a0);")))
   (begin
     (define gl:tangent-pointer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glTangentPointerEXT(a0 , a1 , a2);")))
+        "glTangentPointerEXT(a0 , a1 , a2);")))
   (begin
     (define gl:binormal-pointer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glBinormalPointerEXT(a0 , a1 , a2);")))
+        "glBinormalPointerEXT(a0 , a1 , a2);")))
   (begin
     (define gl:finish-texture-sunx
-      (foreign-lambda* void () "_al_glFinishTextureSUNX();")))
+      (foreign-lambda* void () "glFinishTextureSUNX();")))
   (begin
     (define gl:global-alpha-factorb-sun
-      (foreign-lambda* void ((char a0)) "_al_glGlobalAlphaFactorbSUN(a0);")))
+      (foreign-lambda* void ((char a0)) "glGlobalAlphaFactorbSUN(a0);")))
   (begin
     (define gl:global-alpha-factors-sun
-      (foreign-lambda* void ((short a0)) "_al_glGlobalAlphaFactorsSUN(a0);")))
+      (foreign-lambda* void ((short a0)) "glGlobalAlphaFactorsSUN(a0);")))
   (begin
     (define gl:global-alpha-factori-sun
-      (foreign-lambda*
-        void
-        ((integer a0))
-        "_al_glGlobalAlphaFactoriSUN(a0);")))
+      (foreign-lambda* void ((integer a0)) "glGlobalAlphaFactoriSUN(a0);")))
   (begin
     (define gl:global-alpha-factorf-sun
-      (foreign-lambda* void ((float a0)) "_al_glGlobalAlphaFactorfSUN(a0);")))
+      (foreign-lambda* void ((float a0)) "glGlobalAlphaFactorfSUN(a0);")))
   (begin
     (define gl:global-alpha-factord-sun
-      (foreign-lambda* void ((double a0)) "_al_glGlobalAlphaFactordSUN(a0);")))
+      (foreign-lambda* void ((double a0)) "glGlobalAlphaFactordSUN(a0);")))
   (begin
     (define gl:global-alpha-factorub-sun
       (foreign-lambda*
         void
         ((unsigned-char a0))
-        "_al_glGlobalAlphaFactorubSUN(a0);")))
+        "glGlobalAlphaFactorubSUN(a0);")))
   (begin
     (define gl:global-alpha-factorus-sun
       (foreign-lambda*
         void
         ((unsigned-short a0))
-        "_al_glGlobalAlphaFactorusSUN(a0);")))
+        "glGlobalAlphaFactorusSUN(a0);")))
   (begin
     (define gl:global-alpha-factorui-sun
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glGlobalAlphaFactoruiSUN(a0);")))
+        "glGlobalAlphaFactoruiSUN(a0);")))
   (begin
     (define gl:replacement-codeui-sun
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glReplacementCodeuiSUN(a0);")))
+        "glReplacementCodeuiSUN(a0);")))
   (begin
     (define gl:replacement-codeus-sun
       (foreign-lambda*
         void
         ((unsigned-short a0))
-        "_al_glReplacementCodeusSUN(a0);")))
+        "glReplacementCodeusSUN(a0);")))
   (begin
     (define gl:replacement-codeub-sun
       (foreign-lambda*
         void
         ((unsigned-char a0))
-        "_al_glReplacementCodeubSUN(a0);")))
+        "glReplacementCodeubSUN(a0);")))
   (begin
     (define gl:replacement-codeuiv-sun
-      (foreign-lambda*
-        void
-        ((u32vector a0))
-        "_al_glReplacementCodeuivSUN(a0);")))
+      (foreign-lambda* void ((u32vector a0)) "glReplacementCodeuivSUN(a0);")))
   (begin
     (define gl:replacement-codeusv-sun
-      (foreign-lambda*
-        void
-        ((u16vector a0))
-        "_al_glReplacementCodeusvSUN(a0);")))
+      (foreign-lambda* void ((u16vector a0)) "glReplacementCodeusvSUN(a0);")))
   (begin
     (define gl:replacement-codeubv-sun
-      (foreign-lambda*
-        void
-        ((u8vector a0))
-        "_al_glReplacementCodeubvSUN(a0);")))
+      (foreign-lambda* void ((u8vector a0)) "glReplacementCodeubvSUN(a0);")))
   (begin
     (define gl:replacement-code-pointer-sun
       (foreign-lambda*
@@ -8490,7 +8363,7 @@
         ((unsigned-integer a0)
          (integer a1)
          ((c-pointer (c-pointer (const void))) a2))
-        "_al_glReplacementCodePointerSUN(a0 , a1 , a2);")))
+        "glReplacementCodePointerSUN(a0 , a1 , a2);")))
   (begin
     (define gl:color4ub-vertex2f-sun
       (foreign-lambda*
@@ -8501,13 +8374,13 @@
          (unsigned-char a3)
          (float a4)
          (float a5))
-        "_al_glColor4ubVertex2fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glColor4ubVertex2fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:color4ub-vertex2fv-sun
       (foreign-lambda*
         void
         ((u8vector a0) (f32vector a1))
-        "_al_glColor4ubVertex2fvSUN(a0 , a1);")))
+        "glColor4ubVertex2fvSUN(a0 , a1);")))
   (begin
     (define gl:color4ub-vertex3f-sun
       (foreign-lambda*
@@ -8519,37 +8392,37 @@
          (float a4)
          (float a5)
          (float a6))
-        "_al_glColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:color4ub-vertex3fv-sun
       (foreign-lambda*
         void
         ((u8vector a0) (f32vector a1))
-        "_al_glColor4ubVertex3fvSUN(a0 , a1);")))
+        "glColor4ubVertex3fvSUN(a0 , a1);")))
   (begin
     (define gl:color3f-vertex3f-sun
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
-        "_al_glColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:color3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1))
-        "_al_glColor3fVertex3fvSUN(a0 , a1);")))
+        "glColor3fVertex3fvSUN(a0 , a1);")))
   (begin
     (define gl:normal3f-vertex3f-sun
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
-        "_al_glNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1))
-        "_al_glNormal3fVertex3fvSUN(a0 , a1);")))
+        "glNormal3fVertex3fvSUN(a0 , a1);")))
   (begin
     (define gl:color4f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8564,25 +8437,25 @@
          (float a7)
          (float a8)
          (float a9))
-        "_al_glColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:color4f-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glColor4fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+        "glColor4fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord2f-vertex3f-sun
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4);")))
+        "glTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-coord2f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1))
-        "_al_glTexCoord2fVertex3fvSUN(a0 , a1);")))
+        "glTexCoord2fVertex3fvSUN(a0 , a1);")))
   (begin
     (define gl:tex-coord4f-vertex4f-sun
       (foreign-lambda*
@@ -8595,13 +8468,13 @@
          (float a5)
          (float a6)
          (float a7))
-        "_al_glTexCoord4fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glTexCoord4fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:tex-coord4f-vertex4fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1))
-        "_al_glTexCoord4fVertex4fvSUN(a0 , a1);")))
+        "glTexCoord4fVertex4fvSUN(a0 , a1);")))
   (begin
     (define gl:tex-coord2f-color4ub-vertex3f-sun
       (foreign-lambda*
@@ -8615,13 +8488,13 @@
          (float a6)
          (float a7)
          (float a8))
-        "_al_glTexCoord2fColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glTexCoord2fColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:tex-coord2f-color4ub-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (u8vector a1) (f32vector a2))
-        "_al_glTexCoord2fColor4ubVertex3fvSUN(a0 , a1 , a2);")))
+        "glTexCoord2fColor4ubVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord2f-color3f-vertex3f-sun
       (foreign-lambda*
@@ -8634,13 +8507,13 @@
          (float a5)
          (float a6)
          (float a7))
-        "_al_glTexCoord2fColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glTexCoord2fColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:tex-coord2f-color3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glTexCoord2fColor3fVertex3fvSUN(a0 , a1 , a2);")))
+        "glTexCoord2fColor3fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord2f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8653,13 +8526,13 @@
          (float a5)
          (float a6)
          (float a7))
-        "_al_glTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:tex-coord2f-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+        "glTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord2f-color4f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8676,13 +8549,13 @@
          (float a9)
          (float a10)
          (float a11))
-        "_al_glTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:tex-coord2f-color4f-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
-        "_al_glTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+        "glTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4f-color4f-normal3f-vertex4f-sun
       (foreign-lambda*
@@ -8702,25 +8575,25 @@
          (float a12)
          (float a13)
          (float a14))
-        "_al_glTexCoord4fColor4fNormal3fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
+        "glTexCoord4fColor4fNormal3fVertex4fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12 , a13 , a14);")))
   (begin
     (define gl:tex-coord4f-color4f-normal3f-vertex4fv-sun
       (foreign-lambda*
         void
         ((f32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
-        "_al_glTexCoord4fColor4fNormal3fVertex4fvSUN(a0 , a1 , a2 , a3);")))
+        "glTexCoord4fColor4fNormal3fVertex4fvSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:replacement-codeui-vertex3f-sun
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glReplacementCodeuiVertex3fSUN(a0 , a1 , a2 , a3);")))
+        "glReplacementCodeuiVertex3fSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:replacement-codeui-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1))
-        "_al_glReplacementCodeuiVertex3fvSUN(a0 , a1);")))
+        "glReplacementCodeuiVertex3fvSUN(a0 , a1);")))
   (begin
     (define gl:replacement-codeui-color4ub-vertex3f-sun
       (foreign-lambda*
@@ -8733,13 +8606,13 @@
          (float a5)
          (float a6)
          (float a7))
-        "_al_glReplacementCodeuiColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glReplacementCodeuiColor4ubVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:replacement-codeui-color4ub-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (u8vector a1) (f32vector a2))
-        "_al_glReplacementCodeuiColor4ubVertex3fvSUN(a0 , a1 , a2);")))
+        "glReplacementCodeuiColor4ubVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:replacement-codeui-color3f-vertex3f-sun
       (foreign-lambda*
@@ -8751,13 +8624,13 @@
          (float a4)
          (float a5)
          (float a6))
-        "_al_glReplacementCodeuiColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glReplacementCodeuiColor3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:replacement-codeui-color3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glReplacementCodeuiColor3fVertex3fvSUN(a0 , a1 , a2);")))
+        "glReplacementCodeuiColor3fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:replacement-codeui-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8769,13 +8642,13 @@
          (float a4)
          (float a5)
          (float a6))
-        "_al_glReplacementCodeuiNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glReplacementCodeuiNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:replacement-codeui-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glReplacementCodeuiNormal3fVertex3fvSUN(a0 , a1 , a2);")))
+        "glReplacementCodeuiNormal3fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:replacement-codeui-color4f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8791,13 +8664,13 @@
          (float a8)
          (float a9)
          (float a10))
-        "_al_glReplacementCodeuiColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glReplacementCodeuiColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:replacement-codeui-color4f-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
-        "_al_glReplacementCodeuiColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+        "glReplacementCodeuiColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-vertex3f-sun
       (foreign-lambda*
@@ -8808,13 +8681,13 @@
          (float a3)
          (float a4)
          (float a5))
-        "_al_glReplacementCodeuiTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glReplacementCodeuiTexCoord2fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1) (f32vector a2))
-        "_al_glReplacementCodeuiTexCoord2fVertex3fvSUN(a0 , a1 , a2);")))
+        "glReplacementCodeuiTexCoord2fVertex3fvSUN(a0 , a1 , a2);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8828,13 +8701,13 @@
          (float a6)
          (float a7)
          (float a8))
-        "_al_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-normal3f-vertex3fv-sun
       (foreign-lambda*
         void
         ((u32vector a0) (f32vector a1) (f32vector a2) (f32vector a3))
-        "_al_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
+        "glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-color4f-normal3f-vertex3f-sun
       (foreign-lambda*
@@ -8852,7 +8725,7 @@
          (float a10)
          (float a11)
          (float a12))
-        "_al_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+        "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
   (begin
     (define gl:replacement-codeui-tex-coord2f-color4f-normal3f-vertex3fv-sun
       (foreign-lambda*
@@ -8862,7 +8735,7 @@
          (f32vector a2)
          (f32vector a3)
          (f32vector a4))
-        "_al_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3 , a4);")))
+        "glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:blend-func-separate-ext
       (foreign-lambda*
@@ -8871,7 +8744,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glBlendFuncSeparateEXT(a0 , a1 , a2 , a3);")))
+        "glBlendFuncSeparateEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:blend-func-separate-ingr
       (foreign-lambda*
@@ -8880,52 +8753,52 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glBlendFuncSeparateINGR(a0 , a1 , a2 , a3);")))
+        "glBlendFuncSeparateINGR(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-weightf-ext
-      (foreign-lambda* void ((float a0)) "_al_glVertexWeightfEXT(a0);")))
+      (foreign-lambda* void ((float a0)) "glVertexWeightfEXT(a0);")))
   (begin
     (define gl:vertex-weightfv-ext
-      (foreign-lambda* void ((f32vector a0)) "_al_glVertexWeightfvEXT(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glVertexWeightfvEXT(a0);")))
   (begin
     (define gl:vertex-weight-pointer-ext
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2) ((c-pointer void) a3))
-        "_al_glVertexWeightPointerEXT(a0 , a1 , a2 , a3);")))
+        "glVertexWeightPointerEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:flush-vertex-array-range-nv
-      (foreign-lambda* void () "_al_glFlushVertexArrayRangeNV();")))
+      (foreign-lambda* void () "glFlushVertexArrayRangeNV();")))
   (begin
     (define gl:vertex-array-range-nv
       (foreign-lambda*
         void
         ((integer a0) ((c-pointer void) a1))
-        "_al_glVertexArrayRangeNV(a0 , a1);")))
+        "glVertexArrayRangeNV(a0 , a1);")))
   (begin
     (define gl:combiner-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glCombinerParameterfvNV(a0 , a1);")))
+        "glCombinerParameterfvNV(a0 , a1);")))
   (begin
     (define gl:combiner-parameterf-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glCombinerParameterfNV(a0 , a1);")))
+        "glCombinerParameterfNV(a0 , a1);")))
   (begin
     (define gl:combiner-parameteriv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glCombinerParameterivNV(a0 , a1);")))
+        "glCombinerParameterivNV(a0 , a1);")))
   (begin
     (define gl:combiner-parameteri-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glCombinerParameteriNV(a0 , a1);")))
+        "glCombinerParameteriNV(a0 , a1);")))
   (begin
     (define gl:combiner-input-nv
       (foreign-lambda*
@@ -8936,7 +8809,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glCombinerInputNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glCombinerInputNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:combiner-output-nv
       (foreign-lambda*
@@ -8951,7 +8824,7 @@
          (unsigned-char a7)
          (unsigned-char a8)
          (unsigned-char a9))
-        "_al_glCombinerOutputNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCombinerOutputNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:final-combiner-input-nv
       (foreign-lambda*
@@ -8960,7 +8833,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glFinalCombinerInputNV(a0 , a1 , a2 , a3);")))
+        "glFinalCombinerInputNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-combiner-input-parameterfv-nv
       (foreign-lambda*
@@ -8970,7 +8843,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (f32vector a4))
-        "_al_glGetCombinerInputParameterfvNV(a0 , a1 , a2 , a3 , a4);")))
+        "glGetCombinerInputParameterfvNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-combiner-input-parameteriv-nv
       (foreign-lambda*
@@ -8980,7 +8853,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (s32vector a4))
-        "_al_glGetCombinerInputParameterivNV(a0 , a1 , a2 , a3 , a4);")))
+        "glGetCombinerInputParameterivNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-combiner-output-parameterfv-nv
       (foreign-lambda*
@@ -8989,7 +8862,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetCombinerOutputParameterfvNV(a0 , a1 , a2 , a3);")))
+        "glGetCombinerOutputParameterfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-combiner-output-parameteriv-nv
       (foreign-lambda*
@@ -8998,130 +8871,130 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetCombinerOutputParameterivNV(a0 , a1 , a2 , a3);")))
+        "glGetCombinerOutputParameterivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-final-combiner-input-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetFinalCombinerInputParameterfvNV(a0 , a1 , a2);")))
+        "glGetFinalCombinerInputParameterfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-final-combiner-input-parameteriv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFinalCombinerInputParameterivNV(a0 , a1 , a2);")))
+        "glGetFinalCombinerInputParameterivNV(a0 , a1 , a2);")))
   (begin
     (define gl:resize-buffers-mesa
-      (foreign-lambda* void () "_al_glResizeBuffersMESA();")))
+      (foreign-lambda* void () "glResizeBuffersMESA();")))
   (begin
     (define gl:window-pos2d-mesa
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glWindowPos2dMESA(a0 , a1);")))
+        "glWindowPos2dMESA(a0 , a1);")))
   (begin
     (define gl:window-pos2dv-mesa
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos2dvMESA(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos2dvMESA(a0);")))
   (begin
     (define gl:window-pos2f-mesa
       (foreign-lambda*
         void
         ((float a0) (float a1))
-        "_al_glWindowPos2fMESA(a0 , a1);")))
+        "glWindowPos2fMESA(a0 , a1);")))
   (begin
     (define gl:window-pos2fv-mesa
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos2fvMESA(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos2fvMESA(a0);")))
   (begin
     (define gl:window-pos2i-mesa
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glWindowPos2iMESA(a0 , a1);")))
+        "glWindowPos2iMESA(a0 , a1);")))
   (begin
     (define gl:window-pos2iv-mesa
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos2ivMESA(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos2ivMESA(a0);")))
   (begin
     (define gl:window-pos2s-mesa
       (foreign-lambda*
         void
         ((short a0) (short a1))
-        "_al_glWindowPos2sMESA(a0 , a1);")))
+        "glWindowPos2sMESA(a0 , a1);")))
   (begin
     (define gl:window-pos2sv-mesa
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos2svMESA(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos2svMESA(a0);")))
   (begin
     (define gl:window-pos3d-mesa
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2))
-        "_al_glWindowPos3dMESA(a0 , a1 , a2);")))
+        "glWindowPos3dMESA(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3dv-mesa
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos3dvMESA(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos3dvMESA(a0);")))
   (begin
     (define gl:window-pos3f-mesa
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2))
-        "_al_glWindowPos3fMESA(a0 , a1 , a2);")))
+        "glWindowPos3fMESA(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3fv-mesa
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos3fvMESA(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos3fvMESA(a0);")))
   (begin
     (define gl:window-pos3i-mesa
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glWindowPos3iMESA(a0 , a1 , a2);")))
+        "glWindowPos3iMESA(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3iv-mesa
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos3ivMESA(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos3ivMESA(a0);")))
   (begin
     (define gl:window-pos3s-mesa
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glWindowPos3sMESA(a0 , a1 , a2);")))
+        "glWindowPos3sMESA(a0 , a1 , a2);")))
   (begin
     (define gl:window-pos3sv-mesa
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos3svMESA(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos3svMESA(a0);")))
   (begin
     (define gl:window-pos4d-mesa
       (foreign-lambda*
         void
         ((double a0) (double a1) (double a2) (double a3))
-        "_al_glWindowPos4dMESA(a0 , a1 , a2 , a3);")))
+        "glWindowPos4dMESA(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos4dv-mesa
-      (foreign-lambda* void ((f64vector a0)) "_al_glWindowPos4dvMESA(a0);")))
+      (foreign-lambda* void ((f64vector a0)) "glWindowPos4dvMESA(a0);")))
   (begin
     (define gl:window-pos4f-mesa
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3))
-        "_al_glWindowPos4fMESA(a0 , a1 , a2 , a3);")))
+        "glWindowPos4fMESA(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos4fv-mesa
-      (foreign-lambda* void ((f32vector a0)) "_al_glWindowPos4fvMESA(a0);")))
+      (foreign-lambda* void ((f32vector a0)) "glWindowPos4fvMESA(a0);")))
   (begin
     (define gl:window-pos4i-mesa
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glWindowPos4iMESA(a0 , a1 , a2 , a3);")))
+        "glWindowPos4iMESA(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos4iv-mesa
-      (foreign-lambda* void ((s32vector a0)) "_al_glWindowPos4ivMESA(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glWindowPos4ivMESA(a0);")))
   (begin
     (define gl:window-pos4s-mesa
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2) (short a3))
-        "_al_glWindowPos4sMESA(a0 , a1 , a2 , a3);")))
+        "glWindowPos4sMESA(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:window-pos4sv-mesa
-      (foreign-lambda* void ((s16vector a0)) "_al_glWindowPos4svMESA(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glWindowPos4svMESA(a0);")))
   (begin
     (define gl:multi-mode-draw-arrays-ibm
       (foreign-lambda*
@@ -9131,7 +9004,7 @@
          (s32vector a2)
          (integer a3)
          (integer a4))
-        "_al_glMultiModeDrawArraysIBM(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiModeDrawArraysIBM(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-mode-draw-elements-ibm
       (foreign-lambda*
@@ -9142,25 +9015,22 @@
          ((c-pointer (c-pointer (const void))) a3)
          (integer a4)
          (integer a5))
-        "_al_glMultiModeDrawElementsIBM(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glMultiModeDrawElementsIBM(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:tbuffer-mask3dfx
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glTbufferMask3DFX(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glTbufferMask3DFX(a0);")))
   (begin
     (define gl:sample-mask-ext
       (foreign-lambda*
         void
         ((float a0) (unsigned-char a1))
-        "_al_glSampleMaskEXT(a0 , a1);")))
+        "glSampleMaskEXT(a0 , a1);")))
   (begin
     (define gl:sample-pattern-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glSamplePatternEXT(a0);")))
+        "glSamplePatternEXT(a0);")))
   (begin
     (define gl:texture-color-mask-sgis
       (foreign-lambda*
@@ -9169,55 +9039,52 @@
          (unsigned-char a1)
          (unsigned-char a2)
          (unsigned-char a3))
-        "_al_glTextureColorMaskSGIS(a0 , a1 , a2 , a3);")))
+        "glTextureColorMaskSGIS(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:igloo-interface-sgix
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer void) a1))
-        "_al_glIglooInterfaceSGIX(a0 , a1);")))
+        "glIglooInterfaceSGIX(a0 , a1);")))
   (begin
     (define gl:delete-fences-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteFencesNV(a0 , a1);")))
+        "glDeleteFencesNV(a0 , a1);")))
   (begin
     (define gl:gen-fences-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenFencesNV(a0 , a1);")))
+        "glGenFencesNV(a0 , a1);")))
   (begin
     (define gl:is-fence-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsFenceNV(a0));")))
+        "return(glIsFenceNV(a0));")))
   (begin
     (define gl:test-fence-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glTestFenceNV(a0));")))
+        "return(glTestFenceNV(a0));")))
   (begin
     (define gl:get-fenceiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFenceivNV(a0 , a1 , a2);")))
+        "glGetFenceivNV(a0 , a1 , a2);")))
   (begin
     (define gl:finish-fence-nv
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glFinishFenceNV(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glFinishFenceNV(a0);")))
   (begin
     (define gl:set-fence-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glSetFenceNV(a0 , a1);")))
+        "glSetFenceNV(a0 , a1);")))
   (begin
     (define gl:map-control-points-nv
       (foreign-lambda*
@@ -9231,19 +9098,19 @@
          (integer a6)
          (unsigned-char a7)
          ((c-pointer void) a8))
-        "_al_glMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:map-parameteriv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glMapParameterivNV(a0 , a1 , a2);")))
+        "glMapParameterivNV(a0 , a1 , a2);")))
   (begin
     (define gl:map-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glMapParameterfvNV(a0 , a1 , a2);")))
+        "glMapParameterfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-map-control-points-nv
       (foreign-lambda*
@@ -9255,19 +9122,19 @@
          (integer a4)
          (unsigned-char a5)
          ((c-pointer void) a6))
-        "_al_glGetMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetMapControlPointsNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-map-parameteriv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetMapParameterivNV(a0 , a1 , a2);")))
+        "glGetMapParameterivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-map-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetMapParameterfvNV(a0 , a1 , a2);")))
+        "glGetMapParameterfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-map-attrib-parameteriv-nv
       (foreign-lambda*
@@ -9276,7 +9143,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetMapAttribParameterivNV(a0 , a1 , a2 , a3);")))
+        "glGetMapAttribParameterivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-map-attrib-parameterfv-nv
       (foreign-lambda*
@@ -9285,55 +9152,55 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetMapAttribParameterfvNV(a0 , a1 , a2 , a3);")))
+        "glGetMapAttribParameterfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:eval-maps-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEvalMapsNV(a0 , a1);")))
+        "glEvalMapsNV(a0 , a1);")))
   (begin
     (define gl:combiner-stage-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glCombinerStageParameterfvNV(a0 , a1 , a2);")))
+        "glCombinerStageParameterfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-combiner-stage-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetCombinerStageParameterfvNV(a0 , a1 , a2);")))
+        "glGetCombinerStageParameterfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:are-programs-resident-nv
       (foreign-lambda*
         unsigned-char
         ((integer a0) (u32vector a1) (u8vector a2))
-        "return(_al_glAreProgramsResidentNV(a0 , a1 , a2));")))
+        "return(glAreProgramsResidentNV(a0 , a1 , a2));")))
   (begin
     (define gl:bind-program-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindProgramNV(a0 , a1);")))
+        "glBindProgramNV(a0 , a1);")))
   (begin
     (define gl:delete-programs-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteProgramsNV(a0 , a1);")))
+        "glDeleteProgramsNV(a0 , a1);")))
   (begin
     (define gl:execute-program-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glExecuteProgramNV(a0 , a1 , a2);")))
+        "glExecuteProgramNV(a0 , a1 , a2);")))
   (begin
     (define gl:gen-programs-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenProgramsNV(a0 , a1);")))
+        "glGenProgramsNV(a0 , a1);")))
   (begin
     (define gl:get-program-parameterdv-nv
       (foreign-lambda*
@@ -9342,7 +9209,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glGetProgramParameterdvNV(a0 , a1 , a2 , a3);")))
+        "glGetProgramParameterdvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-parameterfv-nv
       (foreign-lambda*
@@ -9351,19 +9218,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetProgramParameterfvNV(a0 , a1 , a2 , a3);")))
+        "glGetProgramParameterfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-programiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetProgramivNV(a0 , a1 , a2);")))
+        "glGetProgramivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-string-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetProgramStringNV(a0 , a1 , a2);")))
+        "glGetProgramStringNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-track-matrixiv-nv
       (foreign-lambda*
@@ -9372,25 +9239,25 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetTrackMatrixivNV(a0 , a1 , a2 , a3);")))
+        "glGetTrackMatrixivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-vertex-attribdv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetVertexAttribdvNV(a0 , a1 , a2);")))
+        "glGetVertexAttribdvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVertexAttribfvNV(a0 , a1 , a2);")))
+        "glGetVertexAttribfvNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attribiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribivNV(a0 , a1 , a2);")))
+        "glGetVertexAttribivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-pointerv-nv
       (foreign-lambda*
@@ -9398,13 +9265,13 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetVertexAttribPointervNV(a0 , a1 , a2);")))
+        "glGetVertexAttribPointervNV(a0 , a1 , a2);")))
   (begin
     (define gl:is-program-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsProgramNV(a0));")))
+        "return(glIsProgramNV(a0));")))
   (begin
     (define gl:load-program-nv
       (foreign-lambda*
@@ -9413,7 +9280,7 @@
          (unsigned-integer a1)
          (integer a2)
          (u8vector a3))
-        "_al_glLoadProgramNV(a0 , a1 , a2 , a3);")))
+        "glLoadProgramNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-parameter4d-nv
       (foreign-lambda*
@@ -9424,13 +9291,13 @@
          (double a3)
          (double a4)
          (double a5))
-        "_al_glProgramParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-parameter4dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glProgramParameter4dvNV(a0 , a1 , a2);")))
+        "glProgramParameter4dvNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-parameter4f-nv
       (foreign-lambda*
@@ -9441,13 +9308,13 @@
          (float a3)
          (float a4)
          (float a5))
-        "_al_glProgramParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-parameter4fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glProgramParameter4fvNV(a0 , a1 , a2);")))
+        "glProgramParameter4fvNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-parameters4dv-nv
       (foreign-lambda*
@@ -9456,7 +9323,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glProgramParameters4dvNV(a0 , a1 , a2 , a3);")))
+        "glProgramParameters4dvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-parameters4fv-nv
       (foreign-lambda*
@@ -9465,13 +9332,13 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glProgramParameters4fvNV(a0 , a1 , a2 , a3);")))
+        "glProgramParameters4fvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:request-resident-programs-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glRequestResidentProgramsNV(a0 , a1);")))
+        "glRequestResidentProgramsNV(a0 , a1);")))
   (begin
     (define gl:track-matrix-nv
       (foreign-lambda*
@@ -9480,7 +9347,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glTrackMatrixNV(a0 , a1 , a2 , a3);")))
+        "glTrackMatrixNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-pointer-nv
       (foreign-lambda*
@@ -9490,151 +9357,151 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer void) a4))
-        "_al_glVertexAttribPointerNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribPointerNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib1d-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glVertexAttrib1dNV(a0 , a1);")))
+        "glVertexAttrib1dNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib1dvNV(a0 , a1);")))
+        "glVertexAttrib1dvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1f-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glVertexAttrib1fNV(a0 , a1);")))
+        "glVertexAttrib1fNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib1fvNV(a0 , a1);")))
+        "glVertexAttrib1fvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1s-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glVertexAttrib1sNV(a0 , a1);")))
+        "glVertexAttrib1sNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib1svNV(a0 , a1);")))
+        "glVertexAttrib1svNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2d-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glVertexAttrib2dNV(a0 , a1 , a2);")))
+        "glVertexAttrib2dNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib2dvNV(a0 , a1);")))
+        "glVertexAttrib2dvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2f-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glVertexAttrib2fNV(a0 , a1 , a2);")))
+        "glVertexAttrib2fNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib2fvNV(a0 , a1);")))
+        "glVertexAttrib2fvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2s-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glVertexAttrib2sNV(a0 , a1 , a2);")))
+        "glVertexAttrib2sNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib2svNV(a0 , a1);")))
+        "glVertexAttrib2svNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3d-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glVertexAttrib3dNV(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3dNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib3dvNV(a0 , a1);")))
+        "glVertexAttrib3dvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3f-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glVertexAttrib3fNV(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3fNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib3fvNV(a0 , a1);")))
+        "glVertexAttrib3fvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3s-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glVertexAttrib3sNV(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3sNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib3svNV(a0 , a1);")))
+        "glVertexAttrib3svNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4d-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glVertexAttrib4dNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4dNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexAttrib4dvNV(a0 , a1);")))
+        "glVertexAttrib4dvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4f-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glVertexAttrib4fNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4fNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexAttrib4fvNV(a0 , a1);")))
+        "glVertexAttrib4fvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4s-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glVertexAttrib4sNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4sNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4svNV(a0 , a1);")))
+        "glVertexAttrib4svNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4ub-nv
       (foreign-lambda*
@@ -9644,151 +9511,151 @@
          (unsigned-char a2)
          (unsigned-char a3)
          (unsigned-char a4))
-        "_al_glVertexAttrib4ubNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4ubNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4ubv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttrib4ubvNV(a0 , a1);")))
+        "glVertexAttrib4ubvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attribs1dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f64vector a2))
-        "_al_glVertexAttribs1dvNV(a0 , a1 , a2);")))
+        "glVertexAttribs1dvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs1fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glVertexAttribs1fvNV(a0 , a1 , a2);")))
+        "glVertexAttribs1fvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs1sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs1svNV(a0 , a1 , a2);")))
+        "glVertexAttribs1svNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs2dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f64vector a2))
-        "_al_glVertexAttribs2dvNV(a0 , a1 , a2);")))
+        "glVertexAttribs2dvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs2fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glVertexAttribs2fvNV(a0 , a1 , a2);")))
+        "glVertexAttribs2fvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs2sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs2svNV(a0 , a1 , a2);")))
+        "glVertexAttribs2svNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs3dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f64vector a2))
-        "_al_glVertexAttribs3dvNV(a0 , a1 , a2);")))
+        "glVertexAttribs3dvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs3fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glVertexAttribs3fvNV(a0 , a1 , a2);")))
+        "glVertexAttribs3fvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs3sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs3svNV(a0 , a1 , a2);")))
+        "glVertexAttribs3svNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs4dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f64vector a2))
-        "_al_glVertexAttribs4dvNV(a0 , a1 , a2);")))
+        "glVertexAttribs4dvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs4fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (f32vector a2))
-        "_al_glVertexAttribs4fvNV(a0 , a1 , a2);")))
+        "glVertexAttribs4fvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs4sv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs4svNV(a0 , a1 , a2);")))
+        "glVertexAttribs4svNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs4ubv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u8vector a2))
-        "_al_glVertexAttribs4ubvNV(a0 , a1 , a2);")))
+        "glVertexAttribs4ubvNV(a0 , a1 , a2);")))
   (begin
     (define gl:tex-bump-parameteriv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glTexBumpParameterivATI(a0 , a1);")))
+        "glTexBumpParameterivATI(a0 , a1);")))
   (begin
     (define gl:tex-bump-parameterfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glTexBumpParameterfvATI(a0 , a1);")))
+        "glTexBumpParameterfvATI(a0 , a1);")))
   (begin
     (define gl:get-tex-bump-parameteriv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glGetTexBumpParameterivATI(a0 , a1);")))
+        "glGetTexBumpParameterivATI(a0 , a1);")))
   (begin
     (define gl:get-tex-bump-parameterfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glGetTexBumpParameterfvATI(a0 , a1);")))
+        "glGetTexBumpParameterfvATI(a0 , a1);")))
   (begin
     (define gl:gen-fragment-shaders-ati
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glGenFragmentShadersATI(a0));")))
+        "return(glGenFragmentShadersATI(a0));")))
   (begin
     (define gl:bind-fragment-shader-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBindFragmentShaderATI(a0);")))
+        "glBindFragmentShaderATI(a0);")))
   (begin
     (define gl:delete-fragment-shader-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glDeleteFragmentShaderATI(a0);")))
+        "glDeleteFragmentShaderATI(a0);")))
   (begin
     (define gl:begin-fragment-shader-ati
-      (foreign-lambda* void () "_al_glBeginFragmentShaderATI();")))
+      (foreign-lambda* void () "glBeginFragmentShaderATI();")))
   (begin
     (define gl:end-fragment-shader-ati
-      (foreign-lambda* void () "_al_glEndFragmentShaderATI();")))
+      (foreign-lambda* void () "glEndFragmentShaderATI();")))
   (begin
     (define gl:pass-tex-coord-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glPassTexCoordATI(a0 , a1 , a2);")))
+        "glPassTexCoordATI(a0 , a1 , a2);")))
   (begin
     (define gl:sample-map-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glSampleMapATI(a0 , a1 , a2);")))
+        "glSampleMapATI(a0 , a1 , a2);")))
   (begin
     (define gl:color-fragment-op1ati
       (foreign-lambda*
@@ -9800,7 +9667,7 @@
          (unsigned-integer a4)
          (unsigned-integer a5)
          (unsigned-integer a6))
-        "_al_glColorFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glColorFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:color-fragment-op2ati
       (foreign-lambda*
@@ -9815,7 +9682,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          (unsigned-integer a9))
-        "_al_glColorFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glColorFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:color-fragment-op3ati
       (foreign-lambda*
@@ -9833,7 +9700,7 @@
          (unsigned-integer a10)
          (unsigned-integer a11)
          (unsigned-integer a12))
-        "_al_glColorFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
+        "glColorFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11 , a12);")))
   (begin
     (define gl:alpha-fragment-op1ati
       (foreign-lambda*
@@ -9844,7 +9711,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glAlphaFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glAlphaFragmentOp1ATI(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:alpha-fragment-op2ati
       (foreign-lambda*
@@ -9858,7 +9725,7 @@
          (unsigned-integer a6)
          (unsigned-integer a7)
          (unsigned-integer a8))
-        "_al_glAlphaFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glAlphaFragmentOp2ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:alpha-fragment-op3ati
       (foreign-lambda*
@@ -9875,37 +9742,37 @@
          (unsigned-integer a9)
          (unsigned-integer a10)
          (unsigned-integer a11))
-        "_al_glAlphaFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glAlphaFragmentOp3ATI(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:set-fragment-shader-constant-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glSetFragmentShaderConstantATI(a0 , a1);")))
+        "glSetFragmentShaderConstantATI(a0 , a1);")))
   (begin
     (define gl:pntrianglesi-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPNTrianglesiATI(a0 , a1);")))
+        "glPNTrianglesiATI(a0 , a1);")))
   (begin
     (define gl:pntrianglesf-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glPNTrianglesfATI(a0 , a1);")))
+        "glPNTrianglesfATI(a0 , a1);")))
   (begin
     (define gl:new-object-buffer-ati
       (foreign-lambda*
         unsigned-integer
         ((integer a0) ((c-pointer void) a1) (unsigned-integer a2))
-        "return(_al_glNewObjectBufferATI(a0 , a1 , a2));")))
+        "return(glNewObjectBufferATI(a0 , a1 , a2));")))
   (begin
     (define gl:is-object-buffer-ati
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsObjectBufferATI(a0));")))
+        "return(glIsObjectBufferATI(a0));")))
   (begin
     (define gl:update-object-buffer-ati
       (foreign-lambda*
@@ -9915,25 +9782,25 @@
          (integer a2)
          ((c-pointer void) a3)
          (unsigned-integer a4))
-        "_al_glUpdateObjectBufferATI(a0 , a1 , a2 , a3 , a4);")))
+        "glUpdateObjectBufferATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-object-bufferfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetObjectBufferfvATI(a0 , a1 , a2);")))
+        "glGetObjectBufferfvATI(a0 , a1 , a2);")))
   (begin
     (define gl:get-object-bufferiv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetObjectBufferivATI(a0 , a1 , a2);")))
+        "glGetObjectBufferivATI(a0 , a1 , a2);")))
   (begin
     (define gl:free-object-buffer-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glFreeObjectBufferATI(a0);")))
+        "glFreeObjectBufferATI(a0);")))
   (begin
     (define gl:array-object-ati
       (foreign-lambda*
@@ -9944,19 +9811,19 @@
          (integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-array-objectfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetArrayObjectfvATI(a0 , a1 , a2);")))
+        "glGetArrayObjectfvATI(a0 , a1 , a2);")))
   (begin
     (define gl:get-array-objectiv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetArrayObjectivATI(a0 , a1 , a2);")))
+        "glGetArrayObjectivATI(a0 , a1 , a2);")))
   (begin
     (define gl:variant-array-object-ati
       (foreign-lambda*
@@ -9966,49 +9833,49 @@
          (integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glVariantArrayObjectATI(a0 , a1 , a2 , a3 , a4);")))
+        "glVariantArrayObjectATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-variant-array-objectfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVariantArrayObjectfvATI(a0 , a1 , a2);")))
+        "glGetVariantArrayObjectfvATI(a0 , a1 , a2);")))
   (begin
     (define gl:get-variant-array-objectiv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVariantArrayObjectivATI(a0 , a1 , a2);")))
+        "glGetVariantArrayObjectivATI(a0 , a1 , a2);")))
   (begin
     (define gl:begin-vertex-shader-ext
-      (foreign-lambda* void () "_al_glBeginVertexShaderEXT();")))
+      (foreign-lambda* void () "glBeginVertexShaderEXT();")))
   (begin
     (define gl:end-vertex-shader-ext
-      (foreign-lambda* void () "_al_glEndVertexShaderEXT();")))
+      (foreign-lambda* void () "glEndVertexShaderEXT();")))
   (begin
     (define gl:bind-vertex-shader-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBindVertexShaderEXT(a0);")))
+        "glBindVertexShaderEXT(a0);")))
   (begin
     (define gl:gen-vertex-shaders-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glGenVertexShadersEXT(a0));")))
+        "return(glGenVertexShadersEXT(a0));")))
   (begin
     (define gl:delete-vertex-shader-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glDeleteVertexShaderEXT(a0);")))
+        "glDeleteVertexShaderEXT(a0);")))
   (begin
     (define gl:shader-op1ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glShaderOp1EXT(a0 , a1 , a2);")))
+        "glShaderOp1EXT(a0 , a1 , a2);")))
   (begin
     (define gl:shader-op2ext
       (foreign-lambda*
@@ -10017,7 +9884,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glShaderOp2EXT(a0 , a1 , a2 , a3);")))
+        "glShaderOp2EXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:shader-op3ext
       (foreign-lambda*
@@ -10027,7 +9894,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glShaderOp3EXT(a0 , a1 , a2 , a3 , a4);")))
+        "glShaderOp3EXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:swizzle-ext
       (foreign-lambda*
@@ -10038,7 +9905,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glSwizzleEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glSwizzleEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:write-mask-ext
       (foreign-lambda*
@@ -10049,19 +9916,19 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glWriteMaskEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glWriteMaskEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:insert-component-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glInsertComponentEXT(a0 , a1 , a2);")))
+        "glInsertComponentEXT(a0 , a1 , a2);")))
   (begin
     (define gl:extract-component-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glExtractComponentEXT(a0 , a1 , a2);")))
+        "glExtractComponentEXT(a0 , a1 , a2);")))
   (begin
     (define gl:gen-symbols-ext
       (foreign-lambda*
@@ -10070,67 +9937,67 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "return(_al_glGenSymbolsEXT(a0 , a1 , a2 , a3));")))
+        "return(glGenSymbolsEXT(a0 , a1 , a2 , a3));")))
   (begin
     (define gl:set-invariant-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
-        "_al_glSetInvariantEXT(a0 , a1 , a2);")))
+        "glSetInvariantEXT(a0 , a1 , a2);")))
   (begin
     (define gl:set-local-constant-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) ((c-pointer void) a2))
-        "_al_glSetLocalConstantEXT(a0 , a1 , a2);")))
+        "glSetLocalConstantEXT(a0 , a1 , a2);")))
   (begin
     (define gl:variantbv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVariantbvEXT(a0 , a1);")))
+        "glVariantbvEXT(a0 , a1);")))
   (begin
     (define gl:variantsv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVariantsvEXT(a0 , a1);")))
+        "glVariantsvEXT(a0 , a1);")))
   (begin
     (define gl:variantiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVariantivEXT(a0 , a1);")))
+        "glVariantivEXT(a0 , a1);")))
   (begin
     (define gl:variantfv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVariantfvEXT(a0 , a1);")))
+        "glVariantfvEXT(a0 , a1);")))
   (begin
     (define gl:variantdv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVariantdvEXT(a0 , a1);")))
+        "glVariantdvEXT(a0 , a1);")))
   (begin
     (define gl:variantubv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVariantubvEXT(a0 , a1);")))
+        "glVariantubvEXT(a0 , a1);")))
   (begin
     (define gl:variantusv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVariantusvEXT(a0 , a1);")))
+        "glVariantusvEXT(a0 , a1);")))
   (begin
     (define gl:variantuiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVariantuivEXT(a0 , a1);")))
+        "glVariantuivEXT(a0 , a1);")))
   (begin
     (define gl:variant-pointer-ext
       (foreign-lambda*
@@ -10139,73 +10006,73 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glVariantPointerEXT(a0 , a1 , a2 , a3);")))
+        "glVariantPointerEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:enable-variant-client-state-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glEnableVariantClientStateEXT(a0);")))
+        "glEnableVariantClientStateEXT(a0);")))
   (begin
     (define gl:disable-variant-client-state-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glDisableVariantClientStateEXT(a0);")))
+        "glDisableVariantClientStateEXT(a0);")))
   (begin
     (define gl:bind-light-parameter-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glBindLightParameterEXT(a0 , a1));")))
+        "return(glBindLightParameterEXT(a0 , a1));")))
   (begin
     (define gl:bind-material-parameter-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glBindMaterialParameterEXT(a0 , a1));")))
+        "return(glBindMaterialParameterEXT(a0 , a1));")))
   (begin
     (define gl:bind-tex-gen-parameter-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "return(_al_glBindTexGenParameterEXT(a0 , a1 , a2));")))
+        "return(glBindTexGenParameterEXT(a0 , a1 , a2));")))
   (begin
     (define gl:bind-texture-unit-parameter-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glBindTextureUnitParameterEXT(a0 , a1));")))
+        "return(glBindTextureUnitParameterEXT(a0 , a1));")))
   (begin
     (define gl:bind-parameter-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glBindParameterEXT(a0));")))
+        "return(glBindParameterEXT(a0));")))
   (begin
     (define gl:is-variant-enabled-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glIsVariantEnabledEXT(a0 , a1));")))
+        "return(glIsVariantEnabledEXT(a0 , a1));")))
   (begin
     (define gl:get-variant-booleanv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetVariantBooleanvEXT(a0 , a1 , a2);")))
+        "glGetVariantBooleanvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-variant-integerv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVariantIntegervEXT(a0 , a1 , a2);")))
+        "glGetVariantIntegervEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-variant-floatv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVariantFloatvEXT(a0 , a1 , a2);")))
+        "glGetVariantFloatvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-variant-pointerv-ext
       (foreign-lambda*
@@ -10213,199 +10080,199 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetVariantPointervEXT(a0 , a1 , a2);")))
+        "glGetVariantPointervEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-invariant-booleanv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetInvariantBooleanvEXT(a0 , a1 , a2);")))
+        "glGetInvariantBooleanvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-invariant-integerv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetInvariantIntegervEXT(a0 , a1 , a2);")))
+        "glGetInvariantIntegervEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-invariant-floatv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetInvariantFloatvEXT(a0 , a1 , a2);")))
+        "glGetInvariantFloatvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-local-constant-booleanv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetLocalConstantBooleanvEXT(a0 , a1 , a2);")))
+        "glGetLocalConstantBooleanvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-local-constant-integerv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetLocalConstantIntegervEXT(a0 , a1 , a2);")))
+        "glGetLocalConstantIntegervEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-local-constant-floatv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetLocalConstantFloatvEXT(a0 , a1 , a2);")))
+        "glGetLocalConstantFloatvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-stream1s-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glVertexStream1sATI(a0 , a1);")))
+        "glVertexStream1sATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1sv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexStream1svATI(a0 , a1);")))
+        "glVertexStream1svATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1i-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glVertexStream1iATI(a0 , a1);")))
+        "glVertexStream1iATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1iv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexStream1ivATI(a0 , a1);")))
+        "glVertexStream1ivATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1f-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glVertexStream1fATI(a0 , a1);")))
+        "glVertexStream1fATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1fv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexStream1fvATI(a0 , a1);")))
+        "glVertexStream1fvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1d-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1))
-        "_al_glVertexStream1dATI(a0 , a1);")))
+        "glVertexStream1dATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream1dv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexStream1dvATI(a0 , a1);")))
+        "glVertexStream1dvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream2s-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glVertexStream2sATI(a0 , a1 , a2);")))
+        "glVertexStream2sATI(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-stream2sv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexStream2svATI(a0 , a1);")))
+        "glVertexStream2svATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream2i-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glVertexStream2iATI(a0 , a1 , a2);")))
+        "glVertexStream2iATI(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-stream2iv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexStream2ivATI(a0 , a1);")))
+        "glVertexStream2ivATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream2f-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2))
-        "_al_glVertexStream2fATI(a0 , a1 , a2);")))
+        "glVertexStream2fATI(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-stream2fv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexStream2fvATI(a0 , a1);")))
+        "glVertexStream2fvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream2d-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2))
-        "_al_glVertexStream2dATI(a0 , a1 , a2);")))
+        "glVertexStream2dATI(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-stream2dv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexStream2dvATI(a0 , a1);")))
+        "glVertexStream2dvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream3s-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glVertexStream3sATI(a0 , a1 , a2 , a3);")))
+        "glVertexStream3sATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-stream3sv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexStream3svATI(a0 , a1);")))
+        "glVertexStream3svATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream3i-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glVertexStream3iATI(a0 , a1 , a2 , a3);")))
+        "glVertexStream3iATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-stream3iv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexStream3ivATI(a0 , a1);")))
+        "glVertexStream3ivATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream3f-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glVertexStream3fATI(a0 , a1 , a2 , a3);")))
+        "glVertexStream3fATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-stream3fv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexStream3fvATI(a0 , a1);")))
+        "glVertexStream3fvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream3d-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glVertexStream3dATI(a0 , a1 , a2 , a3);")))
+        "glVertexStream3dATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-stream3dv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexStream3dvATI(a0 , a1);")))
+        "glVertexStream3dvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream4s-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glVertexStream4sATI(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexStream4sATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-stream4sv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexStream4svATI(a0 , a1);")))
+        "glVertexStream4svATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream4i-ati
       (foreign-lambda*
@@ -10415,127 +10282,127 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glVertexStream4iATI(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexStream4iATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-stream4iv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexStream4ivATI(a0 , a1);")))
+        "glVertexStream4ivATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream4f-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glVertexStream4fATI(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexStream4fATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-stream4fv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glVertexStream4fvATI(a0 , a1);")))
+        "glVertexStream4fvATI(a0 , a1);")))
   (begin
     (define gl:vertex-stream4d-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glVertexStream4dATI(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexStream4dATI(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-stream4dv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glVertexStream4dvATI(a0 , a1);")))
+        "glVertexStream4dvATI(a0 , a1);")))
   (begin
     (define gl:normal-stream3b-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (char a1) (char a2) (char a3))
-        "_al_glNormalStream3bATI(a0 , a1 , a2 , a3);")))
+        "glNormalStream3bATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:normal-stream3bv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glNormalStream3bvATI(a0 , a1);")))
+        "glNormalStream3bvATI(a0 , a1);")))
   (begin
     (define gl:normal-stream3s-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glNormalStream3sATI(a0 , a1 , a2 , a3);")))
+        "glNormalStream3sATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:normal-stream3sv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glNormalStream3svATI(a0 , a1);")))
+        "glNormalStream3svATI(a0 , a1);")))
   (begin
     (define gl:normal-stream3i-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glNormalStream3iATI(a0 , a1 , a2 , a3);")))
+        "glNormalStream3iATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:normal-stream3iv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glNormalStream3ivATI(a0 , a1);")))
+        "glNormalStream3ivATI(a0 , a1);")))
   (begin
     (define gl:normal-stream3f-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glNormalStream3fATI(a0 , a1 , a2 , a3);")))
+        "glNormalStream3fATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:normal-stream3fv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glNormalStream3fvATI(a0 , a1);")))
+        "glNormalStream3fvATI(a0 , a1);")))
   (begin
     (define gl:normal-stream3d-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glNormalStream3dATI(a0 , a1 , a2 , a3);")))
+        "glNormalStream3dATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:normal-stream3dv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glNormalStream3dvATI(a0 , a1);")))
+        "glNormalStream3dvATI(a0 , a1);")))
   (begin
     (define gl:client-active-vertex-stream-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glClientActiveVertexStreamATI(a0);")))
+        "glClientActiveVertexStreamATI(a0);")))
   (begin
     (define gl:vertex-blend-envi-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glVertexBlendEnviATI(a0 , a1);")))
+        "glVertexBlendEnviATI(a0 , a1);")))
   (begin
     (define gl:vertex-blend-envf-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1))
-        "_al_glVertexBlendEnvfATI(a0 , a1);")))
+        "glVertexBlendEnvfATI(a0 , a1);")))
   (begin
     (define gl:element-pointer-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer void) a1))
-        "_al_glElementPointerATI(a0 , a1);")))
+        "glElementPointerATI(a0 , a1);")))
   (begin
     (define gl:draw-element-array-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glDrawElementArrayATI(a0 , a1);")))
+        "glDrawElementArrayATI(a0 , a1);")))
   (begin
     (define gl:draw-range-element-array-ati
       (foreign-lambda*
@@ -10544,82 +10411,82 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glDrawRangeElementArrayATI(a0 , a1 , a2 , a3);")))
+        "glDrawRangeElementArrayATI(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-mesh-arrays-sun
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glDrawMeshArraysSUN(a0 , a1 , a2 , a3);")))
+        "glDrawMeshArraysSUN(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:gen-occlusion-queries-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenOcclusionQueriesNV(a0 , a1);")))
+        "glGenOcclusionQueriesNV(a0 , a1);")))
   (begin
     (define gl:delete-occlusion-queries-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteOcclusionQueriesNV(a0 , a1);")))
+        "glDeleteOcclusionQueriesNV(a0 , a1);")))
   (begin
     (define gl:is-occlusion-query-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsOcclusionQueryNV(a0));")))
+        "return(glIsOcclusionQueryNV(a0));")))
   (begin
     (define gl:begin-occlusion-query-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginOcclusionQueryNV(a0);")))
+        "glBeginOcclusionQueryNV(a0);")))
   (begin
     (define gl:end-occlusion-query-nv
-      (foreign-lambda* void () "_al_glEndOcclusionQueryNV();")))
+      (foreign-lambda* void () "glEndOcclusionQueryNV();")))
   (begin
     (define gl:get-occlusion-queryiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetOcclusionQueryivNV(a0 , a1 , a2);")))
+        "glGetOcclusionQueryivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-occlusion-queryuiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetOcclusionQueryuivNV(a0 , a1 , a2);")))
+        "glGetOcclusionQueryuivNV(a0 , a1 , a2);")))
   (begin
     (define gl:point-parameteri-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPointParameteriNV(a0 , a1);")))
+        "glPointParameteriNV(a0 , a1);")))
   (begin
     (define gl:point-parameteriv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glPointParameterivNV(a0 , a1);")))
+        "glPointParameterivNV(a0 , a1);")))
   (begin
     (define gl:active-stencil-face-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glActiveStencilFaceEXT(a0);")))
+        "glActiveStencilFaceEXT(a0);")))
   (begin
     (define gl:element-pointer-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer void) a1))
-        "_al_glElementPointerAPPLE(a0 , a1);")))
+        "glElementPointerAPPLE(a0 , a1);")))
   (begin
     (define gl:draw-element-array-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glDrawElementArrayAPPLE(a0 , a1 , a2);")))
+        "glDrawElementArrayAPPLE(a0 , a1 , a2);")))
   (begin
     (define gl:draw-range-element-array-apple
       (foreign-lambda*
@@ -10629,13 +10496,13 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4);")))
+        "glDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-draw-element-array-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1) (s32vector a2) (integer a3))
-        "_al_glMultiDrawElementArrayAPPLE(a0 , a1 , a2 , a3);")))
+        "glMultiDrawElementArrayAPPLE(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-draw-range-element-array-apple
       (foreign-lambda*
@@ -10646,103 +10513,100 @@
          (s32vector a3)
          (s32vector a4)
          (integer a5))
-        "_al_glMultiDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glMultiDrawRangeElementArrayAPPLE(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:gen-fences-apple
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenFencesAPPLE(a0 , a1);")))
+        "glGenFencesAPPLE(a0 , a1);")))
   (begin
     (define gl:delete-fences-apple
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteFencesAPPLE(a0 , a1);")))
+        "glDeleteFencesAPPLE(a0 , a1);")))
   (begin
     (define gl:set-fence-apple
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glSetFenceAPPLE(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glSetFenceAPPLE(a0);")))
   (begin
     (define gl:is-fence-apple
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsFenceAPPLE(a0));")))
+        "return(glIsFenceAPPLE(a0));")))
   (begin
     (define gl:test-fence-apple
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glTestFenceAPPLE(a0));")))
+        "return(glTestFenceAPPLE(a0));")))
   (begin
     (define gl:finish-fence-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glFinishFenceAPPLE(a0);")))
+        "glFinishFenceAPPLE(a0);")))
   (begin
     (define gl:test-object-apple
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glTestObjectAPPLE(a0 , a1));")))
+        "return(glTestObjectAPPLE(a0 , a1));")))
   (begin
     (define gl:finish-object-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glFinishObjectAPPLE(a0 , a1);")))
+        "glFinishObjectAPPLE(a0 , a1);")))
   (begin
     (define gl:bind-vertex-array-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBindVertexArrayAPPLE(a0);")))
+        "glBindVertexArrayAPPLE(a0);")))
   (begin
     (define gl:delete-vertex-arrays-apple
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteVertexArraysAPPLE(a0 , a1);")))
+        "glDeleteVertexArraysAPPLE(a0 , a1);")))
   (begin
     (define gl:gen-vertex-arrays-apple
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenVertexArraysAPPLE(a0 , a1);")))
+        "glGenVertexArraysAPPLE(a0 , a1);")))
   (begin
     (define gl:is-vertex-array-apple
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsVertexArrayAPPLE(a0));")))
+        "return(glIsVertexArrayAPPLE(a0));")))
   (begin
     (define gl:vertex-array-range-apple
       (foreign-lambda*
         void
         ((integer a0) ((c-pointer void) a1))
-        "_al_glVertexArrayRangeAPPLE(a0 , a1);")))
+        "glVertexArrayRangeAPPLE(a0 , a1);")))
   (begin
     (define gl:flush-vertex-array-range-apple
       (foreign-lambda*
         void
         ((integer a0) ((c-pointer void) a1))
-        "_al_glFlushVertexArrayRangeAPPLE(a0 , a1);")))
+        "glFlushVertexArrayRangeAPPLE(a0 , a1);")))
   (begin
     (define gl:vertex-array-parameteri-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glVertexArrayParameteriAPPLE(a0 , a1);")))
+        "glVertexArrayParameteriAPPLE(a0 , a1);")))
   (begin
     (define gl:draw-buffers-ati
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDrawBuffersATI(a0 , a1);")))
+        "glDrawBuffersATI(a0 , a1);")))
   (begin
     (define gl:program-named-parameter4f-nv
       (foreign-lambda*
@@ -10754,7 +10618,7 @@
          (float a4)
          (float a5)
          (float a6))
-        "_al_glProgramNamedParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glProgramNamedParameter4fNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:program-named-parameter4d-nv
       (foreign-lambda*
@@ -10766,295 +10630,289 @@
          (double a4)
          (double a5)
          (double a6))
-        "_al_glProgramNamedParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glProgramNamedParameter4dNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:program-named-parameter4fv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u8vector a2) (f32vector a3))
-        "_al_glProgramNamedParameter4fvNV(a0 , a1 , a2 , a3);")))
+        "glProgramNamedParameter4fvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-named-parameter4dv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u8vector a2) (f64vector a3))
-        "_al_glProgramNamedParameter4dvNV(a0 , a1 , a2 , a3);")))
+        "glProgramNamedParameter4dvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-named-parameterfv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u8vector a2) (f32vector a3))
-        "_al_glGetProgramNamedParameterfvNV(a0 , a1 , a2 , a3);")))
+        "glGetProgramNamedParameterfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-named-parameterdv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u8vector a2) (f64vector a3))
-        "_al_glGetProgramNamedParameterdvNV(a0 , a1 , a2 , a3);")))
+        "glGetProgramNamedParameterdvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex2h-nv
-      (foreign-lambda*
-        void
-        ((short a0) (short a1))
-        "_al_glVertex2hNV(a0 , a1);")))
+      (foreign-lambda* void ((short a0) (short a1)) "glVertex2hNV(a0 , a1);")))
   (begin
     (define gl:vertex2hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glVertex2hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex2hvNV(a0);")))
   (begin
     (define gl:vertex3h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glVertex3hNV(a0 , a1 , a2);")))
+        "glVertex3hNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex3hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glVertex3hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex3hvNV(a0);")))
   (begin
     (define gl:vertex4h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2) (short a3))
-        "_al_glVertex4hNV(a0 , a1 , a2 , a3);")))
+        "glVertex4hNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex4hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glVertex4hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertex4hvNV(a0);")))
   (begin
     (define gl:normal3h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glNormal3hNV(a0 , a1 , a2);")))
+        "glNormal3hNV(a0 , a1 , a2);")))
   (begin
     (define gl:normal3hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glNormal3hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glNormal3hvNV(a0);")))
   (begin
     (define gl:color3h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glColor3hNV(a0 , a1 , a2);")))
+        "glColor3hNV(a0 , a1 , a2);")))
   (begin
     (define gl:color3hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glColor3hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glColor3hvNV(a0);")))
   (begin
     (define gl:color4h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2) (short a3))
-        "_al_glColor4hNV(a0 , a1 , a2 , a3);")))
+        "glColor4hNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color4hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glColor4hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glColor4hvNV(a0);")))
   (begin
     (define gl:tex-coord1h-nv
-      (foreign-lambda* void ((short a0)) "_al_glTexCoord1hNV(a0);")))
+      (foreign-lambda* void ((short a0)) "glTexCoord1hNV(a0);")))
   (begin
     (define gl:tex-coord1hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord1hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord1hvNV(a0);")))
   (begin
     (define gl:tex-coord2h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1))
-        "_al_glTexCoord2hNV(a0 , a1);")))
+        "glTexCoord2hNV(a0 , a1);")))
   (begin
     (define gl:tex-coord2hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord2hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord2hvNV(a0);")))
   (begin
     (define gl:tex-coord3h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glTexCoord3hNV(a0 , a1 , a2);")))
+        "glTexCoord3hNV(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord3hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord3hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord3hvNV(a0);")))
   (begin
     (define gl:tex-coord4h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2) (short a3))
-        "_al_glTexCoord4hNV(a0 , a1 , a2 , a3);")))
+        "glTexCoord4hNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord4hv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glTexCoord4hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glTexCoord4hvNV(a0);")))
   (begin
     (define gl:multi-tex-coord1h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glMultiTexCoord1hNV(a0 , a1);")))
+        "glMultiTexCoord1hNV(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord1hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord1hvNV(a0 , a1);")))
+        "glMultiTexCoord1hvNV(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glMultiTexCoord2hNV(a0 , a1 , a2);")))
+        "glMultiTexCoord2hNV(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord2hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord2hvNV(a0 , a1);")))
+        "glMultiTexCoord2hvNV(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glMultiTexCoord3hNV(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3hNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord3hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord3hvNV(a0 , a1);")))
+        "glMultiTexCoord3hvNV(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glMultiTexCoord4hNV(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4hNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord4hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glMultiTexCoord4hvNV(a0 , a1);")))
+        "glMultiTexCoord4hvNV(a0 , a1);")))
   (begin
     (define gl:fog-coordh-nv
-      (foreign-lambda* void ((short a0)) "_al_glFogCoordhNV(a0);")))
+      (foreign-lambda* void ((short a0)) "glFogCoordhNV(a0);")))
   (begin
     (define gl:fog-coordhv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glFogCoordhvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glFogCoordhvNV(a0);")))
   (begin
     (define gl:secondary-color3h-nv
       (foreign-lambda*
         void
         ((short a0) (short a1) (short a2))
-        "_al_glSecondaryColor3hNV(a0 , a1 , a2);")))
+        "glSecondaryColor3hNV(a0 , a1 , a2);")))
   (begin
     (define gl:secondary-color3hv-nv
-      (foreign-lambda*
-        void
-        ((s16vector a0))
-        "_al_glSecondaryColor3hvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glSecondaryColor3hvNV(a0);")))
   (begin
     (define gl:vertex-weighth-nv
-      (foreign-lambda* void ((short a0)) "_al_glVertexWeighthNV(a0);")))
+      (foreign-lambda* void ((short a0)) "glVertexWeighthNV(a0);")))
   (begin
     (define gl:vertex-weighthv-nv
-      (foreign-lambda* void ((s16vector a0)) "_al_glVertexWeighthvNV(a0);")))
+      (foreign-lambda* void ((s16vector a0)) "glVertexWeighthvNV(a0);")))
   (begin
     (define gl:vertex-attrib1h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1))
-        "_al_glVertexAttrib1hNV(a0 , a1);")))
+        "glVertexAttrib1hNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib1hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib1hvNV(a0 , a1);")))
+        "glVertexAttrib1hvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib2h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2))
-        "_al_glVertexAttrib2hNV(a0 , a1 , a2);")))
+        "glVertexAttrib2hNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib2hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib2hvNV(a0 , a1);")))
+        "glVertexAttrib2hvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib3h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3))
-        "_al_glVertexAttrib3hNV(a0 , a1 , a2 , a3);")))
+        "glVertexAttrib3hNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib3hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib3hvNV(a0 , a1);")))
+        "glVertexAttrib3hvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib4h-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (short a1) (short a2) (short a3) (short a4))
-        "_al_glVertexAttrib4hNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttrib4hNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib4hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttrib4hvNV(a0 , a1);")))
+        "glVertexAttrib4hvNV(a0 , a1);")))
   (begin
     (define gl:vertex-attribs1hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs1hvNV(a0 , a1 , a2);")))
+        "glVertexAttribs1hvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs2hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs2hvNV(a0 , a1 , a2);")))
+        "glVertexAttribs2hvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs3hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs3hvNV(a0 , a1 , a2);")))
+        "glVertexAttribs3hvNV(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attribs4hv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s16vector a2))
-        "_al_glVertexAttribs4hvNV(a0 , a1 , a2);")))
+        "glVertexAttribs4hvNV(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-data-range-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glPixelDataRangeNV(a0 , a1 , a2);")))
+        "glPixelDataRangeNV(a0 , a1 , a2);")))
   (begin
     (define gl:flush-pixel-data-range-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glFlushPixelDataRangeNV(a0);")))
+        "glFlushPixelDataRangeNV(a0);")))
   (begin
     (define gl:primitive-restart-nv
-      (foreign-lambda* void () "_al_glPrimitiveRestartNV();")))
+      (foreign-lambda* void () "glPrimitiveRestartNV();")))
   (begin
     (define gl:primitive-restart-index-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glPrimitiveRestartIndexNV(a0);")))
+        "glPrimitiveRestartIndexNV(a0);")))
   (begin
     (define gl:map-object-buffer-ati
       (foreign-lambda*
         (c-pointer void)
         ((unsigned-integer a0))
-        "return(_al_glMapObjectBufferATI(a0));")))
+        "return(glMapObjectBufferATI(a0));")))
   (begin
     (define gl:unmap-object-buffer-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glUnmapObjectBufferATI(a0);")))
+        "glUnmapObjectBufferATI(a0);")))
   (begin
     (define gl:vertex-attrib-array-object-ati
       (foreign-lambda*
@@ -11066,214 +10924,211 @@
          (integer a4)
          (unsigned-integer a5)
          (unsigned-integer a6))
-        "_al_glVertexAttribArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glVertexAttribArrayObjectATI(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:get-vertex-attrib-array-objectfv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetVertexAttribArrayObjectfvATI(a0 , a1 , a2);")))
+        "glGetVertexAttribArrayObjectfvATI(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-array-objectiv-ati
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribArrayObjectivATI(a0 , a1 , a2);")))
+        "glGetVertexAttribArrayObjectivATI(a0 , a1 , a2);")))
   (begin
     (define gl:vertex2b-oes
-      (foreign-lambda*
-        void
-        ((char a0) (char a1))
-        "_al_glVertex2bOES(a0 , a1);")))
+      (foreign-lambda* void ((char a0) (char a1)) "glVertex2bOES(a0 , a1);")))
   (begin
     (define gl:vertex3b-oes
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glVertex3bOES(a0 , a1 , a2);")))
+        "glVertex3bOES(a0 , a1 , a2);")))
   (begin
     (define gl:vertex4b-oes
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2) (char a3))
-        "_al_glVertex4bOES(a0 , a1 , a2 , a3);")))
+        "glVertex4bOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex2bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glVertex2bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glVertex2bvOES(a0);")))
   (begin
     (define gl:vertex3bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glVertex3bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glVertex3bvOES(a0);")))
   (begin
     (define gl:vertex4bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glVertex4bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glVertex4bvOES(a0);")))
   (begin
     (define gl:tex-coord1b-oes
-      (foreign-lambda* void ((char a0)) "_al_glTexCoord1bOES(a0);")))
+      (foreign-lambda* void ((char a0)) "glTexCoord1bOES(a0);")))
   (begin
     (define gl:tex-coord2b-oes
       (foreign-lambda*
         void
         ((char a0) (char a1))
-        "_al_glTexCoord2bOES(a0 , a1);")))
+        "glTexCoord2bOES(a0 , a1);")))
   (begin
     (define gl:tex-coord3b-oes
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2))
-        "_al_glTexCoord3bOES(a0 , a1 , a2);")))
+        "glTexCoord3bOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord4b-oes
       (foreign-lambda*
         void
         ((char a0) (char a1) (char a2) (char a3))
-        "_al_glTexCoord4bOES(a0 , a1 , a2 , a3);")))
+        "glTexCoord4bOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord1bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord1bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glTexCoord1bvOES(a0);")))
   (begin
     (define gl:tex-coord2bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord2bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glTexCoord2bvOES(a0);")))
   (begin
     (define gl:tex-coord3bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord3bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glTexCoord3bvOES(a0);")))
   (begin
     (define gl:tex-coord4bv-oes
-      (foreign-lambda* void ((c-string a0)) "_al_glTexCoord4bvOES(a0);")))
+      (foreign-lambda* void ((c-string a0)) "glTexCoord4bvOES(a0);")))
   (begin
     (define gl:multi-tex-coord1b-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (char a1))
-        "_al_glMultiTexCoord1bOES(a0 , a1);")))
+        "glMultiTexCoord1bOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2b-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (char a1) (char a2))
-        "_al_glMultiTexCoord2bOES(a0 , a1 , a2);")))
+        "glMultiTexCoord2bOES(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord3b-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (char a1) (char a2) (char a3))
-        "_al_glMultiTexCoord3bOES(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3bOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord4b-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (char a1) (char a2) (char a3) (char a4))
-        "_al_glMultiTexCoord4bOES(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4bOES(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord1bv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glMultiTexCoord1bvOES(a0 , a1);")))
+        "glMultiTexCoord1bvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2bv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glMultiTexCoord2bvOES(a0 , a1);")))
+        "glMultiTexCoord2bvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3bv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glMultiTexCoord3bvOES(a0 , a1);")))
+        "glMultiTexCoord3bvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4bv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glMultiTexCoord4bvOES(a0 , a1);")))
+        "glMultiTexCoord4bvOES(a0 , a1);")))
   (begin
     (define gl:vertex2x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glVertex2xOES(a0 , a1);")))
+        "glVertex2xOES(a0 , a1);")))
   (begin
     (define gl:vertex3x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glVertex3xOES(a0 , a1 , a2);")))
+        "glVertex3xOES(a0 , a1 , a2);")))
   (begin
     (define gl:vertex4x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glVertex4xOES(a0 , a1 , a2 , a3);")))
+        "glVertex4xOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex2xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glVertex2xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex2xvOES(a0);")))
   (begin
     (define gl:vertex3xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glVertex3xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex3xvOES(a0);")))
   (begin
     (define gl:vertex4xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glVertex4xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glVertex4xvOES(a0);")))
   (begin
     (define gl:normal3x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glNormal3xOES(a0 , a1 , a2);")))
+        "glNormal3xOES(a0 , a1 , a2);")))
   (begin
     (define gl:normal3xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glNormal3xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glNormal3xvOES(a0);")))
   (begin
     (define gl:tex-coord1x-oes
-      (foreign-lambda* void ((integer a0)) "_al_glTexCoord1xOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glTexCoord1xOES(a0);")))
   (begin
     (define gl:tex-coord2x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glTexCoord2xOES(a0 , a1);")))
+        "glTexCoord2xOES(a0 , a1);")))
   (begin
     (define gl:tex-coord3x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glTexCoord3xOES(a0 , a1 , a2);")))
+        "glTexCoord3xOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-coord4x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glTexCoord4xOES(a0 , a1 , a2 , a3);")))
+        "glTexCoord4xOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:tex-coord1xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord1xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord1xvOES(a0);")))
   (begin
     (define gl:tex-coord2xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord2xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord2xvOES(a0);")))
   (begin
     (define gl:tex-coord3xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord3xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord3xvOES(a0);")))
   (begin
     (define gl:tex-coord4xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glTexCoord4xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glTexCoord4xvOES(a0);")))
   (begin
     (define gl:multi-tex-coord1x-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glMultiTexCoord1xOES(a0 , a1);")))
+        "glMultiTexCoord1xOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2x-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glMultiTexCoord2xOES(a0 , a1 , a2);")))
+        "glMultiTexCoord2xOES(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-coord3x-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glMultiTexCoord3xOES(a0 , a1 , a2 , a3);")))
+        "glMultiTexCoord3xOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-coord4x-oes
       (foreign-lambda*
@@ -11283,85 +11138,85 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glMultiTexCoord4xOES(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoord4xOES(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-coord1xv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord1xvOES(a0 , a1);")))
+        "glMultiTexCoord1xvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord2xv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord2xvOES(a0 , a1);")))
+        "glMultiTexCoord2xvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord3xv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord3xvOES(a0 , a1);")))
+        "glMultiTexCoord3xvOES(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord4xv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glMultiTexCoord4xvOES(a0 , a1);")))
+        "glMultiTexCoord4xvOES(a0 , a1);")))
   (begin
     (define gl:color3x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glColor3xOES(a0 , a1 , a2);")))
+        "glColor3xOES(a0 , a1 , a2);")))
   (begin
     (define gl:color4x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glColor4xOES(a0 , a1 , a2 , a3);")))
+        "glColor4xOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:color3xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glColor3xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glColor3xvOES(a0);")))
   (begin
     (define gl:color4xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glColor4xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glColor4xvOES(a0);")))
   (begin
     (define gl:indexx-oes
-      (foreign-lambda* void ((integer a0)) "_al_glIndexxOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glIndexxOES(a0);")))
   (begin
     (define gl:indexxv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glIndexxvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glIndexxvOES(a0);")))
   (begin
     (define gl:rectx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glRectxOES(a0 , a1 , a2 , a3);")))
+        "glRectxOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:depth-rangex-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glDepthRangexOES(a0 , a1);")))
+        "glDepthRangexOES(a0 , a1);")))
   (begin
     (define gl:rotatex-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glRotatexOES(a0 , a1 , a2 , a3);")))
+        "glRotatexOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:scalex-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glScalexOES(a0 , a1 , a2);")))
+        "glScalexOES(a0 , a1 , a2);")))
   (begin
     (define gl:translatex-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glTranslatexOES(a0 , a1 , a2);")))
+        "glTranslatexOES(a0 , a1 , a2);")))
   (begin
     (define gl:frustumx-oes
       (foreign-lambda*
@@ -11372,7 +11227,7 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glFrustumxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glFrustumxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:orthox-oes
       (foreign-lambda*
@@ -11383,178 +11238,178 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glOrthoxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glOrthoxOES(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:tex-genx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glTexGenxOES(a0 , a1 , a2);")))
+        "glTexGenxOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-genxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glTexGenxvOES(a0 , a1 , a2);")))
+        "glTexGenxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-genxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTexGenxvOES(a0 , a1 , a2);")))
+        "glGetTexGenxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:clip-planex-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glClipPlanexOES(a0 , a1);")))
+        "glClipPlanexOES(a0 , a1);")))
   (begin
     (define gl:get-clip-planex-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glGetClipPlanexOES(a0 , a1);")))
+        "glGetClipPlanexOES(a0 , a1);")))
   (begin
     (define gl:raster-pos2x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glRasterPos2xOES(a0 , a1);")))
+        "glRasterPos2xOES(a0 , a1);")))
   (begin
     (define gl:raster-pos3x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glRasterPos3xOES(a0 , a1 , a2);")))
+        "glRasterPos3xOES(a0 , a1 , a2);")))
   (begin
     (define gl:raster-pos4x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glRasterPos4xOES(a0 , a1 , a2 , a3);")))
+        "glRasterPos4xOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:raster-pos2xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos2xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos2xvOES(a0);")))
   (begin
     (define gl:raster-pos3xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos3xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos3xvOES(a0);")))
   (begin
     (define gl:raster-pos4xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glRasterPos4xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glRasterPos4xvOES(a0);")))
   (begin
     (define gl:materialx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glMaterialxOES(a0 , a1 , a2);")))
+        "glMaterialxOES(a0 , a1 , a2);")))
   (begin
     (define gl:materialxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glMaterialxvOES(a0 , a1 , a2);")))
+        "glMaterialxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-materialx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetMaterialxOES(a0 , a1 , a2);")))
+        "glGetMaterialxOES(a0 , a1 , a2);")))
   (begin
     (define gl:lightx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glLightxOES(a0 , a1 , a2);")))
+        "glLightxOES(a0 , a1 , a2);")))
   (begin
     (define gl:lightxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glLightxvOES(a0 , a1 , a2);")))
+        "glLightxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-lightx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetLightxOES(a0 , a1 , a2);")))
+        "glGetLightxOES(a0 , a1 , a2);")))
   (begin
     (define gl:light-modelx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glLightModelxOES(a0 , a1);")))
+        "glLightModelxOES(a0 , a1);")))
   (begin
     (define gl:light-modelxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glLightModelxvOES(a0 , a1);")))
+        "glLightModelxvOES(a0 , a1);")))
   (begin
     (define gl:point-sizex-oes
-      (foreign-lambda* void ((integer a0)) "_al_glPointSizexOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glPointSizexOES(a0);")))
   (begin
     (define gl:line-widthx-oes
-      (foreign-lambda* void ((integer a0)) "_al_glLineWidthxOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glLineWidthxOES(a0);")))
   (begin
     (define gl:polygon-offsetx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glPolygonOffsetxOES(a0 , a1);")))
+        "glPolygonOffsetxOES(a0 , a1);")))
   (begin
     (define gl:pixel-storex
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPixelStorex(a0 , a1);")))
+        "glPixelStorex(a0 , a1);")))
   (begin
     (define gl:pixel-transferx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glPixelTransferxOES(a0 , a1);")))
+        "glPixelTransferxOES(a0 , a1);")))
   (begin
     (define gl:pixel-mapx
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2))
-        "_al_glPixelMapx(a0 , a1 , a2);")))
+        "glPixelMapx(a0 , a1 , a2);")))
   (begin
     (define gl:get-pixel-mapxv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2))
-        "_al_glGetPixelMapxv(a0 , a1 , a2);")))
+        "glGetPixelMapxv(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameterx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glConvolutionParameterxOES(a0 , a1 , a2);")))
+        "glConvolutionParameterxOES(a0 , a1 , a2);")))
   (begin
     (define gl:convolution-parameterxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glConvolutionParameterxvOES(a0 , a1 , a2);")))
+        "glConvolutionParameterxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-convolution-parameterxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetConvolutionParameterxvOES(a0 , a1 , a2);")))
+        "glGetConvolutionParameterxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-histogram-parameterxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetHistogramParameterxvOES(a0 , a1 , a2);")))
+        "glGetHistogramParameterxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:pixel-zoomx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glPixelZoomxOES(a0 , a1);")))
+        "glPixelZoomxOES(a0 , a1);")))
   (begin
     (define gl:bitmapx-oes
       (foreign-lambda*
@@ -11566,25 +11421,25 @@
          (integer a4)
          (integer a5)
          (u8vector a6))
-        "_al_glBitmapxOES(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glBitmapxOES(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:tex-parameterx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glTexParameterxOES(a0 , a1 , a2);")))
+        "glTexParameterxOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-parameterxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glTexParameterxvOES(a0 , a1 , a2);")))
+        "glTexParameterxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-parameterxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTexParameterxvOES(a0 , a1 , a2);")))
+        "glGetTexParameterxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-level-parameterxv-oes
       (foreign-lambda*
@@ -11593,82 +11448,82 @@
          (integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetTexLevelParameterxvOES(a0 , a1 , a2 , a3);")))
+        "glGetTexLevelParameterxvOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:prioritize-texturesx-oes
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1) (s32vector a2))
-        "_al_glPrioritizeTexturesxOES(a0 , a1 , a2);")))
+        "glPrioritizeTexturesxOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-envx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glTexEnvxOES(a0 , a1 , a2);")))
+        "glTexEnvxOES(a0 , a1 , a2);")))
   (begin
     (define gl:tex-envxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glTexEnvxvOES(a0 , a1 , a2);")))
+        "glTexEnvxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-envxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTexEnvxvOES(a0 , a1 , a2);")))
+        "glGetTexEnvxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:fogx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glFogxOES(a0 , a1);")))
+        "glFogxOES(a0 , a1);")))
   (begin
     (define gl:fogxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glFogxvOES(a0 , a1);")))
+        "glFogxvOES(a0 , a1);")))
   (begin
     (define gl:sample-coverage-oes
       (foreign-lambda*
         void
         ((integer a0) (unsigned-char a1))
-        "_al_glSampleCoverageOES(a0 , a1);")))
+        "glSampleCoverageOES(a0 , a1);")))
   (begin
     (define gl:alpha-funcx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glAlphaFuncxOES(a0 , a1);")))
+        "glAlphaFuncxOES(a0 , a1);")))
   (begin
     (define gl:blend-colorx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glBlendColorxOES(a0 , a1 , a2 , a3);")))
+        "glBlendColorxOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:clear-colorx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glClearColorxOES(a0 , a1 , a2 , a3);")))
+        "glClearColorxOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:clear-depthx-oes
-      (foreign-lambda* void ((integer a0)) "_al_glClearDepthxOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glClearDepthxOES(a0);")))
   (begin
     (define gl:clear-accumx-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glClearAccumxOES(a0 , a1 , a2 , a3);")))
+        "glClearAccumxOES(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:accumx-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glAccumxOES(a0 , a1);")))
+        "glAccumxOES(a0 , a1);")))
   (begin
     (define gl:map1x-oes
       (foreign-lambda*
@@ -11679,7 +11534,7 @@
          (integer a3)
          (integer a4)
          (s32vector a5))
-        "_al_glMap1xOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glMap1xOES(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:map2x-oes
       (foreign-lambda*
@@ -11694,166 +11549,166 @@
          (integer a7)
          (integer a8)
          (s32vector a9))
-        "_al_glMap2xOES(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glMap2xOES(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:map-grid1x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2))
-        "_al_glMapGrid1xOES(a0 , a1 , a2);")))
+        "glMapGrid1xOES(a0 , a1 , a2);")))
   (begin
     (define gl:map-grid2x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (integer a2) (integer a3) (integer a4))
-        "_al_glMapGrid2xOES(a0 , a1 , a2 , a3 , a4);")))
+        "glMapGrid2xOES(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-mapxv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetMapxvOES(a0 , a1 , a2);")))
+        "glGetMapxvOES(a0 , a1 , a2);")))
   (begin
     (define gl:eval-coord1x-oes
-      (foreign-lambda* void ((integer a0)) "_al_glEvalCoord1xOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glEvalCoord1xOES(a0);")))
   (begin
     (define gl:eval-coord2x-oes
       (foreign-lambda*
         void
         ((integer a0) (integer a1))
-        "_al_glEvalCoord2xOES(a0 , a1);")))
+        "glEvalCoord2xOES(a0 , a1);")))
   (begin
     (define gl:eval-coord1xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glEvalCoord1xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glEvalCoord1xvOES(a0);")))
   (begin
     (define gl:eval-coord2xv-oes
-      (foreign-lambda* void ((s32vector a0)) "_al_glEvalCoord2xvOES(a0);")))
+      (foreign-lambda* void ((s32vector a0)) "glEvalCoord2xvOES(a0);")))
   (begin
     (define gl:feedback-bufferx-oes
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glFeedbackBufferxOES(a0 , a1 , a2);")))
+        "glFeedbackBufferxOES(a0 , a1 , a2);")))
   (begin
     (define gl:pass-throughx-oes
-      (foreign-lambda* void ((integer a0)) "_al_glPassThroughxOES(a0);")))
+      (foreign-lambda* void ((integer a0)) "glPassThroughxOES(a0);")))
   (begin
     (define gl:get-fixedv-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glGetFixedvOES(a0 , a1);")))
+        "glGetFixedvOES(a0 , a1);")))
   (begin
     (define gl:depth-rangef-oes
       (foreign-lambda*
         void
         ((float a0) (float a1))
-        "_al_glDepthRangefOES(a0 , a1);")))
+        "glDepthRangefOES(a0 , a1);")))
   (begin
     (define gl:frustumf-oes
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
-        "_al_glFrustumfOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glFrustumfOES(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:orthof-oes
       (foreign-lambda*
         void
         ((float a0) (float a1) (float a2) (float a3) (float a4) (float a5))
-        "_al_glOrthofOES(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glOrthofOES(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:clip-planef-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glClipPlanefOES(a0 , a1);")))
+        "glClipPlanefOES(a0 , a1);")))
   (begin
     (define gl:get-clip-planef-oes
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glGetClipPlanefOES(a0 , a1);")))
+        "glGetClipPlanefOES(a0 , a1);")))
   (begin
     (define gl:clear-depthf-oes
-      (foreign-lambda* void ((double a0)) "_al_glClearDepthfOES(a0);")))
+      (foreign-lambda* void ((double a0)) "glClearDepthfOES(a0);")))
   (begin
     (define gl:depth-bounds-ext
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glDepthBoundsEXT(a0 , a1);")))
+        "glDepthBoundsEXT(a0 , a1);")))
   (begin
     (define gl:blend-equation-separate-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBlendEquationSeparateEXT(a0 , a1);")))
+        "glBlendEquationSeparateEXT(a0 , a1);")))
   (begin
     (define gl:is-renderbuffer-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsRenderbufferEXT(a0));")))
+        "return(glIsRenderbufferEXT(a0));")))
   (begin
     (define gl:bind-renderbuffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindRenderbufferEXT(a0 , a1);")))
+        "glBindRenderbufferEXT(a0 , a1);")))
   (begin
     (define gl:delete-renderbuffers-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteRenderbuffersEXT(a0 , a1);")))
+        "glDeleteRenderbuffersEXT(a0 , a1);")))
   (begin
     (define gl:gen-renderbuffers-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenRenderbuffersEXT(a0 , a1);")))
+        "glGenRenderbuffersEXT(a0 , a1);")))
   (begin
     (define gl:renderbuffer-storage-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
-        "_al_glRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
+        "glRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-renderbuffer-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetRenderbufferParameterivEXT(a0 , a1 , a2);")))
+        "glGetRenderbufferParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:is-framebuffer-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsFramebufferEXT(a0));")))
+        "return(glIsFramebufferEXT(a0));")))
   (begin
     (define gl:bind-framebuffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindFramebufferEXT(a0 , a1);")))
+        "glBindFramebufferEXT(a0 , a1);")))
   (begin
     (define gl:delete-framebuffers-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteFramebuffersEXT(a0 , a1);")))
+        "glDeleteFramebuffersEXT(a0 , a1);")))
   (begin
     (define gl:gen-framebuffers-ext
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenFramebuffersEXT(a0 , a1);")))
+        "glGenFramebuffersEXT(a0 , a1);")))
   (begin
     (define gl:check-framebuffer-status-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0))
-        "return(_al_glCheckFramebufferStatusEXT(a0));")))
+        "return(glCheckFramebufferStatusEXT(a0));")))
   (begin
     (define gl:framebuffer-texture1dext
       (foreign-lambda*
@@ -11863,7 +11718,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture2dext
       (foreign-lambda*
@@ -11873,7 +11728,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:framebuffer-texture3dext
       (foreign-lambda*
@@ -11884,7 +11739,7 @@
          (unsigned-integer a3)
          (integer a4)
          (integer a5))
-        "_al_glFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:framebuffer-renderbuffer-ext
       (foreign-lambda*
@@ -11893,7 +11748,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
+        "glFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-framebuffer-attachment-parameteriv-ext
       (foreign-lambda*
@@ -11902,25 +11757,25 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glGetFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:generate-mipmap-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glGenerateMipmapEXT(a0);")))
+        "glGenerateMipmapEXT(a0);")))
   (begin
     (define gl:string-marker-gremedy
       (foreign-lambda*
         void
         ((integer a0) ((c-pointer void) a1))
-        "_al_glStringMarkerGREMEDY(a0 , a1);")))
+        "glStringMarkerGREMEDY(a0 , a1);")))
   (begin
     (define gl:stencil-clear-tag-ext
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1))
-        "_al_glStencilClearTagEXT(a0 , a1);")))
+        "glStencilClearTagEXT(a0 , a1);")))
   (begin
     (define gl:blit-framebuffer-ext
       (foreign-lambda*
@@ -11935,7 +11790,7 @@
          (integer a7)
          (unsigned-integer a8)
          (unsigned-integer a9))
-        "_al_glBlitFramebufferEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glBlitFramebufferEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:renderbuffer-storage-multisample-ext
       (foreign-lambda*
@@ -11945,7 +11800,7 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-query-objecti64v-ext
       (foreign-lambda*
@@ -11953,7 +11808,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer integer64) a2))
-        "_al_glGetQueryObjecti64vEXT(a0 , a1 , a2);")))
+        "glGetQueryObjecti64vEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-query-objectui64v-ext
       (foreign-lambda*
@@ -11961,7 +11816,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetQueryObjectui64vEXT(a0 , a1 , a2);")))
+        "glGetQueryObjectui64vEXT(a0 , a1 , a2);")))
   (begin
     (define gl:program-env-parameters4fv-ext
       (foreign-lambda*
@@ -11970,7 +11825,7 @@
          (unsigned-integer a1)
          (integer a2)
          (f32vector a3))
-        "_al_glProgramEnvParameters4fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramEnvParameters4fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-local-parameters4fv-ext
       (foreign-lambda*
@@ -11979,37 +11834,37 @@
          (unsigned-integer a1)
          (integer a2)
          (f32vector a3))
-        "_al_glProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:buffer-parameteri-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glBufferParameteriAPPLE(a0 , a1 , a2);")))
+        "glBufferParameteriAPPLE(a0 , a1 , a2);")))
   (begin
     (define gl:flush-mapped-buffer-range-apple
       (foreign-lambda*
         void
-        ((unsigned-integer a0) ((c-pointer void) a1) ((c-pointer void) a2))
-        "_al_glFlushMappedBufferRangeAPPLE(a0 , a1 , a2);")))
+        ((unsigned-integer a0) (long a1) (long a2))
+        "glFlushMappedBufferRangeAPPLE(a0 , a1 , a2);")))
   (begin
     (define gl:uniform-buffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
-        "_al_glUniformBufferEXT(a0 , a1 , a2);")))
+        "glUniformBufferEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniform-buffer-size-ext
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (integer a1))
-        "return(_al_glGetUniformBufferSizeEXT(a0 , a1));")))
+        "return(glGetUniformBufferSizeEXT(a0 , a1));")))
   (begin
     (define gl:get-uniform-offset-ext
       (foreign-lambda*
-        (c-pointer void)
+        long
         ((unsigned-integer a0) (integer a1))
-        "return(_al_glGetUniformOffsetEXT(a0 , a1));")))
+        "return(glGetUniformOffsetEXT(a0 , a1));")))
   (begin
     (define gl:color-mask-indexed-ext
       (foreign-lambda*
@@ -12019,43 +11874,43 @@
          (unsigned-char a2)
          (unsigned-char a3)
          (unsigned-char a4))
-        "_al_glColorMaskIndexedEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glColorMaskIndexedEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-boolean-indexedv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u8vector a2))
-        "_al_glGetBooleanIndexedvEXT(a0 , a1 , a2);")))
+        "glGetBooleanIndexedvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-integer-indexedv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetIntegerIndexedvEXT(a0 , a1 , a2);")))
+        "glGetIntegerIndexedvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:enable-indexed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEnableIndexedEXT(a0 , a1);")))
+        "glEnableIndexedEXT(a0 , a1);")))
   (begin
     (define gl:disable-indexed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDisableIndexedEXT(a0 , a1);")))
+        "glDisableIndexedEXT(a0 , a1);")))
   (begin
     (define gl:is-enabled-indexed-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glIsEnabledIndexedEXT(a0 , a1));")))
+        "return(glIsEnabledIndexedEXT(a0 , a1));")))
   (begin
     (define gl:draw-arrays-instanced-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glDrawArraysInstancedEXT(a0 , a1 , a2 , a3);")))
+        "glDrawArraysInstancedEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:draw-elements-instanced-ext
       (foreign-lambda*
@@ -12065,13 +11920,13 @@
          (unsigned-integer a2)
          ((c-pointer void) a3)
          (integer a4))
-        "_al_glDrawElementsInstancedEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glDrawElementsInstancedEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-parameteri-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glProgramParameteriEXT(a0 , a1 , a2);")))
+        "glProgramParameteriEXT(a0 , a1 , a2);")))
   (begin
     (define gl:framebuffer-texture-ext
       (foreign-lambda*
@@ -12080,7 +11935,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
+        "glFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:framebuffer-texture-face-ext
       (foreign-lambda*
@@ -12090,25 +11945,25 @@
          (unsigned-integer a2)
          (integer a3)
          (unsigned-integer a4))
-        "_al_glFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-i1i-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glVertexAttribI1iEXT(a0 , a1);")))
+        "glVertexAttribI1iEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2i-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glVertexAttribI2iEXT(a0 , a1 , a2);")))
+        "glVertexAttribI2iEXT(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib-i3i-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glVertexAttribI3iEXT(a0 , a1 , a2 , a3);")))
+        "glVertexAttribI3iEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-i4i-ext
       (foreign-lambda*
@@ -12118,19 +11973,19 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glVertexAttribI4iEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribI4iEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-i1ui-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glVertexAttribI1uiEXT(a0 , a1);")))
+        "glVertexAttribI1uiEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2ui-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glVertexAttribI2uiEXT(a0 , a1 , a2);")))
+        "glVertexAttribI2uiEXT(a0 , a1 , a2);")))
   (begin
     (define gl:vertex-attrib-i3ui-ext
       (foreign-lambda*
@@ -12139,7 +11994,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glVertexAttribI3uiEXT(a0 , a1 , a2 , a3);")))
+        "glVertexAttribI3uiEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-attrib-i4ui-ext
       (foreign-lambda*
@@ -12149,79 +12004,79 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glVertexAttribI4uiEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribI4uiEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-i1iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI1ivEXT(a0 , a1);")))
+        "glVertexAttribI1ivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI2ivEXT(a0 , a1);")))
+        "glVertexAttribI2ivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i3iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI3ivEXT(a0 , a1);")))
+        "glVertexAttribI3ivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s32vector a1))
-        "_al_glVertexAttribI4ivEXT(a0 , a1);")))
+        "glVertexAttribI4ivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i1uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI1uivEXT(a0 , a1);")))
+        "glVertexAttribI1uivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i2uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI2uivEXT(a0 , a1);")))
+        "glVertexAttribI2uivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i3uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI3uivEXT(a0 , a1);")))
+        "glVertexAttribI3uivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u32vector a1))
-        "_al_glVertexAttribI4uivEXT(a0 , a1);")))
+        "glVertexAttribI4uivEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4bv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glVertexAttribI4bvEXT(a0 , a1);")))
+        "glVertexAttribI4bvEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4sv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (s16vector a1))
-        "_al_glVertexAttribI4svEXT(a0 , a1);")))
+        "glVertexAttribI4svEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4ubv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u8vector a1))
-        "_al_glVertexAttribI4ubvEXT(a0 , a1);")))
+        "glVertexAttribI4ubvEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-i4usv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (u16vector a1))
-        "_al_glVertexAttribI4usvEXT(a0 , a1);")))
+        "glVertexAttribI4usvEXT(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-ipointer-ext
       (foreign-lambda*
@@ -12231,31 +12086,31 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer void) a4))
-        "_al_glVertexAttribIPointerEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribIPointerEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-vertex-attrib-iiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribIivEXT(a0 , a1 , a2);")))
+        "glGetVertexAttribIivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-vertex-attrib-iuiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVertexAttribIuivEXT(a0 , a1 , a2);")))
+        "glGetVertexAttribIuivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:uniform1ui-ext
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1))
-        "_al_glUniform1uiEXT(a0 , a1);")))
+        "glUniform1uiEXT(a0 , a1);")))
   (begin
     (define gl:uniform2ui-ext
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glUniform2uiEXT(a0 , a1 , a2);")))
+        "glUniform2uiEXT(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3ui-ext
       (foreign-lambda*
@@ -12264,7 +12119,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glUniform3uiEXT(a0 , a1 , a2 , a3);")))
+        "glUniform3uiEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:uniform4ui-ext
       (foreign-lambda*
@@ -12274,49 +12129,49 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glUniform4uiEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glUniform4uiEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:uniform1uiv-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform1uivEXT(a0 , a1 , a2);")))
+        "glUniform1uivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:uniform2uiv-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform2uivEXT(a0 , a1 , a2);")))
+        "glUniform2uivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:uniform3uiv-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform3uivEXT(a0 , a1 , a2);")))
+        "glUniform3uivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:uniform4uiv-ext
       (foreign-lambda*
         void
         ((integer a0) (integer a1) (u32vector a2))
-        "_al_glUniform4uivEXT(a0 , a1 , a2);")))
+        "glUniform4uivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniformuiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2))
-        "_al_glGetUniformuivEXT(a0 , a1 , a2);")))
+        "glGetUniformuivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:bind-frag-data-location-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (c-string a2))
-        "_al_glBindFragDataLocationEXT(a0 , a1 , a2);")))
+        "glBindFragDataLocationEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-frag-data-location-ext
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetFragDataLocationEXT(a0 , a1));")))
+        "return(glGetFragDataLocationEXT(a0 , a1));")))
   (begin
     (define gl:framebuffer-texture-layer-ext
       (foreign-lambda*
@@ -12326,28 +12181,28 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tex-buffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glTexBufferEXT(a0 , a1 , a2);")))
+        "glTexBufferEXT(a0 , a1 , a2);")))
   (begin
     (define gl:depth-ranged-nv
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glDepthRangedNV(a0 , a1);")))
+        "glDepthRangedNV(a0 , a1);")))
   (begin
     (define gl:clear-depthd-nv
-      (foreign-lambda* void ((double a0)) "_al_glClearDepthdNV(a0);")))
+      (foreign-lambda* void ((double a0)) "glClearDepthdNV(a0);")))
   (begin
     (define gl:depth-boundsd-nv
       (foreign-lambda*
         void
         ((double a0) (double a1))
-        "_al_glDepthBoundsdNV(a0 , a1);")))
+        "glDepthBoundsdNV(a0 , a1);")))
   (begin
     (define gl:renderbuffer-storage-multsample-coverage-nv
       (foreign-lambda*
@@ -12358,13 +12213,13 @@
          (unsigned-integer a3)
          (integer a4)
          (integer a5))
-        "_al_glRenderbufferStorageMultsampleCoverageNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glRenderbufferStorageMultsampleCoverageNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-vertex-limit-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glProgramVertexLimitNV(a0 , a1);")))
+        "glProgramVertexLimitNV(a0 , a1);")))
   (begin
     (define gl:program-local-parameter-i4i-nv
       (foreign-lambda*
@@ -12375,13 +12230,13 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glProgramLocalParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramLocalParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-local-parameter-i4iv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glProgramLocalParameterI4ivNV(a0 , a1 , a2);")))
+        "glProgramLocalParameterI4ivNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-local-parameters-i4iv-nv
       (foreign-lambda*
@@ -12390,7 +12245,7 @@
          (unsigned-integer a1)
          (integer a2)
          (s32vector a3))
-        "_al_glProgramLocalParametersI4ivNV(a0 , a1 , a2 , a3);")))
+        "glProgramLocalParametersI4ivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-local-parameter-i4ui-nv
       (foreign-lambda*
@@ -12401,13 +12256,13 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glProgramLocalParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramLocalParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-local-parameter-i4uiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glProgramLocalParameterI4uivNV(a0 , a1 , a2);")))
+        "glProgramLocalParameterI4uivNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-local-parameters-i4uiv-nv
       (foreign-lambda*
@@ -12416,7 +12271,7 @@
          (unsigned-integer a1)
          (integer a2)
          (u32vector a3))
-        "_al_glProgramLocalParametersI4uivNV(a0 , a1 , a2 , a3);")))
+        "glProgramLocalParametersI4uivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-env-parameter-i4i-nv
       (foreign-lambda*
@@ -12427,13 +12282,13 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glProgramEnvParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramEnvParameterI4iNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-env-parameter-i4iv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glProgramEnvParameterI4ivNV(a0 , a1 , a2);")))
+        "glProgramEnvParameterI4ivNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-env-parameters-i4iv-nv
       (foreign-lambda*
@@ -12442,7 +12297,7 @@
          (unsigned-integer a1)
          (integer a2)
          (s32vector a3))
-        "_al_glProgramEnvParametersI4ivNV(a0 , a1 , a2 , a3);")))
+        "glProgramEnvParametersI4ivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-env-parameter-i4ui-nv
       (foreign-lambda*
@@ -12453,13 +12308,13 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glProgramEnvParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramEnvParameterI4uiNV(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-env-parameter-i4uiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glProgramEnvParameterI4uivNV(a0 , a1 , a2);")))
+        "glProgramEnvParameterI4uivNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-env-parameters-i4uiv-nv
       (foreign-lambda*
@@ -12468,31 +12323,31 @@
          (unsigned-integer a1)
          (integer a2)
          (u32vector a3))
-        "_al_glProgramEnvParametersI4uivNV(a0 , a1 , a2 , a3);")))
+        "glProgramEnvParametersI4uivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-program-local-parameter-iiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetProgramLocalParameterIivNV(a0 , a1 , a2);")))
+        "glGetProgramLocalParameterIivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-local-parameter-iuiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetProgramLocalParameterIuivNV(a0 , a1 , a2);")))
+        "glGetProgramLocalParameterIuivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-env-parameter-iiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetProgramEnvParameterIivNV(a0 , a1 , a2);")))
+        "glGetProgramEnvParameterIivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-program-env-parameter-iuiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (u32vector a2))
-        "_al_glGetProgramEnvParameterIuivNV(a0 , a1 , a2);")))
+        "glGetProgramEnvParameterIuivNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-buffer-parametersfv-nv
       (foreign-lambda*
@@ -12502,7 +12357,7 @@
          (unsigned-integer a2)
          (integer a3)
          (f32vector a4))
-        "_al_glProgramBufferParametersfvNV(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramBufferParametersfvNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-buffer-parameters-iiv-nv
       (foreign-lambda*
@@ -12512,7 +12367,7 @@
          (unsigned-integer a2)
          (integer a3)
          (s32vector a4))
-        "_al_glProgramBufferParametersIivNV(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramBufferParametersIivNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-buffer-parameters-iuiv-nv
       (foreign-lambda*
@@ -12522,7 +12377,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (u32vector a4))
-        "_al_glProgramBufferParametersIuivNV(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramBufferParametersIuivNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:bind-buffer-range-nv
       (foreign-lambda*
@@ -12530,9 +12385,9 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3)
-         ((c-pointer void) a4))
-        "_al_glBindBufferRangeNV(a0 , a1 , a2 , a3 , a4);")))
+         (long a3)
+         (long a4))
+        "glBindBufferRangeNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:bind-buffer-offset-nv
       (foreign-lambda*
@@ -12540,20 +12395,20 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3))
-        "_al_glBindBufferOffsetNV(a0 , a1 , a2 , a3);")))
+         (long a3))
+        "glBindBufferOffsetNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-buffer-base-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBindBufferBaseNV(a0 , a1 , a2);")))
+        "glBindBufferBaseNV(a0 , a1 , a2);")))
   (begin
     (define gl:transform-feedback-attribs-nv
       (foreign-lambda*
         void
         ((integer a0) (s32vector a1) (unsigned-integer a2))
-        "_al_glTransformFeedbackAttribsNV(a0 , a1 , a2);")))
+        "glTransformFeedbackAttribsNV(a0 , a1 , a2);")))
   (begin
     (define gl:transform-feedback-varyings-nv
       (foreign-lambda*
@@ -12562,22 +12417,22 @@
          (integer a1)
          (s32vector a2)
          (unsigned-integer a3))
-        "_al_glTransformFeedbackVaryingsNV(a0 , a1 , a2 , a3);")))
+        "glTransformFeedbackVaryingsNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:begin-transform-feedback-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginTransformFeedbackNV(a0);")))
+        "glBeginTransformFeedbackNV(a0);")))
   (begin
     (define gl:end-transform-feedback-nv
-      (foreign-lambda* void () "_al_glEndTransformFeedbackNV();")))
+      (foreign-lambda* void () "glEndTransformFeedbackNV();")))
   (begin
     (define gl:get-varying-location-nv
       (foreign-lambda*
         integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glGetVaryingLocationNV(a0 , a1));")))
+        "return(glGetVaryingLocationNV(a0 , a1));")))
   (begin
     (define gl:get-active-varying-nv
       (foreign-lambda*
@@ -12589,40 +12444,40 @@
          (s32vector a4)
          (u32vector a5)
          (c-string a6))
-        "_al_glGetActiveVaryingNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glGetActiveVaryingNV(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:active-varying-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (c-string a1))
-        "_al_glActiveVaryingNV(a0 , a1);")))
+        "glActiveVaryingNV(a0 , a1);")))
   (begin
     (define gl:get-transform-feedback-varying-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTransformFeedbackVaryingNV(a0 , a1 , a2);")))
+        "glGetTransformFeedbackVaryingNV(a0 , a1 , a2);")))
   (begin
     (define gl:frame-terminator-gremedy
-      (foreign-lambda* void () "_al_glFrameTerminatorGREMEDY();")))
+      (foreign-lambda* void () "glFrameTerminatorGREMEDY();")))
   (begin
     (define gl:begin-conditional-render-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBeginConditionalRenderNV(a0 , a1);")))
+        "glBeginConditionalRenderNV(a0 , a1);")))
   (begin
     (define gl:end-conditional-render-nv
-      (foreign-lambda* void () "_al_glEndConditionalRenderNV();")))
+      (foreign-lambda* void () "glEndConditionalRenderNV();")))
   (begin
     (define gl:begin-transform-feedback-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginTransformFeedbackEXT(a0);")))
+        "glBeginTransformFeedbackEXT(a0);")))
   (begin
     (define gl:end-transform-feedback-ext
-      (foreign-lambda* void () "_al_glEndTransformFeedbackEXT();")))
+      (foreign-lambda* void () "glEndTransformFeedbackEXT();")))
   (begin
     (define gl:bind-buffer-range-ext
       (foreign-lambda*
@@ -12630,9 +12485,9 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3)
-         ((c-pointer void) a4))
-        "_al_glBindBufferRangeEXT(a0 , a1 , a2 , a3 , a4);")))
+         (long a3)
+         (long a4))
+        "glBindBufferRangeEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:bind-buffer-offset-ext
       (foreign-lambda*
@@ -12640,14 +12495,14 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3))
-        "_al_glBindBufferOffsetEXT(a0 , a1 , a2 , a3);")))
+         (long a3))
+        "glBindBufferOffsetEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-buffer-base-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBindBufferBaseEXT(a0 , a1 , a2);")))
+        "glBindBufferBaseEXT(a0 , a1 , a2);")))
   (begin
     (define gl:transform-feedback-varyings-ext
       (foreign-lambda*
@@ -12656,91 +12511,91 @@
          (integer a1)
          (s32vector a2)
          (unsigned-integer a3))
-        "_al_glTransformFeedbackVaryingsEXT(a0 , a1 , a2 , a3);")))
+        "glTransformFeedbackVaryingsEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-transform-feedback-varying-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetTransformFeedbackVaryingEXT(a0 , a1 , a2);")))
+        "glGetTransformFeedbackVaryingEXT(a0 , a1 , a2);")))
   (begin
     (define gl:client-attrib-default-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glClientAttribDefaultEXT(a0);")))
+        "glClientAttribDefaultEXT(a0);")))
   (begin
     (define gl:push-client-attrib-default-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glPushClientAttribDefaultEXT(a0);")))
+        "glPushClientAttribDefaultEXT(a0);")))
   (begin
     (define gl:matrix-loadf-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMatrixLoadfEXT(a0 , a1);")))
+        "glMatrixLoadfEXT(a0 , a1);")))
   (begin
     (define gl:matrix-loadd-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMatrixLoaddEXT(a0 , a1);")))
+        "glMatrixLoaddEXT(a0 , a1);")))
   (begin
     (define gl:matrix-multf-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMatrixMultfEXT(a0 , a1);")))
+        "glMatrixMultfEXT(a0 , a1);")))
   (begin
     (define gl:matrix-multd-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMatrixMultdEXT(a0 , a1);")))
+        "glMatrixMultdEXT(a0 , a1);")))
   (begin
     (define gl:matrix-load-identity-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glMatrixLoadIdentityEXT(a0);")))
+        "glMatrixLoadIdentityEXT(a0);")))
   (begin
     (define gl:matrix-rotatef-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3) (float a4))
-        "_al_glMatrixRotatefEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glMatrixRotatefEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:matrix-rotated-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3) (double a4))
-        "_al_glMatrixRotatedEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glMatrixRotatedEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:matrix-scalef-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glMatrixScalefEXT(a0 , a1 , a2 , a3);")))
+        "glMatrixScalefEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:matrix-scaled-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glMatrixScaledEXT(a0 , a1 , a2 , a3);")))
+        "glMatrixScaledEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:matrix-translatef-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (float a1) (float a2) (float a3))
-        "_al_glMatrixTranslatefEXT(a0 , a1 , a2 , a3);")))
+        "glMatrixTranslatefEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:matrix-translated-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (double a1) (double a2) (double a3))
-        "_al_glMatrixTranslatedEXT(a0 , a1 , a2 , a3);")))
+        "glMatrixTranslatedEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:matrix-frustum-ext
       (foreign-lambda*
@@ -12752,7 +12607,7 @@
          (double a4)
          (double a5)
          (double a6))
-        "_al_glMatrixFrustumEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glMatrixFrustumEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:matrix-ortho-ext
       (foreign-lambda*
@@ -12764,43 +12619,37 @@
          (double a4)
          (double a5)
          (double a6))
-        "_al_glMatrixOrthoEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glMatrixOrthoEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:matrix-pop-ext
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glMatrixPopEXT(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glMatrixPopEXT(a0);")))
   (begin
     (define gl:matrix-push-ext
-      (foreign-lambda*
-        void
-        ((unsigned-integer a0))
-        "_al_glMatrixPushEXT(a0);")))
+      (foreign-lambda* void ((unsigned-integer a0)) "glMatrixPushEXT(a0);")))
   (begin
     (define gl:matrix-load-transposef-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMatrixLoadTransposefEXT(a0 , a1);")))
+        "glMatrixLoadTransposefEXT(a0 , a1);")))
   (begin
     (define gl:matrix-load-transposed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMatrixLoadTransposedEXT(a0 , a1);")))
+        "glMatrixLoadTransposedEXT(a0 , a1);")))
   (begin
     (define gl:matrix-mult-transposef-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f32vector a1))
-        "_al_glMatrixMultTransposefEXT(a0 , a1);")))
+        "glMatrixMultTransposefEXT(a0 , a1);")))
   (begin
     (define gl:matrix-mult-transposed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (f64vector a1))
-        "_al_glMatrixMultTransposedEXT(a0 , a1);")))
+        "glMatrixMultTransposedEXT(a0 , a1);")))
   (begin
     (define gl:texture-parameterf-ext
       (foreign-lambda*
@@ -12809,7 +12658,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (float a3))
-        "_al_glTextureParameterfEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameterfEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-parameterfv-ext
       (foreign-lambda*
@@ -12818,7 +12667,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-parameteri-ext
       (foreign-lambda*
@@ -12827,7 +12676,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glTextureParameteriEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameteriEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-parameteriv-ext
       (foreign-lambda*
@@ -12836,7 +12685,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glTextureParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-image1dext
       (foreign-lambda*
@@ -12850,7 +12699,7 @@
          (unsigned-integer a6)
          (unsigned-integer a7)
          ((c-pointer void) a8))
-        "_al_glTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:texture-image2dext
       (foreign-lambda*
@@ -12865,7 +12714,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:texture-sub-image1dext
       (foreign-lambda*
@@ -12878,7 +12727,7 @@
          (unsigned-integer a5)
          (unsigned-integer a6)
          ((c-pointer void) a7))
-        "_al_glTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:texture-sub-image2dext
       (foreign-lambda*
@@ -12893,7 +12742,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:copy-texture-image1dext
       (foreign-lambda*
@@ -12906,7 +12755,7 @@
          (integer a5)
          (integer a6)
          (integer a7))
-        "_al_glCopyTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCopyTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:copy-texture-image2dext
       (foreign-lambda*
@@ -12920,7 +12769,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:copy-texture-sub-image1dext
       (foreign-lambda*
@@ -12932,7 +12781,7 @@
          (integer a4)
          (integer a5)
          (integer a6))
-        "_al_glCopyTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCopyTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:copy-texture-sub-image2dext
       (foreign-lambda*
@@ -12946,7 +12795,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:get-texture-image-ext
       (foreign-lambda*
@@ -12957,7 +12806,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glGetTextureImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetTextureImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-texture-parameterfv-ext
       (foreign-lambda*
@@ -12966,7 +12815,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
+        "glGetTextureParameterfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-texture-parameteriv-ext
       (foreign-lambda*
@@ -12975,7 +12824,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetTextureParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glGetTextureParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-texture-level-parameterfv-ext
       (foreign-lambda*
@@ -12985,7 +12834,7 @@
          (integer a2)
          (unsigned-integer a3)
          (f32vector a4))
-        "_al_glGetTextureLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetTextureLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-texture-level-parameteriv-ext
       (foreign-lambda*
@@ -12995,7 +12844,7 @@
          (integer a2)
          (unsigned-integer a3)
          (s32vector a4))
-        "_al_glGetTextureLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetTextureLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:texture-image3dext
       (foreign-lambda*
@@ -13011,7 +12860,7 @@
          (unsigned-integer a8)
          (unsigned-integer a9)
          ((c-pointer void) a10))
-        "_al_glTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:texture-sub-image3dext
       (foreign-lambda*
@@ -13028,7 +12877,7 @@
          (unsigned-integer a9)
          (unsigned-integer a10)
          ((c-pointer void) a11))
-        "_al_glTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:copy-texture-sub-image3dext
       (foreign-lambda*
@@ -13043,7 +12892,7 @@
          (integer a7)
          (integer a8)
          (integer a9))
-        "_al_glCopyTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCopyTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:multi-tex-parameterf-ext
       (foreign-lambda*
@@ -13052,7 +12901,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (float a3))
-        "_al_glMultiTexParameterfEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameterfEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-parameterfv-ext
       (foreign-lambda*
@@ -13061,7 +12910,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-parameteri-ext
       (foreign-lambda*
@@ -13070,7 +12919,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glMultiTexParameteriEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameteriEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-parameteriv-ext
       (foreign-lambda*
@@ -13079,7 +12928,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-image1dext
       (foreign-lambda*
@@ -13093,7 +12942,7 @@
          (unsigned-integer a6)
          (unsigned-integer a7)
          ((c-pointer void) a8))
-        "_al_glMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:multi-tex-image2dext
       (foreign-lambda*
@@ -13108,7 +12957,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:multi-tex-sub-image1dext
       (foreign-lambda*
@@ -13121,7 +12970,7 @@
          (unsigned-integer a5)
          (unsigned-integer a6)
          ((c-pointer void) a7))
-        "_al_glMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:multi-tex-sub-image2dext
       (foreign-lambda*
@@ -13136,7 +12985,7 @@
          (unsigned-integer a7)
          (unsigned-integer a8)
          ((c-pointer void) a9))
-        "_al_glMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:copy-multi-tex-image1dext
       (foreign-lambda*
@@ -13149,7 +12998,7 @@
          (integer a5)
          (integer a6)
          (integer a7))
-        "_al_glCopyMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCopyMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:copy-multi-tex-image2dext
       (foreign-lambda*
@@ -13163,7 +13012,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:copy-multi-tex-sub-image1dext
       (foreign-lambda*
@@ -13175,7 +13024,7 @@
          (integer a4)
          (integer a5)
          (integer a6))
-        "_al_glCopyMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glCopyMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:copy-multi-tex-sub-image2dext
       (foreign-lambda*
@@ -13189,7 +13038,7 @@
          (integer a6)
          (integer a7)
          (integer a8))
-        "_al_glCopyMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCopyMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:get-multi-tex-image-ext
       (foreign-lambda*
@@ -13200,7 +13049,7 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          ((c-pointer void) a5))
-        "_al_glGetMultiTexImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glGetMultiTexImageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:get-multi-tex-parameterfv-ext
       (foreign-lambda*
@@ -13209,7 +13058,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexParameterfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-parameteriv-ext
       (foreign-lambda*
@@ -13218,7 +13067,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-level-parameterfv-ext
       (foreign-lambda*
@@ -13228,7 +13077,7 @@
          (integer a2)
          (unsigned-integer a3)
          (f32vector a4))
-        "_al_glGetMultiTexLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetMultiTexLevelParameterfvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-multi-tex-level-parameteriv-ext
       (foreign-lambda*
@@ -13238,7 +13087,7 @@
          (integer a2)
          (unsigned-integer a3)
          (s32vector a4))
-        "_al_glGetMultiTexLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glGetMultiTexLevelParameterivEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-image3dext
       (foreign-lambda*
@@ -13254,7 +13103,7 @@
          (unsigned-integer a8)
          (unsigned-integer a9)
          ((c-pointer void) a10))
-        "_al_glMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:multi-tex-sub-image3dext
       (foreign-lambda*
@@ -13271,7 +13120,7 @@
          (unsigned-integer a9)
          (unsigned-integer a10)
          ((c-pointer void) a11))
-        "_al_glMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:copy-multi-tex-sub-image3dext
       (foreign-lambda*
@@ -13286,25 +13135,25 @@
          (integer a7)
          (integer a8)
          (integer a9))
-        "_al_glCopyMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCopyMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:bind-multi-texture-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBindMultiTextureEXT(a0 , a1 , a2);")))
+        "glBindMultiTextureEXT(a0 , a1 , a2);")))
   (begin
     (define gl:enable-client-state-indexed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEnableClientStateIndexedEXT(a0 , a1);")))
+        "glEnableClientStateIndexedEXT(a0 , a1);")))
   (begin
     (define gl:disable-client-state-indexed-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDisableClientStateIndexedEXT(a0 , a1);")))
+        "glDisableClientStateIndexedEXT(a0 , a1);")))
   (begin
     (define gl:multi-tex-coord-pointer-ext
       (foreign-lambda*
@@ -13314,7 +13163,7 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer void) a4))
-        "_al_glMultiTexCoordPointerEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glMultiTexCoordPointerEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:multi-tex-envf-ext
       (foreign-lambda*
@@ -13323,7 +13172,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (float a3))
-        "_al_glMultiTexEnvfEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexEnvfEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-envfv-ext
       (foreign-lambda*
@@ -13332,7 +13181,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-envi-ext
       (foreign-lambda*
@@ -13341,7 +13190,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glMultiTexEnviEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexEnviEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-enviv-ext
       (foreign-lambda*
@@ -13350,7 +13199,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-gend-ext
       (foreign-lambda*
@@ -13359,7 +13208,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (double a3))
-        "_al_glMultiTexGendEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGendEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-gendv-ext
       (foreign-lambda*
@@ -13368,7 +13217,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-genf-ext
       (foreign-lambda*
@@ -13377,7 +13226,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (float a3))
-        "_al_glMultiTexGenfEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGenfEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-genfv-ext
       (foreign-lambda*
@@ -13386,7 +13235,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-geni-ext
       (foreign-lambda*
@@ -13395,7 +13244,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glMultiTexGeniEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGeniEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-geniv-ext
       (foreign-lambda*
@@ -13404,7 +13253,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-envfv-ext
       (foreign-lambda*
@@ -13413,7 +13262,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexEnvfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-enviv-ext
       (foreign-lambda*
@@ -13422,7 +13271,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexEnvivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-gendv-ext
       (foreign-lambda*
@@ -13431,7 +13280,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glGetMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexGendvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-genfv-ext
       (foreign-lambda*
@@ -13440,7 +13289,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexGenfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-geniv-ext
       (foreign-lambda*
@@ -13449,19 +13298,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexGenivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-float-indexedv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetFloatIndexedvEXT(a0 , a1 , a2);")))
+        "glGetFloatIndexedvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-double-indexedv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f64vector a2))
-        "_al_glGetDoubleIndexedvEXT(a0 , a1 , a2);")))
+        "glGetDoubleIndexedvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-pointer-indexedv-ext
       (foreign-lambda*
@@ -13469,7 +13318,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetPointerIndexedvEXT(a0 , a1 , a2);")))
+        "glGetPointerIndexedvEXT(a0 , a1 , a2);")))
   (begin
     (define gl:compressed-texture-image3dext
       (foreign-lambda*
@@ -13484,7 +13333,7 @@
          (integer a7)
          (integer a8)
          ((c-pointer void) a9))
-        "_al_glCompressedTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCompressedTextureImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:compressed-texture-image2dext
       (foreign-lambda*
@@ -13498,7 +13347,7 @@
          (integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedTextureImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-texture-image1dext
       (foreign-lambda*
@@ -13511,7 +13360,7 @@
          (integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedTextureImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:compressed-texture-sub-image3dext
       (foreign-lambda*
@@ -13528,7 +13377,7 @@
          (unsigned-integer a9)
          (integer a10)
          ((c-pointer void) a11))
-        "_al_glCompressedTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glCompressedTextureSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:compressed-texture-sub-image2dext
       (foreign-lambda*
@@ -13543,7 +13392,7 @@
          (unsigned-integer a7)
          (integer a8)
          ((c-pointer void) a9))
-        "_al_glCompressedTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCompressedTextureSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:compressed-texture-sub-image1dext
       (foreign-lambda*
@@ -13556,7 +13405,7 @@
          (unsigned-integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedTextureSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:get-compressed-texture-image-ext
       (foreign-lambda*
@@ -13565,7 +13414,7 @@
          (unsigned-integer a1)
          (integer a2)
          ((c-pointer void) a3))
-        "_al_glGetCompressedTextureImageEXT(a0 , a1 , a2 , a3);")))
+        "glGetCompressedTextureImageEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:compressed-multi-tex-image3dext
       (foreign-lambda*
@@ -13580,7 +13429,7 @@
          (integer a7)
          (integer a8)
          ((c-pointer void) a9))
-        "_al_glCompressedMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCompressedMultiTexImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:compressed-multi-tex-image2dext
       (foreign-lambda*
@@ -13594,7 +13443,7 @@
          (integer a6)
          (integer a7)
          ((c-pointer void) a8))
-        "_al_glCompressedMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
+        "glCompressedMultiTexImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8);")))
   (begin
     (define gl:compressed-multi-tex-image1dext
       (foreign-lambda*
@@ -13607,7 +13456,7 @@
          (integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedMultiTexImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:compressed-multi-tex-sub-image3dext
       (foreign-lambda*
@@ -13624,7 +13473,7 @@
          (unsigned-integer a9)
          (integer a10)
          ((c-pointer void) a11))
-        "_al_glCompressedMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
+        "glCompressedMultiTexSubImage3DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10 , a11);")))
   (begin
     (define gl:compressed-multi-tex-sub-image2dext
       (foreign-lambda*
@@ -13639,7 +13488,7 @@
          (unsigned-integer a7)
          (integer a8)
          ((c-pointer void) a9))
-        "_al_glCompressedMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
+        "glCompressedMultiTexSubImage2DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9);")))
   (begin
     (define gl:compressed-multi-tex-sub-image1dext
       (foreign-lambda*
@@ -13652,7 +13501,7 @@
          (unsigned-integer a5)
          (integer a6)
          ((c-pointer void) a7))
-        "_al_glCompressedMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
+        "glCompressedMultiTexSubImage1DEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7);")))
   (begin
     (define gl:get-compressed-multi-tex-image-ext
       (foreign-lambda*
@@ -13661,7 +13510,7 @@
          (unsigned-integer a1)
          (integer a2)
          ((c-pointer void) a3))
-        "_al_glGetCompressedMultiTexImageEXT(a0 , a1 , a2 , a3);")))
+        "glGetCompressedMultiTexImageEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-program-string-ext
       (foreign-lambda*
@@ -13671,7 +13520,7 @@
          (unsigned-integer a2)
          (integer a3)
          ((c-pointer void) a4))
-        "_al_glNamedProgramStringEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedProgramStringEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-program-local-parameter4d-ext
       (foreign-lambda*
@@ -13683,7 +13532,7 @@
          (double a4)
          (double a5)
          (double a6))
-        "_al_glNamedProgramLocalParameter4dEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glNamedProgramLocalParameter4dEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:named-program-local-parameter4dv-ext
       (foreign-lambda*
@@ -13692,7 +13541,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glNamedProgramLocalParameter4dvEXT(a0 , a1 , a2 , a3);")))
+        "glNamedProgramLocalParameter4dvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-program-local-parameter4f-ext
       (foreign-lambda*
@@ -13704,7 +13553,7 @@
          (float a4)
          (float a5)
          (float a6))
-        "_al_glNamedProgramLocalParameter4fEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glNamedProgramLocalParameter4fEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:named-program-local-parameter4fv-ext
       (foreign-lambda*
@@ -13713,7 +13562,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glNamedProgramLocalParameter4fvEXT(a0 , a1 , a2 , a3);")))
+        "glNamedProgramLocalParameter4fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-program-local-parameterdv-ext
       (foreign-lambda*
@@ -13722,7 +13571,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glGetNamedProgramLocalParameterdvEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramLocalParameterdvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-program-local-parameterfv-ext
       (foreign-lambda*
@@ -13731,7 +13580,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetNamedProgramLocalParameterfvEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramLocalParameterfvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-programiv-ext
       (foreign-lambda*
@@ -13740,7 +13589,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetNamedProgramivEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-program-string-ext
       (foreign-lambda*
@@ -13749,7 +13598,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetNamedProgramStringEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramStringEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-program-local-parameters4fv-ext
       (foreign-lambda*
@@ -13759,7 +13608,7 @@
          (unsigned-integer a2)
          (integer a3)
          (f32vector a4))
-        "_al_glNamedProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedProgramLocalParameters4fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-program-local-parameter-i4i-ext
       (foreign-lambda*
@@ -13771,7 +13620,7 @@
          (integer a4)
          (integer a5)
          (integer a6))
-        "_al_glNamedProgramLocalParameterI4iEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glNamedProgramLocalParameterI4iEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:named-program-local-parameter-i4iv-ext
       (foreign-lambda*
@@ -13780,7 +13629,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glNamedProgramLocalParameterI4ivEXT(a0 , a1 , a2 , a3);")))
+        "glNamedProgramLocalParameterI4ivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-program-local-parameters-i4iv-ext
       (foreign-lambda*
@@ -13790,7 +13639,7 @@
          (unsigned-integer a2)
          (integer a3)
          (s32vector a4))
-        "_al_glNamedProgramLocalParametersI4ivEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedProgramLocalParametersI4ivEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-program-local-parameter-i4ui-ext
       (foreign-lambda*
@@ -13802,7 +13651,7 @@
          (unsigned-integer a4)
          (unsigned-integer a5)
          (unsigned-integer a6))
-        "_al_glNamedProgramLocalParameterI4uiEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glNamedProgramLocalParameterI4uiEXT(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:named-program-local-parameter-i4uiv-ext
       (foreign-lambda*
@@ -13811,7 +13660,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glNamedProgramLocalParameterI4uivEXT(a0 , a1 , a2 , a3);")))
+        "glNamedProgramLocalParameterI4uivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-program-local-parameters-i4uiv-ext
       (foreign-lambda*
@@ -13821,7 +13670,7 @@
          (unsigned-integer a2)
          (integer a3)
          (u32vector a4))
-        "_al_glNamedProgramLocalParametersI4uivEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedProgramLocalParametersI4uivEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-named-program-local-parameter-iiv-ext
       (foreign-lambda*
@@ -13830,7 +13679,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetNamedProgramLocalParameterIivEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramLocalParameterIivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-program-local-parameter-iuiv-ext
       (foreign-lambda*
@@ -13839,7 +13688,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glGetNamedProgramLocalParameterIuivEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedProgramLocalParameterIuivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-parameter-iiv-ext
       (foreign-lambda*
@@ -13848,7 +13697,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-parameter-iuiv-ext
       (foreign-lambda*
@@ -13857,7 +13706,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
+        "glTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-texture-parameter-iiv-ext
       (foreign-lambda*
@@ -13866,7 +13715,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
+        "glGetTextureParameterIivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-texture-parameter-iuiv-ext
       (foreign-lambda*
@@ -13875,7 +13724,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glGetTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
+        "glGetTextureParameterIuivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-parameter-iiv-ext
       (foreign-lambda*
@@ -13884,7 +13733,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-parameter-iuiv-ext
       (foreign-lambda*
@@ -13893,7 +13742,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-parameter-iiv-ext
       (foreign-lambda*
@@ -13902,7 +13751,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexParameterIivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-multi-tex-parameter-iuiv-ext
       (foreign-lambda*
@@ -13911,25 +13760,25 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (u32vector a3))
-        "_al_glGetMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
+        "glGetMultiTexParameterIuivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform1f-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (float a2))
-        "_al_glProgramUniform1fEXT(a0 , a1 , a2);")))
+        "glProgramUniform1fEXT(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniform2f-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (float a2) (float a3))
-        "_al_glProgramUniform2fEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2fEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3f-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (float a2) (float a3) (float a4))
-        "_al_glProgramUniform3fEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniform3fEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform4f-ext
       (foreign-lambda*
@@ -13940,19 +13789,19 @@
          (float a3)
          (float a4)
          (float a5))
-        "_al_glProgramUniform4fEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramUniform4fEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-uniform1i-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2))
-        "_al_glProgramUniform1iEXT(a0 , a1 , a2);")))
+        "glProgramUniform1iEXT(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniform2i-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (integer a3))
-        "_al_glProgramUniform2iEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2iEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3i-ext
       (foreign-lambda*
@@ -13962,7 +13811,7 @@
          (integer a2)
          (integer a3)
          (integer a4))
-        "_al_glProgramUniform3iEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniform3iEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform4i-ext
       (foreign-lambda*
@@ -13973,55 +13822,55 @@
          (integer a3)
          (integer a4)
          (integer a5))
-        "_al_glProgramUniform4iEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramUniform4iEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-uniform1fv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
-        "_al_glProgramUniform1fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform1fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform2fv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
-        "_al_glProgramUniform2fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3fv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
-        "_al_glProgramUniform3fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform3fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform4fv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (f32vector a3))
-        "_al_glProgramUniform4fvEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform4fvEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform1iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
-        "_al_glProgramUniform1ivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform1ivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform2iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
-        "_al_glProgramUniform2ivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2ivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
-        "_al_glProgramUniform3ivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform3ivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform4iv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (s32vector a3))
-        "_al_glProgramUniform4ivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform4ivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform-matrix2fv-ext
       (foreign-lambda*
@@ -14031,7 +13880,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3fv-ext
       (foreign-lambda*
@@ -14041,7 +13890,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4fv-ext
       (foreign-lambda*
@@ -14051,7 +13900,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix2x3fv-ext
       (foreign-lambda*
@@ -14061,7 +13910,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix2x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3x2fv-ext
       (foreign-lambda*
@@ -14071,7 +13920,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix3x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix2x4fv-ext
       (foreign-lambda*
@@ -14081,7 +13930,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix2x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix2x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4x2fv-ext
       (foreign-lambda*
@@ -14091,7 +13940,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix4x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4x2fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix3x4fv-ext
       (foreign-lambda*
@@ -14101,7 +13950,7 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix3x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix3x4fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform-matrix4x3fv-ext
       (foreign-lambda*
@@ -14111,13 +13960,13 @@
          (integer a2)
          (unsigned-char a3)
          (f32vector a4))
-        "_al_glProgramUniformMatrix4x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniformMatrix4x3fvEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform1ui-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (unsigned-integer a2))
-        "_al_glProgramUniform1uiEXT(a0 , a1 , a2);")))
+        "glProgramUniform1uiEXT(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniform2ui-ext
       (foreign-lambda*
@@ -14126,7 +13975,7 @@
          (integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glProgramUniform2uiEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2uiEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3ui-ext
       (foreign-lambda*
@@ -14136,7 +13985,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glProgramUniform3uiEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glProgramUniform3uiEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:program-uniform4ui-ext
       (foreign-lambda*
@@ -14147,67 +13996,64 @@
          (unsigned-integer a3)
          (unsigned-integer a4)
          (unsigned-integer a5))
-        "_al_glProgramUniform4uiEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glProgramUniform4uiEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:program-uniform1uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
-        "_al_glProgramUniform1uivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform1uivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform2uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
-        "_al_glProgramUniform2uivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform2uivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform3uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
-        "_al_glProgramUniform3uivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform3uivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:program-uniform4uiv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (integer a2) (u32vector a3))
-        "_al_glProgramUniform4uivEXT(a0 , a1 , a2 , a3);")))
+        "glProgramUniform4uivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-buffer-data-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0)
-         ((c-pointer void) a1)
+         (long a1)
          ((c-pointer void) a2)
          (unsigned-integer a3))
-        "_al_glNamedBufferDataEXT(a0 , a1 , a2 , a3);")))
+        "glNamedBufferDataEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-buffer-sub-data-ext
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:map-named-buffer-ext
       (foreign-lambda*
         (c-pointer void)
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glMapNamedBufferEXT(a0 , a1));")))
+        "return(glMapNamedBufferEXT(a0 , a1));")))
   (begin
     (define gl:unmap-named-buffer-ext
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glUnmapNamedBufferEXT(a0));")))
+        "return(glUnmapNamedBufferEXT(a0));")))
   (begin
     (define gl:get-named-buffer-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetNamedBufferParameterivEXT(a0 , a1 , a2);")))
+        "glGetNamedBufferParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-named-buffer-pointerv-ext
       (foreign-lambda*
@@ -14215,16 +14061,13 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetNamedBufferPointervEXT(a0 , a1 , a2);")))
+        "glGetNamedBufferPointervEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-named-buffer-sub-data-ext
       (foreign-lambda*
         void
-        ((unsigned-integer a0)
-         ((c-pointer void) a1)
-         ((c-pointer void) a2)
-         ((c-pointer void) a3))
-        "_al_glGetNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
+        ((unsigned-integer a0) (long a1) (long a2) ((c-pointer void) a3))
+        "glGetNamedBufferSubDataEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:texture-buffer-ext
       (foreign-lambda*
@@ -14233,7 +14076,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glTextureBufferEXT(a0 , a1 , a2 , a3);")))
+        "glTextureBufferEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:multi-tex-buffer-ext
       (foreign-lambda*
@@ -14242,25 +14085,25 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glMultiTexBufferEXT(a0 , a1 , a2 , a3);")))
+        "glMultiTexBufferEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-renderbuffer-storage-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (integer a2) (integer a3))
-        "_al_glNamedRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
+        "glNamedRenderbufferStorageEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-renderbuffer-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetNamedRenderbufferParameterivEXT(a0 , a1 , a2);")))
+        "glGetNamedRenderbufferParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:check-named-framebuffer-status-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glCheckNamedFramebufferStatusEXT(a0 , a1));")))
+        "return(glCheckNamedFramebufferStatusEXT(a0 , a1));")))
   (begin
     (define gl:named-framebuffer-texture1dext
       (foreign-lambda*
@@ -14270,7 +14113,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glNamedFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedFramebufferTexture1DEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-framebuffer-texture2dext
       (foreign-lambda*
@@ -14280,7 +14123,7 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (integer a4))
-        "_al_glNamedFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedFramebufferTexture2DEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-framebuffer-texture3dext
       (foreign-lambda*
@@ -14291,7 +14134,7 @@
          (unsigned-integer a3)
          (integer a4)
          (integer a5))
-        "_al_glNamedFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glNamedFramebufferTexture3DEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:named-framebuffer-renderbuffer-ext
       (foreign-lambda*
@@ -14300,7 +14143,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (unsigned-integer a3))
-        "_al_glNamedFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
+        "glNamedFramebufferRenderbufferEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-named-framebuffer-attachment-parameteriv-ext
       (foreign-lambda*
@@ -14309,43 +14152,43 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetNamedFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
+        "glGetNamedFramebufferAttachmentParameterivEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:generate-texture-mipmap-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glGenerateTextureMipmapEXT(a0 , a1);")))
+        "glGenerateTextureMipmapEXT(a0 , a1);")))
   (begin
     (define gl:generate-multi-tex-mipmap-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glGenerateMultiTexMipmapEXT(a0 , a1);")))
+        "glGenerateMultiTexMipmapEXT(a0 , a1);")))
   (begin
     (define gl:framebuffer-draw-buffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glFramebufferDrawBufferEXT(a0 , a1);")))
+        "glFramebufferDrawBufferEXT(a0 , a1);")))
   (begin
     (define gl:framebuffer-draw-buffers-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (u32vector a2))
-        "_al_glFramebufferDrawBuffersEXT(a0 , a1 , a2);")))
+        "glFramebufferDrawBuffersEXT(a0 , a1 , a2);")))
   (begin
     (define gl:framebuffer-read-buffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glFramebufferReadBufferEXT(a0 , a1);")))
+        "glFramebufferReadBufferEXT(a0 , a1);")))
   (begin
     (define gl:get-framebuffer-parameteriv-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetFramebufferParameterivEXT(a0 , a1 , a2);")))
+        "glGetFramebufferParameterivEXT(a0 , a1 , a2);")))
   (begin
     (define gl:named-renderbuffer-storage-multisample-ext
       (foreign-lambda*
@@ -14355,7 +14198,7 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glNamedRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedRenderbufferStorageMultisampleEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-renderbuffer-storage-multisample-coverage-ext
       (foreign-lambda*
@@ -14366,7 +14209,7 @@
          (unsigned-integer a3)
          (integer a4)
          (integer a5))
-        "_al_glNamedRenderbufferStorageMultisampleCoverageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
+        "glNamedRenderbufferStorageMultisampleCoverageEXT(a0 , a1 , a2 , a3 , a4 , a5);")))
   (begin
     (define gl:named-framebuffer-texture-ext
       (foreign-lambda*
@@ -14375,7 +14218,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (integer a3))
-        "_al_glNamedFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
+        "glNamedFramebufferTextureEXT(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:named-framebuffer-texture-layer-ext
       (foreign-lambda*
@@ -14385,7 +14228,7 @@
          (unsigned-integer a2)
          (integer a3)
          (integer a4))
-        "_al_glNamedFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedFramebufferTextureLayerEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:named-framebuffer-texture-face-ext
       (foreign-lambda*
@@ -14395,79 +14238,79 @@
          (unsigned-integer a2)
          (integer a3)
          (unsigned-integer a4))
-        "_al_glNamedFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
+        "glNamedFramebufferTextureFaceEXT(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:texture-renderbuffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glTextureRenderbufferEXT(a0 , a1 , a2);")))
+        "glTextureRenderbufferEXT(a0 , a1 , a2);")))
   (begin
     (define gl:multi-tex-renderbuffer-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glMultiTexRenderbufferEXT(a0 , a1 , a2);")))
+        "glMultiTexRenderbufferEXT(a0 , a1 , a2);")))
   (begin
     (define gl:get-multisamplefv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (f32vector a2))
-        "_al_glGetMultisamplefvNV(a0 , a1 , a2);")))
+        "glGetMultisamplefvNV(a0 , a1 , a2);")))
   (begin
     (define gl:sample-mask-indexed-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glSampleMaskIndexedNV(a0 , a1);")))
+        "glSampleMaskIndexedNV(a0 , a1);")))
   (begin
     (define gl:tex-renderbuffer-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glTexRenderbufferNV(a0 , a1);")))
+        "glTexRenderbufferNV(a0 , a1);")))
   (begin
     (define gl:bind-transform-feedback-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBindTransformFeedbackNV(a0 , a1);")))
+        "glBindTransformFeedbackNV(a0 , a1);")))
   (begin
     (define gl:delete-transform-feedbacks-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeleteTransformFeedbacksNV(a0 , a1);")))
+        "glDeleteTransformFeedbacksNV(a0 , a1);")))
   (begin
     (define gl:gen-transform-feedbacks-nv
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenTransformFeedbacksNV(a0 , a1);")))
+        "glGenTransformFeedbacksNV(a0 , a1);")))
   (begin
     (define gl:is-transform-feedback-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsTransformFeedbackNV(a0));")))
+        "return(glIsTransformFeedbackNV(a0));")))
   (begin
     (define gl:pause-transform-feedback-nv
-      (foreign-lambda* void () "_al_glPauseTransformFeedbackNV();")))
+      (foreign-lambda* void () "glPauseTransformFeedbackNV();")))
   (begin
     (define gl:resume-transform-feedback-nv
-      (foreign-lambda* void () "_al_glResumeTransformFeedbackNV();")))
+      (foreign-lambda* void () "glResumeTransformFeedbackNV();")))
   (begin
     (define gl:draw-transform-feedback-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDrawTransformFeedbackNV(a0 , a1);")))
+        "glDrawTransformFeedbackNV(a0 , a1);")))
   (begin
     (define gl:get-perf-monitor-groups-amd
       (foreign-lambda*
         void
         ((s32vector a0) (integer a1) (u32vector a2))
-        "_al_glGetPerfMonitorGroupsAMD(a0 , a1 , a2);")))
+        "glGetPerfMonitorGroupsAMD(a0 , a1 , a2);")))
   (begin
     (define gl:get-perf-monitor-counters-amd
       (foreign-lambda*
@@ -14477,13 +14320,13 @@
          (s32vector a2)
          (integer a3)
          (u32vector a4))
-        "_al_glGetPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
+        "glGetPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-perf-monitor-group-string-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (s32vector a2) (c-string a3))
-        "_al_glGetPerfMonitorGroupStringAMD(a0 , a1 , a2 , a3);")))
+        "glGetPerfMonitorGroupStringAMD(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-perf-monitor-counter-string-amd
       (foreign-lambda*
@@ -14493,7 +14336,7 @@
          (integer a2)
          (s32vector a3)
          (c-string a4))
-        "_al_glGetPerfMonitorCounterStringAMD(a0 , a1 , a2 , a3 , a4);")))
+        "glGetPerfMonitorCounterStringAMD(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:get-perf-monitor-counter-info-amd
       (foreign-lambda*
@@ -14502,19 +14345,19 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          ((c-pointer void) a3))
-        "_al_glGetPerfMonitorCounterInfoAMD(a0 , a1 , a2 , a3);")))
+        "glGetPerfMonitorCounterInfoAMD(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:gen-perf-monitors-amd
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glGenPerfMonitorsAMD(a0 , a1);")))
+        "glGenPerfMonitorsAMD(a0 , a1);")))
   (begin
     (define gl:delete-perf-monitors-amd
       (foreign-lambda*
         void
         ((integer a0) (u32vector a1))
-        "_al_glDeletePerfMonitorsAMD(a0 , a1);")))
+        "glDeletePerfMonitorsAMD(a0 , a1);")))
   (begin
     (define gl:select-perf-monitor-counters-amd
       (foreign-lambda*
@@ -14524,19 +14367,19 @@
          (unsigned-integer a2)
          (integer a3)
          (u32vector a4))
-        "_al_glSelectPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
+        "glSelectPerfMonitorCountersAMD(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:begin-perf-monitor-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginPerfMonitorAMD(a0);")))
+        "glBeginPerfMonitorAMD(a0);")))
   (begin
     (define gl:end-perf-monitor-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glEndPerfMonitorAMD(a0);")))
+        "glEndPerfMonitorAMD(a0);")))
   (begin
     (define gl:get-perf-monitor-counter-data-amd
       (foreign-lambda*
@@ -14546,28 +14389,28 @@
          (integer a2)
          (u32vector a3)
          (s32vector a4))
-        "_al_glGetPerfMonitorCounterDataAMD(a0 , a1 , a2 , a3 , a4);")))
+        "glGetPerfMonitorCounterDataAMD(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:tessellation-factor-amd
-      (foreign-lambda* void ((float a0)) "_al_glTessellationFactorAMD(a0);")))
+      (foreign-lambda* void ((float a0)) "glTessellationFactorAMD(a0);")))
   (begin
     (define gl:tessellation-mode-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glTessellationModeAMD(a0);")))
+        "glTessellationModeAMD(a0);")))
   (begin
     (define gl:provoking-vertex-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glProvokingVertexEXT(a0);")))
+        "glProvokingVertexEXT(a0);")))
   (begin
     (define gl:blend-func-indexed-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBlendFuncIndexedAMD(a0 , a1 , a2);")))
+        "glBlendFuncIndexedAMD(a0 , a1 , a2);")))
   (begin
     (define gl:blend-func-separate-indexed-amd
       (foreign-lambda*
@@ -14577,25 +14420,25 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glBlendFuncSeparateIndexedAMD(a0 , a1 , a2 , a3 , a4);")))
+        "glBlendFuncSeparateIndexedAMD(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:blend-equation-indexed-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glBlendEquationIndexedAMD(a0 , a1);")))
+        "glBlendEquationIndexedAMD(a0 , a1);")))
   (begin
     (define gl:blend-equation-separate-indexed-amd
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "_al_glBlendEquationSeparateIndexedAMD(a0 , a1 , a2);")))
+        "glBlendEquationSeparateIndexedAMD(a0 , a1 , a2);")))
   (begin
     (define gl:texture-range-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) ((c-pointer void) a2))
-        "_al_glTextureRangeAPPLE(a0 , a1 , a2);")))
+        "glTextureRangeAPPLE(a0 , a1 , a2);")))
   (begin
     (define gl:get-tex-parameter-pointerv-apple
       (foreign-lambda*
@@ -14603,25 +14446,25 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer (c-pointer void)) a2))
-        "_al_glGetTexParameterPointervAPPLE(a0 , a1 , a2);")))
+        "glGetTexParameterPointervAPPLE(a0 , a1 , a2);")))
   (begin
     (define gl:enable-vertex-attrib-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glEnableVertexAttribAPPLE(a0 , a1);")))
+        "glEnableVertexAttribAPPLE(a0 , a1);")))
   (begin
     (define gl:disable-vertex-attrib-apple
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glDisableVertexAttribAPPLE(a0 , a1);")))
+        "glDisableVertexAttribAPPLE(a0 , a1);")))
   (begin
     (define gl:is-vertex-attrib-enabled-apple
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0) (unsigned-integer a1))
-        "return(_al_glIsVertexAttribEnabledAPPLE(a0 , a1));")))
+        "return(glIsVertexAttribEnabledAPPLE(a0 , a1));")))
   (begin
     (define gl:map-vertex-attrib1d-apple
       (foreign-lambda*
@@ -14633,7 +14476,7 @@
          (integer a4)
          (integer a5)
          (f64vector a6))
-        "_al_glMapVertexAttrib1dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glMapVertexAttrib1dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:map-vertex-attrib1f-apple
       (foreign-lambda*
@@ -14645,7 +14488,7 @@
          (integer a4)
          (integer a5)
          (f32vector a6))
-        "_al_glMapVertexAttrib1fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
+        "glMapVertexAttrib1fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6);")))
   (begin
     (define gl:map-vertex-attrib2d-apple
       (foreign-lambda*
@@ -14661,7 +14504,7 @@
          (integer a8)
          (integer a9)
          (f64vector a10))
-        "_al_glMapVertexAttrib2dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glMapVertexAttrib2dAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:map-vertex-attrib2f-apple
       (foreign-lambda*
@@ -14677,19 +14520,19 @@
          (integer a8)
          (integer a9)
          (f32vector a10))
-        "_al_glMapVertexAttrib2fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
+        "glMapVertexAttrib2fAPPLE(a0 , a1 , a2 , a3 , a4 , a5 , a6 , a7 , a8 , a9 , a10);")))
   (begin
     (define gl:object-purgeable-apple
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "return(_al_glObjectPurgeableAPPLE(a0 , a1 , a2));")))
+        "return(glObjectPurgeableAPPLE(a0 , a1 , a2));")))
   (begin
     (define gl:object-unpurgeable-apple
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (unsigned-integer a1) (unsigned-integer a2))
-        "return(_al_glObjectUnpurgeableAPPLE(a0 , a1 , a2));")))
+        "return(glObjectUnpurgeableAPPLE(a0 , a1 , a2));")))
   (begin
     (define gl:get-object-parameteriv-apple
       (foreign-lambda*
@@ -14698,13 +14541,13 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetObjectParameterivAPPLE(a0 , a1 , a2 , a3);")))
+        "glGetObjectParameterivAPPLE(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:begin-video-capture-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glBeginVideoCaptureNV(a0);")))
+        "glBeginVideoCaptureNV(a0);")))
   (begin
     (define gl:bind-video-capture-stream-buffer-nv
       (foreign-lambda*
@@ -14712,8 +14555,8 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer a2)
-         ((c-pointer void) a3))
-        "_al_glBindVideoCaptureStreamBufferNV(a0 , a1 , a2 , a3);")))
+         (long a3))
+        "glBindVideoCaptureStreamBufferNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:bind-video-capture-stream-texture-nv
       (foreign-lambda*
@@ -14723,19 +14566,19 @@
          (unsigned-integer a2)
          (unsigned-integer a3)
          (unsigned-integer a4))
-        "_al_glBindVideoCaptureStreamTextureNV(a0 , a1 , a2 , a3 , a4);")))
+        "glBindVideoCaptureStreamTextureNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:end-video-capture-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glEndVideoCaptureNV(a0);")))
+        "glEndVideoCaptureNV(a0);")))
   (begin
     (define gl:get-video-captureiv-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1) (s32vector a2))
-        "_al_glGetVideoCaptureivNV(a0 , a1 , a2);")))
+        "glGetVideoCaptureivNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-video-capture-streamiv-nv
       (foreign-lambda*
@@ -14744,7 +14587,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glGetVideoCaptureStreamivNV(a0 , a1 , a2 , a3);")))
+        "glGetVideoCaptureStreamivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-video-capture-streamfv-nv
       (foreign-lambda*
@@ -14753,7 +14596,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glGetVideoCaptureStreamfvNV(a0 , a1 , a2 , a3);")))
+        "glGetVideoCaptureStreamfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-video-capture-streamdv-nv
       (foreign-lambda*
@@ -14762,7 +14605,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glGetVideoCaptureStreamdvNV(a0 , a1 , a2 , a3);")))
+        "glGetVideoCaptureStreamdvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:video-capture-nv
       (foreign-lambda*
@@ -14770,7 +14613,7 @@
         ((unsigned-integer a0)
          (u32vector a1)
          ((c-pointer unsigned-integer64) a2))
-        "return(_al_glVideoCaptureNV(a0 , a1 , a2));")))
+        "return(glVideoCaptureNV(a0 , a1 , a2));")))
   (begin
     (define gl:video-capture-stream-parameteriv-nv
       (foreign-lambda*
@@ -14779,7 +14622,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (s32vector a3))
-        "_al_glVideoCaptureStreamParameterivNV(a0 , a1 , a2 , a3);")))
+        "glVideoCaptureStreamParameterivNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:video-capture-stream-parameterfv-nv
       (foreign-lambda*
@@ -14788,7 +14631,7 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f32vector a3))
-        "_al_glVideoCaptureStreamParameterfvNV(a0 , a1 , a2 , a3);")))
+        "glVideoCaptureStreamParameterfvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:video-capture-stream-parameterdv-nv
       (foreign-lambda*
@@ -14797,61 +14640,61 @@
          (unsigned-integer a1)
          (unsigned-integer a2)
          (f64vector a3))
-        "_al_glVideoCaptureStreamParameterdvNV(a0 , a1 , a2 , a3);")))
+        "glVideoCaptureStreamParameterdvNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:use-shader-program-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glUseShaderProgramEXT(a0 , a1);")))
+        "glUseShaderProgramEXT(a0 , a1);")))
   (begin
     (define gl:active-program-ext
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glActiveProgramEXT(a0);")))
+        "glActiveProgramEXT(a0);")))
   (begin
     (define gl:create-shader-program-ext
       (foreign-lambda*
         unsigned-integer
         ((unsigned-integer a0) (c-string a1))
-        "return(_al_glCreateShaderProgramEXT(a0 , a1));")))
+        "return(glCreateShaderProgramEXT(a0 , a1));")))
   (begin
     (define gl:make-buffer-resident-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glMakeBufferResidentNV(a0 , a1);")))
+        "glMakeBufferResidentNV(a0 , a1);")))
   (begin
     (define gl:make-buffer-non-resident-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glMakeBufferNonResidentNV(a0);")))
+        "glMakeBufferNonResidentNV(a0);")))
   (begin
     (define gl:is-buffer-resident-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsBufferResidentNV(a0));")))
+        "return(glIsBufferResidentNV(a0));")))
   (begin
     (define gl:make-named-buffer-resident-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (unsigned-integer a1))
-        "_al_glMakeNamedBufferResidentNV(a0 , a1);")))
+        "glMakeNamedBufferResidentNV(a0 , a1);")))
   (begin
     (define gl:make-named-buffer-non-resident-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0))
-        "_al_glMakeNamedBufferNonResidentNV(a0);")))
+        "glMakeNamedBufferNonResidentNV(a0);")))
   (begin
     (define gl:is-named-buffer-resident-nv
       (foreign-lambda*
         unsigned-char
         ((unsigned-integer a0))
-        "return(_al_glIsNamedBufferResidentNV(a0));")))
+        "return(glIsNamedBufferResidentNV(a0));")))
   (begin
     (define gl:get-buffer-parameterui64v-nv
       (foreign-lambda*
@@ -14859,7 +14702,7 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetBufferParameterui64vNV(a0 , a1 , a2);")))
+        "glGetBufferParameterui64vNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-named-buffer-parameterui64v-nv
       (foreign-lambda*
@@ -14867,25 +14710,25 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetNamedBufferParameterui64vNV(a0 , a1 , a2);")))
+        "glGetNamedBufferParameterui64vNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-integerui64v-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) ((c-pointer unsigned-integer64) a1))
-        "_al_glGetIntegerui64vNV(a0 , a1);")))
+        "glGetIntegerui64vNV(a0 , a1);")))
   (begin
     (define gl:uniformui64nv
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer64 a1))
-        "_al_glUniformui64NV(a0 , a1);")))
+        "glUniformui64NV(a0 , a1);")))
   (begin
     (define gl:uniformui64v-nv
       (foreign-lambda*
         void
         ((integer a0) (integer a1) ((c-pointer unsigned-integer64) a2))
-        "_al_glUniformui64vNV(a0 , a1 , a2);")))
+        "glUniformui64vNV(a0 , a1 , a2);")))
   (begin
     (define gl:get-uniformui64v-nv
       (foreign-lambda*
@@ -14893,13 +14736,13 @@
         ((unsigned-integer a0)
          (integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetUniformui64vNV(a0 , a1 , a2);")))
+        "glGetUniformui64vNV(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniformui64nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (unsigned-integer64 a2))
-        "_al_glProgramUniformui64NV(a0 , a1 , a2);")))
+        "glProgramUniformui64NV(a0 , a1 , a2);")))
   (begin
     (define gl:program-uniformui64v-nv
       (foreign-lambda*
@@ -14908,7 +14751,7 @@
          (integer a1)
          (integer a2)
          ((c-pointer unsigned-integer64) a3))
-        "_al_glProgramUniformui64vNV(a0 , a1 , a2 , a3);")))
+        "glProgramUniformui64vNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:buffer-address-range-nv
       (foreign-lambda*
@@ -14916,53 +14759,53 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          (unsigned-integer64 a2)
-         ((c-pointer void) a3))
-        "_al_glBufferAddressRangeNV(a0 , a1 , a2 , a3);")))
+         (long a3))
+        "glBufferAddressRangeNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:vertex-format-nv
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glVertexFormatNV(a0 , a1 , a2);")))
+        "glVertexFormatNV(a0 , a1 , a2);")))
   (begin
     (define gl:normal-format-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glNormalFormatNV(a0 , a1);")))
+        "glNormalFormatNV(a0 , a1);")))
   (begin
     (define gl:color-format-nv
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glColorFormatNV(a0 , a1 , a2);")))
+        "glColorFormatNV(a0 , a1 , a2);")))
   (begin
     (define gl:index-format-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glIndexFormatNV(a0 , a1);")))
+        "glIndexFormatNV(a0 , a1);")))
   (begin
     (define gl:tex-coord-format-nv
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glTexCoordFormatNV(a0 , a1 , a2);")))
+        "glTexCoordFormatNV(a0 , a1 , a2);")))
   (begin
     (define gl:edge-flag-format-nv
-      (foreign-lambda* void ((integer a0)) "_al_glEdgeFlagFormatNV(a0);")))
+      (foreign-lambda* void ((integer a0)) "glEdgeFlagFormatNV(a0);")))
   (begin
     (define gl:secondary-color-format-nv
       (foreign-lambda*
         void
         ((integer a0) (unsigned-integer a1) (integer a2))
-        "_al_glSecondaryColorFormatNV(a0 , a1 , a2);")))
+        "glSecondaryColorFormatNV(a0 , a1 , a2);")))
   (begin
     (define gl:fog-coord-format-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1))
-        "_al_glFogCoordFormatNV(a0 , a1);")))
+        "glFogCoordFormatNV(a0 , a1);")))
   (begin
     (define gl:vertex-attrib-format-nv
       (foreign-lambda*
@@ -14972,13 +14815,13 @@
          (unsigned-integer a2)
          (unsigned-char a3)
          (integer a4))
-        "_al_glVertexAttribFormatNV(a0 , a1 , a2 , a3 , a4);")))
+        "glVertexAttribFormatNV(a0 , a1 , a2 , a3 , a4);")))
   (begin
     (define gl:vertex-attrib-iformat-nv
       (foreign-lambda*
         void
         ((unsigned-integer a0) (integer a1) (unsigned-integer a2) (integer a3))
-        "_al_glVertexAttribIFormatNV(a0 , a1 , a2 , a3);")))
+        "glVertexAttribIFormatNV(a0 , a1 , a2 , a3);")))
   (begin
     (define gl:get-integerui64i-v-nv
       (foreign-lambda*
@@ -14986,9 +14829,9 @@
         ((unsigned-integer a0)
          (unsigned-integer a1)
          ((c-pointer unsigned-integer64) a2))
-        "_al_glGetIntegerui64i_vNV(a0 , a1 , a2);")))
+        "glGetIntegerui64i_vNV(a0 , a1 , a2);")))
   (begin
     (define gl:texture-barrier-nv
-      (foreign-lambda* void () "_al_glTextureBarrierNV();"))))
+      (foreign-lambda* void () "glTextureBarrierNV();"))))
 
 ;;; END OF FILE

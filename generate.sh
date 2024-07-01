@@ -2,7 +2,7 @@
 
 # allegro_opengl
 ((
-    echo "typedef void* ptrdiff_t;";
+    echo "typedef long int ptrdiff_t;";
     echo "#define AL_FUNC(ret, name, params) ret name params";
     echo "#define AL_VAR(type, name) extern type name";
     echo "#define ALLEGRO_UNSTABLE";
