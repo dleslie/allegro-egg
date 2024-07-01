@@ -2,3 +2,5 @@
 (uri targz "https://github.com/dleslie/allegro-egg/tarball/{egg-release}")
 (release "3.0.0")
 (release "3.0.1")
+(release "4.0.0")
+
